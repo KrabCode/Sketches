@@ -1,0 +1,23 @@
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§91.48125§255.0
+shaders§split§5.5249996§100.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§34.000008§200.0
+shaders§minRadius§50.0§20.0
+shaders§maxRadius§400.0§30.0
+shaders§time speed§0.5125§10.0
+shaders§r noise freq§0.275§10.0
+shaders§max offset§1.0§10.0
+shaders§weight§1.7999998§10.0
+shaders§r0 stroke§0.0§0.44375§1.0§1.0§1.0
+shaders§r1 stroke§0.0§1.0§1.0§1.0§1.0
+shaders§size§5.9999933§200.0
+shaders§r affects size§31.525002§100.0
+shaders§dot size§0.66249996§10.0
+shaders§triangle size§1.0§10.0
+shaders§rect size§1.0§10.0
+shaders§sine amp§1.625§10.0
+shaders§sine freq§19.999613§100.0
+STATE_END
