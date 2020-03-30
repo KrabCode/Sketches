@@ -1,4 +1,4 @@
-package y_2020.m_03;
+package _2020_03;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
@@ -39,7 +39,7 @@ public class Grayscale extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        String grayscaleTextureShader = "shaders/y_2020/m_03/grayscaleTextures.glsl";
+        String grayscaleTextureShader = "shaders/_2020_03/grayscaleTextures.glsl";
         uniform(grayscaleTextureShader).set("time", t);
         for (int i = 0; i < 6; i++) {
             uniform(grayscaleTextureShader).set("grayscale_"+i, grayscaleTextures.get(i));

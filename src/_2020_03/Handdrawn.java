@@ -1,4 +1,4 @@
-package y_2020.m_03;
+package _2020_03;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
