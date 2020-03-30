@@ -21,3 +21,203 @@ shaders§rect size§1.0§10.0
 shaders§sine amp§1.625§10.0
 shaders§sine freq§19.999613§100.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§14.662497§255.0
+shaders§split§-87.325§1000.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§55.000008§200.0
+shaders§minRadius§3.3749847§200.0
+shaders§maxRadius§523.9375§3000.0
+shaders§time speed§0.42500016§10.0
+shaders§r noise freq§0.0044999598§0.1
+shaders§max offset§1.0§10.0
+shaders§weight§1.5012414§1.0
+shaders§r0 stroke§0.64187455§0.39375§1.0§1.0§1.0
+shaders§r1 stroke§0.6187503§1.0§0.0§0.0§1.0
+shaders§size§24.999935§200.0
+shaders§r affects size§0.0§1000.0
+shaders§circle detail§2.075§10.0
+shaders§triangle size§0.36250073§10.0
+shaders§rect size§0.275§10.0
+shaders§dot size§0.31250006§10.0
+shaders§sine amp§2.8750002§10.0
+shaders§sine freq§15.000002§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§30.918741§255.0
+shaders§split§0.0§10.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§55.000008§200.0
+shaders§minRadius§9.874985§200.0
+shaders§maxRadius§523.9375§3000.0
+shaders§time speed§0.39999998§10.0
+shaders§r noise freq§0.0017499595§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§1.5012414§1.0
+shaders§r0 stroke§0.64187455§0.0§1.0§1.0§1.0
+shaders§r1 stroke§0.6187503§1.0§0.0§0.0§1.0
+shaders§size§24.999935§200.0
+shaders§r affects size§93.75§1000.0
+shaders§dot size§0.31250006§10.0
+shaders§text size§0.5500003§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§22.312426§255.0
+shaders§split§-47.399994§1000.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§55.999992§200.0
+shaders§minRadius§11.874985§200.0
+shaders§maxRadius§400.1875§3000.0
+shaders§time speed§0.39999998§10.0
+shaders§r noise freq§0.0017499595§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§1.5012414§1.0
+shaders§r0 stroke§0.64187455§0.0§1.0§1.0§1.0
+shaders§r1 stroke§0.6187503§1.0§0.0§0.0§1.0
+shaders§size§28.000004§200.0
+shaders§r affects size§0.0§10.0
+shaders§dot size§0.31250006§10.0
+shaders§text size§0.5500003§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§22.312426§255.0
+shaders§split§-47.399994§1000.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§55.999992§200.0
+shaders§minRadius§11.874985§200.0
+shaders§maxRadius§400.1875§3000.0
+shaders§time speed§0.39999998§10.0
+shaders§r noise freq§0.0017499595§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§1.5012414§1.0
+shaders§r0 stroke§0.64187455§0.0§1.0§1.0§1.0
+shaders§r1 stroke§0.6187503§1.0§0.0§0.0§1.0
+shaders§size§28.000004§200.0
+shaders§r affects size§0.0§10.0
+shaders§dot size§0.31250006§10.0
+shaders§text size§0.5500003§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§6.0561743§255.0
+shaders§split§4.050003§1000.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§25.999996§200.0
+shaders§minRadius§28.125§2000.0
+shaders§maxRadius§238.9375§3000.0
+shaders§time speed§0.51250005§10.0
+shaders§r noise freq§0.008624959§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§2.164992§1.0
+shaders§r0 stroke§0.023124775§0.84375§1.0§1.0§1.0
+shaders§r1 stroke§0.9537501§0.225§1.0§0.9699999§1.0
+shaders§size§46.000008§200.0
+shaders§r affects size§33.55§100.0
+shaders§circle detail§1.4625§10.0
+shaders§triangle size§0.36250073§10.0
+shaders§rect size§0.25000003§10.0
+shaders§dot size§0.31250006§10.0
+shaders§sine amp§2.8750002§10.0
+shaders§sine freq§15.000002§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§6.0561743§255.0
+shaders§split§4.050003§1000.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§12.000002§200.0
+shaders§minRadius§1.125§200.0
+shaders§maxRadius§295.1875§3000.0
+shaders§time speed§0.51250005§10.0
+shaders§r noise freq§0.0026249604§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§2.164992§1.0
+shaders§r0 stroke§0.023124775§0.84375§1.0§1.0§1.0
+shaders§r1 stroke§0.9537501§0.225§1.0§0.9699999§1.0
+shaders§size§16.000004§200.0
+shaders§r affects size§33.55§100.0
+shaders§dot size§0.31250006§10.0
+shaders§triangle size§0.36250073§10.0
+shaders§rect size§0.25000003§10.0
+shaders§sine amp§2.8750002§10.0
+shaders§sine freq§15.000002§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§6.0561743§255.0
+shaders§split§2.300003§10.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§12.000002§200.0
+shaders§minRadius§1.125§200.0
+shaders§maxRadius§295.1875§3000.0
+shaders§time speed§0.20001258§0.010000001
+shaders§r noise freq§0.0027499604§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§2.164992§1.0
+shaders§r0 stroke§0.10437475§0.425§1.0§1.0§1.0
+shaders§r1 stroke§0.045000106§0.7625§1.0§0.9699999§1.0
+shaders§size§16.000004§200.0
+shaders§r affects size§33.55§100.0
+shaders§dot size§0.31250006§10.0
+shaders§triangle size§0.36250073§10.0
+shaders§rect size§0.25000003§10.0
+shaders§sine amp§2.8750002§10.0
+shaders§sine freq§15.000002§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§6.0561743§255.0
+shaders§split§2.300003§10.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§12.000002§200.0
+shaders§minRadius§1.125§200.0
+shaders§maxRadius§295.1875§3000.0
+shaders§time speed§0.20001258§0.010000001
+shaders§r noise freq§0.0027499604§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§2.164992§1.0
+shaders§r0 stroke§0.10437475§0.425§1.0§1.0§1.0
+shaders§r1 stroke§0.045000106§0.7625§1.0§0.9699999§1.0
+shaders§size§16.000004§200.0
+shaders§r affects size§33.55§100.0
+shaders§dot size§0.31250006§10.0
+shaders§triangle size§0.36250073§10.0
+shaders§rect size§0.25000003§10.0
+shaders§sine amp§2.8750002§10.0
+shaders§sine freq§15.000002§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§6.0561743§255.0
+shaders§split§2.300003§10.0
+shaders§rotate§100.0§0.0§0.0§0.0
+shaders§level count§12.000002§200.0
+shaders§minRadius§1.125§200.0
+shaders§maxRadius§295.1875§3000.0
+shaders§time speed§0.30145007§1.0000001
+shaders§r noise freq§0.0043749604§0.1
+shaders§max offset§1.5875006§100.0
+shaders§weight§2.164992§1.0
+shaders§r0 stroke§0.10437475§0.425§1.0§1.0§1.0
+shaders§r1 stroke§0.045000106§0.7625§1.0§0.9699999§1.0
+shaders§size§16.000004§200.0
+shaders§r affects size§33.55§100.0
+shaders§dot size§0.31250006§10.0
+shaders§triangle size§0.36250073§10.0
+shaders§rect size§0.25000003§10.0
+shaders§sine amp§2.8750002§10.0
+shaders§sine freq§15.000002§100.0
+STATE_END

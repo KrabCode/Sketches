@@ -14,7 +14,7 @@ public class Grayscale extends KrabApplet {
     ArrayList<PImage> grayscaleTextures = new ArrayList<>();
 
     public static void main(String[] args) {
-        KrabApplet.main("y_2020.m_03.Grayscale");
+        KrabApplet.main(String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1]);
     }
 
     public void settings() {

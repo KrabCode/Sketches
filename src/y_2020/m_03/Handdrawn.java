@@ -13,8 +13,7 @@ public class Handdrawn extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
-        String pathToThis = String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1];
-        KrabApplet.main(pathToThis);
+        KrabApplet.main(String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1]);
     }
 
     public void settings() {
@@ -27,8 +26,9 @@ public class Handdrawn extends KrabApplet {
         pg.smooth(32);
         pg.beginDraw();
         pg.background(0);
+        pg.textSize(256);
         pg.endDraw();
-        frameRecordingDuration *= 3;
+//        frameRecordingDuration *= 3;
     }
 
     public void draw() {
@@ -57,7 +57,7 @@ public class Handdrawn extends KrabApplet {
 
     private void drawPolarOrnament() {
         int levelCount = sliderInt("level count", 10);
-        String[] types = new String[]{"dotted circle", "sinewave", "rect circle", "triangles"}; //, "dashed line"
+        String[] types = new String[]{"dots", "sinewave", "rects", "triangles", /*"letters"*/};
         for (int level = 0; level < levelCount; level++) {
             float levelNorm = clampNorm(level, 0, levelCount - 1);
             float minRadius = slider("minRadius", 50);
@@ -66,8 +66,11 @@ public class Handdrawn extends KrabApplet {
             float rNorm = norm(r,minRadius,maxRadius);
             float random = randomDeterministic(level);
             float timeSpeed = slider("time speed");
-            float noiseOffset = (1 - 2 * noise(r * slider("r noise freq") + t*timeSpeed))
-                    * slider("max offset", 1);
+            float rNoiseInput = r * slider("r noise freq");
+            float noiseValue = (float) (.5f+.5*noise.eval(
+                    rNoiseInput + timeSpeed*cos(t),
+                    rNoiseInput + timeSpeed*sin(t)));
+            float noiseOffset = (1 - 2 * noiseValue) * slider("max offset", 1);
             String type = types[floor(random * types.length)];
             pg.strokeWeight(slider("weight"));
             int clr = lerpColor(picker("r0 stroke").clr(), picker("r1 stroke").clr(), rNorm);
@@ -89,21 +92,21 @@ public class Handdrawn extends KrabApplet {
                 }
                 pg.endShape();
             }
-            if (type.equals("rect circle")) {
-                pg.noFill();
+            if (type.equals("rects")) {
                 for (int i = 0; i < elementCount; i++) {
                     float inorm = clampNorm(i, 0, elementCount);
                     float theta = inorm * TAU + noiseOffset;
                     float rectSize = slider("rect size", 1);
                     pg.push();
                     pg.rotate(theta);
+                    pg.noStroke();
                     pg.translate(r, 0);
                     pg.rectMode(CENTER);
                     pg.rect(0, 0, elementSize * rectSize, elementSize * rectSize);
                     pg.pop();
                 }
             }
-            if (type.equals("dotted circle")) {
+            if (type.equals("dots")) {
                 for (int i = 0; i < elementCount; i++) {
                     float inorm = clampNorm(i, 0, elementCount);
                     float theta = inorm * TAU + noiseOffset;
@@ -118,8 +121,16 @@ public class Handdrawn extends KrabApplet {
             }
             if (type.equals("circle")) {
                 pg.noFill();
-                pg.ellipse(0, 0, r * 2, r * 2);
+                pg.beginShape();
+                elementCount *= slider("circle detail", 1);
+                for (int i = 0; i < elementCount; i++) {
+                    float inorm = clampNorm(i, 0, elementCount-1);
+                    float theta = inorm * TAU + noiseOffset;
+                    pg.vertex(r*cos(theta), r*sin(theta));
+                }
+                pg.endShape();
             }
+
             if(type.equals("triangles")){
                 pg.noFill();
                 for (int i = 0; i < elementCount; i++) {
@@ -133,6 +144,23 @@ public class Handdrawn extends KrabApplet {
                     pg.triangle(elementSize * triangleSize*.5f, 0,
                             -elementSize * triangleSize*.5f, -elementSize * triangleSize*.5f,
                             -elementSize * triangleSize*.5f, elementSize * triangleSize*.5f);
+                    pg.pop();
+                }
+            }
+            if (type.equals("letters")) {
+//                char randomLetter =  (char) (floor(randomDeterministic(level)*26)+'a');
+                char randomLetter = 'A';
+                for (int i = 0; i < elementCount; i++) {
+                    float inorm = clampNorm(i, 0, elementCount);
+                    float theta = inorm * TAU + noiseOffset;
+                    float dotSize = slider("dot size", 1);
+                    pg.noStroke();
+                    pg.push();
+                    pg.rotate(theta);
+                    pg.translate(0, -r);
+                    pg.textAlign(CENTER,CENTER);
+                    pg.textSize(elementSize*slider("text size", 1));
+                    pg.text(randomLetter, 0, 0);
                     pg.pop();
                 }
             }

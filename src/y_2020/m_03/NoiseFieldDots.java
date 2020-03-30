@@ -13,7 +13,7 @@ public class NoiseFieldDots extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
-        KrabApplet.main("NoiseFieldDots");
+        KrabApplet.main(String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1]);
     }
 
     public void settings() {
