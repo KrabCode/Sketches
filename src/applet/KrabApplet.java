@@ -1596,7 +1596,12 @@ public abstract class KrabApplet extends PApplet {
         String split = "shaders/filters/split.glsl";
         uniform(split).set("delta", slider("split"));
         hotFilter(split, pg);
+    }
 
+    protected void blurPass(PGraphics pg) {
+        String split = "shaders/filters/blur.glsl";
+        uniform(split).set("delta", slider("split"));
+        hotFilter(split, pg);
     }
 
     protected void chromaticAberrationPass(PGraphics pg) {

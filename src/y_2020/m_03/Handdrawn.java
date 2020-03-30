@@ -35,7 +35,8 @@ public class Handdrawn extends KrabApplet {
         pg.beginDraw();
         group("shaders");
         alphaFade(pg);
-        splitPass(pg);
+//        splitPass(pg);
+        blurPass(pg);
         pg.translate(width * .5f, height * .5f);
 //        rotateWithMouse(pg);
         PVector rotate = sliderXYZ("rotate");
