@@ -9,7 +9,7 @@ public class CameraGrid extends KrabApplet {
     private PImage img;
 
     public static void main(String[] args) {
-        KrabApplet.main("utils.CameraGrid");
+        KrabApplet.main(String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1]);
     }
 
     public void settings() {
@@ -18,16 +18,18 @@ public class CameraGrid extends KrabApplet {
 
     public void setup() {
         cameraOffset = new PVector(width * .5f, height * .5f);
-        img = loadImage(randomImageUrl(800));
+        img = loadImage(randomImageUrl(1600));
     }
 
     public void draw() {
         background(150);
         updateCamera();
-        image(img, -100, -100);
+        imageMode(CENTER);
+        image(img, 0,0);
 //        drawGridAroundPlayer();
         updatePlayer();
         drawPlayer();
+        gui();
     }
 
     private void updatePlayer() {
@@ -39,11 +41,11 @@ public class CameraGrid extends KrabApplet {
 
     private void updateCamera() {
         float cameraFollowTightness = .05f;
-        cameraOffset.x = lerp(cameraOffset.x, width * .5f - playerPos.x, cameraFollowTightness);
-        cameraOffset.y = lerp(cameraOffset.y, height * .5f - playerPos.y, cameraFollowTightness);
+        cameraOffset.x = lerp(cameraOffset.x, (width * .5f) - playerPos.x, cameraFollowTightness);
+        cameraOffset.y = lerp(cameraOffset.y, (height * .5f) - playerPos.y, cameraFollowTightness);
         translate(cameraOffset.x, cameraOffset.y);
     }
-
+/*
     private void drawGridAroundPlayer() {
         float cellSize = 40;
         float bufferZone = cellSize * 2;  //set this to -cellSize*2 to see how it works
@@ -60,9 +62,13 @@ public class CameraGrid extends KrabApplet {
         }
         popMatrix();
     }
+*/
 
     private void drawPlayer() {
-        ellipse(playerPos.x, playerPos.y, 20, 20);
+        push();
+        translate(playerPos.x, playerPos.y);
+        ellipse(0, 0, 20, 20);
+        pop();
     }
 
 }

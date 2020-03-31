@@ -25,6 +25,11 @@ import static java.lang.System.currentTimeMillis;
 
 @SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused"})
 public abstract class KrabApplet extends PApplet {
+
+    protected static String pathToThisClass(Class c){
+        return String.valueOf(c.getEnclosingClass()).split(" ")[1];
+    }
+
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
