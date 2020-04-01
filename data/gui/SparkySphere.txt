@@ -84,3 +84,188 @@ SparkySphere§no fill§false
 SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
 SparkySphere§inner radius§-0.52493286§3000.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§n§8.000002§100.0
+SparkySphere§diameter§236.99997§1000.0
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§0.0§10.0
+SparkySphere§translate§100.0§-1.625§0.25§283.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§1.4000005§10.0
+SparkySphere§no fill§false
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§n§14.0000105§100.0
+SparkySphere§diameter§258.99994§1000.0
+SparkySphere§fade to black§7.012499§255.0
+SparkySphere§blur§9.174999§100.0
+SparkySphere§translate§100.0§-14.625§76.375§283.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§1.4000005§10.0
+SparkySphere§no fill§false
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§n§30.999763§100.0
+SparkySphere§diameter§645.0001§1000.0
+SparkySphere§fade to black§12.1125§255.0
+SparkySphere§blur§21.55§100.0
+SparkySphere§translate§1000.0§-8.125§259.875§377.375
+SparkySphere§stroke§0.58875§0.5875§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§4.1500006§100.0
+SparkySphere§no fill§false
+SparkySphere§freq§0.028750133§1.0
+SparkySphere§amp§5.987488§300.0
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§n§30.000004§100.0
+SparkySphere§diameter§645.0001§1000.0
+SparkySphere§fade to black§5.7374997§255.0
+SparkySphere§blur§-0.57500076§100.0
+SparkySphere§translate§1000.0§-8.125§259.875§377.375
+SparkySphere§rotate§10.0§-0.6124999§0.0§0.0
+SparkySphere§stroke§0.58875§0.36875§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§4.1500006§100.0
+SparkySphere§no fill§false
+SparkySphere§freq§0.027500123§1.0
+SparkySphere§amp§9.737488§300.0
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§n§41.004066§100.0
+SparkySphere§diameter§660.0001§1000.0
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§-0.07500076§100.0
+SparkySphere§translate§1000.0§-8.125§288.625§286.125
+SparkySphere§rotate§10.0§-0.19999991§0.0§0.0
+SparkySphere§stroke§0.58875§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§4.625§100.0
+SparkySphere§no fill§false
+SparkySphere§freq§0.027500123§1.0
+SparkySphere§amp§16.112488§300.0
+SparkySphere§inner fill§0.99812496§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§n§41.004066§100.0
+SparkySphere§diameter§660.0001§1000.0
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§-0.07500076§100.0
+SparkySphere§translate§1000.0§-8.125§288.625§286.125
+SparkySphere§rotate§10.0§-0.19999991§0.0§0.0
+SparkySphere§stroke§0.58875§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§4.625§100.0
+SparkySphere§no fill§false
+SparkySphere§freq§0.027500123§1.0
+SparkySphere§amp§16.112488§300.0
+SparkySphere§inner fill§0.99812496§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§-0.07500076§100.0
+SparkySphere§translate§1000.0§-8.125§288.625§286.125
+SparkySphere§rotate§10.0§-0.19999991§0.0§0.0
+SparkySphere§stroke§0.58875§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§4.625§100.0
+SparkySphere§no fill§false
+SparkySphere§diameter§660.0001§1000.0
+SparkySphere§n§16.000004§100.0
+SparkySphere§freq§0.027500123§1.0
+SparkySphere§amp§16.112488§300.0
+SparkySphere§moon translate§10000.0§-925.0§1926.0§0.0
+SparkySphere§moon diameter§200.0§300.0
+SparkySphere§moon n§9.999998§100.0
+SparkySphere§inner fill§0.99812496§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§5.174999§100.0
+SparkySphere§translate§1000.0§-8.125§288.625§286.125
+SparkySphere§rotate§10.0§-0.19999991§0.0§0.0
+SparkySphere§stroke§0.58875§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§weight§4.625§100.0
+SparkySphere§no fill§false
+SparkySphere§diameter§660.0001§1000.0
+SparkySphere§n§16.000004§100.0
+SparkySphere§freq§0.027500123§1.0
+SparkySphere§amp§16.112488§300.0
+SparkySphere§moon translate§1000.0§-122.5§551.25§182.5
+SparkySphere§moon stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§moon fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§moon diameter§51.999992§3000.0
+SparkySphere§moon n§8.000002§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§5.174999§100.0
+SparkySphere§translate§1000.0§-8.125§288.625§286.125
+SparkySphere§rotate§10.0§-0.19999991§0.0§0.0
+SparkySphere§stroke§0.58875§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.6518749§1.0§0.39375§1.0§1.0
+SparkySphere§weight§3.625§100.0
+SparkySphere§no fill§false
+SparkySphere§diameter§660.0001§1000.0
+SparkySphere§n§30.001448§100.0
+SparkySphere§freq§0.016250122§1.0
+SparkySphere§amp§18.362488§300.0
+SparkySphere§moon translate§1000.0§448.75§144.125§0.0
+SparkySphere§moon stroke§0.12312506§0.40625§0.85625§1.0§1.0
+SparkySphere§moon fill§0.110625§0.0§1.0§1.0§1.0
+SparkySphere§moon diameter§99.00744§3000.0
+SparkySphere§moon n§1.999991§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§blur§5.174999§100.0
+SparkySphere§translate§1000.0§-8.125§288.625§286.125
+SparkySphere§rotate§10.0§-0.19999991§0.0§0.0
+SparkySphere§stroke§0.58875§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.6518749§1.0§0.39375§1.0§1.0
+SparkySphere§weight§3.625§100.0
+SparkySphere§no fill§false
+SparkySphere§diameter§610.9999§1000.0
+SparkySphere§n§15.000002§100.0
+SparkySphere§freq§0.016250122§1.0
+SparkySphere§amp§18.362488§300.0
+SparkySphere§moon translate§1000.0§448.75§144.125§0.0
+SparkySphere§moon stroke§0.12312506§0.40625§0.85625§1.0§1.0
+SparkySphere§moon fill§0.110625§0.0§1.0§1.0§1.0
+SparkySphere§moon diameter§99.00744§3000.0
+SparkySphere§moon n§1.999991§100.0
+STATE_END

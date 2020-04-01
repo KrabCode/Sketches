@@ -391,7 +391,7 @@ public abstract class KrabApplet extends PApplet {
     // UTILS
 
     private void updateMouseState() {
-        mousePressedOutsideGui = mousePressed && isMouseOutsideGui() && !overlayVisible;
+        mousePressedOutsideGui = mousePressed && isMouseOutsideGui() && (!trayVisible || !overlayVisible);
     }
 
     private void guiSetup(boolean defaultVisibility) {
@@ -460,14 +460,18 @@ public abstract class KrabApplet extends PApplet {
         mouseRotation(g);
     }
 
+    float scale = 1;
+
     protected void mouseRotation(PGraphics pg){
         if(mousePressedOutsideGui){
-            float x = mouseX - pmouseX;
-            float y = mouseY - pmouseY;
-            float angle = mag(x, y) * 0.01f;
-            PMatrix3D temp = new PMatrix3D();
-            temp.rotate(angle, -y, x, 0);
-            mouseRotation.preApply(temp);
+            if(mouseButton == LEFT){
+                float x = mouseX - pmouseX;
+                float y = mouseY - pmouseY;
+                float angle = mag(x, y) * 0.01f;
+                PMatrix3D temp = new PMatrix3D();
+                temp.rotate(angle, -y, x, 0);
+                mouseRotation.preApply(temp);
+            }
         }
         pg.applyMatrix(mouseRotation);
     }
@@ -1605,7 +1609,7 @@ public abstract class KrabApplet extends PApplet {
 
     protected void blurPass(PGraphics pg) {
         String split = "shaders/filters/blur.glsl";
-        uniform(split).set("delta", slider("split"));
+        uniform(split).set("delta", slider("blur"));
         hotFilter(split, pg);
     }
 
