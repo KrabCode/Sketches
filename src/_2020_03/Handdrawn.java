@@ -79,6 +79,7 @@ public class Handdrawn extends KrabApplet {
             pg.fill(clr);
             int pixelCircleCircumference = ceil(TAU / angularDiameter(r, 1));
             float elementSize = sliderInt("size", 10) + rNorm*(slider("r affects size"));
+            elementSize = max(elementSize, .001f);
             float angularElementSize = angularDiameter(r, elementSize);
             int elementCount = floor(TAU / angularElementSize);
             if (type.equals("sinewave")) {

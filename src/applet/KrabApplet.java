@@ -456,11 +456,11 @@ public abstract class KrabApplet extends PApplet {
 
     private PMatrix3D mouseRotation = new PMatrix3D();
 
-    protected void rotateWithMouse(){
-        rotateWithMouse(g);
+    protected void mouseRotation(){
+        mouseRotation(g);
     }
 
-    protected void rotateWithMouse(PGraphics pg){
+    protected void mouseRotation(PGraphics pg){
         if(mousePressedOutsideGui){
             float x = mouseX - pmouseX;
             float y = mouseY - pmouseY;

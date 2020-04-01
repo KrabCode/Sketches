@@ -1,0 +1,58 @@
+STATE_BEGIN
+UNDO
+GROUP§rules§true
+rules§F -> F+F–F+F§true
+rules§regen path§
+rules§iterations§10.999995§100.0
+GROUP§draw§true
+draw§draw§true
+draw§stroke§0.0§0.0§0.5§1.0§1.0
+draw§weight§1.3749999§10.0
+draw§step size§29.4625§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§rules§true
+rules§F -> F+F–F+F§true
+rules§regen path§
+rules§iterations§14.9999895§100.0
+GROUP§draw§true
+draw§draw§true
+draw§stroke§0.0§0.0§0.5§1.0§1.0
+draw§weight§1.0749999§10.0
+draw§step size§1.4375001§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§rules§true
+rules§F -> F+F–F+F§true
+rules§generate next§
+GROUP§draw§true
+draw§stroke§0.0§0.0§0.5§1.0§1.0
+draw§weight§1.0749999§10.0
+draw§step size§102.2375§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§rules§true
+rules§F -> F+F–F+F§true
+rules§generate next§
+GROUP§draw§true
+draw§stroke§0.0§0.0§0.5§1.0§1.0
+draw§weight§1.0749999§10.0
+draw§step size§5.0§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§21.993765§255.0
+shaders§split§6.825012§1000.0
+shaders§translate§10000.0§-267.25§161.875
+GROUP§rules§true
+rules§F -> F+F–F+F§true
+rules§generate next§
+GROUP§draw§true
+draw§stroke§0.0§0.0§1.0§1.0§1.0
+draw§weight§1.2250004§100.0
+draw§step size§0.7624998§10.0
+STATE_END

@@ -71,12 +71,20 @@ public class ConcentricClouds_2 extends KrabApplet {
         float maxScale = slider("max scale");
         for (int i = 0; i < cloudCount; i++) {
             float inorm = clampNorm(i, 0, cloudCount - 1);
-            float rotation = (float) (slider("rot amp") * (1 - 2 * noise.eval(
-                    inorm * irot + tr * cos(t),
-                    inorm * irot + tr * sin(t))));
+            float rotation = 0;
+            if(toggle("looping noise")){
+                rotation =   (float) (slider("rot amp") * (1 - 2 * noise.eval(
+                        inorm * irot + tr * cos(t),
+                        inorm * irot + tr * sin(t))));
+            }else{
+                rotation = (float)(slider("rot amp") * 1-2*noise.eval(
+                        inorm*irot+tr*t,
+                        inorm*irot+tr*t));
+            }
             pg.imageMode(CENTER);
             pg.push();
-            pg.scale(lerp(minScale, maxScale, inorm));
+            float myScale = lerp(minScale, maxScale, (inorm+t*slider("fly speed"))%1);
+            pg.scale(myScale);
             pg.rotate(2*TAU*randomDeterministic(i*3)+rotation);
             pg.image(imagesToConsider.get(floor(randomDeterministic(i) * imagesToConsider.size())), 0, 0);
             pg.pop();

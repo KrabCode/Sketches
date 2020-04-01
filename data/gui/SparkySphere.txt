@@ -1,0 +1,86 @@
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§7.9997063§100.0
+SparkySphere§diameter§756.9999§10000.0
+SparkySphere§translate§100.0§0.0§0.0§0.0
+SparkySphere§stroke§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§360.0§30.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§11.999938§100.0
+SparkySphere§diameter§631.9999§10000.0
+SparkySphere§translate§100.0§0.0§0.0§0.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§weight§2.925§10.0
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§261.97507§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§14.000002§100.0
+SparkySphere§diameter§694.0001§10000.0
+SparkySphere§translate§100.0§156.75§113.625§27.625
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§weight§2.925§10.0
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§261.97507§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§8.000002§100.0
+SparkySphere§diameter§556.9999§10000.0
+SparkySphere§translate§100.0§-1.625§0.25§283.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§weight§2.925§10.0
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§8.000002§100.0
+SparkySphere§diameter§556.9999§10000.0
+SparkySphere§translate§100.0§-1.625§0.25§283.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.40625§1.0§1.0
+SparkySphere§weight§4.5624995§10.0
+SparkySphere§no fill§false
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§8.000002§100.0
+SparkySphere§diameter§1.0000002§1000.0
+SparkySphere§fade to black§228.54375§255.0
+SparkySphere§split§0.0§10.0
+SparkySphere§translate§100.0§-1.625§0.25§283.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.40625§1.0§1.0
+SparkySphere§weight§1.4000005§10.0
+SparkySphere§no fill§false
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SparkySphere§true
+SparkySphere§subdivisions§19.000004§100.0
+SparkySphere§diameter§236.99997§1000.0
+SparkySphere§fade to black§0.0§255.0
+SparkySphere§split§0.0§10.0
+SparkySphere§translate§100.0§-1.625§0.25§283.0
+SparkySphere§stroke§0.0§0.0§1.0§1.0§1.0
+SparkySphere§fill§0.0§0.0§0.40625§1.0§1.0
+SparkySphere§weight§1.4000005§10.0
+SparkySphere§no fill§false
+SparkySphere§inner fill§0.0§0.0§0.0§1.0§1.0
+SparkySphere§inner radius§-0.52493286§3000.0
+STATE_END
