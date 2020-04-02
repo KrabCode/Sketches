@@ -96,3 +96,136 @@ QuadBall§amp§14.662476§1000.0
 QuadBall§double freq§3.7375002§10.0
 QuadBall§half amp§16.825§100.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§0.0§255.0
+QuadBall§blur§3.1500015§1000.0
+QuadBall§translate§1000.0§7.5§7.5§-102.5
+QuadBall§rotate§100.0§0.0§0.75§0.0
+QuadBall§stroke§0.9581248§0.0§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.0§1.0§1.0
+QuadBall§weight§2.299998§10.0
+QuadBall§no fill§false
+QuadBall§diameter§164.9999§3000.0
+QuadBall§n§34.000008§200.0
+QuadBall§frequency§0.92500263§10.0
+QuadBall§amp§44.662476§1000.0
+QuadBall§double freq§7.5624986§10.0
+QuadBall§half amp§15.825001§100.0
+QuadBall§noise clamp min§-7.825001§100.0
+QuadBall§noise clamp max§61.862473§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§50.0§255.0
+shaders§blur§0.0§10.0
+shaders§translate§100.0§0.0§0.0§0.0
+shaders§rotate§100.0§0.0§0.0§0.0
+GROUP§ball§true
+ball§stroke§0.0§0.0§0.5§1.0§1.0
+ball§fill§0.0§0.0§0.5§1.0§1.0
+ball§weight§2.1000001§10.0
+ball§no fill§true
+ball§diameter§277.00006§300.0
+ball§n§10.0§200.0
+GROUP§fbm§true
+fbm§octaves§2.0§100.0
+fbm§frequency 0§1.0§10.0
+fbm§amp 0§1.0§10.0
+fbm§frequency 1§1.0§10.0
+fbm§amp 1§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§50.0§255.0
+shaders§blur§0.0§10.0
+shaders§translate§100.0§0.0§0.0§0.0
+shaders§rotate§100.0§0.0§0.0§0.0
+GROUP§ball 1§false
+ball 1§diameter§188.99997§300.0
+ball 1§n§10.0§200.0
+ball 1§stroke§0.0§0.0§1.0§1.0§1.0
+ball 1§fill§0.0§0.0§0.0§1.0§1.0
+ball 1§weight§2.175§10.0
+ball 1§no fill§true
+GROUP§fbm§false
+fbm§octaves§2.0§100.0
+fbm§frequency 0§1.0§10.0
+fbm§amp 0§1.0§10.0
+fbm§frequency 1§1.0§10.0
+fbm§amp 1§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§ball 2§false
+ball 2§diameter§180.00003§300.0
+ball 2§n§10.0§200.0
+ball 2§stroke§0.0§0.0§0.0§1.0§1.0
+ball 2§fill§0.6281251§1.0§0.91875§1.0§1.0
+ball 2§weight§0.0§10.0
+ball 2§no fill§false
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§50.0§255.0
+shaders§blur§0.0§10.0
+shaders§translate§100.0§0.0§0.0§0.0
+shaders§rotate§100.0§0.0§0.75§0.0
+GROUP§ball 1§true
+ball 1§diameter§161.99997§300.0
+ball 1§n§30.999996§200.0
+ball 1§stroke§0.0§0.0§1.0§1.0§1.0
+ball 1§fill§0.0§0.0§1.0§1.0§1.0
+ball 1§weight§0.0§10.0
+ball 1§no fill§false
+GROUP§fbm§false
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.72500014§10.0
+fbm§amp 0§12.25§100.0
+fbm§frequency 1§9.825001§100.0
+fbm§amp 1§2.3249998§10.0
+fbm§noise clamp min§12.587502§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§ball 2§true
+ball 2§diameter§180.00003§300.0
+ball 2§n§10.0§200.0
+ball 2§stroke§0.0§0.0§0.0§1.0§1.0
+ball 2§fill§0.6281251§1.0§0.78125§1.0§1.0
+ball 2§weight§0.0§10.0
+ball 2§no fill§false
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§50.0§255.0
+shaders§blur§0.0§10.0
+shaders§translate§100.0§0.0§0.0§0.0
+shaders§rotate§100.0§0.0§0.75§0.0
+GROUP§ball 1§true
+ball 1§diameter§161.99997§300.0
+ball 1§n§30.999996§200.0
+ball 1§stroke§0.0§0.0§1.0§1.0§1.0
+ball 1§fill§0.0§0.0§1.0§1.0§1.0
+ball 1§weight§0.0§10.0
+ball 1§no fill§false
+GROUP§fbm§false
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.72500014§10.0
+fbm§amp 0§12.25§100.0
+fbm§frequency 1§9.825001§100.0
+fbm§amp 1§2.3249998§10.0
+fbm§noise clamp min§12.587502§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§ball 2§true
+ball 2§diameter§180.00003§300.0
+ball 2§n§10.0§200.0
+ball 2§stroke§0.0§0.0§0.0§1.0§1.0
+ball 2§fill§0.6281251§1.0§0.78125§1.0§1.0
+ball 2§weight§0.0§10.0
+ball 2§no fill§false
+STATE_END
