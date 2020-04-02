@@ -1,0 +1,98 @@
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§15.937498§255.0
+QuadBall§blur§0.0§10.0
+QuadBall§translate§1000.0§0.0§0.0§-440.0
+QuadBall§rotate§100.0§0.0§0.0§0.0
+QuadBall§stroke§0.0§0.0§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.0§1.0§1.0
+QuadBall§weight§1.6624998§10.0
+QuadBall§no fill§false
+QuadBall§nking ball 1§0
+QuadBall§diameter§400.0§300.0
+QuadBall§n§61.000008§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§15.937498§255.0
+QuadBall§blur§0.0§10.0
+QuadBall§translate§1000.0§0.0§0.0§-102.5
+QuadBall§rotate§100.0§0.0§0.0§0.0
+QuadBall§stroke§0.0§0.0§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.0§1.0§1.0
+QuadBall§weight§1.6624998§10.0
+QuadBall§no fill§false
+QuadBall§nking ball 1§0
+QuadBall§diameter§300.99994§300.0
+QuadBall§n§40.999992§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§10.51875§255.0
+QuadBall§blur§1.9500008§10.0
+QuadBall§translate§1000.0§7.5§7.5§-102.5
+QuadBall§rotate§10.0§0.22500017§0.1§0.0
+QuadBall§stroke§0.9581248§0.26875§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.35§1.0§1.0
+QuadBall§weight§0.7749993§10.0
+QuadBall§no fill§true
+QuadBall§diameter§321.00006§300.0
+QuadBall§n§23.999996§200.0
+QuadBall§frequency§8.925003§10.0
+QuadBall§amp§72.162506§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§0.0§255.0
+QuadBall§blur§3.4000015§100.0
+QuadBall§translate§1000.0§7.5§7.5§-102.5
+QuadBall§rotate§100.0§0.0§0.0§-0.5
+QuadBall§stroke§0.9581248§0.26875§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.0§1.0§1.0
+QuadBall§weight§2.299998§10.0
+QuadBall§no fill§false
+QuadBall§diameter§321.00006§300.0
+QuadBall§n§26.008848§200.0
+QuadBall§frequency§1.7875013§100.0
+QuadBall§time§1.525§10.0
+QuadBall§amp§75.912506§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§0.0§255.0
+QuadBall§blur§1.2750015§100.0
+QuadBall§translate§1000.0§7.5§7.5§-102.5
+QuadBall§rotate§100.0§0.0§0.0§-0.5
+QuadBall§stroke§0.9581248§0.26875§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.0§1.0§1.0
+QuadBall§weight§2.299998§10.0
+QuadBall§no fill§false
+QuadBall§diameter§157.99838§3000.0
+QuadBall§n§22.000013§200.0
+QuadBall§frequency§1.7875013§100.0
+QuadBall§time§1.525§10.0
+QuadBall§amp§53.412506§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§QuadBall§true
+QuadBall§fade to black§0.0§255.0
+QuadBall§blur§1.2750015§100.0
+QuadBall§translate§1000.0§7.5§7.5§-102.5
+QuadBall§rotate§100.0§0.0§0.0§0.0
+QuadBall§stroke§0.9581248§0.26875§1.0§1.0§1.0
+QuadBall§fill§0.9968749§0.0§0.0§1.0§1.0
+QuadBall§weight§2.299998§10.0
+QuadBall§no fill§false
+QuadBall§diameter§157.99838§3000.0
+QuadBall§n§22.000004§200.0
+QuadBall§frequency§0.750002§10.0
+QuadBall§amp§14.662476§1000.0
+QuadBall§double freq§3.7375002§10.0
+QuadBall§half amp§16.825§100.0
+STATE_END
