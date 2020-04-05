@@ -1,0 +1,1271 @@
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§4.000005§100.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.0§0.0§1.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.010124973§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§5.003347§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§50.0§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.0§0.0§0.0§1.0§1.0
+global§light§100.0§0.0§0.0§0.0
+global§shininess§1.4624996§10.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§100.0§0.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§4.000005§100.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.0§0.0§1.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.010124973§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§5.003347§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§0.0§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.0§0.0§0.0§1.0§1.0
+global§light§100.0§-5.25§-2.625§-5.25
+global§shininess§1.9874998§10.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.013749998§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§4.000005§100.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.0§0.0§1.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.010124973§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§5.003347§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§0.0§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.0§0.0§0.0§1.0§1.0
+global§light§100.0§-5.25§-2.625§-5.25
+global§shininess§191.4375§1000.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.013749998§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.86246§300.0
+planet§detail§4.000005§100.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.78437495§0.48125§0.38125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.010124973§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§5.003347§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.0§0.0§0.0§1.0§1.0
+global§light§100.0§-53.875§-8.375§13.375
+global§shininess§191.4375§1000.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.013749998§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§7.000007§10.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.78437495§0.48125§0.38125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.010124973§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.0§0.0§0.0§1.0§1.0
+global§light§100.0§-53.875§-8.375§13.375
+global§shininess§191.4375§1000.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.022499999§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§7.000007§10.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.78437495§0.48125§0.38125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0057499753§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-53.875§-8.375§13.375
+global§shininess§86.4375§1000.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.022499999§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§7.000007§10.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.78437495§0.48125§0.38125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0057499753§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-53.875§-8.375§13.375
+global§shininess§86.4375§1000.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.022499999§0.0
+global§color count§3.0000024§200.0
+global§0§0.0§0.0§0.5§1.0§1.0
+global§1§0.0§0.0§0.5§1.0§1.0
+global§2§0.0§0.0§0.5§1.0§1.0
+global§3§0.0§0.0§0.5§1.0§1.0
+global§4§0.0§0.0§0.5§1.0§1.0
+global§5§0.0§0.0§0.5§1.0§1.0
+global§6§0.0§0.0§0.5§1.0§1.0
+global§7§0.0§0.0§0.5§1.0§1.0
+global§8§0.0§0.0§0.5§1.0§1.0
+global§9§0.0§0.0§0.5§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§7.000007§10.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.78437495§0.48125§0.38125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0057499753§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.7875§0.6§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-53.875§-8.375§13.375
+global§shininess§86.4375§1000.0
+global§emissive§0.0§0.0§0.0§1.0§1.0
+global§rotate§1.0§0.0§0.022499999§0.0
+global§color count§3.0000024§200.0
+global§0§0.0§0.0§1.0§1.0§1.0
+global§1§0.0§0.0§0.6875§1.0§1.0
+global§2§0.0§1.0§0.7§1.0§1.0
+global§3§0.0§0.0§0.6875§1.0§1.0
+global§4§0.0§0.0§0.5§1.0§1.0
+global§5§0.0§0.0§0.5§1.0§1.0
+global§6§0.0§0.0§0.5§1.0§1.0
+global§7§0.0§0.0§0.5§1.0§1.0
+global§8§0.0§0.0§0.5§1.0§1.0
+global§9§0.0§0.0§0.5§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§7.000007§10.0
+planet§update§
+planet§color count§10.0§200.0
+planet§0§0.0§0.0§0.5§1.0§1.0
+planet§1§0.0§0.0§0.5§1.0§1.0
+planet§2§0.0§0.0§0.5§1.0§1.0
+planet§3§0.0§0.0§0.5§1.0§1.0
+planet§4§0.0§0.0§0.5§1.0§1.0
+planet§5§0.0§0.0§0.5§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§300.0§30.0
+planet§max radius§500.0§30.0
+planet§rotate§100.0§0.0§0.0§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+planet§fill§0.78437495§0.48125§0.38125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0057499753§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.013750043§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§1.05§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§true
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§color count§1.9998403§200.0
+sea§0§0.6950002§1.0§0.76875§1.0§1.0
+sea§1§0.0§0.0§0.5§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.0§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+sea§fill§0.66875§0.0§0.0§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-53.875§-8.375§13.375
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§5.0024223§200.0
+planet§0§0.0§0.0§0.0§1.0§1.0
+planet§1§0.16749988§1.0§1.0§1.0§1.0
+planet§2§0.35312495§1.0§0.5§1.0§1.0
+planet§3§0.0§1.0§0.0§1.0§1.0
+planet§4§0.0§0.0§1.0§1.0§1.0
+planet§5§0.0§0.0§0.5§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§237.89996§30.0
+planet§max radius§249.65§300.0
+planet§rotate§100.0§0.0§0.0§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.0057499753§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§0.42499995§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§color count§1.9998403§200.0
+sea§0§0.6950002§1.0§0.76875§1.0§1.0
+sea§1§0.0§0.0§0.5§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.0§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-94.875§-37.25§13.375
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.86246§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§5.039994§200.0
+planet§0§0.0§0.0§0.0§1.0§1.0
+planet§1§0.18874986§1.0§0.61875§1.0§1.0
+planet§2§0.28562495§1.0§0.3875§1.0§1.0
+planet§3§0.0§1.0§0.0§1.0§1.0
+planet§4§0.0§0.0§1.0§1.0§1.0
+planet§5§0.0012500286§0.0§1.0§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§300.0§30.0
+planet§max radius§390.23746§30.0
+planet§rotate§100.0§0.0§-0.125§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.0057499753§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§3.3625004§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§0.42499995§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§color count§1.9998403§200.0
+sea§0§0.6950002§1.0§0.76875§1.0§1.0
+sea§1§0.0§0.0§0.5§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.0§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-94.875§-37.25§13.375
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.86246§300.0
+planet§detail§7.999995§10.0
+planet§update§
+planet§color count§3.9878507§200.0
+planet§0§0.0§0.0§0.0§1.0§1.0
+planet§1§0.18874986§1.0§1.0§1.0§1.0
+planet§2§0.28562495§1.0§0.3875§1.0§1.0
+planet§3§0.0§1.0§0.0§1.0§1.0
+planet§4§0.0§0.0§1.0§1.0§1.0
+planet§5§0.0012500286§0.0§1.0§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§242.77487§300.0
+planet§max radius§272.4125§300.0
+planet§rotate§100.0§0.0§-0.125§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.006874975§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§2.8749995§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§0.42499995§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§color count§1.9998403§200.0
+sea§0§0.629375§1.0§0.63125§1.0§1.0
+sea§1§0.0§0.0§0.5§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.0§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§41.118748§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-101.5§-3.0§13.375
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.86246§300.0
+planet§detail§7.999995§10.0
+planet§update§
+planet§color count§4.995021§200.0
+planet§0§0.0§0.0§0.0§1.0§1.0
+planet§1§0.23312484§1.0§1.0§1.0§1.0
+planet§2§0.35000005§1.0§0.11875§1.0§1.0
+planet§3§0.35500038§1.0§0.41875§1.0§1.0
+planet§4§0.0§0.0§1.0§1.0§1.0
+planet§5§0.0012500286§0.0§1.0§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§242.77487§300.0
+planet§max radius§272.4125§300.0
+planet§rotate§100.0§0.0§-0.125§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§true
+fbm§fbm mag§0.007499974§0.1
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§2.8749995§10.0
+fbm§frequency 1§1.5625005§10.0
+fbm§amp 1§0.42499995§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§100.0§300.0
+GROUP§sea§false
+sea§r§267.73752§300.0
+sea§detail§7.999995§100.0
+sea§update§
+sea§color count§1.9998403§200.0
+sea§0§0.629375§1.0§0.63125§1.0§1.0
+sea§1§0.0§0.0§0.5§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.0§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§2.55§255.0
+global§blur§7.5249996§100.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-91.375§41.0§12.5
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§-0.125§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+GROUP§sea§false
+sea§r§271.33752§300.0
+sea§detail§4.000008§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§2.55§255.0
+global§blur§7.5249996§100.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-91.375§41.0§12.5
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§-0.125§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+GROUP§sea§false
+sea§r§271.33752§300.0
+sea§detail§4.000008§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§true
+global§fade to black§2.2312498§255.0
+global§blur§4.925002§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§100.0§-96.0§12.5§9.75
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.5§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§2.2312498§255.0
+global§blur§4.925002§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-284.125§-9.875§-116.5
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.5§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§2.2312498§255.0
+global§blur§4.925002§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-284.125§-9.875§-116.5
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.25§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§139.29375§255.0
+global§blur§5.287499§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-284.125§-9.875§-116.5
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.25§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§139.29375§255.0
+global§blur§5.287499§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-284.125§-9.875§-116.5
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.25§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§true
+global§fade to black§139.29375§255.0
+global§blur§5.287499§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-105.0§0.0§-41.125
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.25§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§139.29375§255.0
+global§blur§5.287499§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-105.0§0.0§-41.125
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.25§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§139.29375§255.0
+global§blur§5.287499§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-105.0§0.0§-41.125
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§259.48746§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§8.00001§200.0
+planet§0§0.18312483§1.0§0.93125§1.0§1.0
+planet§1§0.3756249§1.0§0.5875§1.0§1.0
+planet§2§0.35000005§1.0§0.4125§1.0§1.0
+planet§3§0.35500038§1.0§0.2125§1.0§1.0
+planet§4§0.6031252§0.0§0.0§1.0§1.0
+planet§5§0.0012500286§0.0§0.075§1.0§1.0
+planet§6§0.0§0.0§0.9625§1.0§1.0
+planet§7§0.0§0.0§0.5§1.0§1.0
+planet§8§0.0§0.0§0.5§1.0§1.0
+planet§9§0.0§0.0§0.5§1.0§1.0
+planet§min radius§270.89987§300.0
+planet§max radius§285.1625§300.0
+planet§rotate§100.0§0.0§0.25§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§fbm§false
+fbm§fbm mag§0.021999974§0.1
+fbm§octaves§4.999995§100.0
+fbm§frequency 0§0.010000044§1.0
+fbm§amp 0§1.3499964§10.0
+fbm§frequency 1§0.06250028§10.0
+fbm§amp 1§0.5§10.0
+fbm§frequency 2§0.112500094§10.0
+fbm§amp 2§0.18749991§10.0
+fbm§frequency 3§0.29999968§10.0
+fbm§amp 3§0.13749988§10.0
+fbm§frequency 4§1.0§10.0
+fbm§amp 4§1.0§10.0
+fbm§noise clamp min§0.0§10.0
+fbm§noise clamp max§101.01252§30.0
+GROUP§sea§false
+sea§r§270.58752§300.0
+sea§detail§5.0002413§100.0
+sea§update§
+sea§color count§1.001451§200.0
+sea§0§0.62187487§1.0§0.5875§1.0§1.0
+sea§1§0.0§1.0§0.0§1.0§1.0
+sea§2§0.0§0.0§0.5§1.0§1.0
+sea§3§0.0§0.0§0.5§1.0§1.0
+sea§4§0.0§0.0§0.5§1.0§1.0
+sea§5§0.0§0.0§0.5§1.0§1.0
+sea§6§0.0§0.0§0.5§1.0§1.0
+sea§7§0.0§0.0§0.5§1.0§1.0
+sea§8§0.0§0.0§0.5§1.0§1.0
+sea§9§0.0§0.0§0.5§1.0§1.0
+sea§min radius§300.0§30.0
+sea§max radius§500.5626§30.0
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§139.29375§255.0
+global§blur§5.287499§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0018749996§0.0§1.0§1.0§1.0
+global§ambient§0.031874996§0.0§0.0§0.97999996§1.0
+global§light§1000.0§-105.0§0.0§-41.125
+global§emissive§0.0§0.0§0.0§1.0§1.0
+STATE_END

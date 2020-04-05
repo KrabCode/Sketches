@@ -229,3 +229,301 @@ ball 2§fill§0.6281251§1.0§0.78125§1.0§1.0
 ball 2§weight§0.0§10.0
 ball 2§no fill§false
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§247.41245§300.0
+planet§detail§5.999999§100.0
+planet§update§
+planet§fbm mag§9.474998§100.0
+planet§weight§1.5125§10.0
+planet§stroke§0.0§0.0§1.0§1.0§1.0
+planet§fill§0.0§0.0§0.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.72500014§10.0
+fbm§amp 0§12.25§100.0
+fbm§frequency 1§9.825001§100.0
+fbm§amp 1§2.3249998§10.0
+fbm§noise clamp min§12.587502§100.0
+fbm§noise clamp max§100.0§30.0
+fbm§fbm mag§0.0§10.0
+GROUP§shaders§false
+shaders§fade to black§7.3312497§255.0
+shaders§blur§4.1875§10.0
+shaders§translate§100.0§0.0§0.0§0.0
+shaders§rotate§100.0§0.0§0.75§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§235.03745§3000.0
+planet§detail§6.000001§100.0
+planet§update§
+planet§weight§1.2500001§10.0
+planet§stroke§0.0§0.0§1.0§1.0§1.0
+planet§fill§0.700625§1.0§0.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0036250234§0.10000001
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.012500242§1.0
+fbm§amp 0§12.25§100.0
+fbm§frequency 1§8.700001§100.0
+fbm§amp 1§4.025§10.0
+fbm§noise clamp min§12.587502§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§shaders§true
+shaders§fade to black§7.3312497§255.0
+shaders§blur§49.862495§100.0
+shaders§translate§100.0§0.0§0.0§0.0
+shaders§rotate§100.0§0.0§0.125§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§235.03745§3000.0
+planet§detail§6.000001§100.0
+planet§update§
+planet§weight§1.2500001§10.0
+planet§stroke§0.0§0.0§1.0§1.0§1.0
+planet§fill§0.700625§1.0§0.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0036250234§0.10000001
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.012500242§1.0
+fbm§amp 0§12.25§100.0
+fbm§frequency 1§8.700001§100.0
+fbm§amp 1§4.025§10.0
+fbm§noise clamp min§12.587502§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§true
+sea§r§233.80005§300.0
+sea§detail§4.999999§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.999375§0.0§0.5§0.0§10.0
+sea§fill§0.5812499§0.65§0.50625§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§50.0§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§rotate§100.0§0.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§235.03745§3000.0
+planet§detail§7.999999§100.0
+planet§update§
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§1.0§1.0§1.0
+planet§fill§0.700625§0.24375§1.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0038750235§0.10000001
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.0075002424§1.0
+fbm§amp 0§14.875§100.0
+fbm§frequency 1§0.70000076§100.0
+fbm§amp 1§3.3875012§10.0
+fbm§noise clamp min§-6.4124985§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§252.92505§300.0
+sea§detail§4.999999§100.0
+sea§update§
+sea§weight§0.0§10.0
+sea§stroke§0.999375§0.0§0.5§0.0§10.0
+sea§fill§0.5812499§0.65§0.50625§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§50.0§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§rotate§100.0§0.0§0.25§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§238.78745§3000.0
+planet§detail§8.000002§10.0
+planet§update§
+planet§weight§1.1249996§10.0
+planet§stroke§0.28562495§0.95625§0.44375§1.0§1.0
+planet§fill§0.700625§0.0§0.0§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0038750235§0.10000001
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.007500242§1.0
+fbm§amp 0§14.875§100.0
+fbm§frequency 1§1.2000008§100.0
+fbm§amp 1§3.4500015§10.0
+fbm§noise clamp min§-6.4124985§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§256.67505§300.0
+sea§detail§5.000001§100.0
+sea§update§
+sea§weight§0.0§100.0
+sea§stroke§0.990625§0.0§1.0§1.0§10.0
+sea§fill§0.5806249§0.59375§0.58125§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§0.0§255.0
+global§blur§4.487499§100.0
+global§translate§100.0§0.0§0.0§0.0
+global§rotate§1.0§0.0§0.49999955§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§238.78745§3000.0
+planet§detail§8.000002§10.0
+planet§update§
+planet§weight§1.1249996§10.0
+planet§stroke§0.9643748§0.95625§0.79375§0.0§10.0
+planet§fill§0.34999993§1.0§0.24375§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0038750235§0.10000001
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.007500242§1.0
+fbm§amp 0§14.875§100.0
+fbm§frequency 1§1.2000008§100.0
+fbm§amp 1§3.4500015§10.0
+fbm§noise clamp min§-6.4124985§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§256.67505§300.0
+sea§detail§5.000001§100.0
+sea§update§
+sea§weight§0.0§100.0
+sea§stroke§0.990625§0.0§1.0§1.0§10.0
+sea§fill§0.5806249§0.59375§0.58125§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§0.95623744§255.0
+global§blur§4.487499§100.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.9975§0.0§0.0§1.0§1.0
+global§light§100.0§-11.125§2.75§0.75
+global§rotate§1.0§0.0§0.49999955§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§238.78745§3000.0
+planet§detail§8.000002§10.0
+planet§update§
+planet§weight§1.1249996§10.0
+planet§stroke§0.9643748§0.95625§0.79375§0.0§10.0
+planet§fill§0.34999993§1.0§0.24375§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0038750235§0.10000001
+fbm§octaves§2.0§100.0
+fbm§frequency 0§0.007500242§1.0
+fbm§amp 0§14.875§100.0
+fbm§frequency 1§1.2000008§100.0
+fbm§amp 1§3.4500015§10.0
+fbm§noise clamp min§-6.4124985§100.0
+fbm§noise clamp max§100.0§30.0
+GROUP§sea§false
+sea§r§256.67505§300.0
+sea§detail§5.000001§100.0
+sea§update§
+sea§weight§0.0§100.0
+sea§stroke§0.990625§0.0§1.0§1.0§10.0
+sea§fill§0.5806249§0.59375§0.58125§1.0§1.0
+sea§no fill§false
+GROUP§global§true
+global§fade to black§0.95623744§255.0
+global§blur§4.487499§100.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.9975§0.0§0.0§1.0§1.0
+global§light§100.0§-11.125§2.75§0.75
+global§rotate§1.0§0.0§0.1524997§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§232.78745§300.0
+planet§detail§7.000005§10.0
+planet§update§
+planet§weight§1.0499996§10.0
+planet§stroke§0.43124974§1.0§1.0§0.17500003§10.0
+planet§fill§0.34999993§1.0§0.2125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0042500235§0.10000001
+fbm§octaves§3.9999976§100.0
+fbm§frequency 0§0.007500242§1.0
+fbm§amp 0§14.875§100.0
+fbm§frequency 1§0.82500076§100.0
+fbm§amp 1§1.0500044§10.0
+fbm§noise clamp min§-6.4124985§100.0
+fbm§noise clamp max§100.0§30.0
+fbm§frequency 2§4.525§10.0
+fbm§amp 2§2.3500001§10.0
+GROUP§sea§false
+sea§r§251.05005§300.0
+sea§detail§7.9999743§100.0
+sea§update§
+sea§weight§0.0§100.0
+sea§stroke§0.990625§0.0§0.0§1.0§10.0
+sea§fill§0.5806249§0.59375§0.58125§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§7.012498§255.0
+global§blur§4.987488§1000.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.9975§0.0§0.0§1.0§1.0
+global§light§100.0§-35.25§8.875§2.125
+global§rotate§1.0§0.0§0.1524997§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§false
+planet§r§232.78745§300.0
+planet§detail§7.000005§10.0
+planet§update§
+planet§weight§1.0499996§10.0
+planet§stroke§0.42999974§1.0§1.0§0.0§10.0
+planet§fill§0.34999993§1.0§0.2125§1.0§1.0
+planet§no fill§false
+GROUP§fbm§false
+fbm§fbm mag§0.0042500235§0.10000001
+fbm§octaves§3.9999976§100.0
+fbm§frequency 0§0.007500242§1.0
+fbm§amp 0§14.875§100.0
+fbm§frequency 1§0.82500076§100.0
+fbm§amp 1§1.0500044§10.0
+fbm§noise clamp min§-6.4124985§100.0
+fbm§noise clamp max§100.0§30.0
+fbm§frequency 2§4.525§10.0
+fbm§amp 2§2.3500001§10.0
+GROUP§sea§false
+sea§r§251.05005§300.0
+sea§detail§7.9999743§100.0
+sea§update§
+sea§weight§0.0§100.0
+sea§stroke§0.990625§0.0§0.0§1.0§10.0
+sea§fill§0.5806249§0.59375§0.58125§1.0§1.0
+sea§no fill§false
+GROUP§global§false
+global§fade to black§7.012498§255.0
+global§blur§4.987488§1000.0
+global§translate§100.0§0.0§0.0§0.0
+global§specular§0.0§0.0§1.0§1.0§1.0
+global§ambient§0.9975§0.0§0.0§1.0§1.0
+global§light§100.0§-35.25§8.875§2.125
+global§rotate§1.0§0.0§0.1524997§0.0
+STATE_END

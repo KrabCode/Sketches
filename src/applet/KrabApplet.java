@@ -26,9 +26,8 @@ import static java.lang.System.currentTimeMillis;
 @SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused"})
 public abstract class KrabApplet extends PApplet {
 
-    protected static String pathToThisClass(Class c){
-        return String.valueOf(c.getEnclosingClass()).split(" ")[1];
-    }
+    private float INTEGER_SLIDER_ROUNDING_LERP_AMT = .05f;
+
 
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
@@ -350,6 +349,7 @@ public abstract class KrabApplet extends PApplet {
         strokeCap(SQUARE);
         colorMode(HSB, 1, 1, 1, 1);
         resetMatrixInAnyRenderer();
+        hint(DISABLE_DEPTH_TEST);
         updateTrayBackground();
         updateMenuButtons();
         updateScrolling();
@@ -357,6 +357,7 @@ public abstract class KrabApplet extends PApplet {
         if (overlayVisible && trayVisible) {
             overlayOwner.updateOverlay();
         }
+        hint(ENABLE_DEPTH_TEST);
         popStyle();
         popMatrix();
         pMousePressed = mousePressed;
@@ -564,6 +565,14 @@ public abstract class KrabApplet extends PApplet {
     protected boolean isPointInRect(float px, float py, float rx, float ry, float rw, float rh) {
         return px >= rx && px <= rx + rw && py >= ry && py <= ry + rh;
     }
+
+
+    protected float easeInOutExpo(float currentTime, float startValue, float changeInValue, float duration) {
+        currentTime /= duration/2;
+        if (currentTime < 1) return changeInValue/2 * pow( 2, 10 * (currentTime - 1) ) + startValue;
+        currentTime--;
+        return changeInValue/2 * ( -pow( 2, -10 * currentTime) + 2 ) + startValue;
+    };
 
     private float easedAnimation(float startFrame, float duration, float easingFactor) {
         return easedAnimation(startFrame, duration, easingFactor, 0, 1);
@@ -1538,13 +1547,25 @@ public abstract class KrabApplet extends PApplet {
         return "gui\\" + this.getClass().getSimpleName() + ".txt";
     }
 
-    protected void uniformColorPalette(String colorPaletteShader) {
+    protected void uniformColorPalette(String fragPath){
+        uniformColorPalette(fragPath, null);
+    }
+
+    protected void uniformColorPalette(String fragPath, String vertPath) {
         int colorCount = sliderInt("color count", 10);
         for (int i = 0; i < colorCount; i++) {
             HSBA color = picker(i + "");
-            uniform(colorPaletteShader).set("hsba_" + i, color.hue(), color.sat(), color.br(), color.alpha());
+            if(vertPath != null){
+                uniform(fragPath, vertPath).set("hsba_" + i, color.hue(), color.sat(), color.br(), color.alpha());
+            }else{
+                uniform(fragPath).set("hsba_" + i, color.hue(), color.sat(), color.br(), color.alpha());
+            }
         }
-        uniform(colorPaletteShader).set("colorCount", colorCount);
+        if(vertPath != null){
+            uniform(fragPath, vertPath).set("colorCount", colorCount);
+        }else{
+            uniform(fragPath).set("colorCount", colorCount);
+        }
     }
 
     // SHADERS
@@ -2722,7 +2743,7 @@ public abstract class KrabApplet extends PApplet {
             value += valueDelta;
             lastValueDelta = valueDelta;
             if (floored && valueDelta == 0 && lastValueDelta == 0) {
-                value = lerp(value, round(value), .2f);
+                value = lerp(value, round(value), INTEGER_SLIDER_ROUNDING_LERP_AMT);
             }
             if (constrained) {
                 value = constrain(value, minValue, maxValue);
