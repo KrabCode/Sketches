@@ -1,0 +1,12 @@
+STATE_BEGIN
+UNDO
+GROUP§Screenshot§true
+Screenshot§rotate§-0.5150462§10.0
+Screenshot§scale§0.98842645§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Screenshot§true
+Screenshot§rotate§-0.7928243§10.0
+Screenshot§scale§0.9305556§10.0
+STATE_END
