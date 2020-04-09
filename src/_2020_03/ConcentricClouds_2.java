@@ -18,7 +18,7 @@ public class ConcentricClouds_2 extends KrabApplet {
     private float cloudCount;
 
     public static void main(String[] args) {
-        KrabApplet.main(String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1]);
+        KrabApplet.main(String.valueOf(new Object() {}.getClass().getEnclosingClass().getName()));
     }
 
     public void settings() {

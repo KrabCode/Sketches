@@ -5,7 +5,7 @@ import processing.core.PGraphics;
 
 public class EaseInAndOut extends KrabApplet {
     public static void main(String[] args) {
-        KrabApplet.main(String.valueOf(new Object(){}.getClass().getEnclosingClass()).split(" ")[1]);
+        KrabApplet.main(String.valueOf(new Object() {}.getClass().getEnclosingClass().getName()));
     }
 
     private PGraphics pg;

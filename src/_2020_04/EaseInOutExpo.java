@@ -18,8 +18,7 @@ public class EaseInOutExpo extends KrabApplet {
     private ArrayList<PVector> origins = new ArrayList<>();
 
     public static void main(String[] args) {
-        KrabApplet.main(String.valueOf(new Object() {
-        }.getClass().getEnclosingClass()).split(" ")[1]);
+        KrabApplet.main(String.valueOf(new Object() {}.getClass().getEnclosingClass().getName()));
     }
 
     public void settings() {

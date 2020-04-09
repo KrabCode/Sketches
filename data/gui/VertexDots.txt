@@ -1,0 +1,117 @@
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§translate§100.0§0.0§0.0§0.0
+VertexDots§fade to black§50.0§255.0
+VertexDots§blur§0.0§10.0
+VertexDots§x count§50.92732§200.0
+VertexDots§z count§50.078526§200.0
+VertexDots§y count§10.0§200.0
+VertexDots§size§10000.0§609.89594§124.11459§1256.3539
+VertexDots§weight§1.5000002§10.0
+VertexDots§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§7.3046875§255.0
+VertexDots§translate§100.0§0.0§0.0§0.0
+VertexDots§blur§1.2708396§100.0
+VertexDots§x count§50.92732§200.0
+VertexDots§y count§10.0§200.0
+VertexDots§z count§50.078526§200.0
+VertexDots§size§10000.0§609.89594§124.11459§1256.3539
+VertexDots§stroke§0.0§0.0§1.0§1.0§1.0
+VertexDots§weight§0.11979156§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§7.3046875§255.0
+VertexDots§translate§100.0§0.0§0.0§0.0
+VertexDots§blur§1.2708396§100.0
+VertexDots§x count§200.99985§200.0
+VertexDots§y count§1.9996089§200.0
+VertexDots§z count§100.999725§200.0
+VertexDots§size§10000.0§2260.9363§-120.67705§1792.8119
+VertexDots§stroke§0.0§0.0§1.0§1.0§1.0
+VertexDots§weight§2.500521§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§255.0§2550.0
+VertexDots§translate§1000.0§-31.562502§44.687508§-8.697918
+VertexDots§blur§0.0§10.0
+VertexDots§x count§200.99985§200.0
+VertexDots§y count§1.9996089§200.0
+VertexDots§z count§100.999725§200.0
+VertexDots§size§10000.0§2260.9363§-120.67705§1792.8119
+VertexDots§stroke§0.0§0.0§1.0§1.0§1.0
+VertexDots§weight§1.5942718§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§255.0§2550.0
+VertexDots§translate§10000.0§15.312479§26.458336§698.5938
+VertexDots§blur§0.0§10.0
+VertexDots§x count§50.985897§200.0
+VertexDots§y count§2.0000024§200.0
+VertexDots§z count§50.004856§200.0
+VertexDots§size§100.0§100.00001§100.00001§100.00005
+VertexDots§stroke§0.0§0.0§1.0§1.0§1.0
+VertexDots§weight§1.9067711§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§255.0§2550.0
+VertexDots§translate§10000.0§-0.31253147§0.41662407§698.5938
+VertexDots§blur§0.0§10.0
+VertexDots§x count§50.985897§200.0
+VertexDots§y count§5.0000834§200.0
+VertexDots§z count§50.004856§200.0
+VertexDots§size§1000.0§100.00001§33.17709§100.00005
+VertexDots§stroke§0.60286456§0.51875§1.0§0.23333347§1.0
+VertexDots§weight§1.9067711§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§31.875§2550.0
+VertexDots§translate§10000.0§-0.31253147§0.41662407§698.5938
+VertexDots§blur§17.947903§100.0
+VertexDots§x count§50.985897§200.0
+VertexDots§y count§5.000005§200.0
+VertexDots§z count§50.004856§200.0
+VertexDots§size§1000.0§100.00001§34.73958§100.00005
+VertexDots§stroke§0.6036458§0.68125§1.0§0.23333347§1.0
+VertexDots§weight§1.4744798§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§66.40625§2550.0
+VertexDots§translate§10000.0§-0.31253147§0.41662407§698.5938
+VertexDots§blur§3.5729094§100.0
+VertexDots§x count§80.99899§200.0
+VertexDots§y count§5.999949§200.0
+VertexDots§z count§80.00018§200.0
+VertexDots§size§1000.0§100.00001§34.73958§100.00005
+VertexDots§stroke§0.60234374§0.85625§0.8875§0.23333347§1.0
+VertexDots§weight§1.4744798§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§VertexDots§true
+VertexDots§fade to black§66.40625§2550.0
+VertexDots§translate§10000.0§-0.31253147§0.41662407§423.59375
+VertexDots§blur§3.5729094§100.0
+VertexDots§x count§80.99899§200.0
+VertexDots§y count§5.999949§200.0
+VertexDots§z count§80.00018§200.0
+VertexDots§size§1000.0§100.00001§34.73958§100.00005
+VertexDots§stroke§0.60234374§0.85625§0.8875§0.23333347§1.0
+VertexDots§weight§1.4744798§10.0
+STATE_END
