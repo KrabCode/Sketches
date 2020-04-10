@@ -1,0 +1,24 @@
+STATE_BEGIN
+UNDO
+GROUP§ImageRecursion§true
+ImageRecursion§reset§
+ImageRecursion§scale rotate§1.0§-0.009999999§0.95750016
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ImageRecursion§true
+ImageRecursion§reset§
+ImageRecursion§rotate time§0.41249993§10.0
+ImageRecursion§rotate amplitude§0.5375002§10.0
+ImageRecursion§scale time§0.17500004§10.0
+ImageRecursion§scale amplitude§0.21250029§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ImageRecursion§true
+ImageRecursion§rotate time§0.22361106§10.0
+ImageRecursion§time speed§1.0§10.0
+ImageRecursion§rotate amplitude§0.5375002§10.0
+ImageRecursion§scale time§0.17500004§10.0
+ImageRecursion§scale amplitude§0.21250029§10.0
+STATE_END

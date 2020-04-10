@@ -1,0 +1,26 @@
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripTower§true
+TriangleStripTower§fade to black§14.937499§255.0
+TriangleStripTower§translate§100.0§0.0§0.0§0.0
+TriangleStripTower§blur§3.1374998§10.0
+TriangleStripTower§x count§50.056732§200.0
+TriangleStripTower§y count§10.997723§200.0
+TriangleStripTower§z count§50.98338§200.0
+TriangleStripTower§size§10000.0§702.5§508.75§518.75
+TriangleStripTower§stroke§0.65875036§0.55625§0.43125§1.0§1.0
+TriangleStripTower§weight§6.0250006§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripTower§true
+TriangleStripTower§fade to black§6.3312464§255.0
+TriangleStripTower§translate§100.0§0.0§48.375§0.0
+TriangleStripTower§blur§9.749999§10.0
+TriangleStripTower§x count§100.98648§200.0
+TriangleStripTower§y count§2.998331§200.0
+TriangleStripTower§z count§100.9937§200.0
+TriangleStripTower§size§10000.0§1527.5§183.75§1556.25
+TriangleStripTower§stroke§0.65875036§0.41875§0.575§1.0§1.0
+TriangleStripTower§weight§7.125§100.0
+STATE_END
