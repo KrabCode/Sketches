@@ -137,8 +137,8 @@ float fbm (vec4 p) {
     // Loop of octaves
     for (int i = 0; i < 6; i++) {
         sum += amp*snoise(p*freq);
-        freq *= 2.2;
-        amp *= .4;
+        freq *= 2.0;
+        amp *= .5;
         p += vec4(3.123, 2.456, 1.121, 2.4545);
     }
     return sum;
@@ -146,11 +146,12 @@ float fbm (vec4 p) {
 
 void main() {
     float d = length(position.xyz);
-    float y = 55*fbm(vec4(position.xz*.003-time*.025, 0, 0));// 20*sin(d*.02-time) + 10*sin(15+d*.04-time);// + 2.5*sin(d * .08 - time*.5);
-    float maxY = 55;
-    float yNorm = map(-y, -maxY, maxY, 0, 1);
+    float t = time*.025;
+    float y = 75*fbm(vec4(position.xz*.001-t, .05*sin(d*0.05), t));// 20*sin(d*.02-time) + 10*sin(15+d*.04-time);// + 2.5*sin(d * .08 - time*.5);
+    float maxY = 90;
+    float yNorm = map(-clamp(y, -maxY, maxY), -maxY, maxY, 0, 1);
     vec4 pos = position + vec4(0, y, 0, 0);
-    vec4 clr = clamp(color + 1.5*pow(yNorm, 1.5), 0, 1);
+    vec4 clr = clamp(color + 1.5*pow(yNorm, 2.5), 0, 1);
 
     vec4 posp = modelviewMatrix * pos;
     vec4 posq = modelviewMatrix * (pos + vec4(direction.xyz, 0));

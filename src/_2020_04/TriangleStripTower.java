@@ -36,9 +36,6 @@ public class TriangleStripTower extends KrabApplet {
         pg.lights();
         mouseRotation(pg);
         updateShape();
-        grid.setStroke(picker("stroke").clr());
-        grid.setStrokeWeight(slider("weight"));
-        grid.setFill(false);
         pg.shape(grid);
         pg.endDraw();
         image(pg, 0, 0);
@@ -54,9 +51,9 @@ public class TriangleStripTower extends KrabApplet {
     }
 
     private void updateShape() {
-        PVector intendedCount = new PVector(sliderInt("x count", 10), sliderInt("y count", 10), sliderInt("z count", 10));
+        PVector intendedCount = new PVector(sliderInt("x count", 10), sliderInt("y count", 2), sliderInt("z count", 10));
         PVector intendedSize = sliderXYZ("size");
-        if (!intendedCount.equals(count) || !intendedSize.equals(size)) {
+        if (button("regenerate shape") || !intendedCount.equals(count) || !intendedSize.equals(size)) {
             count = intendedCount.copy();
             size = intendedSize.copy();
             regenerateShape();
@@ -69,6 +66,9 @@ public class TriangleStripTower extends KrabApplet {
             for (int zi = 0; zi < count.z; zi++) {
                 PShape strip = createShape();
                 strip.beginShape(TRIANGLE_STRIP);
+                strip.stroke(picker("stroke " + yi).clr());
+                strip.strokeWeight(slider("weight " + yi));
+                strip.noFill();
                 for (int xi = 0; xi < count.x; xi++) {
                     float x = map(xi, 0, count.x, -size.x, size.x);
                     float y = map(yi, 0, count.y, -size.y, size.y);
