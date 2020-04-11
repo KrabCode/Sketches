@@ -17,13 +17,13 @@ public class ImageRecursion extends KrabApplet {
     }
 
     public void settings() {
-        size(900,674, P2D);
+        size(2666/3,2430/3, P2D);
     }
 
     public void setup() {
         pg = createGraphics(width, height, P2D);
-        img = loadImage("images/cat.png");
-        frameRecordingStarted = 1;
+        img = loadImage("images/clouds.jpg");
+//        frameRecordingStarted = 1;
 
     }
 

@@ -21,7 +21,9 @@ public class TriangleStripTower extends KrabApplet {
     }
 
     public void setup() {
+        surface.setAlwaysOnTop(true);
         pg = createGraphics(width, height, P3D);
+        frameRecordingDuration *= 4;
     }
 
     public void draw() {
