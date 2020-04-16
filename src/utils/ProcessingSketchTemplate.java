@@ -7,7 +7,7 @@ public class ProcessingSketchTemplate extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
-        KrabApplet.main(String.valueOf(new Object() {}.getClass().getEnclosingClass().getName()));
+        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
     }
 
     public void settings(){

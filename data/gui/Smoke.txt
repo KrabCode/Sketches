@@ -1,0 +1,154 @@
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn pos§10000.0§345.375§473.75
+Smoke§count§2300.9827§30000.0
+Smoke§static force§1.0§0.0§-0.008750403
+Smoke§noise mag§0.00375§1.0
+Smoke§noise freq§0.1§10.0
+Smoke§noise speed§1.0§10.0
+Smoke§drag§1.0§10.0
+Smoke§life span§387.0003§2000.0
+Smoke§color 0§0.998125§0.0§1.0§1.0§1.0
+Smoke§color 1§0.0031249998§0.0§0.0§1.0§1.0
+Smoke§radius 0§3.025§10.0
+Smoke§radius 1§60.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn pos§100.0§400.2§400.0125
+Smoke§count§2300.9976§30000.0
+Smoke§static force§100.0§0.0§0.0
+Smoke§noise mag§0.00375§1.0
+Smoke§noise freq§0.1§10.0
+Smoke§noise speed§1.0§10.0
+Smoke§drag§0.975§1.0
+Smoke§life span§387.0003§2000.0
+Smoke§color 0§0.998125§0.0§1.0§1.0§1.0
+Smoke§color 1§0.0031249998§0.0§0.0§1.0§1.0
+Smoke§radius 0§3.025§10.0
+Smoke§radius 1§60.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn pos§100.0§397.95§619.2625
+Smoke§count§2300.9976§30000.0
+Smoke§frame skip§1.0§100.0
+Smoke§static force§10.0§0.0§-0.050000068
+Smoke§noise mag§0.023750005§1.0
+Smoke§noise freq§0.1§10.0
+Smoke§noise speed§1.0§10.0
+Smoke§drag§0.8924996§1.0
+Smoke§life span§387.0003§2000.0
+Smoke§color 0§0.998125§0.0§1.0§1.0§1.0
+Smoke§color 1§0.0031249998§0.0§0.0§1.0§1.0
+Smoke§radius 0§3.025§10.0
+Smoke§radius 1§60.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn pos§100.0§397.95§619.2625
+Smoke§count§6013.005§30000.0
+Smoke§frame skip§1.0§100.0
+Smoke§static force§10.0§-0.025000002§-0.08750008
+Smoke§noise mag§0.03250001§1.0
+Smoke§noise freq§0.1§10.0
+Smoke§noise speed§1.0§10.0
+Smoke§drag§0.9049996§1.0
+Smoke§life span§859.9994§20000.0
+Smoke§color 0§0.03875008§0.0§1.0§1.0§1.0
+Smoke§color 1§0.0031249998§0.0§0.0§1.0§1.0
+Smoke§radius 0§0.0§10.0
+Smoke§radius 1§115.3§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn pos§1000.0§1058.8354§456.91885
+Smoke§frame skip§2.9999976§100.0
+Smoke§static force§10.0§-0.05625§-0.08750008
+Smoke§noise mag§0.033020865§1.0
+Smoke§noise freq§0.08802072§10.0
+Smoke§noise speed§0.77604234§10.0
+Smoke§drag§0.9294784§1.0
+Smoke§life span§891.00653§20000.0
+Smoke§color 0§0.039010495§0.0§1.0§0.25§10.0
+Smoke§color 1§0.63203144§1.0§1.0§1.0§10.0
+Smoke§radius 0§15.968756§100.0
+Smoke§radius 1§97.17481§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn pos§1000.0§1058.8354§456.91885
+Smoke§frame skip§2.9999976§100.0
+Smoke§static force§10.0§-0.030208329§-0.08750008
+Smoke§noise mag§0.021562539§1.0
+Smoke§noise freq§0.08802072§10.0
+Smoke§noise speed§0.77604234§10.0
+Smoke§drag§0.9195827§1.0
+Smoke§life span§891.00653§20000.0
+Smoke§color 0§0.039010495§0.0§1.0§0.25§10.0
+Smoke§color 1§0.63203144§1.0§1.0§1.0§10.0
+Smoke§radius 0§15.968756§100.0
+Smoke§radius 1§97.17481§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn count§10.99999§100.0
+Smoke§circle radius§195.75§1000.0
+Smoke§static force§100.0§0.0§0.0
+Smoke§noise mag§0.03656253§1.0
+Smoke§noise freq§0.05052089§1.0
+Smoke§noise speed§0.77604234§10.0
+Smoke§drag§0.9195827§1.0
+Smoke§life span§203.99852§2000.0
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§1.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§29.674805§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn count§8.018861§100.0
+Smoke§y§680.5§300.0
+Smoke§static force§100.0§0.0§-0.125
+Smoke§noise mag§0.03656253§1.0
+Smoke§noise freq§0.05052089§1.0
+Smoke§noise speed§0.77604234§10.0
+Smoke§drag§0.9195827§1.0
+Smoke§life span§203.99852§2000.0
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§1.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§29.674805§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn count§16.99998§100.0
+Smoke§spawn modulo§1.0§100.0
+Smoke§circle radius§308.25§1000.0
+Smoke§rotate speed§0.25000003§10.0
+Smoke§static force§100.0§0.0§0.0
+Smoke§centralize§0.11249998§10.0
+Smoke§noise mag§0.016562527§1.0
+Smoke§noise freq§0.05177089§1.0
+Smoke§noise speed§0.25104237§10.0
+Smoke§drag§0.9195827§1.0
+Smoke§life span§206.00015§2000.0
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§0.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§69.674805§2000.0
+Smoke§clear particles§
+STATE_END

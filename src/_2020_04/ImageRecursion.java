@@ -12,8 +12,7 @@ public class ImageRecursion extends KrabApplet {
     private OpenSimplexNoise noise = new OpenSimplexNoise();
 
     public static void main(String[] args) {
-        KrabApplet.main(String.valueOf(new Object() {
-        }.getClass().getEnclosingClass().getName()));
+        KrabApplet.main((new Object() {}.getClass().getEnclosingClass().getName()));
     }
 
     public void settings() {
