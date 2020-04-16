@@ -2,6 +2,7 @@ package _2020_04;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
+import processing.core.PImage;
 import processing.core.PVector;
 import utils.OpenSimplexNoise;
 
@@ -12,17 +13,20 @@ public class Smoke extends KrabApplet {
     private ArrayList<Particle> toRemove = new ArrayList<>();
     private OpenSimplexNoise noise = new OpenSimplexNoise();
     private PGraphics pg;
+    private PImage train, wheel;
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
+        KrabApplet.main(new Object() {
+        }.getClass().getEnclosingClass().getName());
     }
 
     public void settings() {
         size(800, 800, P2D);
-//        fullScreen(P2D);
     }
 
     public void setup() {
+        train = loadImage("data/images/smoke/vlacek.png");
+        wheel = loadImage("data/images/smoke/kolo.png");
         pg = createGraphics(width, height, P2D);
         frameRecordingDuration *= 2;
     }
@@ -30,7 +34,8 @@ public class Smoke extends KrabApplet {
     public void draw() {
         background(0);
         pg.beginDraw();
-        pg.background(0);
+        updateTerrain();
+        updateTrain();
         updateParticles();
         pg.endDraw();
         image(pg, 0, 0);
@@ -38,9 +43,38 @@ public class Smoke extends KrabApplet {
         gui();
     }
 
+    private void updateTerrain() {
+        pg.background(0);
+    }
+
+    private void updateTrain() {
+        group("train");
+        PVector trainPos = sliderXY("pos");
+        pg.pushMatrix();
+        pg.imageMode(CENTER);
+        pg.scale(slider("train scale", 1));
+        pg.image(train, trainPos.x, trainPos.y);
+        pg.popMatrix();
+        PVector wheelPos0 = sliderXY("wheel pos");
+        float wheelOffset = slider("wheel offset", 20);
+        for (int i = 0; i < 3; i++) {
+            PVector pos = wheelPos0.copy();
+            pos.x += i * wheelOffset;
+            float rotationOffset = randomDeterministic(i * 20)*TAU*2;
+            pg.pushMatrix();
+            pg.translate(pos.x, pos.y);
+            pg.rotate(rotationOffset + t * slider("wheel speed", 1));
+            pg.scale(slider("wheel scale", 1));
+            pg.image(wheel, 0, 0);
+            pg.popMatrix();
+        }
+
+    }
+
     void updateParticles() {
+        group("smoke");
         if (frameCount % sliderInt("spawn modulo", 1) == 0) {
-                particles.add(new Particle(sliderXY("pos").copy()));
+            particles.add(new Particle(sliderXY("pos").copy()));
         }
         for (Particle p : particles) {
             p.update();

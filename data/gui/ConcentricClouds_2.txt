@@ -1,0 +1,97 @@
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§color count§1.9999998§200.0
+background§0§0.0§0.0§0.0§1.0§1.0
+background§1§0.0§0.0§0.5§1.0§1.0
+background§2§0.0§0.0§0.5§1.0§1.0
+background§3§0.0§0.0§0.5§1.0§1.0
+background§4§0.0§0.0§0.5§1.0§1.0
+background§5§0.0§0.0§0.5§1.0§1.0
+background§6§0.0§0.0§0.5§1.0§1.0
+background§7§0.0§0.0§0.5§1.0§1.0
+background§8§0.0§0.0§0.5§1.0§1.0
+background§9§0.0§0.0§0.5§1.0§1.0
+GROUP§images§true
+images§eased23§true
+images§eased2§true
+images§chubb3§true
+images§chubb2§true
+images§eased1§true
+images§chubb1§true
+images§chubb23§true
+images§chubb0§true
+GROUP§draw§false
+draw§cloud count§235.00003§200.0
+draw§time radius§0.32499632§1.0
+draw§i rot freq§2.3525002§1.0
+draw§min scale§0.0037499242§1.0
+draw§max scale§2.3487542§1.0
+draw§rot amp§0.37625003§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§color count§1.9999998§200.0
+background§0§0.0§0.0§0.0§1.0§1.0
+background§1§0.0§0.0§0.5§1.0§1.0
+background§2§0.0§0.0§0.5§1.0§1.0
+background§3§0.0§0.0§0.5§1.0§1.0
+background§4§0.0§0.0§0.5§1.0§1.0
+background§5§0.0§0.0§0.5§1.0§1.0
+background§6§0.0§0.0§0.5§1.0§1.0
+background§7§0.0§0.0§0.5§1.0§1.0
+background§8§0.0§0.0§0.5§1.0§1.0
+background§9§0.0§0.0§0.5§1.0§1.0
+GROUP§images§true
+images§eased23§true
+images§eased2§true
+images§chubb3§true
+images§chubb2§true
+images§eased1§true
+images§chubb1§true
+images§chubb23§true
+images§chubb0§true
+GROUP§draw§true
+draw§cloud count§1096.0002§2000.0
+draw§time radius§0.32499632§1.0
+draw§i rot freq§3.8387516§1000.0
+draw§min scale§0.0§10.0
+draw§max scale§1.7887508§10.0
+draw§looping noise§false
+draw§rot amp§0.37625003§1.0
+draw§fly speed§0.037499964§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§color count§1.9999998§200.0
+background§0§0.0§0.0§0.0§1.0§1.0
+background§1§0.0§0.0§0.5§1.0§1.0
+background§2§0.0§0.0§0.5§1.0§1.0
+background§3§0.0§0.0§0.5§1.0§1.0
+background§4§0.0§0.0§0.5§1.0§1.0
+background§5§0.0§0.0§0.5§1.0§1.0
+background§6§0.0§0.0§0.5§1.0§1.0
+background§7§0.0§0.0§0.5§1.0§1.0
+background§8§0.0§0.0§0.5§1.0§1.0
+background§9§0.0§0.0§0.5§1.0§1.0
+GROUP§images§false
+images§eased23§false
+images§eased2§false
+images§chubb3§true
+images§chubb2§false
+images§eased1§false
+images§chubb1§false
+images§chubb23§false
+images§chubb0§false
+GROUP§draw§true
+draw§cloud count§2641.0005§20000.0
+draw§time radius§0.32499632§1.0
+draw§i rot freq§0.0§10.0
+draw§min scale§0.0§10.0
+draw§max scale§1.526251§10.0
+draw§looping noise§true
+draw§rot amp§0.0§10.0
+draw§fly speed§0.05374995§1.0
+STATE_END

@@ -1,0 +1,26 @@
+STATE_BEGIN
+UNDO
+GROUP§EaseInOutExpo§true
+EaseInOutExpo§fade to black§50.0§255.0
+EaseInOutExpo§fill§0.0§0.0§0.5§1.0§1.0
+EaseInOutExpo§duration§30.000004§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§EaseInOutExpo§true
+EaseInOutExpo§fade to black§6.9687557§255.0
+EaseInOutExpo§count§135.00003§2000.0
+EaseInOutExpo§gauss offset§100.0§30.0
+EaseInOutExpo§duration§72.5§100.0
+EaseInOutExpo§fill§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§EaseInOutExpo§true
+EaseInOutExpo§fade to black§6.9687557§255.0
+EaseInOutExpo§count§341.9997§2000.0
+EaseInOutExpo§gauss offset§59.575005§300.0
+EaseInOutExpo§duration§45.625§100.0
+EaseInOutExpo§fill§0.6825008§0.85625§1.0§0.97875§1.0
+EaseInOutExpo§size§2.8750038§20.0
+STATE_END
