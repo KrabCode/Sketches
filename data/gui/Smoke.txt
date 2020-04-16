@@ -152,3 +152,99 @@ Smoke§radius 0§5.719048E-6§0.1
 Smoke§radius 1§69.674805§2000.0
 Smoke§clear particles§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn modulo§1.0§100.0
+Smoke§pos§1000.0§396.875§555.875
+Smoke§static force§10.0§-0.05§-0.0375
+Smoke§centralize§0.11249998§10.0
+Smoke§noise mag§0.06406253§1.0
+Smoke§noise freq§0.21302086§1.0
+Smoke§noise speed§0.25104237§10.0
+Smoke§drag§0.9195827§1.0
+Smoke§life span§300.98837§200.0
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§0.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§69.674805§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn modulo§1.0§100.0
+Smoke§pos§1000.0§401.875§507.125
+Smoke§static force§10.0§-0.13749999§-0.1375
+Smoke§centralize§0.0§10.0
+Smoke§noise mag§0.076562524§1.0
+Smoke§noise freq§0.6342714§1.0
+Smoke§noise speed§0.25104237§10.0
+Smoke§drag§0.9195827§1.0
+Smoke§life span§300.9996§200.0
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§0.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§69.674805§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn modulo§1.0§100.0
+Smoke§pos§1000.0§401.875§507.125
+Smoke§life span§300.9996§200.0
+Smoke§static force§10.0§-0.13749999§-0.1375
+Smoke§centralize§0.0§10.0
+Smoke§noise mag§0.06156254§1.0
+Smoke§noise freq 0§5.6875§100.0
+Smoke§noise freq 1§9.313226E-9§10.0
+Smoke§noise speed§0.25104237§10.0
+Smoke§drag§0.91895956§0.1
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§0.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§69.674805§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn modulo§1.0§100.0
+Smoke§pos§1000.0§394.375§520.875
+Smoke§life span§300.9997§200.0
+Smoke§static force§10.0§-0.075§-0.1375
+Smoke§centralize§0.0§10.0
+Smoke§noise mag 0§0.05875032§1.0
+Smoke§noise mag 1§0.0§10.0
+Smoke§noise freq 0§5.6875§100.0
+Smoke§noise freq 1§9.313226E-9§10.0
+Smoke§noise speed§0.25104237§10.0
+Smoke§drag§0.91895956§0.1
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§0.0§0.0§1.0§10.0
+Smoke§radius 0§5.719048E-6§0.1
+Smoke§radius 1§69.674805§2000.0
+Smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Smoke§true
+Smoke§spawn modulo§1.0§100.0
+Smoke§pos§1000.0§394.375§520.875
+Smoke§life span§596.99786§2000.0
+Smoke§static force 0§1.0§-0.05§-0.125
+Smoke§static force 1§10.0§-0.1374999§0.0
+Smoke§centralize§0.0§10.0
+Smoke§noise mag 0§0.05875032§1.0
+Smoke§noise mag 1§0.0§10.0
+Smoke§noise freq 0§5.6875§100.0
+Smoke§noise freq 1§9.313226E-9§10.0
+Smoke§noise speed§0.25104237§10.0
+Smoke§drag§0.91895956§0.1
+Smoke§color 0§0.038385496§0.0§1.0§1.0§10.0
+Smoke§color 1§0.63203144§0.0§0.0§1.0§10.0
+Smoke§radius 0§5.3001323§10.0
+Smoke§radius 1§69.674805§2000.0
+Smoke§clear particles§
+STATE_END
