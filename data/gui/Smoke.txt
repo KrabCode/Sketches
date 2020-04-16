@@ -408,3 +408,801 @@ smoke§radius 0§15.049999§10.0
 smoke§radius 1§118.8§200.0
 smoke§clear particles§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§true
+lines§line count§11.999583§100.0
+lines§vertex count§75.9666§300.0
+lines§color§0.0§0.0§1.0§1.0§1.0
+lines§weight§17.0§100.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§false
+lines§line count§15.980194§100.0
+lines§vertex count§75.99869§300.0
+lines§color§0.0§0.0§1.0§1.0§1.0
+lines§weight§41.0§100.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§true
+lines§line count§30.995766§100.0
+lines§vertex count§75.99869§300.0
+lines§color 0§0.0§0.0§1.0§1.0§1.0
+lines§color 1§0.0§0.0§0.0§1.0§1.0
+lines§weight§20.125§100.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§true
+lines§line count§41.996796§100.0
+lines§vertex count§75.99869§300.0
+lines§color 0§0.0§0.0§1.0§1.0§1.0
+lines§color 1§0.0§0.0§0.0§1.0§1.0
+lines§weight§20.125§100.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§true
+lines§line count§80.000114§100.0
+lines§vertex count§75.99869§300.0
+lines§color 0§0.0§0.0§0.2375§1.0§1.0
+lines§color 1§0.0§0.0§0.44375§1.0§1.0
+lines§weight§20.125§100.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§true
+lines§line count§800.98566§100.0
+lines§vertex count§75.99869§300.0
+lines§color 0§0.63062495§0.575§1.0§1.0§1.0
+lines§color 1§0.0§0.0§0.0§1.0§1.0
+lines§weight§1.1348754§0.10000001
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lines§true
+lines§line count§130.99985§1000.0
+lines§vertex count§200.01118§300.0
+lines§color 0§0.63062495§0.0§1.0§1.0§1.0
+lines§color 1§0.0§1.0§0.0§1.0§1.0
+lines§weight§263.75003§1000.00006
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00003§100.0
+background§vertex count§100.0§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§foreground§false
+foreground§line count§50.001354§100.0
+foreground§vertex count§122.01119§3000.0
+foreground§color 0§0.0§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§638.5375§3000.0
+foreground§bottom Y§850.0§30.0
+foreground§weight§5.925003§100.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00003§100.0
+background§vertex count§100.0§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§foreground§true
+foreground§line count§50.001354§100.0
+foreground§vertex count§966.0006§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§631.0375§3000.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§28.25§100.0
+GROUP§smoke§false
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.99812496§0.0§0.0§1.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00003§100.0
+background§vertex count§100.0§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§foreground§false
+foreground§line count§50.001354§100.0
+foreground§vertex count§966.0006§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§631.0375§3000.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§28.25§100.0
+GROUP§smoke§true
+smoke§spawn modulo§1.0§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00003§100.0
+background§vertex count§100.0§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§foreground§true
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.9806§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§623.5375§3000.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.0§100.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§623.5375§3000.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.0§100.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§true
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+train§small wheel pos§100.0§129.5§617.0
+train§small offset§19.199997§100.0
+train§smallest offset§22.6§100.0
+train§small wheel scale§0.5625001§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§676.0375§3000.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.0§100.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§true
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+train§small wheel pos§100.0§132.75§612.625
+train§small offset§-14.425003§100.0
+train§smaller offset§51.0875§100.0
+train§smallest offset§10.099998§100.0
+train§small wheel scale§0.6249999§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§676.0375§3000.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.0§100.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+train§small wheel pos§100.0§132.75§612.625
+train§small offset§-14.425003§100.0
+train§smaller offset§51.0875§100.0
+train§smallest offset§10.099998§100.0
+train§small wheel scale§0.6249999§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§623.5375§300.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.0§100.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§true
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+train§small wheel pos§100.0§132.75§608.5
+train§small offset§-14.425003§100.0
+train§smaller offset§51.0875§100.0
+train§smallest offset§10.099998§100.0
+train§small wheel scale§0.6249999§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§641.1625§300.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.999989§10.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§true
+train§wheel pos§1000.0§465.125§604.125
+train§wheel offset§25.5375§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.0124992§10.0
+train§small wheel pos§100.0§132.75§608.5
+train§small offset§-12.300003§100.0
+train§smaller offset§48.5875§100.0
+train§smallest offset§11.724998§100.0
+train§small wheel scale§0.7249998§10.0
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§625.7875§300.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.999989§10.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§wheel pos§10.0§464.17514§603.1995
+train§wheel offset§25.837513§20.0
+train§wheel speed§14.574997§100.0
+train§wheel scale§1.1225008§1.0
+train§small wheel pos§100.0§132.75§608.5
+train§small offset§-12.300003§100.0
+train§smaller offset§48.5875§100.0
+train§smallest offset§11.724998§100.0
+train§small wheel scale§0.7249998§10.0
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§625.7875§300.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.999989§10.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§background§false
+background§line count§25.00002§100.0
+background§vertex count§300.99957§300.0
+background§color 0§0.0§0.0§0.0§1.0§1.0
+background§color 1§0.0§0.0§1.0§1.0§1.0
+background§top Y§-50.0§30.0
+background§bottom Y§850.0§30.0
+background§weight§250.0§1000.0
+GROUP§train§false
+train§small wheel pos§100.0§132.75§608.5
+train§small offset§-12.300003§100.0
+train§smaller offset§48.5875§100.0
+train§smallest offset§11.724998§100.0
+train§wheel speed§14.574997§100.0
+train§small wheel scale§0.7249998§10.0
+train§pos§1000.0§293.625§488.75
+train§train scale§1.2000004§10.0
+train§wheel pos§10.0§463.63754§603.76196
+train§wheel offset§25.837513§20.0
+train§wheel scale§1.2112514§1.0
+GROUP§foreground§false
+foreground§line count§100.966095§100.0
+foreground§vertex count§474.99738§3000.0
+foreground§color 0§0.0062499996§0.0§1.0§1.0§1.0
+foreground§color 1§0.0§0.0§0.0§1.0§1.0
+foreground§top Y§625.7875§300.0
+foreground§bottom Y§835.48755§30.0
+foreground§weight§19.999989§10.0
+GROUP§smoke§false
+smoke§spawn modulo§2.0000978§100.0
+smoke§pos§100.0§549.5§551.625
+smoke§life span§200.00015§200.0
+smoke§static force 0§1.0§-0.17999996§-0.3225001
+smoke§static force 1§10.0§-1.4375005§-0.42499965
+smoke§centralize§0.0§10.0
+smoke§noise mag 0§0.13749984§10.0
+smoke§noise mag 1§0.41250017§10.0
+smoke§noise freq 0§3.5374997§10.0
+smoke§noise freq 1§0.0§10.0
+smoke§noise speed§0.9125002§10.0
+smoke§drag§0.8875001§10.0
+smoke§color 0§0.0§0.0§1.0§1.0§1.0
+smoke§color 1§0.0012499096§0.0§1.0§0.0§1.0
+smoke§radius 0§15.049999§10.0
+smoke§radius 1§118.8§200.0
+smoke§clear particles§
+STATE_END

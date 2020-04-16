@@ -4,7 +4,11 @@ import processing.core.*;
 import processing.event.MouseEvent;
 import processing.opengl.PShader;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -457,15 +461,15 @@ public abstract class KrabApplet extends PApplet {
 
     private PMatrix3D mouseRotation = new PMatrix3D();
 
-    protected void mouseRotation(){
+    protected void mouseRotation() {
         mouseRotation(g);
     }
 
     float scale = 1;
 
-    protected void mouseRotation(PGraphics pg){
-        if(mousePressedOutsideGui){
-            if(mouseButton == LEFT){
+    protected void mouseRotation(PGraphics pg) {
+        if (mousePressedOutsideGui) {
+            if (mouseButton == LEFT) {
                 float x = mouseX - pmouseX;
                 float y = mouseY - pmouseY;
                 float angle = mag(x, y) * 0.01f;
@@ -518,7 +522,16 @@ public abstract class KrabApplet extends PApplet {
 //            animationQueue.add(new AnimationFrame(currentSketch, frameNumber));
             pg.save(captureDir + frameNumber + ".jpg");
             if (frameCount == frameRecordingEnd - 1) {
-//                println("capture ended, saving images, please wait...");
+                println("capture ended, running ffmpeg, please wait...");
+                try {
+                    String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
+                            "E:/Sketches/" + captureDir + "%01d.jpg "+
+                            "E:/Sketches/" + captureDir + "1.mp4";
+                    Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
+                    println("ffmpeg finished");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -568,11 +581,13 @@ public abstract class KrabApplet extends PApplet {
 
 
     protected float easeInOutExpo(float currentTime, float startValue, float changeInValue, float duration) {
-        currentTime /= duration/2;
-        if (currentTime < 1) return changeInValue/2 * pow( 2, 10 * (currentTime - 1) ) + startValue;
+        currentTime /= duration / 2;
+        if (currentTime < 1) return changeInValue / 2 * pow(2, 10 * (currentTime - 1)) + startValue;
         currentTime--;
-        return changeInValue/2 * ( -pow( 2, -10 * currentTime) + 2 ) + startValue;
-    };
+        return changeInValue / 2 * (-pow(2, -10 * currentTime) + 2) + startValue;
+    }
+
+    ;
 
     private float easedAnimation(float startFrame, float duration, float easingFactor) {
         return easedAnimation(startFrame, duration, easingFactor, 0, 1);
@@ -1547,7 +1562,7 @@ public abstract class KrabApplet extends PApplet {
         return "gui\\" + this.getClass().getSimpleName() + ".txt";
     }
 
-    protected void uniformColorPalette(String fragPath){
+    protected void uniformColorPalette(String fragPath) {
         uniformColorPalette(fragPath, null);
     }
 
@@ -1555,15 +1570,15 @@ public abstract class KrabApplet extends PApplet {
         int colorCount = sliderInt("color count", 10);
         for (int i = 0; i < colorCount; i++) {
             HSBA color = picker(i + "");
-            if(vertPath != null){
+            if (vertPath != null) {
                 uniform(fragPath, vertPath).set("hsba_" + i, color.hue(), color.sat(), color.br(), color.alpha());
-            }else{
+            } else {
                 uniform(fragPath).set("hsba_" + i, color.hue(), color.sat(), color.br(), color.alpha());
             }
         }
-        if(vertPath != null){
+        if (vertPath != null) {
             uniform(fragPath, vertPath).set("colorCount", colorCount);
-        }else{
+        } else {
             uniform(fragPath).set("colorCount", colorCount);
         }
     }
