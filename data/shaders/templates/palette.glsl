@@ -1,6 +1,8 @@
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float time;
+
+
 uniform int colorCount;
 uniform vec4 hsba_0;
 uniform vec4 hsba_1;
@@ -37,6 +39,8 @@ vec4 getColor(float pct){
     nextColor.rgb = rgb(nextColor.rgb);
     return mix(prevColor, nextColor, lerpToNextColor);
 }
+
+
 
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;

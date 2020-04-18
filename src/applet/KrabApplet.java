@@ -4,11 +4,8 @@ import processing.core.*;
 import processing.event.MouseEvent;
 import processing.opengl.PShader;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -408,11 +405,11 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    protected void alphaFade() {
-        alphaFade(g);
+    protected void fadeToBlack() {
+        fadeToBlack(g);
     }
 
-    protected void alphaFade(PGraphics pg) {
+    protected void fadeToBlack(PGraphics pg) {
         pg.pushStyle();
         pg.colorMode(HSB, 255, 255, 255, 255);
         pg.hint(DISABLE_DEPTH_TEST);
@@ -425,7 +422,7 @@ public abstract class KrabApplet extends PApplet {
         pg.popStyle();
     }
 
-    protected void alphaAdd(PGraphics pg) {
+    protected void fadeToWhite(PGraphics pg) {
         pg.pushStyle();
         pg.colorMode(HSB, 255, 255, 255, 255);
         pg.hint(DISABLE_DEPTH_TEST);
@@ -526,9 +523,8 @@ public abstract class KrabApplet extends PApplet {
                 try {
                     String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
                             "E:/Sketches/" + captureDir + "%01d.jpg "+
-                            "E:/Sketches/" + captureDir + "1.mp4";
+                            "E:/Sketches/out/" + id + ".mp4";
                     Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
-                    println("ffmpeg finished");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -587,8 +583,6 @@ public abstract class KrabApplet extends PApplet {
         return changeInValue / 2 * (-pow(2, -10 * currentTime) + 2) + startValue;
     }
 
-    ;
-
     private float easedAnimation(float startFrame, float duration, float easingFactor) {
         return easedAnimation(startFrame, duration, easingFactor, 0, 1);
     }
@@ -629,6 +623,39 @@ public abstract class KrabApplet extends PApplet {
         return atan(2 * (size / (2 * r)));
         // wrighter's simpler alternative:
         // return atan( size /  r);
+    }
+
+
+    protected float lerpMany(float norm, float... values){
+        norm = constrain(norm, 0, 1);
+        if(norm == 1){
+            return values[values.length-1];
+        }
+        if(norm == 0){
+            return values[0];
+        }
+        println(norm);
+        float fineIndex = map(norm, 0, 1, 0, values.length-1);
+        int index0 = floor(fineIndex);
+        int index1 = index0+1;
+        float lerpAmt = (fineIndex)%1;
+        return lerp(values[index0], values[index1], lerpAmt);
+    }
+
+    protected PVector lerpMany(float norm, PVector... values){
+        norm = constrain(norm, 0, 1);
+        if(norm == 1){
+            return values[values.length-1];
+        }
+        if(norm == 0){
+            return values[0];
+        }
+        println(norm);
+        float value = map(norm, 0, 1, 0, values.length-1);
+        int index0 = floor(value);
+        int index1 = index0+1;
+        float lerpAmt = (value)%1;
+        return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
     protected ArrayList<PVector> ngon(float radius, int detail, int sides) {

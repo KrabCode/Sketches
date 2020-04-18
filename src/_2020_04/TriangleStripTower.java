@@ -28,7 +28,7 @@ public class TriangleStripTower extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        alphaFade(pg);
+        fadeToBlack(pg);
         pg.translate(width / 2f, height / 2f);
         pg.translate(sliderXYZ("translate").x, sliderXYZ("translate").y, sliderXYZ("translate").z);
         blurPass(pg);

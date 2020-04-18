@@ -1,0 +1,182 @@
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§line count§8.0§100.0
+TriangleStripPlane§vertex count§100.0§300.0
+TriangleStripPlane§color 0§0.0§0.0§1.0§1.0§1.0
+TriangleStripPlane§color 1§0.0§0.0§0.0§1.0§1.0
+TriangleStripPlane§top Y§-50.0§30.0
+TriangleStripPlane§bottom Y§850.0§30.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§line count§150.91624§100.0
+TriangleStripPlane§vertex count§150.12201§300.0
+TriangleStripPlane§color 0§0.0§0.0§0.0§1.0§1.0
+TriangleStripPlane§color 1§0.0§0.0§0.0§1.0§1.0
+TriangleStripPlane§top Y§-50.0§30.0
+TriangleStripPlane§bottom Y§850.0§30.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§3.9975243§200.0
+TriangleStripPlane§0§0.0§0.0§1.0§1.0§1.0
+TriangleStripPlane§1§0.6§1.0§0.68125§1.0§1.0
+TriangleStripPlane§2§0.665§1.0§0.0§1.0§1.0
+TriangleStripPlane§3§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§150.91624§100.0
+TriangleStripPlane§vertex count§150.12201§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§755.16266§300.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§false
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.0§1.0§1.0§1.0§1.0
+TriangleStripPlane§1§0.8387501§1.0§0.64375§1.0§1.0
+TriangleStripPlane§2§0.665§1.0§1.0§1.0§1.0
+TriangleStripPlane§3§0.0§0.0§0.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§150.91624§100.0
+TriangleStripPlane§vertex count§150.02133§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§867.28766§300.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.12630212§0.89375§1.0§1.0§1.0
+TriangleStripPlane§1§0.95515645§1.0§0.64375§1.0§1.0
+TriangleStripPlane§2§0.6775001§1.0§1.0§1.0§1.0
+TriangleStripPlane§3§0.35416672§1.0§0.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§150.91624§100.0
+TriangleStripPlane§vertex count§150.02133§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§1105.5688§300.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.021875033§1.0§1.0§1.0§1.0
+TriangleStripPlane§1§0.95515645§1.0§0.0§1.0§1.0
+TriangleStripPlane§2§0.6775001§1.0§1.0§1.0§1.0
+TriangleStripPlane§3§0.35416672§0.0§1.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§150.91624§100.0
+TriangleStripPlane§vertex count§150.02133§300.0
+TriangleStripPlane§top Y§-150.17499§300.0
+TriangleStripPlane§bottom Y§1299.6313§300.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.12630212§0.89375§1.0§1.0§1.0
+TriangleStripPlane§1§0.95515645§1.0§0.64375§1.0§1.0
+TriangleStripPlane§2§0.6775001§1.0§1.0§1.0§1.0
+TriangleStripPlane§3§0.35416672§1.0§0.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§300.98978§100.0
+TriangleStripPlane§vertex count§300.96835§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§1105.5688§300.0
+TriangleStripPlane§blur§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.8000002§0.475§0.0§1.0§1.0
+TriangleStripPlane§1§0.8809377§1.0§0.4375§1.0§1.0
+TriangleStripPlane§2§0.795469§0.7375§1.0§1.0§1.0
+TriangleStripPlane§3§0.35338548§0.0§1.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§300.98978§100.0
+TriangleStripPlane§vertex count§300.9997§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§1105.5688§300.0
+TriangleStripPlane§blur§2.4947686§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.8000002§0.475§0.0§1.0§1.0
+TriangleStripPlane§1§0.8809377§1.0§0.4375§1.0§1.0
+TriangleStripPlane§2§0.795469§0.7375§1.0§1.0§1.0
+TriangleStripPlane§3§0.35338548§0.0§1.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§300.98978§100.0
+TriangleStripPlane§vertex count§300.9997§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§1105.5688§300.0
+TriangleStripPlane§blur§2.4947686§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TriangleStripPlane§true
+TriangleStripPlane§color count§4.991541§200.0
+TriangleStripPlane§0§0.8000002§0.475§0.0§1.0§1.0
+TriangleStripPlane§1§0.7515622§1.0§0.5875§0.9975001§1.0
+TriangleStripPlane§2§0.795469§0.7375§1.0§1.0§1.0
+TriangleStripPlane§3§0.35338548§0.0§1.0§1.0§1.0
+TriangleStripPlane§4§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§5§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§6§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§7§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§8§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§9§0.0§0.0§0.5§1.0§1.0
+TriangleStripPlane§line count§300.98978§100.0
+TriangleStripPlane§vertex count§300.9997§300.0
+TriangleStripPlane§top Y§-111.42499§300.0
+TriangleStripPlane§bottom Y§1105.5688§300.0
+TriangleStripPlane§blur§2.4947686§100.0
+STATE_END

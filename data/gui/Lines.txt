@@ -1,0 +1,66 @@
+STATE_BEGIN
+UNDO
+GROUP§_2020_04.Lines§true
+_2020_04.Lines§line count§75.035774§1000.0
+_2020_04.Lines§vertex count§60.881634§300.0
+_2020_04.Lines§color 0§0.0§0.0§0.0§1.0§1.0
+_2020_04.Lines§color 1§0.0§0.0§1.0§1.0§1.0
+_2020_04.Lines§top Y§-50.0§30.0
+_2020_04.Lines§bottom Y§850.0§30.0
+_2020_04.Lines§weight§6.649999§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§_2020_04.Lines§true
+_2020_04.Lines§line count§600.9994§1000.0
+_2020_04.Lines§vertex count§110.99321§300.0
+_2020_04.Lines§color 0§0.0§0.0§0.0§1.0§1.0
+_2020_04.Lines§color 1§0.0§0.0§1.0§1.0§1.0
+_2020_04.Lines§top Y§-50.0§30.0
+_2020_04.Lines§bottom Y§850.0§30.0
+_2020_04.Lines§weight§6.649999§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§_2020_04.Lines§false
+_2020_04.Lines§line count§500.01358§10000.0
+_2020_04.Lines§vertex count§80.021454§300.0
+_2020_04.Lines§color 0§0.00125§0.0§0.0§1.0§1.0
+_2020_04.Lines§color 1§0.0§0.0§0.5125§1.0§1.0
+_2020_04.Lines§top Y§-50.0§30.0
+_2020_04.Lines§bottom Y§850.0§30.0
+_2020_04.Lines§weight§17.875§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§_2020_04.Lines§true
+_2020_04.Lines§line count§500.01358§10000.0
+_2020_04.Lines§vertex count§80.021454§300.0
+_2020_04.Lines§color 0§0.00125§0.0§0.0§1.0§1.0
+_2020_04.Lines§color 1§0.0§0.0§0.0§1.0§1.0
+_2020_04.Lines§top Y§-50.0§30.0
+_2020_04.Lines§bottom Y§850.0§30.0
+_2020_04.Lines§weight§17.875§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§_2020_04.Lines§true
+_2020_04.Lines§line count§500.01358§10000.0
+_2020_04.Lines§vertex count§80.021454§300.0
+_2020_04.Lines§color 0§0.72125§1.0§1.0§1.0§1.0
+_2020_04.Lines§color 1§0.64375§1.0§1.0§1.0§1.0
+_2020_04.Lines§top Y§-50.0§30.0
+_2020_04.Lines§bottom Y§850.0§30.0
+_2020_04.Lines§weight§64.125§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§_2020_04.Lines§true
+_2020_04.Lines§line count§800.0006§10000.0
+_2020_04.Lines§vertex count§200.92818§300.0
+_2020_04.Lines§color 0§0.63499933§0.975§0.23125§1.0§1.0
+_2020_04.Lines§color 1§0.5893754§1.0§1.0§1.0§1.0
+_2020_04.Lines§top Y§-50.0§30.0
+_2020_04.Lines§bottom Y§850.0§30.0
+_2020_04.Lines§weight§6.0§100.0
+STATE_END

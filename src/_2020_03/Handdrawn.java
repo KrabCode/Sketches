@@ -34,7 +34,7 @@ public class Handdrawn extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         group("shaders");
-        alphaFade(pg);
+        fadeToBlack(pg);
 //        splitPass(pg);
         blurPass(pg);
         pg.translate(width * .5f, height * .5f);

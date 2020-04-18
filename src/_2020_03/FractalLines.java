@@ -30,7 +30,7 @@ public class FractalLines extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         group("shaders");
-        alphaFade(pg);
+        fadeToBlack(pg);
         blurPass(pg);
         pg.translate(width/2, height/2);
         updateRules();

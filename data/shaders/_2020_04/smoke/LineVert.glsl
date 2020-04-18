@@ -148,7 +148,7 @@ void main() {
     float x = position.x;
     float y = map(position.y, -400, 400, 0, 1);
     float t = time*.1;
-    float altitude = 100*fbm(vec4(x*.0015*y+t*y*1.+y*80.,0,0,0));
+    float altitude = 100*fbm(vec4(x*.0005+y*20.+t*pow(y, 4.)*4.,0,0,0));
     vec4 pos = position + vec4(0, altitude, 0, 0);
     vec4 clr = color;
 //    clr.r = yNorm;

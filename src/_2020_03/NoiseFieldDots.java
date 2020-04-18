@@ -31,7 +31,7 @@ public class NoiseFieldDots extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        alphaFade(pg);
+        fadeToBlack(pg);
         PVector move = sliderXY("move");
         int count = sliderInt("count", 100);
         for (int xi = 0; xi < count; xi++) {

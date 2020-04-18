@@ -37,7 +37,7 @@ public class TriangleSphere extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         group("global");
-        alphaFade(pg);
+        fadeToBlack(pg);
         blurPass(pg);
         pg.translate(width * .5f, height * .5f);
         pg.translate(sliderXYZ("translate").x, sliderXYZ("translate").y, sliderXYZ("translate").z);

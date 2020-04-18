@@ -1,0 +1,52 @@
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade color§false
+Points§fade to white§50.0§255.0
+Points§weight§5.999998§10.0
+Points§stroke§0.0§0.0§0.0§1.0§1.0
+Points§count§100.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade color§false
+Points§fade to white§50.0§255.0
+Points§weight§4.474998§10.0
+Points§stroke§0.0§0.0§0.0§1.0§1.0
+Points§count§100.0§300.0
+Points§buffer§-115.35§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade color§false
+Points§fade to white§50.0§255.0
+Points§weight§1.7999989§10.0
+Points§stroke§0.0§0.0§0.0§1.0§1.0
+Points§count§100.0§300.0
+Points§buffer§-84.1§200.0
+Points§detail§100.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade color§false
+Points§fade to white§50.0§255.0
+Points§weight§1.7999989§10.0
+Points§stroke§0.0§0.0§0.0§1.0§1.0
+Points§count§100.0§300.0
+Points§buffer§-84.1§200.0
+Points§detail§150.00093§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade color§false
+Points§fade to white§3.8250008§255.0
+Points§weight§1.7999989§10.0
+Points§stroke§0.0§0.0§0.0§1.0§1.0
+Points§count§100.0§300.0
+Points§buffer§21.400002§200.0
+Points§detail§300.9964§300.0
+STATE_END

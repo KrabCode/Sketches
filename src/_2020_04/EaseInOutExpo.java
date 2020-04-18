@@ -1,7 +1,6 @@
 package _2020_04;
 
 import applet.KrabApplet;
-import com.sun.javafx.geom.Ellipse2D;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
@@ -51,7 +50,7 @@ public class EaseInOutExpo extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        alphaFade(pg);
+        fadeToBlack(pg);
 
         for (PVector targetPos : targets) {
             PVector startPos = origins.get(targets.indexOf(targetPos));
