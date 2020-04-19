@@ -1,0 +1,40 @@
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§50.0§255.0
+OrbitingParticles§count§100.0§300.0
+OrbitingParticles§weight§4.4375§10.0
+OrbitingParticles§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§14.025§255.0
+OrbitingParticles§count§186.99985§300.0
+OrbitingParticles§weight§8.424998§10.0
+OrbitingParticles§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§14.025§255.0
+OrbitingParticles§count§186.99985§300.0
+OrbitingParticles§weight§8.424998§10.0
+OrbitingParticles§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§21.674995§255.0
+OrbitingParticles§count§200.99928§300.0
+OrbitingParticles§weight§4.999998§10.0
+OrbitingParticles§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§4.462494§255.0
+OrbitingParticles§count§1650.0012§300.0
+OrbitingParticles§weight§2.012497§10.0
+OrbitingParticles§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END

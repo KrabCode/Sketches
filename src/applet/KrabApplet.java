@@ -212,6 +212,10 @@ public abstract class KrabApplet extends PApplet {
         return sliderXY("xy");
     }
 
+    protected PVector sliderXY(String name, float defaultXYZ) {
+        return sliderXY(name,defaultXYZ,defaultXYZ,defaultXYZ);
+    }
+
     protected PVector sliderXY(String name) {
         return sliderXY(name, 0, 0, 100);
     }
@@ -634,7 +638,6 @@ public abstract class KrabApplet extends PApplet {
         if(norm == 0){
             return values[0];
         }
-        println(norm);
         float fineIndex = map(norm, 0, 1, 0, values.length-1);
         int index0 = floor(fineIndex);
         int index1 = index0+1;
@@ -650,11 +653,10 @@ public abstract class KrabApplet extends PApplet {
         if(norm == 0){
             return values[0];
         }
-        println(norm);
-        float value = map(norm, 0, 1, 0, values.length-1);
-        int index0 = floor(value);
+        float fineIndex = map(norm, 0, 1, 0, values.length-1);
+        int index0 = floor(fineIndex);
         int index1 = index0+1;
-        float lerpAmt = (value)%1;
+        float lerpAmt = (fineIndex)%1;
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
