@@ -1,14 +1,13 @@
 package _2020_04;
 
 import applet.KrabApplet;
-import processing.core.PConstants;
 import processing.core.PGraphics;
 
 public class OrbitingParticles extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
+        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {
@@ -24,6 +23,7 @@ public class OrbitingParticles extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         fadeToBlack(pg);
+        blurPass(pg);
         pg.translate(width*.5f, height*.5f);
         updateShader();
         int count = sliderInt("count", 100);

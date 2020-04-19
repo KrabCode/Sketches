@@ -1,13 +1,15 @@
 package utils;
 
 import applet.KrabApplet;
+import processing.core.PApplet;
 import processing.core.PGraphics;
 
-public class ProcessingSketchTemplate extends KrabApplet {
-    private PGraphics pg;
+import java.lang.invoke.MethodHandles;
+
+public class ProcessingSketchTemplate extends PApplet {
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
+        PApplet.main(MethodHandles.lookup().lookupClass());
     }
 
     public void settings(){
@@ -15,15 +17,10 @@ public class ProcessingSketchTemplate extends KrabApplet {
     }
 
     public void setup(){
-        pg = createGraphics(width, height, P2D);
+
     }
 
     public void draw(){
-        pg.beginDraw();
-        pg.background(0);
-        pg.endDraw();
-        image(pg, 0, 0);
-        rec(pg);
-        gui();
+        background(0);
     }
 }
