@@ -17,7 +17,7 @@ public class OrbitingParticles extends KrabApplet {
     public void setup() {
         pg = createGraphics(width, height, P3D);
         surface.setAlwaysOnTop(true);
-        frameRecordingDuration *= 2;
+//        frameRecordingDuration *= 2;
     }
 
     public void draw() {

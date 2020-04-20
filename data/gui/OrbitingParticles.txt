@@ -96,3 +96,30 @@ OrbitingParticles§count§5287.978§30000.0
 OrbitingParticles§weight§1.9987454§1.0
 OrbitingParticles§stroke§0.9975§0.0§1.0§1.0§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§7.3312535§255.0
+OrbitingParticles§blur§1.6249996§10.0
+OrbitingParticles§count§9037.994§30000.0
+OrbitingParticles§weight§2.0049953§1.0
+OrbitingParticles§stroke§0.9975§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§7.3312535§255.0
+OrbitingParticles§blur§1.6249996§10.0
+OrbitingParticles§count§9037.994§30000.0
+OrbitingParticles§weight§2.0049953§1.0
+OrbitingParticles§stroke§0.9975§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§4.462504§255.0
+OrbitingParticles§blur§0.81249964§10.0
+OrbitingParticles§count§9037.994§30000.0
+OrbitingParticles§weight§2.0049953§1.0
+OrbitingParticles§stroke§0.9975§0.0§1.0§1.0§1.0
+STATE_END
