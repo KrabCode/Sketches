@@ -18,8 +18,7 @@ public class Smoke extends KrabApplet {
     private PImage train, wheel;
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {
-        }.getClass().getEnclosingClass().getName());
+        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {

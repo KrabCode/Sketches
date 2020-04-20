@@ -7,7 +7,7 @@ public class GradientPicker extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
+        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {

@@ -18,7 +18,7 @@ public class TriangleSphere extends KrabApplet {
     private int seaDetail;
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
+        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {

@@ -14,8 +14,7 @@ public class TriangleStripClouds extends KrabApplet {
     String vert = "shaders/_2020_04/clouds/ColorVert.glsl";
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {
-        }.getClass().getEnclosingClass().getName());
+        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {

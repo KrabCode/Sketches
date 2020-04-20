@@ -8,7 +8,7 @@ public class KeypressMonitor extends KrabApplet {
     HashMap<Character, Boolean> keys = new HashMap<Character, Boolean>();
 
     public static void main(String[] args) {
-        KrabApplet.main(new Object() {}.getClass().getEnclosingClass().getName());
+        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {
