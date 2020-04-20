@@ -527,7 +527,7 @@ public abstract class KrabApplet extends PApplet {
                 try {
                     String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
                             "E:/Sketches/" + captureDir + "%01d.jpg "+
-                            "E:/Sketches/out/" + id + ".mp4";
+                            "E:/Sketches/out/video/" + id + ".mp4";
                     Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
                 } catch (IOException e) {
                     e.printStackTrace();

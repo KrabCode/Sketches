@@ -142,23 +142,30 @@ float random(float seed) {
 
 void main() {
 
-  float tr = 0.;
+  float tr = 0.01;
   vec2 t = vec2(tr*cos(time), tr*sin(time));
 
-  float i = position.x*0.0065;
+  float i = position.x*(0.003);
   float e = 1.618282;
   float a = i;
 
-  float theta = 0.21;
+  float theta = 0.23;
   float r = pow(e, a*theta);
 
-  float x = r*cos(a-time*.1);
-  float y = -40+.6*r*sin(a-time*.1);
-  float z = r*sin(a-time*.1);
+  float armOffset = floor(random(i)*1);
 
-  x += .25*r*fbm(vec4(i*100,0, t.x, t.y));
-  y += .25*r*fbm(vec4(100+i*100,0, t.x, t.y));
-  z += .25*r*fbm(vec4(200+i*100,0, t.x, t.y));
+  float finalAngle = armOffset+a-time/4.;
+
+  float x = r*cos(finalAngle);
+  float y = -40+.75*r*sin(finalAngle);
+  float z = r*sin(finalAngle);
+
+  x += .28*r*fbm(vec4(i*100,0, t.x, t.y));
+  y += .28*r*fbm(vec4(100+i*100,0, t.x, t.y));
+  z += .28*r*fbm(vec4(200+i*100,0, t.x, t.y));
+
+  vec4 clr = color;
+  clr.a *= random(i);
 
   vec4 myPos = vec4(x,y,z,1);
   vec4 pos = modelviewMatrix * (position*vec4(0,1,1,1)+myPos);
@@ -180,5 +187,5 @@ void main() {
   gl_Position.xy = clip.xy + offset.xy * mix(noPerspScale, perspScale, float(perspective > 0));
   gl_Position.zw = clip.zw;
   
-  vertColor = color;
+  vertColor = clr;
 }
