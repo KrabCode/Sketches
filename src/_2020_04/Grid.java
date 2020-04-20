@@ -1,7 +1,11 @@
 package _2020_04;
 
 import applet.KrabApplet;
+import processing.core.PConstants;
 import processing.core.PGraphics;
+import processing.core.PMatrix;
+import processing.core.PVector;
+import processing.opengl.PGraphicsOpenGL;
 
 public class Grid extends KrabApplet {
     private PGraphics pg;
@@ -21,36 +25,26 @@ public class Grid extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        if(toggle("fade color")){
-            fadeToBlack(pg);
-        }else{
-            fadeToWhite(pg);
-        }
+        fadeToBlack(pg);
+        pg.translate(width*.5f, height*.5f);
+        translate(pg);
+        rotate(pg);
+        pg.hint(DISABLE_OPTIMIZED_STROKE);
         updateShader(pg);
         pg.strokeWeight(slider("weight", 1));
         pg.stroke(picker("stroke").clr());
         pg.noFill();
         int count = sliderInt("count", 100);
-        float buffer = slider("buffer", 50);
-        int detail = sliderInt("detail", 100);
+        float size = slider("size", 300);
+        pg.beginShape(POINTS);
         for (int xi = 0; xi < count; xi++) {
-            float x = map(xi, 0, count-1, -buffer, width+buffer);
-            pg.beginShape();
-            for (int i = 0; i < detail; i++) {
-                float y = map(i, 0, detail-1, -buffer, height+buffer);
-                pg.vertex(x, y);
+            for (int zi = 0; zi < count; zi++) {
+                float x = map(xi, 0, count-1, -size, size);
+                float z = map(zi, 0, count-1, -size, size);
+                pg.vertex(x, 0, z);
             }
-            pg.endShape();
         }
-        for (int yi = 0; yi < count; yi++) {
-            pg.beginShape();
-            float y = map(yi, 0, count-1, -buffer, height+buffer);
-            for (int i = 0; i < detail; i++) {
-                float x = map(i, 0, detail-1, -buffer, width+buffer);
-                pg.vertex(x,y);
-            }
-            pg.endShape();
-        }
+        pg.endShape();
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
@@ -58,8 +52,8 @@ public class Grid extends KrabApplet {
     }
 
     private void updateShader(PGraphics pg) {
-        String frag = "shaders/_2020_04/grid/LineFrag.glsl";
-        String vert = "shaders/_2020_04/grid/LineVert.glsl";
+        String frag = "shaders/_2020_04/grid/PointFrag.glsl";
+        String vert = "shaders/_2020_04/grid/PointVert.glsl";
         uniform(frag, vert).set("time", t);
         hotShader(frag, vert, pg);
     }

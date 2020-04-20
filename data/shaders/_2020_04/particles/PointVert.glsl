@@ -140,12 +140,11 @@ float random(float seed) {
   return fract(sin(seed * 323.121f) * 454.123f);
 }
 
-void main() {
+vec4 galaxy(float i){
 
   float tr = 0.01;
   vec2 t = vec2(tr*cos(time), tr*sin(time));
 
-  float i = position.x*(0.003);
   float e = 1.618282;
   float a = i;
 
@@ -164,10 +163,16 @@ void main() {
   y += .28*r*fbm(vec4(100+i*100,0, t.x, t.y));
   z += .28*r*fbm(vec4(200+i*100,0, t.x, t.y));
 
+  return vec4(x,y,z,1);
+}
+
+void main() {
+  float i = position.x*(0.003);
+
   vec4 clr = color;
   clr.a *= random(i);
 
-  vec4 myPos = vec4(x,y,z,1);
+  vec4 myPos = galaxy(i);
   vec4 pos = modelviewMatrix * (position*vec4(0,1,1,1)+myPos);
   vec4 clip = projectionMatrix * pos;
 

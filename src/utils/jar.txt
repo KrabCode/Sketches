@@ -1,0 +1,3 @@
+Project Structure -> Add -> Jar -> from modules with dependencies ->
+Select the main class(also keep the setting at 'extract to the target Jar' for libraries)
+after that click Build -> Build Artifacts choose your jar and Build

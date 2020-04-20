@@ -20,21 +20,16 @@
   Boston, MA  02111-1307  USA
 */
 
-#define PROCESSING_LINE_SHADER
-#define pi 3.14159
-
-uniform mat4 modelviewMatrix;
 uniform mat4 projectionMatrix;
+uniform mat4 modelviewMatrix;
 
 uniform vec4 viewport;
 uniform int perspective;
-uniform vec3 scale;
-
 uniform float time;
 
 attribute vec4 position;
+attribute vec2 offset;
 attribute vec4 color;
-attribute vec4 direction;
 
 varying vec4 vertColor;
 
@@ -126,92 +121,47 @@ float snoise(vec4 v){
   + dot(m1*m1, vec2(dot(p3, x3), dot(p4, x4))));
 }
 
-
 float fbm (vec4 p) {
   float sum = 0.;
   float amp = 1;
   float freq = 1;
   // Loop of octaves
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 2; i++) {
     sum += amp*snoise(p*freq);
-    freq *= 2.5;
+    freq *= 2.;
     amp *= .5;
     p += vec4(3.123, 2.456, 1.121, 2.4545);
   }
   return sum;
 }
 
+float random(float seed) {
+  return fract(sin(seed * 323.121f) * 454.123f);
+}
+
 void main() {
-  float x = position.x;
-  float y = position.y;
-  float tr = 0.2;
-  vec2 t = vec2(tr*cos(time), tr*sin(time));
-  float d = 1.5*sin(length(vec2(x,y))*1);
-  float a = 1.5*cos(atan(y-400,x)*12 - time*.5);
-  vec2 coord = vec2(x,y);
-  float n = 20.*fbm(vec4(d, a, 0, 0));
+  float t = time*.1;
+  float d = length(position.xyz)*.05;
+  vec4 myPos = vec4(0,100*fbm(vec4(d, d, t, t)),0,0);
 
-  vec4 pos = position + vec4(n*cos(pi+a),n*sin(pi+a),0,0);
+  vec4 pos = modelviewMatrix * (position+myPos);
+  vec4 clip = projectionMatrix * pos;
 
-  vec4 posp = modelviewMatrix * pos;
-  vec4 posq = modelviewMatrix * (pos + vec4(direction.xyz, 0));
-
-  // Moving vertices slightly toward the camera
-  // to avoid depth-fighting with the fill triangles.
-  // Discussed here:
-  // http://www.opengl.org/discussion_boards/ubbthreads.php?ubb=showflat&Number=252848  
-  posp.xyz = posp.xyz * scale;
-  posq.xyz = posq.xyz * scale;
-
-  vec4 p = projectionMatrix * posp;
-  vec4 q = projectionMatrix * posq;
+  // Perspective ---
+  // convert from world to clip by multiplying with projection scaling factor
+  // invert Y, projections in Processing invert Y
+  vec2 perspScale = (projectionMatrix * vec4(1, -1, 0, 0)).xy;
 
   // formula to convert from clip space (range -1..1) to screen space (range 0..[width or height])
   // screen_p = (p.xy/p.w + <1,1>) * 0.5 * viewport.zw
 
-  // prevent division by W by transforming the tangent formula (div by 0 causes
-  // the line to disappear, see https://github.com/processing/processing/issues/5183)
-  // t = screen_q - screen_p
-  //
-  // tangent is normalized and we don't care which direction it points to (+-)
-  // t = +- normalize( screen_q - screen_p )
-  // t = +- normalize( (q.xy/q.w+<1,1>)*0.5*viewport.zw - (p.xy/p.w+<1,1>)*0.5*viewport.zw )
-  //
-  // extract common factor, <1,1> - <1,1> cancels out
-  // t = +- normalize( (q.xy/q.w - p.xy/p.w) * 0.5 * viewport.zw )
-  //
-  // convert to common divisor
-  // t = +- normalize( ((q.xy*p.w - p.xy*q.w) / (p.w*q.w)) * 0.5 * viewport.zw )
-  //
-  // remove the common scalar divisor/factor, not needed due to normalize and +-
-  // (keep viewport - can't remove because it has different components for x and y
-  //  and corrects for aspect ratio, see https://github.com/processing/processing/issues/5181)
-  // t = +- normalize( (q.xy*p.w - p.xy*q.w) * viewport.zw )
-
-  vec2 tangent = (q.xy*p.w - p.xy*q.w) * viewport.zw;
-
-  // don't normalize zero vector (line join triangles and lines perpendicular to the eye plane)
-  tangent = length(tangent) == 0.0 ? vec2(0.0, 0.0) : normalize(tangent);
-
-  // flip tangent to normal (it's already normalized)
-  vec2 normal = vec2(-tangent.y, tangent.x);
-
-  float thickness = direction.w;
-  vec2 offset = normal * thickness;
-
-  // Perspective ---
-  // convert from world to clip by multiplying with projection scaling factor
-  // to get the right thickness (see https://github.com/processing/processing/issues/5182)
-  // invert Y, projections in Processing invert Y
-  vec2 perspScale = (projectionMatrix * vec4(1, -1, 0, 0)).xy;
-
   // No Perspective ---
   // multiply by W (to cancel out division by W later in the pipeline) and
   // convert from screen to clip (derived from clip to screen above)
-  vec2 noPerspScale = p.w / (0.5 * viewport.zw);
+  vec2 noPerspScale = clip.w / (0.5 * viewport.zw);
 
-  gl_Position.xy = p.xy + offset.xy * mix(noPerspScale, perspScale, float(perspective > 0));
-  gl_Position.zw = p.zw;
-
+  gl_Position.xy = clip.xy + offset.xy * mix(noPerspScale, perspScale, float(perspective > 0));
+  gl_Position.zw = clip.zw;
+  
   vertColor = color;
 }

@@ -128,6 +128,7 @@ public abstract class KrabApplet extends PApplet {
     private boolean verticalOverlayVisible;
     private boolean pickerOverlayVisible;
     private boolean zOverlayVisible;
+    private boolean trayLocked = false; // disable selection of elements in tray when one is already being adjusted
     private Element overlayOwner = null; // do not assign directly!
     private float underlineTrayAnimationStarted = -UNDERLINE_TRAY_ANIMATION_DURATION;
     private float undoRotationStarted = -MENU_ROTATION_DURATION;
@@ -143,6 +144,11 @@ public abstract class KrabApplet extends PApplet {
     // INTERFACE
     private ArrayList<ShaderSnapshot> snapshots = new ArrayList<ShaderSnapshot>();
     private int shaderRefreshRateInMillis = 36;
+
+
+    private PMatrix3D mouseRotation = new PMatrix3D();
+    private PMatrix3D sliderRotationMatrix = new PMatrix3D();
+    private PVector previousSliderRotation = new PVector();
 
     protected int sliderInt() {
         return floor(sliderInt("x"));
@@ -213,7 +219,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected PVector sliderXY(String name, float defaultXYZ) {
-        return sliderXY(name,defaultXYZ,defaultXYZ,defaultXYZ);
+        return sliderXY(name, defaultXYZ, defaultXYZ, defaultXYZ);
     }
 
     protected PVector sliderXY(String name) {
@@ -372,7 +378,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateScrolling() {
-        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height))) {
+        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height)) || trayLocked) {
             return;
         }
         scrollOffsetHistory.add(trayScrollOffset);
@@ -459,14 +465,10 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-
-    private PMatrix3D mouseRotation = new PMatrix3D();
-
     protected void mouseRotation() {
         mouseRotation(g);
     }
 
-    float scale = 1;
 
     protected void mouseRotation(PGraphics pg) {
         if (mousePressedOutsideGui) {
@@ -480,6 +482,27 @@ public abstract class KrabApplet extends PApplet {
             }
         }
         pg.applyMatrix(mouseRotation);
+    }
+
+    protected void translate(PGraphics pg) {
+        PVector translate = sliderXYZ("translate");
+        pg.translate(translate.x, translate.y, translate.z);
+    }
+
+    protected void rotate(PGraphics pg) {
+        PVector rotation = sliderXYZ("rotate");
+        PVector delta = PVector.sub(previousSliderRotation, rotation);
+        if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
+            delta.mult(0);
+            sliderRotationMatrix.reset();
+        }
+        PMatrix3D temp = new PMatrix3D();
+        temp.rotateX(delta.x);
+        temp.rotateY(delta.y);
+        temp.rotateZ(delta.z);
+        sliderRotationMatrix.preApply(temp);
+        pg.applyMatrix(sliderRotationMatrix);
+        previousSliderRotation = rotation.copy();
     }
 
     protected void cam() {
@@ -526,7 +549,7 @@ public abstract class KrabApplet extends PApplet {
                 println("capture ended, running ffmpeg, please wait...");
                 try {
                     String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
-                            "E:/Sketches/" + captureDir + "%01d.jpg "+
+                            "E:/Sketches/" + captureDir + "%01d.jpg " +
                             "E:/Sketches/out/video/" + id + ".mp4";
                     Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
                 } catch (IOException e) {
@@ -630,33 +653,33 @@ public abstract class KrabApplet extends PApplet {
     }
 
 
-    protected float lerpMany(float norm, float... values){
+    protected float lerpMany(float norm, float... values) {
         norm = constrain(norm, 0, 1);
-        if(norm == 1){
-            return values[values.length-1];
+        if (norm == 1) {
+            return values[values.length - 1];
         }
-        if(norm == 0){
+        if (norm == 0) {
             return values[0];
         }
-        float fineIndex = map(norm, 0, 1, 0, values.length-1);
+        float fineIndex = map(norm, 0, 1, 0, values.length - 1);
         int index0 = floor(fineIndex);
-        int index1 = index0+1;
-        float lerpAmt = (fineIndex)%1;
+        int index1 = index0 + 1;
+        float lerpAmt = (fineIndex) % 1;
         return lerp(values[index0], values[index1], lerpAmt);
     }
 
-    protected PVector lerpMany(float norm, PVector... values){
+    protected PVector lerpMany(float norm, PVector... values) {
         norm = constrain(norm, 0, 1);
-        if(norm == 1){
-            return values[values.length-1];
+        if (norm == 1) {
+            return values[values.length - 1];
         }
-        if(norm == 0){
+        if (norm == 0) {
             return values[0];
         }
-        float fineIndex = map(norm, 0, 1, 0, values.length-1);
+        float fineIndex = map(norm, 0, 1, 0, values.length - 1);
         int index0 = floor(fineIndex);
-        int index1 = index0+1;
-        float lerpAmt = (fineIndex)%1;
+        int index1 = index0 + 1;
+        float lerpAmt = (fineIndex) % 1;
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
@@ -1023,7 +1046,7 @@ public abstract class KrabApplet extends PApplet {
     // INPUT
 
     private boolean activated(String query, float x, float y, float w, float h) {
-        return mouseJustReleasedHereScrollAware(x, y, w, h) || keyboardActivated(query);
+        return mouseJustReleasedHereScrollAware(x, y, w, h) || keyboardActivated(query) && !trayLocked;
     }
 
     private boolean mouseJustReleasedHereScrollAware(float x, float y, float w, float h) {
@@ -2188,10 +2211,15 @@ public abstract class KrabApplet extends PApplet {
 
         }
 
+
+        protected String fullElementName() {
+            return group.name + SEPARATOR + name + SEPARATOR;
+        }
+
         abstract boolean canHaveOverlay();
 
         String getState() {
-            return group.name + SEPARATOR + name + SEPARATOR;
+            return fullElementName();
         }
 
         void setState(String newState) {
@@ -2439,6 +2467,21 @@ public abstract class KrabApplet extends PApplet {
     private abstract class Slider extends Element {
         Slider(Group parent, String name) {
             super(parent, name);
+        }
+
+        void updateOverlay() {
+            updateTrayLock();
+        }
+
+        void updateTrayLock() {
+            boolean isThisBeingUsed = overlayOwner.equals(this) && mousePressed && pMousePressed;
+            if(isThisBeingUsed) {
+                trayLocked = true;
+                println("tray locked");
+            }
+            if(trayLocked && !isThisBeingUsed) {
+                trayLocked = false;
+            }
         }
 
         protected float updateFullHorizontalSlider(float x, float y, float w, float h, float value, float precision,
@@ -2782,6 +2825,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void updateOverlay() {
+            super.updateOverlay();
             float valueDelta = updateInfiniteSlider(precision, width, true, false, false);
             recordStateForUndo();
             value += valueDelta;
@@ -2851,6 +2895,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void updateOverlay() {
+            super.updateOverlay();
             recordStateForUndo();
             updateXYSliders();
             lockOtherSlidersOnMouseOver();
@@ -2948,6 +2993,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void updateOverlay() {
+            super.updateOverlay();
             recordStateForUndo();
             deltaZ = updateInfiniteSlider(precision, height * .5f, false, true, true);
             lockOtherSlidersOnMouseOver();
@@ -3175,6 +3221,7 @@ public abstract class KrabApplet extends PApplet {
 
         @SuppressWarnings("SuspiciousNameCombination")
         void updateOverlay() {
+            super.updateOverlay();
             if (mouseJustReleased()) {
                 brightnessLocked = false;
                 saturationLocked = false;

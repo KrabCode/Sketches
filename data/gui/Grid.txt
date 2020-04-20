@@ -1,0 +1,95 @@
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§weight§4.049999§10.0
+Grid§stroke§0.0§0.0§0.5§1.0§1.0
+Grid§count§100.0§300.0
+Grid§size§300.0§322.875§320.625
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§rotate§100.0§0.625§0.0§0.0
+Grid§weight§3.9874992§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§181.11693§300.0
+Grid§size§300.0§552.375§564.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§rotate§100.0§-0.375§0.0§0.0
+Grid§weight§1.8874997§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§64.984924§300.0
+Grid§size§300.0§552.375
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§translate§100.0§0.0§0.0§0.0
+Grid§rotate§100.0§0.0§0.0§0.0
+Grid§weight§1.8874997§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§64.984924§300.0
+Grid§size§300.0§552.375
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§translate§1000.0§0.0§0.0§-175.0
+Grid§rotate§100.0§0.375§0.0§0.0
+Grid§weight§1.8874997§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§64.984924§300.0
+Grid§size§300.0§552.375
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§translate§1000.0§0.0§0.0§-175.0
+Grid§rotate§100.0§0.375§0.0§0.0
+Grid§weight§1.8874997§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§150.92587§300.0
+Grid§size§877.9224§552.375
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§translate§1000.0§0.0§-115.0§-296.5
+Grid§rotate§10.0§0.98749983§0.0§0.0
+Grid§weight§3.3499982§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§120.99992§300.0
+Grid§size§1054.6832§5523.75
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§translate§1000.0§0.0§-115.0§-296.5
+Grid§rotate§10.0§0.98749983§0.0§0.0
+Grid§weight§3.3499982§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§120.99992§300.0
+Grid§size§1054.6832§5523.75
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Grid§true
+Grid§fade to black§50.0§255.0
+Grid§translate§1000.0§0.0§-115.0§-296.5
+Grid§rotate§10.0§0.98749983§0.0§0.0
+Grid§weight§3.1874988§10.0
+Grid§stroke§0.0§0.0§1.0§1.0§1.0
+Grid§count§112.99951§300.0
+Grid§size§1054.6832§5523.75
+STATE_END
