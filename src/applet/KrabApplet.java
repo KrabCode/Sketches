@@ -63,7 +63,7 @@ public abstract class KrabApplet extends PApplet {
     private static final float GRAYSCALE_GRID = .3f;
     private static final float GRAYSCALE_TEXT_DARK = .5f;
     private static final float GRAYSCALE_TEXT_SELECTED = 1;
-    private static final float INT_PRECISION_MAXIMUM = 10000;
+    private static final float INT_PRECISION_MAXIMUM = 100000;
     private static final float INT_PRECISION_MINIMUM = 10f;
     private static final float FLOAT_PRECISION_MAXIMUM = 10000;
     private static final float FLOAT_PRECISION_MINIMUM = .01f;
@@ -1701,11 +1701,17 @@ public abstract class KrabApplet extends PApplet {
         hotFilter(split, pg);
     }
 
+    protected void gaussBlurPass(PGraphics pg) {
+        String split = "shaders/filters/gaussBlur.glsl";
+        uniform(split).set("sigma", slider("sigma", 1));
+        uniform(split).set("blurSize", slider("blur size", 0));
+        hotFilter(split, pg);
+    }
+
     protected void chromaticAberrationPass(PGraphics pg) {
         String chromatic = "postFX\\chromaticAberrationFrag.glsl";
         uniform(chromatic).set("maxDistort", slider("chromatic", 5));
         hotFilter(chromatic, pg);
-
     }
 
     protected void noiseOffsetPass(PGraphics pg, float t) {
@@ -2477,7 +2483,6 @@ public abstract class KrabApplet extends PApplet {
             boolean isThisBeingUsed = overlayOwner.equals(this) && mousePressed && pMousePressed;
             if(isThisBeingUsed) {
                 trayLocked = true;
-                println("tray locked");
             }
             if(trayLocked && !isThisBeingUsed) {
                 trayLocked = false;

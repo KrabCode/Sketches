@@ -1,0 +1,201 @@
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§30007.02§10000.0
+Instancing§stroke§0.0§0.0§1.0§1.0§1.0
+Instancing§weight§1.6249995§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§100007.08§10000.0
+Instancing§stroke§0.0§0.0§1.0§1.0§1.0
+Instancing§weight§1.6249995§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§123782.08§10000.0
+Instancing§stroke§0.001875§0.0§1.0§0.09999999§10.0
+Instancing§weight§3.5125022§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§301407.06§100000.0
+Instancing§stroke§0.001875§0.0§1.0§0.09999999§10.0
+Instancing§weight§3.5125022§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§301407.06§100000.0
+Instancing§stroke§0.001875§0.0§1.0§0.12499999§1.0
+Instancing§weight§3.5125022§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§1000000.0§700000.0
+Instancing§stroke§0.001875§0.0§1.0§0.12499999§1.0
+Instancing§weight§0.96250224§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§1000000.0§700000.0
+Instancing§stroke§0.0012500143§0.0§1.0§0.1975§1.0
+Instancing§weight§2.000003§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§1000000.0§700000.0
+Instancing§stroke§0.0012500143§0.0§1.0§0.10249999§1.0
+Instancing§weight§2.0000026§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§100000.0§600.0
+Instancing§fade to black§126.18123§255.0
+Instancing§stroke§0.0012500143§0.0§1.0§0.10249999§1.0
+Instancing§weight§1.9550036§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§640000.0§600.0
+Instancing§fade to black§126.18123§255.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§2.5§0.0§0.0
+Instancing§stroke§0.0012500143§0.0§1.0§1.0§10.0
+Instancing§weight§1.9550036§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§640000.0§600.0
+Instancing§fade to black§126.18123§255.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§10.0§4.0749993§29.52501§-15.0
+Instancing§stroke§0.0012500143§0.0§1.0§1.0§10.0
+Instancing§weight§0.52500004§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§640000.0§600.0
+Instancing§fade to black§255.0§2550.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§10.0§7.4499826§29.52501§-15.0
+Instancing§stroke§0.0012500143§0.0§1.0§1.0§10.0
+Instancing§weight§1.7250003§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§640000.0§600.0
+Instancing§fade to black§255.0§2550.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§blend mode: ADD§false
+Instancing§stroke§0.11062498§0.0§1.0§0.325§10.0
+Instancing§weight§1.7250003§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§640000.0§600.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§blend mode: ADD§false
+Instancing§stroke§0.11062498§0.0§1.0§1.0§10.0
+Instancing§weight§9.800001§10.0
+Instancing§sigma§2.3499985§100.0
+Instancing§blur size§0.002§0.1
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§640000.0§600.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§blend mode: ADD§false
+Instancing§stroke§0.11062498§0.0§1.0§1.0§10.0
+Instancing§weight§9.800001§10.0
+Instancing§sigma§2.3499985§100.0
+Instancing§blur size§0.002§0.1
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§100000.0§600.0
+Instancing§fade to black§255.0§2550.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.11062498§0.0§1.0§1.0§10.0
+Instancing§weight§2.1125016§10.0
+Instancing§sigma§1.0§10.0
+Instancing§blur size§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§100000.0§600.0
+Instancing§fade to black§92.4375§2550.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.11062498§0.0§1.0§1.0§10.0
+Instancing§weight§1.4500022§10.0
+Instancing§sigma§2.50375§1.0
+Instancing§blur size§0.0013750012§0.1
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§100000.0§6000.0
+Instancing§fade to black§51.0§2550.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.112499975§0.0§1.0§0.24987496§0.1
+Instancing§weight§1.025002§10.0
+Instancing§sigma§2.5§1.0
+Instancing§blur size§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§100000.0§600.0
+Instancing§fade to black§51.0§2550.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.112499975§0.0§1.0§0.24987496§0.1
+Instancing§weight§1.025002§10.0
+Instancing§sigma§2.5§1.0
+Instancing§blur size§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§500000.0§600.0
+Instancing§fade to black§36.018772§255.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.112499975§0.0§1.0§0.065§1.0
+Instancing§weight§1.5000025§10.0
+Instancing§sigma§2.5§1.0
+Instancing§blur size§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§count§500000.0§600.0
+Instancing§fade to black§36.018772§255.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.112499975§0.0§1.0§0.065§1.0
+Instancing§weight§1.5000025§10.0
+Instancing§sigma§2.5§1.0
+Instancing§blur size§0.0§10.0
+STATE_END
