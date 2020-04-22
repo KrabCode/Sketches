@@ -20,18 +20,22 @@
   Boston, MA  02111-1307  USA
 */
 
-#define pi 3.14159
-
-uniform mat4 transformMatrix;
+uniform mat4 projectionMatrix;
+uniform mat4 modelviewMatrix;
+ 
+uniform vec4 viewport;
+uniform int perspective; 
 uniform float time;
-uniform bool orientation;
+uniform vec2 resolution;
+uniform int count;
 
 attribute vec4 position;
 attribute vec4 color;
-attribute vec2 jpos;
+attribute vec2 offset;
 
 varying vec4 vertColor;
-varying float discardme;
+
+const float tau = 3.14159*2;
 
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
@@ -49,6 +53,7 @@ vec4 grad4(float j, vec4 ip){
 
   return p;
 }
+
 float snoise(vec4 v){
   const vec2  C = vec2(0.138196601125010504, // (5 - sqrt(5))/20  G4
   0.309016994374947451);// (sqrt(5) - 1)/4   F4
@@ -122,41 +127,96 @@ float snoise(vec4 v){
   + dot(m1*m1, vec2(dot(p3, x3), dot(p4, x4))));
 }
 
-
 float fbm (vec4 p) {
   float sum = 0.;
   float amp = 1;
-  float freq = 1;
+  float freq = 1.;
   // Loop of octaves
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < 3; i++) {
     sum += amp*snoise(p*freq);
-    freq *= 1.8;
+    freq *= 2.;
     amp *= .5;
     p += vec4(3.123, 2.456, 1.121, 2.4545);
   }
   return sum;
 }
 
+vec2 grid(float i){
+    float step = 1.0;
+    i *= step;
+    float margin = 150;
+    float x = -margin+mod(i, resolution.x+margin*2);
+    float y = -margin+mod(i/resolution.x, resolution.y+margin*2);
+    return vec2(x,y);
+}
+
+float random(float seed) {
+  return fract(sin(seed * 323.121f) * 454.123f);
+}
+
+float map(float value, float start1, float stop1, float start2, float stop2){
+  return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+}
+
+float getElevation(vec2 p, vec2 ts){
+  return 50*fbm(vec4(p.xy*.002+vec2(0, time*.1), 0*ts.xy));
+}
+
+vec3 getNormal(vec3 p0, vec3 p1, vec3 p2, vec3 p3){
+  float d = length(p0);
+  vec3 pos1 = p-offset.xyy;
+  float d1 = length(p1);
+  float d2 = length(p2);
+  float d3 = length(p3);
+  vec3 normal = d - vec3(d1, d2, d3);
+  return normalize(normal);
+}
+
 void main() {
-  float n = clamp(fbm(vec4(jpos.xy*0.001+time*.5, time*.1, 0)), 0, 1);
-  if(n > 0){
-    n = 1;
-  }
-  vec3 offset = vec3(0, orientation?n:-n ,0);
-  vec4 pos = position;
-  float height = 100;
-  if(orientation){
-    pos += vec4(0, n*height, 0, 1)*transformMatrix;
-  }else{
-    pos -= vec4(0, n*height, 0, 1)*transformMatrix;
-  }
-  gl_Position = transformMatrix * pos;
-  float alpha = 1;
-  if(n == 0){
-    discardme = 0.;
-  }else{
-    discardme = 0;
-  }
-  float grayscale = .5+(orientation?.5*n:-.5*n);
-  vertColor = vec4(vec3(grayscale), alpha);
+  float i = position.x;
+  float n = map(i, 0, count, 0, 1);
+
+  float t = time;
+  float tr = .1;
+  vec2 ts = vec2(tr*cos(time), tr*sin(time));
+
+  vec2 uv = grid(i);
+  vec3 p = vec3(uv, 0);
+  p.z += getElevation(p, ts);
+
+
+  vec4 pos = modelviewMatrix * vec4(p, 1);
+
+  vec2 offset = vec2(0.001, 0.);
+
+  vec2 p1 = p.xy+offset.xy;
+  vec3 p1Elevated = vec3(p1, getElevation(p1, ts));
+
+  vec2 p2 = p.xy+offset.yx;
+  vec3 p2Elevated = vec3(p2, getElevation(p2, ts));
+
+
+  vec3 normal = getNormal(pos, (modelviewMatrix*vec4(p1Elevated.xyz, 1)).xyz, );
+  float lit = dot(normal, normalize(vec3(0.1,0.5,-.5)));
+  vec4 clr = color*lit;
+
+  vec4 clip = projectionMatrix * pos;
+
+  // Perspective ---
+  // convert from world to clip by multiplying with projection scaling factor
+  // invert Y, projections in Processing invert Y
+  vec2 perspScale = (projectionMatrix * vec4(1, -1, 0, 0)).xy;
+
+  // formula to convert from clip space (range -1..1) to screen space (range 0..[width or height])
+  // screen_p = (p.xy/p.w + <1,1>) * 0.5 * viewport.zw
+
+  // No Perspective ---
+  // multiply by W (to cancel out division by W later in the pipeline) and
+  // convert from screen to clip (derived from clip to screen above)
+  vec2 noPerspScale = clip.w / (0.5 * viewport.zw);
+
+  gl_Position.xy = clip.xy + offset.xy * mix(noPerspScale, perspScale, float(perspective > 0));
+  gl_Position.zw = clip.zw;
+  
+  vertColor = clr;
 }

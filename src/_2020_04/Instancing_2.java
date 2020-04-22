@@ -6,7 +6,7 @@ import processing.core.PShape;
 
 import java.util.ArrayList;
 
-public class Instancing extends KrabApplet {
+public class Instancing_2 extends KrabApplet {
     private PGraphics pg;
     private ArrayList<PShape> pointArrays;
     int pointCount = 500000;
@@ -17,7 +17,7 @@ public class Instancing extends KrabApplet {
 
     public void settings() {
         size(800, 800, P3D);
-//        fullScreen(P3D, 2);
+//        fullScreen(P3D);
     }
 
     public void setup() {
@@ -30,7 +30,9 @@ public class Instancing extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         fadeToBlack(pg);
-        pg.translate(width/2f, height/2f);
+        if(toggle("translate to middle")) {
+            pg.translate(width/2f, height/2f);
+        }
         translate(pg);
         rotate(pg);
         pg.hint(DISABLE_OPTIMIZED_STROKE);
@@ -41,7 +43,7 @@ public class Instancing extends KrabApplet {
             shape.setStrokeWeight(max(weight, .1f));
             pg.shape(shape);
         }
-        gaussBlurPass(pg);
+//        gaussBlurPass(pg);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
@@ -49,8 +51,8 @@ public class Instancing extends KrabApplet {
     }
 
     private void updateShader() {
-        String frag = "/shaders/_2020_04/instancing/PointFrag.glsl";
-        String vert = "/shaders/_2020_04/instancing/PointVert.glsl";
+        String frag = "/shaders/_2020_04/instancing_2/PointFrag.glsl";
+        String vert = "/shaders/_2020_04/instancing_2/PointVert.glsl";
         uniform(frag, vert).set("time", t);
         uniform(frag, vert).set("count", pointCount);
         hotShader(frag, vert, pg);

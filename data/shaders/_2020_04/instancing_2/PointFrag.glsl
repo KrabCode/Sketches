@@ -26,11 +26,7 @@ precision mediump int;
 #endif
 
 varying vec4 vertColor;
-varying float discardme;
 
 void main() {
-  if(discardme > 0){
-    discard;
-  }
   gl_FragColor = vertColor;
 }

@@ -141,3 +141,12 @@ OrbitingParticles§count§26925.064§30000.0
 OrbitingParticles§weight§1.9649959§1.0
 OrbitingParticles§stroke§0.6849999§0.0§1.0§1.0§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§OrbitingParticles§true
+OrbitingParticles§fade to black§17.212502§255.0
+OrbitingParticles§blur§1.4749985§100.0
+OrbitingParticles§count§26925.031§30000.0
+OrbitingParticles§weight§1.8324963§1.0
+OrbitingParticles§stroke§0.6849999§0.0§1.0§1.0§1.0
+STATE_END

@@ -1,0 +1,9 @@
+STATE_BEGIN
+UNDO
+GROUP§Instancing_2§true
+Instancing_2§fade to black§25.595627§25.5
+Instancing_2§translate§100.0§0.0§0.0§0.0
+Instancing_2§rotate§100.0§0.0§0.0§0.0
+Instancing_2§stroke§0.533125§0.0§1.0§0.48249984§1.0
+Instancing_2§weight§1.0062497§1.0
+STATE_END

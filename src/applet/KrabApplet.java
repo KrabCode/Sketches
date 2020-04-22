@@ -701,6 +701,23 @@ public abstract class KrabApplet extends PApplet {
         return shape;
     }
 
+    protected ArrayList<PShape> particles(int count, int shapeType) {
+        ArrayList<PShape> pointArrays = new ArrayList<>();
+        int maxPshapePop = 100000;
+        int pshapesNeeded = count / maxPshapePop;
+        int pointIndex = 0;
+        for (int shapeIndex = 0; shapeIndex < pshapesNeeded; shapeIndex++) {
+            PShape pointArray = createShape();
+            pointArray.beginShape(shapeType);
+            for (int j = 0; j < maxPshapePop; j++) {
+                pointArray.vertex(pointIndex++, 0, 0);
+            }
+            pointArray.endShape();
+            pointArrays.add(pointArray);
+        }
+        return pointArrays;
+    }
+
     protected void spiralSphere(PGraphics pg) {
         group("planet");
         pg.beginShape(POINTS);
@@ -1703,7 +1720,7 @@ public abstract class KrabApplet extends PApplet {
 
     protected void gaussBlurPass(PGraphics pg) {
         String split = "shaders/filters/gaussBlur.glsl";
-        uniform(split).set("sigma", slider("sigma", 1));
+        uniform(split).set("sigma", slider("sigma", 0));
         uniform(split).set("blurSize", slider("blur size", 0));
         hotFilter(split, pg);
     }

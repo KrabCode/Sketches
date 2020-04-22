@@ -130,7 +130,7 @@ float snoise(vec4 v){
 float fbm (vec4 p) {
   float sum = 0.;
   float amp = 1;
-  float freq = 12.;
+  float freq = 1.;
   // Loop of octaves
   for (int i = 0; i < 3; i++) {
     sum += amp*snoise(p*freq);
@@ -163,22 +163,25 @@ void main() {
   float n = map(i, 0, count, 0, 1);
 
   float t = time;
-  float tr = 0.01;
+  float tr = 0.1;
   vec2 ts = vec2(tr*cos(time), tr*sin(time));
 
-  float nFreq = 10.5;
-  float nr = fbm(vec4(n*nFreq, n*nFreq, ts.xy*.01));
+  float nFreq = 800.1;
+  float nr = fbm(vec4(n*nFreq, n*nFreq+800, ts.xy*0.5));
   vec2 ns = vec2(nr*cos(n*tau), nr*sin(n*tau));
 
   vec4 aPosition = position * vec4(0,1,1,1);
 
   float a = n*tau;
-  float r = 180;
+
+  float r1 = 00;
+  float r = r1;
+
   vec2 posOffset = vec2(r*cos(a), r*sin(a));
 
   vec2 noise = vec2(
-    120*fbm(vec4(ns.xy, ts.xy)),
-    120*fbm(vec4(ns.xy+600, ts.xy+500)));
+    400*fbm(vec4(ns.xy, ts.xy*.5)),
+    400*fbm(vec4(ns.xy, 100+ts.xy*0.5)));
 
   posOffset.xy += noise;
   aPosition.xy += posOffset;

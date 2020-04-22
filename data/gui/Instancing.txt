@@ -199,3 +199,25 @@ Instancing§weight§1.5000025§10.0
 Instancing§sigma§2.5§1.0
 Instancing§blur size§0.0§10.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§fade to black§23.640625§255.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.5658855§0.3§1.0§0.09624999§1.0
+Instancing§weight§2.1822915§10.0
+Instancing§sigma§0.08854168§10.0
+Instancing§blur size§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Instancing§true
+Instancing§fade to black§23.640625§255.0
+Instancing§translate§100.0§0.0§0.0§0.0
+Instancing§rotate§100.0§0.0§0.0§0.0
+Instancing§stroke§0.5658855§0.3§1.0§0.09624999§1.0
+Instancing§weight§2.1822915§10.0
+Instancing§sigma§0.08854168§10.0
+Instancing§blur size§0.0§10.0
+STATE_END
