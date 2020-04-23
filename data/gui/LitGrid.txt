@@ -1,0 +1,88 @@
+STATE_BEGIN
+UNDO
+GROUP§LitGrid§true
+LitGrid§global pos§100.0§0.0§0.0§0.0
+LitGrid§rotate§3.1415927§0.1256637§0.0§0.0
+LitGrid§local pos§100.0§0.0§0.0§0.0
+LitGrid§count§100.0§300.0
+LitGrid§size§1000.0§1000.0§1000.0
+LitGrid§stroke§0.0§0.0§0.0§1.0§1.0
+LitGrid§fill§0.0§0.0§1.0§1.0§1.0
+LitGrid§no stroke§false
+LitGrid§no fill§false
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LitGrid§true
+LitGrid§global pos§100.0§0.0§0.0§0.0
+LitGrid§rotate§3.1415927§0.1256637§0.0§0.0
+LitGrid§local pos§100.0§0.0§0.0§0.0
+LitGrid§count§100.0§300.0
+LitGrid§size§1000.0§1000.0§1000.0
+LitGrid§stroke§0.0§0.0§0.0§1.0§1.0
+LitGrid§fill§0.0§0.0§1.0§1.0§1.0
+LitGrid§no stroke§true
+LitGrid§no fill§false
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LitGrid§true
+LitGrid§lit§true
+LitGrid§global pos§100.0§0.0§0.0§0.0
+LitGrid§rotate§3.1415927§0.1256637§0.0§0.0
+LitGrid§local pos§100.0§0.0§0.0§0.0
+LitGrid§count§100.0§300.0
+LitGrid§size§1000.0§1000.0§1000.0
+LitGrid§stroke§0.0§0.0§0.0§1.0§1.0
+LitGrid§fill§0.0§0.0§1.0§1.0§1.0
+LitGrid§no stroke§true
+LitGrid§no fill§false
+LitGrid§dir light§100.0§0.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LitGrid§true
+LitGrid§lit§true
+LitGrid§global pos§1000.0§0.0§99.75§-1014.5
+LitGrid§rotate§3.1415927§0.1256637§0.0§0.0
+LitGrid§local pos§100.0§0.0§0.0§0.0
+LitGrid§count§100.0§300.0
+LitGrid§size§1000.0§1000.0§1000.0
+LitGrid§stroke§0.0§0.0§0.0§1.0§1.0
+LitGrid§fill§0.0§0.0§1.0§1.0§1.0
+LitGrid§no stroke§true
+LitGrid§no fill§false
+LitGrid§dir light§1000.0§0.0§19.25§1149.125
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LitGrid§true
+LitGrid§lit§true
+LitGrid§global pos§10000.0§0.0§99.75§10.5
+LitGrid§rotate§3.1415927§0.06283164§0.0§0.0
+LitGrid§local pos§100.0§0.0§0.0§0.0
+LitGrid§count§90.00033§3000.0
+LitGrid§size§10000.0§250.0§200.0
+LitGrid§stroke§0.0§0.0§0.0§1.0§1.0
+LitGrid§fill§0.0§0.0§1.0§1.0§1.0
+LitGrid§no stroke§true
+LitGrid§no fill§false
+LitGrid§dir light§1000.0§-475.0§107.5§587.75
+LitGrid§dir light strength§147.0§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LitGrid§true
+LitGrid§lit§true
+LitGrid§global pos§10000.0§0.0§99.75§10.5
+LitGrid§rotate§3.1415927§0.06283164§0.0§0.0
+LitGrid§local pos§100.0§0.0§0.0§0.0
+LitGrid§count§90.00008§3000.0
+LitGrid§size§10000.0§250.0§200.0
+LitGrid§stroke§0.70812505§1.0§0.0§0.97749984§1.0
+LitGrid§fill§0.0§0.0§1.0§1.0§1.0
+LitGrid§no stroke§false
+LitGrid§no fill§false
+LitGrid§dir light§1000.0§-610.0§25.0§587.75
+LitGrid§dir light strength§449.5§10000.0
+STATE_END

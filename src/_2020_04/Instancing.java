@@ -24,7 +24,7 @@ public class Instancing extends KrabApplet {
         pg = createGraphics(width, height, P3D);
         pg.smooth(16);
         surface.setAlwaysOnTop(true);
-        pointArrays = particles(pointCount, POINTS);
+        pointArrays = shapes(pointCount, POINTS);
     }
 
     public void draw() {

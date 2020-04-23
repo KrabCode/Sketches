@@ -484,13 +484,21 @@ public abstract class KrabApplet extends PApplet {
         pg.applyMatrix(mouseRotation);
     }
 
+    protected void translateToCenter(PGraphics pg) {
+        pg.translate(pg.width*.5f, pg.height*.5f);
+    }
+
     protected void translate(PGraphics pg) {
-        PVector translate = sliderXYZ("translate");
+        translate(pg, "translate");
+    }
+
+    protected void translate(PGraphics pg, String sliderName) {
+        PVector translate = sliderXYZ(sliderName);
         pg.translate(translate.x, translate.y, translate.z);
     }
 
     protected void rotate(PGraphics pg) {
-        PVector rotation = sliderXYZ("rotate");
+        PVector rotation = sliderXYZ("rotate", PI);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
             delta.mult(0);
@@ -701,7 +709,7 @@ public abstract class KrabApplet extends PApplet {
         return shape;
     }
 
-    protected ArrayList<PShape> particles(int count, int shapeType) {
+    protected ArrayList<PShape> shapes(int count, int shapeType) {
         ArrayList<PShape> pointArrays = new ArrayList<>();
         int maxPshapePop = 100000;
         int pshapesNeeded = count / maxPshapePop;
