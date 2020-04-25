@@ -1591,3 +1591,140 @@ global§specular§0.0131250005§0.0§0.15625§0.9937499§1.0
 global§ambient§0.031874996§1.0§0.0§0.97999996§1.0
 global§light§100.0§-7.5§0.0§-10.875
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§260.61246§300.0
+planet§detail§8.000067§10.0
+planet§update§
+planet§color count§7.0009766§200.0
+planet§0§0.79312485§1.0§0.525§1.0§1.0
+planet§1§0.87750036§0.8875§0.4375§1.0§1.0
+planet§2§0.80375004§0.73125§0.8375§1.0§1.0
+planet§3§0.82312536§0.25§1.0§1.0§1.0
+planet§4§0.08437519§0.0§1.0§1.0§1.0
+planet§rotate§100.0§0.0§0.0§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.0§1.0§1.0
+planet§fill§0.56500065§0.6§1.0§1.0§1.0
+planet§no fill§false
+planet§5§0.0§0.0§0.5§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§3.8249996§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§shininess§67.6875§1000.0
+global§specular§0.0131250005§0.0§0.15625§0.9937499§1.0
+global§ambient§0.031874996§1.0§0.0§0.97999996§1.0
+global§light§100.0§-7.5§0.0§-10.875
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§260.61246§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§5.999995§200.0
+planet§0§0.6524998§1.0§0.0§1.0§1.0
+planet§1§0.7056254§0.8875§0.4375§1.0§1.0
+planet§2§0.6712499§0.73125§0.8375§1.0§1.0
+planet§3§0.82312536§0.25§1.0§1.0§1.0
+planet§4§0.08437519§0.0§1.0§1.0§1.0
+planet§rotate§10.0§2.9000046§1.9500031§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.0§1.0§1.0
+planet§fill§0.56500065§0.0§0.0§1.0§1.0
+planet§no fill§false
+planet§5§0.0§0.0§0.5§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§3.8249996§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§shininess§67.6875§1000.0
+global§specular§0.0131250005§0.0§0.15625§0.9937499§1.0
+global§ambient§0.031874996§1.0§0.0§0.97999996§1.0
+global§light§100.0§-7.5§0.0§-10.875
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§260.61246§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§5.999995§200.0
+planet§0§0.6524998§1.0§0.0§1.0§1.0
+planet§1§0.7056254§0.8875§0.4375§1.0§1.0
+planet§2§0.6712499§0.73125§0.8375§1.0§1.0
+planet§3§0.82312536§0.25§1.0§1.0§1.0
+planet§4§0.08437519§0.0§1.0§1.0§1.0
+planet§rotate§10.0§2.9000046§1.9500031§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.0§1.0§1.0
+planet§fill§0.56500065§0.0§0.0§1.0§1.0
+planet§no fill§false
+planet§5§0.0§0.0§0.5§1.0§1.0
+planet§6§0.0§0.0§0.5§1.0§1.0
+GROUP§global§false
+global§fade to black§3.8249996§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§shininess§67.6875§1000.0
+global§specular§0.0131250005§0.0§0.15625§0.9937499§1.0
+global§ambient§0.031874996§1.0§0.0§0.97999996§1.0
+global§light§100.0§-7.5§0.0§-10.875
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§260.61246§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§5.999995§200.0
+planet§0§0.6524998§1.0§0.0§1.0§1.0
+planet§1§0.7056254§0.8875§0.4375§1.0§1.0
+planet§2§0.6712499§0.73125§0.8375§1.0§1.0
+planet§3§0.82312536§0.25§1.0§1.0§1.0
+planet§4§0.08437519§0.0§1.0§1.0§1.0
+planet§rotate§10.0§18.024998§3.3000028§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.0§1.0§1.0
+planet§fill§0.56500065§0.0§0.0§1.0§1.0
+planet§no fill§false
+GROUP§global§false
+global§fade to black§3.8249996§255.0
+global§blur§0.0§10.0
+global§translate§100.0§0.0§0.0§0.0
+global§shininess§67.6875§1000.0
+global§specular§0.0131250005§0.0§0.15625§0.9937499§1.0
+global§ambient§0.031874996§1.0§0.0§0.97999996§1.0
+global§light§100.0§-7.5§0.0§-10.875
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§planet§true
+planet§r§260.61246§300.0
+planet§detail§8.00001§10.0
+planet§update§
+planet§color count§5.999995§200.0
+planet§0§0.6524998§0.0§1.0§1.0§1.0
+planet§1§0.0012504535§0.0§0.0§1.0§1.0
+planet§2§0.5975001§0.825§0.8375§1.0§1.0
+planet§3§0.6687503§0.81875§0.58125§1.0§1.0
+planet§4§0.63750046§1.0§0.0§1.0§1.0
+planet§rotate§100.0§21.575035§4.2250056§0.0
+planet§weight§0.0§10.0
+planet§stroke§0.0§0.0§0.0§1.0§1.0
+planet§fill§0.56500065§0.0§0.0§1.0§1.0
+planet§no fill§false
+GROUP§global§false
+global§fade to black§36.465§255.0
+global§blur§-0.024997711§100.0
+global§disable optimized stroke§true
+global§translate§100.0§0.0§0.0§0.0
+global§shininess§67.6875§1000.0
+global§specular§0.0131250005§0.0§0.15625§0.9937499§1.0
+global§ambient§0.031874996§1.0§0.0§0.97999996§1.0
+global§light§100.0§-7.5§0.0§-10.875
+STATE_END

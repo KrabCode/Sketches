@@ -12,24 +12,11 @@ import java.util.Arrays;
 import static java.lang.System.currentTimeMillis;
 
 /**
- * TODO:
- * - must have:
- * touchscreen slider precision, reset
- * try to set last known undo state to any new element
- * - nice to have:
- * record states with frame stamp before recording in realtime or well controlled slow-mo, then play them back
- * more minimalist animated juice...
- * range picker (2 floats, start and end, end > start)
- * - bugs:
- * first null group's element appears twice, once at the top and once at the bottom
+ * This class offers common functionality to all of my processing sketches, including a GUI, shader reloading at runtime and many other utility functions and features
  */
 
 @SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused"})
 public abstract class KrabApplet extends PApplet {
-
-    private float INTEGER_SLIDER_ROUNDING_LERP_AMT = .05f;
-
-
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
@@ -69,6 +56,7 @@ public abstract class KrabApplet extends PApplet {
     private static final float FLOAT_PRECISION_MINIMUM = .01f;
     private static final float ALPHA_PRECISION_MINIMUM = .005f;
     private static final float ALPHA_PRECISION_MAXIMUM = 10;
+    private static final float INTEGER_SLIDER_ROUNDING_LERP_AMT = .05f;
     private static final float UNDERLINE_TRAY_ANIMATION_DURATION = 10;
     private static final float UNDERLINE_TRAY_ANIMATION_EASING = 3;
     private static final float SLIDER_EDGE_DARKEN_EASING = 3;
@@ -97,6 +85,7 @@ public abstract class KrabApplet extends PApplet {
     private final float previewTrayBoxMargin = cell * .125f;
     private final float previewTrayBoxOffsetY = -cell * .025f;
     private final float minimumTrayWidth = hideButtonWidth + (MENU_BUTTON_COUNT - 1) * menuButtonSize;
+    private final float MAXIMUM_TRAY_WIDTH = cell * 16;
     private final float sliderHeight = cell * 2;
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
@@ -105,20 +94,18 @@ public abstract class KrabApplet extends PApplet {
     protected int frameRecordingStarted = 0;
     protected int frameRecordingDuration = 360; // assuming t += radians(1) per frame for a perfect loop
     protected float timeSpeed = 1;
-    boolean saveAnimationThreadInitialized = false;
-    ArrayList<AnimationFrame> animationQueue = new ArrayList<>();
     private float trayWidthWhenExtended = minimumTrayWidth;
     private float trayWidth = minimumTrayWidth;
-    private ArrayList<ArrayList<String>> undoStack = new ArrayList<ArrayList<String>>();
-    private ArrayList<ArrayList<String>> redoStack = new ArrayList<ArrayList<String>>();
+    private final ArrayList<ArrayList<String>> undoStack = new ArrayList<ArrayList<String>>();
+    private final ArrayList<ArrayList<String>> redoStack = new ArrayList<ArrayList<String>>();
     private boolean captureScreenshot = false;
     private int screenshotsAlreadyCaptured = 0;
-    private ArrayList<Group> groups = new ArrayList<Group>();
+    private final ArrayList<Group> groups = new ArrayList<Group>();
     private Group currentGroup = null; // do not assign to nor read directly!
-    private ArrayList<Key> keyboardKeys = new ArrayList<Key>();
-    private ArrayList<Key> keyboardKeysToRemove = new ArrayList<Key>();
-    private ArrayList<String> actions = new ArrayList<String>();
-    private ArrayList<String> previousActions = new ArrayList<String>();
+    private final ArrayList<Key> keyboardKeys = new ArrayList<Key>();
+    private final ArrayList<Key> keyboardKeysToRemove = new ArrayList<Key>();
+    private final ArrayList<String> actions = new ArrayList<String>();
+    private final ArrayList<String> previousActions = new ArrayList<String>();
     private boolean pMousePressed = false;
     private int keyboardSelectionIndex = MENU_BUTTON_COUNT;
     private boolean keyboardActive = true;
@@ -137,18 +124,16 @@ public abstract class KrabApplet extends PApplet {
     private float saveAnimationStarted = -MENU_ROTATION_DURATION;
     private int undoHoldDuration = 0;
     private int redoHoldDuration = 0;
-    private int menuButtonHoldThreshold = 60;
+    private final int menuButtonHoldThreshold = 60;
     private float trayScrollOffset = 0;
-    private ArrayList<Float> scrollOffsetHistory = new ArrayList<Float>();
-
-    // INTERFACE
+    private final ArrayList<Float> scrollOffsetHistory = new ArrayList<Float>();
     private ArrayList<ShaderSnapshot> snapshots = new ArrayList<ShaderSnapshot>();
     private int shaderRefreshRateInMillis = 36;
-
-
     private PMatrix3D mouseRotation = new PMatrix3D();
     private PMatrix3D sliderRotationMatrix = new PMatrix3D();
     private PVector previousSliderRotation = new PVector();
+
+    // PUBLIC GUI INTERFACE
 
     protected int sliderInt() {
         return floor(sliderInt("x"));
@@ -378,7 +363,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateScrolling() {
-        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height)) || trayLocked) {
+        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height))) {
             return;
         }
         scrollOffsetHistory.add(trayScrollOffset);
@@ -485,7 +470,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void translateToCenter(PGraphics pg) {
-        pg.translate(pg.width*.5f, pg.height*.5f);
+        pg.translate(pg.width * .5f, pg.height * .5f);
     }
 
     protected void translate(PGraphics pg) {
@@ -505,8 +490,8 @@ public abstract class KrabApplet extends PApplet {
             sliderRotationMatrix.reset();
         }
         PMatrix3D temp = new PMatrix3D();
-        temp.rotateX(delta.x);
-        temp.rotateY(delta.y);
+        temp.rotateX(delta.y);
+        temp.rotateY(-delta.x);
         temp.rotateZ(delta.z);
         sliderRotationMatrix.preApply(temp);
         pg.applyMatrix(sliderRotationMatrix);
@@ -544,14 +529,9 @@ public abstract class KrabApplet extends PApplet {
         }
         int frameRecordingEnd = frameRecordingStarted + frameRecordingDuration + 1;
         if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
-            if (!saveAnimationThreadInitialized) {
-//                thread("saveAnimationBackgroundThread");
-                saveAnimationThreadInitialized = true;
-            }
             int frameNumber = frameCount - frameRecordingStarted + 1;
             println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted - 1, "saved");
             PImage currentSketch = pg.get();
-//            animationQueue.add(new AnimationFrame(currentSketch, frameNumber));
             pg.save(captureDir + frameNumber + ".jpg");
             if (frameCount == frameRecordingEnd - 1) {
                 println("capture ended, running ffmpeg, please wait...");
@@ -563,22 +543,6 @@ public abstract class KrabApplet extends PApplet {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-        }
-    }
-
-    public void saveAnimationBackgroundThread() {
-        while (true) {
-            if (animationQueue.size() > 0) {
-                AnimationFrame frame = animationQueue.remove(0);
-                frame.img.save(captureDir + frame.frameNumber + ".jpg");
-                if (animationQueue.size() == 0) {
-                    println("images saved");
-                    saveAnimationThreadInitialized = false;
-                    break;
-                }
-            } else {
-                delay(500);
             }
         }
     }
@@ -712,7 +676,7 @@ public abstract class KrabApplet extends PApplet {
     protected ArrayList<PShape> shapes(int count, int shapeType) {
         ArrayList<PShape> pointArrays = new ArrayList<>();
         int maxPshapePop = 100000;
-        int pshapesNeeded = count / maxPshapePop;
+        int pshapesNeeded = ceil(count / (float) maxPshapePop);
         int pointIndex = 0;
         for (int shapeIndex = 0; shapeIndex < pshapesNeeded; shapeIndex++) {
             PShape pointArray = createShape();
@@ -1032,7 +996,7 @@ public abstract class KrabApplet extends PApplet {
             return;
         }
         textSize(textSize);
-        trayWidthWhenExtended = max(minimumTrayWidth, findLongestNameWidth() + cell * 2);
+        trayWidthWhenExtended = constrain(findLongestNameWidth() + cell * 2, minimumTrayWidth, MAXIMUM_TRAY_WIDTH);
         noStroke();
         fill(0, BACKGROUND_ALPHA);
         rectMode(CORNER);
@@ -1644,7 +1608,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void uniformColorPalette(String fragPath, String vertPath) {
-        int colorCount = sliderInt("color count", 10);
+        int colorCount = sliderInt("color count", 5);
         for (int i = 0; i < colorCount; i++) {
             HSBA color = picker(i + "");
             if (vertPath != null) {
@@ -2042,16 +2006,6 @@ public abstract class KrabApplet extends PApplet {
 
     private float sinh(float n) {
         return (float) Math.sinh(n);
-    }
-
-    class AnimationFrame {
-        int frameNumber;
-        PImage img;
-
-        AnimationFrame(PImage currentSketch, int frameCount) {
-            img = currentSketch;
-            frameNumber = frameCount;
-        }
     }
 
     private class ShaderSnapshot {
@@ -2506,10 +2460,10 @@ public abstract class KrabApplet extends PApplet {
 
         void updateTrayLock() {
             boolean isThisBeingUsed = overlayOwner.equals(this) && mousePressed && pMousePressed;
-            if(isThisBeingUsed) {
+            if (isThisBeingUsed) {
                 trayLocked = true;
             }
-            if(trayLocked && !isThisBeingUsed) {
+            if (!mousePressed) {
                 trayLocked = false;
             }
         }
@@ -3305,7 +3259,7 @@ public abstract class KrabApplet extends PApplet {
 
             displayHueSlider(sliderHeight, revealAnimation);
             float hueDelta = updateInfiniteSlider(huePrecision, width, true, false, false);
-            if (!satChanged && !brChanged && (keyboardActive || !isMouseInTopHalf)) {
+            if (!satChanged && !brChanged) {
                 hsba.hue += hueDelta;
             }
             satChanged = false;

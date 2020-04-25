@@ -1,0 +1,146 @@
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.99625045§1.0
+WaterRipple§r§51.775§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9980003§0.1
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9980003§0.1
+WaterRipple§frame skip§3.9986331§10.0
+WaterRipple§rain radius§1.9874992§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§1.0§0.29375§1.0§1.0
+WaterRipple§2§0.60812616§0.51875§0.58125§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§1.0§1.0§1.0
+WaterRipple§4§0.0325§0.7§0.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9980003§0.1
+WaterRipple§frame skip§1.0013484§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§4.0§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§1.0§0.29375§1.0§1.0
+WaterRipple§2§0.60812616§0.51875§0.58125§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§1.0§1.0§1.0
+WaterRipple§4§0.0325§0.7§0.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.99971104§0.010000001
+WaterRipple§frame skip§1.0013484§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§4.0§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§1.0§0.29375§1.0§1.0
+WaterRipple§2§0.60812616§0.35625§1.0§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§0.45§1.0§1.0
+WaterRipple§4§0.0325§0.0§0.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.99971104§0.010000001
+WaterRipple§frame skip§1.0013484§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§4.0§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§1.0§0.29375§1.0§1.0
+WaterRipple§2§0.60812616§0.35625§1.0§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§0.45§1.0§1.0
+WaterRipple§4§0.0325§0.0§0.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§1.0000036§0.001
+WaterRipple§frame skip§1.0013484§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§4.0§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§1.0§0.29375§1.0§1.0
+WaterRipple§2§0.60812616§0.35625§1.0§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§0.45§1.0§1.0
+WaterRipple§4§0.0325§0.0§0.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9940182§0.10000001
+WaterRipple§frame skip§1.0013484§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§4.0§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§0.775§0.68125§1.0§1.0
+WaterRipple§2§0.60812616§0.4875§0.7875§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§0.88125§1.0§1.0
+WaterRipple§4§0.0325§0.0§1.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9940182§0.10000001
+WaterRipple§frame skip§1.0013484§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§4.0§100.0
+WaterRipple§color count§5.9999547§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.69062465§0.775§0.68125§1.0§1.0
+WaterRipple§2§0.60812616§0.4875§0.7875§1.0§1.0
+WaterRipple§3§0.6418747§0.38125§0.88125§1.0§1.0
+WaterRipple§4§0.0325§0.0§1.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9940182§0.10000001
+WaterRipple§frame skip§1.0000012§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§7.125§100.0
+WaterRipple§color count§5.999995§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.61687464§0.85§0.28125§1.0§1.0
+WaterRipple§2§0.60812616§0.66875§0.625§1.0§1.0
+WaterRipple§3§0.6418747§0.325§0.8§1.0§1.0
+WaterRipple§4§0.0325§0.0§1.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§WaterRipple§true
+WaterRipple§damp§0.9940182§0.10000001
+WaterRipple§frame skip§1.0000012§10.0
+WaterRipple§rain min r§0.0§10.0
+WaterRipple§rain max r§7.125§100.0
+WaterRipple§color count§5.999995§100.0
+WaterRipple§0§0.0§0.0§0.0§1.0§1.0
+WaterRipple§1§0.61687464§0.85§0.28125§1.0§1.0
+WaterRipple§2§0.60812616§0.66875§0.8625§1.0§1.0
+WaterRipple§3§0.97312456§1.0§0.725§1.0§1.0
+WaterRipple§4§0.121874906§1.0§1.0§1.0§1.0
+WaterRipple§r§30.0§20.0
+STATE_END

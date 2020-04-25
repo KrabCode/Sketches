@@ -1,0 +1,12 @@
+STATE_BEGIN
+UNDO
+GROUP§ParticlePositionTextures§true
+ParticlePositionTextures§translate§100.0§0.0§0.0§0.0
+ParticlePositionTextures§weight§20.175009§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ParticlePositionTextures§true
+ParticlePositionTextures§translate§100.0§0.0§0.0§0.0
+ParticlePositionTextures§weight§4.400009§10.0
+STATE_END

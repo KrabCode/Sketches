@@ -16,13 +16,13 @@ public class Instancing_2 extends KrabApplet {
     }
 
     public void settings() {
-        size(800, 800, P3D);
+        size(1000,1000, P3D);
 //        fullScreen(P3D);
     }
 
     public void setup() {
         pg = createGraphics(width, height, P3D);
-        pg.smooth(16);
+        pg.smooth(8);
         surface.setAlwaysOnTop(true);
         pointArrays = shapes(pointCount, POINTS);
     }
@@ -38,12 +38,10 @@ public class Instancing_2 extends KrabApplet {
         pg.hint(DISABLE_OPTIMIZED_STROKE);
         updateShader();
         for(PShape shape : pointArrays) {
-            shape.setStroke(picker("stroke").clr());
             float weight = slider("weight", 1);
             shape.setStrokeWeight(max(weight, .1f));
             pg.shape(shape);
         }
-//        gaussBlurPass(pg);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
@@ -55,6 +53,7 @@ public class Instancing_2 extends KrabApplet {
         String vert = "/shaders/_2020_04/instancing_2/PointVert.glsl";
         uniform(frag, vert).set("time", t);
         uniform(frag, vert).set("count", pointCount);
+        uniformColorPalette(frag, vert);
         hotShader(frag, vert, pg);
     }
 }

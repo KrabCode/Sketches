@@ -1,10 +1,7 @@
 package _2020_04;
 
 import applet.KrabApplet;
-import processing.core.PGraphics;
-import processing.core.PMatrix3D;
-import processing.core.PShape;
-import processing.core.PVector;
+import processing.core.*;
 import utils.OpenSimplexNoise;
 
 public class TriangleSphere extends KrabApplet {
@@ -27,11 +24,11 @@ public class TriangleSphere extends KrabApplet {
 
     public void setup() {
         pg = createGraphics(width, height, P3D);
-        pg.smooth(16);
+        pg.smooth(8);
         surface.setAlwaysOnTop(true);
         group("planet");
         updatePlanet();
-        frameRecordingDuration *= 4;
+        frameRecordingDuration *= 2;
     }
 
     public void draw() {
@@ -39,6 +36,9 @@ public class TriangleSphere extends KrabApplet {
         group("global");
         fadeToBlack(pg);
         blurPass(pg);
+        if(toggle("disable optimized stroke")) {
+            pg.hint(PConstants.DISABLE_OPTIMIZED_STROKE);
+        }
         pg.translate(width * .5f, height * .5f);
         pg.translate(sliderXYZ("translate").x, sliderXYZ("translate").y, sliderXYZ("translate").z);
         pg.colorMode(HSB,1,1,1,1);
@@ -49,13 +49,7 @@ public class TriangleSphere extends KrabApplet {
         pg.directionalLight(1,0,1, sliderXYZ("light").x, sliderXYZ("light").y, sliderXYZ("light").z);
         group("planet");
         updateShader();
-        mouseRotation(pg);
-        PVector timeRotation = sliderXYZ("rotate");
-        PMatrix3D temp = new PMatrix3D();
-        temp.rotateX(timeRotation.x * t);
-        temp.rotateY(timeRotation.y * t);
-        temp.rotateZ(timeRotation.z * t);
-        pg.applyMatrix(temp);
+        rotate(pg);
         planet.setStrokeWeight(slider("weight", 1));
         planet.setStroke(picker("stroke").clr());
         planet.setFill(picker("fill").clr());
@@ -81,6 +75,7 @@ public class TriangleSphere extends KrabApplet {
         String vert = "shaders/_2020_04/PhongVert.glsl";
         String frag = "shaders/_2020_04/PhongFrag.glsl";
         uniform(frag, vert).set("time", t);
+        uniformColorPalette(frag, vert);
         hotShader(frag, vert, pg);
     }
 

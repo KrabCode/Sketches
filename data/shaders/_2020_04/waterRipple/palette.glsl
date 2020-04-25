@@ -1,3 +1,4 @@
+
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float time;
@@ -32,7 +33,7 @@ vec4 getColor(float pct){
     int previousColorIndex = int(floor(colorPct));
     float lerpToNextColor = fract(colorPct);
     vec4[] colors = vec4[](
-        hsba_0, hsba_1, hsba_2, hsba_3, hsba_4, hsba_5, hsba_6, hsba_7, hsba_8, hsba_9);
+    hsba_0, hsba_1, hsba_2, hsba_3, hsba_4, hsba_5, hsba_6, hsba_7, hsba_8, hsba_9);
     vec4 prevColor = colors[previousColorIndex];
     vec4 nextColor = colors[previousColorIndex+1];
     prevColor.rgb = rgb(prevColor.rgb);
@@ -40,10 +41,8 @@ vec4 getColor(float pct){
     return mix(prevColor, nextColor, lerpToNextColor);
 }
 
-
-
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-    vec4 col = getColor(1.-uv.y);
-    gl_FragColor = col;
+    float pct = texture(texture, uv).r;
+    gl_FragColor = getColor(pct);
 }
