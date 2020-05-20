@@ -120,7 +120,7 @@ public class Smoke extends KrabApplet {
         float x = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 4; j++) {
-                float rotationOffset = randomDeterministic(i * 20 + j * 40) * TAU * 2;
+                float rotationOffset = hash(i * 20 + j * 40) * TAU * 2;
                 PVector pos = smallWheelPos.copy();
                 pos.x += x;
                 if (j % 2 == 0) {
@@ -147,7 +147,7 @@ public class Smoke extends KrabApplet {
         for (int i = 0; i < 3; i++) {
             PVector pos = wheelPos0.copy();
             pos.x += i * wheelOffset;
-            float rotationOffset = randomDeterministic(i * 20) * TAU * 2;
+            float rotationOffset = hash(i * 20) * TAU * 2;
             pg.pushMatrix();
             pg.imageMode(CENTER);
             pg.translate(pos.x, pos.y);

@@ -1,7 +1,6 @@
 package _2020_05;
 
 import applet.KrabApplet;
-import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PVector;
 import utils.OpenSimplexNoise;
@@ -11,14 +10,15 @@ import java.util.ArrayList;
 public class Points extends KrabApplet {
     private PGraphics pg;
     OpenSimplexNoise noiseGenerator = new OpenSimplexNoise();
-    ArrayList<ArrayList<PVector>> histories = new ArrayList<>();
+    ArrayList<ArrayList<PVector>> trails = new ArrayList<>();
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
     public void settings() {
-        size(1000, 1000, P3D);
+//        size(1000, 1000, P3D);
+        fullScreen(P3D);
     }
 
     public void setup() {
@@ -39,40 +39,40 @@ public class Points extends KrabApplet {
         fadeToBlack(pg);
         blurPass(pg);
         translateToCenter(pg);
-        updatePoints();
+        updateTrails();
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
         gui();
     }
 
-    private void updatePoints() {
+    private void updateTrails() {
         float seedRange = slider("seed range");
-        int spawnCount = max(0, sliderInt("spawns", 10));
-        updateHistoriesSize(spawnCount);
+        int trailCount = max(0, sliderInt("trails", 10));
+        updateTrailCount(trailCount);
         float timeRadius = slider("time radius");
         float timeX = timeRadius * cos(t*.5f);
         float timeY = timeRadius * sin(t*.5f);
-        for (int spawnIndex = 0; spawnIndex < spawnCount; spawnIndex++) {
-            float spawnSeed = randomDeterministic(spawnIndex) * slider("seed multiplier");
-            float x = (float) (seedRange * (-1 + 2 * noiseGenerator.eval(timeX, timeY, spawnSeed)));
-            float y = (float) (seedRange * (-1 + 2 * noiseGenerator.eval(timeX, timeY, 180 + spawnSeed)));
-            updateSpawnHistory(spawnIndex, x, y);
+        for (int trailIndex = 0; trailIndex < trailCount; trailIndex++) {
+            float trailSeed = hash(trailIndex) * slider("seed multiplier");
+            float x = (float) (seedRange * (-1 + 2 * noiseGenerator.eval(timeX, timeY, trailSeed)));
+            float y = (float) (seedRange * (-1 + 2 * noiseGenerator.eval(timeX, timeY, 180 + trailSeed)));
+            updateTrail(trailIndex, x, y);
         }
     }
 
-    private void updateHistoriesSize(int spawnCount) {
-        while (histories.size() < spawnCount) {
-            histories.add(new ArrayList<>());
+    private void updateTrailCount(int trailCount) {
+        while (trails.size() < trailCount) {
+            trails.add(new ArrayList<>());
         }
-        while (histories.size() > spawnCount) {
-            histories.remove(histories.size() - 1);
+        while (trails.size() > trailCount) {
+            trails.remove(trails.size() - 1);
         }
     }
 
-    private void updateSpawnHistory(int spawnIndex, float x, float y) {
+    private void updateTrail(int trailIndex, float x, float y) {
         int maxHistorySize = sliderInt("history size", 10);
-        ArrayList<PVector> history = histories.get(spawnIndex);
+        ArrayList<PVector> history = trails.get(trailIndex);
         if (history.size() > maxHistorySize) {
             history.remove(0);
         }
@@ -83,24 +83,24 @@ public class Points extends KrabApplet {
         for (int i = 0; i < mirrorCount; i++) {
             pg.pushMatrix();
             pg.rotate(map(i, 0, mirrorCount, 0, TAU));
-            drawHistory(spawnIndex, history);
+            drawTrail(trailIndex, history);
             pg.point(x, y);
             pg.popMatrix();
         }
     }
 
-    private void drawHistory(int spawnIndex, ArrayList<PVector> history) {
+    private void drawTrail(int particleIndex, ArrayList<PVector> history) {
         HSBA base = picker("stroke");
         pg.noFill();
         pg.beginShape();
-        float hue = hueModulo(base.hue() + slider("hue range") * randomDeterministic(30 * spawnIndex + 8.1218f));
-        float sat = base.sat() + slider("sat range") * randomDeterministic(30 * spawnIndex + 18.154f);
-        float br = base.br() + slider("br range") * randomDeterministic(30 * spawnIndex + 28.648f);
+        float hue = hueModulo(base.hue() + slider("hue range") * hash(30 * particleIndex + 8.1218f));
+        float sat = base.sat() + slider("sat range") * hash(30 * particleIndex + 18.154f);
+        float br = base.br() + slider("br range") * hash(30 * particleIndex + 28.648f);
         for (int i = 0; i < history.size(); i++) {
             PVector p = history.get(i);
             float iNorm = norm(i, 0, history.size() - 1);
             float varyingSaturation = sat * (1 - iNorm) + slider("const sat");
-            pg.strokeWeight(slider("norm weight") * iNorm + slider("min weight"));
+            pg.strokeWeight(slider("const weight") + slider("norm weight") * iNorm);
             pg.stroke(hue, constrain(varyingSaturation, 0, 1), constrain(br, 0, 1));
             pg.vertex(p.x, p.y);
         }

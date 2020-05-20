@@ -65,7 +65,7 @@ public class Handdrawn extends KrabApplet {
             float maxRadius = slider("maxRadius", 400);
             float r = lerp(minRadius, maxRadius, levelNorm);
             float rNorm = norm(r,minRadius,maxRadius);
-            float random = randomDeterministic(level);
+            float random = hash(level);
             float timeSpeed = slider("time speed");
             float rNoiseInput = r * slider("r noise freq");
             float noiseValue = (float) (.5f+.5*noise.eval(

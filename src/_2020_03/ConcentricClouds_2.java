@@ -85,8 +85,8 @@ public class ConcentricClouds_2 extends KrabApplet {
             pg.push();
             float myScale = lerp(minScale, maxScale, (inorm+t*slider("fly speed"))%1);
             pg.scale(myScale);
-            pg.rotate(2*TAU*randomDeterministic(i*3)+rotation);
-            pg.image(imagesToConsider.get(floor(randomDeterministic(i) * imagesToConsider.size())), 0, 0);
+            pg.rotate(2*TAU* hash(i*3)+rotation);
+            pg.image(imagesToConsider.get(floor(hash(i) * imagesToConsider.size())), 0, 0);
             pg.pop();
         }
 

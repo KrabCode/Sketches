@@ -558,7 +558,7 @@ public abstract class KrabApplet extends PApplet {
         return newId;
     }
 
-    protected float randomDeterministic(float seed) {
+    protected float hash(float seed) {
         return abs(sin(seed * 323.121f) * 454.123f) % 1;
     }
 
