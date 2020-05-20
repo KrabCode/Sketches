@@ -438,3 +438,129 @@ Points§const sat§0.30000025§10.0
 Points§norm weight§2.5999923§10.0
 Points§min weight§1.0125§10.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§1
+Points§fade to black§5.5583262§25.5
+Points§blur§1.001745§1.0
+Points§range§221.05469§1000.0
+Points§trails§100.001434§200.0
+Points§time radius§0.20975035§0.1
+Points§seed multiplier§3.6357422§10.0
+Points§history size§10.9951105§200.0
+Points§history skips§5.0081406§100.0
+Points§mirrors§20.992346§100.0
+Points§stroke§0.6711565§1.0§1.0§1.0§10.0
+Points§hue range§0.54007745§1.0000001
+Points§sat range§-1.140625§10.0
+Points§br range§-0.2578125§10.0
+Points§const sat§0.3937502§10.0
+Points§const weight§1.1992188§10.0
+Points§norm weight§7.3617115§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§1
+Points§fade to black§5.5583262§25.5
+Points§blur§1.0005728§1.0
+Points§range§221.05469§1000.0
+Points§trails§100.001434§200.0
+Points§time radius§0.20975035§0.1
+Points§seed multiplier§2.9052734§10.0
+Points§history size§10.9951105§200.0
+Points§history skips§5.0081406§100.0
+Points§mirrors§20.998793§100.0
+Points§stroke§0.6711565§1.0§1.0§1.0§10.0
+Points§hue range§0.48070273§1.0000001
+Points§sat range§-0.8828125§10.0
+Points§br range§-0.2578125§10.0
+Points§const sat§0.3937502§10.0
+Points§const weight§1.1992188§10.0
+Points§norm weight§7.3617115§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§7.7995377§25.5
+Points§blur§0.39996082§0.1
+Points§range§164.80469§1000.0
+Points§trails§180.00078§200.0
+Points§time radius§0.378227§10.0
+Points§seed multiplier§7.151367§100.0
+Points§history size§10.00449§200.0
+Points§history skips§2.0119393§100.0
+Points§mirrors§20.011143§100.0
+Points§stroke§0.66236746§1.0§0.15§1.0§10.0
+Points§hue range§0.0111715095§1.0000001
+Points§sat range§-0.8828125§10.0
+Points§br range§-0.1796875§10.0
+Points§const sat§0.52265644§10.0
+Points§const weight§1.1992188§10.0
+Points§norm weight§7.3617115§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§7.7995377§25.5
+Points§blur§0.39996082§0.1
+Points§range§164.80469§1000.0
+Points§trails§180.00078§200.0
+Points§time radius§0.378227§10.0
+Points§seed multiplier§7.151367§100.0
+Points§history size§10.00449§200.0
+Points§history skips§2.0119393§100.0
+Points§mirrors§20.011143§100.0
+Points§stroke§0.07037511§1.0§0.15§1.0§10.0
+Points§hue range§0.04984343§1.0000001
+Points§sat range§-0.8828125§10.0
+Points§br range§-0.1796875§10.0
+Points§const sat§0.52265644§10.0
+Points§const weight§1.1992188§10.0
+Points§norm weight§7.3617115§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§7.7995377§25.5
+Points§blur§0.39996082§0.1
+Points§range§164.80469§1000.0
+Points§trails§180.00078§200.0
+Points§time radius§0.378227§10.0
+Points§seed multiplier§7.151367§100.0
+Points§history size§10.00449§200.0
+Points§history skips§2.0119393§100.0
+Points§mirrors§20.011143§100.0
+Points§stroke§0.86705506§1.0§0.15§1.0§10.0
+Points§hue range§0.04984343§1.0000001
+Points§sat range§-0.8828125§10.0
+Points§br range§-0.1796875§10.0
+Points§const sat§0.52265644§10.0
+Points§const weight§1.1992188§10.0
+Points§norm weight§7.3617115§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§7.7995377§25.5
+Points§blur§0.39996082§0.1
+Points§range§164.80469§1000.0
+Points§trails§140.00015§200.0
+Points§time radius§0.1985395§10.0
+Points§seed multiplier§8.44043§100.0
+Points§history size§10.00449§200.0
+Points§history skips§2.0119393§100.0
+Points§mirrors§20.011143§100.0
+Points§stroke§0.72115666§1.0§0.15§1.0§10.0
+Points§hue range§0.04984343§1.0000001
+Points§sat range§-0.8828125§10.0
+Points§br range§-0.1796875§10.0
+Points§const sat§0.52265644§10.0
+Points§const weight§1.1992188§10.0
+Points§norm weight§7.3617115§100.0
+STATE_END

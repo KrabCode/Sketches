@@ -23,7 +23,7 @@ public class Points extends KrabApplet {
 
     public void setup() {
         pg = createGraphics(width, height, P3D);
-        surface.setAlwaysOnTop(true);
+//        surface.setAlwaysOnTop(true);
         frameRecordingDuration *= 2;
     }
 
@@ -47,7 +47,7 @@ public class Points extends KrabApplet {
     }
 
     private void updateTrails() {
-        float seedRange = slider("seed range");
+        float range = slider("range");
         int trailCount = max(0, sliderInt("trails", 10));
         updateTrailCount(trailCount);
         float timeRadius = slider("time radius");
@@ -55,9 +55,9 @@ public class Points extends KrabApplet {
         float timeY = timeRadius * sin(t*.5f);
         for (int trailIndex = 0; trailIndex < trailCount; trailIndex++) {
             float trailSeed = hash(trailIndex) * slider("seed multiplier");
-            float x = (float) (seedRange * (-1 + 2 * noiseGenerator.eval(timeX, timeY, trailSeed)));
-            float y = (float) (seedRange * (-1 + 2 * noiseGenerator.eval(timeX, timeY, 180 + trailSeed)));
-            updateTrail(trailIndex, x, y);
+            float x = (float) (range * (-1 + 2 * noiseGenerator.eval(timeX, timeY, trailSeed)));
+            float y = (float) (range * (-1 + 2 * noiseGenerator.eval(timeX, timeY, 180 + trailSeed)));
+            updateTrail(trailIndex,trailSeed, x, y);
         }
     }
 
@@ -70,7 +70,7 @@ public class Points extends KrabApplet {
         }
     }
 
-    private void updateTrail(int trailIndex, float x, float y) {
+    private void updateTrail(int trailIndex, float trailSeed, float x, float y) {
         int maxHistorySize = sliderInt("history size", 10);
         ArrayList<PVector> history = trails.get(trailIndex);
         if (history.size() > maxHistorySize) {
@@ -83,17 +83,17 @@ public class Points extends KrabApplet {
         for (int i = 0; i < mirrorCount; i++) {
             pg.pushMatrix();
             pg.rotate(map(i, 0, mirrorCount, 0, TAU));
-            drawTrail(trailIndex, history);
+            drawTrail(trailIndex, trailSeed, history);
             pg.point(x, y);
             pg.popMatrix();
         }
     }
 
-    private void drawTrail(int particleIndex, ArrayList<PVector> history) {
+    private void drawTrail(int particleIndex, float trailSeed, ArrayList<PVector> history) {
         HSBA base = picker("stroke");
         pg.noFill();
         pg.beginShape();
-        float hue = hueModulo(base.hue() + slider("hue range") * hash(30 * particleIndex + 8.1218f));
+        float hue = hueModulo(base.hue() + slider("hue range") * trailSeed);
         float sat = base.sat() + slider("sat range") * hash(30 * particleIndex + 18.154f);
         float br = base.br() + slider("br range") * hash(30 * particleIndex + 28.648f);
         for (int i = 0; i < history.size(); i++) {
