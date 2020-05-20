@@ -20,16 +20,17 @@ public class GuiExample extends KrabApplet {
         if (button("hello world")) {
             println("Hello, world!");
         }
-        group("style");
-        background(picker("background").clr());
+
         group("transform");
         PVector translate = sliderXYZ("translate");
-        translate(width / 2f + translate.x, height / 2f + translate.y, translate.z);
         PVector rotate = sliderXYZ("rotate");
+        translate(width / 2f + translate.x, height / 2f + translate.y, translate.z);
         rotateX(rotate.x);
         rotateY(rotate.y);
         rotateZ(rotate.z);
+
         group("style");
+        background(picker("background").clr());
         String style = options("stroke & fill", "no stroke", "no fill");
         fill(picker("fill").clr());
         stroke(picker("stroke").clr());
@@ -41,6 +42,7 @@ public class GuiExample extends KrabApplet {
         }
         PVector size = sliderXYZ("size", 300);
         box(size.x, size.y, size.z);
+
         gui();
         rec();
     }
