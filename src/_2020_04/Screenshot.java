@@ -15,8 +15,8 @@ public class Screenshot extends KrabApplet {
     }
 
     public void settings() {
-        float scale = .9f;
-        size(floor(1920*scale), floor(1080*.9f), P2D);
+        float scale = .95f;
+        size(floor(displayWidth*scale), floor(displayHeight*scale), P2D);
     }
 
     public void setup() {
@@ -42,6 +42,6 @@ public class Screenshot extends KrabApplet {
     }
 
     PImage screenshot(){
-        return new PImage(robot.createScreenCapture(new Rectangle(1920, 1080)));
+        return new PImage(robot.createScreenCapture(new Rectangle(displayWidth,displayHeight)));
     }
 }

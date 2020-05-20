@@ -50,3 +50,370 @@ Points§count§100.0§300.0
 Points§buffer§21.400002§200.0
 Points§detail§300.9964§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.25000054§10.0
+Points§seed range§452.75§1000.0
+Points§spawns§1000.0041§2000.0
+Points§seed multiplier§808.8§1000.0
+Points§history size§10.0§200.0
+Points§weight§1.7999989§10.0
+Points§stroke§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.25000054§10.0
+Points§seed range§452.75§1000.0
+Points§spawns§1000.0006§2000.0
+Points§seed multiplier§808.8§1000.0
+Points§history size§10.0§200.0
+Points§stroke§0.0§0.0§1.0§1.0§1.0
+Points§norm weight§4.998767§1.0
+Points§min weight§1.4987512§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.24625063§1.0
+Points§seed range§410.25§1000.0
+Points§spawns§60.00004§2000.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§50.00004§200.0
+Points§stroke§0.0§0.0§1.0§1.0§1.0
+Points§norm weight§4.998767§1.0
+Points§min weight§1.4987512§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.24625063§1.0
+Points§seed range§410.25§1000.0
+Points§spawns§60.00004§2000.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§50.00004§200.0
+Points§stroke§0.6899996§1.0§1.0§1.0§1.0
+Points§norm weight§4.998767§1.0
+Points§min weight§1.4987512§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.24625063§1.0
+Points§seed range§410.25§1000.0
+Points§spawns§60.00004§2000.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§50.00004§200.0
+Points§stroke§0.6899996§1.0§1.0§1.0§1.0
+Points§norm weight§4.998767§1.0
+Points§min weight§1.4987512§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.24625063§1.0
+Points§seed range§410.25§1000.0
+Points§spawns§60.00004§2000.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§50.00004§200.0
+Points§stroke§0.6899996§1.0§1.0§1.0§1.0
+Points§norm weight§4.998767§1.0
+Points§min weight§1.4987512§1.0
+Points§sat ease§0.38750234§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.11750068§1.0
+Points§seed range§350.25§1000.0
+Points§spawns§34.005142§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§100.976006§200.0
+Points§mirrors§6.000005§100.0
+Points§stroke§0.0037496565§1.0§1.0§1.0§1.0
+Points§norm weight§5.0§10.0
+Points§min weight§1.5012488§1.0
+Points§const sat§0.46250027§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.11750068§1.0
+Points§seed range§350.25§1000.0
+Points§spawns§34.005142§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§100.976006§200.0
+Points§mirrors§6.000005§100.0
+Points§stroke§0.0§0.0§0.5§1.0§1.0
+Points§hue range§0.0§10.0
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.0§10.0
+Points§norm weight§3.8375003§10.0
+Points§min weight§0.975§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§speed§0.036250714§1.0
+Points§seed range§391.5§1000.0
+Points§spawns§100.0384§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§40.999912§200.0
+Points§mirrors§6.920665§100.0
+Points§stroke§0.6237501§1.0§1.0§1.0§1.0
+Points§hue range§0.5000007§0.001
+Points§sat range§-0.4962503§1.0
+Points§br range§-2.849847E-7§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.3999987§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade to black§1.0049258§2.55
+Points§blur§0.94374436§1.0
+Points§speed§0.036250714§1.0
+Points§seed range§524.0§1000.0
+Points§spawns§35.98964§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§30.99998§200.0
+Points§mirrors§16.000444§100.0
+Points§stroke§0.6237501§1.0§1.0§1.0§1.0
+Points§hue range§0.40331274§1.0000001
+Points§sat range§-0.72750026§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.3999987§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade to black§1.0049258§2.55
+Points§blur§0.94374436§1.0
+Points§speed§0.036250714§1.0
+Points§seed range§524.0§1000.0
+Points§spawns§35.98964§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§10.00001§200.0
+Points§mirrors§16.000444§100.0
+Points§stroke§0.6237501§1.0§1.0§1.0§1.0
+Points§hue range§0.40331274§1.0000001
+Points§sat range§-0.72750026§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.3999987§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§fade to black§1.0049258§2.55
+Points§blur§0.94374436§1.0
+Points§speed§0.036250714§1.0
+Points§seed range§524.0§1000.0
+Points§spawns§35.98964§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§20.000053§200.0
+Points§history skips§3.9999948§100.0
+Points§mirrors§16.00002§100.0
+Points§stroke§0.6237501§1.0§1.0§1.0§1.0
+Points§hue range§0.40331274§1.0000001
+Points§sat range§-0.72750026§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.3999987§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§1.881493§25.5
+Points§blur§0.8874941§1.0
+Points§speed§0.036250714§1.0
+Points§seed range§524.0§1000.0
+Points§spawns§35.98964§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§20.000053§200.0
+Points§history skips§3.9999948§100.0
+Points§mirrors§16.00002§100.0
+Points§stroke§0.6237501§1.0§0.05625§1.0§1.0
+Points§hue range§0.40331274§1.0000001
+Points§sat range§-0.72750026§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.3999987§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§3.4975574§2.55
+Points§blur§0.8874941§1.0
+Points§speed§0.10250072§1.0
+Points§seed range§524.0§1000.0
+Points§spawns§50.00004§200.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§20.000053§200.0
+Points§history skips§3.9999976§100.0
+Points§mirrors§14.99999§100.0
+Points§stroke§0.6756251§1.0§0.0375§1.0§1.0
+Points§hue range§0.3820626§1.0000001
+Points§sat range§-0.72750026§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§4.001184§2.55
+Points§blur§1.0012459§1.0
+Points§seed range§524.0§1000.0
+Points§spawns§80.99992§200.0
+Points§time radius§0.11125019§1.0
+Points§seed multiplier§3351.3§10000.0
+Points§history size§20.000053§200.0
+Points§history skips§3.9999976§100.0
+Points§mirrors§14.99999§100.0
+Points§stroke§0.6756251§1.0§0.0375§1.0§1.0
+Points§hue range§0.4370626§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§4.001184§2.55
+Points§blur§1.0012459§1.0
+Points§seed range§932.75§10000.0
+Points§spawns§60.00004§200.0
+Points§time radius§0.11125019§1.0
+Points§seed multiplier§4888.8§10000.0
+Points§history size§15.00001§200.0
+Points§history skips§3.999409§100.0
+Points§mirrors§14.00001§100.0
+Points§stroke§0.6756251§1.0§0.075§1.0§1.0
+Points§hue range§0.39956263§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§3.0003085§2.55
+Points§blur§1.0012459§1.0
+Points§seed range§120.25§10000.0
+Points§spawns§60.00004§200.0
+Points§time radius§0.11125019§1.0
+Points§seed multiplier§4888.8§10000.0
+Points§history size§15.00001§200.0
+Points§history skips§3.999409§100.0
+Points§mirrors§14.00001§100.0
+Points§stroke§0.6756251§1.0§0.08125§1.0§1.0
+Points§hue range§0.39956263§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§3.0003085§2.55
+Points§blur§1.0012459§1.0
+Points§seed range§120.25§10000.0
+Points§spawns§60.00004§200.0
+Points§time radius§0.11125019§1.0
+Points§seed multiplier§4888.8§10000.0
+Points§history size§15.00001§200.0
+Points§history skips§3.999409§100.0
+Points§mirrors§14.00001§100.0
+Points§stroke§0.6756251§1.0§0.08125§1.0§1.0
+Points§hue range§0.39956263§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§2.497964§2.55
+Points§blur§1.0000455§0.1
+Points§seed range§130.25§10000.0
+Points§spawns§50.99996§200.0
+Points§time radius§0.11125019§1.0
+Points§seed multiplier§4888.8§10000.0
+Points§history size§15.00001§200.0
+Points§history skips§3.999409§100.0
+Points§mirrors§14.00001§100.0
+Points§stroke§0.6756251§1.0§0.08125§1.0§1.0
+Points§hue range§0.39956263§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§2.003269§2.55
+Points§blur§1.001745§1.0
+Points§seed range§130.25§10000.0
+Points§spawns§50.99996§200.0
+Points§time radius§0.20975035§0.1
+Points§seed multiplier§4888.8§10000.0
+Points§history size§15.00001§200.0
+Points§history skips§3.999409§100.0
+Points§mirrors§14.00001§100.0
+Points§stroke§0.66412514§1.0§0.08125§1.0§1.0
+Points§hue range§0.41156182§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§2.003269§2.55
+Points§blur§1.001745§1.0
+Points§seed range§130.25§10000.0
+Points§spawns§50.99996§200.0
+Points§time radius§0.20975035§0.1
+Points§seed multiplier§4888.8§10000.0
+Points§history size§15.00001§200.0
+Points§history skips§3.999409§100.0
+Points§mirrors§14.00001§100.0
+Points§stroke§0.66412514§1.0§0.08125§1.0§1.0
+Points§hue range§0.41156182§1.0000001
+Points§sat range§0.0§10.0
+Points§br range§0.0§10.0
+Points§const sat§0.30000025§10.0
+Points§norm weight§2.5999923§10.0
+Points§min weight§1.0125§10.0
+STATE_END

@@ -16,22 +16,23 @@ public class WaterRipple extends KrabApplet {
     PGraphics temp;
 
     public void settings() {
-        size(800, 800, P2D);
+//        size(800, 800, P2D);
+        fullScreen(P3D);
     }
 
     public void setup() {
         frameRecordingDuration *= 2;
-        surface.setAlwaysOnTop(true);
-        surface.setLocation(1920 - 820, 20);
-        pg = createGraphics(800, 800, P2D);
+//        surface.setAlwaysOnTop(true);
+//        surface.setLocation(1920 - 820, 20);
+        pg = createGraphics(width, height, P2D);
         pg.beginDraw();
         pg.background(0);
         pg.endDraw();
-        a = createGraphics(800, 800, P2D);
+        a = createGraphics(width, height, P2D);
         a.beginDraw();
         a.background(0);
         a.endDraw();
-        temp = createGraphics(800, 800, P2D);
+        temp = createGraphics(width, height, P2D);
         temp.beginDraw();
         temp.background(0);
         temp.endDraw();
@@ -94,7 +95,7 @@ public class WaterRipple extends KrabApplet {
     }
 
     private void drawRain() {
-        int frameSkip = sliderInt("frame skip", 1);
+        int frameSkip = constrain(sliderInt("frame skip", 1), 1, 100);
         if(frameCount % frameSkip == 0) {
             float rainRadius = lerp(slider("rain min r"), slider("rain max r"), random(1));
             for (int i = 0; i < sliderInt("count"); i++) {

@@ -1,0 +1,32 @@
+STATE_BEGIN
+UNDO
+GROUP§Freeform§true
+Freeform§top§0.0§0.0§0.5§1.0§1.0
+Freeform§bot§0.0§0.0§0.5§1.0§1.0
+Freeform§color count§3.0324519§100.0
+Freeform§0§0.033333294§0.0§0.0§0.0075000003§1.0
+Freeform§1§0.98041695§0.0§0.225§1.0§10.0
+Freeform§2§0.10583311§0.0§0.85625§1.0§1.0
+Freeform§3§0.0§0.0§0.5§1.0§1.0
+Freeform§4§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Freeform§true
+Freeform§color count§2.9999938§100.0
+Freeform§0§0.09041662§0.975§0.0§1.0§10.0
+Freeform§1§0.626667§1.0§0.1625§1.0§10.0
+Freeform§2§0.11249977§0.0§0.0§0.8533335§1.0
+Freeform§3§0.0§0.0§0.5§1.0§1.0
+Freeform§4§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Freeform§false
+Freeform§color count§2.9999938§100.0
+Freeform§0§0.09041662§0.975§0.0§1.0§10.0
+Freeform§1§0.626667§0.89375§1.0§1.0§10.0
+Freeform§2§0.11249977§0.0§0.0§0.8533335§1.0
+Freeform§3§0.0§0.0§0.5§1.0§1.0
+Freeform§4§0.0§0.0§1.0§1.0§1.0
+STATE_END

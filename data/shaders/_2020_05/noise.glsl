@@ -1,7 +1,44 @@
-uniform sampler2D a, b;
+uniform sampler2D texture;
 uniform vec2 resolution;
-uniform float damp;
 uniform float time;
+
+uniform int colorCount;
+uniform vec4 hsba_0;
+uniform vec4 hsba_1;
+uniform vec4 hsba_2;
+uniform vec4 hsba_3;
+uniform vec4 hsba_4;
+uniform vec4 hsba_5;
+uniform vec4 hsba_6;
+uniform vec4 hsba_7;
+uniform vec4 hsba_8;
+uniform vec4 hsba_9;
+
+vec3 rgb(in vec3 hsb){
+    vec3 rgb = clamp(abs(mod(hsb.x*6.0+
+    vec3(0.0, 4.0, 2.0), 6.0)-3.0)-1.0, 0.0, 1.0);
+    rgb = rgb*rgb*(3.0-2.0*rgb);
+    return hsb.z * mix(vec3(1.0), rgb, hsb.y);
+}
+
+float map(float value, float start1, float stop1, float start2, float stop2){
+    return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+}
+
+vec4 getColor(float pct){
+    pct = clamp(pct, 0, 1);
+    float colorPct = clamp(map(pct, 0, 1, 0, colorCount-1), 0, colorCount-1);
+    int previousColorIndex = int(floor(colorPct));
+    float lerpToNextColor = fract(colorPct);
+    vec4[] colors = vec4[](
+    hsba_0, hsba_1, hsba_2, hsba_3, hsba_4, hsba_5, hsba_6, hsba_7, hsba_8, hsba_9);
+    vec4 prevColor = colors[previousColorIndex];
+    vec4 nextColor = colors[previousColorIndex+1];
+    prevColor.rgb = rgb(prevColor.rgb);
+    nextColor.rgb = rgb(nextColor.rgb);
+    return mix(prevColor, nextColor, lerpToNextColor);
+}
+
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
 float permute(float x){ return floor(mod(((x*34.0)+1.0)*x, 289.0)); }
@@ -97,7 +134,7 @@ float fbm (vec4 p) {
     float amp = 1;
     float freq = 1;
     // Loop of octaves
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 12; i++) {
         sum += amp*snoise(p*freq);
         freq *= 2.;
         amp *= .5;
@@ -106,32 +143,16 @@ float fbm (vec4 p) {
     return sum;
 }
 
-
-vec3 get(sampler2D tex, vec2 offset){
-    vec2 uv = gl_FragCoord.xy / resolution.xy;
-    offset /= resolution.xy;
-    return texture2D(tex, uv+offset).rgb;
-}
-
-vec3 wave(float damping){
-    vec3 col = (get(a, vec2(-1, 0)) +
-    get(a, vec2(1, 0)) +
-    get(a, vec2(0, 1)) +
-    get(a, vec2(0, -1))) /2 - get(b, vec2(0)
-    );
-    col *= damping;
-    return col;
-}
-
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-    vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
-    float d = length(cv*10.1);
-    float a = sin(atan(cv.y, cv.x)*50.);
-    float tr = 1.5;
-    vec2 ts = vec2(tr*sin(time), tr*cos(time))+17.;
-    vec3 col = wave(damp+.1*(fbm(vec4(d, a, ts.xy))));
-//    col += .01*fbm(vec4(d, a, ts.xy));
-    float dist = smoothstep(0, 1, length(cv));
-    gl_FragColor = vec4(col*dist, 1.);
+    uv *= 0.5;
+    float t = time*.5;
+    float tr = 1.1;
+    float pct = fbm(vec4(uv*10.5, tr*cos(t), tr*sin(t)));
+//    float pct = 1;
+    vec4 newColor = getColor(pow(pct, 2.));
+    float alpha = (newColor.r + newColor.g + newColor.b) / 3.;
+    alpha = pow(alpha, 0.2);
+    vec4 oldColor = texture(texture, uv);
+    gl_FragColor = mix(oldColor, newColor, alpha);
 }

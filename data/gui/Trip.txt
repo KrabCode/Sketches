@@ -1,0 +1,500 @@
+STATE_BEGIN
+UNDO
+GROUP§Trip§true
+Trip§fade to black§50.0§255.0
+Trip§blur§0.0§10.0
+Trip§spawn frame skip§1.0§100.0
+Trip§spawn count§1.0§100.0
+Trip§spawn range§30.9875§100.0
+Trip§life span§580.0§2000.0
+Trip§stroke§0.0§0.0§1.0§1.0§1.0
+Trip§hue variance§0.2625§10.0
+Trip§saturation variance§0.43750012§10.0
+Trip§brightness variance§1.2625002§10.0
+Trip§fade in [0-0.5]§0.2§10.0
+Trip§fade out [0-0.5]§0.2§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Trip§true
+Trip§fade to black§2.8687499§255.0
+Trip§blur§1.3500004§100.0
+Trip§spawn frame skip§1.0§100.0
+Trip§spawn count§8.999028§100.0
+Trip§spawn range§262.7375§1000.0
+Trip§life span§580.0§2000.0
+Trip§stroke§0.0§1.0§1.0§1.0§1.0
+Trip§hue variance§0.095001504§1.0
+Trip§saturation variance§0.8624998§10.0
+Trip§brightness variance§0.1625007§10.0
+Trip§fade in [0-0.5]§0.2§10.0
+Trip§fade out [0-0.5]§0.2§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Trip§true
+Trip§fade to black§1.59375§255.0
+Trip§blur§0.5374868§10.0
+Trip§spawn frame skip§1.0§100.0
+Trip§spawn count§40.00004§100.0
+Trip§spawn range§86.48749§1000.0
+Trip§life span§100.01822§2000.0
+Trip§stroke§0.018124027§0.6625§1.0§1.0§1.0
+Trip§hue variance§0.07750152§1.0
+Trip§saturation variance§0.3§10.0
+Trip§brightness variance§0.0§10.0
+Trip§fade in [0-0.5]§0.2§10.0
+Trip§fade out [0-0.5]§0.2§10.0
+Trip§weight§1.1624993§10.0
+Trip§weight variance§0.59999996§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Trip§true
+Trip§fade to black§1.0136247§2.55
+Trip§blur§0.5374868§10.0
+Trip§spawn frame skip§1.0§100.0
+Trip§spawn count§40.00004§100.0
+Trip§spawn range§86.48749§1000.0
+Trip§life span§100.01822§2000.0
+Trip§force to center§-0.05§10.0
+Trip§force sideways§-0.037500165§10.0
+Trip§drag§0.95§10.0
+Trip§stroke§0.7087488§0.7375§1.0§1.0§1.0
+Trip§hue variance§0.07750152§1.0
+Trip§saturation variance§0.3§10.0
+Trip§brightness variance§0.0§10.0
+Trip§fade in [0-0.5]§0.2§10.0
+Trip§fade out [0-0.5]§0.2§10.0
+Trip§weight§1.1624993§10.0
+Trip§weight variance§0.59999996§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Trip§true
+Trip§fade to black§1.0136247§2.55
+Trip§blur§0.5374868§10.0
+Trip§spawn frame skip§1.0§100.0
+Trip§spawn count§35.00797§100.0
+Trip§spawn range§637.26874§10000.0
+Trip§life span§200.00594§2000.0
+Trip§force to center§-0.035937496§1.0
+Trip§force sideways§-0.037500165§10.0
+Trip§drag§0.96445346§1.0
+Trip§stroke§0.9653896§0.49375§1.0§1.0§1.0
+Trip§hue variance§0.05250144§1.0
+Trip§saturation variance§0.3§10.0
+Trip§brightness variance§0.265625§10.0
+Trip§fade in [0-0.5]§0.2§10.0
+Trip§fade out [0-0.5]§0.2§10.0
+Trip§weight§1.4984368§10.0
+Trip§weight variance§0.4398437§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.0320313§25.5
+shaders§blur§0.61562496§1.0
+GROUP§particles§true
+particles§spawn frame skip§1.0§100.0
+particles§spawn count§40.056847§100.0
+particles§spawn range§278.79688§1000.0
+particles§life span§100.99718§200.0
+GROUP§noise§true
+noise§noise freq§0.052578103§0.1
+noise§noise time§0.01601563§1.0
+noise§noise angle variance§4.515625§10.0
+GROUP§forces§true
+forces§force uniform§10.0§0.03515625§0.078125
+forces§force to center§0.0§10.0
+forces§force sideways§0.0§10.0
+forces§force noise§0.22500055§1.0
+forces§drag§0.84453124§10.0
+GROUP§colors§true
+colors§stroke§0.0§0.5§1.0§1.0§1.0
+colors§hue variance§0.09765625§10.0
+colors§saturation variance§0.39453125§10.0
+colors§brightness variance§0.14453125§10.0
+colors§fade in [0-0.5]§0.2§10.0
+colors§fade out [0-0.5]§0.2§10.0
+colors§weight§1.0011717§1.0
+colors§weight variance§0.8984375§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.026055§2.55
+shaders§blur§1.0742178§10.0
+GROUP§particles§true
+particles§spawn frame skip§1.0§100.0
+particles§spawn count§10.005415§100.0
+particles§spawn range§633.4844§10000.0
+particles§life span§200.02187§200.0
+GROUP§noise§true
+noise§noise freq§0.5356445§1.0000001
+noise§noise time§0.0§10.0
+noise§noise angle variance§4.515625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.29296875§10.0
+forces§force sideways§0.37109375§10.0
+forces§force noise§0.28828162§1.0
+forces§drag§0.87578124§10.0
+GROUP§colors§true
+colors§stroke§0.0§0.24375§1.0§1.0§1.0
+colors§hue variance§0.08203125§10.0
+colors§saturation variance§0.39453125§10.0
+colors§brightness variance§0.05859375§10.0
+colors§fade in [0-0.5]§0.2§10.0
+colors§fade out [0-0.5]§0.2§10.0
+colors§weight§3.3472657§10.0
+colors§weight variance§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§2.6955106§25.5
+shaders§blur§1.0046865§1.0
+GROUP§particles§true
+particles§spawn frame skip§1.0§100.0
+particles§spawn count§5.000005§100.0
+particles§blend: replace§0
+particles§spawn range§301.45312§10000.0
+particles§life span§108.99992§200.0
+GROUP§noise§true
+noise§noise freq§0.81640625§10.0
+noise§noise time§0.62890625§10.0
+noise§noise angle variance§0.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.08437501§1.0
+forces§force sideways§0.17303467§10.0
+forces§force noise§0.035547283§1.0
+forces§drag§0.7718752§1.0
+GROUP§colors§true
+colors§stroke§0.9197263§0.50625§0.7375§1.0§1.0
+colors§hue variance§0.19179706§1.0
+colors§saturation variance§0.20234375§1.0
+colors§brightness variance§0.00390625§0.1
+colors§fade in [0-0.5]§0.2§10.0
+colors§fade out [0-0.5]§0.2§10.0
+colors§weight§3.1128902§100.0
+colors§weight variance§2.8515625§100.0
+colors§mirrors§23.000395§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§4.13985§25.5
+shaders§blur§0.0§10.0
+GROUP§particles§true
+particles§spawn frame skip§1.0§100.0
+particles§spawn count§1.9999121§100.0
+particles§blend: replace§0
+particles§spawn range§301.45312§10000.0
+particles§life span§140.01343§2000.0
+GROUP§noise§true
+noise§noise freq§1.1183516§1.0000001
+noise§noise time§0.0§10.0
+noise§noise angle variance§0.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§0.0§10.0
+forces§sin(t)§0
+forces§force sideways§0.0§10.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.050390873§1.0
+forces§drag§0.90039104§1.0
+GROUP§colors§true
+colors§stroke§0.9197263§1.0§1.0§1.0§1.0
+colors§hue variance§0.050000235§1.0
+colors§saturation variance§1.6777349§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.49402344§1.0
+colors§fade out [0-0.5]§0.14140625§10.0
+colors§weight§1.499609§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§20.987804§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.8925781§255.0
+shaders§blur§0.9999999§1.0
+GROUP§particles§true
+particles§spawn frame skip§1.0§100.0
+particles§spawn count§2.000494§100.0
+particles§blend: replace§0
+particles§spawn range§621.7656§10000.0
+particles§life span§167.99985§2000.0
+GROUP§noise§true
+noise§noise freq§0.014054667§1.0000001
+noise§noise time§0.6640625§100.0
+noise§noise angle variance§0.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.04296875§10.0
+forces§sin(t)§0
+forces§force sideways§0.0§10.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.057422154§1.0
+forces§drag§0.8367194§1.0
+GROUP§colors§true
+colors§stroke§0.96210957§0.59375§1.0§1.0§1.0
+colors§hue variance§0.050000235§1.0
+colors§saturation variance§0.73242235§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.50078124§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§20.987804§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.006055§2.55
+shaders§blur§0.9999999§1.0
+GROUP§particles§true
+particles§spawn frame skip§120.99992§1000.0
+particles§spawn count§50.00004§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9901§200.0
+GROUP§noise§true
+noise§noise freq§0.052726462§1.0000001
+noise§noise time§0.2734375§100.0
+noise§noise angle variance§6.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.47265625§10.0
+forces§sin(t)§0
+forces§force sideways§0.0§10.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.26328173§1.0
+forces§drag§0.60000175§1.0
+GROUP§colors§true
+colors§stroke§0.7585939§0.59375§0.675§1.0§1.0
+colors§hue variance§0.05234404§1.0
+colors§saturation variance§0.29492235§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§20.987804§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.1475025§2.55
+shaders§blur§0.8335941§10.0
+GROUP§particles§false
+particles§spawn frame skip§120.99992§1000.0
+particles§spawn count§50.00004§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9901§200.0
+GROUP§noise§true
+noise§noise freq§1.8152266§10.000001
+noise§noise time§0.2734375§100.0
+noise§noise angle variance§6.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.028906362§1.0
+forces§sin(t)§1
+forces§force sideways§0.051171754§1.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.019356344§1.0000001
+forces§drag§0.96484554§1.0
+GROUP§colors§true
+colors§stroke§0.7068359§0.98125§0.475§1.0§1.0
+colors§hue variance§0.04960969§1.0
+colors§saturation variance§0.1816411§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§30.999128§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.1475025§2.55
+shaders§blur§0.8335941§10.0
+GROUP§particles§false
+particles§spawn frame skip§120.99992§1000.0
+particles§spawn count§50.00004§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9901§200.0
+GROUP§noise§true
+noise§noise freq§1.8152266§10.000001
+noise§noise time§0.2734375§100.0
+noise§noise angle variance§6.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.028906362§1.0
+forces§sin(t)§1
+forces§force sideways§0.051171754§1.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.019356344§1.0000001
+forces§drag§0.96484554§1.0
+GROUP§colors§true
+colors§stroke§0.7068359§0.98125§0.475§1.0§1.0
+colors§hue variance§0.04960969§1.0
+colors§saturation variance§0.1816411§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§30.999128§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.2546027§25.5
+shaders§blur§0.8335941§10.0
+GROUP§particles§false
+particles§spawn frame skip§120.99992§1000.0
+particles§spawn count§50.00004§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9901§200.0
+GROUP§noise§true
+noise§noise freq§1.8152266§10.000001
+noise§noise time§0.2734375§100.0
+noise§noise angle variance§6.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.045906365§1.0
+forces§sin(t)§1
+forces§force sideways§0.051171754§1.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.019356344§1.0000001
+forces§drag§0.96484554§1.0
+GROUP§colors§true
+colors§stroke§0.057335693§0.98125§0.54375§1.0§1.0
+colors§hue variance§0.12470972§1.0
+colors§saturation variance§0.1816411§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§30.999128§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§true
+shaders§fade to black§1.2546027§25.5
+shaders§blur§0.8335941§10.0
+GROUP§particles§false
+particles§spawn frame skip§120.99992§1000.0
+particles§spawn count§50.00004§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9901§200.0
+GROUP§noise§true
+noise§noise freq§1.8152266§10.000001
+noise§noise time§0.2734375§100.0
+noise§noise angle variance§6.234375§10.0
+noise§noise angle offset§0.22265625§10.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.045906365§1.0
+forces§sin(t)§1
+forces§force sideways§0.051171754§1.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.019356344§1.0000001
+forces§drag§0.96484554§1.0
+GROUP§colors§true
+colors§stroke§0.057335693§0.98125§0.54375§1.0§1.0
+colors§hue variance§0.12470972§1.0
+colors§saturation variance§0.1816411§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§30.999128§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§false
+shaders§fade to black§1.4534992§25.5
+shaders§blur§1.1835938§10.0
+GROUP§particles§false
+particles§spawn frame skip§100.00008§1000.0
+particles§spawn count§20.99998§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9994§200.0
+GROUP§noise§false
+noise§noise freq§0.050863653§0.10000002
+noise§noise time§0.0§10.0
+noise§noise angle variance§6.1843677§100.0
+noise§noise angle offset§3.9026558§100.0
+GROUP§forces§false
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.22700025§1.0
+forces§sin(t)§0
+forces§force sideways§2.0986598E-4§0.010000001
+forces§sin(t) frequency§1.04§10.0
+forces§force noise§0.13935621§1.0000001
+forces§drag§0.8001475§0.1
+GROUP§colors§true
+colors§stroke§0.8578355§0.98125§0.375§1.0§1.0
+colors§hue variance§0.088771015§1.0000001
+colors§saturation variance§0.5016411§10.0
+colors§brightness variance§0.0§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.8980465§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§50.00004§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§shaders§false
+shaders§fade to black§1.4534992§25.5
+shaders§blur§1.1835938§10.0
+GROUP§particles§false
+particles§spawn frame skip§100.00008§1000.0
+particles§spawn count§20.99998§100.0
+particles§blend: replace§1
+particles§spawn range§666.65845§10.0
+particles§life span§666.9994§200.0
+GROUP§noise§true
+noise§noise freq§5.602965§100.00001
+noise§noise time§0.0§10.0
+noise§noise angle variance§6.1843677§100.0
+noise§noise angle offset§3.9026558§100.0
+GROUP§forces§true
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.15§10.0
+forces§sin(t)§0
+forces§force sideways§3.9866456E-5§0.001
+forces§sin(t) frequency§1.04§10.0
+forces§force noise§0.2043566§1.0000001
+forces§drag§0.84024686§1.0
+GROUP§colors§true
+colors§stroke§0.8073354§0.98125§0.31875§1.0§1.0
+colors§hue variance§0.070770994§1.0000001
+colors§saturation variance§0.25164112§10.0
+colors§brightness variance§0.25§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.9980464§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§50.00004§100.0
+STATE_END

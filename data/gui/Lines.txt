@@ -64,3 +64,77 @@ _2020_04.Lines§top Y§-50.0§30.0
 _2020_04.Lines§bottom Y§850.0§30.0
 _2020_04.Lines§weight§6.0§100.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§50.0§255.0
+Lines§count§23.966917§100.0
+Lines§weight§5.1125§100.0
+Lines§stroke§0.0§0.0§1.0§1.0§1.0
+Lines§min size§49.999992§1.0
+Lines§random size§200.0§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§50.0§255.0
+Lines§count§23.966917§100.0
+Lines§weight§5.1125§100.0
+Lines§stroke§0.0§0.0§1.0§1.0§1.0
+Lines§speed§148.125§1000.0
+Lines§min size§49.999992§1.0
+Lines§random size§200.0§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§12.722187§25.5
+Lines§count§1500.0012§1000.0
+Lines§weight§3.2374992§100.0
+Lines§stroke§0.6012498§1.0§1.0§1.0§1.0
+Lines§speed§148.125§1000.0
+Lines§min size§49.999992§1.0
+Lines§random size§200.0§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§2.9962366§25.5
+Lines§count§837.9865§10000.0
+Lines§weight§5.0000014§10.0
+Lines§stroke§0.6012498§0.0§1.0§1.0§1.0
+Lines§speed§50.625§1000.0
+Lines§min size§37.10251§1000.0
+Lines§random size§37.5§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§2.9962366§25.5
+Lines§freq§1.4987499§1.0
+Lines§spawn range§200.55§100.0
+Lines§gauss threshold§1.0§10.0
+Lines§weight§1.25§100.0
+Lines§stroke§0.6012498§0.0§1.0§1.0§1.0
+Lines§points per frame§997.99567§2000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§2.9962366§25.5
+Lines§freq§0.023624448§1.0
+Lines§spawn range§200.55§100.0
+Lines§gauss threshold§0.2187517§1.0
+Lines§weight§2.875§100.0
+Lines§points per frame§3097.9995§20000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Lines§true
+Lines§fade to black§11.889357§25.5
+Lines§freq§0.13017444§0.10000001
+Lines§spawn range§104.175§1000.0
+Lines§weight§1.25§100.0
+Lines§points per frame§28295.998§20000.0
+Lines§speed§4.968721E-5§0.010000001
+STATE_END
