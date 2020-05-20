@@ -1,0 +1,43 @@
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GuiExample§hello world§
+GuiExample§background§0.0§0.0§0.0§1.0§1.0
+GuiExample§translate§10.0§3.679999§-3.44§-0.74999994
+GuiExample§rotate§10.0§0.0§0.0§0.0
+GuiExample§stroke & fill§0
+GuiExample§fill§0.0§0.0§0.4§1.0§1.0
+GuiExample§stroke§0.0§0.0§1.0§1.0§1.0
+GuiExample§stroke weight§1.0§10.0
+GuiExample§size§30.0§300.0§300.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GuiExample§hello world§
+GROUP§style§true
+style§background§0.0§0.0§0.0§1.0§1.0
+style§stroke & fill§0
+style§fill§0.68799996§1.0§1.0§1.0§1.0
+style§stroke§0.63800025§0.43125§1.0§1.0§1.0
+style§stroke weight§4.5000057§10.0
+style§size§30.0§300.0§300.0§300.0
+GROUP§transform§true
+transform§translate§10.0§0.0§0.0§0.0
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GuiExample§hello world§
+GROUP§style§true
+style§background§0.0§0.0§0.0§1.0§1.0
+style§stroke & fill§0
+style§fill§0.68799996§1.0§1.0§1.0§1.0
+style§stroke§0.63800025§0.43125§1.0§1.0§1.0
+style§stroke weight§4.5000057§10.0
+style§size§30.0§300.0§300.0§300.0
+GROUP§transform§true
+transform§translate§10.0§0.0§0.0§0.0
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+STATE_END

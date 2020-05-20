@@ -17,8 +17,8 @@ public class Points extends KrabApplet {
     }
 
     public void settings() {
-//        size(1000, 1000, P3D);
-        fullScreen(P3D);
+        size(800,800, P3D);
+//        fullScreen(P3D);
     }
 
     public void setup() {

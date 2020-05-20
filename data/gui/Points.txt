@@ -564,3 +564,24 @@ Points§const sat§0.52265644§10.0
 Points§const weight§1.1992188§10.0
 Points§norm weight§7.3617115§100.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Points§true
+Points§add§0
+Points§fade to black§7.7995377§25.5
+Points§blur§0.39996082§0.1
+Points§range§164.80469§1000.0
+Points§trails§140.00015§200.0
+Points§time radius§0.28603947§10.0
+Points§seed multiplier§8.44043§100.0
+Points§history size§10.00449§200.0
+Points§history skips§2.0119393§100.0
+Points§mirrors§20.011143§100.0
+Points§stroke§0.72115666§1.0§0.15§1.0§10.0
+Points§hue range§0.04984343§1.0000001
+Points§sat range§-0.20781226§10.0
+Points§br range§-0.1796875§10.0
+Points§const sat§0.52265644§10.0
+Points§const weight§1.0§10.0
+Points§norm weight§4.8875§10.0
+STATE_END

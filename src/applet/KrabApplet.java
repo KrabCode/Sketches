@@ -15,7 +15,7 @@ import static java.lang.System.currentTimeMillis;
  * This class offers common functionality to all of my processing sketches, including a GUI, shader reloading at runtime and many other utility functions and features
  */
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions"})
 public abstract class KrabApplet extends PApplet {
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
@@ -203,8 +203,13 @@ public abstract class KrabApplet extends PApplet {
         return sliderXY("xy");
     }
 
-    protected PVector sliderXY(String name, float defaultXYZ) {
-        return sliderXY(name, defaultXYZ, defaultXYZ, defaultXYZ);
+
+    protected PVector sliderXY(String name, float defaultX, float defaultY) {
+        return sliderXY(name, defaultX, defaultY, numberOfDigitsInFlooredNumber(max(defaultX, defaultY)) * 10);
+    }
+
+    protected PVector sliderXY(String name, float defaultXY) {
+        return sliderXY(name, defaultXY, defaultXY, numberOfDigitsInFlooredNumber(defaultXY) * 10);
     }
 
     protected PVector sliderXY(String name) {
@@ -230,11 +235,11 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected PVector sliderXYZ(String name) {
-        return sliderXYZ(name, 100);
+        return sliderXYZ(name, 0);
     }
 
-    protected PVector sliderXYZ(String name, float precision) {
-        return sliderXYZ(name, 0, 0, 0, precision);
+    protected PVector sliderXYZ(String name, float defaultXYZ) {
+        return sliderXYZ(name, defaultXYZ, defaultXYZ, defaultXYZ, numberOfDigitsInFlooredNumber(defaultXYZ) * 10);
     }
 
     protected PVector sliderXYZ(String name, float x, float y, float z, float precision) {
@@ -360,6 +365,7 @@ public abstract class KrabApplet extends PApplet {
         if (frameCount == 1) {
             trayVisible = elementCount() != 0;
         }
+        currentGroup = new Group(this.getClass().getSimpleName());
     }
 
     private void updateScrolling() {
@@ -483,7 +489,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void rotate(PGraphics pg) {
-        PVector rotation = sliderXYZ("rotate", PI);
+        PVector rotation = sliderXYZ("rotate", 0);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
             delta.mult(0);
@@ -838,16 +844,18 @@ public abstract class KrabApplet extends PApplet {
 
     private void displayMenuButtonHideShow(float x, float y, float w, float h, float rotation) {
         pushMatrix();
+        pushStyle();
         translate(x + w * .5f, y + h * .5f);
+        strokeWeight(2);
         rotate(rotation);
         float arrowWidth = w * .22f;
         line(-arrowWidth, 0, w * .2f, 0);
-        strokeWeight(2);
         beginShape();
         vertex(-arrowWidth * .5f, h * .05f);
         vertex(-arrowWidth, 0);
         vertex(-arrowWidth * .5f, -h * .05f);
         endShape(CLOSE);
+        popStyle();
         popMatrix();
     }
 
@@ -1160,7 +1168,6 @@ public abstract class KrabApplet extends PApplet {
         }
         if (key == 'i') {
             captureScreenshot = true;
-            id = regenIdAndCaptureDir();
         }
     }
 
@@ -1858,7 +1865,7 @@ public abstract class KrabApplet extends PApplet {
         pg.popMatrix();
     }
 
-// CLASSES
+// PARAMETRIC EQUATIONS
 
     private PVector getVector(float u, float v, float r, float h) {
         String option = options("russian", "catenoid", "screw", "hexaedron", "moebius",
@@ -2008,6 +2015,8 @@ public abstract class KrabApplet extends PApplet {
         return (float) Math.sinh(n);
     }
 
+    // CLASSES
+
     private class ShaderSnapshot {
         String fragPath;
         String vertPath;
@@ -2152,8 +2161,10 @@ public abstract class KrabApplet extends PApplet {
         }
 
         public void displayInTray(float x, float y) {
-            fill((keyboardSelected(name) || isMouseOverScrollAware(0, y - cell, trayWidth, cell)) ?
-                    GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK);
+            boolean isSelected = (keyboardSelected(name) || isMouseOverScrollAware(0, y - cell, trayWidth, cell));
+            float clr = isSelected ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+            fill(clr);
+            stroke(clr);
             textAlign(LEFT, BOTTOM);
             textSize(textSize);
             float animation = easedAnimation(animationStarted, GROUP_TOGGLE_ANIMATION_DURATION,
@@ -2732,12 +2743,14 @@ public abstract class KrabApplet extends PApplet {
         private void autoDetectConstraints(String name) {
             if (name.contains("ease") || name.contains("easing")) {
                 this.defaultValue = 1;
+                value = defaultValue;
             }
             if (name.contains("weight")) {
                 this.constrained = true;
                 minValue = 0;
                 maxValue = Float.MAX_VALUE;
                 defaultValue = 1;
+                value = defaultValue;
             }
             if (name.equals("fill") || name.equals("stroke")) {
                 this.constrained = true;
