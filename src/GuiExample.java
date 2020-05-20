@@ -30,7 +30,11 @@ public class GuiExample extends KrabApplet {
         rotateZ(rotate.z);
 
         group("style");
-        background(picker("background").clr());
+        boolean redrawBackground = toggle("draw background", true);
+        int backgroundColor = picker("background").clr();
+        if(redrawBackground) {
+            background(backgroundColor);
+        }
         String style = options("stroke & fill", "no stroke", "no fill");
         fill(picker("fill").clr());
         stroke(picker("stroke").clr());
