@@ -23,6 +23,12 @@ public class GuiExample extends KrabApplet {
         }
 
         group("transform");
+        String projection = options("perspective", "orthographic");
+        if (projection.equals("perspective")) {
+            perspective();
+        } else if (projection.equals("orthographic")) {
+            ortho();
+        }
         PVector translate = sliderXYZ("translate");
         PVector rotate = sliderXYZ("rotate");
         translate(width / 2f + translate.x, height / 2f + translate.y, translate.z);
@@ -31,18 +37,14 @@ public class GuiExample extends KrabApplet {
         rotateZ(rotate.z);
 
         group("style");
-        boolean noBackground = toggle("no background");
-        int backgroundColor = picker("background").clr();
-        if(!noBackground) {
-            background(backgroundColor);
-        }
-        String style = options("stroke & fill", "no stroke", "no fill");
+        background(picker("background").clr());
         fill(picker("fill").clr());
         stroke(picker("stroke").clr());
         strokeWeight(slider("stroke weight"));
-        if (style.equals("no fill")) {
+        if (toggle("no fill")) {
             noFill();
-        } else if (style.equals("no stroke")) {
+        }
+        if (toggle("no stroke")) {
             noStroke();
         }
         PVector size = sliderXYZ("size", 200);
