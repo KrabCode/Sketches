@@ -1,4 +1,6 @@
+
 #GUI Manual
+I built this graphical interface on top of Processing, because it allows for real-time control of the sketches, which results in faster and more comfortable iteration.
 
 ## Features
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
@@ -24,6 +26,7 @@ if (button("hello world")) {
 }
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/01_button.jpg?raw=true" width="600" alt="Button">
+---
 
 ### Toggle
 A toggle holds its boolean value and changes it when pressed.
@@ -35,6 +38,7 @@ if (toggle("no fill")) {
 }
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/02_toggle.jpg?raw=true" width="600" alt="Toggle">
+---
 
 ### Options
 
@@ -49,6 +53,7 @@ if (projection.equals("perspective")) {
 }
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/03_options.jpg?raw=true" width="600" alt="Options">
+---
 
 ### Slider
 An infinite slider with variable precision. 
@@ -60,7 +65,7 @@ An infinite slider with variable precision.
 strokeWeight(slider("stroke weight"));
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/04_slider.jpg?raw=true" width="600" alt="Slider">
- 
+ ---
  
  ### Slider XYZ
  
@@ -68,12 +73,13 @@ strokeWeight(slider("stroke weight"));
  - Returns the current PVector value.
  - Use PVector.copy() if you want to modify the PVector without affecting the slider.
  - The default value is 0, and it can be set with optional parameters.
- - Has a XY variant where the z slider is not used.
+ - There is a sliderXY variant without the z slider.
 ```java
 PVector translate = sliderXYZ("translate");
 translate(translate.x, translate.y, translate.z);
 ```
  <img src="https://github.com/KrabCode/Sketches/blob/master/readme/05_sliderXYZ.jpg?raw=true" width="600" alt="SliderXYZ">
+ ---
  
  ### Color picker
  
@@ -97,3 +103,4 @@ float a = myColor.alpha();
 stroke(hue, sat, br, a);
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
+---

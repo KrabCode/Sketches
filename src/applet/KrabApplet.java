@@ -86,6 +86,7 @@ public abstract class KrabApplet extends PApplet {
     protected boolean mousePressedOutsideGui = false;
     protected int frameRecordingStarted = 0;
     protected int frameRecordingDuration = 360; // assuming t += radians(1) per frame for a perfect loop
+    private boolean ffmpegEnabled = true;
     protected float timeSpeed = 1;
     private float trayWidthWhenExtended = minimumTrayWidth;
     private float trayWidth = minimumTrayWidth;
@@ -529,7 +530,7 @@ public abstract class KrabApplet extends PApplet {
             println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted - 1, "saved");
             PImage currentSketch = pg.get();
             pg.save(captureDir + frameNumber + ".jpg");
-            if (frameCount == frameRecordingEnd - 1) {
+            if (frameCount == frameRecordingEnd - 1 && ffmpegEnabled) {
                 println("capture ended, running ffmpeg, please wait...");
                 try {
                     String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +

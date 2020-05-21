@@ -14,6 +14,7 @@ public class GuiExample extends KrabApplet {
     public void setup() {
         rectMode(CENTER);
         surface.setAlwaysOnTop(true); //remove me
+
     }
 
     public void draw() {
