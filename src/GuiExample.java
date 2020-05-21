@@ -40,6 +40,15 @@ public class GuiExample extends KrabApplet {
         background(picker("background").clr());
         fill(picker("fill").clr());
         stroke(picker("stroke").clr());
+
+        colorMode(HSB,1,1,1,1);
+        HSBA myColor = picker("my color");
+        float hue = myColor.hue();
+        float sat = myColor.sat();
+        float br = myColor.br();
+        float a = myColor.alpha();
+        stroke(hue, sat, br, a);
+
         strokeWeight(slider("stroke weight"));
         if (toggle("no fill")) {
             noFill();
