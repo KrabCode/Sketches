@@ -169,3 +169,20 @@ style§no fill§true
 style§no stroke§false
 style§size§30.0§300.0§300.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§console§true
+console§hello world§
+GROUP§transform§true
+transform§perspective§0
+transform§translate§1000.0§283.45956§273.7796§-396.6101
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§true
+style§background§0.0§0.0§0.3§1.0§1.0
+style§fill§0.674§0.80625§1.0§1.0§1.0
+style§stroke§0.9760003§1.0§1.0§1.0§1.0
+style§stroke weight§6.8000307§10.0
+style§no fill§true
+style§no stroke§false
+style§size§30.0§300.0§300.0§300.0
+STATE_END
