@@ -15,11 +15,11 @@ The finished animations can be found on my [Instagram](https://www.instagram.com
 All of my sketches extend the KrabApplet class which implements a GUI and many common utility functions.
 
 ### GUI
-See [GUI Manual](https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/GUIManual.md).
+See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManual.md).
 
-<img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/00_trailer.jpg?raw=true" width="400" alt="GUI">
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/preview.jpg?raw=true" width="400" alt="GUI">
 
-### Keyboard control
+### Keyboard controls
 
 ### Shader reloading
 

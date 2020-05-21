@@ -2,9 +2,9 @@
 
 ## Features
 
-- a
-- b
-- c
+- Click the arrow on the top left to hide and show the tray
+- Undo / Redo
+- Save
 
 ## Control elements
 
@@ -15,7 +15,7 @@ if (button("hello world")) {
     println("Hello, world!");
 }
 ```
-<img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/01_button.jpg?raw=true" width="600" alt="Button">
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/01_button.jpg?raw=true" width="600" alt="Button">
 
 ### Toggle
 A toggle holds its boolean value and changes it when pressed.
@@ -26,7 +26,7 @@ if (toggle("no fill")) {
     noFill();
 }
 ```
-<img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/02_toggle.jpg?raw=true" width="600" alt="Toggle">
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/02_toggle.jpg?raw=true" width="600" alt="Toggle">
 
 ### Options
 
@@ -40,7 +40,7 @@ if (projection.equals("perspective")) {
     ortho();
 }
 ```
-<img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/03_options.jpg?raw=true" width="600" alt="Options">
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/03_options.jpg?raw=true" width="600" alt="Options">
 
 ### Slider
 An infinite slider with variable precision. 
@@ -51,7 +51,7 @@ An infinite slider with variable precision.
 ```java
 strokeWeight(slider("stroke weight"));
 ```
-<img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/04_slider.jpg?raw=true" width="600" alt="Slider">
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/04_slider.jpg?raw=true" width="600" alt="Slider">
  
  
  ### Slider XYZ
@@ -65,20 +65,21 @@ strokeWeight(slider("stroke weight"));
 PVector translate = sliderXYZ("translate");
 translate(translate.x, translate.y, translate.z);
 ```
- <img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/05_sliderXYZ.jpg?raw=true" width="600" alt="SliderXYZ">
+ <img src="https://github.com/KrabCode/Sketches/blob/master/readme/05_sliderXYZ.jpg?raw=true" width="600" alt="SliderXYZ">
  
  ### Color picker
  
  Four sliders controlling the hue, saturation, brightness and alpha of a color.
  - Use picker("stroke").clr() to get the Processing color (integer) value that is independent of the current colorMode.
  - Use the HSBA class if you want to change the hue, saturation, brightness and alpha after querying the picker. 
- - HSBA gives you values in a range of 0-1, so you'll probably want to use colorMode(HSB,1,1,1,1).
+ - HSBA returns its values in ranges of 0-1, so you'll probably want to use colorMode(HSB,1,1,1,1).
  - The hue slider is infinite with a constant precision of 1 hue cycle per sketch width.
+ - The alpha slider is constrained to the range 0-1 and its precision can be changed with the mouse wheel.
 ```java
 stroke(picker("stroke").clr());
 ```
 ```java
-// this does the same thing but it allows you to change the values after asking the picker
+// this does the same thing and it allows you to change the values after asking the picker
 colorMode(HSB,1,1,1,1);
 HSBA myColor = picker("stroke");
 float hue = myColor.hue();
@@ -87,4 +88,4 @@ float br = myColor.br();
 float a = myColor.alpha();
 stroke(hue, sat, br, a);
 ```
-<img src="https://github.com/KrabCode/Sketches/blob/6de7fe44399360e101e28813ee166d17f89c3d5c/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
