@@ -27,9 +27,9 @@ I built this graphical interface on top of Processing for faster and more comfor
         - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any sliders inside to be loaded.
     - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder 
 
-## Control elements
+# Control elements
 
-### Button
+## Button
 A button is true for one frame when pressed.
 ```java
 if (button("hello world")) {
@@ -37,9 +37,8 @@ if (button("hello world")) {
 }
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/01_button.jpg?raw=true" width="600" alt="Button">
----
 
-### Toggle
+## Toggle
 A toggle holds its boolean value and changes it when pressed.
 - It is false by default, which can be changed with a second optional parameter.
 
@@ -49,9 +48,8 @@ if (toggle("no fill")) {
 }
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/02_toggle.jpg?raw=true" width="600" alt="Toggle">
----
 
-### Options
+## Options
 
 A list of strings that returns the currently selected string and changes the selection when pressed.
 - Requires at least two strings.
@@ -64,9 +62,8 @@ if (projection.equals("perspective")) {
 }
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/03_options.jpg?raw=true" width="600" alt="Options">
----
 
-### Slider
+## Slider
 An infinite slider with variable precision. 
 - Dragging your mouse horizontally changes the value.
 - Mouse wheel scrolling changes the precision.
@@ -76,9 +73,8 @@ An infinite slider with variable precision.
 strokeWeight(slider("stroke weight"));
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/04_slider.jpg?raw=true" width="600" alt="Slider">
- ---
- 
- ### Slider XYZ
+  
+ ## Slider XYZ
  
  Three infinite sliders with shared variable precision. 
  - Returns the current PVector value.
@@ -90,9 +86,8 @@ PVector translate = sliderXYZ("translate");
 translate(translate.x, translate.y, translate.z);
 ```
  <img src="https://github.com/KrabCode/Sketches/blob/master/readme/05_sliderXYZ.jpg?raw=true" width="600" alt="SliderXYZ">
- ---
  
- ### Color picker
+ ## Color picker
  
  Four sliders controlling the hue, saturation, brightness and alpha of a color.
  - Use picker`("stroke").clr()` to get the Processing color (integer) value that is independent of the current colorMode.
@@ -114,9 +109,8 @@ float a = myColor.alpha();
 stroke(hue, sat, br, a);
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
----
 
-### Groups
+## Groups
 
 Groups are collections of elements that can be collapsed for visual clarity. 
 - Set the current group by calling `group("groupName")`.
@@ -128,4 +122,4 @@ Groups are collections of elements that can be collapsed for visual clarity.
 - See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/GuiExample.java) for a working example.
 
  <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="200" alt="Groups">
- ---
+ 
