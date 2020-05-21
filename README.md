@@ -1,3 +1,4 @@
+
 # Sketches
 This project contains my newest Processing sketches.
 
@@ -19,7 +20,7 @@ See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManu
 
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/preview.jpg?raw=true" width="400" alt="GUI">
 
-### Keyboard controls
+## Keyboard controls
 | Hotkey  | Action |
 | ------------- | ------------- |
 | H | hide GUI  |
@@ -30,19 +31,19 @@ See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManu
 | I | screenshot |
 | K | record mp4 |
 
-### Recording
+## Recording
 In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphics)` in your sketch near the end of `draw()`.
 
-#### Screenshots
+### Screenshots
    Pressing 'I' saves an image of the current sketch or PGraphics to out/capture/\<timestamp\>_SketchName
-#### Video
+### Video
    Pressing 'K' 
    - saves 360 frames to out/capture/\<timestamp\>_SketchName
         - the number of frames to save can be changed by adjusting the value of `frameRecordingDuration` before starting the recording `setup()`
    - calls ffmpeg when done to save a video to out/video
         - you'll need to download ffmpeg and modify the ffmpegCommand in KrabApplet to match your needs
         - if you don't want to use ffmpeg and just want the images, set `ffmpegEnabled` in KrabApplet to false
-#### Animations and perfect loops
+### Animations and perfect loops
    KrabApplet contains a 't' variable which increments by (2 PI / 360) every frame, making a complete 'rotation' in 360 frames.
    - the `frameRecordingDuration` value does not affect this
    - a simple perfect loop can be achieved by plugging this t value into a `sin()` function and recording the default number of frames
@@ -54,7 +55,7 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
     float loopedNoise = noise.eval(someX,someY,timeX,timeY);
    ```
    
-### Shader reloading
+## Shader reloading
    KrabApplet allows you to modify your shaders and see the results in real-time without having to close and re-run the sketch.
    - The [shader\(\)](https://processing.org/reference/shader_.html) and [filter\(\)](https://processing.org/reference/filter_.html) Processing functions have their counterparts in `hotShader()` and `hotFilter()`.
    - This loads the shader in the background when needed, so you don't need to worry about loading it in setup or having the PShader variable at all.
