@@ -56,3 +56,83 @@ style§stroke§0.15350004§1.0§1.0§0.87200063§1.0
 style§stroke weight§7.500002§10.0
 style§size§30.0§300.0§300.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§console§true
+console§hello world§
+GROUP§transform§true
+transform§translate§1000.0§0.0§-14.0§-458.81
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§true
+style§no background§false
+style§background§0.0§0.0§0.3§1.0§1.0
+style§stroke & fill§0
+style§fill§0.73699945§1.0§0.925§1.0§1.0
+style§stroke§0.70150024§0.0§1.0§1.0§1.0
+style§stroke weight§12.629972§10.0
+style§size§30.0§300.0§300.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§console§true
+console§hello world§
+GROUP§transform§true
+transform§translate§1000.0§0.0§-14.0§-458.81
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§true
+style§no background§false
+style§background§0.0§0.0§0.3§1.0§1.0
+style§stroke & fill§0
+style§fill§0.73699945§1.0§0.925§1.0§1.0
+style§stroke§0.70150024§0.0§1.0§1.0§1.0
+style§stroke weight§12.629972§10.0
+style§size§30.0§300.0§300.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§console§true
+console§hello world§
+GROUP§transform§true
+transform§translate§1000.0§0.0§-14.0§-458.81
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§true
+style§no background§false
+style§background§0.0§0.0§0.3§1.0§1.0
+style§stroke & fill§0
+style§fill§0.73699945§1.0§0.925§1.0§1.0
+style§stroke§0.70150024§0.0§1.0§1.0§1.0
+style§stroke weight§12.629972§10.0
+style§size§30.0§300.0§300.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§console§true
+console§hello world§
+GROUP§transform§true
+transform§translate§1000.0§0.0§-14.0§-458.81
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§true
+style§no background§false
+style§background§0.0§0.0§0.3§1.0§1.0
+style§stroke & fill§0
+style§fill§0.73699945§1.0§0.925§1.0§1.0
+style§stroke§0.70150024§0.0§1.0§1.0§1.0
+style§stroke weight§10.019971§10.0
+style§size§30.0§288.3001§296.10022§298.0501
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§console§true
+console§hello world§
+GROUP§transform§true
+transform§translate§10.0§0.0§0.0§0.0
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§true
+style§no background§false
+style§background§0.0§0.0§0.3§1.0§1.0
+style§stroke & fill§0
+style§fill§0.73699945§1.0§0.925§1.0§1.0
+style§stroke§0.70150024§0.0§1.0§1.0§1.0
+style§stroke weight§10.829969§10.0
+style§size§30.0§300.0§300.0§300.0
+STATE_END

@@ -17,6 +17,7 @@ public class GuiExample extends KrabApplet {
     }
 
     public void draw() {
+        group("console");
         if (button("hello world")) {
             println("Hello, world!");
         }
@@ -30,9 +31,9 @@ public class GuiExample extends KrabApplet {
         rotateZ(rotate.z);
 
         group("style");
-        boolean redrawBackground = toggle("draw background", true);
+        boolean noBackground = toggle("no background");
         int backgroundColor = picker("background").clr();
-        if(redrawBackground) {
+        if(!noBackground) {
             background(backgroundColor);
         }
         String style = options("stroke & fill", "no stroke", "no fill");
@@ -44,7 +45,7 @@ public class GuiExample extends KrabApplet {
         } else if (style.equals("no stroke")) {
             noStroke();
         }
-        PVector size = sliderXYZ("size", 300);
+        PVector size = sliderXYZ("size", 200);
         box(size.x, size.y, size.z);
 
         gui();

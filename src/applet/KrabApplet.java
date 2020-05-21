@@ -23,16 +23,9 @@ public abstract class KrabApplet extends PApplet {
     private static final String UNDO_PREFIX = "UNDO";
     private static final String REDO_PREFIX = "REDO";
     private static final String GROUP_PREFIX = "GROUP";
-    private static final String ACTION_UP = "UP";
-    private static final String ACTION_DOWN = "DOWN";
-    private static final String ACTION_LEFT = "LEFT";
-    private static final String ACTION_RIGHT = "RIGHT";
     private static final String ACTION_PRECISION_ZOOM_IN = "PRECISION_ZOOM_IN";
     private static final String ACTION_PRECISION_ZOOM_OUT = "PRECISION_ZOOM_OUT";
     private static final String ACTION_RESET = "RESET";
-    private static final String ACTION_CONTROL = "CONTROL";
-    private static final String ACTION_ALT = "ALT";
-    private static final String ACTION_ACTIVATE = "ACTIVATE";
     private static final String ACTION_HIDE = "HIDE";
     private static final String ACTION_UNDO = "UNDO";
     private static final String ACTION_REDO = "REDO";
@@ -107,15 +100,12 @@ public abstract class KrabApplet extends PApplet {
     private final ArrayList<String> actions = new ArrayList<String>();
     private final ArrayList<String> previousActions = new ArrayList<String>();
     private boolean pMousePressed = false;
-    private int keyboardSelectionIndex = MENU_BUTTON_COUNT;
-    private boolean keyboardActive = true;
     private boolean trayVisible = true;
     private boolean overlayVisible;
     private boolean horizontalOverlayVisible;
     private boolean verticalOverlayVisible;
     private boolean pickerOverlayVisible;
     private boolean zOverlayVisible;
-    private boolean trayLocked = false; // disable selection of elements in tray when one is already being adjusted
     private Element overlayOwner = null; // do not assign directly!
     private float underlineTrayAnimationStarted = -UNDERLINE_TRAY_ANIMATION_DURATION;
     private float undoRotationStarted = -MENU_ROTATION_DURATION;
@@ -766,7 +756,6 @@ public abstract class KrabApplet extends PApplet {
         if (hideActivated(x, y, w, h)) {
             trayVisible = !trayVisible;
             trayWidth = trayVisible ? trayWidthWhenExtended : 0;
-            keyboardSelectionIndex = 0;
             hideRotationStarted = frameCount;
         }
         float grayscale = (keyboardSelected(MENU_BUTTON_HIDE) || isMouseOver(x, y, w, h)) ? GRAYSCALE_TEXT_SELECTED :
@@ -932,12 +921,6 @@ public abstract class KrabApplet extends PApplet {
         float y = cell * 2.5f;
         pushMatrix();
         translate(0, trayScrollOffset);
-        if (actions.contains(ACTION_ACTIVATE) && !trayVisible && overlayVisible) {
-            overlayVisible = false;
-            while (actions.contains(ACTION_ACTIVATE)) {
-                actions.remove(ACTION_ACTIVATE);
-            }
-        }
         for (Group group : groups) {
             if (group.elements.isEmpty()) {
                 continue;
@@ -1043,7 +1026,7 @@ public abstract class KrabApplet extends PApplet {
     // INPUT
 
     private boolean activated(String query, float x, float y, float w, float h) {
-        return mouseJustReleasedHereScrollAware(x, y, w, h) || keyboardActivated(query) && !trayLocked;
+        return mouseJustReleasedHereScrollAware(x, y, w, h) || (overlayOwner != null && (overlayOwner.group + overlayOwner.name).equals(query));
     }
 
     private boolean mouseJustReleasedHereScrollAware(float x, float y, float w, float h) {
@@ -1052,11 +1035,6 @@ public abstract class KrabApplet extends PApplet {
 
     private boolean mouseJustReleasedHere(float x, float y, float w, float h) {
         return mouseJustReleased() && isPointInRect(mouseX, mouseY, x, y, w, h);
-    }
-
-    private boolean keyboardActivated(String query) {
-        return (overlayOwner != null && (overlayOwner.group + overlayOwner.name).equals(query) || keyboardSelected(query))
-                && actions.contains(ACTION_ACTIVATE);
     }
 
     private boolean mouseJustReleased() {
@@ -1105,34 +1083,6 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean keyboardSelected(String query) {
-        if (!keyboardActive || !trayVisible) {
-            return false;
-        }
-        if ((query.equals(MENU_BUTTON_HIDE) && keyboardSelectionIndex == 0)
-                || (query.equals(MENU_BUTTON_UNDO) && keyboardSelectionIndex == 1)
-                || (query.equals(MENU_BUTTON_REDO) && keyboardSelectionIndex == 2)
-                || (query.equals(MENU_BUTTON_SAVE) && keyboardSelectionIndex == 3)) {
-            return true;
-        }
-        int i = MENU_BUTTON_COUNT;
-        for (Group group : groups) {
-            if (group.name.equals(query) && keyboardSelectionIndex == i) {
-                return true;
-            }
-            i++;
-            for (Element el : group.elements) {
-                if ((group.name + el.name).equals(query) && keyboardSelectionIndex == i) {
-                    if (upAndDownArrowsControlOverlay() && !el.equals(overlayOwner)) {
-                        return false;
-                    }
-                    if (el.equals(overlayOwner)) {
-                        return true;
-                    }
-                    return true;
-                }
-                i++;
-            }
-        }
         return false;
     }
 
@@ -1144,15 +1094,8 @@ public abstract class KrabApplet extends PApplet {
         return MENU_BUTTON_COUNT + groups.size() + elementCount;
     }
 
-    public void mousePressed() {
-        if (!upAndDownArrowsControlOverlay()) {
-            keyboardActive = false;
-        }
-    }
-
     public void keyPressed() {
 //        println((key == CODED ? "code: " + keyCode : "key: " + key));
-        keyboardActive = true;
         if (key == CODED) {
             if (keyboardKeysDoesntContain(keyCode, true)) {
                 keyboardKeys.add(new Key(keyCode, true));
@@ -1203,54 +1146,7 @@ public abstract class KrabApplet extends PApplet {
         previousActions.addAll(actions);
         actions.clear();
         for (Key kk : keyboardKeys) {
-            if (kk.coded) {
-                if (kk.character == UP) {
-                    actions.add(ACTION_UP);
-                    if (!upAndDownArrowsControlOverlay() && kk.repeatCheck() && trayVisible) {
-                        if (keyboardSelectionIndex == MENU_BUTTON_COUNT) {
-                            keyboardSelectionIndex = 0;
-                        } else {
-                            int skipped = hiddenElementCount(false);
-                            keyboardSelectionIndex -= skipped;
-                            keyboardSelectionIndex--;
-                        }
-                    }
-                }
-                if (kk.character == DOWN) {
-                    actions.add(ACTION_DOWN);
-                    if (!upAndDownArrowsControlOverlay() && kk.repeatCheck() && trayVisible) {
-                        if (keyboardSelectionIndex < MENU_BUTTON_COUNT) {
-                            keyboardSelectionIndex = MENU_BUTTON_COUNT;
-                        } else {
-                            int skipped = hiddenElementCount(true);
-                            keyboardSelectionIndex += skipped;
-                            keyboardSelectionIndex++;
-                        }
-                    }
-                }
-                if (kk.character == LEFT) {
-                    if (isAnyGroupKeyboardSelected() && findKeyboardSelectedGroup().expanded) {
-                        Group keyboardSelected = findKeyboardSelectedGroup();
-                        keyboardSelected.expanded = !keyboardSelected.expanded;
-                    } else {
-                        actions.add(ACTION_LEFT);
-                    }
-                }
-                if (kk.character == RIGHT) {
-                    if (isAnyGroupKeyboardSelected() && !findKeyboardSelectedGroup().expanded) {
-                        Group keyboardSelected = findKeyboardSelectedGroup();
-                        keyboardSelected.expanded = !keyboardSelected.expanded;
-                    } else {
-                        actions.add(ACTION_RIGHT);
-                    }
-                }
-                if (kk.character == CONTROL) {
-                    actions.add(ACTION_CONTROL);
-                }
-                if (kk.character == ALT) {
-                    actions.add(ACTION_ALT);
-                }
-            } else if (!kk.coded) {
+            if (!kk.coded) {
                 if (kk.character == 'z' || kk.character == 26) {
                     actions.add(ACTION_UNDO);
                 }
@@ -1265,9 +1161,6 @@ public abstract class KrabApplet extends PApplet {
                 }
                 if (kk.character == '/' || kk.character == '-') {
                     actions.add(ACTION_PRECISION_ZOOM_OUT);
-                }
-                if (kk.character == ' ' || kk.character == ENTER) {
-                    actions.add(ACTION_ACTIVATE);
                 }
                 if (kk.character == 'r') {
                     actions.add(ACTION_RESET);
@@ -1286,39 +1179,6 @@ public abstract class KrabApplet extends PApplet {
             }
             kk.justPressed = false;
         }
-        if (keyboardSelectionIndex >= keyboardSelectionLength()) {
-            keyboardSelectionIndex = MENU_BUTTON_COUNT;
-        }
-        if (keyboardSelectionIndex < MENU_BUTTON_COUNT) {
-            Group lastGroup = getLastGroup();
-            if (lastGroup != null) {
-                if (!lastGroup.expanded) {
-                    keyboardSelectionIndex = keyboardSelectionLength() - lastGroup.elements.size() - 1;
-                } else {
-                    keyboardSelectionIndex = keyboardSelectionLength() - 1;
-                }
-            }
-        }
-/* //debug
-
-        if (lastIndex != keyboardSelectionIndex) {
-            Element el = findKeyboardSelectedElement();
-            Group group = findKeyboardSelectedGroup();
-            String name = "-";
-            if(el != null){
-                name = el.name;
-            }
-            if(group != null){
-                name = group.name;
-            }
-
-            println("before", lastIndex,
-                    "after", keyboardSelectionIndex,
-                    "length", keyboardSelectionLength(),
-                    "current ", name);
-
-        }
-*/
     }
 
     private boolean actionJustReleased(String action) {
@@ -1339,46 +1199,6 @@ public abstract class KrabApplet extends PApplet {
             }
         }
         return longestNameWidth;
-    }
-
-    private int hiddenElementCount(boolean forwardFacing) {
-        Group group = findKeyboardSelectedGroup();
-        if (previousActions.contains(ACTION_ALT)) {
-            if (isAnyElementKeyboardSelected()) {
-                Element el = findKeyboardSelectedElement();
-                group = el.group;
-                if (forwardFacing) {
-                    return group.elements.size() - group.elements.indexOf(el) - 1;
-                } else {
-                    return group.elements.indexOf(el);
-                }
-            } else {
-                if (forwardFacing) {
-                    return group.elements.size();
-                } else {
-                    if (group != null) {
-                        Group previous = findPreviousGroup(group.name);
-                        if (previous != null) {
-                            return previous.elements.size();
-                        }
-                    }
-                    return 0;
-                }
-            }
-        } else if (group != null) {
-            if (forwardFacing && !group.expanded) {
-                return group.elements.size();
-            }
-            if (!forwardFacing) {
-                Group previous = findPreviousGroup(group.name);
-                if (previous.expanded) {
-                    return 0;
-                }
-                return previous.elements.size();
-            }
-        }
-
-        return 0;
     }
 
     // GROUP AND ELEMENT HANDLING
@@ -2466,17 +2286,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void updateOverlay() {
-            updateTrayLock();
-        }
 
-        void updateTrayLock() {
-            boolean isThisBeingUsed = overlayOwner.equals(this) && mousePressed && pMousePressed;
-            if (isThisBeingUsed) {
-                trayLocked = true;
-            }
-            if (!mousePressed) {
-                trayLocked = false;
-            }
         }
 
         protected float updateFullHorizontalSlider(float x, float y, float w, float h, float value, float precision,
@@ -2509,36 +2319,11 @@ public abstract class KrabApplet extends PApplet {
                 if (reversed) {
                     screenSpaceDelta *= -1;
                 }
-                float valueSpaceDelta = screenDistanceToValueDistance(screenSpaceDelta, precision);
-                if (valueSpaceDelta != 0) {
-                    return valueSpaceDelta;
-                }
+                return screenDistanceToValueDistance(screenSpaceDelta, precision);
             }
-            if (previousActions.contains(ACTION_ALT) && previousActions.contains(ACTION_CONTROL)) {
-                return keyboardDelta(true, horizontal, precision);
-            }
-            if ((alternative && !previousActions.contains(ACTION_ALT)) ||
-                    (!alternative && previousActions.contains(ACTION_ALT))) {
-                return 0;
-            }
-            return keyboardDelta(false, horizontal, precision);
+            return 0;
         }
 
-        private float keyboardDelta(boolean directionless, boolean horizontal, float precision) {
-            if (actions.contains(ACTION_LEFT) && (horizontal || directionless)) {
-                return screenDistanceToValueDistance(-3, precision);
-            }
-            if (actions.contains(ACTION_RIGHT) && (horizontal || directionless)) {
-                return screenDistanceToValueDistance(3, precision);
-            }
-            if (actions.contains(ACTION_UP) && (!horizontal || directionless)) {
-                return screenDistanceToValueDistance(-3, precision);
-            }
-            if (actions.contains(ACTION_DOWN) && (!horizontal || directionless)) {
-                return screenDistanceToValueDistance(3, precision);
-            }
-            return 0f;
-        }
 
         float screenDistanceToValueDistance(float screenSpaceDelta, float precision) {
             float valueToScreenRatio = precision / width;
@@ -2706,16 +2491,11 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void recordStateForUndo() {
-            if (mouseJustPressedOutsideGui() || keyboardInteractionJustStarted()) {
+            if (mouseJustPressedOutsideGui()) {
                 pushCurrentStateToUndo();
             }
         }
 
-        boolean keyboardInteractionJustStarted() {
-            boolean wasKeyboardActive = previousActions.contains(ACTION_LEFT) || previousActions.contains(ACTION_RIGHT);
-            boolean isKeyboardActive = actions.contains(ACTION_LEFT) || actions.contains(ACTION_RIGHT);
-            return !wasKeyboardActive && isKeyboardActive;
-        }
     }
 
     private class SliderFloat extends Slider {
@@ -2901,9 +2681,6 @@ public abstract class KrabApplet extends PApplet {
         }
 
         protected void lockOtherSlidersOnMouseOver() {
-            if (keyboardActive) {
-                return;
-            }
             if (isMouseOverXSlider()) {
                 deltaY = 0;
             } else if (isMouseOverYSlider()) {
@@ -2925,18 +2702,6 @@ public abstract class KrabApplet extends PApplet {
                     horizontalRevealAnimationStarted, false, -Float.MAX_VALUE, Float.MAX_VALUE);
             deltaY = updateFullHeightVerticalSlider(0, width - cell, height, sliderHeight, value.y, precision,
                     verticalRevealAnimationStarted, false, -Float.MAX_VALUE, Float.MAX_VALUE);
-        }
-
-        boolean keyboardInteractionJustStarted() {
-            boolean wasKeyboardActive = previousActions.contains(ACTION_LEFT) ||
-                    previousActions.contains(ACTION_RIGHT) ||
-                    previousActions.contains(ACTION_UP) ||
-                    previousActions.contains(ACTION_DOWN);
-            boolean isKeyboardActive = actions.contains(ACTION_LEFT) ||
-                    actions.contains(ACTION_RIGHT) ||
-                    actions.contains(ACTION_UP) ||
-                    actions.contains(ACTION_DOWN);
-            return !wasKeyboardActive && isKeyboardActive;
         }
 
         void handleKeyboardInput() {
@@ -3021,11 +2786,6 @@ public abstract class KrabApplet extends PApplet {
             if (isMouseOverZSlider()) {
                 deltaX = 0;
                 deltaY = 0;
-            } else if (!(actions.contains(ACTION_LEFT) ||
-                    actions.contains(ACTION_UP) ||
-                    actions.contains(ACTION_RIGHT) ||
-                    actions.contains(ACTION_DOWN))) {
-                deltaZ = 0;
             }
         }
 
@@ -3151,22 +2911,6 @@ public abstract class KrabApplet extends PApplet {
                 alphaPrecision *= 10;
                 pushCurrentStateToUndo();
             }
-            if (previousActions.contains(ACTION_CONTROL)) {
-                satChanged = true;
-                if (actions.contains(ACTION_UP)) {
-                    hsba.sat -= .01f;
-                } else if (actions.contains(ACTION_DOWN)) {
-                    hsba.sat += .01f;
-                }
-            }
-            if (previousActions.contains(ACTION_ALT)) {
-                brChanged = true;
-                if (actions.contains(ACTION_UP)) {
-                    hsba.br -= .01f;
-                } else if (actions.contains(ACTION_DOWN)) {
-                    hsba.br += .01f;
-                }
-            }
             hsba.enforceConstraints();
         }
 
@@ -3266,7 +3010,7 @@ public abstract class KrabApplet extends PApplet {
             text("alpha", width - sliderHeight * .5f, 15);
             float alphaDelta = updateInfiniteSlider(alphaPrecision, height, false, false, false);
             boolean isMouseInTopHalf = isMouseOver(width * .5f, 0, width * .5f, height / 2f);
-            if (!satChanged && !brChanged && (keyboardActive || isMouseInTopHalf)) {
+            if (!satChanged && !brChanged && isMouseInTopHalf) {
                 hsba.alpha += alphaDelta;
             }
 
