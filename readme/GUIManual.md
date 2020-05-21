@@ -1,8 +1,18 @@
 
 #GUI Manual
-I built this graphical interface on top of Processing, because it allows for real-time control of the sketches, which results in faster and more comfortable iteration.
+I built this graphical interface on top of Processing for faster and more comfortable iteration.
 
 ## Features
+
+- Color pickers
+- Sliders (1D, 2D, 3D)
+- Toggles
+- Buttons
+- Radio buttons (called 'options' here)
+- Groups of control elements that can be collapsed
+- No need to register the control elements in setup() in order to then query them in draw(). You simply query them wherever you want (even inside loops), and it will lazily initialize a uniquely named element behind the scenes.
+
+## Menu
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
 
 - The arrow on the left hides and shows the tray
@@ -10,10 +20,11 @@ I built this graphical interface on top of Processing, because it allows for rea
 - The undo and redo arrows allow you to go back and forward in changes to the gui state.
     - hotkeys CTRL+Z and CTRL+Y
     - The buttons are crossed-out when they can go no further
-- The save button on the right saves the current state to a file inside the data/gui folder
+- The diskette button on the right saves the current state to a file inside the data/gui folder
     - hotkey CTRL+S
     - The sketch attempts to load the most recent state the first time gui() is called.
     - If you don't register a control element by the first time gui() is called, its previous settings will not be loaded.
+        - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any sliders inside to be loaded.
     - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder 
 
 ## Control elements
@@ -104,3 +115,15 @@ stroke(hue, sat, br, a);
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
 ---
+
+### Groups
+
+Groups are collections of elements that can be collapsed and shown.
+- Using groups manually is optional, you can rely on the default SketchName group to hold all of your elements.
+- Set the current group by calling `group("groupName")`
+- Any element queried afterwards is added to the current group.
+    - Element names must be unique within the group
+- When gui() is run for the first time and when it finishes the current group resets to the default SketchName group.
+- See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/GuiExample.java) for a working example.
+ <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="600" alt="Groups">
+ 
