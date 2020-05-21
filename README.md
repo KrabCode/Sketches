@@ -13,7 +13,7 @@ The finished animations can be found on my [Instagram](https://www.instagram.com
 - Open any class from the src folder that contains a main method and run it as a standalone java program (CTRL+SHIFT+F10 in IDEA)
 
 ## KrabApplet
-All of my sketches extend the [KrabApplet](https://github.com/KrabCode/Sketches/blob/master/src/applet/KrabApplet.java) class which builds on top of Processing and implements a GUI and many common utility functions.
+All of my sketches extend the [KrabApplet](https://github.com/KrabCode/Sketches/blob/master/src/applet/KrabApplet.java) class which builds on top of Processing and implements a GUI and some utility functions.
 
 ### GUI
 See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManual.md).

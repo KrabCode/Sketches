@@ -92,7 +92,7 @@ translate(translate.x, translate.y, translate.z);
  ## Color picker
  
  Four sliders controlling the hue, saturation, brightness and alpha of a color.
- - Use picker`("stroke").clr()` to get the Processing color (integer) value that is independent of the current colorMode.
+ - Use `picker("stroke").clr()` to get the Processing color (integer) value that is independent of the current colorMode.
  - Use the HSBA class if you want to change the hue, saturation, brightness and alpha after querying the picker. 
  - HSBA returns its values in ranges of 0-1, so you'll probably want to use `colorMode(HSB,1,1,1,1)`.
  - The hue slider is infinite with a constant precision of 1 hue cycle per sketch width.
