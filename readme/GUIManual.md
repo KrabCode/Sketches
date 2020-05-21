@@ -1,10 +1,18 @@
 #GUI Manual
 
 ## Features
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
 
-- Click the arrow on the top left to hide and show the tray
-- Undo / Redo
-- Save
+- The arrow on the left hides and shows the tray
+    - hotkey H
+- The undo and redo arrows allow you to go back and forward in changes to the gui state.
+    - hotkeys CTRL+Z and CTRL+Y
+    - The buttons are crossed-out when they can go no further
+- The save button on the right saves the current state to a file inside the data/gui folder
+    - hotkey CTRL+S
+    - The sketch attempts to load the most recent state the first time gui() is called.
+    - If you don't register a control element by the first time gui() is called, its previous settings will not be loaded.
+    - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder 
 
 ## Control elements
 
