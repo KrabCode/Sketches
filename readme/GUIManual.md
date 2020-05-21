@@ -1,5 +1,7 @@
 
-#GUI Manual
+
+##GUI Manual
+
 I built this graphical interface on top of Processing for faster and more comfortable iteration.
 
 ## Features
