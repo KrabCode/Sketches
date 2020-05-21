@@ -120,7 +120,7 @@ Groups are collections of elements that can be collapsed for visual clarity.
 - Any element queried is added to the current group.
     - Element names must be unique within the group.
 - Every element belongs to some group at runtime, but calling `group()` manually is optional, you can rely on the default SketchName group to hold all of your elements.
-- When gui() is run for the first time and when it finishes the current group resets to the default SketchName group.
+- When `gui()` is run for the first time and when it finishes the current group resets to the default SketchName group.
 - See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/GuiExample.java) for a working example.
 
  <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="200" alt="Groups">
