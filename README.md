@@ -37,7 +37,7 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
    Pressing 'I' saves an image of the current sketch or PGraphics to out/capture/\<timestamp\>_SketchName
 #### Video
    Pressing 'K' 
-   - saves 360 frames to out/capture/Timestamp_SketchName
+   - saves 360 frames to out/capture/\<timestamp\>_SketchName
         - the number of frames to save can be changed by adjusting the value of `frameRecordingDuration` before starting the recording `setup()`
    - calls ffmpeg when done to save a video to out/video
         - you'll need to download ffmpeg and modify the ffmpegCommand in KrabApplet to match your needs

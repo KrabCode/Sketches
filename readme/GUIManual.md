@@ -10,7 +10,7 @@ I built this graphical interface on top of Processing for faster and more comfor
 - Buttons
 - Radio buttons (called 'options' here)
 - Groups of control elements that can be collapsed
-- No need to register the control elements in setup() in order to then query them in draw(). You simply query them wherever you want (even inside loops), and it will lazily initialize a uniquely named element behind the scenes.
+- No need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them wherever you want (even inside loops), and it will lazily initialize a uniquely named element behind the scenes.
 
 ## Menu
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
@@ -22,8 +22,8 @@ I built this graphical interface on top of Processing for faster and more comfor
     - The buttons are crossed-out when they can go no further
 - The diskette button on the right saves the current state to a file inside the data/gui folder
     - hotkey CTRL+S
-    - The sketch attempts to load the most recent state the first time gui() is called.
-    - If you don't register a control element by the first time gui() is called, its previous settings will not be loaded.
+    - The sketch attempts to load the most recent state the first time `gui()` is called.
+    - If you don't register a control element by the first time `gui()` is called, its previous settings will not be loaded.
         - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any sliders inside to be loaded.
     - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder 
 
@@ -82,7 +82,7 @@ strokeWeight(slider("stroke weight"));
  
  Three infinite sliders with shared variable precision. 
  - Returns the current PVector value.
- - Use PVector.copy() if you want to modify the PVector without affecting the slider.
+ - Use `myPVector.copy()` if you want to modify the PVector without affecting the slider.
  - The default value is 0, and it can be set with optional parameters.
  - There is a sliderXY variant without the z slider.
 ```java
@@ -95,9 +95,9 @@ translate(translate.x, translate.y, translate.z);
  ### Color picker
  
  Four sliders controlling the hue, saturation, brightness and alpha of a color.
- - Use picker("stroke").clr() to get the Processing color (integer) value that is independent of the current colorMode.
+ - Use picker`("stroke").clr()` to get the Processing color (integer) value that is independent of the current colorMode.
  - Use the HSBA class if you want to change the hue, saturation, brightness and alpha after querying the picker. 
- - HSBA returns its values in ranges of 0-1, so you'll probably want to use colorMode(HSB,1,1,1,1).
+ - HSBA returns its values in ranges of 0-1, so you'll probably want to use `colorMode(HSB,1,1,1,1)`.
  - The hue slider is infinite with a constant precision of 1 hue cycle per sketch width.
  - The alpha slider is constrained to the range 0-1 and its precision can be changed with the mouse wheel.
 ```java
@@ -118,12 +118,14 @@ stroke(hue, sat, br, a);
 
 ### Groups
 
-Groups are collections of elements that can be collapsed and shown.
-- Using groups manually is optional, you can rely on the default SketchName group to hold all of your elements.
-- Set the current group by calling `group("groupName")`
-- Any element queried afterwards is added to the current group.
-    - Element names must be unique within the group
+Groups are collections of elements that can be collapsed for visual clarity. 
+- Set the current group by calling `group("groupName")`.
+    - Group names must be unique within one sketch to allow referencing the group with a string.
+- Any element queried is added to the current group.
+    - Element names must be unique within the group.
+- Every element belongs to some group at runtime, but calling `group()` manually is optional, you can rely on the default SketchName group to hold all of your elements.
 - When gui() is run for the first time and when it finishes the current group resets to the default SketchName group.
 - See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/GuiExample.java) for a working example.
- <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="600" alt="Groups">
- 
+
+ <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="200" alt="Groups">
+ ---
