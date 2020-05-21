@@ -10,7 +10,7 @@ The finished animations can be found on my [Instagram](https://www.instagram.com
 - Download and set up Java 1.8
 - Download and include the [Processing](https://processing.org/download/) library version 3.5.3
 - Mark the src folder as source root
-- Open any class from the src folder that contains a main method and run it like a standalone java program (CTRL+SHIFT+F10 in IDEA)
+- Open any class from the src folder that contains a main method and run it as a standalone java program (CTRL+SHIFT+F10 in IDEA)
 
 ## KrabApplet
 All of my sketches extend the [KrabApplet](https://github.com/KrabCode/Sketches/blob/master/src/applet/KrabApplet.java) class which builds on top of Processing and implements a GUI and many common utility functions.
