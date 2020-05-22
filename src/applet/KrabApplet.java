@@ -360,7 +360,11 @@ public abstract class KrabApplet extends PApplet {
         if (frameCount == 1) {
             trayVisible = elementCount() != 0;
         }
-        currentGroup = new Group(this.getClass().getSimpleName());
+        resetCurrentGroup();
+    }
+
+    protected void resetCurrentGroup() {
+        currentGroup = null;
     }
 
     private void updateScrolling() {
@@ -914,6 +918,9 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void group(String name) {
+        if(groups.isEmpty()) {
+            createDefaultGroup();
+        }
         Group group = findGroup(name);
         if (!groupExists(name)) {
             group = new Group(name);
@@ -1220,16 +1227,18 @@ public abstract class KrabApplet extends PApplet {
     private Group getCurrentGroup() {
         if (currentGroup == null) {
             if (groups.isEmpty()) {
-                Group anonymous = new Group(this.getClass().getSimpleName());
-                groups.add(anonymous);
-                currentGroup = anonymous;
+                createDefaultGroup();
             } else {
                 return groups.get(0);
             }
         }
         return currentGroup;
     }
-
+    private void createDefaultGroup() {
+        Group defaultGroup = new Group(this.getClass().getSimpleName());
+        groups.add(defaultGroup);
+        currentGroup = defaultGroup;
+    }
     private void setCurrentGroup(Group currentGroup) {
         this.currentGroup = currentGroup;
     }

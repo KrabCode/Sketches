@@ -12,7 +12,7 @@ public class Cross extends KrabApplet {
     }
 
     public void settings() {
-        size(800, 800, P3D);
+        size(1000, 1000, P3D);
     }
 
     public void setup() {
@@ -24,11 +24,18 @@ public class Cross extends KrabApplet {
         pg.beginDraw();
         pg.colorMode(HSB,1,1,1,1);
         backgroundShader();
-        updateLighting();
         translateToCenter(pg);
+        translate(pg);
+        updateLighting();
+        lightShader();
         preRotate(pg);
-        crossShader();
-        drawCross();
+        drawSeaOfBoxes();
+        group("recursive");
+        drawRecursiveShape(
+                sliderXYZ("orig translate").copy(),
+                sliderXYZ("orig rotate").copy(),
+                sliderXYZ("orig size", 600, 50, 600).copy());
+        sliderXYZ("rotate").add(sliderXYZ("rotate delta"));
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
@@ -47,19 +54,29 @@ public class Cross extends KrabApplet {
         pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir.x,dirLightDir.y,dirLightDir.z);
         pg.ambient(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
         pg.ambientLight(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
+        resetCurrentGroup();
+    }
+
+    private void drawRecursiveShape(PVector translate, PVector rotate, PVector size) {
+        float minSize = slider("min size", 10);
+        if(size.x < minSize || size.y < minSize || size.z < minSize) {
+            return;
+        }
+        pg.rotateX(rotate.x);
+        pg.rotateY(rotate.y);
+        pg.rotateZ(rotate.z);
+        pg.translate(translate.x, translate.y, translate.z);
+        pg.box(size.x, size.y, size.z);
+        PVector sizeMult = sliderXYZ("size mult", .9f);
+        drawRecursiveShape(sliderXYZ("translate"), sliderXYZ("rotate"), new PVector(size.x*sizeMult.x, size.y*sizeMult.y, size.z*sizeMult.z));
+    }
+
+
+    private void drawSeaOfBoxes() {
+        // grid of columns on the XZ plane with fbm informed Y size
 
     }
 
-    private void drawCross() {
-        group("cross");
-        PVector sizeA = sliderXYZ("cross A", 50, 600, 50);
-        PVector sizeB = sliderXYZ("cross B", 200, 50, 50);
-        pg.strokeWeight(slider("weight"));
-        pg.stroke(picker("stroke").clr());
-        pg.fill(picker("fill").clr());
-        drawBox("translate A", sizeA);
-        drawBox("translate B", sizeB);
-    }
 
     private void drawBox(String translateSliderName, PVector size) {
         pg.pushMatrix();
@@ -76,7 +93,7 @@ public class Cross extends KrabApplet {
     }
 
 
-    private void crossShader() {
+    private void lightShader() {
         String vert = "shaders/_2020_05/cross/LightVert.glsl";
         String frag = "shaders/_2020_05/cross/LightFrag.glsl";
         uniform(frag, vert).set("time", t);

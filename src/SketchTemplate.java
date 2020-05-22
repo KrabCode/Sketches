@@ -9,7 +9,7 @@ public class SketchTemplate extends KrabApplet {
     }
 
     public void settings() {
-        size(800, 800, P3D);
+        size(1000,1000, P3D);
     }
 
     public void setup() {

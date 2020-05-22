@@ -74,7 +74,8 @@ An infinite slider with variable precision.
 - There is a sliderInt variant which rounds your floats to the nearest integer and returns int.
 
 ```java
-strokeWeight(slider("stroke weight"));
+float weight = slider("stroke weight");
+strokeWeight(weight);
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/04_slider.jpg?raw=true" width="600" alt="Slider">
   
