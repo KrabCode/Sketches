@@ -3,10 +3,7 @@ package _2020_04;
 import applet.KrabApplet;
 import processing.core.PConstants;
 import processing.core.PGraphics;
-import processing.core.PShape;
 import processing.core.PVector;
-
-import java.util.ArrayList;
 
 public class LitGrid extends KrabApplet {
     private PGraphics pg;
@@ -39,7 +36,7 @@ public class LitGrid extends KrabApplet {
         }
         translateToCenter(pg);
         translate(pg, "global pos");
-        rotate(pg);
+        preRotate(pg);
         translate(pg, "local pos");
         pg.hint(PConstants.DISABLE_OPTIMIZED_STROKE);
         updateShader();

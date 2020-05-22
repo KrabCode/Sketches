@@ -49,7 +49,7 @@ public class TriangleSphere extends KrabApplet {
         pg.directionalLight(1,0,1, sliderXYZ("light").x, sliderXYZ("light").y, sliderXYZ("light").z);
         group("planet");
         updateShader();
-        rotate(pg);
+        preRotate(pg);
         planet.setStrokeWeight(slider("weight", 1));
         planet.setStroke(picker("stroke").clr());
         planet.setFill(picker("fill").clr());

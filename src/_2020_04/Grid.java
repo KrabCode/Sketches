@@ -1,11 +1,7 @@
 package _2020_04;
 
 import applet.KrabApplet;
-import processing.core.PConstants;
 import processing.core.PGraphics;
-import processing.core.PMatrix;
-import processing.core.PVector;
-import processing.opengl.PGraphicsOpenGL;
 
 public class Grid extends KrabApplet {
     private PGraphics pg;
@@ -28,7 +24,7 @@ public class Grid extends KrabApplet {
         fadeToBlack(pg);
         pg.translate(width*.5f, height*.5f);
         translate(pg);
-        rotate(pg);
+        preRotate(pg);
         pg.hint(DISABLE_OPTIMIZED_STROKE);
         updateShader(pg);
         pg.strokeWeight(slider("weight", 1));

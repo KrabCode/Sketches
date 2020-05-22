@@ -34,7 +34,7 @@ public class Instancing_2 extends KrabApplet {
             pg.translate(width/2f, height/2f);
         }
         translate(pg);
-        rotate(pg);
+        preRotate(pg);
         pg.hint(DISABLE_OPTIMIZED_STROKE);
         updateShader();
         for(PShape shape : pointArrays) {

@@ -70,3 +70,16 @@ String frag = "shaders/templates/frag.glsl";
 uniform(frag).set("time", t);
 hotFilter(frag, pg);
 ```
+
+## Utility functions
+
+fadeToBlack
+fadeToWhite
+mouseRotation
+translateToCenter
+preRotate
+hash
+isPointInRect
+ease
+clampNorm
+lerpMany

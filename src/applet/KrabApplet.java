@@ -233,6 +233,10 @@ public abstract class KrabApplet extends PApplet {
         return sliderXYZ(name, defaultXYZ, defaultXYZ, defaultXYZ, numberOfDigitsInFlooredNumber(defaultXYZ) * 10);
     }
 
+    protected PVector sliderXYZ(String name, float defaultX, float defaultY, float defaultZ) {
+        return sliderXYZ(name, defaultX, defaultY, defaultZ, numberOfDigitsInFlooredNumber(max(max(defaultX, defaultY), defaultZ) * 10));
+    }
+
     protected PVector sliderXYZ(String name, float x, float y, float z, float precision) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
@@ -479,7 +483,7 @@ public abstract class KrabApplet extends PApplet {
         pg.translate(translate.x, translate.y, translate.z);
     }
 
-    protected void rotate(PGraphics pg) {
+    protected void preRotate(PGraphics pg) {
         PVector rotation = sliderXYZ("rotate", 0);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
@@ -730,6 +734,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     // TRAY
+
     private void updateFps() {
         int nonFlickeringFrameRate = floor(frameRate > 55 ? 60 : frameRate);
         String fps = nonFlickeringFrameRate + " fps";

@@ -1,0 +1,71 @@
+STATE_BEGIN
+UNDO
+GROUP§Cross§true
+Cross§background§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§0.0§0.0§0.0
+lights§shine§4.5874996§10.0
+lights§rotate§10.0§-0.40000188§-1.4750005§-0.7374997
+GROUP§cross§true
+cross§cross A§4.0§50.0§600.0§50.0
+cross§cross B§400.0§317.07007§52.95999§45.979996
+cross§stroke§0.0§0.0§0.5§1.0§1.0
+cross§fill§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cross§true
+Cross§background§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0875§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-1.2750006§0.075000234§-0.95
+lights§shine§6.7625§10.0
+lights§rotate§10.0§-0.40000188§-1.4750005§-0.7374997
+GROUP§cross§true
+cross§cross A§4.0§50.0§600.0§50.0
+cross§cross B§400.0§317.07007§52.95999§45.979996
+cross§stroke§0.0§0.0§0.5§1.0§1.0
+cross§fill§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cross§true
+Cross§background§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0875§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-0.3750018§0.6749996§-0.66250014
+lights§shine§6.7625§10.0
+lights§rotate§10.0§3.79999§-5.9499927§-3.3375018
+GROUP§cross§true
+cross§cross A§4.0§50.0§600.0§50.0
+cross§cross B§400.0§317.07007§52.95999§45.979996
+cross§stroke§0.0§0.0§0.5§1.0§1.0
+cross§fill§0.0§0.0§0.0§1.0§1.0
+cross§translate A§10.0§0.0§0.0§0.0
+cross§translate B§100.0§0.0§90.125§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+lights§rotate§10.0§3.8999903§-6.2999883§-3.5125024
+GROUP§cross§true
+cross§cross A§4.0§50.0§600.0§50.0
+cross§cross B§4.0§347.20203§57.720093§59.995037
+cross§weight§7.887501§100.0
+cross§stroke§0.0§0.0§1.0§1.0§1.0
+cross§fill§0.0§0.0§0.0§1.0§1.0
+cross§translate A§10.0§0.0§0.0§0.0
+cross§translate B§100.0§0.0§144.225§0.0
+STATE_END
