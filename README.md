@@ -10,10 +10,10 @@ The finished animations can be found on my [Instagram](https://www.instagram.com
 - Download and set up Java 1.8
 - Download and include the [Processing](https://processing.org/download/) library version 3.5.3
 - Mark the src folder as source root
-- Open any class from the src folder that contains a main method and run it as a standalone java program (CTRL+SHIFT+F10 in IDEA)
+- Open any Java class from the src folder that contains a main method and run it as a standalone Java program (CTRL+SHIFT+F10 in IDEA)
 
 # KrabApplet
-All of my sketches extend the [KrabApplet](https://github.com/KrabCode/Sketches/blob/master/src/applet/KrabApplet.java) class which builds on top of Processing and implements a GUI and some utility functions.
+All of my sketches extend the [KrabApplet](https://github.com/KrabCode/Sketches/blob/master/src/applet/KrabApplet.java) class which builds on top of Processing's PApplet and implements a GUI and some utility functions.
 
 ## GUI
 See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManual.md).
@@ -38,18 +38,18 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
    Pressing 'I' saves an image of the current sketch or PGraphics to out/capture/\<timestamp\>_SketchName
 ### Video
    Pressing 'K' 
-   - saves 360 frames to out/capture/\<timestamp\>_SketchName
-        - the number of frames to save can be changed by adjusting the value of `frameRecordingDuration` before starting the recording `setup()`
-   - calls ffmpeg when done to save a video to out/video
-        - you'll need to download ffmpeg and modify the `ffmpegCommand` in KrabApplet to match your needs
-        - if you don't want to use ffmpeg and just want the images, set `ffmpegEnabled` in KrabApplet to false
+   - Saves 360 frames to out/capture/\<timestamp\>_SketchName
+        - The number of frames to save can be changed by adjusting the value of `frameRecordingDuration` before starting the recording.
+   - Calls ffmpeg when done to save a video to out/video.
+        - You'll need to download ffmpeg and modify the `ffmpegCommand` in KrabApplet to match your needs.
+        - If you don't want to use ffmpeg and just want the images, set `ffmpegEnabled` in KrabApplet to false.
 ### Animations and perfect loops
-   KrabApplet contains a 't' variable which increments by (2 PI / 360) every frame, making a complete 'rotation' in 360 frames.
-   - the `frameRecordingDuration` value does not affect this
-   - a simple perfect loop can be achieved by plugging this t value into a `sin()` function and recording the default number of frames
-   - a more complex 2D perfect loop can be done with the parametric equation of a circle and then plugged into a noise function, see Etienne Jacob's [tutorial](https://necessarydisorder.wordpress.com/2017/11/15/drawing-from-noise-and-then-making-animated-loopy-gifs-from-there/)
+   KrabApplet contains a 't' variable which increments by `TWO_PI / 360` every frame, making a complete 'rotation' in 360 frames.
+   - The `frameRecordingDuration` value does not affect this.
+   - A simple perfect loop can be achieved by plugging this t value into a `sin()` function and recording the default number of frames.
+   - A more complex 2D perfect loop can be done with the parametric equation of a circle and then plugged into a noise function, see Etienne Jacob's [tutorial](https://necessarydisorder.wordpress.com/2017/11/15/drawing-from-noise-and-then-making-animated-loopy-gifs-from-there/).
    ```java
-    float timeRadius = 1;
+    float timeRadius = 1.6f;
     float timeX = timeRadius*cos(t);
     float timeY = timeRadius*sin(t);
     float loopedNoise = noise.eval(someX,someY,timeX,timeY);
@@ -64,8 +64,9 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
    - The optional PGraphics parameter specifies a PGraphics to apply the shader or filter to. It is applied to the main canvas otherwise. 
         - I recommend creating a separate PGraphics for drawing everything with KrabApplet, because otherwise the shaders and other things done on the main canvas can negatively impact drawing the GUI which is always drawn on the main canvas.
         - You can display the PGraphics easily on the main canvas using `image(pg, 0, 0, width, height)` before calling `rec(pg)` and `gui()` at the end of `draw()`.
+   - You can include a vertex shader in the parameters, it will also be reloaded at runtime, but when calling any of these functions always pass both of them as parameters.
 ```java
-String split = "shaders/templates/frag.glsl";
-uniform(split).set("time", t);
-hotFilter(split, pg);
+String frag = "shaders/templates/frag.glsl";
+uniform(frag).set("time", t);
+hotFilter(frag, pg);
 ```

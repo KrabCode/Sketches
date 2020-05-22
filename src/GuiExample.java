@@ -1,6 +1,8 @@
 import applet.KrabApplet;
 import processing.core.PVector;
 
+// this class is referenced from the GUI Manual in readme
+
 public class GuiExample extends KrabApplet {
 
     public static void main(String[] passedArgs) {
