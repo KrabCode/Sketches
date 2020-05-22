@@ -1,3 +1,5 @@
+package readme;
+
 import applet.KrabApplet;
 import processing.core.PVector;
 

@@ -1,6 +1,6 @@
 # GUI Manual
 
-I built this graphical interface on top of Processing for faster and more comfortable iteration.
+This manual explains how to use my graphical user interface I built on top of Processing for faster and more comfortable iteration while making stuff with Processing.
 
 ## Features
 
@@ -71,7 +71,7 @@ An infinite slider with variable precision.
 - Dragging your mouse horizontally changes the value.
 - Mouse wheel scrolling changes the precision.
 - The default value can be specified as an optional parameter.
-- There is a sliderInt variant which rounds your floats to the nearest integer and return int.
+- There is a sliderInt variant which rounds your floats to the nearest integer and returns int.
 
 ```java
 strokeWeight(slider("stroke weight"));
@@ -123,7 +123,7 @@ Groups are collections of elements that can be collapsed for visual clarity.
     - Group names must be unique within one sketch to allow referencing the group with a string.
 - Calling `group()` manually is optional, you can rely on the default SketchName group to hold all of your elements.
 - Each time `gui()` ends it resets the current group to the default SketchName group.
-- See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/GuiExample.java).
+- See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/readme/GuiExample.java).
 
  <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="200" alt="Groups">
  
