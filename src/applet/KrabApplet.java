@@ -86,20 +86,19 @@ public abstract class KrabApplet extends PApplet {
     protected boolean mousePressedOutsideGui = false;
     protected int frameRecordingStarted = 0;
     protected int frameRecordingDuration = 360; // assuming t += radians(1) per frame for a perfect loop
-    private boolean ffmpegEnabled = true;
     protected float timeSpeed = 1;
     private float trayWidthWhenExtended = minimumTrayWidth;
     private float trayWidth = minimumTrayWidth;
-    private final ArrayList<ArrayList<String>> undoStack = new ArrayList<ArrayList<String>>();
-    private final ArrayList<ArrayList<String>> redoStack = new ArrayList<ArrayList<String>>();
+    private final ArrayList<ArrayList<String>> undoStack = new ArrayList<>();
+    private final ArrayList<ArrayList<String>> redoStack = new ArrayList<>();
     private boolean captureScreenshot = false;
     private int screenshotsAlreadyCaptured = 0;
-    private final ArrayList<Group> groups = new ArrayList<Group>();
+    private final ArrayList<Group> groups = new ArrayList<>();
     private Group currentGroup = null; // do not assign to nor read directly!
-    private final ArrayList<Key> keyboardKeys = new ArrayList<Key>();
-    private final ArrayList<Key> keyboardKeysToRemove = new ArrayList<Key>();
-    private final ArrayList<String> actions = new ArrayList<String>();
-    private final ArrayList<String> previousActions = new ArrayList<String>();
+    private final ArrayList<Key> keyboardKeys = new ArrayList<>();
+    private final ArrayList<Key> keyboardKeysToRemove = new ArrayList<>();
+    private final ArrayList<String> actions = new ArrayList<>();
+    private final ArrayList<String> previousActions = new ArrayList<>();
     private boolean pMousePressed = false;
     private boolean trayVisible = true;
     private boolean overlayVisible;
@@ -117,11 +116,11 @@ public abstract class KrabApplet extends PApplet {
     private int redoHoldDuration = 0;
     private final int menuButtonHoldThreshold = 60;
     private float trayScrollOffset = 0;
-    private final ArrayList<Float> scrollOffsetHistory = new ArrayList<Float>();
-    private ArrayList<ShaderSnapshot> snapshots = new ArrayList<ShaderSnapshot>();
-    private int shaderRefreshRateInMillis = 36;
-    private PMatrix3D mouseRotation = new PMatrix3D();
-    private PMatrix3D sliderRotationMatrix = new PMatrix3D();
+    private final ArrayList<Float> scrollOffsetHistory = new ArrayList<>();
+    private final ArrayList<ShaderSnapshot> snapshots = new ArrayList<>();
+    private final int shaderRefreshRateInMillis = 36;
+    private final PMatrix3D mouseRotation = new PMatrix3D();
+    private final PMatrix3D sliderRotationMatrix = new PMatrix3D();
     private PVector previousSliderRotation = new PVector();
 
     // PUBLIC GUI INTERFACE
@@ -542,6 +541,7 @@ public abstract class KrabApplet extends PApplet {
             println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted - 1, "saved");
             PImage currentSketch = pg.get();
             pg.save(captureDir + frameNumber + ".jpg");
+            boolean ffmpegEnabled = true;
             if (frameCount == frameRecordingEnd - 1 && ffmpegEnabled) {
                 println("capture ended, running ffmpeg, please wait...");
                 try {
@@ -666,12 +666,12 @@ public abstract class KrabApplet extends PApplet {
 
     protected ArrayList<PVector> ngon(float radius, int detail, int sides) {
         sides = max(1, sides);
-        ArrayList<PVector> corners = new ArrayList<PVector>();
+        ArrayList<PVector> corners = new ArrayList<>();
         for (int i = 0; i <= sides; i++) {
             float theta = map(i, 0, sides, 0, TAU);
             corners.add(PVector.fromAngle(theta).mult(radius));
         }
-        ArrayList<PVector> shape = new ArrayList<PVector>();
+        ArrayList<PVector> shape = new ArrayList<>();
         for (int i = 0; i < detail; i++) {
             float inorm = clampNorm(i, 0, detail);
             float side = map(inorm, 0, 1, 0, sides);
@@ -727,7 +727,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected ArrayList<PVector> spiralSpherePoints(int count) {
-        ArrayList<PVector> points = new ArrayList<PVector>();
+        ArrayList<PVector> points = new ArrayList<>();
         float s = 3.6f / sqrt(count);
         float dz = 2.0f / count;
         float lon = 0;
@@ -1354,7 +1354,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private ArrayList<String> getGuiState() {
-        ArrayList<String> states = new ArrayList<String>();
+        ArrayList<String> states = new ArrayList<>();
         for (Group group : groups) {
             states.add(group.getState());
             for (Element el : group.elements) {
@@ -1391,7 +1391,7 @@ public abstract class KrabApplet extends PApplet {
     void saveStateToFile() {
         pushCurrentStateToUndo();
         File file = dataFile(settingsPath());
-        ArrayList<String> save = new ArrayList<String>(Arrays.asList(loadLastStateFromFile(false)));
+        ArrayList<String> save = new ArrayList<>(Arrays.asList(loadLastStateFromFile(false)));
         save.add(STATE_BEGIN);
         save.add(UNDO_PREFIX);
         save.addAll(undoStack.get(undoStack.size() - 1));
@@ -1418,7 +1418,7 @@ public abstract class KrabApplet extends PApplet {
             redoStack.clear();
             undoStack.clear();
             boolean pushingUndo = false;
-            ArrayList<String> runningState = new ArrayList<String>();
+            ArrayList<String> runningState = new ArrayList<>();
             for (String line : lines) {
                 if (line.startsWith(UNDO_PREFIX)) {
                     pushingUndo = true;
@@ -1430,12 +1430,11 @@ public abstract class KrabApplet extends PApplet {
                     if (pushingUndo) {
 //                        println("pushing ", concat(runningState));
                         pushStateToUndo(runningState);
-                        runningState.clear();
                     } else {
 //                        println("pushing ", concat(runningState));
                         pushStateToRedo(runningState);
-                        runningState.clear();
                     }
+                    runningState.clear();
                 } else {
                     runningState.add(line);
                 }
@@ -1709,26 +1708,27 @@ public abstract class KrabApplet extends PApplet {
     private PVector getVector(float u, float v, float r, float h) {
         String option = options("russian", "catenoid", "screw", "hexaedron", "moebius",
                 "torus", "multitorus", "helicoidal", "ufo", "sphere");
-        if (option.equals("russian")) {
-            return russianRoof(u, v, r, h);
-        } else if (option.equals("catenoid")) {
-            return catenoid(u, v, r, h);
-        } else if (option.equals("screw")) {
-            return screw(u, v, r, h);
-        } else if (option.equals("hexaedron")) {
-            return hexaedron(u, v, r, h);
-        } else if (option.equals("moebius")) {
-            return moebius(u, v, r, h);
-        } else if (option.equals("torus")) {
-            return torus(u, v, r, h);
-        } else if (option.equals("multitorus")) {
-            return multitorus(u, v, r, h);
-        } else if (option.equals("helicoidal")) {
-            return helicoidal(u, v, r, h);
-        } else if (option.equals("ufo")) {
-            return ufo(u, v, r, h);
-        } else if (option.equals("sphere")) {
-            return sphere(u, v, r, h);
+        switch (option) {
+            case "russian":
+                return russianRoof(u, v, r, h);
+            case "catenoid":
+                return catenoid(u, v, r, h);
+            case "screw":
+                return screw(u, v, r, h);
+            case "hexaedron":
+                return hexaedron(u, v, r, h);
+            case "moebius":
+                return moebius(u, v, r, h);
+            case "torus":
+                return torus(u, v, r, h);
+            case "multitorus":
+                return multitorus(u, v, r, h);
+            case "helicoidal":
+                return helicoidal(u, v, r, h);
+            case "ufo":
+                return ufo(u, v, r, h);
+            case "sphere":
+                return sphere(u, v, r, h);
         }
         return new PVector();
     }
@@ -1983,20 +1983,18 @@ public abstract class KrabApplet extends PApplet {
         String name;
         int animationStarted = -GROUP_TOGGLE_ANIMATION_DURATION;
         boolean expanded = true;
-        ArrayList<Element> elements = new ArrayList<Element>();
+        ArrayList<Element> elements = new ArrayList<>();
         float elementAlpha = 1;
 
         Group(String name) {
             this.name = name;
         }
 
-        public boolean update(float y) {
+        public void update(float y) {
             if (activated(name, 0, y - cell, trayWidth, cell)) {
                 expanded = !expanded;
                 animationStarted = frameCount;
-                return true;
             }
-            return false;
         }
 
         public void displayInTray(float x, float y) {
@@ -2154,7 +2152,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private class Radio extends Element {
-        ArrayList<String> options = new ArrayList<String>();
+        ArrayList<String> options = new ArrayList<>();
         int valueIndex = 0;
 
         Radio(Group parent, String name, String[] options) {
