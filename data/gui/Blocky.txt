@@ -1,0 +1,1478 @@
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§background§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§0.0§0.0§0.0
+lights§shine§4.5874996§10.0
+lights§rotate§10.0§-0.40000188§-1.4750005§-0.7374997
+GROUP§Blocky§true
+Blocky§Blocky A§4.0§50.0§600.0§50.0
+Blocky§Blocky B§400.0§317.07007§52.95999§45.979996
+Blocky§stroke§0.0§0.0§0.5§1.0§1.0
+Blocky§fill§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§background§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0875§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-1.2750006§0.075000234§-0.95
+lights§shine§6.7625§10.0
+lights§rotate§10.0§-0.40000188§-1.4750005§-0.7374997
+GROUP§Blocky§true
+Blocky§Blocky A§4.0§50.0§600.0§50.0
+Blocky§Blocky B§400.0§317.07007§52.95999§45.979996
+Blocky§stroke§0.0§0.0§0.5§1.0§1.0
+Blocky§fill§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§background§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0875§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-0.3750018§0.6749996§-0.66250014
+lights§shine§6.7625§10.0
+lights§rotate§10.0§3.79999§-5.9499927§-3.3375018
+GROUP§Blocky§true
+Blocky§Blocky A§4.0§50.0§600.0§50.0
+Blocky§Blocky B§400.0§317.07007§52.95999§45.979996
+Blocky§stroke§0.0§0.0§0.5§1.0§1.0
+Blocky§fill§0.0§0.0§0.0§1.0§1.0
+Blocky§translate A§10.0§0.0§0.0§0.0
+Blocky§translate B§100.0§0.0§90.125§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+lights§rotate§10.0§3.8999903§-6.2999883§-3.5125024
+GROUP§Blocky§true
+Blocky§Blocky A§4.0§50.0§600.0§50.0
+Blocky§Blocky B§4.0§347.20203§57.720093§59.995037
+Blocky§weight§7.887501§100.0
+Blocky§stroke§0.0§0.0§1.0§1.0§1.0
+Blocky§fill§0.0§0.0§0.0§1.0§1.0
+Blocky§translate A§10.0§0.0§0.0§0.0
+Blocky§translate B§100.0§0.0§144.225§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lights§false
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+lights§rotate§10.0§3.8999903§-6.2999883§-3.5125024
+GROUP§recursive§true
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§0.0§0.6600003§0.0
+recursive§orig size§4.0§600.0§50.0§50.0
+recursive§min size§10.0§20.0
+recursive§translate§1000.0§0.0§-27.28003§0.0
+recursive§rotate§10.0§0.0§0.0§0.0
+recursive§size change§40.0§-100.0§-100.0§-100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+lights§rotate§10.0§4.78§-5.9799848§-3.3525026
+GROUP§recursive§true
+recursive§orig translate§100.0§-0.6§186.78001§0.7
+recursive§orig rotate§10.0§1.7399988§6.2600193§0.0
+recursive§orig size§4.0§600.0§50.0§50.0
+recursive§min size§2.360019§200.0
+recursive§translate§10.0§0.0§0.0§0.0
+recursive§rotate§10.0§0.0§0.0§0.02000032
+recursive§size change§30.0§-0.9999937§-0.2799968§-1.9299991
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+GROUP§recursive§true
+recursive§orig translate§100.0§-0.6§186.78001§0.7
+recursive§orig rotate§10.0§3.2199974§5.120023§0.29
+recursive§orig size§4.0§600.0§50.0§50.0
+recursive§min size§2.360019§200.0
+recursive§size mult§1.0§0.5000006§0.5000016§0.50100124
+recursive§translate§10.0§0.0§0.0§0.0
+recursive§rotate§10.0§0.0§0.0§0.02000032
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+GROUP§recursive§true
+recursive§orig translate§100.0§0.0§65.20003§0.0
+recursive§orig rotate§10.0§0.0§0.0§0.0
+recursive§orig size§4.0§600.0§50.0§50.0
+recursive§min size§2.360019§200.0
+recursive§size mult§10.0§0.9§0.9§0.9
+recursive§translate§10.0§0.0§5.8399997§0.0
+recursive§rotate§10.0§2.9799988§1.9599991§-3.0699978
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§6.7625§10.0
+GROUP§recursive§true
+recursive§orig translate§100.0§0.0§65.20003§0.0
+recursive§orig rotate§10.0§2.2199984§0.8199999§-0.17000006
+recursive§orig size§4.0§600.0§50.0§50.0
+recursive§min size§2.360019§200.0
+recursive§size mult§10.0§0.9§0.9§0.9
+recursive§translate§10.0§0.0§9.560013§0.0
+recursive§rotate§10.0§3.0199988§9.920052§-3.0299978
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§37.3825§100.0
+GROUP§recursive§true
+recursive§orig translate§100.0§0.0§65.20003§0.0
+recursive§orig rotate§10.0§2.2199984§0.8199999§-0.17000006
+recursive§orig size§4.0§600.0§50.0§50.0
+recursive§min size§2.160019§200.0
+recursive§size mult§10.0§0.88§0.9799999§0.9899999
+recursive§translate§10.0§0.0§9.560013§0.0
+recursive§rotate§10.0§7.099995§18.172007§0.43000123
+recursive§rotate delta§1.0§0.0§-0.0020000015§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§translate§100.0§0.0§337.5799§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§37.3825§100.0
+GROUP§recursive§true
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§0.0§0.0§0.0
+recursive§orig size§4.0§600.0§50.0§600.0
+recursive§min size§2.6399996§20.0
+recursive§size mult§10.0§0.9§0.9§0.9
+recursive§translate§100.0§0.0§-32.22001§0.0
+recursive§rotate§10.0§0.0§12.035924§0.0
+recursive§rotate delta§1.0§0.0§0.006000012§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§translate§1000.0§0.0§341.57977§0.0
+Blocky§rotate§10.0§0.07999949§6.160001§0.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§37.3825§100.0
+GROUP§recursive§true
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§0.0§0.0§0.0
+recursive§orig size§400.0§799.999§25.824001§799.999
+recursive§min size§0.7000014§20.0
+recursive§size mult§10.0§0.9§0.9§0.9
+recursive§translate§100.0§0.0§-32.22001§0.0
+recursive§rotate§10.0§0.0§0.8408411§0.0
+recursive§rotate delta§0.1§0.0§8.0000993E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§translate§1000.0§-26.0§-10.420227§-176.0
+Blocky§rotate§10.0§0.4999994§6.7400084§0.28999993
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.525§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-3.5000064§0.6999995§-1.0374994
+lights§shine§37.3825§100.0
+GROUP§recursive§true
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§0.0§0.0§0.0
+recursive§orig size§400.0§799.999§25.824001§799.999
+recursive§min size§0.7000014§20.0
+recursive§size Δ§3.0§-29.999775§-0.2673873§-29.999796
+recursive§translate Δ§1000.0§0.0§-17.200012§0.0
+recursive§rotate Δ§10.0§0.0§0.0§0.0
+recursive§rotate§10.0§0.0§7.564388§0.0
+recursive§rotate delta§0.1§0.0§8.0000993E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§translate§10000.0§-2.0§-28.420227§-745.0
+Blocky§rotate§10.0§-1.0400009§4.9399824§-0.61000013
+GROUP§lights§true
+lights§ambient§0.096999876§1.0§0.2125§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-4.460009§1.4199992§-0.6774991
+lights§shine§9.1825§100.0
+GROUP§recursive§true
+recursive§weight§0.0§100.0
+recursive§stroke§0.57150006§1.0§0.0§1.0§1.0
+recursive§fill§0.0§0.0§1.0§1.0§1.0
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§0.0§0.0§0.0
+recursive§orig size§4.0§799.999§10.000076§799.999
+recursive§min size§0.7000014§20.0
+recursive§size Δ§3.0§-29.999775§0.0026126662§-29.999796
+recursive§translate Δ§1000.0§0.0§-17.200012§0.0
+recursive§rotate Δ§10.0§12.758426§73.022415§7.8086615
+recursive§rotate ΔΔ§0.10000001§-0.0030399829§0.008980005§-0.0024399997
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§translate§10000.0§0.0§80.0§-1456.1001
+Blocky§rotate§10.0§0.2599992§0.95999944§0.4799998
+GROUP§lights§false
+lights§ambient§0.096999876§1.0§0.2125§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-5.000013§1.4399985§-0.66749924
+lights§shine§9.1825§100.0
+GROUP§recursive§true
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§1.0§0.09375§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§-0.8399995§3.2399971§1.6199999
+recursive§orig size§40.0§799.999§39.9201§799.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-3.3537872§2.178938E-6§-7.499092
+recursive§translate Δ§100.0§3.8200045§0.0§0.0
+recursive§rotate Δ§10.0§-84.070915§27.02718§13.850562
+recursive§rotate ΔΔ§0.010000002§5.796932E-4§-2.999999E-4§-3.5000007E-4
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§1500.0082§300.0
+Blocky§translate§10000.0§0.0§-20.0§-486.1001
+Blocky§rotate§10.0§2.8199983§-2.8199997§-1.4100001
+GROUP§lights§false
+lights§ambient§0.096999876§1.0§0.2125§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-5.000013§1.4399985§-0.66749924
+lights§shine§9.1825§100.0
+GROUP§recursive§true
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10.0§0.0§0.0§0.0
+recursive§orig rotate§10.0§-0.8399995§3.2399971§1.6199999
+recursive§orig size§40.0§799.999§39.9201§799.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-3.3537872§2.178938E-6§-7.499092
+recursive§translate Δ§100.0§3.8200045§0.0§0.0
+recursive§rotate Δ§10.0§0.005898932§-0.028708939§0.8599999
+recursive§rotate ΔΔ§10.0§0.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§1500.0082§300.0
+Blocky§translate§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§false
+lights§ambient§0.096999876§1.0§0.2125§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-5.000013§1.4399985§-0.66749924
+lights§shine§9.1825§100.0
+GROUP§sea§false
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§100.0§0.0§0.0
+sea§box size§4.0§20.0§100.0§20.0
+sea§count§10.0§200.0
+GROUP§recursive§true
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1666.0§-1299.96§-1481.0
+recursive§orig rotate§10.0§0.34000129§6.860006§-0.49999982
+recursive§orig size§4000.0§55.999023§111.920105§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§24.307726§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§1500.0082§300.0
+Blocky§translate§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.096999876§1.0§0.2125§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§-4.0400133§-0.40000206§-1.5874994
+lights§shine§9.1825§100.0
+GROUP§sea§true
+sea§translate§100.0§6.04§167.12004§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1000.0§458.09998§453.09998
+sea§box size§40.0§28.472027§100.000015§7.28
+sea§count§38.997807§200.0
+GROUP§recursive§false
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1666.0§-1299.96§-1481.0
+recursive§orig rotate§10.0§0.34000129§6.860006§-0.49999982
+recursive§orig size§4000.0§55.999023§111.920105§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§21.40832§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.096999876§1.0§0.2125§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.0§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§8.159986§20.199978§55.5125
+lights§shine§9.1825§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§1.0§1.0§1.0
+sea§fill§0.0§0.0§0.5§1.0§1.0
+sea§translate§100.0§6.04§167.12004§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1000.00006§999.9997
+sea§box size§40.0§53.35209§100.000015§46.77998
+sea§time§1.2599986§10.0
+sea§count§37.999897§200.0
+sea§noise freq§0.0056000263§0.1
+sea§noise magnitude§9.279999§100.0
+GROUP§recursive§false
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1666.0§-1299.96§-1481.0
+recursive§orig rotate§10.0§0.34000129§6.860006§-0.49999982
+recursive§orig size§4000.0§55.999023§111.920105§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§9.405626§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.8979999§0.6§1.0§1.0§1.0
+lights§dir dir§100.0§8.159986§29.399973§55.5125
+lights§shine§9.1825§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§1.0§1.0§1.0
+sea§fill§0.68449986§1.0§1.0§1.0§1.0
+sea§translate§100.0§6.04§167.12004§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1000.00006§999.9997
+sea§box size§40.0§52.340126§100.000015§48.618767
+sea§time§1.498999§1.0
+sea§count§37.99996§200.0
+sea§noise freqs§0.010000001§0.002379517§0.011400007§0.0066800006
+sea§noise mags§10.0§29.999996§20.000023§8.540998
+GROUP§recursive§false
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1666.0§-1299.96§-1481.0
+recursive§orig rotate§10.0§0.34000129§6.860006§-0.49999982
+recursive§orig size§4000.0§55.999023§111.920105§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§-0.76655936§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§0.58125§1.0§1.0
+lights§spec light color§0.8979999§0.6§1.0§1.0§1.0
+lights§dir dir§100.0§8.159986§29.399973§55.5125
+lights§shine§9.1825§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§1.0§1.0§1.0
+sea§fill§0.68449986§1.0§1.0§1.0§1.0
+sea§translate§100.0§6.04§167.12004§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1000.0§500.3343§499.99976
+sea§box size§40.0§24.100128§100.000015§22.13877
+sea§time§0.0§10.0
+sea§count§37.99996§200.0
+sea§noise freqs§0.1§0.004399957§0.020599987§0.0023
+sea§noise mags§10.0§11.920006§5.620002§0.0
+sea§noise speed§100.0§0.29999927§-1.0000001
+GROUP§recursive§false
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1666.0§-1299.96§-1481.0
+recursive§orig rotate§10.0§0.34000129§6.860006§-0.49999982
+recursive§orig size§4000.0§55.999023§111.920105§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§-6.171301§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§0.0§-31.54004§-2349.2
+Blocky§rotate§10.0§-0.7999996§0.26§1.3038516E-8
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§8.159986§29.399973§55.5125
+lights§shine§9.482501§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.58399993§1.0§1.0§1.0§1.0
+sea§translate§100.0§6.04§167.12004§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§box size§4.0§46.012054§44.559967§40.018852
+sea§time§0.28099984§1.0
+sea§count§37.99996§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+sea§noise mags§1000.0§101.479965§14.6§11.800003
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§recursive§false
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1666.0§-1299.96§-1481.0
+recursive§orig rotate§10.0§0.34000129§6.860006§-0.49999982
+recursive§orig size§4000.0§55.999023§111.920105§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§-23.819105§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§0.0§168.45996§-2469.2
+Blocky§rotate§10.0§0.8599999§0.26§1.3038516E-8
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§0.9599824§33.799984§65.312515
+lights§shine§9.482501§100.0
+GROUP§sea§false
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.58399993§1.0§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§box size§4.0§50.004852§499.99796§50.00086
+sea§time§0.28099984§1.0
+sea§count§40.000504§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+sea§noise mags§1000.0§101.479965§14.6§11.800003
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§recursive§true
+recursive§weight§0.0§10.0
+recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
+recursive§fill§0.51599944§0.0§1.0§1.0§10.0
+recursive§orig translate§10000.0§1000.0§3154.9§-2710.0
+recursive§orig rotate§10.0§0.29999995§0.0§-1.5999993
+recursive§orig size§4000.0§559.999§487.9201§667.999
+recursive§min size§0.009961669§0.020000001
+recursive§draw first§false
+recursive§size Δ§300.00003§-2.753777§-3.599988§-5.9990864
+recursive§translate Δ§100.0§31.03999§0.0§0.0
+recursive§rotate Δ§10.0§-29.461004§0.0§0.0
+recursive§rotate ΔΔ§0.1§-0.001000013§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§0.0§208.45996§-2469.2
+Blocky§rotate§10.0§-0.9200002§0.21999961§1.3038516E-8
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§46.55998§104.79997§100.81251
+lights§shine§9.482501§100.0
+GROUP§sea§false
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.58399993§1.0§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§box size§4.0§50.004852§499.99796§50.00086
+sea§time§0.28099984§1.0
+sea§count§40.000504§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+sea§noise mags§1000.0§101.479965§14.6§11.800003
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§recursive§false
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.15625§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-9.285696§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§0.0§208.45996§-2469.2
+Blocky§rotate§10.0§-0.9200002§0.21999961§1.3038516E-8
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§46.55998§104.79997§100.81251
+lights§shine§9.482501§100.0
+GROUP§sea§false
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.58399993§1.0§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§box size§4.0§50.004852§499.99796§50.00086
+sea§time§0.28099984§1.0
+sea§count§40.000504§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+sea§noise mags§1000.0§101.479965§14.6§11.800003
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§recursive§false
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.15625§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.151958§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§80.0§-131.54004§-1779.2
+Blocky§rotate§10.0§-0.9200002§0.21999961§1.3038516E-8
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§-0.4000055§47.360023§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.58399993§1.0§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§box size§40.0§40.884884§99.99796§40.020878
+sea§time§0.28099984§1.0
+sea§radius§1111.0801§400.0
+sea§count§50.00168§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+sea§noise mags§1000.0§101.479965§14.6§11.800003
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.15625§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§80.0§-131.54004§-1779.2
+Blocky§rotate§10.0§-0.9200002§0.21999961§1.3038516E-8
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.58399993§1.0§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.210007§100.0
+sea§col height§20.000002§10.0
+sea§time§0.5003999§0.1
+sea§radius§1111.0801§400.0
+sea§count§50.00168§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+sea§noise mags§1000.0§173.47998§14.6§11.800003
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.15625§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§-60.0§-431.54004§-1619.2
+Blocky§rotate§10.0§8.560012§0.41999954§0.010000007
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.7754998§1.0§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.210007§100.0
+sea§col height§20.000002§10.0
+sea§time§0.5003999§0.1
+sea§max dist§1500.0§40.0
+sea§count§50.00082§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076
+sea§noise mags§1000.0§173.47998§33.6
+sea§noise speed§100.0§2.0000002§0.0
+sea§noise speed mag§1.0§0.016100002§0.030300023
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.0006§3000.0
+Blocky§translate§10000.0§-60.0§-431.54004§-1619.2
+Blocky§rotate§10.0§8.560012§0.41999954§0.010000007
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.210007§100.0
+sea§col height§20.000002§10.0
+sea§time§0.5003999§0.1
+sea§max dist§1500.0§40.0
+sea§count§50.00082§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076
+sea§noise mags§1000.0§173.47998§33.6
+sea§noise speed§100.0§2.0000002§0.0
+sea§noise speed mag§1.0§0.016100002§0.030300023
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate§10000.0§-60.0§-431.54004§-1619.2
+Blocky§rotate§10.0§8.560012§0.41999954§0.010000007
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.210007§100.0
+sea§col height§20.000002§10.0
+sea§time§0.1605999§0.1
+sea§max dist§1500.0§40.0
+sea§count§50.00082§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076
+sea§noise mags§1000.0§173.47998§33.6
+sea§noise speed§1.0§0.66699994§0.0
+sea§noise speed mag§1.0§0.016100002§0.030300023
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate§10000.0§-60.0§-431.54004§-1619.2
+Blocky§rotate§10.0§8.560012§0.41999954§0.010000007
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§1000.0§6.04§313.72003§83.559975
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.210007§100.0
+sea§col height§20.000002§10.0
+sea§time§0.1605999§0.1
+sea§max dist§1500.0§40.0
+sea§count§50.00082§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076
+sea§noise mags§1000.0§173.47998§33.6
+sea§noise speed§1.0§0.66699994§0.0
+sea§noise speed mag§1.0§0.016100002§0.030300023
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate§10000.0§40.0§73.66§-2719.0
+Blocky§rotate§10.0§0.7399998§0.44000018§0.040000014
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§58.91001§100.0
+sea§col height§299.85977§100.0
+sea§time§0.1605999§0.1
+sea§max dist§1500.0§40.0
+sea§count§30.005383§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076
+sea§noise mags§1000.0§173.47998§33.6
+sea§noise speed§1.0§0.66699994§0.0
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§0.0§-2075.81
+Blocky§rotate§10.0§0.0§0.44000003§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§58.91001§100.0
+sea§col height§299.85977§100.0
+sea§time§0.1605999§0.1
+sea§max dist§1500.0§40.0
+sea§count§30.005383§200.0
+sea§noise freqs§1.0§0.0015996275§0.0076
+sea§noise mags§1000.0§173.47998§33.6
+sea§noise speed§1.0§0.66699994§0.0
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§80.0§-1573.0
+Blocky§rotate§10.0§0.7999997§0.5599999§0.0
+Blocky§translate 2§10000.0§640.0§281.21997§-610.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§58.91001§100.0
+sea§col height§299.85977§100.0
+sea§time§0.4999999§0.1
+sea§max dist§1500.0§40.0
+sea§count§30.001495§200.0
+sea§noise freqs§0.010000002§0.001829627§0.034390014
+sea§noise mags§1000.0§176.68002§-1.9133091E-4
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§80.0§-1573.0
+Blocky§rotate§10.0§0.7999997§0.5599999§0.0
+Blocky§translate 2§10000.0§640.0§281.21997§-610.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§5.999994§46.76001§44.96
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§weight§0.0§10.0
+sea§stroke§0.0§0.0§0.0§1.0§1.0
+sea§fill§0.6339998§0.6375§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§58.91001§100.0
+sea§col height§299.85977§100.0
+sea§time§0.4999999§0.1
+sea§max dist§1500.0§40.0
+sea§count§30.001495§200.0
+sea§noise freqs§0.010000002§0.001829627§0.034390014
+sea§noise mags§1000.0§176.68002§-1.9133091E-4
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§80.0§-553.0
+Blocky§rotate§10.0§0.7999997§0.59999985§0.0
+Blocky§translate 2§10000.0§640.0§401.21997§-610.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§9.200008§53.560013§44.66
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§fill§0.8819999§0.7125§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§58.91001§100.0
+sea§col height§299.85977§100.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§30.001495§200.0
+sea§noise freqs§10.000001§0.001829627§1.0207598
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§true
+sea§hue offset§0.0042449683§0.010000001
+sea§sat offset§0.0010000027§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§80.0§-553.0
+Blocky§rotate§10.0§0.7999997§0.59999985§0.0
+Blocky§translate 2§10000.0§640.0§401.21997§-610.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§9.200008§53.560013§44.66
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§fill§0.8819999§0.7125§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§58.91001§100.0
+sea§col height§299.85977§100.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§30.001495§200.0
+sea§noise freqs§10.000001§0.001829627§1.0207598
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§10.0§0.3§0.03
+sea§check dist§true
+sea§hue offset§0.0042449683§0.010000001
+sea§sat offset§0.0010000027§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§80.0§-553.0
+Blocky§rotate§10.0§0.7999997§0.59999985§0.0
+Blocky§translate 2§10000.0§640.0§401.21997§-610.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§9.200008§53.560013§44.66
+lights§shine§57.482494§100.0
+GROUP§sea§false
+sea§fill§0.46899992§0.7125§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.04§0.02§0.01
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.010044§10.0
+sea§col height§299.85977§100.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§50.000156§200.0
+sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§10.0§1.4999998§1.5000005
+sea§check dist§false
+sea§hue offset§0.0042949687§0.010000001
+sea§sat offset§0.001300002§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§80.0§-553.0
+Blocky§rotate§10.0§0.7999997§0.59999985§0.0
+Blocky§translate 2§10000.0§640.0§401.21997§-610.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§9.200008§53.560013§44.66
+lights§shine§57.482494§100.0
+GROUP§sea§true
+sea§fill§0.46899992§0.7125§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.010044§10.0
+sea§col height§299.85977§100.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§50.000156§200.0
+sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§10.0§1.4999998§1.5000005
+sea§check dist§false
+sea§hue offset§0.0042949687§0.010000001
+sea§sat offset§0.001300002§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§translate 1§10000.0§0.0§-25.879883§-1712.1001
+Blocky§rotate§10.0§0.5599997§0.45999983§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§8.200004§55.360016§37.760006
+lights§shine§345.78247§1000.0
+GROUP§sea§false
+sea§fill§0.46899992§0.7125§1.0§1.0§1.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§sea rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.00005§1.0
+sea§col height§39.99987§10.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§50.000156§200.0
+sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§10.0§1.4999998§1.5000005
+sea§check dist§true
+sea§hue offset§0.0042949687§0.010000001
+sea§sat offset§0.001300002§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-272.0§-1096.78§-192.0
+recursive§orig rotate§1.0§-0.053999677§-1.01§-1.9999999
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-8.094372§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§fade to black§17.620508§25.5
+Blocky§split§3.7800083§100.0
+Blocky§translate 1§10000.0§0.0§-25.879883§-1712.1001
+Blocky§rotate§10.0§0.5599997§0.45999983§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§8.200004§55.360016§37.760006
+lights§shine§345.78247§1000.0
+GROUP§sea§false
+sea§fill§0.46699995§0.7125§1.0§1.0§10.0
+sea§translate§10.0§0.0§0.0§0.0
+sea§sea rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.00005§1.0
+sea§col height§39.99987§10.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§50.000156§200.0
+sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§10.0§1.4999998§1.5000005
+sea§check dist§true
+sea§hue offset§0.0042949687§0.010000001
+sea§sat offset§0.001300002§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.4471216§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§fade to black§132.59999§2550.0
+Blocky§split§0.0§10.0
+Blocky§translate 1§10000.0§0.0§-25.879883§-1712.1001
+Blocky§rotate§10.0§0.5599997§0.45999983§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§100.0§8.200004§55.360016§37.760006
+lights§shine§345.78247§1000.0
+GROUP§sea§false
+sea§fill§0.46699995§1.0§1.0§1.0§10.0
+sea§translate§10.0§0.0§-0.099999994§-0.049999997
+sea§sea rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.00005§1.0
+sea§col height§39.99987§10.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§50.000156§200.0
+sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§1.0§1.0000002§1.0009989
+sea§check dist§true
+sea§hue offset§0.0049949605§0.010000001
+sea§sat offset§0.004800011§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§fade to black§132.59999§2550.0
+Blocky§split§0.0§10.0
+Blocky§translate 1§10000.0§0.0§-165.87988§-1352.1001
+Blocky§rotate§10.0§0.77999973§0.55999994§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§0.36000025§2.6599982§1.7
+lights§shine§345.78247§1000.0
+GROUP§sea§false
+sea§fill§0.46699995§1.0§1.0§1.0§10.0
+sea§translate§10.0§0.0§-0.099999994§-0.049999997
+sea§sea rotate§10.0§0.0§0.0§0.0
+sea§grid size§1.0§1100.0007§1099.9998
+sea§col width§40.00005§1.0
+sea§col height§39.99987§10.0
+sea§time§0.4999999§0.1
+sea§max dist§1034.2386§4000.0
+sea§count§50.000156§200.0
+sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+sea§noise mags§10.0§199.97986§25.00978
+sea§noise speed§10.0§2.0861626E-7§0.0
+sea§noise speed radius§1.0§1.0000002§1.0009989
+sea§check dist§true
+sea§hue offset§0.0049949605§0.010000001
+sea§sat offset§0.004800011§0.1
+sea§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END

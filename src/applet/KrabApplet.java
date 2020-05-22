@@ -488,7 +488,11 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void preRotate(PGraphics pg) {
-        PVector rotation = sliderXYZ("rotate", 0);
+        preRotate(pg, "rotate");
+    }
+
+    protected void preRotate(PGraphics pg, String sliderName) {
+        PVector rotation = sliderXYZ(sliderName, 0);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
             delta.mult(0);
