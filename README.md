@@ -58,13 +58,13 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
 ## Shader reloading
    KrabApplet allows you to modify your shaders and see the results in real-time without having to close and re-run the sketch.
    - The [shader\(\)](https://processing.org/reference/shader_.html) and [filter\(\)](https://processing.org/reference/filter_.html) Processing functions have their counterparts in `hotShader()` and `hotFilter()`.
-   - This loads the shader in the background when needed, so you don't need to worry about loading it in `setup()` or having the PShader variable at all.
-   - It does this by checking the last modified timestamp of the shader file, so all you need to do is to save your changes to the shader in any text editor.
-   - Uniforms must be passed to the shader using the `uniform()` function which returns the currently loaded PShader you can call `set()` on
-   - The optional `PGraphics` parameter specifies a `PGraphics` to apply the shader or filter to. It is applied to the main canvas otherwise. 
-        - I recommend creating a separate `PGraphics` for drawing everything with KrabApplet, because otherwise the shaders and other things done on the main canvas can negatively impact drawing the GUI which is always drawn on the main canvas.
-        - You can display the `PGraphics` easily on the main canvas using `image(pg, 0, 0, width, height)` before calling `rec(pg)` and `gui()` at the end of `draw()`.
-   - You can include a vertex shader in the parameters, it will also be reloaded at runtime, but when calling any of these functions always pass both of them as parameters.
+   - KrabApplet manages the PShader variables so there's no need to call `loadShader()` yourself or keep any PShader variables around.
+   - Shaders refresh when the last modified timestamp of the file changes, so all you need to do is to save your changes to the shader in any text editor.
+   - Pass uniforms to the shader using the `uniform()` function which returns a PShader reference you can call `set()` on.
+   - The optional PGraphics parameter specifies a PGraphics to apply the shader or filter to. It is applied to the main canvas otherwise. 
+        - I recommend creating a separate PGraphics for drawing everything with KrabApplet, because otherwise the shaders and other things done on the main canvas can negatively impact drawing the GUI which is always drawn on the main canvas.
+        - You can display the PGraphics easily on the main canvas using `image(pg, 0, 0, width, height)` before calling `rec(pg)` and `gui()` at the end of `draw()`.
+   - You can include a vertex shader in the parameters, it will also be reloaded at runtime, but when calling any of these functions always pass both the fragment and the vertex path as parameters.
 ```java
 String frag = "shaders/templates/frag.glsl";
 uniform(frag).set("time", t);
