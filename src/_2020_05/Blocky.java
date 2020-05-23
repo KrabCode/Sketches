@@ -41,7 +41,6 @@ public class Blocky extends KrabApplet {
         lightShader();
         preRotate(pg);
         translate(pg, "translate 2");
-
         group("clouds");
         drawSeaOfBoxes();
         group("sea");
@@ -181,14 +180,6 @@ public class Blocky extends KrabApplet {
         }
         pg.popMatrix();
     }
-
-
-    private void backgroundShader() {
-        String frag = "shaders/_2020_05/cross/backgroundNoise.glsl";
-        uniform(frag).set("time", t);
-        hotFilter(frag, pg);
-    }
-
 
     private void lightShader() {
         String vert = "shaders/_2020_05/cross/LightVert.glsl";
