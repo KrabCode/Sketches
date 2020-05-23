@@ -32,6 +32,8 @@ public abstract class KrabApplet extends PApplet {
     private static final String ACTION_UNDO = "UNDO";
     private static final String ACTION_REDO = "REDO";
     private static final String ACTION_SAVE = "SAVE";
+    private static final String ACTION_COPY = "COPY";
+    private static final String ACTION_PASTE = "PASTE";
     private static final String ACTION_LOAD = "load";
     private static final int MENU_BUTTON_COUNT = 4;
     private static final String MENU_BUTTON_HIDE = "hide";
@@ -95,6 +97,9 @@ public abstract class KrabApplet extends PApplet {
     private final ArrayList<ArrayList<String>> redoStack = new ArrayList<>();
     private boolean captureScreenshot = false;
     private int screenshotsAlreadyCaptured = 0;
+    private static String clipboardSliderFloat = "";
+    private static String clipboardSliderXYZ = "";
+    private static String clipboardPicker = "";
     private final ArrayList<Group> groups = new ArrayList<>();
     private Group currentGroup = null; // do not assign to nor read directly!
     private final ArrayList<Key> keyboardKeys = new ArrayList<>();
@@ -964,7 +969,7 @@ public abstract class KrabApplet extends PApplet {
                 for (Element el : group.elements) {
                     y += cell;
                     if (el.equals(overlayOwner)) {
-                        el.handleKeyboardInput();
+                        el.handleActions();
                     }
                     updateElement(group, el, y);
                     if (trayVisible) {
@@ -1177,37 +1182,49 @@ public abstract class KrabApplet extends PApplet {
         actions.clear();
         for (Key kk : keyboardKeys) {
             if (!kk.coded) {
-                if (kk.character == 'z' || kk.character == 26) {
-                    actions.add(ACTION_UNDO);
-                }
-                if (kk.character == 'y' || kk.character == 25) {
-                    actions.add(ACTION_REDO);
-                }
+                parseRepeatableActions(kk);
                 if (!kk.justPressed) {
                     continue;
                 }
-                if (kk.character == '*' || kk.character == '+') {
-                    actions.add(ACTION_PRECISION_ZOOM_IN);
-                }
-                if (kk.character == '/' || kk.character == '-') {
-                    actions.add(ACTION_PRECISION_ZOOM_OUT);
-                }
-                if (kk.character == 'r') {
-                    actions.add(ACTION_RESET);
-                }
-                if (kk.character == 'h') {
-                    actions.add(ACTION_HIDE);
-                }
-                if (kk.character == 19) {
-                    // CTRL + S
-                    actions.add(ACTION_SAVE);
-                }
-                if (kk.character == 12) {
-                    // CTRL + L
-                    actions.add(ACTION_LOAD);
-                }
+                parseNonRepeatableActions(kk);
             }
             kk.justPressed = false;
+        }
+    }
+
+    private void parseRepeatableActions(Key kk) {
+        if (kk.character == 'z' || kk.character == 26) {
+            actions.add(ACTION_UNDO);
+        }
+        if (kk.character == 'y' || kk.character == 25) {
+            actions.add(ACTION_REDO);
+        }
+    }
+
+    private void parseNonRepeatableActions(Key kk) {
+        if (kk.character == '*' || kk.character == '+') {
+            actions.add(ACTION_PRECISION_ZOOM_IN);
+        }
+        if (kk.character == '/' || kk.character == '-') {
+            actions.add(ACTION_PRECISION_ZOOM_OUT);
+        }
+        if (kk.character == 'r') {
+            actions.add(ACTION_RESET);
+        }
+        if (kk.character == 'h') {
+            actions.add(ACTION_HIDE);
+        }
+        if (kk.character == 19) { // CTRL + S
+            actions.add(ACTION_SAVE);
+        }
+        if (kk.character == 12) { // CTRL + L
+            actions.add(ACTION_LOAD);
+        }
+        if (kk.character == 'c') {
+            actions.add(ACTION_COPY);
+        }
+        if (kk.character == 'v') {
+            actions.add(ACTION_PASTE);
         }
     }
 
@@ -2160,7 +2177,7 @@ public abstract class KrabApplet extends PApplet {
             popMatrix();
         }
 
-        void handleKeyboardInput() {
+        void handleActions() {
         }
     }
 
@@ -2584,7 +2601,14 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
-        void handleKeyboardInput() {
+        void handleActions() {
+            if(previousActions.contains(ACTION_COPY)) {
+                clipboardSliderFloat = getState();
+            }
+            if(previousActions.contains(ACTION_PASTE)) {
+                pushCurrentStateToUndo();
+                setState(clipboardSliderFloat);
+            }
             if (previousActions.contains(ACTION_PRECISION_ZOOM_OUT) &&
                     ((!floored && precision < FLOAT_PRECISION_MAXIMUM) || (floored && precision < INT_PRECISION_MAXIMUM))) {
                 precision *= 10f;
@@ -2734,7 +2758,14 @@ public abstract class KrabApplet extends PApplet {
                     verticalRevealAnimationStarted, false, -Float.MAX_VALUE, Float.MAX_VALUE);
         }
 
-        void handleKeyboardInput() {
+        void handleActions() {
+            if(previousActions.contains(ACTION_COPY)) {
+                clipboardSliderXYZ = getState();
+            }
+            if(previousActions.contains(ACTION_PASTE)) {
+                pushCurrentStateToUndo();
+                setState(clipboardSliderXYZ);
+            }
             if (previousActions.contains(ACTION_PRECISION_ZOOM_IN) && precision > FLOAT_PRECISION_MINIMUM) {
                 precision *= .1f;
                 pushCurrentStateToUndo();
@@ -2771,8 +2802,8 @@ public abstract class KrabApplet extends PApplet {
             super.update();
         }
 
-        void handleKeyboardInput() {
-            super.handleKeyboardInput();
+        void handleActions() {
+            super.handleActions();
         }
 
         String getState() {
@@ -2928,7 +2959,14 @@ public abstract class KrabApplet extends PApplet {
             this.defaultAlpha = alpha;
         }
 
-        void handleKeyboardInput() {
+        void handleActions() {
+            if(previousActions.contains(ACTION_COPY)) {
+                clipboardPicker = getState();
+            }
+            if(previousActions.contains(ACTION_PASTE)) {
+                pushCurrentStateToUndo();
+                setState(clipboardPicker);
+            }
             if (overlayVisible && overlayOwner != null && overlayOwner.equals(this) && actions.contains(ACTION_RESET)) {
                 pushCurrentStateToUndo();
                 reset();
