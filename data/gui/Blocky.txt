@@ -333,12 +333,12 @@ lights§dir light color§0.0§0.0§0.58125§1.0§1.0
 lights§spec light color§0.0§0.0§1.0§1.0§1.0
 lights§dir dir§10.0§-5.000013§1.4399985§-0.66749924
 lights§shine§9.1825§100.0
-GROUP§sea§false
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§100.0§0.0§0.0
-sea§box size§4.0§20.0§100.0§20.0
-sea§count§10.0§200.0
+GROUP§clouds§false
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§100.0§0.0§0.0
+clouds§box size§4.0§20.0§100.0§20.0
+clouds§count§10.0§200.0
 GROUP§recursive§true
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -365,12 +365,12 @@ lights§dir light color§0.0§0.0§0.58125§1.0§1.0
 lights§spec light color§0.0§0.0§1.0§1.0§1.0
 lights§dir dir§10.0§-4.0400133§-0.40000206§-1.5874994
 lights§shine§9.1825§100.0
-GROUP§sea§true
-sea§translate§100.0§6.04§167.12004§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1000.0§458.09998§453.09998
-sea§box size§40.0§28.472027§100.000015§7.28
-sea§count§38.997807§200.0
+GROUP§clouds§true
+clouds§translate§100.0§6.04§167.12004§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1000.0§458.09998§453.09998
+clouds§box size§40.0§28.472027§100.000015§7.28
+clouds§count§38.997807§200.0
 GROUP§recursive§false
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -397,18 +397,18 @@ lights§dir light color§0.0§0.0§0.58125§1.0§1.0
 lights§spec light color§0.0§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§8.159986§20.199978§55.5125
 lights§shine§9.1825§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§1.0§1.0§1.0
-sea§fill§0.0§0.0§0.5§1.0§1.0
-sea§translate§100.0§6.04§167.12004§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1000.00006§999.9997
-sea§box size§40.0§53.35209§100.000015§46.77998
-sea§time§1.2599986§10.0
-sea§count§37.999897§200.0
-sea§noise freq§0.0056000263§0.1
-sea§noise magnitude§9.279999§100.0
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§1.0§1.0§1.0
+clouds§fill§0.0§0.0§0.5§1.0§1.0
+clouds§translate§100.0§6.04§167.12004§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1000.00006§999.9997
+clouds§box size§40.0§53.35209§100.000015§46.77998
+clouds§time§1.2599986§10.0
+clouds§count§37.999897§200.0
+clouds§noise freq§0.0056000263§0.1
+clouds§noise magnitude§9.279999§100.0
 GROUP§recursive§false
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -435,18 +435,18 @@ lights§dir light color§0.0§0.0§0.58125§1.0§1.0
 lights§spec light color§0.8979999§0.6§1.0§1.0§1.0
 lights§dir dir§100.0§8.159986§29.399973§55.5125
 lights§shine§9.1825§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§1.0§1.0§1.0
-sea§fill§0.68449986§1.0§1.0§1.0§1.0
-sea§translate§100.0§6.04§167.12004§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1000.00006§999.9997
-sea§box size§40.0§52.340126§100.000015§48.618767
-sea§time§1.498999§1.0
-sea§count§37.99996§200.0
-sea§noise freqs§0.010000001§0.002379517§0.011400007§0.0066800006
-sea§noise mags§10.0§29.999996§20.000023§8.540998
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§1.0§1.0§1.0
+clouds§fill§0.68449986§1.0§1.0§1.0§1.0
+clouds§translate§100.0§6.04§167.12004§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1000.00006§999.9997
+clouds§box size§40.0§52.340126§100.000015§48.618767
+clouds§time§1.498999§1.0
+clouds§count§37.99996§200.0
+clouds§noise freqs§0.010000001§0.002379517§0.011400007§0.0066800006
+clouds§noise mags§10.0§29.999996§20.000023§8.540998
 GROUP§recursive§false
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -473,19 +473,19 @@ lights§dir light color§0.0§0.0§0.58125§1.0§1.0
 lights§spec light color§0.8979999§0.6§1.0§1.0§1.0
 lights§dir dir§100.0§8.159986§29.399973§55.5125
 lights§shine§9.1825§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§1.0§1.0§1.0
-sea§fill§0.68449986§1.0§1.0§1.0§1.0
-sea§translate§100.0§6.04§167.12004§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1000.0§500.3343§499.99976
-sea§box size§40.0§24.100128§100.000015§22.13877
-sea§time§0.0§10.0
-sea§count§37.99996§200.0
-sea§noise freqs§0.1§0.004399957§0.020599987§0.0023
-sea§noise mags§10.0§11.920006§5.620002§0.0
-sea§noise speed§100.0§0.29999927§-1.0000001
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§1.0§1.0§1.0
+clouds§fill§0.68449986§1.0§1.0§1.0§1.0
+clouds§translate§100.0§6.04§167.12004§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1000.0§500.3343§499.99976
+clouds§box size§40.0§24.100128§100.000015§22.13877
+clouds§time§0.0§10.0
+clouds§count§37.99996§200.0
+clouds§noise freqs§0.1§0.004399957§0.020599987§0.0023
+clouds§noise mags§10.0§11.920006§5.620002§0.0
+clouds§noise speed§100.0§0.29999927§-1.0000001
 GROUP§recursive§false
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -512,20 +512,20 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§8.159986§29.399973§55.5125
 lights§shine§9.482501§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.58399993§1.0§1.0§1.0§1.0
-sea§translate§100.0§6.04§167.12004§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§box size§4.0§46.012054§44.559967§40.018852
-sea§time§0.28099984§1.0
-sea§count§37.99996§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
-sea§noise mags§1000.0§101.479965§14.6§11.800003
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.58399993§1.0§1.0§1.0§1.0
+clouds§translate§100.0§6.04§167.12004§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§box size§4.0§46.012054§44.559967§40.018852
+clouds§time§0.28099984§1.0
+clouds§count§37.99996§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+clouds§noise mags§1000.0§101.479965§14.6§11.800003
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed mag§0.1§0.015200001§0.0151
 GROUP§recursive§false
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -552,20 +552,20 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§0.9599824§33.799984§65.312515
 lights§shine§9.482501§100.0
-GROUP§sea§false
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.58399993§1.0§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§box size§4.0§50.004852§499.99796§50.00086
-sea§time§0.28099984§1.0
-sea§count§40.000504§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
-sea§noise mags§1000.0§101.479965§14.6§11.800003
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§clouds§false
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.58399993§1.0§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§box size§4.0§50.004852§499.99796§50.00086
+clouds§time§0.28099984§1.0
+clouds§count§40.000504§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+clouds§noise mags§1000.0§101.479965§14.6§11.800003
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed mag§0.1§0.015200001§0.0151
 GROUP§recursive§true
 recursive§weight§0.0§10.0
 recursive§stroke§0.49449995§0.0§0.0§1.0§1.0
@@ -592,20 +592,20 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§46.55998§104.79997§100.81251
 lights§shine§9.482501§100.0
-GROUP§sea§false
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.58399993§1.0§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§box size§4.0§50.004852§499.99796§50.00086
-sea§time§0.28099984§1.0
-sea§count§40.000504§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
-sea§noise mags§1000.0§101.479965§14.6§11.800003
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§clouds§false
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.58399993§1.0§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§box size§4.0§50.004852§499.99796§50.00086
+clouds§time§0.28099984§1.0
+clouds§count§40.000504§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+clouds§noise mags§1000.0§101.479965§14.6§11.800003
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed mag§0.1§0.015200001§0.0151
 GROUP§recursive§false
 recursive§weight§0.9600007§10.0
 recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
@@ -632,20 +632,20 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§46.55998§104.79997§100.81251
 lights§shine§9.482501§100.0
-GROUP§sea§false
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.58399993§1.0§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§box size§4.0§50.004852§499.99796§50.00086
-sea§time§0.28099984§1.0
-sea§count§40.000504§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
-sea§noise mags§1000.0§101.479965§14.6§11.800003
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§clouds§false
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.58399993§1.0§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§box size§4.0§50.004852§499.99796§50.00086
+clouds§time§0.28099984§1.0
+clouds§count§40.000504§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+clouds§noise mags§1000.0§101.479965§14.6§11.800003
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed mag§0.1§0.015200001§0.0151
 GROUP§recursive§false
 recursive§weight§0.9600007§10.0
 recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
@@ -672,21 +672,21 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§-0.4000055§47.360023§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.58399993§1.0§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§box size§40.0§40.884884§99.99796§40.020878
-sea§time§0.28099984§1.0
-sea§radius§1111.0801§400.0
-sea§count§50.00168§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
-sea§noise mags§1000.0§101.479965§14.6§11.800003
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.58399993§1.0§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§box size§40.0§40.884884§99.99796§40.020878
+clouds§time§0.28099984§1.0
+clouds§radius§1111.0801§400.0
+clouds§count§50.00168§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+clouds§noise mags§1000.0§101.479965§14.6§11.800003
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed mag§0.1§0.015200001§0.0151
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -714,22 +714,22 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.58399993§1.0§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.210007§100.0
-sea§col height§20.000002§10.0
-sea§time§0.5003999§0.1
-sea§radius§1111.0801§400.0
-sea§count§50.00168§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076§1.4962995
-sea§noise mags§1000.0§173.47998§14.6§11.800003
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed mag§0.1§0.015200001§0.0151
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.58399993§1.0§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.210007§100.0
+clouds§col height§20.000002§10.0
+clouds§time§0.5003999§0.1
+clouds§radius§1111.0801§400.0
+clouds§count§50.00168§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076§1.4962995
+clouds§noise mags§1000.0§173.47998§14.6§11.800003
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed mag§0.1§0.015200001§0.0151
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -757,23 +757,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.7754998§1.0§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.210007§100.0
-sea§col height§20.000002§10.0
-sea§time§0.5003999§0.1
-sea§max dist§1500.0§40.0
-sea§count§50.00082§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076
-sea§noise mags§1000.0§173.47998§33.6
-sea§noise speed§100.0§2.0000002§0.0
-sea§noise speed mag§1.0§0.016100002§0.030300023
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.7754998§1.0§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.210007§100.0
+clouds§col height§20.000002§10.0
+clouds§time§0.5003999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§50.00082§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076
+clouds§noise mags§1000.0§173.47998§33.6
+clouds§noise speed§100.0§2.0000002§0.0
+clouds§noise speed mag§1.0§0.016100002§0.030300023
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -801,23 +801,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.210007§100.0
-sea§col height§20.000002§10.0
-sea§time§0.5003999§0.1
-sea§max dist§1500.0§40.0
-sea§count§50.00082§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076
-sea§noise mags§1000.0§173.47998§33.6
-sea§noise speed§100.0§2.0000002§0.0
-sea§noise speed mag§1.0§0.016100002§0.030300023
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.210007§100.0
+clouds§col height§20.000002§10.0
+clouds§time§0.5003999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§50.00082§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076
+clouds§noise mags§1000.0§173.47998§33.6
+clouds§noise speed§100.0§2.0000002§0.0
+clouds§noise speed mag§1.0§0.016100002§0.030300023
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -845,23 +845,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.210007§100.0
-sea§col height§20.000002§10.0
-sea§time§0.1605999§0.1
-sea§max dist§1500.0§40.0
-sea§count§50.00082§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076
-sea§noise mags§1000.0§173.47998§33.6
-sea§noise speed§1.0§0.66699994§0.0
-sea§noise speed mag§1.0§0.016100002§0.030300023
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.210007§100.0
+clouds§col height§20.000002§10.0
+clouds§time§0.1605999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§50.00082§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076
+clouds§noise mags§1000.0§173.47998§33.6
+clouds§noise speed§1.0§0.66699994§0.0
+clouds§noise speed mag§1.0§0.016100002§0.030300023
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -889,23 +889,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§1000.0§6.04§313.72003§83.559975
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.210007§100.0
-sea§col height§20.000002§10.0
-sea§time§0.1605999§0.1
-sea§max dist§1500.0§40.0
-sea§count§50.00082§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076
-sea§noise mags§1000.0§173.47998§33.6
-sea§noise speed§1.0§0.66699994§0.0
-sea§noise speed mag§1.0§0.016100002§0.030300023
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§1000.0§6.04§313.72003§83.559975
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.210007§100.0
+clouds§col height§20.000002§10.0
+clouds§time§0.1605999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§50.00082§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076
+clouds§noise mags§1000.0§173.47998§33.6
+clouds§noise speed§1.0§0.66699994§0.0
+clouds§noise speed mag§1.0§0.016100002§0.030300023
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -933,23 +933,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§58.91001§100.0
-sea§col height§299.85977§100.0
-sea§time§0.1605999§0.1
-sea§max dist§1500.0§40.0
-sea§count§30.005383§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076
-sea§noise mags§1000.0§173.47998§33.6
-sea§noise speed§1.0§0.66699994§0.0
-sea§noise speed radius§100.0§0.0§0.0
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§58.91001§100.0
+clouds§col height§299.85977§100.0
+clouds§time§0.1605999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§30.005383§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076
+clouds§noise mags§1000.0§173.47998§33.6
+clouds§noise speed§1.0§0.66699994§0.0
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -978,23 +978,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§58.91001§100.0
-sea§col height§299.85977§100.0
-sea§time§0.1605999§0.1
-sea§max dist§1500.0§40.0
-sea§count§30.005383§200.0
-sea§noise freqs§1.0§0.0015996275§0.0076
-sea§noise mags§1000.0§173.47998§33.6
-sea§noise speed§1.0§0.66699994§0.0
-sea§noise speed radius§100.0§0.0§0.0
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§58.91001§100.0
+clouds§col height§299.85977§100.0
+clouds§time§0.1605999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§30.005383§200.0
+clouds§noise freqs§1.0§0.0015996275§0.0076
+clouds§noise mags§1000.0§173.47998§33.6
+clouds§noise speed§1.0§0.66699994§0.0
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1023,23 +1023,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§58.91001§100.0
-sea§col height§299.85977§100.0
-sea§time§0.4999999§0.1
-sea§max dist§1500.0§40.0
-sea§count§30.001495§200.0
-sea§noise freqs§0.010000002§0.001829627§0.034390014
-sea§noise mags§1000.0§176.68002§-1.9133091E-4
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed radius§100.0§0.0§0.0
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§58.91001§100.0
+clouds§col height§299.85977§100.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§30.001495§200.0
+clouds§noise freqs§0.010000002§0.001829627§0.034390014
+clouds§noise mags§1000.0§176.68002§-1.9133091E-4
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1068,23 +1068,23 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§5.999994§46.76001§44.96
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§weight§0.0§10.0
-sea§stroke§0.0§0.0§0.0§1.0§1.0
-sea§fill§0.6339998§0.6375§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§58.91001§100.0
-sea§col height§299.85977§100.0
-sea§time§0.4999999§0.1
-sea§max dist§1500.0§40.0
-sea§count§30.001495§200.0
-sea§noise freqs§0.010000002§0.001829627§0.034390014
-sea§noise mags§1000.0§176.68002§-1.9133091E-4
-sea§noise speed§100.0§0.0§0.0
-sea§noise speed radius§100.0§0.0§0.0
-sea§check dist§false
+GROUP§clouds§true
+clouds§weight§0.0§10.0
+clouds§stroke§0.0§0.0§0.0§1.0§1.0
+clouds§fill§0.6339998§0.6375§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§58.91001§100.0
+clouds§col height§299.85977§100.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1500.0§40.0
+clouds§count§30.001495§200.0
+clouds§noise freqs§0.010000002§0.001829627§0.034390014
+clouds§noise mags§1000.0§176.68002§-1.9133091E-4
+clouds§noise speed§100.0§0.0§0.0
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1113,24 +1113,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§9.200008§53.560013§44.66
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§fill§0.8819999§0.7125§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§58.91001§100.0
-sea§col height§299.85977§100.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§30.001495§200.0
-sea§noise freqs§10.000001§0.001829627§1.0207598
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§100.0§0.0§0.0
-sea§check dist§true
-sea§hue offset§0.0042449683§0.010000001
-sea§sat offset§0.0010000027§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§true
+clouds§fill§0.8819999§0.7125§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§58.91001§100.0
+clouds§col height§299.85977§100.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§30.001495§200.0
+clouds§noise freqs§10.000001§0.001829627§1.0207598
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§0.0042449683§0.010000001
+clouds§sat offset§0.0010000027§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1159,24 +1159,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§9.200008§53.560013§44.66
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§fill§0.8819999§0.7125§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§58.91001§100.0
-sea§col height§299.85977§100.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§30.001495§200.0
-sea§noise freqs§10.000001§0.001829627§1.0207598
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§10.0§0.3§0.03
-sea§check dist§true
-sea§hue offset§0.0042449683§0.010000001
-sea§sat offset§0.0010000027§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§true
+clouds§fill§0.8819999§0.7125§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§58.91001§100.0
+clouds§col height§299.85977§100.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§30.001495§200.0
+clouds§noise freqs§10.000001§0.001829627§1.0207598
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§10.0§0.3§0.03
+clouds§check dist§true
+clouds§hue offset§0.0042449683§0.010000001
+clouds§sat offset§0.0010000027§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1205,24 +1205,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§9.200008§53.560013§44.66
 lights§shine§57.482494§100.0
-GROUP§sea§false
-sea§fill§0.46899992§0.7125§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.04§0.02§0.01
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.010044§10.0
-sea§col height§299.85977§100.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§50.000156§200.0
-sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§10.0§1.4999998§1.5000005
-sea§check dist§false
-sea§hue offset§0.0042949687§0.010000001
-sea§sat offset§0.001300002§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§false
+clouds§fill§0.46899992§0.7125§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.04§0.02§0.01
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.010044§10.0
+clouds§col height§299.85977§100.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§10.0§1.4999998§1.5000005
+clouds§check dist§false
+clouds§hue offset§0.0042949687§0.010000001
+clouds§sat offset§0.001300002§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1251,24 +1251,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.8979999§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§9.200008§53.560013§44.66
 lights§shine§57.482494§100.0
-GROUP§sea§true
-sea§fill§0.46899992§0.7125§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.010044§10.0
-sea§col height§299.85977§100.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§50.000156§200.0
-sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§10.0§1.4999998§1.5000005
-sea§check dist§false
-sea§hue offset§0.0042949687§0.010000001
-sea§sat offset§0.001300002§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§true
+clouds§fill§0.46899992§0.7125§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.010044§10.0
+clouds§col height§299.85977§100.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§10.0§1.4999998§1.5000005
+clouds§check dist§false
+clouds§hue offset§0.0042949687§0.010000001
+clouds§sat offset§0.001300002§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1297,24 +1297,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§8.200004§55.360016§37.760006
 lights§shine§345.78247§1000.0
-GROUP§sea§false
-sea§fill§0.46899992§0.7125§1.0§1.0§1.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§sea rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.00005§1.0
-sea§col height§39.99987§10.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§50.000156§200.0
-sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§10.0§1.4999998§1.5000005
-sea§check dist§true
-sea§hue offset§0.0042949687§0.010000001
-sea§sat offset§0.001300002§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§false
+clouds§fill§0.46899992§0.7125§1.0§1.0§1.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§10.0§1.4999998§1.5000005
+clouds§check dist§true
+clouds§hue offset§0.0042949687§0.010000001
+clouds§sat offset§0.001300002§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1345,24 +1345,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§8.200004§55.360016§37.760006
 lights§shine§345.78247§1000.0
-GROUP§sea§false
-sea§fill§0.46699995§0.7125§1.0§1.0§10.0
-sea§translate§10.0§0.0§0.0§0.0
-sea§sea rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.00005§1.0
-sea§col height§39.99987§10.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§50.000156§200.0
-sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§10.0§1.4999998§1.5000005
-sea§check dist§true
-sea§hue offset§0.0042949687§0.010000001
-sea§sat offset§0.001300002§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§false
+clouds§fill§0.46699995§0.7125§1.0§1.0§10.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§10.0§1.4999998§1.5000005
+clouds§check dist§true
+clouds§hue offset§0.0042949687§0.010000001
+clouds§sat offset§0.001300002§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1394,24 +1394,24 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
 lights§dir dir§100.0§8.200004§55.360016§37.760006
 lights§shine§345.78247§1000.0
-GROUP§sea§false
-sea§fill§0.46699995§1.0§1.0§1.0§10.0
-sea§translate§10.0§0.0§-0.099999994§-0.049999997
-sea§sea rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.00005§1.0
-sea§col height§39.99987§10.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§50.000156§200.0
-sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§1.0§1.0000002§1.0009989
-sea§check dist§true
-sea§hue offset§0.0049949605§0.010000001
-sea§sat offset§0.004800011§0.1
-sea§br offset§0.0§10.0
+GROUP§clouds§false
+clouds§fill§0.46699995§1.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§-0.099999994§-0.049999997
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§1.0§1.0000002§1.0009989
+clouds§check dist§true
+clouds§hue offset§0.0049949605§0.010000001
+clouds§sat offset§0.004800011§0.1
+clouds§br offset§0.0§10.0
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0
@@ -1443,24 +1443,735 @@ lights§dir light color§0.0§0.0§1.0§1.0§1.0
 lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
 lights§dir dir§10.0§0.36000025§2.6599982§1.7
 lights§shine§345.78247§1000.0
-GROUP§sea§false
-sea§fill§0.46699995§1.0§1.0§1.0§10.0
-sea§translate§10.0§0.0§-0.099999994§-0.049999997
-sea§sea rotate§10.0§0.0§0.0§0.0
-sea§grid size§1.0§1100.0007§1099.9998
-sea§col width§40.00005§1.0
-sea§col height§39.99987§10.0
-sea§time§0.4999999§0.1
-sea§max dist§1034.2386§4000.0
-sea§count§50.000156§200.0
-sea§noise freqs§0.10000002§8.9959975E-4§0.0091498215
-sea§noise mags§10.0§199.97986§25.00978
-sea§noise speed§10.0§2.0861626E-7§0.0
-sea§noise speed radius§1.0§1.0000002§1.0009989
+GROUP§clouds§false
+clouds§fill§0.46699995§1.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§-0.099999994§-0.049999997
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§1.0§1.0000002§1.0009989
+clouds§check dist§true
+clouds§hue offset§0.0049949605§0.010000001
+clouds§sat offset§0.004800011§0.1
+clouds§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-165.87988§-1352.1001
+Blocky§rotate§10.0§0.77999973§0.55999994§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§true
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.8§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.6464999§0.0§1.0§1.0§1.0
+ramp§y 1§0.42999986§10.0
+ramp§color 2§0.61500007§0.25§1.0§1.0§1.0
+ramp§y 2§0.60000044§10.0
+ramp§color 3§0.6564999§0.65§1.0§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§0.36000025§2.6599982§1.7
+lights§shine§345.78247§1000.0
+GROUP§clouds§false
+clouds§fill§0.46699995§1.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§-0.099999994§-0.049999997
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§1.0§1.0000002§1.0009989
+clouds§check dist§true
+clouds§hue offset§0.0049949605§0.010000001
+clouds§sat offset§0.004800011§0.1
+clouds§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-165.87988§-1352.1001
+Blocky§rotate§10.0§0.77999973§0.55999994§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§true
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.6464999§0.0§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.6564999§0.55625§0.2125§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§0.36000025§2.6599982§1.7
+lights§shine§345.78247§1000.0
+GROUP§clouds§false
+clouds§fill§0.46699995§1.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§-0.099999994§-0.049999997
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§1.0§1.0000002§1.0009989
+clouds§check dist§true
+clouds§hue offset§0.0049949605§0.010000001
+clouds§sat offset§0.004800011§0.1
+clouds§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-165.87988§-1352.1001
+Blocky§rotate§10.0§0.77999973§0.55999994§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.6464999§0.0§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.0§0.0§0.5§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§0.36000025§2.6599982§1.7
+lights§shine§345.78247§1000.0
+GROUP§clouds§true
+clouds§fill§0.46699995§1.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§0.4999999§0.1
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§0.10000002§8.9959975E-4§0.0091498215
+clouds§noise mags§10.0§199.97986§25.00978
+clouds§noise speed§10.0§2.0861626E-7§0.0
+clouds§noise speed radius§1.0§1.0000002§1.0009989
+clouds§check dist§true
+clouds§hue offset§0.0049949605§0.010000001
+clouds§sat offset§0.004800011§0.1
+clouds§br offset§0.0§10.0
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-585.8799§-1352.1001
+Blocky§rotate§10.0§0.77999973§-0.14000009§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.6464999§0.0§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.0§0.0§0.5§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§1.0§0.36000025§-6.499999§1.7
+lights§shine§345.78247§1000.0
+GROUP§clouds§true
+clouds§fill§0.46699995§0.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§1.0§1100.0007§1099.9998
+clouds§col width§40.00005§1.0
+clouds§col height§39.99987§10.0
+clouds§time§2.6699996§10.0
+clouds§max dist§1034.2386§4000.0
+clouds§count§50.000156§200.0
+clouds§noise freqs§1.0§0.0050000716§0.0
+clouds§noise mags§10000.0§271.5§0.0
+clouds§noise speed§100.0§0.0§-41.2
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§3.2495914E-4§0.010000001
+clouds§sat offset§-0.0015999889§0.1
+clouds§br offset§0.0§10.0
+clouds§abs§true
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-585.8799§-1352.1001
+Blocky§rotate§10.0§0.77999973§-0.14000009§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§true
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.6464999§0.0§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.0§0.0§0.5§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§1.0§0.36000025§-6.499999§1.7
+lights§shine§345.78247§1000.0
+GROUP§clouds§true
+clouds§fill§0.46699995§0.0§1.0§1.0§10.0
+clouds§translate§10.0§0.0§0.0§0.0
+clouds§rotate§10.0§0.75999975§0.0§0.0
+clouds§grid size§1000.0§2000.111§2002.4302
+clouds§col width§70.331055§10000.0
+clouds§col height§1.4898716§100.0
+clouds§time§2.6699996§10.0
+clouds§max dist§1034.2386§4000.0
+clouds§count§60.99892§200.0
+clouds§noise freqs§1.0§0.0050000716§0.0
+clouds§noise mags§1000.0§122.5§0.0
+clouds§noise speed§10.0§0.0§-0.21
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§false
+clouds§hue offset§3.2495914E-4§0.010000001
+clouds§sat offset§-0.0015999889§0.1
+clouds§br offset§0.0§10.0
+clouds§abs§true
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§360.0§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-585.8799§-1352.1001
+Blocky§rotate§10.0§0.77999973§-0.14000009§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.6464999§0.0§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.67899996§1.0§0.19375§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§10.0§6.9680037§-4.4519987§-3.2100003
+lights§shine§345.78247§1000.0
+GROUP§clouds§true
+clouds§fill§0.59699994§0.0§1.0§1.0§10.0
+clouds§translate§10000.0§2989.1797§-740.0§-1544.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§10000.0§4990.1113§5112.43
+clouds§col width§194.33105§1000.0
+clouds§col height§-176.31012§1000.0
+clouds§time§2.6699996§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§35.00004§200.0
+clouds§noise freqs§0.010000001§7.4007036E-4§0.0046600015
+clouds§noise mags§10000.0§742.5§186.0
+clouds§noise speed§10.0§0.10000003§-0.4300001
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.0025599292§0.010000001
+clouds§abs§true
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§720.9994§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-585.8799§-1352.1001
+Blocky§rotate§10.0§0.77999973§-0.14000009§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.58649987§0.24375§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.6950001§1.0§0.29375§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§1000.0§33.388§-52.85199§-153.21
+lights§shine§6.7824707§1000.0
+GROUP§clouds§true
+clouds§fill§0.8489998§0.0§0.83125§1.0§10.0
+clouds§translate§10000.0§2989.1797§-40.0§-1544.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§10000.0§4990.1113§5112.43
+clouds§col width§64.13105§100.0
+clouds§col height§0.0§10.0
+clouds§time§2.6699996§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§100.195694§200.0
+clouds§noise freqs§0.010000001§2.4002476E-4§0.0017700002
+clouds§noise mags§10000.0§492.5§206.0
+clouds§noise speed§10.0§0.10000003§-0.4300001
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.0§10.0
+clouds§alpha y offset§2.1899998§10.0
+clouds§abs§true
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§720.9994§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-585.8799§-1352.1001
+Blocky§rotate§10.0§0.77999973§-0.14000009§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.58649987§0.24375§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.6950001§1.0§0.29375§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§1000.0§33.388§-52.85199§-153.21
+lights§shine§6.7824707§1000.0
+GROUP§clouds§true
+clouds§fill§0.8489998§0.0§0.83125§1.0§10.0
+clouds§translate§10000.0§2989.1797§-40.0§-1544.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§10000.0§4990.1113§5112.43
+clouds§col width§162.33105§100.0
+clouds§col height§0.0§10.0
+clouds§time§2.6699996§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§50.98062§200.0
+clouds§noise freqs§0.010000001§2.4002476E-4§0.0017700002
+clouds§noise mags§10000.0§492.5§206.0
+clouds§noise speed§10.0§0.10000003§-0.4300001
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.0§10.0
+clouds§alpha y offset§2.1899998§10.0
+clouds§abs§true
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§720.9994§300.0
+Blocky§blend: add§1
+Blocky§translate 1§10000.0§0.0§-585.8799§-922.1001
+Blocky§rotate§10.0§0.7399998§-0.020000111§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.58649987§0.24375§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.6950001§1.0§0.29375§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§false
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir§1000.0§33.388§-52.85199§-153.21
+lights§shine§6.7824707§1000.0
+GROUP§clouds§false
+clouds§fill§0.8489998§0.0§0.83125§1.0§10.0
+clouds§translate§10000.0§2989.1797§160.0§-1544.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§10000.0§4990.1113§5112.43
+clouds§col width§162.33105§100.0
+clouds§col height§0.0§10.0
+clouds§time§2.6699996§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§50.98062§200.0
+clouds§noise freqs§0.010000001§2.4002476E-4§0.0017700002
+clouds§noise mags§10000.0§492.5§206.0
+clouds§noise speed§10.0§0.10000003§-0.4300001
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.0§10.0
+clouds§alpha y offset§2.1899998§10.0
+clouds§abs§true
+GROUP§sea§true
+sea§fill§0.6304999§0.61875§1.0§1.0§1.0
+sea§translate§1000.0§0.0§960.78§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§10000.0§1497.0§1512.0
+sea§col width§45.420044§1000.0
+sea§col height§5.250026§100.0
+sea§time§0.75999993§10.0
+sea§max dist§1500.0§40.0
+sea§count§57.989708§200.0
+sea§noise freqs§100.0§0.0§0.0
+sea§noise mags§100.0§21.5§19.7
+sea§noise speed§100.0§0.0§0.0
+sea§noise speed radius§100.0§0.0§0.0
 sea§check dist§true
-sea§hue offset§0.0049949605§0.010000001
-sea§sat offset§0.004800011§0.1
+sea§hue offset§0.0§10.0
+sea§sat offset§0.0§10.0
 sea§br offset§0.0§10.0
+sea§alpha y§0.0§10.0
+sea§alpha y offset§5.03§10.0
+sea§abs§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§true
+Blocky§recording frames§720.9994§300.0
+Blocky§blend: add§0
+Blocky§translate 1§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.58649987§0.24375§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.6950001§1.0§0.29375§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.0§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir 1§100.0§64.4§-162.99983§-4.399996
+lights§dir dir 2§100.0§50.23999§221.12003§79.71003
+lights§shine§6.7824707§1000.0
+GROUP§clouds§false
+clouds§fill§0.8489998§0.0§0.83125§1.0§10.0
+clouds§translate§100.0§0.0§-249.99966§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§100.0§1000.09985§1000.1002
+clouds§col width§54.53106§100.0
+clouds§col height§0.0§10.0
+clouds§time§0.0§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§30.999798§200.0
+clouds§noise freqs§0.10000002§0.0035831532§-0.0040473053
+clouds§noise mags§100.0§61.599995§43.399986
+clouds§noise speed§10.0§-0.71999997§-0.71999997
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.19000033§1.0
+clouds§alpha y offset§0.0§10.0
+clouds§abs§true
+GROUP§sea§true
+sea§fill§0.6304999§0.56875§1.0§1.0§1.0
+sea§translate§1000.0§0.0§252.78003§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§10000.0§1497.0§1512.0
+sea§col width§100.02009§100.0
+sea§col height§5.250026§100.0
+sea§time§8.869999§100.0
+sea§max dist§1500.0§40.0
+sea§count§30.999878§200.0
+sea§noise freqs§0.1§0.0012000583§0.29599994
+sea§noise mags§1000.0§153.7§20.7
+sea§noise speed§10.0§0.14999984§-0.5599999
+sea§noise speed radius§10.0§0.099999994§0.02
+sea§check dist§false
+sea§hue offset§0.0§10.0
+sea§sat offset§6.0000806E-4§0.1
+sea§br offset§0.0§10.0
+sea§alpha y§0.0§10.0
+sea§alpha y offset§5.03§10.0
+sea§abs§false
+GROUP§recursive§false
+recursive§skip§true
+recursive§weight§0.9600007§10.0
+recursive§stroke§0.49449995§0.0§1.0§1.0§1.0
+recursive§fill§0.036999423§0.0§1.0§1.0§10.0
+recursive§orig translate§1000.0§-38.0§-716.78§85.0
+recursive§orig rotate§1.0§0.46400028§0.64000046§-1.2730002
+recursive§orig size§4000.0§149.6001§178.0§124.0
+recursive§min size§12.962402§20.000002
+recursive§draw first§false
+recursive§size Δ§300.00003§6.2462244§-2.3999872§3.0009134
+recursive§translate Δ§10.0§0.0§0.0§0.0
+recursive§rotate Δ§10.0§118.75992§-7.433325§0.15636647
+recursive§rotate ΔΔ§0.1§0.0§6.000181E-4§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§720.9994§300.0
+Blocky§blend: add§0
+Blocky§translate 1§10.0§0.0§0.0§0.0
+Blocky§rotate§10.0§0.0§0.0§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§ramp§false
+ramp§count§4.0011497§100.0
+ramp§color 0§0.6854999§0.525§0.68125§1.0§1.0
+ramp§y 0§0.0§10.0
+ramp§color 1§0.58649987§0.24375§1.0§1.0§1.0
+ramp§y 1§0.57999974§10.0
+ramp§color 2§0.648§0.55625§0.79375§1.0§1.0
+ramp§y 2§0.6200004§10.0
+ramp§color 3§0.6950001§1.0§0.29375§1.0§1.0
+ramp§y 3§1.0§10.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.141§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§dir dir 1§1000.0§14.799988§374.36002§88.20001
+lights§dir dir 2§10.0§-2.8200011§-17.740002§-0.23999976
+lights§shine§164.78223§1000.0
+GROUP§clouds§true
+clouds§fill§0.8489998§0.0§0.83125§1.0§10.0
+clouds§translate§100.0§0.0§-249.99966§0.0
+clouds§rotate§10.0§0.0§0.0§0.0
+clouds§grid size§100.0§1000.09985§1000.1002
+clouds§col width§54.53106§100.0
+clouds§col height§0.0§10.0
+clouds§time§0.0§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§30.999798§200.0
+clouds§noise freqs§0.10000002§0.0035831532§-0.0040473053
+clouds§noise mags§100.0§61.599995§43.399986
+clouds§noise speed§10.0§-0.7§-0.7
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.19000033§1.0
+clouds§alpha y offset§0.0§10.0
+clouds§abs§true
+GROUP§sea§false
+sea§fill§0.6304999§0.56875§1.0§1.0§1.0
+sea§translate§1000.0§0.0§252.78003§0.0
+sea§rotate§10.0§0.0§0.0§0.0
+sea§grid size§10000.0§1497.0§1512.0
+sea§col width§100.02009§100.0
+sea§col height§5.250026§100.0
+sea§time§8.869999§100.0
+sea§max dist§1500.0§40.0
+sea§count§30.999878§200.0
+sea§noise freqs§0.1§0.0026000584§0.0010000253
+sea§noise mags§1000.0§153.7§20.7
+sea§noise speed§10.0§-0.6600004§-0.6999999
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§false
+sea§hue offset§0.0§10.0
+sea§sat offset§-0.0046999925§0.1
+sea§br offset§0.0§10.0
+sea§alpha y§0.0§10.0
+sea§alpha y offset§5.03§10.0
+sea§abs§false
 GROUP§recursive§false
 recursive§skip§true
 recursive§weight§0.9600007§10.0

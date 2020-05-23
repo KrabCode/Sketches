@@ -8,6 +8,7 @@ import utils.OpenSimplexNoise;
 
 public class Blocky extends KrabApplet {
     private PGraphics pg;
+    private PGraphics colorRamp;
     private OpenSimplexNoise noise = new OpenSimplexNoise();
 
     public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class Blocky extends KrabApplet {
 
     public void setup() {
         pg = createGraphics(width, height, P3D);
+        colorRamp = createGraphics(width, height, P3D);
         surface.setAlwaysOnTop(true);
     }
 
@@ -27,19 +29,22 @@ public class Blocky extends KrabApplet {
         frameRecordingDuration = sliderInt("recording frames", 360);
         pg.beginDraw();
         pg.colorMode(HSB, 1, 1, 1, 1);
-        if(options("blend: add", "blend: replace").equals("blend: add")) {
+        if (options("blend: add", "blend: replace").equals("blend: add")) {
             pg.blendMode(ADD);
-        }else {
+        } else {
             pg.blendMode(REPLACE);
         }
-        fadeToBlack(pg);
-        splitPass(pg);
+        drawColorRampBackground();
         translateToCenter(pg);
         translate(pg, "translate 1");
         updateLighting();
         lightShader();
         preRotate(pg);
         translate(pg, "translate 2");
+
+        group("clouds");
+        drawSeaOfBoxes();
+        group("sea");
         drawSeaOfBoxes();
         drawRecursiveShapeStart();
         pg.endDraw();
@@ -53,11 +58,13 @@ public class Blocky extends KrabApplet {
         HSBA ambientColor = picker("ambient");
         HSBA dirLightColor = picker("dir light color");
         HSBA specLightColor = picker("spec light color");
-        PVector dirLightDir = sliderXYZ("dir dir");
+        PVector dirLightDir = sliderXYZ("dir dir 1");
+        PVector dirLightDir2 = sliderXYZ("dir dir 2");
         pg.lights();
         pg.lightSpecular(specLightColor.hue(), specLightColor.sat(), specLightColor.br());
         pg.shininess(slider("shine"));
         pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir.x, dirLightDir.y, dirLightDir.z);
+        pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir2.x, dirLightDir2.y, dirLightDir2.z);
         pg.ambient(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
         pg.ambientLight(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
         resetCurrentGroup();
@@ -65,7 +72,7 @@ public class Blocky extends KrabApplet {
 
     private void drawRecursiveShapeStart() {
         group("recursive");
-        if(toggle("skip")) {
+        if (toggle("skip")) {
             return;
         }
         pg.pushMatrix();
@@ -78,6 +85,37 @@ public class Blocky extends KrabApplet {
                 sliderXYZ("orig size", 600, 50, 600).copy());
         sliderXYZ("rotate Δ").add(sliderXYZ("rotate ΔΔ"));
         pg.popMatrix();
+    }
+
+    private void drawColorRampBackground() {
+        colorRamp.beginDraw();
+        group("ramp");
+        int count = sliderInt("count", 4);
+        int detail = 10;
+        float prevY = 0;
+        HSBA prevColor = new HSBA();
+        for (int i = 0; i < count; i++) {
+            HSBA thisColor = picker("color " + i);
+            float yNorm = slider("y " + i, map(i, 0, count - 1, 0, 1));
+            float y = yNorm * colorRamp.height;
+            colorRamp.noStroke();
+            colorRamp.beginShape(TRIANGLE_STRIP);
+            for (int j = 0; j < detail; j++) {
+                float x = map(j, 0, detail - 1, 0, width);
+                colorRamp.fill(prevColor.clr());
+                colorRamp.vertex(x, prevY);
+                colorRamp.fill(thisColor.clr());
+                colorRamp.vertex(x, y);
+            }
+            colorRamp.endShape();
+            prevY = y;
+            prevColor = thisColor;
+        }
+        colorRamp.endDraw();
+        pg.hint(PConstants.DISABLE_DEPTH_TEST);
+        pg.image(colorRamp, 0, 0, pg.width, pg.height);
+        pg.hint(PConstants.ENABLE_DEPTH_TEST);
+        resetCurrentGroup();
     }
 
     private void drawRecursiveShape(PVector translate, PVector rotate, PVector size) {
@@ -99,41 +137,45 @@ public class Blocky extends KrabApplet {
 
     private void drawSeaOfBoxes() {
         // grid of columns on the XZ plane with fbm informed Y size
-        group("sea");
         pg.pushMatrix();
         pg.noStroke();
         HSBA fill = picker("fill");
 
         translate(pg, "translate");
-        preRotate(pg, "sea rotate");
+        preRotate(pg, "rotate");
         PVector size = sliderXY("grid size");
         PVector boxSize = new PVector(slider("col width"), slider("col height"), slider("col width"));
         float timeRadius = slider("time");
-        PVector time = new PVector(timeRadius*cos(t), timeRadius*sin(t));
+        PVector time = new PVector(timeRadius * cos(t), timeRadius * sin(t));
         float maxDist = slider("max dist", 1500);
         int count = sliderInt("count", 10);
         PVector noiseFreqs = sliderXY("noise freqs");
         PVector noiseMags = sliderXY("noise mags");
         PVector constSpeed = sliderXY("noise speed");
         PVector varSpeedRadius = sliderXY("noise speed radius");
-        PVector windSpeed = new PVector(constSpeed.x+varSpeedRadius.x*time.x, constSpeed.y+varSpeedRadius.y*time.y);
+        PVector windSpeed = new PVector(constSpeed.x * t + varSpeedRadius.x * time.x, constSpeed.y * t + varSpeedRadius.y * time.y);
         for (int xi = 0; xi < count; xi++) {
             for (int yi = 0; yi < count; yi++) {
                 float x = map(xi, 0, count - 1, -size.x, size.x);
                 float z = map(yi, 0, count - 1, -size.y, size.y);
-                if(toggle("check dist") && dist(x,z,0,0) > maxDist) {
+                if (toggle("check dist") && dist(x, z, 0, 0) > maxDist) {
                     continue;
                 }
                 pg.pushMatrix();
-                double y = noise.eval(noiseFreqs.x*x+windSpeed.x,noiseFreqs.x*z+windSpeed.y,0,0)*noiseMags.x;
-                y += noise.eval(noiseFreqs.y*x+windSpeed.x,noiseFreqs.y*z+windSpeed.y,0,0)*noiseMags.y;
+                double y = noise.eval(noiseFreqs.x * x + windSpeed.x, noiseFreqs.x * z + windSpeed.y, 0, 0) * noiseMags.x;
+                y += noise.eval(noiseFreqs.y * x + windSpeed.x, noiseFreqs.y * z + windSpeed.y, 0, 0) * noiseMags.y;
 //                y += noise.eval(noiseFreqs.z*x+windSpeed.x*t,noiseFreqs.z*z+windSpeed.y*t,time.x,time.y)*noiseMags.z;
-                float hueOffset = (float)y*slider("hue offset");
-                float satOffset = (float)y*slider("sat offset");
-                float brOffset = (float)y*slider("br offset");
-                pg.fill(hueModulo(fill.hue()+hueOffset), constrain(satOffset+fill.sat(), 0, 1), constrain(brOffset+fill.br(),0,1), fill.alpha());
-                pg.translate(x, (float) y, z);
-                pg.box(boxSize.x, boxSize.y, boxSize.z);
+                float hueOffset = abs((float) y) * slider("hue offset");
+                float satOffset = abs((float) y) * slider("sat offset");
+                float brOffset = abs((float) y) * slider("br offset");
+                pg.fill(hueModulo(fill.hue() + hueOffset),
+                        constrain(satOffset + fill.sat(),0, 1),
+                        constrain(brOffset + fill.br(), 0, 1),
+                        constrain(fill.alpha()*(float)y*slider("alpha y")+slider("alpha y offset"), 0, 1));
+                pg.translate(x, 0, z);
+                if (boxSize.y + (float) y > 0 || !toggle("abs")) {
+                    pg.box(boxSize.x, boxSize.y + (float) y, boxSize.z);
+                }
                 pg.popMatrix();
             }
         }

@@ -1,0 +1,10 @@
+STATE_BEGIN
+UNDO
+GROUP§Pyramid§true
+Pyramid§weight§1.0§10.0
+Pyramid§stroke§0.0§0.0§0.5§1.0§1.0
+Pyramid§fill§0.0§0.0§0.5§1.0§1.0
+Pyramid§corners§4.0§100.0
+Pyramid§radius§100.0§30.0
+Pyramid§elevation§-64.575005§200.0
+STATE_END

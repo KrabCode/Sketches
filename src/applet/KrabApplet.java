@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -120,8 +122,9 @@ public abstract class KrabApplet extends PApplet {
     private final ArrayList<ShaderSnapshot> snapshots = new ArrayList<>();
     private final int shaderRefreshRateInMillis = 36;
     private final PMatrix3D mouseRotation = new PMatrix3D();
-    private final PMatrix3D sliderRotationMatrix = new PMatrix3D();
-    private PVector previousSliderRotation = new PVector();
+    private final Map<String, PMatrix3D> sliderRotationMatrixMap = new HashMap<String, PMatrix3D>();
+    private final Map<String, PVector> previousSliderRotationMap = new HashMap<String, PVector>();
+
 
     // PUBLIC GUI INTERFACE
 
@@ -491,19 +494,29 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void preRotate(PGraphics pg, String sliderName) {
+        PMatrix3D rotationMatrix;
+        PVector previousSliderRotation = new PVector();
+        if(sliderRotationMatrixMap.containsKey(sliderName)) {
+            rotationMatrix = sliderRotationMatrixMap.get(sliderName);
+            previousSliderRotation = previousSliderRotationMap.get(sliderName);
+        }else {
+            rotationMatrix = new PMatrix3D();
+            sliderRotationMatrixMap.put(sliderName, rotationMatrix);
+        }
         PVector rotation = sliderXYZ(sliderName, 0);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
             delta.mult(0);
-            sliderRotationMatrix.reset();
+            rotationMatrix.reset();
         }
         PMatrix3D temp = new PMatrix3D();
         temp.rotateX(delta.y);
         temp.rotateY(-delta.x);
         temp.rotateZ(delta.z);
-        sliderRotationMatrix.preApply(temp);
-        pg.applyMatrix(sliderRotationMatrix);
+        rotationMatrix.preApply(temp);
+        pg.applyMatrix(rotationMatrix);
         previousSliderRotation = rotation.copy();
+        previousSliderRotationMap.put(sliderName, previousSliderRotation);
     }
 
     protected void cam() {
