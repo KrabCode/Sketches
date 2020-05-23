@@ -1,0 +1,56 @@
+STATE_BEGIN
+UNDO
+GROUP§TemplateTest§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§height 0§0.0§10.0
+ramp§color  0§0.0§0.0§0.0§1.0§1.0
+ramp§height 1§0.33333334§10.0
+ramp§color  1§0.0§0.0§0.33333334§1.0§1.0
+ramp§height 2§0.6666667§10.0
+ramp§color  2§0.13700001§1.0§1.0§1.0§1.0
+ramp§height 3§1.0§10.0
+ramp§color  3§0.8934999§1.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TemplateTest§true
+GROUP§ramp§true
+ramp§count§5.999532§100.0
+ramp§color 0§0.009500166§0.63125§0.2625§1.0§1.0
+ramp§y pos 1§0.4333335§10.0
+ramp§color 1§0.009500166§0.63125§1.0§1.0§1.0
+ramp§y pos 2§0.5766666§10.0
+ramp§color 2§0.10350002§1.0§1.0§1.0§1.0
+ramp§color 3§0.94750017§1.0§0.65§1.0§1.0
+ramp§y pos 3§0.78§10.0
+ramp§color 4§0.94750017§1.0§0.3125§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TemplateTest§true
+GROUP§ramp§true
+ramp§count§5.999532§100.0
+ramp§color 0§0.009500166§0.63125§0.2625§1.0§1.0
+ramp§y pos 1§0.4333335§10.0
+ramp§color 1§0.009500166§0.63125§1.0§1.0§1.0
+ramp§y pos 2§0.5766666§10.0
+ramp§color 2§0.10350002§1.0§1.0§1.0§1.0
+ramp§color 3§0.94750017§1.0§0.65§1.0§1.0
+ramp§y pos 3§0.78§10.0
+ramp§color 4§0.94750017§1.0§0.3125§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TemplateTest§true
+GROUP§ramp§true
+ramp§count§5.999532§100.0
+ramp§color 0§0.009500166§0.63125§0.2625§1.0§1.0
+ramp§y pos 1§0.4333335§10.0
+ramp§color 1§0.009500166§0.63125§1.0§1.0§1.0
+ramp§y pos 2§0.5766666§10.0
+ramp§color 2§0.10350002§1.0§1.0§1.0§1.0
+ramp§color 3§0.94750017§1.0§0.65§1.0§1.0
+ramp§y pos 3§0.78§10.0
+ramp§color 4§0.94750017§1.0§0.3125§1.0§1.0
+STATE_END

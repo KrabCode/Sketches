@@ -27,6 +27,8 @@ See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManu
 | CTRL+Z | undo |
 | CTRL+Y | redo |
 | CTRL+S | save |
+| CTRL+C | copy value |
+| CTRL+V | paste value |
 | R | reset value |
 | I | screenshot |
 | K | record mp4 |

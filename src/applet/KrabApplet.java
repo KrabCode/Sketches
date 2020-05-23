@@ -101,7 +101,7 @@ public abstract class KrabApplet extends PApplet {
     private static String clipboardSliderXYZ = "";
     private static String clipboardPicker = "";
     private final ArrayList<Group> groups = new ArrayList<>();
-    private Group currentGroup = null; // do not assign to nor read directly!
+    private Group currentGroup = null;
     private final ArrayList<Key> keyboardKeys = new ArrayList<>();
     private final ArrayList<Key> keyboardKeysToRemove = new ArrayList<>();
     private final ArrayList<String> actions = new ArrayList<>();
@@ -130,8 +130,7 @@ public abstract class KrabApplet extends PApplet {
     private final Map<String, PMatrix3D> sliderRotationMatrixMap = new HashMap<String, PMatrix3D>();
     private final Map<String, PVector> previousSliderRotationMap = new HashMap<String, PVector>();
 
-
-    // PUBLIC GUI INTERFACE
+    // GUI INTERFACE
 
     protected int sliderInt() {
         return floor(sliderInt("x"));
@@ -370,47 +369,7 @@ public abstract class KrabApplet extends PApplet {
         resetCurrentGroup();
     }
 
-    protected void resetCurrentGroup() {
-        currentGroup = null;
-    }
-
-    private void updateScrolling() {
-        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height))) {
-            return;
-        }
-        scrollOffsetHistory.add(trayScrollOffset);
-        int scrollOffsetHistorySize = 3;
-        while (scrollOffsetHistory.size() > scrollOffsetHistorySize) {
-            scrollOffsetHistory.remove(0);
-        }
-        if (abs(pmouseY - mouseY) > 2) {
-            trayScrollOffset += mouseY - pmouseY;
-        }
-    }
-
-    private boolean trayHasntMovedInAWhile() {
-        for (Float historicalTrayOffset : scrollOffsetHistory) {
-            if (historicalTrayOffset != trayScrollOffset) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // UTILS
-
-    private void updateMouseState() {
-        mousePressedOutsideGui = mousePressed && isMouseOutsideGui() && (!trayVisible || !overlayVisible);
-    }
-
-    private void guiSetup(boolean defaultVisibility) {
-        if (frameCount == 1) {
-            trayVisible = defaultVisibility;
-            textSize(textSize * 2);
-        } else if (frameCount == 3) {
-            loadLastStateFromFile(true);
-        }
-    }
+    // GENERAL UTILS
 
     protected void fadeToBlack() {
         fadeToBlack(g);
@@ -454,18 +413,9 @@ public abstract class KrabApplet extends PApplet {
         pg.hint(ENABLE_DEPTH_TEST);
     }
 
-    protected void resetGui() {
-        for (Group group : groups) {
-            for (Element el : group.elements) {
-                el.reset();
-            }
-        }
-    }
-
     protected void mouseRotation() {
         mouseRotation(g);
     }
-
 
     protected void mouseRotation(PGraphics pg) {
         if (mousePressedOutsideGui) {
@@ -501,10 +451,10 @@ public abstract class KrabApplet extends PApplet {
     protected void preRotate(PGraphics pg, String sliderName) {
         PMatrix3D rotationMatrix;
         PVector previousSliderRotation = new PVector();
-        if(sliderRotationMatrixMap.containsKey(sliderName)) {
+        if (sliderRotationMatrixMap.containsKey(sliderName)) {
             rotationMatrix = sliderRotationMatrixMap.get(sliderName);
             previousSliderRotation = previousSliderRotationMap.get(sliderName);
-        }else {
+        } else {
             rotationMatrix = new PMatrix3D();
             sliderRotationMatrixMap.put(sliderName, rotationMatrix);
         }
@@ -524,61 +474,19 @@ public abstract class KrabApplet extends PApplet {
         previousSliderRotationMap.put(sliderName, previousSliderRotation);
     }
 
-    protected void cam() {
-        cam(g);
-    }
-
-    protected void cam(PGraphics pg) {
-        PVector t = sliderXYZ("translate");
-        pg.translate(pg.width / 2f + t.x, pg.height / 2f + t.y, t.z);
-        PVector r = sliderXYZ("rotate");
-        pg.rotateX(r.x);
-        pg.rotateY(r.y);
-        pg.rotateZ(r.z);
-    }
-
-    public void rec() {
-        rec(g);
-    }
-
-    public void rec(PGraphics pg) {
-        savePGraphics(pg);
-    }
-
-    private void savePGraphics(PGraphics pg) {
-        if (captureScreenshot) {
-            captureScreenshot = false;
-            screenshotsAlreadyCaptured++;
-            String filename = captureDir + "screenshot_" + screenshotsAlreadyCaptured + ".jpg";
-            println(filename + " saved");
-            pg.save(filename);
+    protected float hueModulo(float hue) {
+        while (hue < 0) {
+            hue += 1;
         }
-        int frameRecordingEnd = frameRecordingStarted + frameRecordingDuration + 1;
-        if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
-            int frameNumber = frameCount - frameRecordingStarted + 1;
-            println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted - 1, "saved");
-            PImage currentSketch = pg.get();
-            pg.save(captureDir + frameNumber + ".jpg");
-            boolean ffmpegEnabled = true;
-            if (frameCount == frameRecordingEnd - 1 && ffmpegEnabled) {
-                println("capture ended, running ffmpeg, please wait...");
-                try {
-                    String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
-                            "E:/Sketches/" + captureDir + "%01d.jpg " +
-                            "E:/Sketches/out/video/" + id + ".mp4";
-                    Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        hue %= 1;
+        return hue;
     }
 
-    int numberOfDigitsInFlooredNumber(float inputNumber) {
+    private int numberOfDigitsInFlooredNumber(float inputNumber) {
         return String.valueOf(floor(inputNumber)).length();
     }
 
-    public String regenIdAndCaptureDir() {
+    private String regenIdAndCaptureDir() {
         String newId = year() + nf(month(), 2) + nf(day(), 2) + "-" + nf(hour(), 2) + nf(minute(), 2) + nf(second(),
                 2) + "_" + this.getClass().getSimpleName();
         captureDir = "out/capture/" + newId + "/";
@@ -600,7 +508,6 @@ public abstract class KrabApplet extends PApplet {
     protected boolean isPointInRect(float px, float py, float rx, float ry, float rw, float rh) {
         return px >= rx && px <= rx + rw && py >= ry && py <= ry + rh;
     }
-
 
     protected float easeInOutExpo(float currentTime, float startValue, float changeInValue, float duration) {
         currentTime /= duration / 2;
@@ -651,7 +558,6 @@ public abstract class KrabApplet extends PApplet {
         // return atan( size /  r);
     }
 
-
     protected float lerpMany(float norm, float... values) {
         norm = constrain(norm, 0, 1);
         if (norm == 1) {
@@ -680,6 +586,45 @@ public abstract class KrabApplet extends PApplet {
         int index1 = index0 + 1;
         float lerpAmt = (fineIndex) % 1;
         return PVector.lerp(values[index0], values[index1], lerpAmt);
+    }
+
+    protected void ramp(PGraphics pg) {
+        ramp(pg, 4);
+    }
+
+    protected void ramp(PGraphics pg, int defaultColorCount) {
+        pg.hint(PConstants.DISABLE_DEPTH_TEST);
+        group("ramp");
+        int count = sliderInt("count", defaultColorCount);
+        int detail = 10;
+        float prevY = 0;
+        HSBA prevColor = new HSBA();
+        for (int i = 0; i < count; i++) {
+            float yNorm;
+            if (i == 0) {
+                yNorm = 0;
+            } else if (i == count - 1) {
+                yNorm = 1;
+            } else {
+                yNorm = slider("y pos " + i, map(i, 0, count - 1, 0, 1));
+            }
+            HSBA thisColor = picker("color " + i, yNorm);
+            float y = yNorm * pg.height;
+            pg.noStroke();
+            pg.beginShape(TRIANGLE_STRIP);
+            for (int j = 0; j < detail; j++) {
+                float x = map(j, 0, detail - 1, 0, width);
+                pg.fill(prevColor.clr());
+                pg.vertex(x, prevY);
+                pg.fill(thisColor.clr());
+                pg.vertex(x, y);
+            }
+            pg.endShape();
+            prevY = y;
+            prevColor = thisColor;
+        }
+        pg.hint(PConstants.ENABLE_DEPTH_TEST);
+        resetCurrentGroup();
     }
 
     protected ArrayList<PVector> ngon(float radius, int detail, int sides) {
@@ -757,6 +702,108 @@ public abstract class KrabApplet extends PApplet {
             lon = lon + s / r;
         }
         return points;
+    }
+
+    // GUI UTILS
+
+    private void updateMouseState() {
+        mousePressedOutsideGui = mousePressed && isMouseOutsideGui() && (!trayVisible || !overlayVisible);
+    }
+
+    private void guiSetup(boolean defaultVisibility) {
+        if (frameCount == 1) {
+            trayVisible = defaultVisibility;
+            textSize(textSize * 2);
+        } else if (frameCount == 3) {
+            loadLastStateFromFile(true);
+        }
+    }
+
+    protected void resetGui() {
+        for (Group group : groups) {
+            for (Element el : group.elements) {
+                el.reset();
+            }
+        }
+    }
+
+    protected void resetCurrentGroup() {
+        currentGroup = null;
+    }
+
+    private void updateScrolling() {
+        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height))) {
+            return;
+        }
+        scrollOffsetHistory.add(trayScrollOffset);
+        int scrollOffsetHistorySize = 3;
+        while (scrollOffsetHistory.size() > scrollOffsetHistorySize) {
+            scrollOffsetHistory.remove(0);
+        }
+        if (abs(pmouseY - mouseY) > 2) {
+            trayScrollOffset += mouseY - pmouseY;
+        }
+    }
+
+    private boolean trayHasntMovedInAWhile() {
+        for (Float historicalTrayOffset : scrollOffsetHistory) {
+            if (historicalTrayOffset != trayScrollOffset) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // RECORDING
+
+    protected void cam() {
+        cam(g);
+    }
+
+    protected void cam(PGraphics pg) {
+        PVector t = sliderXYZ("translate");
+        pg.translate(pg.width / 2f + t.x, pg.height / 2f + t.y, t.z);
+        PVector r = sliderXYZ("rotate");
+        pg.rotateX(r.x);
+        pg.rotateY(r.y);
+        pg.rotateZ(r.z);
+    }
+
+    public void rec() {
+        rec(g);
+    }
+
+    public void rec(PGraphics pg) {
+        savePGraphics(pg);
+    }
+
+    private void savePGraphics(PGraphics pg) {
+        if (captureScreenshot) {
+            captureScreenshot = false;
+            screenshotsAlreadyCaptured++;
+            String filename = captureDir + "screenshot_" + screenshotsAlreadyCaptured + ".jpg";
+            println(filename + " saved");
+            pg.save(filename);
+        }
+        int frameRecordingEnd = frameRecordingStarted + frameRecordingDuration + 1;
+        if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
+            int frameNumber = frameCount - frameRecordingStarted + 1;
+            println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted - 1, "saved");
+            PImage currentSketch = pg.get();
+            pg.save(captureDir + frameNumber + ".jpg");
+            boolean ffmpegEnabled = true;
+            if (frameCount == frameRecordingEnd - 1 && ffmpegEnabled) {
+                println("capture ended, running ffmpeg, please wait...");
+                try {
+                    String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
+                            "E:/Sketches/" + captureDir + "%01d.jpg " +
+                            "E:/Sketches/out/video/" + id + ".mp4";
+                    Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     // TRAY
@@ -940,7 +987,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void group(String name) {
-        if(groups.isEmpty()) {
+        if (groups.isEmpty()) {
             createDefaultGroup();
         }
         Group group = findGroup(name);
@@ -1220,10 +1267,10 @@ public abstract class KrabApplet extends PApplet {
         if (kk.character == 12) { // CTRL + L
             actions.add(ACTION_LOAD);
         }
-        if (kk.character == 'c') {
+        if (kk.character == 3) { // CTRL + C
             actions.add(ACTION_COPY);
         }
-        if (kk.character == 'v') {
+        if (kk.character == 22) { // CTRL + V
             actions.add(ACTION_PASTE);
         }
     }
@@ -1268,11 +1315,13 @@ public abstract class KrabApplet extends PApplet {
         }
         return currentGroup;
     }
+
     private void createDefaultGroup() {
         Group defaultGroup = new Group(this.getClass().getSimpleName());
         groups.add(defaultGroup);
         currentGroup = defaultGroup;
     }
+
     private void setCurrentGroup(Group currentGroup) {
         this.currentGroup = currentGroup;
     }
@@ -1626,6 +1675,8 @@ public abstract class KrabApplet extends PApplet {
         hotFilter(brightnessContractPass, pg);
     }
 
+    // SHADER RELOADING
+
     public PShader uniform(String fragPath) {
         ShaderSnapshot snapshot = findSnapshotByPath(fragPath);
         snapshot = initIfNull(snapshot, fragPath, null);
@@ -1685,13 +1736,7 @@ public abstract class KrabApplet extends PApplet {
         return null;
     }
 
-    protected float hueModulo(float hue) {
-        while (hue < 0) {
-            hue += 1;
-        }
-        hue %= 1;
-        return hue;
-    }
+//  PARAMETRIC EQUATIONS
 
     protected void drawParametric(PGraphics pg) {
         pg.pushMatrix();
@@ -1732,8 +1777,6 @@ public abstract class KrabApplet extends PApplet {
         }
         pg.popMatrix();
     }
-
-// PARAMETRIC EQUATIONS
 
     private PVector getVector(float u, float v, float r, float h) {
         String option = options("russian", "catenoid", "screw", "hexaedron", "moebius",
@@ -2602,12 +2645,14 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if(previousActions.contains(ACTION_COPY)) {
+            if (previousActions.contains(ACTION_COPY)) {
                 clipboardSliderFloat = getState();
             }
-            if(previousActions.contains(ACTION_PASTE)) {
-                pushCurrentStateToUndo();
-                setState(clipboardSliderFloat);
+            if (previousActions.contains(ACTION_PASTE)) {
+                if (!clipboardSliderFloat.isEmpty()) {
+                    pushCurrentStateToUndo();
+                    setState(clipboardSliderFloat);
+                }
             }
             if (previousActions.contains(ACTION_PRECISION_ZOOM_OUT) &&
                     ((!floored && precision < FLOAT_PRECISION_MAXIMUM) || (floored && precision < INT_PRECISION_MAXIMUM))) {
@@ -2759,12 +2804,14 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if(previousActions.contains(ACTION_COPY)) {
+            if (previousActions.contains(ACTION_COPY)) {
                 clipboardSliderXYZ = getState();
             }
-            if(previousActions.contains(ACTION_PASTE)) {
-                pushCurrentStateToUndo();
-                setState(clipboardSliderXYZ);
+            if (previousActions.contains(ACTION_PASTE)) {
+                if (!clipboardSliderXYZ.isEmpty()) {
+                    pushCurrentStateToUndo();
+                    setState(clipboardSliderXYZ);
+                }
             }
             if (previousActions.contains(ACTION_PRECISION_ZOOM_IN) && precision > FLOAT_PRECISION_MINIMUM) {
                 precision *= .1f;
@@ -2869,78 +2916,6 @@ public abstract class KrabApplet extends PApplet {
 
     }
 
-    public class HSBA {
-        private float hue, sat, br, alpha;
-
-        public HSBA(float hue, float sat, float br, float alpha) {
-            this.hue = hue;
-            this.sat = sat;
-            this.br = br;
-            this.alpha = alpha;
-        }
-
-        public HSBA() {
-            this.alpha = 1;
-        }
-
-        public int clr() {
-            pushStyle();
-            enforceConstraints();
-            colorMode(HSB, 1, 1, 1, 1);
-            int result = color(hue, sat, br, alpha);
-            popStyle();
-            return result;
-        }
-
-        public float hue() {
-            enforceConstraints();
-            return hue;
-        }
-
-        public void addHue(float val) {
-            hue += val;
-            enforceConstraints();
-        }
-
-        public float sat() {
-            enforceConstraints();
-            return sat;
-        }
-
-
-        public void setSat(float val) {
-            sat = val;
-            enforceConstraints();
-        }
-
-        public float br() {
-            enforceConstraints();
-            return br;
-        }
-
-        public void setBr(float val) {
-            br = val;
-            enforceConstraints();
-        }
-
-        public float alpha() {
-            enforceConstraints();
-            return alpha;
-        }
-
-        private void enforceConstraints() {
-            hue = hueModulo(hue);
-            sat = constrain(sat, 0, 1);
-            br = constrain(br, 0, 1);
-            alpha = constrain(alpha, 0, 1);
-        }
-
-        public void setAlpha(float val) {
-            alpha = val;
-            enforceConstraints();
-        }
-    }
-
     private class ColorPicker extends Slider {
         HSBA hsba;
         float defaultHue, defaultSat, defaultBr, defaultAlpha;
@@ -2960,12 +2935,14 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if(previousActions.contains(ACTION_COPY)) {
+            if (previousActions.contains(ACTION_COPY)) {
                 clipboardPicker = getState();
             }
-            if(previousActions.contains(ACTION_PASTE)) {
-                pushCurrentStateToUndo();
-                setState(clipboardPicker);
+            if (previousActions.contains(ACTION_PASTE)) {
+                if (!clipboardPicker.isEmpty()) {
+                    pushCurrentStateToUndo();
+                    setState(clipboardPicker);
+                }
             }
             if (overlayVisible && overlayOwner != null && overlayOwner.equals(this) && actions.contains(ACTION_RESET)) {
                 pushCurrentStateToUndo();
@@ -3195,6 +3172,78 @@ public abstract class KrabApplet extends PApplet {
 
         HSBA getHSBA() {
             return hsba;
+        }
+    }
+
+    public class HSBA {
+        private float hue, sat, br, alpha;
+
+        public HSBA(float hue, float sat, float br, float alpha) {
+            this.hue = hue;
+            this.sat = sat;
+            this.br = br;
+            this.alpha = alpha;
+        }
+
+        public HSBA() {
+            this.alpha = 1;
+        }
+
+        public int clr() {
+            pushStyle();
+            enforceConstraints();
+            colorMode(HSB, 1, 1, 1, 1);
+            int result = color(hue, sat, br, alpha);
+            popStyle();
+            return result;
+        }
+
+        public float hue() {
+            enforceConstraints();
+            return hue;
+        }
+
+        public void addHue(float val) {
+            hue += val;
+            enforceConstraints();
+        }
+
+        public float sat() {
+            enforceConstraints();
+            return sat;
+        }
+
+
+        public void setSat(float val) {
+            sat = val;
+            enforceConstraints();
+        }
+
+        public float br() {
+            enforceConstraints();
+            return br;
+        }
+
+        public void setBr(float val) {
+            br = val;
+            enforceConstraints();
+        }
+
+        public float alpha() {
+            enforceConstraints();
+            return alpha;
+        }
+
+        private void enforceConstraints() {
+            hue = hueModulo(hue);
+            sat = constrain(sat, 0, 1);
+            br = constrain(br, 0, 1);
+            alpha = constrain(alpha, 0, 1);
+        }
+
+        public void setAlpha(float val) {
+            alpha = val;
+            enforceConstraints();
         }
     }
 }

@@ -16,8 +16,8 @@ public class Blocky extends KrabApplet {
     }
 
     public void settings() {
-//        size(1000, 1000, P3D);
-        fullScreen(P3D);
+        size(1000, 1000, P3D);
+//        fullScreen(P3D);
     }
 
     public void setup() {
@@ -32,7 +32,7 @@ public class Blocky extends KrabApplet {
         frameRecordingDuration = sliderInt("recording frames", 360);
         pg.beginDraw();
         pg.colorMode(HSB, 1, 1, 1, 1);
-        drawColorRampBackground();
+        ramp(pg, 4);
         translateToCenter(pg);
         translate(pg, "translate");
         updateLighting();
@@ -43,8 +43,11 @@ public class Blocky extends KrabApplet {
         group("sea");
         drawSeaOfBoxes();
         drawRecursiveShapeStart();
-        preRotate(pg, "rotation between");
-        drawRecursiveShapeStart();
+        for (int i = 0; i < sliderInt("shape count"); i++) {
+            preRotate(pg, "rotation between");
+            drawRecursiveShapeStart();
+        }
+        sliderXYZ("rotate Δ").add(sliderXYZ("rotate ΔΔ"));
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
@@ -68,60 +71,14 @@ public class Blocky extends KrabApplet {
         resetCurrentGroup();
     }
 
-    private void drawRecursiveShapeStart() {
-        group("recursive");
+    private void drawSeaOfBoxes() {
+        // grid of columns on the XZ plane with fbm informed Y size
         if (toggle("skip")) {
             return;
         }
         pg.pushMatrix();
-        pg.strokeWeight(slider("weight"));
-        pg.stroke(picker("stroke").clr());
-        pg.fill(picker("fill").clr());
-        drawRecursiveShape(
-                sliderXYZ("orig translate").copy(),
-                sliderXYZ("orig rotate").copy(),
-                sliderXYZ("orig size", 600, 50, 600).copy());
-        sliderXYZ("rotate Δ").add(sliderXYZ("rotate ΔΔ"));
-        pg.popMatrix();
-    }
-
-    private void drawColorRampBackground() {
-        colorRamp.beginDraw();
-        group("ramp");
-        int count = sliderInt("count", 4);
-        int detail = 10;
-        float prevY = 0;
-        HSBA prevColor = new HSBA();
-        for (int i = 0; i < count; i++) {
-            HSBA thisColor = picker("color " + i);
-            float yNorm = slider("y " + i, map(i, 0, count - 1, 0, 1));
-            float y = yNorm * colorRamp.height;
-            colorRamp.noStroke();
-            colorRamp.beginShape(TRIANGLE_STRIP);
-            for (int j = 0; j < detail; j++) {
-                float x = map(j, 0, detail - 1, 0, width);
-                colorRamp.fill(prevColor.clr());
-                colorRamp.vertex(x, prevY);
-                colorRamp.fill(thisColor.clr());
-                colorRamp.vertex(x, y);
-            }
-            colorRamp.endShape();
-            prevY = y;
-            prevColor = thisColor;
-        }
-        colorRamp.endDraw();
-        pg.hint(PConstants.DISABLE_DEPTH_TEST);
-        pg.image(colorRamp, 0, 0, pg.width, pg.height);
-        pg.hint(PConstants.ENABLE_DEPTH_TEST);
-        resetCurrentGroup();
-    }
-
-    private void drawSeaOfBoxes() {
-        // grid of columns on the XZ plane with fbm informed Y size
-        pg.pushMatrix();
         pg.noStroke();
         HSBA fill = picker("fill");
-
         translate(pg, "translate");
         preRotate(pg, "rotate");
         PVector size = sliderXY("grid size");
@@ -162,7 +119,22 @@ public class Blocky extends KrabApplet {
         pg.popMatrix();
     }
 
-    // unused in the end
+    private void drawRecursiveShapeStart() {
+        group("recursive");
+        if (toggle("skip")) {
+            return;
+        }
+        pg.pushMatrix();
+        pg.strokeWeight(slider("weight"));
+        pg.stroke(picker("stroke").clr());
+        pg.fill(picker("fill").clr());
+        drawRecursiveShape(
+                sliderXYZ("orig translate").copy(),
+                sliderXYZ("orig rotate").copy(),
+                sliderXYZ("orig size", 600, 50, 600).copy());
+        pg.popMatrix();
+    }
+
     private void drawRecursiveShape(PVector translate, PVector rotate, PVector size) {
         float minSize = slider("min size", 10);
         if (size.x < minSize || size.y < minSize || size.z < minSize) {
@@ -175,7 +147,16 @@ public class Blocky extends KrabApplet {
         if (!size.equals(sliderXYZ("orig size")) || toggle("draw first")) {
             pg.box(size.x, size.y, size.z);
         }
-        PVector sizeDelta = sliderXYZ("size Δ", -10);
+        PVector sizeDelta = sliderXYZ("3D shrink Δ", -10);
+        if(toggle("same shrink", true)) {
+            float uniformSizeDelta = slider("1D shrink Δ", -10);
+            sizeDelta.x = uniformSizeDelta;
+            sizeDelta.y = uniformSizeDelta;
+            sizeDelta.z = uniformSizeDelta;
+        }
+        sizeDelta.x = min(sizeDelta.x, -.1f);
+        sizeDelta.y = min(sizeDelta.y, -.1f);
+        sizeDelta.z = min(sizeDelta.z, -.1f);
         drawRecursiveShape(sliderXYZ("translate Δ"), sliderXYZ("rotate Δ"), size.add(sizeDelta));
     }
 
