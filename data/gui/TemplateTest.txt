@@ -54,3 +54,33 @@ ramp§color 3§0.94750017§1.0§0.65§1.0§1.0
 ramp§y pos 3§0.78§10.0
 ramp§color 4§0.94750017§1.0§0.3125§1.0§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TemplateTest§true
+GROUP§ramp§true
+ramp§vertical§1
+ramp§count§5.999532§100.0
+ramp§0§0.0§0.0§0.0§1.0§1.0
+ramp§ 1§0.26333338§10.0
+ramp§1§0.0§0.0§0.33333334§1.0§1.0
+ramp§ 2§0.40666693§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3§0.0§0.0§1.0§1.0§1.0
+ramp§ 3§0.43999928§10.0
+ramp§4§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TemplateTest§true
+GROUP§ramp§true
+ramp§vertical§0
+ramp§count§5.999532§100.0
+ramp§0§0.07500024§0.49375§1.0§1.0§1.0
+ramp§ 1§0.5033334§10.0
+ramp§1§0.718§0.0§1.0§1.0§1.0
+ramp§ 2§0.5566665§10.0
+ramp§2§0.708§0.7125§1.0§1.0§1.0
+ramp§3§0.7355§1.0§0.4§1.0§1.0
+ramp§ 3§0.78999984§10.0
+ramp§4§0.75850004§1.0§0.0§1.0§1.0
+STATE_END

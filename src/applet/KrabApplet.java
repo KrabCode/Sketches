@@ -132,7 +132,7 @@ public abstract class KrabApplet extends PApplet {
     private float trayScrollOffset = 0;
     private PGraphics colorSplitResult;
     private PGraphics[] primaryColorCanvases;
-    private PVector[] primaryColorMultipliers = new PVector[]{
+    private final PVector[] primaryColorMultipliers = new PVector[]{
             new PVector(1, 0, 0),
             new PVector(0, 1, 0),
             new PVector(0, 0, 1)};
@@ -212,6 +212,7 @@ public abstract class KrabApplet extends PApplet {
     protected PVector sliderXY() {
         return sliderXY("xy");
     }
+
 
     protected PVector sliderXY(String name, float defaultX, float defaultY) {
         return sliderXY(name, defaultX, defaultY, numberOfDigitsInFlooredNumber(max(defaultX, defaultY)) * 10);
@@ -383,10 +384,27 @@ public abstract class KrabApplet extends PApplet {
         if (frameCount == 1) {
             trayVisible = elementCount() != 0;
         }
-        resetCurrentGroup();
+        resetGroup();
     }
 
     // GENERAL UTILS
+
+    protected void lights(PGraphics pg) {
+        group("lights");
+        HSBA ambientColor = picker("ambient");
+        HSBA dirLightColor = picker("dir light color");
+        HSBA specLightColor = picker("spec light color");
+        PVector dirLightDir = sliderXYZ("dir dir 1");
+        PVector dirLightDir2 = sliderXYZ("dir dir 2");
+        pg.lights();
+        pg.lightSpecular(specLightColor.hue(), specLightColor.sat(), specLightColor.br());
+        pg.shininess(slider("shine"));
+        pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir.x, dirLightDir.y, dirLightDir.z);
+        pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir2.x, dirLightDir2.y, dirLightDir2.z);
+        pg.ambient(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
+        pg.ambientLight(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
+        resetGroup();
+    }
 
     protected void style(PGraphics pg) {
         style(pg, "");
@@ -787,7 +805,7 @@ public abstract class KrabApplet extends PApplet {
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
-    protected void uniformRamp(String shaderPath) {
+    protected void uniformRamp(String frag, String shaderPath) {
         uniformRamp(shaderPath, "ramp", 4);
     }
 
@@ -804,13 +822,19 @@ public abstract class KrabApplet extends PApplet {
         }
         shaderRamp.beginDraw();
         shaderRamp.clear();
-        ramp(shaderRamp, rampName, 4);
+        ramp(shaderRamp, rampName, 4, true);
         shaderRamp.endDraw();
         uniform(shaderPath).set("ramp", shaderRamp);
     }
 
     protected void ramp(PGraphics pg) {
         ramp(pg, "ramp", 4);
+    }
+
+    protected void ramp(PGraphics pg, String rampName, int defaultColorCount) {
+        boolean vertical = options("vertical", "circular").equals("vertical");
+        group(rampName);
+        ramp(pg, rampName, defaultColorCount, vertical);
     }
 
     /**
@@ -820,12 +844,13 @@ public abstract class KrabApplet extends PApplet {
      * @param defaultColorCount default number of colors
      *                          any saved settings for things higher than this number won't be loaded on startup
      */
-    protected void ramp(PGraphics pg, String rampName, int defaultColorCount) {
+    protected void ramp(PGraphics pg, String rampName, int defaultColorCount, boolean vertical) {
         pg.hint(PConstants.DISABLE_DEPTH_TEST);
         group(rampName);
         int count = sliderInt("count", defaultColorCount);
         int detail = 10;
         float prevY = 0;
+        float prevR = 0;
         HSBA prevColor = new HSBA();
         for (int i = 0; i < count; i++) {
             float yNorm;
@@ -834,26 +859,40 @@ public abstract class KrabApplet extends PApplet {
             } else if (i == count - 1) {
                 yNorm = 1;
             } else {
-                yNorm = slider("y pos " + i, map(i, 0, count - 1, 0, 1),
-                        1, true, 0, 1);
+                yNorm = slider(" " + i, map(i, 0, count - 1, 0, 1));
             }
-            HSBA thisColor = picker("color " + i, yNorm);
-            float y = yNorm * pg.height;
+            HSBA thisColor = picker(String.valueOf(i), yNorm);
             pg.noStroke();
             pg.beginShape(TRIANGLE_STRIP);
-            for (int j = 0; j < detail; j++) {
-                float x = map(j, 0, detail - 1, 0, width);
-                pg.fill(prevColor.clr());
-                pg.vertex(x, prevY);
-                pg.fill(thisColor.clr());
-                pg.vertex(x, y);
+            if (vertical) {
+                int verticalDetail = 10;
+                float y = yNorm * pg.height;
+                for (int j = 0; j < verticalDetail; j++) {
+                    float x = map(j, 0, verticalDetail - 1, 0, width);
+                    pg.fill(prevColor.clr());
+                    pg.vertex(x, prevY);
+                    pg.fill(thisColor.clr());
+                    pg.vertex(x, y);
+                }
+                prevY = y;
+            } else {
+                int circularDetail = 100;
+                float diagonalLength = dist(0, 0, pg.width / 2f, pg.height / 2f);
+                float r = yNorm * diagonalLength;
+                for (int j = 0; j < circularDetail; j++) {
+                    float theta = map(j, 0, circularDetail - 1, 0, TAU);
+                    pg.fill(prevColor.clr());
+                    pg.vertex(pg.width / 2f + prevR * cos(theta), pg.height / 2f + prevR * sin(theta));
+                    pg.fill(thisColor.clr());
+                    pg.vertex(pg.width / 2f + r * cos(theta), pg.height / 2f + r * sin(theta));
+                }
+                prevR = r;
             }
             pg.endShape();
-            prevY = y;
             prevColor = thisColor;
         }
         pg.hint(PConstants.ENABLE_DEPTH_TEST);
-        resetCurrentGroup();
+        resetGroup();
     }
 
     /**
@@ -978,7 +1017,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    protected void resetCurrentGroup() {
+    protected void resetGroup() {
         currentGroup = null;
     }
 
@@ -1567,14 +1606,14 @@ public abstract class KrabApplet extends PApplet {
         return currentGroup;
     }
 
-    private void setCurrentGroup(Group currentGroup) {
-        this.currentGroup = currentGroup;
-    }
-
     private void createDefaultGroup() {
         Group defaultGroup = new Group(this.getClass().getSimpleName());
         groups.add(defaultGroup);
         currentGroup = defaultGroup;
+    }
+
+    private void setCurrentGroup(Group currentGroup) {
+        this.currentGroup = currentGroup;
     }
 
     private Group getLastGroup() {

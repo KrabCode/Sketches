@@ -1,0 +1,14 @@
+STATE_BEGIN
+UNDO
+GROUP§ShaderRamp§true
+GROUP§shader ramp§true
+shader ramp§count§4.0§100.0
+shader ramp§0§0.0§0.0§0.0§1.0§1.0
+shader ramp§ 1§0.86333305§10.0
+shader ramp§1§0.0§0.0§0.0§1.0§1.0
+shader ramp§ 2§0.89666647§10.0
+shader ramp§2§0.0§0.0§0.54375§1.0§1.0
+shader ramp§3§0.0§0.0§1.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+STATE_END
