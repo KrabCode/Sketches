@@ -100,8 +100,8 @@ public abstract class KrabApplet extends PApplet {
     private final ArrayList<ShaderSnapshot> snapshots = new ArrayList<>();
     private final int shaderRefreshRateInMillis = 36;
     private final PMatrix3D mouseRotation = new PMatrix3D();
-    private final Map<String, PMatrix3D> sliderRotationMatrixMap = new HashMap<String, PMatrix3D>();
-    private final Map<String, PVector> previousSliderRotationMap = new HashMap<String, PVector>();
+    private final Map<String, PMatrix3D> sliderRotationMatrixMap = new HashMap<>();
+    private final Map<String, PVector> previousSliderRotationMap = new HashMap<>();
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
     protected float t;
@@ -706,7 +706,7 @@ public abstract class KrabApplet extends PApplet {
      * and the transition through the middle sharpened, which makes animations feel more natural.
      * @param p normalized value to ease
      * @param g easing strength
-     * @return
+     * @return eased value
      */
     protected float ease(float p, float g) {
         if (p < 0.5)
@@ -737,7 +737,7 @@ public abstract class KrabApplet extends PApplet {
      * Returns the angular diameter of a circle with radius 'r' on the edge of a circle with radius 'size'.
      * @param r the radius of the circle to check the angular diameter of
      * @param size the radius that the circle rests on the edge of
-     * @return
+     * @return angular diameter of r at radius size
      */
     public float angularDiameter(float r, float size) {
         return atan(2 * (size / (2 * r)));
@@ -861,7 +861,7 @@ public abstract class KrabApplet extends PApplet {
      * @param radius radius of the polygon
      * @param detail number of vectors to use
      * @param sides number of sides of the polygon
-     * @return
+     * @return array of vectors that form an n-sided polygon
      */
     protected ArrayList<PVector> ngon(float radius, int detail, int sides) {
         sides = max(1, sides);
