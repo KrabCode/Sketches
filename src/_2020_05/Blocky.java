@@ -32,7 +32,7 @@ public class Blocky extends KrabApplet {
         frameRecordingDuration = sliderInt("recording frames", 360);
         pg.beginDraw();
         pg.colorMode(HSB, 1, 1, 1, 1);
-        ramp(pg, 4);
+        ramp(pg, "background", 4);
         translateToCenter(pg);
         translate(pg, "translate");
         updateLighting();

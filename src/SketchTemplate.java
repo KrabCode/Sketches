@@ -19,7 +19,7 @@ public class SketchTemplate extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        pg.background(0);
+        ramp(pg, "background", 4);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);

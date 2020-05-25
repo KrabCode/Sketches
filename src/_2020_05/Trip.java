@@ -1,6 +1,7 @@
 package _2020_05;
 
 import applet.KrabApplet;
+import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
