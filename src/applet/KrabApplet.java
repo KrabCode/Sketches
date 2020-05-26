@@ -577,7 +577,7 @@ public abstract class KrabApplet extends PApplet {
      */
     protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
         group("color split");
-        if(toggle("skip")) {
+        if (toggle("skip")) {
             return pg;
         }
         if (colorSplitResult == null || colorSplitResult.width != pg.width || colorSplitResult.height != pg.height) {
@@ -909,7 +909,7 @@ public abstract class KrabApplet extends PApplet {
             } else {
                 yNorm = slider((i + 1) + " ", map(i, 0, count - 1, 0, 1));
             }
-            HSBA thisColor = picker(String.valueOf(i + 1), 1-yNorm);
+            HSBA thisColor = picker(String.valueOf(i + 1), 1 - yNorm);
             pg.noStroke();
             pg.beginShape(TRIANGLE_STRIP);
             if (vertical) {
@@ -2700,7 +2700,8 @@ public abstract class KrabApplet extends PApplet {
             super(parent, name);
         }
 
-        void updateOverlay() {}
+        void updateOverlay() {
+        }
 
         protected float updateFullHorizontalSlider(float x, float y, float w, float h, float value, float precision,
                                                    float horizontalRevealAnimationStarted, boolean alternative,
@@ -2910,18 +2911,37 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void displayPrecision(float precision) {
-             pushStyle();
-             fill(0);
-             noStroke();
-             rectMode(CENTER);
-             float x = width-cell*3;
-             float y = height-cell*3;
-             rect(x, y, cell*4, cell*1);
-             fill(GRAYSCALE_TEXT_DARK);
-             textAlign(CENTER, CENTER);
-             textSize(textSize*.75f);
-             text("precision\n"+nf(precision, 0, 0), x, y);
-             popStyle();
+            pushStyle();
+            fill(0, BACKGROUND_ALPHA);
+            noStroke();
+            rectMode(CENTER);
+            float x = width - cell * 3.1f;
+            float y = height - cell * 2.6f;
+            rect(x, y, cell * 2, cell, cell * .8f);
+            fill(GRAYSCALE_TEXT_DARK);
+            textAlign(CENTER, CENTER);
+            textSize(textSize * .75f);
+            text(prettyPrecisionFormat(precision), x, y - 2);
+            popStyle();
+        }
+
+        private String prettyPrecisionFormat(float precision) {
+            if (precision > 1) {
+                return String.valueOf(floor(precision));
+            }
+            try {
+                String p = String.valueOf(precision).split("\\.")[1];
+                StringBuilder result = new StringBuilder("0.");
+                for (char c : p.toCharArray()) {
+                    result.append(c);
+                    if (c != '0') {
+                        break;
+                    }
+                }
+                return result.toString();
+            } catch (Exception ex) {
+                return String.valueOf(precision);
+            }
         }
     }
 
