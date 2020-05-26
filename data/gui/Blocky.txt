@@ -4507,3 +4507,73 @@ recursive§shape count§22.99998§100.0
 recursive§rotation between§1.0§0.0§0.0§0.27378142
 recursive§rotate ΔΔ§0.010000001§-2.7999544E-4§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Blocky§false
+Blocky§recording frames§720.9994§300.0
+Blocky§vertical§0
+Blocky§translate§10000.0§0.0§-760.0§-2046.7998
+Blocky§rotate§10.0§0.0§0.059999987§0.0
+Blocky§translate 2§10.0§0.0§0.0§0.0
+GROUP§background§false
+background§count§4.0§100.0
+background§0§0.0§0.0§0.0§1.0§1.0
+background§ 1§0.33333334§10.0
+background§1§0.0§0.0§0.33333334§1.0§1.0
+background§ 2§0.6666667§10.0
+background§2§0.0§0.0§0.6666667§1.0§1.0
+background§3§0.0§0.0§1.0§1.0§1.0
+GROUP§lights§true
+lights§ambient§0.087999634§0.0§0.0§1.0§1.0
+lights§dir light color§0.141§0.0§1.0§1.0§1.0
+lights§spec light color§0.6579997§0.0§1.0§1.0§1.0
+lights§shine§5.9228516§1000.0
+lights§light count§2.0110416§100.0
+lights§light 0§10.0§0.0§1.0400002§-1.05
+lights§light 1§10.0§-2.519999§-2.5999994§0.0
+lights§light 2§10.0§0.0§0.0§0.0
+GROUP§clouds§false
+clouds§skip§false
+clouds§fill§0.8489998§0.0§0.83125§1.0§10.0
+clouds§translate§10000.0§0.0§-1001.95276§0.0
+clouds§rotate§10.0§0.0§-0.03125§0.0
+clouds§grid size§10.0§2500.0022§2500.0024
+clouds§col width§245.31232§1000.0
+clouds§col height§0.0§10.0
+clouds§time§0.0§10.0
+clouds§max dist§5858.239§4000.0
+clouds§count§20.999617§200.0
+clouds§noise freqs§0.10000002§0.001200341§0.0020464452
+clouds§noise mags§100.0§61.599995§26.603111
+clouds§noise speed§10.0§-0.7§-0.7
+clouds§noise speed radius§100.0§0.0§0.0
+clouds§check dist§true
+clouds§hue offset§4.599892E-4§0.010000001
+clouds§sat offset§0.0§10.0
+clouds§br offset§0.0§10.0
+clouds§alpha y§0.19000033§1.0
+clouds§alpha y offset§0.0§10.0
+clouds§abs§true
+GROUP§sea§false
+sea§skip§false
+sea§fill§0.6304999§0.56875§1.0§1.0§1.0
+sea§translate§1000.0§0.0§999.655§31.640625
+sea§rotate§0.1§0.0§0.030312471§0.0
+sea§grid size§10.0§2500.0022§2500.0024
+sea§col width§213.69196§1000.0
+sea§col height§15.914093§1000.0
+sea§time§8.869999§100.0
+sea§max dist§1500.0§40.0
+sea§count§25.99047§200.0
+sea§noise freqs§0.10000001§0.0015300584§0.012320028
+sea§noise mags§1000.0§186.3172§43.817184
+sea§noise speed§10.0§-0.6600004§-0.6999999
+sea§noise speed radius§100.0§0.0§0.0
+sea§check dist§false
+sea§hue offset§0.0§10.0
+sea§sat offset§-0.005§1.0
+sea§br offset§0.0§10.0
+sea§alpha y§0.0§10.0
+sea§alpha y offset§5.03§10.0
+sea§abs§false
+STATE_END

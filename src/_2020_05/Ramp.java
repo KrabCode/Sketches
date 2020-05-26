@@ -2,9 +2,8 @@ package _2020_05;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
-import processing.core.PVector;
 
-public class ColorSplit extends KrabApplet {
+public class Ramp extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
@@ -12,23 +11,26 @@ public class ColorSplit extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P3D);
+        size(1000, 1000, P2D);
     }
 
     public void setup() {
-        pg = createGraphics(width, height, P3D);
-        surface.setAlwaysOnTop(true);
+        if (width < displayWidth) {
+            surface.setAlwaysOnTop(true);
+        }
+        pg = createGraphics(width, height, P2D);
     }
 
     public void draw() {
         pg.beginDraw();
         fadeToBlack(pg);
-        ramp(pg);
+        ramp(pg, 6);
         pg.endDraw();
-        colorSplit(pg, true);
-        image(pg, 0, 0);
+        if (toggle("split")) {
+            colorSplit(pg, true);
+        }
+        image(pg, 0, 0, width, height);
         rec(pg);
         gui();
     }
-
 }

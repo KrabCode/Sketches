@@ -32,7 +32,7 @@ public class Blocky extends KrabApplet {
         ramp(pg, "background", 4);
         translateToCenter(pg);
         translate(pg, "translate");
-        lights(pg);
+        lights(pg, 2);
         preRotate(pg);
         translate(pg, "translate 2");
         group("clouds");

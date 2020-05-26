@@ -35,7 +35,6 @@ public abstract class KrabApplet extends PApplet {
     private static final String ACTION_SAVE = "SAVE";
     private static final String ACTION_COPY = "COPY";
     private static final String ACTION_PASTE = "PASTE";
-    private static final String ACTION_LOAD = "load";
     private static final int MENU_BUTTON_COUNT = 4;
     private static final String MENU_BUTTON_HIDE = "hide";
     private static final String MENU_BUTTON_UNDO = "undo";
@@ -102,6 +101,10 @@ public abstract class KrabApplet extends PApplet {
     private final PMatrix3D mouseRotation = new PMatrix3D();
     private final Map<String, PMatrix3D> sliderRotationMatrixMap = new HashMap<>();
     private final Map<String, PVector> previousSliderRotationMap = new HashMap<>();
+    private final PVector[] primaryColorMultipliers = new PVector[]{
+            new PVector(1, 0, 0),
+            new PVector(0, 1, 0),
+            new PVector(0, 0, 1)};
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
     protected float t;
@@ -132,10 +135,6 @@ public abstract class KrabApplet extends PApplet {
     private float trayScrollOffset = 0;
     private PGraphics colorSplitResult;
     private PGraphics[] primaryColorCanvases;
-    private final PVector[] primaryColorMultipliers = new PVector[]{
-            new PVector(1, 0, 0),
-            new PVector(0, 1, 0),
-            new PVector(0, 0, 1)};
     private PGraphics shaderRamp;
 
     // GUI INTERFACE
@@ -356,6 +355,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Must be called every frame for the GUI to update and display.
+     *
      * @param defaultVisibility should the GUI tray start in the shown state?
      */
     protected void gui(boolean defaultVisibility) {
@@ -390,19 +390,29 @@ public abstract class KrabApplet extends PApplet {
     // GENERAL UTILS
 
     protected void lights(PGraphics pg) {
+        lights(pg, 1);
+    }
+
+    /**
+     * Lights a 3D scene. Any lights beyond the defaultLightCount won't be loaded at startup.
+     *
+     * @param pg                PGraphics to light
+     * @param defaultLightCount default number of directional lights
+     */
+    protected void lights(PGraphics pg, int defaultLightCount) {
         group("lights");
         HSBA ambientColor = picker("ambient");
         HSBA dirLightColor = picker("dir light color");
         HSBA specLightColor = picker("spec light color");
-        PVector dirLightDir = sliderXYZ("dir dir 1");
-        PVector dirLightDir2 = sliderXYZ("dir dir 2");
-        pg.lights();
-        pg.lightSpecular(specLightColor.hue(), specLightColor.sat(), specLightColor.br());
-        pg.shininess(slider("shine"));
-        pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir.x, dirLightDir.y, dirLightDir.z);
-        pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir2.x, dirLightDir2.y, dirLightDir2.z);
         pg.ambient(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
         pg.ambientLight(ambientColor.hue(), ambientColor.sat(), ambientColor.br());
+        pg.lightSpecular(specLightColor.hue(), specLightColor.sat(), specLightColor.br());
+        pg.shininess(slider("shine"));
+        for (int i = 0; i < sliderInt("light count", defaultLightCount); i++) {
+            PVector dirLightDir = sliderXYZ("light " + (i + 1));
+            pg.directionalLight(dirLightColor.hue(), dirLightColor.sat(), dirLightColor.br(), dirLightDir.x,
+                    dirLightDir.y, dirLightDir.z);
+        }
         resetGroup();
     }
 
@@ -412,7 +422,8 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Applies stroke weight, stroke and fill using the GUI.
-     * @param pg PGraphics to apply to
+     *
+     * @param pg     PGraphics to apply to
      * @param prefix optional GUI element prefix
      */
     protected void style(PGraphics pg, String prefix) {
@@ -429,6 +440,7 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Subtracts all colors from the image, resulting in a slow darkening of any image.
      * Leaves no gray traces as opposed to drawing a transparent black rectangle over the sketch.
+     *
      * @param pg PGraphics to darken
      */
     protected void fadeToBlack(PGraphics pg) {
@@ -446,6 +458,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Adds white to an image. See the fadeToBlack method.
+     *
      * @param pg PGraphics to brighten
      */
     protected void fadeToWhite(PGraphics pg) {
@@ -468,6 +481,7 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Allows mouse rotation control and applies the rotation to the PGraphics.
      * Rotations are pre-applied, so the axes are not affected by any previous rotations, which makes it more intuitive.
+     *
      * @param pg PGraphics to rotate
      */
     protected void mouseRotation(PGraphics pg) {
@@ -487,6 +501,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Translates to the center of the sketch.
+     *
      * @param pg PGraphics to translate in
      */
     protected void translateToCenter(PGraphics pg) {
@@ -499,7 +514,8 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Translates to an arbitrary vector controlled a 3D slider.
-     * @param pg PGraphics to translate in
+     *
+     * @param pg         PGraphics to translate in
      * @param sliderName optional name of the slider
      */
     protected void translate(PGraphics pg, String sliderName) {
@@ -516,7 +532,8 @@ public abstract class KrabApplet extends PApplet {
      * Rotations are pre-applied, so the axes are not affected by any previous rotations, which makes it more intuitive.
      * This method can be called any number of times - as long as the slider names are unique it will produce a unique
      * rotation.
-     * @param pg PGraphics to rotate
+     *
+     * @param pg         PGraphics to rotate
      * @param sliderName name of the slider and the key of the PMatrix in the sliderRotationMatrixMap
      */
     protected void preRotate(PGraphics pg, String sliderName) {
@@ -552,32 +569,43 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Takes a PGraphics, splits it up into primary color images and re-assembles them using blendMode(ADD) at
      * different scales growing from the center.
-     * @param pg input image
-     * @param drawResultOverInput draws the result over the input
+     *
+     * @param pg                  input image
+     * @param drawResultOverInput draws the result over the input - this method expects the PGraphics to be already
+     *                            closed with endDraw() and it calls beginDraw() and endDraw() by itself.
      * @return color split image
      */
     protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
         group("color split");
+        if(toggle("skip")) {
+            return pg;
+        }
         if (colorSplitResult == null || colorSplitResult.width != pg.width || colorSplitResult.height != pg.height) {
-            colorSplitResult = createGraphics(pg.width, pg.height, P3D);
+            colorSplitResult = createGraphics(pg.width, pg.height, P2D);
             primaryColorCanvases = new PGraphics[3];
             for (int i = 0; i < 3; i++) {
-                primaryColorCanvases[i] = createGraphics(pg.width, pg.height, P3D);
+                primaryColorCanvases[i] = createGraphics(pg.width, pg.height, P2D);
             }
         }
-        PVector scale = sliderXYZ("scale", 0.99f, 1, 1.01f, 0.1f);
+        PVector scale = sliderXYZ("RGB scales", 1, 0.1f);
         float[] scales = new float[]{scale.x, scale.y, scale.z};
-        while(scales[0] < 1 || scales[1] < 1 || scales[2] < 1) {
-            //scales smaller than 1 result in ugly edges, we're more interested in the relative color scales anyway
-            scales[0] += .001;
-            scales[1] += .001;
-            scales[2] += .001;
+        if (toggle("force scales >= 1")) {
+            while (scales[0] < 1 || scales[1] < 1 || scales[2] < 1) {
+                //scales smaller than 1 result in ugly edges, we're more interested in the relative color scales anyway
+                scales[0] += .001;
+                scales[1] += .001;
+                scales[2] += .001;
+            }
         }
         for (int i = 0; i < 3; i++) {
             PGraphics primaryColorCanvas = primaryColorCanvases[i];
             primaryColorCanvas.beginDraw();
             primaryColorCanvas.clear();
             primaryColorCanvas.image(pg, 0, 0, width, height);
+            primaryColorMultipliers[i] = sliderXYZ("multiplier " + (i + 1),
+                    primaryColorMultipliers[i].x,
+                    primaryColorMultipliers[i].y,
+                    primaryColorMultipliers[i].z);
             colorFilter(primaryColorCanvas, primaryColorMultipliers[i]);
             primaryColorCanvas.endDraw();
         }
@@ -599,7 +627,7 @@ public abstract class KrabApplet extends PApplet {
             pg.clear();
             pg.hint(PConstants.DISABLE_DEPTH_TEST);
             pg.imageMode(CORNER);
-            pg.image(colorSplitResult, 0, 0, width, height);
+            pg.image(colorSplitResult, 0, 0, pg.width, pg.height);
             pg.hint(PConstants.ENABLE_DEPTH_TEST);
             pg.popStyle();
             pg.endDraw();
@@ -614,8 +642,10 @@ public abstract class KrabApplet extends PApplet {
     }
 
     /**
-     * Takes any float and performs a modulo operation in both the positive and negative direction, so the result is
-     * always 0-1. Used with hues you want to add or subtract a hue from, but don't want to stop at 0 or 1.
+     * Takes any float and returns the positive fractional part of it, so the result is always between 0 and 1.
+     * For example -0.1 becomes 0.1 and 1.5 becomes 0.5. Used with hue due to its cyclical
+     * nature.
+     *
      * @param hue float to apply modulo to
      * @return float in the range [0,1)
      */
@@ -630,6 +660,7 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Returns the number of digits in a floored number. Useful for approximating the most useful default precision
      * of a slider.
+     *
      * @param inputNumber number to floor and check the size of
      * @return number of digits in floored number
      */
@@ -639,6 +670,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Prepares a new path for capturing images (i.e. every time the sketch is run or a video is recorded).
+     *
      * @return new sketch id
      */
     private String regenIdAndCaptureDir() {
@@ -650,6 +682,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * A random function that always returns the same number for the same seed.
+     *
      * @param seed seed to use
      * @return hash value between 0 and 1
      */
@@ -659,7 +692,8 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Constructs a random image url with the specified size.
-     * @param width image width to request
+     *
+     * @param width  image width to request
      * @param height image height to request
      * @return random image url
      */
@@ -669,6 +703,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Constructs a random square image url with the specified size.
+     *
      * @param size image width to request
      * @return random square image
      */
@@ -678,6 +713,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Point / rectangle collision check.
+     *
      * @param px point x
      * @param py point y
      * @param rx rectangle top left x
@@ -701,14 +737,13 @@ public abstract class KrabApplet extends PApplet {
         return easedAnimation(startFrame, duration, easingFactor, 0, 1);
     }
 
-
     /**
      * This function helps animating anything that has a known start frame and duration. Just multiply the
      * transformation you want to animate by the result of this function. Uses easing to be more pleasant
      * than linear interpolation.
      *
-     * @param startFrame frame the animation has started
-     * @param duration total number of frames the animation takes
+     * @param startFrame   frame the animation has started
+     * @param duration     total number of frames the animation takes
      * @param easingFactor easing to apply
      * @return normalized value representing the current state of the animation in the range [0, 1]
      */
@@ -722,6 +757,7 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Eases in and out. A normalized value in the range of [0-1] is taken, the values near the limits are suppressed
      * and the transition through the middle sharpened, which makes animations feel more natural.
+     *
      * @param p normalized value to ease
      * @param g easing strength
      * @return eased value
@@ -753,7 +789,8 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Returns the angular diameter of a circle with radius 'r' on the edge of a circle with radius 'size'.
-     * @param r the radius of the circle to check the angular diameter of
+     *
+     * @param r    the radius of the circle to check the angular diameter of
      * @param size the radius that the circle rests on the edge of
      * @return angular diameter of r at radius size
      */
@@ -763,8 +800,9 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Linear interpolation between an arbitrary number of evenly spaced values.
-     * @param norm normalized position of the value you want,
-     *             norm <= 0 returns the first value, norm >= 0 returns the last value
+     *
+     * @param norm   normalized position of the value you want,
+     *               norm <= 0 returns the first value, norm >= 0 returns the last value
      * @param values values to lerp between
      * @return value at position norm between the values
      */
@@ -785,8 +823,9 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Linear interpolation between an arbitrary number of evenly spaced PVectors.
-     * @param norm normalized position of the vector you want,
-     *             norm <= 0 returns the first vector, norm >= 0 returns the last vector
+     *
+     * @param norm   normalized position of the vector you want,
+     *               norm <= 0 returns the first vector, norm >= 0 returns the last vector
      * @param values vectors to lerp between
      * @return vector at position norm between the values
      */
@@ -805,14 +844,18 @@ public abstract class KrabApplet extends PApplet {
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
-    protected void uniformRamp(String frag, String shaderPath) {
+    protected void uniformRamp(String shaderPath) {
         uniformRamp(shaderPath, "ramp", 4);
     }
 
     /**
-     * Creates a gradient and passes it to a shader as a texture.
-     * @param shaderPath path to the shader
-     * @param rampName name of the ramp's GUI group
+     * Creates a gradient with adjustable colors and color positions using the GUI
+     * and passes it to a shader as a texture.
+     * // TODO implement various color blending methods
+     * https://www.shadertoy.com/view/lsdGzN
+     *
+     * @param shaderPath        path to the shader
+     * @param rampName          name of the ramp's GUI group
      * @param defaultColorCount default number of colors
      *                          any saved settings for things higher than this number won't be loaded on startup
      */
@@ -831,6 +874,10 @@ public abstract class KrabApplet extends PApplet {
         ramp(pg, "ramp", 4);
     }
 
+    protected void ramp(PGraphics pg, int defaultColorCount) {
+        ramp(pg, "ramp", defaultColorCount);
+    }
+
     protected void ramp(PGraphics pg, String rampName, int defaultColorCount) {
         boolean vertical = options("vertical", "circular").equals("vertical");
         group(rampName);
@@ -839,8 +886,9 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Creates a gradient with adjustable colors and color positions using the GUI.
-     * @param pg PGraphics to draw the gradient on
-     * @param rampName name of the ramp's GUI group
+     *
+     * @param pg                PGraphics to draw the gradient on
+     * @param rampName          name of the ramp's GUI group
      * @param defaultColorCount default number of colors
      *                          any saved settings for things higher than this number won't be loaded on startup
      */
@@ -859,9 +907,9 @@ public abstract class KrabApplet extends PApplet {
             } else if (i == count - 1) {
                 yNorm = 1;
             } else {
-                yNorm = slider(" " + i, map(i, 0, count - 1, 0, 1));
+                yNorm = slider((i + 1) + " ", map(i, 0, count - 1, 0, 1));
             }
-            HSBA thisColor = picker(String.valueOf(i), yNorm);
+            HSBA thisColor = picker(String.valueOf(i + 1), 1-yNorm);
             pg.noStroke();
             pg.beginShape(TRIANGLE_STRIP);
             if (vertical) {
@@ -897,9 +945,10 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Creates an array of vectors that when connected draw an n-sided polygon.
+     *
      * @param radius radius of the polygon
      * @param detail number of vectors to use
-     * @param sides number of sides of the polygon
+     * @param sides  number of sides of the polygon
      * @return array of vectors that form an n-sided polygon
      */
     protected ArrayList<PVector> ngon(float radius, int detail, int sides) {
@@ -922,7 +971,8 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Creates an array of PShapes each holding up to 100000 shapes at position 0 and of the given shapeType.
-     * @param count total number of PShapes across all lists
+     *
+     * @param count     total number of PShapes across all lists
      * @param shapeType type of shapes to create
      * @return array of shapes of the type shapeType
      */
@@ -945,6 +995,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Draws a sphere using a spiral approach that avoids vertex clusters on the poles.
+     *
      * @param pg PGraphics to draw the sphere to.
      */
     protected void spiralSphere(PGraphics pg) {
@@ -976,6 +1027,7 @@ public abstract class KrabApplet extends PApplet {
 
     /**
      * Gets vertices of a spiral sphere at a given detail level.
+     *
      * @param count number of vertices to use
      * @return array of points that together form a spiral sphere
      */
@@ -1554,13 +1606,10 @@ public abstract class KrabApplet extends PApplet {
         if (kk.character == 19) { // CTRL + S
             actions.add(ACTION_SAVE);
         }
-        if (kk.character == 12) { // CTRL + L
-            actions.add(ACTION_LOAD);
-        }
-        if (kk.character == 3) { // CTRL + C
+        if (kk.character == 'c' || kk.character == 3) { // CTRL + C
             actions.add(ACTION_COPY);
         }
-        if (kk.character == 22) { // CTRL + V
+        if (kk.character == 'v' || kk.character == 22) { // CTRL + V
             actions.add(ACTION_PASTE);
         }
     }
@@ -1606,14 +1655,14 @@ public abstract class KrabApplet extends PApplet {
         return currentGroup;
     }
 
+    private void setCurrentGroup(Group currentGroup) {
+        this.currentGroup = currentGroup;
+    }
+
     private void createDefaultGroup() {
         Group defaultGroup = new Group(this.getClass().getSimpleName());
         groups.add(defaultGroup);
         currentGroup = defaultGroup;
-    }
-
-    private void setCurrentGroup(Group currentGroup) {
-        this.currentGroup = currentGroup;
     }
 
     private Group getLastGroup() {
@@ -1856,20 +1905,6 @@ public abstract class KrabApplet extends PApplet {
         uniform(vignette).set("startRadius", slider("start"));
         uniform(vignette).set("endRadius", slider("end"));
         hotFilter(vignette, pg);
-    }
-
-    protected void feedbackMovePass(PGraphics pg) {
-        String fb = "feedback.glsl";
-        uniform(fb).set("time", t);
-        uniform(fb).set("mag", slider("mag", .5f));
-        uniform(fb).set("baseAngle", slider("base angle", 0));
-        uniform(fb).set("angleVariation", slider("angle variation", 1));
-        uniform(fb).set("timeSpeed", slider("time speed", 1));
-        uniform(fb).set("baseFrequency", slider("base frequency", .5f));
-        uniform(fb).set("baseAmp", slider("base amplitude", 1));
-        uniform(fb).set("freqMult", slider("freq mult", 2));
-        uniform(fb).set("ampMult", slider("amp mult", .5f));
-        hotFilter(fb, pg);
     }
 
     protected void rayMarchPass(PGraphics pg) {
@@ -2665,9 +2700,7 @@ public abstract class KrabApplet extends PApplet {
             super(parent, name);
         }
 
-        void updateOverlay() {
-
-        }
+        void updateOverlay() {}
 
         protected float updateFullHorizontalSlider(float x, float y, float w, float h, float value, float precision,
                                                    float horizontalRevealAnimationStarted, boolean alternative,
@@ -2876,6 +2909,20 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
+        void displayPrecision(float precision) {
+             pushStyle();
+             fill(0);
+             noStroke();
+             rectMode(CENTER);
+             float x = width-cell*3;
+             float y = height-cell*3;
+             rect(x, y, cell*4, cell*1);
+             fill(GRAYSCALE_TEXT_DARK);
+             textAlign(CENTER, CENTER);
+             textSize(textSize*.75f);
+             text("precision\n"+nf(precision, 0, 0), x, y);
+             popStyle();
+        }
     }
 
     private class SliderFloat extends Slider {
@@ -3009,6 +3056,7 @@ public abstract class KrabApplet extends PApplet {
                     value, revealAnimation, true, true, floored,
                     constrained ? minValue : -Float.MAX_VALUE,
                     constrained ? maxValue : Float.MAX_VALUE);
+            displayPrecision(precision);
         }
     }
 
@@ -3067,6 +3115,7 @@ public abstract class KrabApplet extends PApplet {
             lockOtherSlidersOnMouseOver();
             value.x += deltaX;
             value.y += deltaY;
+            displayPrecision(precision);
         }
 
         protected void lockOtherSlidersOnMouseOver() {
@@ -3165,6 +3214,7 @@ public abstract class KrabApplet extends PApplet {
                     sliderHeight * .8f, precision, value.z, zAnimation, false, false,
                     false, -Float.MAX_VALUE, Float.MAX_VALUE);
             super.updateXYSliders();
+            displayPrecision(precision);
         }
 
         private boolean isMouseOverZSlider() {
