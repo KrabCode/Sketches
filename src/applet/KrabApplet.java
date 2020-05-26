@@ -136,6 +136,7 @@ public abstract class KrabApplet extends PApplet {
     private PGraphics colorSplitResult;
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
+    private boolean keyboardLockedByTextEditor = false;
 
     // GUI INTERFACE
 
@@ -211,7 +212,6 @@ public abstract class KrabApplet extends PApplet {
     protected PVector sliderXY() {
         return sliderXY("xy");
     }
-
 
     protected PVector sliderXY(String name, float defaultX, float defaultY) {
         return sliderXY(name, defaultX, defaultY, numberOfDigitsInFlooredNumber(max(defaultX, defaultY)) * 10);
@@ -307,6 +307,7 @@ public abstract class KrabApplet extends PApplet {
         return options("A", "B", "C");
     }
 
+    // the first parameter becomes the name of the element and must be unique within the current group
     protected String options(String defaultValue, String... otherValues) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(defaultValue, currentGroup.name)) {
@@ -349,6 +350,16 @@ public abstract class KrabApplet extends PApplet {
         return toggle.checked;
     }
 
+    protected String input(String name, String defaultValue) {
+        Group currentGroup = getCurrentGroup();
+        if (elementDoesntExist(name, currentGroup.name)) {
+            Input newElement = new Input(currentGroup, name, defaultValue);
+            currentGroup.elements.add(newElement);
+        }
+        Input input = (Input) findElement(name, currentGroup.name);
+        return input.value;
+    }
+
     protected void gui() {
         gui(true);
     }
@@ -371,12 +382,13 @@ public abstract class KrabApplet extends PApplet {
         resetMatrixInAnyRenderer();
         hint(DISABLE_DEPTH_TEST);
         updateTrayBackground();
-        updateMenuButtons();
-        updateScrolling();
+        resetKeyboardLockByInputElements();
         updateGroupsAndTheirElements();
         if (overlayVisible && trayVisible) {
             overlayOwner.updateOverlay();
         }
+        updateMenuButtons();
+        updateScrolling();
         hint(ENABLE_DEPTH_TEST);
         popStyle();
         popMatrix();
@@ -528,7 +540,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     /**
-     * Rotates to an arbitrary vector controlled by a 3D slider.
+     * Rotates to an arbitrary vector controlled by a 3D slider with a precision of PI.
      * Rotations are pre-applied, so the axes are not affected by any previous rotations, which makes it more intuitive.
      * This method can be called any number of times - as long as the slider names are unique it will produce a unique
      * rotation.
@@ -546,7 +558,7 @@ public abstract class KrabApplet extends PApplet {
             rotationMatrix = new PMatrix3D();
             sliderRotationMatrixMap.put(sliderName, rotationMatrix);
         }
-        PVector rotation = sliderXYZ(sliderName, 0);
+        PVector rotation = sliderXYZ(sliderName, 0, PI);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
             delta.mult(0);
@@ -602,10 +614,8 @@ public abstract class KrabApplet extends PApplet {
             primaryColorCanvas.beginDraw();
             primaryColorCanvas.clear();
             primaryColorCanvas.image(pg, 0, 0, width, height);
-            primaryColorMultipliers[i] = sliderXYZ("multiplier " + (i + 1),
-                    primaryColorMultipliers[i].x,
-                    primaryColorMultipliers[i].y,
-                    primaryColorMultipliers[i].z);
+            primaryColorMultipliers[i] = sliderXYZ("multiplier " + indexToPrimaryColorShorthand(i),
+                    primaryColorMultipliers[i].x, primaryColorMultipliers[i].y, primaryColorMultipliers[i].z);
             colorFilter(primaryColorCanvas, primaryColorMultipliers[i]);
             primaryColorCanvas.endDraw();
         }
@@ -617,7 +627,8 @@ public abstract class KrabApplet extends PApplet {
         for (int i = 0; i < 3; i++) {
             colorSplitResult.pushMatrix();
             colorSplitResult.scale(scales[i]);
-            colorSplitResult.image(primaryColorCanvases[i], 0, 0);
+            PVector offset = sliderXY(indexToPrimaryColorShorthand(i) + " offset");
+            colorSplitResult.image(primaryColorCanvases[i], offset.x, offset.y);
             colorSplitResult.popMatrix();
         }
         colorSplitResult.endDraw();
@@ -633,6 +644,23 @@ public abstract class KrabApplet extends PApplet {
             pg.endDraw();
         }
         return colorSplitResult;
+    }
+
+    String indexToPrimaryColorShorthand(int index) {
+        switch (index) {
+            case 0: {
+                return "R";
+            }
+            case 1: {
+                return "G";
+            }
+            case 2: {
+                return "B";
+            }
+            default: {
+                return "";
+            }
+        }
     }
 
     protected void colorFilter(PGraphics toFilter, PVector multiplier) {
@@ -879,8 +907,8 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void ramp(PGraphics pg, String rampName, int defaultColorCount) {
-        boolean vertical = options("vertical", "circular").equals("vertical");
         group(rampName);
+        boolean vertical = options("vertical", "circular").equals("vertical");
         ramp(pg, rampName, defaultColorCount, vertical);
     }
 
@@ -1195,7 +1223,7 @@ public abstract class KrabApplet extends PApplet {
     private void updateMenuButtonUndo(boolean hide, float x, float y, float w, float h) {
         boolean canUndo = undoStack.size() > 0;
         if (canUndo && trayVisible) {
-            if (actions.contains(ACTION_UNDO) || isMousePressedHere(x, y, w, h)) {
+            if (actionsContainsLockAware(ACTION_UNDO) || isMousePressedHere(x, y, w, h)) {
                 undoHoldDuration++;
             } else if (!isMouseOver(x, y, w, h)) {
                 undoHoldDuration = 0;
@@ -1225,7 +1253,7 @@ public abstract class KrabApplet extends PApplet {
     private void updateMenuButtonRedo(boolean hide, float x, float y, float w, float h) {
         boolean canRedo = redoStack.size() > 0;
         if (canRedo && trayVisible) {
-            if (actions.contains(ACTION_REDO) || isMousePressedHere(x, y, w, h)) {
+            if (actionsContainsLockAware(ACTION_REDO) || isMousePressedHere(x, y, w, h)) {
                 redoHoldDuration++;
             } else if (!isMouseOver(x, y, w, h)) {
                 redoHoldDuration = 0;
@@ -1270,7 +1298,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateMenuButtonSave(boolean hide, float x, float y, float w, float h) {
-        if (activated(MENU_BUTTON_SAVE, x, y, w, h) || actions.contains(ACTION_SAVE)) {
+        if (activated(MENU_BUTTON_SAVE, x, y, w, h) || actionsContainsLockAware(ACTION_SAVE)) {
             saveAnimationStarted = frameCount;
             saveStateToFile();
             println("settings saved");
@@ -1372,6 +1400,12 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
+    private void resetKeyboardLockByInputElements() {
+        if (!overlayVisible) {
+            keyboardLockedByTextEditor = false;
+        }
+    }
+
     private void updateElement(Group group, Element el, float y) {
         el.update();
         if (activated(group.name + el.name, 0, y - cell, trayWidth, cell)) {
@@ -1412,6 +1446,7 @@ public abstract class KrabApplet extends PApplet {
         }
         textSize(textSize);
         trayWidthWhenExtended = constrain(findLongestNameWidth() + cell * 2, minimumTrayWidth, MAXIMUM_TRAY_WIDTH);
+        trayWidth = trayWidthWhenExtended;
         noStroke();
         fill(0, BACKGROUND_ALPHA);
         rectMode(CORNER);
@@ -1444,7 +1479,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean hideActivated(float x, float y, float w, float h) {
-        return actions.contains(ACTION_HIDE) || mouseJustReleasedHere(x, y, w, h);
+        return actionsContainsLockAware(ACTION_HIDE) || mouseJustReleasedHere(x, y, w, h);
     }
 
     // INPUT
@@ -1529,13 +1564,36 @@ public abstract class KrabApplet extends PApplet {
                 keyboardKeys.add(new Key((int) key, false));
             }
         }
-        if (key == 'k') {
-            frameRecordingStarted = frameCount + 1;
-            id = regenIdAndCaptureDir();
+        if (overlayOwner != null) {
+            overlayOwner.keyPressed();
         }
-        if (key == 'i') {
-            captureScreenshot = true;
+        if (!keyboardLockedByTextEditor) {
+            if (key == 'k') {
+                frameRecordingStarted = frameCount + 1;
+                id = regenIdAndCaptureDir();
+            }
+            if (key == 'i') {
+                captureScreenshot = true;
+            }
         }
+    }
+
+    private boolean previousActionsContainsLockAware(String s) {
+        if (keyboardLockedByTextEditor) {
+            return false;
+        }
+        return previousActions.contains(s);
+    }
+
+    private boolean actionsContainsLockAware(String s) {
+        if (keyboardLockedByTextEditor) {
+            return false;
+        }
+        return actions.contains(s);
+    }
+
+    private boolean keyboardKeysContains(int keyCode, boolean coded) {
+        return !keyboardKeysDoesntContain(keyCode, coded);
     }
 
     private boolean keyboardKeysDoesntContain(int keyCode, boolean coded) {
@@ -1615,7 +1673,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean actionJustReleased(String action) {
-        return previousActions.contains(action) && !actions.contains(action);
+        return previousActionsContainsLockAware(action) && !actionsContainsLockAware(action);
     }
 
     private boolean upAndDownArrowsControlOverlay() {
@@ -2442,6 +2500,9 @@ public abstract class KrabApplet extends PApplet {
 
         }
 
+        void keyPressed() {
+
+        }
 
         protected String fullElementName() {
             return group.name + SEPARATOR + name + SEPARATOR;
@@ -2682,7 +2743,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void update() {
-            if (overlayVisible && overlayOwner != null && overlayOwner.equals(this) && actions.contains(ACTION_RESET)) {
+            if (overlayVisible && overlayOwner != null && overlayOwner.equals(this) && actionsContainsLockAware(ACTION_RESET)) {
                 pushCurrentStateToUndo();
                 reset();
             }
@@ -2940,6 +3001,7 @@ public abstract class KrabApplet extends PApplet {
                 }
                 return result.toString();
             } catch (Exception ex) {
+                println(ex.getMessage());
                 return String.valueOf(precision);
             }
         }
@@ -3002,26 +3064,26 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if (previousActions.contains(ACTION_COPY)) {
+            if (previousActionsContainsLockAware(ACTION_COPY)) {
                 clipboardSliderFloat = getState();
             }
-            if (previousActions.contains(ACTION_PASTE)) {
+            if (previousActionsContainsLockAware(ACTION_PASTE)) {
                 if (!clipboardSliderFloat.isEmpty()) {
                     pushCurrentStateToUndo();
                     setState(clipboardSliderFloat);
                 }
             }
-            if (previousActions.contains(ACTION_PRECISION_ZOOM_OUT) &&
+            if (previousActionsContainsLockAware(ACTION_PRECISION_ZOOM_OUT) &&
                     ((!floored && precision < FLOAT_PRECISION_MAXIMUM) || (floored && precision < INT_PRECISION_MAXIMUM))) {
                 precision *= 10f;
                 pushCurrentStateToUndo();
             }
-            if (previousActions.contains(ACTION_PRECISION_ZOOM_IN) &&
+            if (previousActionsContainsLockAware(ACTION_PRECISION_ZOOM_IN) &&
                     ((!floored && precision > FLOAT_PRECISION_MINIMUM) || (floored && precision > INT_PRECISION_MINIMUM))) {
                 precision *= .1f;
                 pushCurrentStateToUndo();
             }
-            if (overlayVisible && overlayOwner.equals(this) && actions.contains(ACTION_RESET)) {
+            if (overlayVisible && overlayOwner.equals(this) && actionsContainsLockAware(ACTION_RESET)) {
                 pushCurrentStateToUndo();
                 reset();
             }
@@ -3163,24 +3225,24 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if (previousActions.contains(ACTION_COPY)) {
+            if (previousActionsContainsLockAware(ACTION_COPY)) {
                 clipboardSliderXYZ = getState();
             }
-            if (previousActions.contains(ACTION_PASTE)) {
+            if (previousActionsContainsLockAware(ACTION_PASTE)) {
                 if (!clipboardSliderXYZ.isEmpty()) {
                     pushCurrentStateToUndo();
                     setState(clipboardSliderXYZ);
                 }
             }
-            if (previousActions.contains(ACTION_PRECISION_ZOOM_IN) && precision > FLOAT_PRECISION_MINIMUM) {
+            if (previousActionsContainsLockAware(ACTION_PRECISION_ZOOM_IN) && precision > FLOAT_PRECISION_MINIMUM) {
                 precision *= .1f;
                 pushCurrentStateToUndo();
             }
-            if (previousActions.contains(ACTION_PRECISION_ZOOM_OUT) && precision < FLOAT_PRECISION_MAXIMUM) {
+            if (previousActionsContainsLockAware(ACTION_PRECISION_ZOOM_OUT) && precision < FLOAT_PRECISION_MAXIMUM) {
                 precision *= 10f;
                 pushCurrentStateToUndo();
             }
-            if (overlayVisible && overlayOwner.equals(this) && actions.contains(ACTION_RESET)) {
+            if (overlayVisible && overlayOwner.equals(this) && actionsContainsLockAware(ACTION_RESET)) {
                 pushCurrentStateToUndo();
                 reset();
             }
@@ -3295,24 +3357,24 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if (previousActions.contains(ACTION_COPY)) {
+            if (previousActionsContainsLockAware(ACTION_COPY)) {
                 clipboardPicker = getState();
             }
-            if (previousActions.contains(ACTION_PASTE)) {
+            if (previousActionsContainsLockAware(ACTION_PASTE)) {
                 if (!clipboardPicker.isEmpty()) {
                     pushCurrentStateToUndo();
                     setState(clipboardPicker);
                 }
             }
-            if (overlayVisible && overlayOwner != null && overlayOwner.equals(this) && actions.contains(ACTION_RESET)) {
+            if (overlayVisible && overlayOwner != null && overlayOwner.equals(this) && actionsContainsLockAware(ACTION_RESET)) {
                 pushCurrentStateToUndo();
                 reset();
             }
-            if (alphaPrecision > ALPHA_PRECISION_MINIMUM && previousActions.contains(ACTION_PRECISION_ZOOM_IN)) {
+            if (alphaPrecision > ALPHA_PRECISION_MINIMUM && previousActionsContainsLockAware(ACTION_PRECISION_ZOOM_IN)) {
                 alphaPrecision *= .1f;
                 pushCurrentStateToUndo();
             }
-            if (alphaPrecision < ALPHA_PRECISION_MAXIMUM && previousActions.contains(ACTION_PRECISION_ZOOM_OUT)) {
+            if (alphaPrecision < ALPHA_PRECISION_MAXIMUM && previousActionsContainsLockAware(ACTION_PRECISION_ZOOM_OUT)) {
                 alphaPrecision *= 10;
                 pushCurrentStateToUndo();
             }
@@ -3605,5 +3667,81 @@ public abstract class KrabApplet extends PApplet {
             alpha = val;
             enforceConstraints();
         }
+    }
+
+    private class Input extends Element {
+        private String defaultValue, value;
+        private float inputOverlayTextSize = 36;
+
+        Input(Group currentGroup, String name, String defaultValue) {
+            super(currentGroup, name);
+            this.name = name;
+            this.defaultValue = defaultValue;
+            this.value = defaultValue;
+        }
+
+        @Override
+        boolean canHaveOverlay() {
+            return true;
+        }
+
+        void updateOverlay() {
+            super.updateOverlay();
+            displayOverlay();
+            keyboardLockedByTextEditor = true;
+        }
+
+        @Override
+        void keyPressed() {
+            if (!overlayVisible || !trayVisible) {
+                return;
+            }
+            if (keyCode == BACKSPACE) {
+                if (value.length() > 0) {
+                    value = value.substring(0, value.length() - 1);
+                }
+            } else if (keyCode == DELETE) {
+                value = "";
+            } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT) {
+                value = value + key;
+            }
+        }
+
+        private void displayOverlay() {
+            float overlayHeight = textHeightPlusPadding();
+            pushStyle();
+            noStroke();
+            fill(0, BACKGROUND_ALPHA);
+            rectMode(CORNER);
+            rect(trayWidth, height - overlayHeight, width - trayWidth, overlayHeight);
+            float x = width / 2f;
+            float y = height - overlayHeight / 2;
+            fill(GRAYSCALE_TEXT_SELECTED);
+            textAlign(CENTER, CENTER);
+            textSize(cell);
+            text(value, x, y);
+            popStyle();
+        }
+
+        private float textHeightPlusPadding() {
+            int lines = 0;
+            for (char c : value.toCharArray()) {
+                if (c == '\n') {
+                    lines++;
+                }
+            }
+            return inputOverlayTextSize + lines * cell + cell * 2;
+        }
+
+        public String getState() {
+            return GROUP_PREFIX + SEPARATOR + name + SEPARATOR + value;
+        }
+
+        public void setState(String state) {
+            String[] split = state.split(SEPARATOR);
+            value = split[2];
+        }
+
+
     }
 }
