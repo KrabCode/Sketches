@@ -23,6 +23,7 @@ public abstract class KrabApplet extends PApplet {
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
+    private static final String NEWLINE_PLACEHOLDER = "#NEWLINE#";
     private static final String UNDO_PREFIX = "UNDO";
     private static final String REDO_PREFIX = "REDO";
     private static final String GROUP_PREFIX = "GROUP";
@@ -353,11 +354,11 @@ public abstract class KrabApplet extends PApplet {
     protected String input(String name, String defaultValue) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
-            Input newElement = new Input(currentGroup, name, defaultValue);
+            TextInput newElement = new TextInput(currentGroup, name, defaultValue);
             currentGroup.elements.add(newElement);
         }
-        Input input = (Input) findElement(name, currentGroup.name);
-        return input.value;
+        TextInput textInput = (TextInput) findElement(name, currentGroup.name);
+        return textInput.value;
     }
 
     protected void gui() {
@@ -1401,7 +1402,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void resetKeyboardLockByInputElements() {
-        if (!overlayVisible) {
+        if (!overlayVisible || !trayVisible) {
             keyboardLockedByTextEditor = false;
         }
     }
@@ -3669,11 +3670,12 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private class Input extends Element {
-        private String defaultValue, value;
-        private float inputOverlayTextSize = 36;
+    private class TextInput extends Element {
+        private final String defaultValue;
+        private final float overlayTextSize = 36;
+        private String value;
 
-        Input(Group currentGroup, String name, String defaultValue) {
+        TextInput(Group currentGroup, String name, String defaultValue) {
             super(currentGroup, name);
             this.name = name;
             this.defaultValue = defaultValue;
@@ -3691,7 +3693,10 @@ public abstract class KrabApplet extends PApplet {
             keyboardLockedByTextEditor = true;
         }
 
-        @Override
+        void reset() {
+            value = defaultValue;
+        }
+
         void keyPressed() {
             if (!overlayVisible || !trayVisible) {
                 return;
@@ -3718,28 +3723,30 @@ public abstract class KrabApplet extends PApplet {
             float y = height - overlayHeight / 2;
             fill(GRAYSCALE_TEXT_SELECTED);
             textAlign(CENTER, CENTER);
-            textSize(cell);
+            textSize(overlayTextSize);
             text(value, x, y);
             popStyle();
         }
 
         private float textHeightPlusPadding() {
-            int lines = 0;
+            int newLineCount = 0;
             for (char c : value.toCharArray()) {
                 if (c == '\n') {
-                    lines++;
+                    newLineCount++;
                 }
             }
-            return inputOverlayTextSize + lines * cell + cell * 2;
+            return overlayTextSize + newLineCount * overlayTextSize + cell * 2;
         }
 
-        public String getState() {
-            return GROUP_PREFIX + SEPARATOR + name + SEPARATOR + value;
+        @Override
+        String getState() {
+            return super.getState() + value.replace("\n", NEWLINE_PLACEHOLDER);
         }
 
-        public void setState(String state) {
+        @Override
+        void setState(String state) {
             String[] split = state.split(SEPARATOR);
-            value = split[2];
+            value = split[2].replaceAll(NEWLINE_PLACEHOLDER, "\n");
         }
 
 
