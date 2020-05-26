@@ -76,3 +76,190 @@ color split§R offset§100.0§0.0§0.0
 color split§G offset§100.0§0.0§0.0
 color split§B offset§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§thicc#NEWLINE#newline#NEWLINE#pls
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§RGB scales§0.1§1.0§1.0§1.0
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§2.9999993§-2.9999979
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-3.0000005§3.0000017
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§false
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§RGB scales§0.1§1.0060005§1.0002002§0.99100006
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§1.6500002§-1.6600004
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-1.66§1.6600028
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§RGB scales§0.1§1.0060005§1.0002002§0.99100006
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§1.6500002§-1.6600004
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-1.66§1.6600028
+color split§video frames§0.0§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§RGB scales§0.1§1.0060005§1.0002002§0.99100006
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§1.6500002§-1.6600004
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-1.66§1.6600028
+color split§video frames§1440.9988§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§RGB scales§0.1§1.0060005§1.0002002§0.99100006
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§1.6500002§-1.6600004
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-1.66§1.6600028
+color split§video frames§1440.9988§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§false
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.027499946§0.0§1.0§1.0§10.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.99649996§0.0§1.0§1.0§1.0
+ramp§3 §1.1266663§10.0
+ramp§3§0.98799974§1.0§0.08125§0.0§10.0
+ramp§4§0.98799974§1.0§0.08125§0.0§10.0
+GROUP§color split§true
+color split§skip§false
+color split§RGB scales§0.1§1.0060005§1.0002002§0.99100006
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§1.6500002§-1.6600004
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-1.66§1.6600028
+color split§video frames§1440.9988§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§false
+NoiseSplit§fade to black§50.0§255.0
+NoiseSplit§fill§0.026000045§0.0§1.0§1.0§10.0
+NoiseSplit§text size§68.26001§2000.0
+NoiseSplit§text§
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.027499946§0.0§1.0§1.0§10.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.99649996§0.0§1.0§1.0§1.0
+ramp§3 §1.1266663§10.0
+ramp§3§0.98799974§1.0§0.08125§0.0§10.0
+ramp§4§0.98799974§1.0§0.08125§0.0§10.0
+GROUP§color split§true
+color split§skip§false
+color split§RGB scales§0.1§1.0060005§1.0002002§0.99100006
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§10.0§1.6500002§-1.6600004
+color split§G offset§100.0§0.0§0.0
+color split§B offset§10.0§-1.66§1.6600028
+color split§video frames§4.944268§100.0
+STATE_END

@@ -119,15 +119,17 @@ void main(){
     vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
     vec4 origColor = texture2D(texture, uv);
     float d = length(cv);
-    vec2 da = vec2(d*12.*d, cos(8*atan(cv.y, cv.x)));
-    float t = time;
-    float tr = 0.5;
+    vec2 da = vec2(d*14.*d, cos(6*atan(cv.y, cv.x)));
+    float t = time/4;
+    float tr = 1.;
     vec2 timeWheel = 10+vec2(cos(t), sin(t))*tr;
     float pct = .5 + .5 * (
         noise(da, timeWheel, .5, 2) +
         noise(da, timeWheel, .25, 4) +
-        noise(da, timeWheel, .125, 8)
+        noise(da, timeWheel, .125, 8) +
+        noise(da, timeWheel, .125*.5f, 16)
     );
+
     pct *= smoothstep(0.0, 0.2, d);
     pct *= smoothstep(0.5, 0.3, d);
     gl_FragColor = (origColor+rampColor(pct))*.5;

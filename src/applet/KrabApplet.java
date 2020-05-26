@@ -644,6 +644,7 @@ public abstract class KrabApplet extends PApplet {
             pg.popStyle();
             pg.endDraw();
         }
+        resetGroup();
         return colorSplitResult;
     }
 
