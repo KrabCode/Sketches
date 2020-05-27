@@ -6,10 +6,7 @@ import processing.opengl.PShader;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static java.lang.System.currentTimeMillis;
 
@@ -1165,16 +1162,26 @@ public abstract class KrabApplet extends PApplet {
             pg.save(captureDir + frameNumber + ".jpg");
             boolean ffmpegEnabled = true;
             if (frameCount == frameRecordingEnd - 1 && ffmpegEnabled) {
-                println("capture ended, running ffmpeg, please wait...");
-                try {
-                    String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
-                            "E:/Sketches/" + captureDir + "%01d.jpg " +
-                            "E:/Sketches/out/video/" + id + ".mp4";
-                    Process processDuration = Runtime.getRuntime().exec(ffmpegCommand);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                runFfmpeg();
             }
+        }
+    }
+
+    private void runFfmpeg() {
+        try {
+            String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
+                    "E:/Sketches/" + captureDir + "%01d.jpg " +
+                    "E:/Sketches/out/video/" + id + ".mp4";
+            Process proc = Runtime.getRuntime().exec(ffmpegCommand);
+            new Thread(() -> {
+                Scanner sc = new Scanner(proc.getErrorStream());
+                while (sc.hasNextLine()) {
+                    println(sc.nextLine());
+                }
+            }).start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -1860,7 +1867,7 @@ public abstract class KrabApplet extends PApplet {
                 try {
                     el.setState(state);
                 } catch (Exception ex) {
-                    println(ex.getMessage());
+                    println("Error loading state for", el.group.name, el.name);
                 }
             }
         }
@@ -3702,10 +3709,8 @@ public abstract class KrabApplet extends PApplet {
             if (!overlayVisible || !trayVisible) {
                 return;
             }
-            if (keyCode == BACKSPACE) {
-                if (value.length() > 0) {
-                    value = value.substring(0, value.length() - 1);
-                }
+            if (keyCode == BACKSPACE && value.length() > 0) {
+                value = value.substring(0, value.length() - 1);
             } else if (keyCode == DELETE) {
                 value = "";
             } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT) {
@@ -3725,7 +3730,12 @@ public abstract class KrabApplet extends PApplet {
             fill(GRAYSCALE_TEXT_SELECTED);
             textAlign(CENTER, CENTER);
             textSize(overlayTextSize);
-            text(value, x, y);
+            String valueOrTip = value;
+            if (value.trim().equals("")) {
+                fill(GRAYSCALE_TEXT_DARK);
+                valueOrTip = "type something...";
+            }
+            text(valueOrTip, x, y);
             popStyle();
         }
 
@@ -3739,17 +3749,18 @@ public abstract class KrabApplet extends PApplet {
             return overlayTextSize + newLineCount * overlayTextSize + cell * 2;
         }
 
-        @Override
         String getState() {
             return super.getState() + value.replace("\n", NEWLINE_PLACEHOLDER);
         }
 
-        @Override
         void setState(String state) {
             String[] split = state.split(SEPARATOR);
-            value = split[2].replaceAll(NEWLINE_PLACEHOLDER, "\n");
+            if (split.length >= 3) {
+                String valueToSet = split[2];
+                value = valueToSet.replaceAll(NEWLINE_PLACEHOLDER, "\n");
+            } else {
+                value = "";
+            }
         }
-
-
     }
 }

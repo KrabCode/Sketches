@@ -12,6 +12,7 @@ public class NoiseSplit extends KrabApplet {
 
     public void settings() {
         size(1000, 1000, P2D);
+//        fullScreen(P2D);
     }
 
     public void setup() {
@@ -34,7 +35,7 @@ public class NoiseSplit extends KrabApplet {
         PGraphics split = colorSplit(pg, false);
         clear();
         image(split, 0, 0, width, height);
-        frameRecordingDuration = sliderInt("video frames");
+        frameRecordingDuration = sliderInt("video frames", frameRecordingDuration);
         rec(split);
         gui();
     }
