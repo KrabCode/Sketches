@@ -4,7 +4,7 @@ import applet.KrabApplet;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
-public class TextInput extends KrabApplet {
+public class TextInputTest extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class TextInput extends KrabApplet {
         translateToCenter(pg);
         pg.textAlign(CENTER, CENTER);
         pg.textSize(slider("text size", 64));
-        String text = input("text input", "Hello world!");
+        String text = textInput("text input", "Hello world!");
         PVector shadowOffset = sliderXY("shadow offset");
         pg.fill(0);
         pg.text(text, shadowOffset.x, shadowOffset.y);
