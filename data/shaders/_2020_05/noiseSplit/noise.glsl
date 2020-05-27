@@ -1,5 +1,8 @@
 uniform vec2 resolution;
+uniform vec3 translateAtan;
+
 uniform float time;
+uniform float colorStrength;
 uniform sampler2D ramp;
 uniform sampler2D texture;
 
@@ -119,17 +122,22 @@ void main(){
     vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
     vec4 origColor = texture2D(texture, uv);
     float d = length(cv);
-    vec2 da = vec2(d*14.*d, cos(6*atan(cv.y, cv.x)));
+    float mirrors = 6;
+    vec2 da = vec2(pow(d*14., 1.0), cos(mirrors*atan(cv.y-translateAtan.y, cv.x+translateAtan.x)));
     float t = time/4;
-    float tr = 1.;
+    float tr = 0.5;
     vec2 timeWheel = 10+vec2(cos(t), sin(t))*tr;
-    float pct = .5 + .5 * (
-        noise(da, timeWheel, .5, 2) +
+    float pct = abs(
+        noise(da, timeWheel, .5, 1.) +
         noise(da, timeWheel, .25, 4) +
         noise(da, timeWheel, .125, 8)
     );
-
-    pct *= smoothstep(0.0, 0.2, d);
-    pct *= smoothstep(0.5, 0.3, d);
-    gl_FragColor = (origColor+rampColor(pct))*.5;
+    float innerStart = 0.0;
+    float innerEnd = 0.05;
+    float outerStart = 0.03;
+    float outerEnd = 0.5;
+    pct *= smoothstep(innerStart, innerEnd, d);
+    pct *= smoothstep(outerEnd, outerStart, d);
+    vec4 newColor = rampColor(pct);
+    gl_FragColor = origColor+colorStrength*newColor;
 }

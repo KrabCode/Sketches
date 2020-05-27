@@ -30,9 +30,10 @@ public class NoiseSplit extends KrabApplet {
         pg.fill(picker("fill").clr());
         pg.textSize(slider("text size", 64));
         translateToCenter(pg);
+        translate2D(pg);
         pg.text(textInput("text", "write something"), 0, 0);
         pg.endDraw();
-        PGraphics split = colorSplit(pg, false);
+        PGraphics split = colorSplit(pg, true);
         clear();
         image(split, 0, 0, width, height);
         frameRecordingDuration = sliderInt("video frames", frameRecordingDuration);
@@ -44,6 +45,8 @@ public class NoiseSplit extends KrabApplet {
         String noiseShader = "shaders/_2020_05/noiseSplit/noise.glsl";
         uniformRamp(noiseShader);
         uniform(noiseShader).set("time", t);
+        uniform(noiseShader).set("colorStrength", slider("color strength",.08f));
+        uniform(noiseShader).set("translateAtan", sliderXY("angle center"));
         hotFilter(noiseShader, pg);
     }
 }

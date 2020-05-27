@@ -518,6 +518,15 @@ public abstract class KrabApplet extends PApplet {
         pg.translate(pg.width * .5f, pg.height * .5f);
     }
 
+    protected void translate2D(PGraphics pg) {
+        translate2D(pg, "translate");
+    }
+
+    protected void translate2D(PGraphics pg, String sliderName) {
+        PVector translate = sliderXY(sliderName);
+        pg.translate(translate.x, translate.y);
+    }
+
     protected void translate(PGraphics pg) {
         translate(pg, "translate");
     }
@@ -577,12 +586,11 @@ public abstract class KrabApplet extends PApplet {
     }
 
     /**
-     * Takes a PGraphics, splits it up into primary color images and re-assembles them using blendMode(ADD) at
-     * different scales growing from the center.
+     * Takes a PGraphics, splits it up into primary color images and re-assembles them at different scales growing from the center.
+     * This method expects the PGraphics to be already closed with endDraw() in order to read from it or write to it.
      *
      * @param pg                  input image
-     * @param drawResultOverInput draws the result over the input - this method expects the PGraphics to be already
-     *                            closed with endDraw() and it calls beginDraw() and endDraw() by itself.
+     * @param drawResultOverInput draws the result over the input - when true this .
      * @return color split image
      */
     protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
@@ -597,16 +605,7 @@ public abstract class KrabApplet extends PApplet {
                 primaryColorCanvases[i] = createGraphics(pg.width, pg.height, P2D);
             }
         }
-        PVector scale = sliderXYZ("RGB scales", 1, 0.1f);
-        float[] scales = new float[]{scale.x, scale.y, scale.z};
-        if (toggle("force scales >= 1")) {
-            while (scales[0] < 1 || scales[1] < 1 || scales[2] < 1) {
-                //scales smaller than 1 result in ugly edges, we're more interested in the relative color scales anyway
-                scales[0] += .001;
-                scales[1] += .001;
-                scales[2] += .001;
-            }
-        }
+
         for (int i = 0; i < 3; i++) {
             PGraphics primaryColorCanvas = primaryColorCanvases[i];
             primaryColorCanvas.beginDraw();
@@ -619,14 +618,44 @@ public abstract class KrabApplet extends PApplet {
         }
         colorSplitResult.beginDraw();
         colorSplitResult.clear();
-        colorSplitResult.imageMode(CENTER);
-        colorSplitResult.blendMode(ADD);
         colorSplitResult.translate(colorSplitResult.width / 2f, colorSplitResult.height / 2f);
+        translate2D(colorSplitResult, "split center");
+        PVector[] globalOffsets = new PVector[3];
+        if(toggle("move all offsets", true)) {
+            for (int i = 0; i < 3; i++) {
+                PVector offset = new PVector(slider("magnitude"), 0);
+                offset.rotate(i*slider("rotation", TAU/3));
+                PVector sliderOffset = sliderXY(indexToPrimaryColorShorthand(i) + " offset");
+                sliderOffset.x = offset.x;
+                sliderOffset.y = offset.y;
+            }
+        }
+
+
+        PVector scale = sliderXYZ("RGB scales", 1, 0.1f);
+        if(toggle("move all scales", true)) {
+            float commonScale = slider("common scale", 1, 0.1f);
+            scale.x = commonScale;
+            scale.y = commonScale;
+            scale.z = commonScale;
+        }
+        float[] scales = new float[]{scale.x, scale.y, scale.z};
+        if (toggle("force scales >= 1")) {
+            while (scales[0] < 1 || scales[1] < 1 || scales[2] < 1) {
+                //scales smaller than 1 result in ugly edges, we're more interested in the relative color scales anyway
+                scales[0] += .001;
+                scales[1] += .001;
+                scales[2] += .001;
+            }
+        }
         for (int i = 0; i < 3; i++) {
             colorSplitResult.pushMatrix();
-            colorSplitResult.scale(scales[i]);
+            colorSplitResult.imageMode(CENTER);
+            colorSplitResult.blendMode(ADD);
             PVector offset = sliderXY(indexToPrimaryColorShorthand(i) + " offset");
-            colorSplitResult.image(primaryColorCanvases[i], offset.x, offset.y);
+            colorSplitResult.translate(offset.x, offset.y);
+            colorSplitResult.scale(scales[i]);
+            colorSplitResult.image(primaryColorCanvases[i], 0, 0);
             colorSplitResult.popMatrix();
         }
         colorSplitResult.endDraw();
@@ -1083,7 +1112,7 @@ public abstract class KrabApplet extends PApplet {
         if (frameCount == 1) {
             trayVisible = defaultVisibility;
             textSize(textSize * 2);
-        } else if (frameCount == 3) {
+        } else if (frameCount == 2) {
             loadLastStateFromFile(true);
         }
     }
@@ -2998,7 +3027,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private String prettyPrecisionFormat(float precision) {
-            if (precision > 1) {
+            if (precision >= 1) {
                 return String.valueOf(floor(precision));
             }
             try {
@@ -3711,9 +3740,11 @@ public abstract class KrabApplet extends PApplet {
             if (!overlayVisible || !trayVisible || (int) key == 19) { // CTRL + S
                 return;
             }
-            if (keyCode == BACKSPACE && value.length() > 0) {
-                value = value.substring(0, value.length() - 1);
-            } else if (keyCode == DELETE) {
+            if (key == BACKSPACE) { // BACKSPACE
+                if (value.length() > 0) {
+                    value = value.substring(0, value.length() - 1);
+                }
+            } else if (key == DELETE) {
                 value = "";
             } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT) {
                 value = value + key;
