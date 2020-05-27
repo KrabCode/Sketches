@@ -380,7 +380,7 @@ public abstract class KrabApplet extends PApplet {
         resetMatrixInAnyRenderer();
         hint(DISABLE_DEPTH_TEST);
         updateTrayBackground();
-        resetKeyboardLockByInputElements();
+        resetKeyboardLock();
         updateGroupsAndTheirElements();
         if (overlayVisible && trayVisible) {
             overlayOwner.updateOverlay();
@@ -1409,10 +1409,8 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
-    private void resetKeyboardLockByInputElements() {
-        if (!overlayVisible || !trayVisible) {
-            keyboardLockedByTextEditor = false;
-        }
+    private void resetKeyboardLock() {
+        keyboardLockedByTextEditor = false;
     }
 
     private void updateElement(Group group, Element el, float y) {
@@ -1587,18 +1585,22 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private boolean previousActionsContainsLockAware(String s) {
-        if (keyboardLockedByTextEditor) {
-            return false;
-        }
-        return previousActions.contains(s);
+    private boolean isActionLockImmune(String action) {
+        return action.equals(ACTION_SAVE);
     }
 
-    private boolean actionsContainsLockAware(String s) {
+    private boolean previousActionsContainsLockAware(String action) {
         if (keyboardLockedByTextEditor) {
-            return false;
+            return isActionLockImmune(action) && previousActions.contains(action);
         }
-        return actions.contains(s);
+        return previousActions.contains(action);
+    }
+
+    private boolean actionsContainsLockAware(String action) {
+        if (keyboardLockedByTextEditor) {
+            return isActionLockImmune(action) && actions.contains(action);
+        }
+        return actions.contains(action);
     }
 
     private boolean keyboardKeysContains(int keyCode, boolean coded) {
@@ -3679,8 +3681,8 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private class TextInput extends Element {
+        private final float overlayTextSize = 24;
         private final String defaultValue;
-        private final float overlayTextSize = 36;
         private String value;
 
         TextInput(Group currentGroup, String name, String defaultValue) {
@@ -3706,7 +3708,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void keyPressed() {
-            if (!overlayVisible || !trayVisible) {
+            if (!overlayVisible || !trayVisible || (int) key == 19) { // CTRL + S
                 return;
             }
             if (keyCode == BACKSPACE && value.length() > 0) {
@@ -3730,12 +3732,9 @@ public abstract class KrabApplet extends PApplet {
             fill(GRAYSCALE_TEXT_SELECTED);
             textAlign(CENTER, CENTER);
             textSize(overlayTextSize);
-            String valueOrTip = value;
-            if (value.trim().equals("")) {
-                fill(GRAYSCALE_TEXT_DARK);
-                valueOrTip = "type something...";
-            }
-            text(valueOrTip, x, y);
+            String displayValue = value;
+            displayValue = displayValue.replaceAll(" ", "·");
+            text(displayValue, x, y);
             popStyle();
         }
 

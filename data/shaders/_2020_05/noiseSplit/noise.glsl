@@ -126,8 +126,7 @@ void main(){
     float pct = .5 + .5 * (
         noise(da, timeWheel, .5, 2) +
         noise(da, timeWheel, .25, 4) +
-        noise(da, timeWheel, .125, 8) +
-        noise(da, timeWheel, .125*.5f, 16)
+        noise(da, timeWheel, .125, 8)
     );
 
     pct *= smoothstep(0.0, 0.2, d);

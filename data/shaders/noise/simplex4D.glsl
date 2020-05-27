@@ -104,6 +104,10 @@ float fbm (vec4 p) {
     return sum;
 }
 
+float noise(vec2 p, vec2 t, float amp, float freq){
+    return amp*snoise(vec4(p*freq, t));
+}
+
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
     uv *= 10.;

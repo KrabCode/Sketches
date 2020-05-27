@@ -26,9 +26,6 @@ public class Ramp extends KrabApplet {
         fadeToBlack(pg);
         ramp(pg, 6);
         pg.endDraw();
-        if (toggle("split")) {
-            colorSplit(pg, true);
-        }
         image(pg, 0, 0, width, height);
         rec(pg);
         gui();
