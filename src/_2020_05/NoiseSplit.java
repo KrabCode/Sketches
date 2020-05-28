@@ -1,10 +1,12 @@
 package _2020_05;
 
 import applet.KrabApplet;
+import processing.core.PFont;
 import processing.core.PGraphics;
 
 public class NoiseSplit extends KrabApplet {
     private PGraphics pg;
+    private PFont courierNew;
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -20,6 +22,7 @@ public class NoiseSplit extends KrabApplet {
             surface.setAlwaysOnTop(true);
         }
         pg = createGraphics(width, height, P2D);
+        courierNew = createFont("Courier New Bold", 64);
     }
 
     public void draw() {
@@ -27,12 +30,14 @@ public class NoiseSplit extends KrabApplet {
         fadeToBlack(pg);
         blurPass(pg);
         updateNoise();
-        pg.textAlign(CENTER,CENTER);
+        pg.textAlign(LEFT,TOP);
         pg.fill(picker("fill").clr());
+        pg.textFont(courierNew);
         pg.textSize(slider("text size", 64));
+        pg.textLeading(slider("spacing"));
         translateToCenter(pg);
         translate2D(pg);
-        pg.text(textInput("text", "write something"), 0, 0);
+        pg.text(textInput("main text"), 0, 0);
         pg.endDraw();
         PGraphics split = colorSplit(pg, true);
         clear();

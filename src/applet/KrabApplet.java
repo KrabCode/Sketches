@@ -353,6 +353,10 @@ public abstract class KrabApplet extends PApplet {
         return toggle.checked;
     }
 
+    protected String textInput(String name) {
+        return textInput(name, "");
+    }
+
     protected String textInput(String name, String defaultValue) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
