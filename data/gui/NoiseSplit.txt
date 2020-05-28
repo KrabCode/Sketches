@@ -7002,3 +7002,114 @@ color split§move all scales§false
 color split§common scale§1.0§0.1
 color split§force scales >= 1§false
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§2.2232823§255.00003
+NoiseSplit§blur§1.4400003§10.0
+NoiseSplit§color strength§0.2502191§1.0
+NoiseSplit§angle center§100.0§0.0§0.0
+NoiseSplit§fill§0.0§0.0§1.0§1.0§1.0
+NoiseSplit§text size§42.200005§200.0
+NoiseSplit§translate§100.0§0.0§0.0
+NoiseSplit§text§
+NoiseSplit§video frames§360.0§300.0
+GROUP§ramp§false
+ramp§count§4.9987473§100.0
+ramp§1§0.44849968§0.0§1.0§1.0§10.0
+ramp§2 §0.7302083§10.0
+ramp§2§0.44849968§0.0§1.0§1.0§10.0
+ramp§3 §0.78807306§10.0
+ramp§3§0.44088244§0.0§1.0§0.0§10.0
+ramp§4§0.44088244§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§split center§100.0§-0.52499986§-0.5078125
+color split§move all offsets§false
+color split§magnitude§0.0§10.0
+color split§rotation§2.0943952§10.0
+color split§R offset§100.0§0.0§0.0
+color split§G offset§100.0§0.0§0.0
+color split§B offset§100.0§0.0§0.0
+color split§RGB scales§1.0000001§1.0071516§1.0061405§1.0244218
+color split§move all scales§false
+color split§common scale§1.0§0.1
+color split§force scales >= 1§true
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§2.2232823§255.00003
+NoiseSplit§blur§1.4400003§10.0
+NoiseSplit§color strength§0.2502191§1.0
+NoiseSplit§angle center§100.0§0.0§0.0
+NoiseSplit§fill§0.0§0.0§1.0§1.0§1.0
+NoiseSplit§text size§42.200005§200.0
+NoiseSplit§translate§100.0§0.0§0.0
+NoiseSplit§text§
+NoiseSplit§video frames§360.0§300.0
+GROUP§ramp§false
+ramp§count§4.9987473§100.0
+ramp§1§0.44849968§0.0§1.0§1.0§10.0
+ramp§2 §0.7302083§10.0
+ramp§2§0.44849968§0.0§1.0§1.0§10.0
+ramp§3 §0.78807306§10.0
+ramp§3§0.44088244§0.0§1.0§0.0§10.0
+ramp§4§0.44088244§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§split center§100.0§-0.52499986§-0.5078125
+color split§move all offsets§false
+color split§magnitude§0.0§10.0
+color split§rotation§2.0943952§10.0
+color split§R offset§100.0§0.0§0.0
+color split§G offset§100.0§0.0§0.0
+color split§B offset§100.0§0.0§0.0
+color split§RGB scales§1.0000001§1.0071516§1.0061405§1.0244218
+color split§move all scales§false
+color split§common scale§1.0§0.1
+color split§force scales >= 1§true
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§true
+NoiseSplit§fade to black§2.2232823§255.00003
+NoiseSplit§blur§1.4400003§10.0
+NoiseSplit§color strength§0.2502191§1.0
+NoiseSplit§angle center§100.0§0.0§0.0
+NoiseSplit§fill§0.0§0.0§1.0§1.0§1.0
+NoiseSplit§text size§42.200005§200.0
+NoiseSplit§translate§100.0§0.0§0.0
+NoiseSplit§text§
+NoiseSplit§video frames§360.0§300.0
+GROUP§ramp§false
+ramp§count§4.9987473§100.0
+ramp§1§0.44849968§0.0§1.0§1.0§10.0
+ramp§2 §0.7302083§10.0
+ramp§2§0.44849968§0.0§1.0§1.0§10.0
+ramp§3 §0.78807306§10.0
+ramp§3§0.44088244§0.0§1.0§0.0§10.0
+ramp§4§0.44088244§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§split center§100.0§-0.52499986§-0.5078125
+color split§move all offsets§false
+color split§magnitude§0.0§10.0
+color split§rotation§2.0943952§10.0
+color split§R offset§100.0§0.0§0.0
+color split§G offset§100.0§0.0§0.0
+color split§B offset§100.0§0.0§0.0
+color split§RGB scales§1.0000001§1.0071516§1.0061405§1.0244218
+color split§move all scales§false
+color split§common scale§1.0§0.1
+color split§force scales >= 1§true
+STATE_END

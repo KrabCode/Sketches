@@ -17,7 +17,7 @@ import static java.lang.System.currentTimeMillis;
  * runtime and many other utility functions and features
  */
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions", "FieldCanBeLocal"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "ConstantConditions", "FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
@@ -43,6 +43,9 @@ public abstract class KrabApplet extends PApplet {
     private static final String SATURATION = "saturation";
     private static final String BRIGHTNESS = "brightness";
     private static final String HUE = "hue";
+    private final int KEY_CTRL_C = 3;
+    private final int KEY_CTRL_V = 22;
+    private final int KEY_CTRL_S = 19;
     private static final float BACKGROUND_ALPHA = .9f;
     private static final float GRAYSCALE_GRID = .3f;
     private static final float GRAYSCALE_TEXT_DARK = .5f;
@@ -137,9 +140,6 @@ public abstract class KrabApplet extends PApplet {
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
     private boolean keyboardLockedByTextEditor = false;
-    private int CTRL_C = 3;
-    private int CTRL_V = 22;
-    private int CTRL_S = 19;
 
     // GUI INTERFACE
 
@@ -1685,13 +1685,13 @@ public abstract class KrabApplet extends PApplet {
         if (kk.character == 'h') {
             actions.add(ACTION_HIDE);
         }
-        if (kk.character == CTRL_S) {
+        if (kk.character == KEY_CTRL_S) {
             actions.add(ACTION_SAVE);
         }
-        if (kk.character == CTRL_C) {
+        if (kk.character == KEY_CTRL_C) {
             actions.add(ACTION_COPY);
         }
-        if (kk.character == CTRL_V) {
+        if (kk.character == KEY_CTRL_V) {
             actions.add(ACTION_PASTE);
         }
     }
@@ -2654,9 +2654,9 @@ public abstract class KrabApplet extends PApplet {
         }
 
         protected float updateFullHorizontalSlider(float x, float y, float w, float h, float value, float precision,
-                                                   float horizontalRevealAnimationStarted, boolean alternative,
+                                                   float horizontalRevealAnimationStarted,
                                                    float minValue, float maxValue) {
-            float deltaX = updateInfiniteSlider(precision, width, true, true, alternative);
+            float deltaX = updateInfiniteSlider(precision, true, true);
             float horizontalAnimation = easedAnimation(horizontalRevealAnimationStarted - SLIDER_REVEAL_START_SKIP,
                     SLIDER_REVEAL_DURATION, SLIDER_REVEAL_EASING);
             displayInfiniteSliderCenterMode(x + width * .5f, y, w, h,
@@ -2666,9 +2666,9 @@ public abstract class KrabApplet extends PApplet {
 
         @SuppressWarnings("SuspiciousNameCombination")
         protected float updateFullHeightVerticalSlider(float x, float y, float w, float h, float value, float precision,
-                                                       float verticalRevealAnimationStarted, boolean alternative,
+                                                       float verticalRevealAnimationStarted,
                                                        float minValue, float maxValue) {
-            float deltaY = updateInfiniteSlider(precision, height, false, true, alternative);
+            float deltaY = updateInfiniteSlider(precision, false, true);
             float verticalAnimation = easedAnimation(verticalRevealAnimationStarted - SLIDER_REVEAL_START_SKIP,
                     SLIDER_REVEAL_DURATION, SLIDER_REVEAL_EASING);
             displayInfiniteSliderCenterMode(x + height * .5f, y, w, h,
@@ -2676,8 +2676,7 @@ public abstract class KrabApplet extends PApplet {
             return deltaY;
         }
 
-        protected float updateInfiniteSlider(float precision, float sliderWidth, boolean horizontal, boolean reversed,
-                                             boolean alternative) {
+        protected float updateInfiniteSlider(float precision, boolean horizontal, boolean reversed) {
             if (mousePressed && isMouseOutsideGui()) {
                 float screenSpaceDelta = horizontal ? (pmouseX - mouseX) : (pmouseY - mouseY);
                 if (reversed) {
@@ -2722,7 +2721,7 @@ public abstract class KrabApplet extends PApplet {
             if (!horizontal) {
                 popMatrix();
             }
-            displayValue(w, h, precision, value, revealAnimation, floored);
+            displayValue(precision, value, revealAnimation, floored);
             popMatrix();
             popStyle();
         }
@@ -2816,8 +2815,7 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
-        void displayValue(float w, float sliderHeight, float precision, float value, float animationEased,
-                          boolean floored) {
+        void displayValue(float precision, float value, float animationEased, boolean floored) {
             fill(GRAYSCALE_TEXT_DARK);
             textAlign(CENTER, CENTER);
             textSize(textSize * 1.2f);
@@ -2837,6 +2835,9 @@ public abstract class KrabApplet extends PApplet {
             }
             if (text.startsWith("-")) {
                 textX -= textWidth("-") * .5f;
+            }
+            if(text.equals("-0")){
+                text = "0";
             }
             noStroke();
             fill(0, BACKGROUND_ALPHA);
@@ -3010,7 +3011,7 @@ public abstract class KrabApplet extends PApplet {
 
         void updateOverlay() {
             super.updateOverlay();
-            float valueDelta = updateInfiniteSlider(precision, width, true, false, false);
+            float valueDelta = updateInfiniteSlider(precision, true, false);
             recordStateForUndo();
             value += valueDelta;
             lastValueDelta = valueDelta;
@@ -3108,9 +3109,9 @@ public abstract class KrabApplet extends PApplet {
 
         void updateXYSliders() {
             deltaX = updateFullHorizontalSlider(0, height - cell, width, sliderHeight, value.x, precision,
-                    horizontalRevealAnimationStarted, false, -Float.MAX_VALUE, Float.MAX_VALUE);
+                    horizontalRevealAnimationStarted, -Float.MAX_VALUE, Float.MAX_VALUE);
             deltaY = updateFullHeightVerticalSlider(0, width - cell, height, sliderHeight, value.y, precision,
-                    verticalRevealAnimationStarted, false, -Float.MAX_VALUE, Float.MAX_VALUE);
+                    verticalRevealAnimationStarted, -Float.MAX_VALUE, Float.MAX_VALUE);
         }
 
         void handleActions() {
@@ -3175,7 +3176,7 @@ public abstract class KrabApplet extends PApplet {
         void updateOverlay() {
             super.updateOverlay();
             recordStateForUndo();
-            deltaZ = updateInfiniteSlider(precision, height * .5f, false, true, true);
+            deltaZ = updateInfiniteSlider(precision, false, true);
             lockOtherSlidersOnMouseOver();
             value.x += deltaX;
             value.y += deltaY;
@@ -3364,14 +3365,14 @@ public abstract class KrabApplet extends PApplet {
             textAlign(CENTER, CENTER);
             textSize(textSize);
             text("alpha", width - sliderHeight * .5f, 15);
-            float alphaDelta = updateInfiniteSlider(alphaPrecision, height, false, false, false);
+            float alphaDelta = updateInfiniteSlider(alphaPrecision, false, false);
             boolean isMouseInTopHalf = isMouseOver(width * .5f, 0, width * .5f, height / 2f);
             if (!satChanged && !brChanged && isMouseInTopHalf) {
                 hsba.alpha += alphaDelta;
             }
 
             displayHueSlider(sliderHeight, revealAnimation);
-            float hueDelta = updateInfiniteSlider(huePrecision, width, true, false, false);
+            float hueDelta = updateInfiniteSlider(huePrecision, true, false);
             if (!satChanged && !brChanged) {
                 hsba.hue += hueDelta;
             }
@@ -3589,12 +3590,14 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void copyFromValueToClipboard() {
-            Toolkit.getDefaultToolkit()
-                    .getSystemClipboard()
-                    .setContents(
-                            new StringSelection(value),
-                            null
-                    );
+            try{
+                Toolkit.getDefaultToolkit()
+                        .getSystemClipboard()
+                        .setContents(
+                                new StringSelection(value),
+                                null
+                        );
+            } catch(Exception ignored) {}
         }
 
         private void pasteFromClipboardToValue() {
@@ -3616,7 +3619,7 @@ public abstract class KrabApplet extends PApplet {
 
         void keyPressed() {
             // println("coded: " + (key == CODED), (int) key, keyCode);
-            if (!overlayVisible || !trayVisible || key == CTRL_C || key == CTRL_V) {
+            if (!overlayVisible || !trayVisible || key == KEY_CTRL_C || key == KEY_CTRL_V) {
                 return;
             }
             if (key == BACKSPACE) {

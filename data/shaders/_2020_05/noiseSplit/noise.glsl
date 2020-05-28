@@ -123,7 +123,7 @@ void main(){
     vec4 origColor = texture2D(texture, uv);
     float d = length(cv);
     float mirrors = 6;
-    vec2 da = vec2(pow(d*14., 1.0), cos(mirrors*atan(cv.y-translateAtan.y, cv.x+translateAtan.x)));
+    vec2 da = vec2(pow(d*10., 0.5), cos(mirrors*atan(cv.y-translateAtan.y, cv.x+translateAtan.x)));
     float t = time/4;
     float tr = 0.5;
     vec2 timeWheel = 10+vec2(cos(t), sin(t))*tr;
@@ -135,7 +135,7 @@ void main(){
     float innerStart = 0.0;
     float innerEnd = 0.05;
     float outerStart = 0.03;
-    float outerEnd = 0.5;
+    float outerEnd = 0.6;
     pct *= smoothstep(innerStart, innerEnd, d);
     pct *= smoothstep(outerEnd, outerStart, d);
     vec4 newColor = rampColor(pct);
