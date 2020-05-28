@@ -19,7 +19,6 @@ public class TextInputTest extends KrabApplet {
         pg = createGraphics(width, height, P3D);
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
-            surface.setLocation(2560 - 1020, 20);
         }
     }
 

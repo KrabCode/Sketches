@@ -25,6 +25,7 @@ public class NoiseSplit extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         fadeToBlack(pg);
+        blurPass(pg);
         updateNoise();
         pg.textAlign(CENTER,CENTER);
         pg.fill(picker("fill").clr());

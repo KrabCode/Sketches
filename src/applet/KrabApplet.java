@@ -4,6 +4,8 @@ import processing.core.*;
 import processing.event.MouseEvent;
 import processing.opengl.PShader;
 
+import java.awt.*;
+import java.awt.datatransfer.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -15,7 +17,7 @@ import static java.lang.System.currentTimeMillis;
  * runtime and many other utility functions and features
  */
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions", "FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
@@ -135,6 +137,9 @@ public abstract class KrabApplet extends PApplet {
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
     private boolean keyboardLockedByTextEditor = false;
+    private int CTRL_C = 3;
+    private int CTRL_V = 22;
+    private int CTRL_S = 19;
 
     // GUI INTERFACE
 
@@ -581,16 +586,14 @@ public abstract class KrabApplet extends PApplet {
         previousSliderRotationMap.put(sliderName, previousSliderRotation);
     }
 
-    protected PGraphics colorSplit(PGraphics pg) {
-        return colorSplit(pg, false);
-    }
-
     /**
-     * Takes a PGraphics, splits it up into primary color images and re-assembles them at different scales growing from the center.
+     * Takes a PGraphics, splits it up into primary color images and re-assembles them at different scales growing
+     * from the center.
      * This method expects the PGraphics to be already closed with endDraw() in order to read from it or write to it.
      *
      * @param pg                  input image
-     * @param drawResultOverInput draws the result over the input - when true this .
+     * @param drawResultOverInput when true this draws the result over the input pg and returns an empty canvas
+     *                            when false it returns the result as a reference to colorSplitResult PGraphics
      * @return color split image
      */
     protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
@@ -620,20 +623,17 @@ public abstract class KrabApplet extends PApplet {
         colorSplitResult.clear();
         colorSplitResult.translate(colorSplitResult.width / 2f, colorSplitResult.height / 2f);
         translate2D(colorSplitResult, "split center");
-        PVector[] globalOffsets = new PVector[3];
-        if(toggle("move all offsets", true)) {
+        if (toggle("move all offsets", true)) {
             for (int i = 0; i < 3; i++) {
                 PVector offset = new PVector(slider("magnitude"), 0);
-                offset.rotate(i*slider("rotation", TAU/3));
+                offset.rotate(i * slider("rotation", TAU / 3));
                 PVector sliderOffset = sliderXY(indexToPrimaryColorShorthand(i) + " offset");
                 sliderOffset.x = offset.x;
                 sliderOffset.y = offset.y;
             }
         }
-
-
         PVector scale = sliderXYZ("RGB scales", 1, 0.1f);
-        if(toggle("move all scales", true)) {
+        if (toggle("move all scales", true)) {
             float commonScale = slider("common scale", 1, 0.1f);
             scale.x = commonScale;
             scale.y = commonScale;
@@ -1569,24 +1569,8 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private boolean isAnyGroupKeyboardSelected() {
-        return findKeyboardSelectedGroup() != null;
-    }
-
-    private boolean isAnyElementKeyboardSelected() {
-        return findKeyboardSelectedElement() != null;
-    }
-
     private boolean keyboardSelected(String query) {
         return false;
-    }
-
-    private int keyboardSelectionLength() {
-        int elementCount = 0;
-        for (Group group : groups) {
-            elementCount += group.elements.size();
-        }
-        return MENU_BUTTON_COUNT + groups.size() + elementCount;
     }
 
     public void keyPressed() {
@@ -1615,7 +1599,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean isActionLockImmune(String action) {
-        return action.equals(ACTION_SAVE);
+        return action.equals(ACTION_SAVE) || action.equals(ACTION_COPY) || action.equals(ACTION_PASTE) ;
     }
 
     private boolean previousActionsContainsLockAware(String action) {
@@ -1701,23 +1685,19 @@ public abstract class KrabApplet extends PApplet {
         if (kk.character == 'h') {
             actions.add(ACTION_HIDE);
         }
-        if (kk.character == 19) { // CTRL + S
+        if (kk.character == CTRL_S) {
             actions.add(ACTION_SAVE);
         }
-        if (kk.character == 'c' || kk.character == 3) { // CTRL + C
+        if (kk.character == CTRL_C) {
             actions.add(ACTION_COPY);
         }
-        if (kk.character == 'v' || kk.character == 22) { // CTRL + V
+        if (kk.character == CTRL_V) {
             actions.add(ACTION_PASTE);
         }
     }
 
     private boolean actionJustReleased(String action) {
         return previousActionsContainsLockAware(action) && !actionsContainsLockAware(action);
-    }
-
-    private boolean upAndDownArrowsControlOverlay() {
-        return overlayVisible && (verticalOverlayVisible || pickerOverlayVisible);
     }
 
     private float findLongestNameWidth() {
@@ -1781,39 +1761,6 @@ public abstract class KrabApplet extends PApplet {
 
     private boolean groupExists(String name) {
         return findGroup(name) != null;
-    }
-
-    private Group findPreviousGroup(String query) {
-        for (Group group : groups) {
-            if (group.name.equals(query)) {
-                int index = groups.indexOf(group);
-                if (index > 0) {
-                    return groups.get(index - 1);
-                } else {
-                    return null;
-                }
-            }
-        }
-        return null;
-    }
-
-    private Group findKeyboardSelectedGroup() {
-        for (Group group : groups) {
-            if (keyboardSelected(group.name)) {
-                return group;
-            }
-        }
-        return null;
-    }
-
-    private Element findKeyboardSelectedElement() {
-        for (Group group : groups) {
-            for (Element el : group.elements)
-                if (keyboardSelected(group.name + el.name)) {
-                    return el;
-                }
-        }
-        return null;
     }
 
     private boolean elementDoesntExist(String elementName, String groupName) {
@@ -1987,50 +1934,6 @@ public abstract class KrabApplet extends PApplet {
 
     // SHADERS
 
-    protected void displacePass(PGraphics pg) {
-        String displace = "displace.glsl";
-        uniform(displace).set("time", t * slider("time speed"));
-        PVector globalMove = sliderXY("global move");
-        uniform(displace).set("globalMove", globalMove.x, globalMove.y);
-        uniform(displace).set("worleyMove", slider("worley amp", .0f));
-        uniform(displace).set("worleyFreq", slider("worley freq", 5));
-        uniform(displace).set("rotateAmp", slider("rotate amp", 1));
-        hotFilter(displace, pg);
-    }
-
-    protected void vignettePass(PGraphics pg) {
-        String vignette = "vignette.glsl";
-        uniform(vignette).set("startRadius", slider("start"));
-        uniform(vignette).set("endRadius", slider("end"));
-        hotFilter(vignette, pg);
-    }
-
-    protected void rayMarchPass(PGraphics pg) {
-        String raymarch = "raymarch.glsl";
-        uniform(raymarch).set("time", t);
-        uniform(raymarch).set("translate", sliderXYZ("translate", 0, 0, -5, 100).add(sliderXYZ("speed")));
-        uniform(raymarch).set("lightDirection", sliderXYZ("light dir"));
-        uniform(raymarch).set("diffuseMag", slider("diffuse"));
-        uniform(raymarch).set("specularMag", slider("specular"));
-        uniform(raymarch).set("shininess", slider("shininess"));
-        uniform(raymarch).set("rotate", slider("rotate") + radians(frameCount) * slider("rotate speed", 0));
-        uniform(raymarch).set("distFOV", slider("distFOV", 1));
-        hotFilter(raymarch, pg);
-    }
-
-    protected void radialBlurPass(PGraphics pg) {
-        String radialBlur = "radialBlur.glsl";
-        uniform(radialBlur).set("delta", slider("radial delta", 1));
-        uniform(radialBlur).set("power", slider("radial power", 1));
-        hotFilter(radialBlur, pg);
-    }
-
-    protected void splitPass(PGraphics pg) {
-        String split = "shaders/filters/split.glsl";
-        uniform(split).set("delta", slider("split"));
-        hotFilter(split, pg);
-    }
-
     protected void blurPass(PGraphics pg) {
         String split = "shaders/filters/blur.glsl";
         uniform(split).set("delta", slider("blur"));
@@ -2042,60 +1945,6 @@ public abstract class KrabApplet extends PApplet {
         uniform(split).set("sigma", slider("sigma", 0));
         uniform(split).set("blurSize", slider("blur size", 0));
         hotFilter(split, pg);
-    }
-
-    protected void chromaticAberrationPass(PGraphics pg) {
-        String chromatic = "postFX\\chromaticAberrationFrag.glsl";
-        uniform(chromatic).set("maxDistort", slider("chromatic", 5));
-        hotFilter(chromatic, pg);
-    }
-
-    protected void noiseOffsetPass(PGraphics pg, float t) {
-        String noiseOffset = "noiseOffset.glsl";
-        uniform(noiseOffset).set("time", t);
-        uniform(noiseOffset).set("mixAmt", slider("mix", 0, 1, .1f));
-        uniform(noiseOffset).set("mag", slider("mag", 0, .01f, .001f));
-        uniform(noiseOffset).set("frq", slider("frq", 0, 50, 8.5f));
-        hotFilter(noiseOffset, pg);
-    }
-
-    protected void noisePass(float t, PGraphics pg) {
-        String noise = "postFX/noiseFrag.glsl";
-        uniform(noise).set("time", t);
-        uniform(noise).set("amount", slider("noise magnitude", 0, .24f, .05f));
-        uniform(noise).set("speed", slider("noise speed", 1));
-        hotFilter(noise, pg);
-    }
-
-    protected void rgbSplitPassUniform(PGraphics pg) {
-        String rgbSplit = "rgbSplitUniform.glsl";
-        uniform(rgbSplit).set("delta", slider("RGB split", 2));
-        hotFilter(rgbSplit, pg);
-    }
-
-    protected void rgbSplitPass(PGraphics pg) {
-        String rgbSplit = "postFX/rgbSplitFrag.glsl";
-        uniform(rgbSplit).set("delta", slider("RGB split", 10));
-        hotFilter(rgbSplit, pg);
-    }
-
-    protected void saturationVibrancePass(PGraphics pg) {
-        String saturationVibrance = "postFX/saturationVibranceFrag.glsl";
-        uniform(saturationVibrance).set("saturation", slider("saturation", 0, 0.5f, 0));
-        uniform(saturationVibrance).set("vibrance", slider("vibrance", 0, 0.5f, 0));
-        hotFilter(saturationVibrance, pg);
-    }
-
-    protected void toonPass(PGraphics pg) {
-        String toonPass = "postFX/toonFrag.glsl";
-        hotFilter(toonPass, pg);
-    }
-
-    protected void brightnessContractFrag(PGraphics pg) {
-        String brightnessContractPass = "postFX/brightnessContrastFrag.glsl";
-        uniform(brightnessContractPass).set("brightness", slider("brightness", 1, false));
-        uniform(brightnessContractPass).set("contrast", slider("contrast", 2));
-        hotFilter(brightnessContractPass, pg);
     }
 
     // SHADER RELOADING
@@ -3729,7 +3578,36 @@ public abstract class KrabApplet extends PApplet {
         void updateOverlay() {
             super.updateOverlay();
             displayOverlay();
-            keyboardLockedByTextEditor = true;
+        }
+
+        void handleActions() {
+            if (previousActionsContainsLockAware(ACTION_PASTE)) {
+                pasteFromClipboardToValue();
+            }else if(previousActionsContainsLockAware(ACTION_COPY)){
+                copyFromValueToClipboard();
+            }
+        }
+
+        private void copyFromValueToClipboard() {
+            Toolkit.getDefaultToolkit()
+                    .getSystemClipboard()
+                    .setContents(
+                            new StringSelection(value),
+                            null
+                    );
+        }
+
+        private void pasteFromClipboardToValue() {
+            Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard();
+            Transferable t = c.getContents(this);
+            if (t == null)
+                return;
+            try {
+                ArrayList<DataFlavor> availableDataFlavors = new ArrayList<>(Arrays.asList(t.getTransferDataFlavors()));
+                if(availableDataFlavors.contains(DataFlavor.stringFlavor)) {
+                    value += (String) t.getTransferData(DataFlavor.stringFlavor);
+                }
+            } catch (Exception ignored) {}
         }
 
         void reset() {
@@ -3737,10 +3615,11 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void keyPressed() {
-            if (!overlayVisible || !trayVisible || (int) key == 19) { // CTRL + S
+            // println("coded: " + (key == CODED), (int) key, keyCode);
+            if (!overlayVisible || !trayVisible || key == CTRL_C || key == CTRL_V) {
                 return;
             }
-            if (key == BACKSPACE) { // BACKSPACE
+            if (key == BACKSPACE) {
                 if (value.length() > 0) {
                     value = value.substring(0, value.length() - 1);
                 }
