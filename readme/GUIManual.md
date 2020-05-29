@@ -8,6 +8,7 @@ This manual explains how to use my graphical user interface I built on top of Pr
 - Sliders (1D, 2D, 3D)
 - Toggles
 - Buttons
+- Text input
 - Radio buttons (called 'options' here)
 - Groups of control elements that can be collapsed
 - No need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them wherever you want (even inside loops), and it will lazily initialize your element behind the scenes.
@@ -116,6 +117,22 @@ stroke(hue, sat, br, a);
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
 
+## Text input
+
+Allows the editing of strings using the keyboard.
+- Disables most hotkeys when active (except for CTRL+C, CTRL+V, CTRL+S)
+- DELETE deletes the whole string
+- Can do copy / paste from and to the clipboard
+- The cursor is always at the end of the string
+- Spaces are displayed with dots in the editor for more visual clarity
+
+```java
+String value = textInput("main text"); 
+text(value,0, 0);
+```
+
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_textInput.jpg?raw=true" width="600" alt="Text input">
+
 ## Groups
 
 Groups are collections of elements that can be collapsed for visual clarity. 
@@ -126,5 +143,5 @@ Groups are collections of elements that can be collapsed for visual clarity.
 - Each time `gui()` ends it resets the current group to the default SketchName group.
 - See [GuiExample](https://github.com/KrabCode/Sketches/blob/master/src/readme/GuiExample.java).
 
- <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_groups.jpg?raw=true" width="200" alt="Groups">
+ <img src="https://github.com/KrabCode/Sketches/blob/master/readme/99_groups.jpg?raw=true" width="200" alt="Groups">
  
