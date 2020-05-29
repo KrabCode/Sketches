@@ -11,15 +11,15 @@ Watch the video to see it in action!
 
 - Color pickers
 - Sliders (1D, 2D, 3D)
+- Text input
 - Toggles
 - Buttons
-- Text input
 - Radio buttons (called 'options' here)
 - Groups of control elements that can be collapsed
 - Save GUI state to disk and automatically load it on startup
 - Undo / redo any gui changes
 - Copy / paste values between similar gui elements 
-- Easy to use - no need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them wherever you want (even inside loops), and it will lazily initialize a gui element behind the scenes.
+- Easy to use - no need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them in `draw()` (even inside loops) and it will lazily initialize a gui element behind the scenes.
 
 ## Menu
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
@@ -39,9 +39,8 @@ Watch the video to see it in action!
     
 
 # Control elements
-Control elements require a unique name to display on the tray as the first parameter. 
-- No other element in the same group can have the same name - the group-name combination must be unique. 
-- Most other parameters are optional.
+All control elements require a unique name as the first parameter. 
+- No other element in the same group can have the same name - the group-name combination must be unique.
 
 ## Button
 A button is true for one frame when pressed.
