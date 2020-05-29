@@ -2,6 +2,9 @@
 
 This manual explains how to use my graphical user interface I built on top of Processing for faster and more comfortable iteration while making stuff with Processing.
 
+[![Watch the video](https://github.com/KrabCode/Sketches/blob/master/readme/showcase_preview.jpg?raw=true)](https://youtu.be/nYxjyk9pOfU)
+
+
 ## Features
 
 - Color pickers
