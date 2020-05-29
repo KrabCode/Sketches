@@ -120,15 +120,15 @@ stroke(hue, sat, br, a);
 ## Text input
 
 Allows the editing of strings using the keyboard.
-- Disables most hotkeys when active (except for CTRL+C, CTRL+V, CTRL+S)
-- DELETE deletes the whole string
-- Can do copy / paste from and to the clipboard
-- The cursor is always at the end of the string
-- Spaces are displayed with dots in the editor for more visual clarity
+- Disables most hotkeys when active (except for CTRL+C, CTRL+V, CTRL+S).
+- DELETE deletes the whole string.
+- Can do copy / paste from and to the clipboard.
+- The cursor is always at the end of the string.
+- Spaces are displayed with dots in the editor for more visual clarity.
 
 ```java
 String value = textInput("main text"); 
-text(value,0, 0);
+text(value, 0, 0);
 ```
 
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/07_textInput.jpg?raw=true" width="600" alt="Text input">
