@@ -11,7 +11,10 @@ This manual explains how to use my graphical user interface I built on top of Pr
 - Text input
 - Radio buttons (called 'options' here)
 - Groups of control elements that can be collapsed
-- No need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them wherever you want (even inside loops), and it will lazily initialize your element behind the scenes.
+- Save GUI state to disk and automatically load it on startup
+- Undo / redo any gui changes
+- Copy / paste values between similar gui elements 
+- Easy to use - no need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them wherever you want (even inside loops), and it will lazily initialize a gui element behind the scenes.
 
 ## Menu
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
