@@ -33,6 +33,7 @@ Watch the video to see it in action!
     - hotkey CTRL+S
     - The sketch attempts to load the most recent state the first time `gui()` is called.
     - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder.
+    - The gui state is saved in a custom format that uses the `§` character as a separator, so you cannot use this symbol in any element or group names.
     - If you don't register a control element by the first time `gui()` is called, its previous settings will not be loaded.
         - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any saved values for the elements inside to be loaded.
     

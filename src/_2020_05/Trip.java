@@ -37,6 +37,7 @@ public class Trip extends KrabApplet {
         pg.translate(width / 2f, height / 2f);
         updateParticles();
         pg.endDraw();
+        colorSplit(pg, true);
         image(pg, 0, 0);
         rec(pg);
         gui();

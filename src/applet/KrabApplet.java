@@ -593,23 +593,29 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Takes a PGraphics, splits it up into primary color images and re-assembles them at different scales growing
      * from the center.
-     * This method expects the PGraphics to be already closed with endDraw() in order to read from it or write to it.
+     * This method expects the PGraphics to be already closed with endDraw() in order to read from it and write to it.
      *
      * @param pg                  input image
-     * @param drawResultOverInput when true this draws the result over the input pg and returns an empty canvas
+     * @param drawResultOverInput when true this draws the result over the input pg and returns that
      *                            when false it returns the result as a reference to colorSplitResult PGraphics
      * @return color split image
      */
     protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
         group("color split");
-        if (toggle("skip")) {
-            return pg;
-        }
+
         if (colorSplitResult == null || colorSplitResult.width != pg.width || colorSplitResult.height != pg.height) {
             colorSplitResult = createGraphics(pg.width, pg.height, P2D);
             primaryColorCanvases = new PGraphics[3];
             for (int i = 0; i < 3; i++) {
                 primaryColorCanvases[i] = createGraphics(pg.width, pg.height, P2D);
+            }
+        }
+
+        if (toggle("skip")) {
+            if(drawResultOverInput) {
+                return pg;
+            }else{
+                return colorSplitResult;
             }
         }
 
@@ -626,19 +632,10 @@ public abstract class KrabApplet extends PApplet {
         colorSplitResult.beginDraw();
         colorSplitResult.clear();
         colorSplitResult.translate(colorSplitResult.width / 2f, colorSplitResult.height / 2f);
-        translate2D(colorSplitResult, "split center");
-        if (toggle("move all offsets", true)) {
-            for (int i = 0; i < 3; i++) {
-                PVector offset = new PVector(slider("magnitude"), 0);
-                offset.rotate(i * slider("rotation", TAU / 3));
-                PVector sliderOffset = sliderXY(indexToPrimaryColorShorthand(i) + " offset");
-                sliderOffset.x = offset.x;
-                sliderOffset.y = offset.y;
-            }
-        }
-        PVector scale = sliderXYZ("RGB scales", 1, 0.1f);
-        if (toggle("move all scales", true)) {
-            float commonScale = slider("common scale", 1, 0.1f);
+        translate2D(colorSplitResult, "scale center");
+        PVector scale = sliderXYZ("scale RGB", 1, 0.1f);
+        float commonScale = slider("common scale", 1, 0.1f);
+        if (toggle("move all scales", false)) {
             scale.x = commonScale;
             scale.y = commonScale;
             scale.z = commonScale;
@@ -656,13 +653,14 @@ public abstract class KrabApplet extends PApplet {
             colorSplitResult.pushMatrix();
             colorSplitResult.imageMode(CENTER);
             colorSplitResult.blendMode(ADD);
-            PVector offset = sliderXY(indexToPrimaryColorShorthand(i) + " offset");
+            PVector offset = sliderXY("move " + indexToPrimaryColorShorthand(i));
             colorSplitResult.translate(offset.x, offset.y);
             colorSplitResult.scale(scales[i]);
             colorSplitResult.image(primaryColorCanvases[i], 0, 0);
             colorSplitResult.popMatrix();
         }
         colorSplitResult.endDraw();
+
         if (drawResultOverInput) {
             pg.beginDraw();
             pg.pushStyle();
@@ -2825,7 +2823,7 @@ public abstract class KrabApplet extends PApplet {
             String text;
             if (floored) {
                 text = String.valueOf(floor(value));
-            } else if (abs(value) < 1) {
+            } else if (abs(value) < 2) {
                 if (abs(value) < precision * .001f) {
                     text = nf(value, 0, 0);
                 } else {
