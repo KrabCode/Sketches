@@ -956,7 +956,6 @@ public abstract class KrabApplet extends PApplet {
         pg.hint(PConstants.DISABLE_DEPTH_TEST);
         group(rampName);
         int count = sliderInt("count", defaultColorCount);
-        int detail = 10;
         float prevY = 0;
         float prevR = 0;
         HSBA prevColor = new HSBA();
@@ -1249,8 +1248,7 @@ public abstract class KrabApplet extends PApplet {
             trayWidth = trayVisible ? trayWidthWhenExtended : 0;
             hideRotationStarted = frameCount;
         }
-        float grayscale = (keyboardSelected(MENU_BUTTON_HIDE) || isMouseOver(x, y, w, h)) ? GRAYSCALE_TEXT_SELECTED :
-                GRAYSCALE_TEXT_DARK;
+        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
         fill(grayscale);
         stroke(grayscale);
         float rotation = easedAnimation(hideRotationStarted, MENU_ROTATION_DURATION, MENU_ROTATION_EASING);
@@ -1357,8 +1355,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void displayMenuButtonSave(float x, float y, float w, float h, float animation) {
-        float grayscale = (keyboardSelected(MENU_BUTTON_SAVE) || isMouseOver(x, y, w, h)) ?
-                GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
         stroke(grayscale);
         strokeWeight(2);
         noFill();
@@ -1370,8 +1367,7 @@ public abstract class KrabApplet extends PApplet {
                                     boolean direction, String menuButtonType, int stackSize) {
         textSize(textSize);
         textAlign(CENTER, CENTER);
-        float grayscale = (keyboardSelected(menuButtonType) || isMouseOver(x, y, w, h)) ?
-                GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
         fill(grayscale);
         pushMatrix();
         translate(x + w * .5f, y + h * .5f);
@@ -1432,7 +1428,7 @@ public abstract class KrabApplet extends PApplet {
                     }
                     updateElement(group, el, y);
                     if (trayVisible) {
-                        displayElement(group, el, x, y, group.elementAlpha);
+                        displayElement(el, x, y, group.elementAlpha);
                     }
                 }
                 x -= cell * .5f;
@@ -1463,9 +1459,8 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private void displayElement(Group group, Element el, float x, float y, float alpha) {
-        boolean isSelected = keyboardSelected(group.name + el.name) ||
-                isMouseOverScrollAware(0, y - cell, trayWidth, cell);
+    private void displayElement(Element el, float x, float y, float alpha) {
+        boolean isSelected = isMouseOverScrollAware(0, y - cell, trayWidth, cell);
         float grayScale;
         if (isSelected) {
             el.lastSelected = frameCount;
@@ -1475,9 +1470,11 @@ public abstract class KrabApplet extends PApplet {
                     DESELECTION_FADEOUT_EASING);
             grayScale = lerp(GRAYSCALE_TEXT_DARK, GRAYSCALE_TEXT_SELECTED, 1 - deselectionFadeout);
         }
+        pushStyle();
         fill(grayScale, alpha);
         stroke(grayScale, alpha);
         el.displayOnTray(x, y);
+        popStyle();
     }
 
     private void updateTrayBackground() {
@@ -1519,7 +1516,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean hideActivated(float x, float y, float w, float h) {
-        return actionsContainsLockAware(ACTION_HIDE) || mouseJustReleasedHere(x, y, w, h);
+        return previousActionsContainsLockAware(ACTION_HIDE) || mouseJustReleasedHere(x, y, w, h);
     }
 
     // INPUT
@@ -1573,10 +1570,6 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private boolean keyboardSelected(String query) {
-        return false;
-    }
-
     public void keyPressed() {
 //        println((key == CODED ? "code: " + keyCode : "key: " + key));
         if (key == CODED) {
@@ -1618,10 +1611,6 @@ public abstract class KrabApplet extends PApplet {
             return isActionLockImmune(action) && actions.contains(action);
         }
         return actions.contains(action);
-    }
-
-    private boolean keyboardKeysContains(int keyCode, boolean coded) {
-        return !keyboardKeysDoesntContain(keyCode, coded);
     }
 
     private boolean keyboardKeysDoesntContain(int keyCode, boolean coded) {
@@ -2347,10 +2336,12 @@ public abstract class KrabApplet extends PApplet {
         }
 
         public void displayInTray(float x, float y) {
-            boolean isSelected = (keyboardSelected(name) || isMouseOverScrollAware(0, y - cell, trayWidth, cell));
+            pushStyle();
+            boolean isSelected = (isMouseOverScrollAware(0, y - cell, trayWidth, cell));
             float clr = isSelected ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
             fill(clr);
             stroke(clr);
+            strokeWeight(2);
             textAlign(LEFT, BOTTOM);
             textSize(textSize);
             float animation = easedAnimation(animationStarted, GROUP_TOGGLE_ANIMATION_DURATION,
@@ -2367,6 +2358,7 @@ public abstract class KrabApplet extends PApplet {
             line(-size, -size, size, 0);
             popMatrix();
             text(name, x, y);
+            popStyle();
         }
 
         public String getState() {
@@ -2459,6 +2451,7 @@ public abstract class KrabApplet extends PApplet {
         void displayCheckMarkOnTray(float x, float y, float animation, boolean fadeIn, boolean displayBox) {
             float w = previewTrayBoxWidth;
             pushMatrix();
+            pushStyle();
             translate(x - previewTrayBoxMargin, previewTrayBoxOffsetY);
             noFill();
             if (displayBox) {
@@ -2496,6 +2489,7 @@ public abstract class KrabApplet extends PApplet {
                 vertex(upwardX, upwardY);
             }
             endShape();
+            popStyle();
             popMatrix();
         }
 
@@ -2539,6 +2533,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void displayDotsOnTray(float x, float y) {
+            pushStyle();
             for (int i = 0; i < options.size(); i++) {
                 float size = 4;
                 float rectX = x + cell * .15f + i * size * 2.5f;
@@ -2547,12 +2542,14 @@ public abstract class KrabApplet extends PApplet {
                     pushStyle();
                     noFill();
                 }
+                strokeWeight(2);
                 rectMode(CENTER);
                 rect(rectX, y + cell * .1f, size, size);
                 if (i == valueIndex) {
                     popStyle();
                 }
             }
+            popStyle();
         }
 
         void onActivationWithoutOverlay(int x, float y, float w, float h) {
@@ -3638,6 +3635,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void displayOverlay() {
+            keyboardLockedByTextEditor = true;
             float overlayHeight = textHeightPlusPadding();
             pushStyle();
             noStroke();

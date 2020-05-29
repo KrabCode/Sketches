@@ -1,11 +1,14 @@
 package readme;
 
 import applet.KrabApplet;
+import processing.core.PImage;
 import processing.core.PVector;
 
 // this class is referenced from the GUI Manual in readme
 
 public class GuiExample extends KrabApplet {
+
+    private PImage cursorImage;
 
     public static void main(String[] passedArgs) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -17,17 +20,17 @@ public class GuiExample extends KrabApplet {
 
     public void setup() {
         rectMode(CENTER);
-        surface.setAlwaysOnTop(true); //remove me
-
+        frameRecordingDuration = 100000;
+        cursorImage = loadImage("images/cursor/cursor.png");
     }
 
     public void draw() {
-        group("console");
-        if (button("hello world")) {
-            println("Hello, world!");
-        }
+        hint(ENABLE_DEPTH_TEST);
+
+        ramp(g,"gradient", 4);
 
         group("transform");
+        pushMatrix();
         String projection = options("perspective", "orthographic");
         if (projection.equals("perspective")) {
             perspective();
@@ -42,7 +45,6 @@ public class GuiExample extends KrabApplet {
         rotateZ(rotate.z);
 
         group("style");
-        background(picker("background").clr());
         fill(picker("fill").clr());
         stroke(picker("stroke").clr());
         strokeWeight(slider("stroke weight"));
@@ -54,8 +56,21 @@ public class GuiExample extends KrabApplet {
         }
         PVector size = sliderXYZ("size", 200);
         box(size.x, size.y, size.z);
+        popMatrix();
+
+        group("text");
+        hint(DISABLE_DEPTH_TEST);
+        PVector textPos = sliderXY("translate");
+        fill(picker("fill").clr());
+        textSize(slider("size", 64));
+        text(textInput("main text"), textPos.x, textPos.y);
 
         gui();
+
+        noCursor();
+        imageMode(CORNER);
+        image(cursorImage, mouseX, mouseY, 15.16f*2, 24*2);
+
         rec();
     }
 }

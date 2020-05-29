@@ -203,3 +203,148 @@ style§no fill§false
 style§no stroke§false
 style§size§30.0§300.0§300.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§gradient§true
+gradient§vertical§0
+gradient§count§4.0§100.0
+gradient§1§0.659§0.6§1.0§1.0§1.0
+gradient§2 §0.50333333§10.0
+gradient§2§0.0§0.0§0.8375§1.0§1.0
+gradient§3 §0.5466668§10.0
+gradient§3§0.6625001§0.26875§0.48125§1.0§1.0
+gradient§4§0.0§0.0§0.0§1.0§1.0
+GROUP§transform§false
+transform§perspective§0
+transform§translate§1000.0§33.459564§-64.2204§-565.6101
+transform§rotate§10.0§-0.2800003§2.479998§1.5699993
+GROUP§style§false
+style§fill§0.674§0.80625§1.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§6.8000307§10.0
+style§no fill§false
+style§no stroke§false
+style§size§30.0§300.0§300.0§300.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§size§64.0§20.0
+text§main text§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§gradient§true
+gradient§vertical§0
+gradient§count§4.0§100.0
+gradient§1§0.659§0.6§1.0§1.0§1.0
+gradient§2 §0.50333333§10.0
+gradient§2§0.0§0.0§0.8375§1.0§1.0
+gradient§3 §0.5466668§10.0
+gradient§3§0.6625001§0.26875§0.48125§1.0§1.0
+gradient§4§0.0§0.0§0.0§1.0§1.0
+GROUP§transform§true
+transform§perspective§0
+transform§translate§1000.0§33.459564§-64.2204§-565.6101
+transform§rotate§10.0§-0.32000017§1.0199994§0.0
+GROUP§style§true
+style§fill§0.674§0.0§0.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§14.380031§100.0
+style§no fill§true
+style§no stroke§false
+style§size§30.0§300.0§300.0§300.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§size§64.0§20.0
+text§main text§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§gradient§true
+gradient§vertical§0
+gradient§count§4.0§100.0
+gradient§1§0.659§0.6§1.0§1.0§1.0
+gradient§2 §0.50333333§10.0
+gradient§2§0.0§0.0§0.8375§1.0§1.0
+gradient§3 §0.5466668§10.0
+gradient§3§0.6625001§0.26875§0.48125§1.0§1.0
+gradient§4§0.0§0.0§0.0§1.0§1.0
+GROUP§transform§true
+transform§perspective§0
+transform§translate§1000.0§33.459564§-64.2204§-565.6101
+transform§rotate§10.0§-0.32000017§1.0199994§0.0
+GROUP§style§true
+style§fill§0.674§0.0§0.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§14.380031§100.0
+style§no fill§true
+style§no stroke§false
+style§size§30.0§300.0§300.0§300.0
+GROUP§text§true
+text§translate§100.0§0.0§0.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§size§64.0§20.0
+text§main text§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§gradient§true
+gradient§vertical§0
+gradient§count§4.0§100.0
+gradient§1§0.659§0.6§1.0§1.0§1.0
+gradient§2 §0.50333333§10.0
+gradient§2§0.0§0.0§0.8375§1.0§1.0
+gradient§3 §0.5466668§10.0
+gradient§3§0.6625001§0.26875§0.48125§1.0§1.0
+gradient§4§0.0§0.0§0.0§1.0§1.0
+GROUP§transform§true
+transform§perspective§0
+transform§translate§1000.0§0.0§0.0§-631.51196
+transform§rotate§10.0§-0.32000017§1.0199994§0.0
+GROUP§style§true
+style§fill§0.674§0.0§0.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§14.380031§100.0
+style§no fill§true
+style§no stroke§false
+style§size§30.0§300.0§300.0§300.0
+GROUP§text§true
+text§translate§1000.0§259.0§337.0
+text§fill§0.8244996§0.0§1.0§1.0§10.0
+text§size§64.0§20.0
+text§main text§Hello, world!
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§gradient§true
+gradient§vertical§0
+gradient§count§4.0§100.0
+gradient§1§0.659§0.6§1.0§1.0§1.0
+gradient§2 §0.50333333§10.0
+gradient§2§0.0§0.0§0.8375§1.0§1.0
+gradient§3 §0.5466668§10.0
+gradient§3§0.6625001§0.26875§0.48125§1.0§1.0
+gradient§4§0.0§0.0§0.0§1.0§1.0
+GROUP§transform§true
+transform§perspective§0
+transform§translate§1000.0§0.0§0.0§-631.51196
+transform§rotate§10.0§-0.32000017§1.0199994§0.0
+GROUP§style§true
+style§fill§0.674§0.0§0.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§14.380031§100.0
+style§no fill§true
+style§no stroke§false
+style§size§30.0§300.0§300.0§300.0
+GROUP§text§true
+text§translate§1000.0§259.0§337.0
+text§fill§0.8369996§0.0§1.0§0.0§10.0
+text§size§64.0§20.0
+text§main text§Hello, world!
+STATE_END
