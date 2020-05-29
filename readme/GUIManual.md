@@ -29,7 +29,7 @@ This manual explains how to use my graphical user interface I built on top of Pr
     - The sketch attempts to load the most recent state the first time `gui()` is called.
     - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder.
     - If you don't register a control element by the first time `gui()` is called, its previous settings will not be loaded.
-        - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any sliders inside to be loaded.
+        - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any saved values for the elements inside to be loaded.
     
 
 # Control elements
@@ -124,10 +124,10 @@ stroke(hue, sat, br, a);
 
 ## Text input
 
-Allows the editing of strings using the keyboard.
-- Disables most hotkeys when active (except for CTRL+C, CTRL+V, CTRL+S).
+A simple text editor.
+- Disables most hotkeys when being edited (except for CTRL+C, CTRL+V, CTRL+S).
 - DELETE deletes the whole string.
-- Can do copy / paste from and to the clipboard.
+- Can copy the whole value to clipboard and paste from the clipboard to append text to the value.
 - The cursor is always at the end of the string.
 - Spaces are displayed with dots in the editor for more visual clarity.
 
