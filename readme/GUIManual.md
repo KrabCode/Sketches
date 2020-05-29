@@ -33,7 +33,9 @@ This manual explains how to use my graphical user interface I built on top of Pr
     
 
 # Control elements
-Control elements require a unique name to display on the tray as the first parameter. Most other parameters are optional.
+Control elements require a unique name to display on the tray as the first parameter. 
+- No other element in the same group can have the same name - the group-name combination must be unique. 
+- Most other parameters are optional.
 
 ## Button
 A button is true for one frame when pressed.
@@ -59,7 +61,7 @@ if (toggle("no fill")) {
 
 A list of strings that returns the currently selected string and changes the selection when pressed.
 - Requires at least two strings.
-- This element does not have a name, it simply shows the current selection in the tray instead of the name.
+- This element uses the first option as its unique name and it shows current selection in the tray instead of the name.
 ```java
 String projection = options("perspective", "orthographic");
 if (projection.equals("perspective")) {
