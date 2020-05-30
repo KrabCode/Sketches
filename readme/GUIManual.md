@@ -1,6 +1,6 @@
 # GUI Manual
 
-This manual explains how to use my graphical user interface I built on top of Processing for faster and more comfortable iteration while making stuff with Processing.
+This manual explains how to use the graphical user interface I built on top of Processing for faster and more comfortable iteration while making stuff with Processing.
 
 ## Features
 
