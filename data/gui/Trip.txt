@@ -535,3 +535,52 @@ colors§mirrors§50.00004§100.0
 GROUP§color split§true
 color split§scale§0.10000001§1.0006144§1.0000001§0.99908656
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Trip§true
+GROUP§shaders§true
+shaders§fade to black§1.1039513§2.55
+shaders§blur§0.0§10.0
+GROUP§particles§true
+particles§spawn frame skip§20.986069§1000.0
+particles§spawn count§1.9998498§100.0
+particles§blend: replace§1
+particles§spawn range§203.94994§1000.0
+particles§life span§100.923225§200.0
+GROUP§noise§false
+noise§noise freq§0.011145833§0.1
+noise§noise time§0.234375§10.0
+noise§noise angle variance§6.1843677§100.0
+noise§noise angle offset§0.26203096§10.0
+GROUP§forces§false
+forces§force uniform§100.0§0.0§0.0
+forces§force to center§-0.18124995§10.0
+forces§sin(t)§0
+forces§force sideways§0.0§10.0
+forces§sin(t) frequency§0.0§10.0
+forces§force noise§0.18508556§10.000001
+forces§drag§0.9126427§1.0
+GROUP§colors§false
+colors§stroke§0.8073354§0.2375§0.75625§1.0§1.0
+colors§hue variance§0.09368765§1.0000001
+colors§saturation variance§0.25164112§10.0
+colors§brightness variance§0.25§10.0
+colors§fade in [0-0.5]§0.1570313§10.0
+colors§fade out [0-0.5]§0.496875§10.0
+colors§weight§2.9980464§10.0
+colors§weight variance§1.0§10.0
+colors§mirrors§50.00004§100.0
+GROUP§color split§true
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§0.9687499§0.0
+color split§multiplier B§2.0§0.0§0.0§0.9802081
+color split§scale center§100.0§-0.7812497§-0.5208335
+color split§scale RGB§1.0§1.0135412§1.0102093§1.0161461
+color split§common scale§1.0§0.1
+color split§move all scales§false
+color split§force scales >= 1§true
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END

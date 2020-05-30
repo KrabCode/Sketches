@@ -2,16 +2,24 @@
 
 This manual explains how to use the graphical user interface I built on top of Processing for faster and more comfortable iteration while making stuff with Processing.
 
+Watch the video to see it in action!
+
+[![Watch the video](https://github.com/KrabCode/Sketches/blob/master/readme/showcase_preview.jpg?raw=true)](https://youtu.be/nYxjyk9pOfU)
+
+
 ## Features
 
 - Color pickers
 - Sliders (1D, 2D, 3D)
+- Text input
 - Toggles
 - Buttons
-- Text input
 - Radio buttons (called 'options' here)
 - Groups of control elements that can be collapsed
-- No need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them wherever you want (even inside loops), and it will lazily initialize your element behind the scenes.
+- Save GUI state to disk and automatically load it on startup
+- Undo / redo any gui changes
+- Copy / paste values between similar gui elements 
+- Easy to use - no need to register the control elements in `setup()` in order to then query them in `draw()`. Just query them in `draw()` (even inside loops) and it will lazily initialize a gui element behind the scenes.
 
 ## Menu
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/00_menu.jpg?raw=true" alt="Menu">
@@ -25,12 +33,14 @@ This manual explains how to use the graphical user interface I built on top of P
     - hotkey CTRL+S
     - The sketch attempts to load the most recent state the first time `gui()` is called.
     - If you saved some values that break your sketch you can restore everything to default by deleting the file from your data/gui folder.
+    - The gui state is saved in a custom format that uses the `§` character as a separator, so you cannot use this symbol in any element or group names.
     - If you don't register a control element by the first time `gui()` is called, its previous settings will not be loaded.
-        - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any sliders inside to be loaded.
+        - Beware of loops that are controlled by a slider and whose default number of iterations is 0, setting it to 1 allows any saved values for the elements inside to be loaded.
     
 
 # Control elements
-Control elements require a unique name to display on the tray as the first parameter. Most other parameters are optional.
+All control elements require a unique name as the first parameter. 
+- No other element in the same group can have the same name - the group-name combination must be unique.
 
 ## Button
 A button is true for one frame when pressed.
@@ -56,7 +66,7 @@ if (toggle("no fill")) {
 
 A list of strings that returns the currently selected string and changes the selection when pressed.
 - Requires at least two strings.
-- This element does not have a name, it simply shows the current selection in the tray instead of the name.
+- This element uses the first option as its unique name and it shows current selection in the tray instead of the name.
 ```java
 String projection = options("perspective", "orthographic");
 if (projection.equals("perspective")) {
@@ -119,10 +129,10 @@ stroke(hue, sat, br, a);
 
 ## Text input
 
-Allows the editing of strings using the keyboard.
-- Disables most hotkeys when active (except for CTRL+C, CTRL+V, CTRL+S).
+A simple text editor.
+- Disables most hotkeys when being edited (except for CTRL+C, CTRL+V, CTRL+S).
 - DELETE deletes the whole string.
-- Can do copy / paste from and to the clipboard.
+- Can copy the whole value to clipboard and paste from the clipboard to append text to the value.
 - The cursor is always at the end of the string.
 - Spaces are displayed with dots in the editor for more visual clarity.
 
