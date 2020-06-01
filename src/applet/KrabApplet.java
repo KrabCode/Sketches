@@ -14,7 +14,9 @@ import static java.lang.System.currentTimeMillis;
 
 /**
  * This class offers common functionality to all of my processing sketches, including a GUI, shader reloading at
- * runtime and many other utility functions and features
+ * runtime and many other utility functions and features.
+ *
+ * See the GuiManual in readme for documentation.
  */
 
 @SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions", "FieldCanBeLocal"})
