@@ -37,7 +37,7 @@ public class ShaderRamp extends KrabApplet {
     private void rampShader() {
         String frag = "shaders/_2020_05/ramp.glsl";
         uniform(frag).set("time", t);
-        uniformRamp(frag, "shader ramp", 4);
+        uniformRamp(frag, null, "shader ramp", 4);
         hotFilter(frag, pg);
     }
 }

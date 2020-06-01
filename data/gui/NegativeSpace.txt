@@ -1,0 +1,697 @@
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§339.5§1000.0
+NegativeSpace§weight§1.8000026§100.0
+NegativeSpace§freq§1000.0§251.73999§243.66§194.2
+NegativeSpace§mag§5.0§1000.0§1000.0§50.0
+NegativeSpace§speed§0.049999997§100.0
+NegativeSpace§fade to black§2.04§255.0
+NegativeSpace§blur§0.25§10.0
+NegativeSpace§move 0§10.0§0.0§0.0§0.0
+NegativeSpace§rot 0§3.1415927§0.0§5.0768147§0.0
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0§100.0
+point ramp§1§0.0§0.0§0.0§1.0§10.0
+point ramp§2 §0.25§10.0
+point ramp§2§0.0§0.0§0.75§1.0§1.0
+point ramp§3 §0.5§10.0
+point ramp§3§0.0§0.0§0.5§1.0§1.0
+point ramp§4 §0.75§10.0
+point ramp§4§0.0§0.0§0.25§1.0§1.0
+point ramp§5§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§false
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§false
+NegativeSpace§count§5006.5§1000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§1000.0§251.73999§243.66§194.2
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§1.2240015§25.5
+NegativeSpace§blur§0.034999937§1.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§0.0§0.0§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§true
+point ramp§count§2.0055015§100.0
+point ramp§1§0.9834995§0.0§1.0§0.0§10.0
+point ramp§2 §0.25§10.0
+point ramp§2§0.0§0.0§1.0§1.0§10.0
+point ramp§3 §0.5§10.0
+point ramp§3§0.0§0.0§1.0§1.0§1.0
+point ramp§4 §0.75§10.0
+point ramp§4§0.0§0.0§0.0§1.0§1.0
+point ramp§5§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§0.96799946§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.9308002
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§0.99570006§0.99570006§0.99570006
+color split§common scale§0.99570006§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§false
+NegativeSpace§count§5006.5§1000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§1000.0§251.73999§243.66§194.2
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§1.2240015§25.5
+NegativeSpace§blur§0.034999937§1.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§0.0§0.0§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§true
+point ramp§count§5.0217557§100.0
+point ramp§1§0.9669995§0.0§1.0§0.0§10.0
+point ramp§2 §0.12999992§10.0
+point ramp§2§0.0§0.0§0.0§1.0§10.0
+point ramp§3 §0.33000013§10.0
+point ramp§3§0.0§0.0§1.0§1.0§1.0
+point ramp§4 §0.6600012§10.0
+point ramp§4§0.0§0.0§0.0§1.0§1.0
+point ramp§5§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§10.0§-0.31999996§-0.059999995
+color split§scale RGB§0.1§0.99260014§0.99260014§0.99260014
+color split§common scale§1.0§0.1
+color split§move all scales§false
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§false
+NegativeSpace§count§5006.5§1000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§1000.0§251.73999§243.66§194.2
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§1.2240015§25.5
+NegativeSpace§blur§0.034999937§1.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§0.0§0.0§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0217557§100.0
+point ramp§1§0.0§0.0§1.0§1.0§1.0
+point ramp§2 §0.14999966§0.1
+point ramp§2§0.0§0.0§1.0§1.0§1.0
+point ramp§3 §0.18500023§1.0
+point ramp§3§0.0§0.0§1.0§1.0§1.0
+point ramp§4 §0.6600012§10.0
+point ramp§4§0.0§0.0§0.0§1.0§1.0
+point ramp§5§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§10.0§-0.31999996§-0.059999995
+color split§scale RGB§0.1§0.99260014§0.99260014§0.99260014
+color split§common scale§1.0§0.1
+color split§move all scales§false
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7246.5§10000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§0.1§0.022000004§0.009399924§0.103599995
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§2.5700207§255.0
+NegativeSpace§blur§0.8399998§10.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§0.0§0.0§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0217557§100.0
+point ramp§1§0.0§0.0§1.0§1.0§1.0
+point ramp§2 §0.14999966§0.1
+point ramp§2§0.98749965§0.0§1.0§1.0§10.0
+point ramp§3 §0.18500023§1.0
+point ramp§3§0.9275002§0.0§1.0§1.0§1.0
+point ramp§4 §0.6600012§10.0
+point ramp§4§0.0§0.0§0.0§1.0§1.0
+point ramp§5§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0040002§1.0040002§1.0040002
+color split§common scale§1.0040002§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7246.5§10000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§10000.0§0.1§0.1§1579.7
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§2.5700207§255.0
+NegativeSpace§blur§0.8399998§10.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§1.746727§0.0§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0217557§100.0
+point ramp§1§0.0§0.0§1.0§1.0§1.0
+point ramp§2 §0.14999966§0.1
+point ramp§2§0.98749965§0.0§1.0§1.0§10.0
+point ramp§3 §0.18500023§1.0
+point ramp§3§0.9275002§0.0§1.0§1.0§1.0
+point ramp§4 §0.8500011§10.0
+point ramp§4§0.0034999996§0.0§1.0§0.0§10.0
+point ramp§5§0.022500044§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0040002§1.0040002§1.0040002
+color split§common scale§1.0040002§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7246.5§10000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§10000.0§0.1§0.1§1579.7
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§2.5700207§255.0
+NegativeSpace§blur§0.8399998§10.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§0.0§0.0§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0217557§100.0
+point ramp§1§0.0§0.0§1.0§1.0§1.0
+point ramp§2 §0.14999966§0.1
+point ramp§2§0.98749965§0.0§1.0§1.0§10.0
+point ramp§3 §0.18500023§1.0
+point ramp§3§0.9275002§0.0§1.0§1.0§1.0
+point ramp§4 §0.8500011§10.0
+point ramp§4§0.0034999996§0.0§1.0§0.0§10.0
+point ramp§5§0.022500044§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0040002§1.0040002§1.0040002
+color split§common scale§1.0040002§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7246.5§10000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§10000.0§0.1§0.1§1579.7
+NegativeSpace§mag§5000.0§2500.0§2500.0§50.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§2.5700207§255.0
+NegativeSpace§blur§0.8399998§10.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§0.0§-0.7162838§0.0
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0217557§100.0
+point ramp§1§0.0§0.0§1.0§1.0§1.0
+point ramp§2 §0.14999966§0.1
+point ramp§2§0.98749965§0.0§1.0§1.0§10.0
+point ramp§3 §0.18500023§1.0
+point ramp§3§0.9275002§0.0§1.0§1.0§1.0
+point ramp§4 §0.8500011§10.0
+point ramp§4§0.0034999996§0.0§1.0§0.0§10.0
+point ramp§5§0.022500044§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0040002§1.0040002§1.0040002
+color split§common scale§1.0040002§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7246.5§10000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§10000.0§0.1§0.1§1579.7
+NegativeSpace§mag§50000.0§2500.0§2500.0§800.0
+NegativeSpace§speed§0.015410261§0.10000001
+NegativeSpace§fade to black§2.5700207§255.0
+NegativeSpace§blur§0.8399998§10.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-106.899994
+NegativeSpace§rot 0§3.1415927§3.1038961§0.82938224§0.7728314
+NegativeSpace§move 1§1000.0§0.0§0.0§57.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.0217557§100.0
+point ramp§1§0.0§0.0§1.0§1.0§1.0
+point ramp§2 §0.14999966§0.1
+point ramp§2§0.98749965§0.0§1.0§1.0§10.0
+point ramp§3 §0.18500023§1.0
+point ramp§3§0.9275002§0.0§1.0§1.0§1.0
+point ramp§4 §0.8500011§10.0
+point ramp§4§0.0034999996§0.0§1.0§0.0§10.0
+point ramp§5§0.022500044§0.0§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9707997§0.0
+color split§multiplier B§0.2§0.0§-1.8859282E-8§0.90120107
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0040002§1.0040002§1.0040002
+color split§common scale§1.0040002§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§false
+NegativeSpace§count§3296.5§10000.0
+NegativeSpace§weight§5.0§1000.0
+NegativeSpace§freq§10.0§0.039999895§0.16000004§2.3659992
+NegativeSpace§mag§50.0§1000.0§1000.0§50.0
+NegativeSpace§speed§0.02800001§1.0
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10.0§0.0§0.0§0.0
+NegativeSpace§rot 0§3.1415927§0.0§2.0169034§0.0
+NegativeSpace§rot t§100.0§0.0§0.0§0.4
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§true
+point ramp§count§5.9935217§100.0
+point ramp§1§0.6080002§0.0§1.0§0.0§10.0
+point ramp§2 §0.18759993§0.1
+point ramp§2§0.6080002§0.0§1.0§0.0§10.0
+point ramp§3 §0.1900004§1.0
+point ramp§3§0.6075002§0.375§1.0§1.0§10.0
+point ramp§4 §0.7400012§10.0
+point ramp§4§0.0034999996§0.0§1.0§0.0§10.0
+point ramp§5§0.022500044§0.0§1.0§0.0§10.0
+point ramp§5 §0.8§10.0
+point ramp§6§0.0§0.0§0.0§1.0§1.0
+point ramp§6 §0.71428573§10.0
+point ramp§7 §0.85714287§10.0
+point ramp§7§0.0§0.0§0.14285713§1.0§1.0
+point ramp§8§0.0§0.0§0.0§1.0§1.0
+point ramp§8 §0.7777778§10.0
+point ramp§9 §0.8888889§10.0
+point ramp§9§0.0§0.0§0.111111104§1.0§1.0
+point ramp§10§0.0§0.0§0.0§1.0§1.0
+point ramp§10 §0.8181818§10.0
+point ramp§11 §0.90909094§10.0
+point ramp§11§0.0§0.0§0.090909064§1.0§1.0
+point ramp§12§0.0§0.0§0.0§1.0§1.0
+point ramp§12 §0.84615386§10.0
+point ramp§13 §0.9230769§10.0
+point ramp§13§0.0§0.0§0.07692307§1.0§1.0
+point ramp§14§0.0§0.0§0.0§1.0§1.0
+point ramp§14 §0.8666667§10.0
+point ramp§15 §0.93333334§10.0
+point ramp§15§0.0§0.0§0.06666666§1.0§1.0
+point ramp§16§0.0§0.0§0.0§1.0§1.0
+point ramp§16 §0.9375§10.0
+point ramp§17§0.0§0.0§0.0§1.0§1.0
+point ramp§17 §0.9411765§10.0
+point ramp§18§0.0§0.0§0.0§1.0§1.0
+point ramp§18 §0.9444444§10.0
+point ramp§19§0.0§0.0§0.0§1.0§1.0
+point ramp§19 §0.94736844§10.0
+point ramp§20§0.0§0.0§0.0§1.0§1.0
+point ramp§20 §0.95§10.0
+point ramp§21§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§multiplier R§2.0§0.9664011§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9835992§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0021007§1.0021007§1.0021007
+color split§common scale§1.0021007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7316.5§10000.0
+NegativeSpace§weight§3.0000007§10.0
+NegativeSpace§freq§100.0§5.02§5.0600095§8.115999
+NegativeSpace§mag§50000.0§1600.0§1600.0§253.75
+NegativeSpace§speed§0.02800001§1.0
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10.0§0.0§0.0§0.0
+NegativeSpace§rot 0§3.1415927§0.0§2.0169034§0.0
+NegativeSpace§rot t§10.0§0.0§0.0§0.0
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§true
+point ramp§count§5.999995§100.0
+point ramp§1§0.5840002§0.0§1.0§1.0§10.0
+point ramp§2 §0.20049997§10.0
+point ramp§2§0.5840002§0.25625§1.0§1.0§10.0
+point ramp§3 §0.40500024§1.0
+point ramp§3§0.6075002§0.375§1.0§1.0§10.0
+point ramp§4 §1.5700014§10.0
+point ramp§4§0.5955001§0.375§1.0§0.0§10.0
+point ramp§5§0.62400025§0.375§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§0.9664011§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9835992§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0021007§1.0021007§1.0021007
+color split§common scale§1.0021007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§7316.5§10000.0
+NegativeSpace§weight§3.0000007§10.0
+NegativeSpace§freq§100.0§5.02§5.0600095§8.115999
+NegativeSpace§mag§50000.0§1600.0§1600.0§253.75
+NegativeSpace§speed§0.02800001§1.0
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10.0§0.0§0.0§0.0
+NegativeSpace§rot 0§3.1415927§0.0§2.0169034§0.0
+NegativeSpace§rot t§10.0§0.0§0.0§0.0
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§true
+point ramp§count§5.999995§100.0
+point ramp§1§0.5840002§0.0§1.0§1.0§10.0
+point ramp§2 §0.20049997§10.0
+point ramp§2§0.5840002§0.25625§1.0§1.0§10.0
+point ramp§3 §0.40500024§1.0
+point ramp§3§0.6075002§0.375§1.0§1.0§10.0
+point ramp§4 §1.5700014§10.0
+point ramp§4§0.5955001§0.375§1.0§0.0§10.0
+point ramp§5§0.62400025§0.375§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§0.9664011§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9835992§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0021007§1.0021007§1.0021007
+color split§common scale§1.0021007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§6316.5§10000.0
+NegativeSpace§weight§3.0000007§10.0
+NegativeSpace§freq§10.0§0.1§0.1§0.1
+NegativeSpace§mag§50000.0§1600.0§1600.0§253.75
+NegativeSpace§speed§0.02800001§1.0
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10.0§0.0§0.0§0.0
+NegativeSpace§rot 0§3.1415927§0.0§2.0169034§0.0
+NegativeSpace§rot t§10.0§0.0§0.0§0.0
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.999995§100.0
+point ramp§1§0.5840002§0.0§1.0§1.0§10.0
+point ramp§2 §0.20049997§10.0
+point ramp§2§0.5840002§0.25625§1.0§1.0§10.0
+point ramp§3 §0.40500024§1.0
+point ramp§3§0.6075002§0.375§1.0§1.0§10.0
+point ramp§4 §1.5700014§10.0
+point ramp§4§0.5955001§0.375§1.0§0.0§10.0
+point ramp§5§0.62400025§0.375§1.0§0.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§0.9664011§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9835992§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§3446.5§10000.0
+NegativeSpace§weight§2.4900005§10.0
+NegativeSpace§freq§10.0§0.1§0.1
+NegativeSpace§z freq§0.1§0.0014996969§0.0044005793
+NegativeSpace§mag§500.0§600.0§604.99963§120.49992
+NegativeSpace§xy speed§1.0§0.056999985§0.046000008
+NegativeSpace§z speed§10.0§0.63999975§0.8500012
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§1000.0§0.0§-82.0§0.0
+NegativeSpace§rot 0§3.1415927§-0.031416267§1.9477913§-0.29216817
+NegativeSpace§rot t§10.0§0.0§0.0§0.0
+NegativeSpace§move 1§10.0§0.0§1.2282282E-5§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+GROUP§point ramp§false
+point ramp§count§5.999995§100.0
+point ramp§1§0.5840002§0.0§1.0§1.0§10.0
+point ramp§2 §0.24050003§10.0
+point ramp§2§0.6075002§0.375§1.0§1.0§10.0
+point ramp§3 §0.39799935§10.0
+point ramp§3§0.5645001§0.80625§1.0§1.0§10.0
+point ramp§4 §1.0180016§1.0
+point ramp§4§0.5645001§0.80625§1.0§1.0§10.0
+point ramp§5§0.5645001§0.80625§1.0§1.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§0.9664011§0.0§0.0
+color split§multiplier G§0.2§0.0§0.9835992§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0055007§1.0055007§1.0055007
+color split§common scale§1.0055007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§1286.5§10000.0
+NegativeSpace§weight§4.4000015§100.0
+NegativeSpace§freq§10.0§0.1§0.1
+NegativeSpace§z freq§1.0§0.012899704§0.00980062
+NegativeSpace§mag§50000.0§1300.0§1104.9996§120.49992
+NegativeSpace§xy speed§100.0§-0.06499994§1.7000034
+NegativeSpace§z speed§1.0§0.49999917§0.5000019
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-1367.61
+NegativeSpace§rot 0§3.1415927§0.0§2.0608864§0.0
+NegativeSpace§rot t§10.0§0.0§0.0§0.26000032
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+NegativeSpace§abs z§true
+GROUP§point ramp§false
+point ramp§count§4.999995§100.0
+point ramp§1§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§2 §0.15289985§0.1
+point ramp§2§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§3 §0.17633952§0.10000001
+point ramp§3§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§4 §1.0110015§1.0
+point ramp§4§0.6145001§0.5875§1.0§1.0§10.0
+point ramp§5§0.6145001§0.80625§1.0§1.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§0.2§0.9688016§0.0§0.0
+color split§multiplier G§0.2§0.0§0.971998§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0055007§1.0055007§1.0055007
+color split§common scale§1.0055007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§1286.5§10000.0
+NegativeSpace§weight§4.4000015§100.0
+NegativeSpace§freq§10.0§0.1§0.1
+NegativeSpace§z freq§1.0§0.012899704§0.00980062
+NegativeSpace§mag§50000.0§1300.0§1104.9996§1220.5
+NegativeSpace§xy speed§100.0§-0.06499994§1.7000034
+NegativeSpace§z speed§1.0§0.49999917§0.5000019
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10000.0§0.0§0.0§-1367.61
+NegativeSpace§rot 0§3.1415927§0.0§2.0608864§0.0
+NegativeSpace§rot t§10.0§0.0§0.0§0.26000032
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+NegativeSpace§abs z§true
+GROUP§point ramp§false
+point ramp§count§4.999995§100.0
+point ramp§1§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§2 §0.15289985§0.1
+point ramp§2§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§3 §0.17633952§0.10000001
+point ramp§3§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§4 §1.0110015§1.0
+point ramp§4§0.6145001§0.5875§1.0§1.0§10.0
+point ramp§5§0.6145001§0.80625§1.0§1.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§0.2§0.9688016§0.0§0.0
+color split§multiplier G§0.2§0.0§0.971998§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0055007§1.0055007§1.0055007
+color split§common scale§1.0055007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NegativeSpace§true
+NegativeSpace§count§1286.5§10000.0
+NegativeSpace§weight§4.4000015§100.0
+NegativeSpace§freq§10.0§0.1§0.1
+NegativeSpace§z freq§0.1§0.0010997015§7.00619E-4
+NegativeSpace§mag§50000.0§1300.0§1104.9996§320.5
+NegativeSpace§xy speed§1.0§0.048000008§0.026000008
+NegativeSpace§z speed§100.0§0.20000002§0.20000014
+NegativeSpace§fade to black§3.5900168§255.0
+NegativeSpace§blur§1.0599988§100.0
+NegativeSpace§move 0§10000.0§0.0§-80.0§-1367.61
+NegativeSpace§rot 0§3.1415927§0.0§2.0169058§0.0
+NegativeSpace§rot t§10.0§0.0§0.0§0.26000032
+NegativeSpace§move 1§10.0§0.0§0.0§0.0
+NegativeSpace§stroke§0.0§0.0§1.0§1.0§1.0
+NegativeSpace§abs z§true
+GROUP§point ramp§false
+point ramp§count§4.999995§100.0
+point ramp§1§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§2 §0.15289985§0.1
+point ramp§2§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§3 §0.17633952§0.10000001
+point ramp§3§0.6145001§0.20625§1.0§1.0§10.0
+point ramp§4 §1.0110015§1.0
+point ramp§4§0.6145001§0.5875§1.0§1.0§10.0
+point ramp§5§0.6145001§0.80625§1.0§1.0§10.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§0.2§0.9688016§0.0§0.0
+color split§multiplier G§0.2§0.0§0.971998§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0055007§1.0055007§1.0055007
+color split§common scale§1.0055007§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END

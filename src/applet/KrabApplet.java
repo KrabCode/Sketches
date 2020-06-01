@@ -15,7 +15,7 @@ import static java.lang.System.currentTimeMillis;
 /**
  * This class offers common functionality to all of my processing sketches, including a GUI, shader reloading at
  * runtime and many other utility functions and features.
- *
+ * <p>
  * See the GuiManual in readme for documentation.
  */
 
@@ -614,9 +614,9 @@ public abstract class KrabApplet extends PApplet {
         }
 
         if (toggle("skip")) {
-            if(drawResultOverInput) {
+            if (drawResultOverInput) {
                 return pg;
-            }else{
+            } else {
                 return colorSplitResult;
             }
         }
@@ -904,8 +904,12 @@ public abstract class KrabApplet extends PApplet {
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
-    protected void uniformRamp(String shaderPath) {
-        uniformRamp(shaderPath, "ramp", 4);
+    protected void uniformRamp(String fragPath) {
+        uniformRamp(fragPath, null, "ramp", 4);
+    }
+
+    protected void uniformRamp(String fragPath, String vertPath) {
+        uniformRamp(fragPath, vertPath, "ramp", 4);
     }
 
     /**
@@ -914,20 +918,25 @@ public abstract class KrabApplet extends PApplet {
      * // TODO implement various color blending methods
      * https://www.shadertoy.com/view/lsdGzN
      *
-     * @param shaderPath        path to the shader
+     * @param fragPath          path to the fragment shader
+     * @param vertPath          path to the vertex shader, can be null
      * @param rampName          name of the ramp's GUI group
      * @param defaultColorCount default number of colors
      *                          any saved settings for things higher than this number won't be loaded on startup
      */
-    protected void uniformRamp(String shaderPath, String rampName, int defaultColorCount) {
+    protected void uniformRamp(String fragPath, String vertPath, String rampName, int defaultColorCount) {
         if (shaderRamp == null) {
             shaderRamp = createGraphics(5, 1000, P2D);
         }
         shaderRamp.beginDraw();
         shaderRamp.clear();
-        ramp(shaderRamp, rampName, 4, true);
+        ramp(shaderRamp, rampName, defaultColorCount, true);
         shaderRamp.endDraw();
-        uniform(shaderPath).set("ramp", shaderRamp);
+        if (vertPath != null) {
+            uniform(fragPath, vertPath).set("ramp", shaderRamp);
+        } else {
+            uniform(fragPath).set("ramp", shaderRamp);
+        }
     }
 
     protected void ramp(PGraphics pg) {
@@ -1596,7 +1605,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean isActionLockImmune(String action) {
-        return action.equals(ACTION_SAVE) || action.equals(ACTION_COPY) || action.equals(ACTION_PASTE) ;
+        return action.equals(ACTION_SAVE) || action.equals(ACTION_COPY) || action.equals(ACTION_PASTE);
     }
 
     private boolean previousActionsContainsLockAware(String action) {
@@ -2837,7 +2846,7 @@ public abstract class KrabApplet extends PApplet {
             if (text.startsWith("-")) {
                 textX -= textWidth("-") * .5f;
             }
-            if(text.equals("-0")){
+            if (text.equals("-0")) {
                 text = "0";
             }
             noStroke();
@@ -3585,20 +3594,21 @@ public abstract class KrabApplet extends PApplet {
         void handleActions() {
             if (previousActionsContainsLockAware(ACTION_PASTE)) {
                 pasteFromClipboardToValue();
-            }else if(previousActionsContainsLockAware(ACTION_COPY)){
+            } else if (previousActionsContainsLockAware(ACTION_COPY)) {
                 copyFromValueToClipboard();
             }
         }
 
         private void copyFromValueToClipboard() {
-            try{
+            try {
                 Toolkit.getDefaultToolkit()
                         .getSystemClipboard()
                         .setContents(
                                 new StringSelection(value),
                                 null
                         );
-            } catch(Exception ignored) {}
+            } catch (Exception ignored) {
+            }
         }
 
         private void pasteFromClipboardToValue() {
@@ -3608,10 +3618,11 @@ public abstract class KrabApplet extends PApplet {
                 return;
             try {
                 ArrayList<DataFlavor> availableDataFlavors = new ArrayList<>(Arrays.asList(t.getTransferDataFlavors()));
-                if(availableDataFlavors.contains(DataFlavor.stringFlavor)) {
+                if (availableDataFlavors.contains(DataFlavor.stringFlavor)) {
                     value += (String) t.getTransferData(DataFlavor.stringFlavor);
                 }
-            } catch (Exception ignored) {}
+            } catch (Exception ignored) {
+            }
         }
 
         void reset() {
