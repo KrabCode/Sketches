@@ -17,7 +17,7 @@ import static java.lang.System.currentTimeMillis;
  * runtime and many other utility functions and features
  */
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue", "ConstantConditions", "FieldCanBeLocal"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions", "FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
