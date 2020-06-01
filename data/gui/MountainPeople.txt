@@ -1,0 +1,116 @@
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.6333333§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6866666§10.0
+ramp§3§0.010500089§1.0§1.0§1.0§1.0
+ramp§4§0.088999964§0.25625§0.90625§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.6333333§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6866666§10.0
+ramp§3§0.010500089§1.0§1.0§1.0§1.0
+ramp§4§0.088999964§0.25625§0.90625§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.6333333§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6866666§10.0
+ramp§3§0.010500089§1.0§1.0§1.0§1.0
+ramp§4§0.088999964§0.25625§0.90625§1.0§1.0
+GROUP§image§true
+image§translate§100.0§-6.2584877E-7§-25.499996
+image§rotation§100.28985§100.0
+image§translate after§100.0§-2.4437904E-6§-13.199997
+image§scale§0.2899998§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.6033327§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.65666634§10.0
+ramp§3§0.22599986§0.0§0.29375§1.0§1.0
+ramp§4§0.08649996§0.0§1.0§1.0§1.0
+GROUP§image§false
+image§translate§10.0§-6.2584877E-7§-35.00003
+image§rotation§97.78989§1000.0
+image§rot spd§1.1700006§100.0
+image§translate after§100.0§-2.4437904E-6§-6.6999946
+image§scale§0.2899998§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.6033327§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.65666634§10.0
+ramp§3§0.22599986§0.0§0.29375§1.0§1.0
+ramp§4§0.08649996§0.0§1.0§1.0§1.0
+GROUP§image§true
+image§translate§1000.0§1.1000023§-40.59999
+image§rotation§0.0§10.0
+image§rot spd§1.1700006§100.0
+image§translate after§1000.0§-178.1§0.0
+image§scale§0.2899998§10.0
+image§y offset§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.6033327§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.65666634§10.0
+ramp§3§0.22599986§0.0§0.29375§1.0§1.0
+ramp§4§0.08649996§0.0§1.0§1.0§1.0
+GROUP§image§true
+image§translate§1000.0§1.1000023§-40.59999
+image§rotation§0.0§10.0
+image§rot spd§1.1700006§100.0
+image§translate after§1000.0§-178.1§0.0
+image§scale§0.2899998§10.0
+image§y offset§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MountainPeople§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.5433326§10.0
+ramp§2§0.0§0.6625§0.0§1.0§1.0
+ramp§3 §0.5966663§10.0
+ramp§3§0.6059998§0.64375§0.575§1.0§1.0
+ramp§4§0.64749986§0.0§1.0§1.0§1.0
+GROUP§image§true
+image§translate§1000.0§23.019989§-66.23998
+image§rotation§1.529999§10.0
+image§rot spd§-0.8300214§100.0
+image§translate after§10000.0§-0.5000035§-290.5
+image§scale§0.5699902§100.0
+image§y offset§0.0§10.0
+STATE_END

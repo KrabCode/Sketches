@@ -1,0 +1,172 @@
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§translate§100.0§0.0§0.0
+Gradient§text size§64.0§20.0
+Gradient§text input§
+Gradient§shadow offset§100.0§5.3999996§-3.2999995
+Gradient§shadow§0.0§0.0§0.0§1.0§1.0
+Gradient§blur§1.2199987§10.0
+Gradient§fill§0.0§0.0§1.0§1.0§1.0
+GROUP§ramp§true
+ramp§vertical§1
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.42333344§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.44666684§10.0
+ramp§3§0.0§0.0§1.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§translate§100.0§0.0§0.0
+Gradient§text input§aaaa
+Gradient§shadow offset§100.0§5.3999996§-3.2999995
+Gradient§shadow§0.018000001§0.74375§1.0§1.0§1.0
+Gradient§shadow size§71.22§200.0
+Gradient§blur§-0.7600001§100.0
+Gradient§text size§64.0§20.0
+Gradient§fill§0.0§0.0§1.0§1.0§1.0
+GROUP§ramp§true
+ramp§vertical§1
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.42333344§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.44666684§10.0
+ramp§3§0.0§0.0§1.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§fade to black§0.0§255.0
+Gradient§translate§100.0§0.0§15.800001
+Gradient§text input§aaaa
+Gradient§shadow offset§100.0§5.3999996§-3.2999995
+Gradient§shadow§0.018000001§0.74375§1.0§1.0§1.0
+Gradient§shadow size§64.0§20.0
+Gradient§blur§0.0§10.0
+Gradient§text size§64.0§20.0
+Gradient§fill§0.0§0.0§1.0§1.0§1.0
+GROUP§ramp§true
+ramp§vertical§1
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.42333344§10.0
+ramp§2§0.002§0.0§0.09375§0.0§10.0
+ramp§3 §0.44666684§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.002§0.0§0.09375§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§fade to black§1.2750005§255.0
+Gradient§translate§100.0§0.0§15.800001
+Gradient§text input§pls dont judge
+Gradient§shadow offset§100.0§5.3999996§-3.2999995
+Gradient§shadow§0.6629999§0.46875§1.0§1.0§1.0
+Gradient§shadow size§64.0§20.0
+Gradient§blur§0.0§10.0
+Gradient§text size§64.0§20.0
+Gradient§fill§0.0§0.0§1.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§1.0§-0.4999999§-0.62099963
+color split§scale RGB§0.1§1.0128907§1.0128907§1.0128907
+color split§common scale§1.0128907§0.10000001
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§fade to black§1.2750005§255.0
+Gradient§translate§1000.0§-368.4§-238.2
+Gradient§align left§0
+Gradient§text input§some text
+Gradient§shadow offset§100.0§5.3999996§-3.2999995
+Gradient§shadow§0.23149991§0.46875§1.0§1.0§10.0
+Gradient§shadow size§64.0§20.0
+Gradient§blur§1.1700007§100.0
+Gradient§text size§64.0§20.0
+Gradient§fill§0.0§0.0§1.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§1.0§-0.4999999§-0.62099963
+color split§scale RGB§0.1§1.0128907§1.0128907§1.0128907
+color split§common scale§1.0128907§0.10000001
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§fade to black§1.0200002§25.5
+Gradient§translate§10.0§-150.00006§0.0
+Gradient§align left§0
+Gradient§text input§stay safe
+Gradient§shadow offset§100.0§5.3999996§-3.2999995
+Gradient§shadow§0.1424259§1.0§0.675§1.0§10.0
+Gradient§hue speed§0.0019999896§1.0
+Gradient§shadow size§67.13995§20.0
+Gradient§blur§2.1300027§10.0
+Gradient§text size§64.0§20.0
+Gradient§fill§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§1.0§-0.4999999§-0.62099963
+color split§scale RGB§0.1§1.0128907§1.0128907§1.0128907
+color split§common scale§1.0128907§0.10000001
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Gradient§true
+Gradient§fade to black§1.8105006§25.5
+Gradient§translate§1000.0§8.359467§-105.990005
+Gradient§align left§1
+Gradient§text input§stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#stay safe stay safe stay safe stay safe stay safe stay safe stay safe#NEWLINE#
+Gradient§shadow offset§100.0§-1.0§0.70000005
+Gradient§shadow§0.043593913§1.0§0.3375§1.0§10.0
+Gradient§hue speed§0.0032999995§0.1
+Gradient§shadow size§62.71999§20.0
+Gradient§blur§1.6899993§10.0
+Gradient§text size§64.0§20.0
+Gradient§fill§0.1374998§0.0§1.0§1.0§10.0
+GROUP§color split§true
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§1.0§-0.4999999§-0.62099963
+color split§scale RGB§0.1§0.98638856§0.98638856§0.98638856
+color split§common scale§0.98638856§1.0000001
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END

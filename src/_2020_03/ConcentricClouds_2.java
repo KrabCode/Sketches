@@ -94,7 +94,7 @@ public class ConcentricClouds_2 extends KrabApplet {
 
     private void background() {
         group("background");
-        String background = "shaders/_2020_03/clouds/background.glsl";
+        String background = "shaders/_2020_03/clouds/shader.glsl";
         uniform(background).set("time", t);
         uniformColorPalette(background);
         hotFilter(background, pg);

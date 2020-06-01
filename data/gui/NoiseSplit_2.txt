@@ -1,0 +1,170 @@
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit_2§false
+NoiseSplit_2§video length§0.0§100.0
+NoiseSplit_2§fade to black§3.1310034§25.5
+NoiseSplit_2§blur§1.1399995§1.0
+NoiseSplit_2§color strength§0.03599999§1.0
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.6666666§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.3333333§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§text size§64.0§20.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§middle text§
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§false
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit_2§true
+NoiseSplit_2§video length§0.0§100.0
+NoiseSplit_2§fade to black§7.0223136§25.5
+NoiseSplit_2§blur§2.34§100.0
+NoiseSplit_2§color strength§0.12618029§0.10000001
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.9706652§1.0
+ramp§3§0.69099987§0.0§1.0§0.0§10.0
+ramp§4§0.69099987§0.0§1.0§0.0§10.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§text size§64.0§20.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§middle text§
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit_2§true
+NoiseSplit_2§video length§0.0§100.0
+NoiseSplit_2§fade to black§12.963812§25.5
+NoiseSplit_2§blur§2.34§100.0
+NoiseSplit_2§color strength§0.10000031§0.001
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§1.0§1.0§1.0
+ramp§3 §0.9706652§1.0
+ramp§3§0.69099987§0.0§1.0§0.0§10.0
+ramp§4§0.69099987§0.0§1.0§0.0§10.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§text size§64.0§20.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§middle text§
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit_2§false
+NoiseSplit_2§video length§0.0§100.0
+NoiseSplit_2§fade to black§4.293822§25.5
+NoiseSplit_2§blur§0.26§10.0
+NoiseSplit_2§color strength§0.050199937§1.0
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.69099987§0.0§1.0§0.0§10.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.92900014§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.69099987§0.0§1.0§0.0§10.0
+ramp§4§0.69099987§0.0§1.0§0.0§10.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§text size§64.0§20.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§middle text§
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit_2§true
+NoiseSplit_2§video length§0.0§100.0
+NoiseSplit_2§fade to black§4.293822§25.5
+NoiseSplit_2§blur§0.26§10.0
+NoiseSplit_2§color strength§0.030199964§1.0
+GROUP§ramp§false
+ramp§count§4.0§100.0
+ramp§1§0.69099987§0.0§1.0§0.0§10.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.92900014§0.0§1.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.69099987§0.0§1.0§0.0§10.0
+ramp§4§0.69099987§0.0§1.0§0.0§10.0
+GROUP§text§false
+text§translate§100.0§0.0§0.0
+text§text size§64.0§20.0
+text§fill§0.0§0.0§0.5§1.0§1.0
+text§middle text§
+GROUP§color split§false
+color split§skip§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§scale center§100.0§0.0§0.0
+color split§scale RGB§0.1§1.0§1.0§1.0
+color split§common scale§1.0§0.1
+color split§move all scales§false
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
