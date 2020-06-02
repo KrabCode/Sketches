@@ -2681,7 +2681,6 @@ public abstract class KrabApplet extends PApplet {
             return deltaX;
         }
 
-        @SuppressWarnings("SuspiciousNameCombination")
         protected float updateFullHeightVerticalSlider(float x, float y, float w, float h, float value, float precision,
                                                        float verticalRevealAnimationStarted,
                                                        float minValue, float maxValue) {
@@ -3334,7 +3333,6 @@ public abstract class KrabApplet extends PApplet {
             zOverlayVisible = false;
         }
 
-        @SuppressWarnings("SuspiciousNameCombination")
         void updateOverlay() {
             super.updateOverlay();
             if (mouseJustReleased()) {
