@@ -11,7 +11,6 @@ public class NegativeSpace extends KrabApplet {
     private OpenSimplexNoise noise = new OpenSimplexNoise();
 
 
-
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
@@ -28,6 +27,7 @@ public class NegativeSpace extends KrabApplet {
     }
 
     public void draw() {
+        frameRecordingDuration = 360*sliderInt("record frames");
         pg.beginDraw();
         drawPoints();
         pg.endDraw();
@@ -37,38 +37,42 @@ public class NegativeSpace extends KrabApplet {
         gui();
     }
 
+    private float noise(PVector time, float x, float y, float mag, float freq) {
+        return (float) (mag * noise.eval(time.x, time.y, x * freq, y * freq));
+    }
+
     private void drawPoints() {
-        float particleCount = slider("count");
+        float count = slider("count", 60);
+        float size = slider("size", 1000);
         float baseWeight = slider("weight");
-        PVector freq = sliderXY("freq", 0.1f);
-        PVector zFreq = sliderXY("z freq", 0.1f);
-        PVector mag = sliderXYZ("mag", 1000, 1000, 50);
-        PVector timeRadiusXY = sliderXY("xy speed");
-        PVector timeRadiusZ = sliderXY("z speed");
-        PVector xyTime = new PVector(timeRadiusXY.x * cos(t), timeRadiusXY.y * sin(t));
-        PVector zTime = new PVector(timeRadiusZ.x * cos(t),timeRadiusZ.y * sin(t));
+        PVector time = new PVector(cos(t), sin(t));
         fadeToBlack(pg);
         blurPass(pg);
         translateToCenter(pg);
         translate(pg, "move 0");
         preRotate(pg, "rot 0");
         PVector timeRotate = sliderXYZ("rot t");
-        pg.rotateX(t*timeRotate.x);
-        pg.rotateY(t*timeRotate.y);
-        pg.rotateZ(t*timeRotate.z);
+        pg.rotateX(t * timeRotate.x);
+        pg.rotateY(t * timeRotate.y);
+        pg.rotateZ(t * timeRotate.z);
         translate(pg, "move 1");
-        pg.stroke(picker("stroke").clr());
         pg.strokeWeight(baseWeight);
         pointShader(pg);
         pg.beginShape(POINTS);
-        for (int i = 0; i < particleCount; i++) {
-            float x = (float) (mag.x * noise.eval(xyTime.x, xyTime.y, i * freq.x));
-            float y = (float) (mag.y * noise.eval(xyTime.x, xyTime.y, i * freq.y + 12.2345));
-            float z = (float) (mag.z * noise.eval(zTime.x, zTime.y, x*zFreq.x, y*zFreq.y));
-            if(toggle("abs z")) {
-                z = -abs(z);
+
+        for (int xi = 0; xi < count; xi++) {
+            for(int yi = 0; yi < count; yi++){
+                float x = map(xi, 0, count-1, -size, size);
+                float y = map(yi, 0, count-1, -size, size);
+                PVector move0 = sliderXY("move");
+                float z = noise(time.copy().mult(slider("speed")),
+                        x+t*move0.x, y+t*move0.y,
+                        slider("mag"), slider("freq"));
+                if (toggle("abs z")) {
+                    z = -abs(z);
+                }
+                pg.vertex(x, y, z);
             }
-            pg.vertex(x, y, z);
         }
         pg.endShape();
         pg.resetShader();

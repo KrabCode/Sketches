@@ -1,0 +1,12 @@
+STATE_BEGIN
+UNDO
+GROUP§SketchTemplate§true
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§color 0§0.69099975§0.55625§1.0§1.0§1.0
+ramp§y pos 1§0.4833332§10.0
+ramp§color 1§0.0§0.0§1.0§1.0§1.0
+ramp§y pos 2§0.5166668§10.0
+ramp§color 2§0.69199985§0.55625§0.95625§1.0§1.0
+ramp§color 3§0.0§1.0§0.0§1.0§0.010000001
+STATE_END

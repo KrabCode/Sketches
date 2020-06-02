@@ -1,0 +1,373 @@
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§4.0§100.0
+ramp§0§0.584§1.0§1.0§1.0§1.0
+ramp§ 1§0.2033334§10.0
+ramp§1§0.584§1.0§1.0§1.0§1.0
+ramp§ 2§0.5966668§10.0
+ramp§2§0.0§0.0§0.24375§1.0§1.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§ 2§0.2§10.0
+ramp§2§0.0§0.0§0.2§1.0§1.0
+ramp§ 3§0.4§10.0
+ramp§3§0.0§0.0§0.4§1.0§1.0
+ramp§ 4§0.6§10.0
+ramp§4§0.0§0.0§0.6§1.0§1.0
+ramp§ 5§0.8§10.0
+ramp§5§0.0§0.0§0.8§1.0§1.0
+ramp§6§0.0§0.0§1.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.99600005§0.0§1.0§0.0§10.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.0§0.0§0.79375§0.0§10.0
+ramp§ 3§0.15§10.0
+ramp§3§0.0§0.0§1.0§1.0§1.0
+ramp§ 4§0.25999984§10.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+ramp§ 5§0.35999998§10.0
+ramp§5§0.0§0.0§0.0§1.0§1.0
+ramp§6§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§50.490005§255.0
+Ramp§vertical§1
+GROUP§ramp§false
+ramp§count§6.0§100.0
+ramp§1§0.99600005§0.0§1.0§0.0§10.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.0§0.0§0.79375§0.0§10.0
+ramp§ 3§0.19999999§10.0
+ramp§3§0.0§0.0§1.0§1.0§1.0
+ramp§ 4§0.21999973§10.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+ramp§ 5§0.35999998§10.0
+ramp§5§0.0§0.0§0.0§1.0§1.0
+ramp§6§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.9844997§1.0§1.0§0.0§10.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.9844997§1.0§1.0§0.0§10.0
+ramp§ 3§0.19999999§10.0
+ramp§3§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 4§0.21999973§10.0
+ramp§4§0.9844997§1.0§1.0§0.0§10.0
+ramp§ 5§0.35999998§10.0
+ramp§5§0.9844997§1.0§1.0§0.0§10.0
+ramp§6§0.9844997§1.0§1.0§0.0§10.0
+GROUP§color split§true
+color split§scale§1.0§0.9898002§1.0200008§1.0820996
+color split§force scales >= 1§false
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.19999999§10.0
+ramp§3§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 4§0.21999973§10.0
+ramp§4§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 5§0.35999998§10.0
+ramp§5§0.63449985§0.0§1.0§1.0§1.0
+ramp§6§0.63449985§0.0§1.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§false
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.19999999§10.0
+ramp§3§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 4§0.21999973§10.0
+ramp§4§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 5§0.35999998§10.0
+ramp§5§0.63449985§0.0§1.0§1.0§1.0
+ramp§6§0.63449985§0.0§1.0§1.0§1.0
+GROUP§color split§false
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.13999997§10.0
+ramp§3§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 4§0.25999972§10.0
+ramp§4§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 5§0.48§10.0
+ramp§5§0.63449985§0.0§0.4125§1.0§1.0
+ramp§6§0.63449985§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 2§0.10999997§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.13999997§10.0
+ramp§3§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 4§0.25999972§10.0
+ramp§4§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 5§0.48§10.0
+ramp§5§0.63449985§0.0§0.4125§1.0§1.0
+ramp§6§0.63449985§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§0.0§1.0§1.0
+ramp§ 2§0.2§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.25999996§10.0
+ramp§3§0.63449985§0.0§0.60625§1.0§1.0
+ramp§ 4§0.29999977§10.0
+ramp§4§0.62149984§0.0§0.275§0.0§10.0
+ramp§ 5§0.48§10.0
+ramp§5§0.62149984§0.0§0.275§0.0§10.0
+ramp§6§0.62149984§0.0§0.275§0.0§10.0
+GROUP§color split§true
+color split§scale§1.0§1.0239999§1.0§1.0223994
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§0.0§1.0§1.0
+ramp§ 2§0.2§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.25999996§10.0
+ramp§3§0.63449985§0.0§0.60625§1.0§1.0
+ramp§ 4§0.29999977§10.0
+ramp§4§0.62149984§0.0§0.275§0.0§10.0
+ramp§ 5§0.48§10.0
+ramp§5§0.62149984§0.0§0.275§0.0§10.0
+ramp§6§0.62149984§0.0§0.275§0.0§10.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§0.0§1.0§1.0
+ramp§ 2§0.2§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.25999996§10.0
+ramp§3§0.63449985§0.0§0.60625§1.0§1.0
+ramp§ 4§0.29999977§10.0
+ramp§4§0.62149984§0.0§0.275§0.0§10.0
+ramp§ 5§0.48§10.0
+ramp§5§0.62149984§0.0§0.275§0.0§10.0
+ramp§6§0.62149984§0.0§0.275§0.0§10.0
+GROUP§color split§true
+color split§scale§1.0§1.2428005§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.63449985§0.0§0.0§1.0§1.0
+ramp§ 2§0.2§10.0
+ramp§2§0.63449985§0.0§1.0§1.0§1.0
+ramp§ 3§0.25999996§10.0
+ramp§3§0.63449985§0.0§0.60625§1.0§1.0
+ramp§ 4§0.29999977§10.0
+ramp§4§0.62149984§0.0§0.275§0.0§10.0
+ramp§ 5§0.48§10.0
+ramp§5§0.62149984§0.0§0.275§0.0§10.0
+ramp§6§0.62149984§0.0§0.275§0.0§10.0
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§0
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§ 2§0.2§10.0
+ramp§2§0.0§0.0§0.2§1.0§1.0
+ramp§ 3§0.4§10.0
+ramp§3§0.0§0.0§0.4§1.0§1.0
+ramp§ 4§0.6§10.0
+ramp§4§0.0§0.0§0.6§1.0§10.0
+ramp§ 5§0.8§10.0
+ramp§5§0.0§0.0§0.8§1.0§10.0
+ramp§6§0.0§0.0§1.0§1.0§10.0
+GROUP§color split§false
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+Ramp§split§true
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§ 2§0.22000004§10.0
+ramp§2§0.0§0.0§0.8§1.0§1.0
+ramp§ 3§0.4999999§10.0
+ramp§3§0.98499995§0.0§1.0§0.0§10.0
+ramp§ 4§0.6§10.0
+ramp§4§0.98499995§0.0§1.0§0.0§10.0
+ramp§ 5§0.8§10.0
+ramp§5§0.98499995§0.0§1.0§0.0§10.0
+ramp§6§0.98499995§0.0§1.0§0.0§10.0
+GROUP§color split§true
+color split§scale§0.1§1.0050001§1.0088§1.0054
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Ramp§true
+Ramp§fade to black§6.3750057§255.0
+Ramp§vertical§1
+Ramp§split§true
+GROUP§ramp§true
+ramp§count§6.0§100.0
+ramp§1§0.9934999§0.0§0.39999998§0.0§10.0
+ramp§ 2§0.27999982§10.0
+ramp§2§0.9934999§0.0§0.39999998§0.0§10.0
+ramp§ 3§0.33999985§10.0
+ramp§3§0.0§0.0§0.8§1.0§1.0
+ramp§ 4§0.40000018§10.0
+ramp§4§0.9934999§0.0§0.39999998§0.0§10.0
+ramp§ 5§0.8§10.0
+ramp§5§0.9934999§0.0§0.39999998§0.0§10.0
+ramp§6§0.9934999§0.0§0.39999998§0.0§10.0
+GROUP§color split§true
+color split§RGB scales§1.0§0.9017988§1.0217994§1.0217997
+color split§force scales >= 1§false
+color split§multiplier 1§2.0§1.0§0.0§0.0
+color split§multiplier 2§2.0§0.0§1.0§0.0
+color split§multiplier 3§2.0§0.0§0.0§1.0
+STATE_END

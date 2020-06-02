@@ -621,14 +621,21 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
+        PVector multiplier = sliderXYZ("multiplier", 1);
         for (int i = 0; i < 3; i++) {
             PGraphics primaryColorCanvas = primaryColorCanvases[i];
             primaryColorCanvas.beginDraw();
             primaryColorCanvas.clear();
             primaryColorCanvas.image(pg, 0, 0, width, height);
-            primaryColorMultipliers[i] = sliderXYZ("multiplier " + indexToPrimaryColorShorthand(i),
-                    primaryColorMultipliers[i].x, primaryColorMultipliers[i].y, primaryColorMultipliers[i].z);
-            colorFilter(primaryColorCanvas, primaryColorMultipliers[i]);
+            PVector finalMultiplier = primaryColorMultipliers[i].copy();
+            if(i == 0) {
+                finalMultiplier.x *= multiplier.x;
+            }else if(i == 1){
+                finalMultiplier.y *= multiplier.y;
+            }else if(i == 2){
+                finalMultiplier.z *= multiplier.z;
+            }
+            colorFilter(primaryColorCanvas, finalMultiplier);
             primaryColorCanvas.endDraw();
         }
         colorSplitResult.beginDraw();

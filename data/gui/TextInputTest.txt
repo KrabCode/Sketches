@@ -1,0 +1,27 @@
+STATE_BEGIN
+UNDO
+GROUP§TextInputTest§true
+TextInputTest§fade to black§50.0§255.0
+TextInputTest§text size§64.0§20.0
+TextInputTest§text input§Hello world!#NEWLINE#testing testing!
+TextInputTest§shadow offset§100.0§0.0§0.0
+GROUP§ramp§true
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§1.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.6666666§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.3333333§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§skip§false
+color split§RGB scales§0.1§1.0§1.0§1.0
+color split§force scales >= 1§false
+color split§multiplier R§2.0§1.0§0.0§0.0
+color split§multiplier G§2.0§0.0§1.0§0.0
+color split§multiplier B§2.0§0.0§0.0§1.0
+color split§R offset§100.0§0.0§0.0
+color split§G offset§100.0§0.0§0.0
+color split§B offset§100.0§0.0§0.0
+STATE_END

@@ -1,0 +1,130 @@
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+GROUP§ellipse§true
+ellipse§size§70.840004§100.0
+ellipse§weight§81.0§1000.0
+ellipse§stroke§0.0§0.0§1.0§1.0§1.0
+ellipse§fill§0.0§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+GROUP§ellipse§true
+ellipse§size§270.84§10000.0
+ellipse§weight§27.0§1000.0
+ellipse§stroke§0.9124999§0.0§1.0§1.0§1.0
+ellipse§fill§0.99799997§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+GROUP§ellipse§true
+ellipse§size§270.84§10000.0
+ellipse§weight§27.0§1000.0
+ellipse§stroke§0.8364997§1.0§1.0§1.0§1.0
+ellipse§fill§0.99799997§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+GROUP§ellipse§false
+ellipse§size§270.84§10000.0
+ellipse§weight§71.0§1000.0
+ellipse§stroke§0.7044996§0.0§1.0§1.0§1.0
+ellipse§fill§0.99799997§0.0§0.0§1.0§1.0
+GROUP§color split§true
+color split§scale§0.10000001§0.97477937§1.0084002§1.0261999
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+GROUP§ellipse§false
+ellipse§size§270.84§10000.0
+ellipse§weight§71.0§1000.0
+ellipse§stroke§0.7044996§0.0§1.0§1.0§1.0
+ellipse§fill§0.99799997§0.0§0.0§1.0§1.0
+GROUP§color split§false
+color split§scale§10.0§0.98§1.0§1.03
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+ColorSplit§ weight§0.0§10.0
+ColorSplit§ stroke§0.0§0.0§0.0§1.0§1.0
+ColorSplit§ fill§0.0§0.0§1.0§1.0§1.0
+ColorSplit§size§300.0§380.2699§186.76994
+GROUP§color split§true
+color split§scale§10.0§0.98§1.0§1.03
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+ColorSplit§ weight§0.0§10.0
+ColorSplit§ stroke§0.0§0.0§0.0§1.0§1.0
+ColorSplit§ fill§0.0§0.0§1.0§1.0§1.0
+ColorSplit§size§300.0§380.2699§186.76994
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+ColorSplit§ weight§23.600006§1000.0
+ColorSplit§ stroke§0.0069998093§0.0§1.0§1.0§1.0
+ColorSplit§ fill§0.0§0.0§0.0§1.0§1.0
+ColorSplit§size§300.0§490.3699§294.76993
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+ColorSplit§fade to black§16.340004§255.0
+ColorSplit§ weight§23.600006§1000.0
+ColorSplit§ stroke§0.0069998093§0.0§1.0§1.0§1.0
+ColorSplit§ fill§0.0§0.0§0.0§1.0§1.0
+ColorSplit§size§300.0§200.0§108.95005
+GROUP§color split§true
+color split§scale§1.0§0.619601§1.0§1.1307
+color split§force scales >= 1§false
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+ColorSplit§fade to black§6.9050045§255.0
+ColorSplit§ weight§23.600006§1000.0
+ColorSplit§ stroke§0.0069998093§0.0§1.0§1.0§1.0
+ColorSplit§ fill§0.99849993§1.0§1.0§0.0§10.0
+ColorSplit§size§300.0§101.900024§84.95004
+GROUP§color split§true
+color split§scale§0.1§1.0500013§1.0288001§1.0003005
+color split§force scales >= 1§false
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ColorSplit§true
+ColorSplit§fade to black§8.945005§255.0
+ColorSplit§ weight§42.0§1000.0
+ColorSplit§ stroke§0.6534997§0.18125§1.0§1.0§1.0
+ColorSplit§ fill§0.99849993§1.0§1.0§0.0§10.0
+ColorSplit§size§300.0§105.79999§150.35007
+GROUP§color split§true
+color split§scale§0.1§0.99§1.0§1.01
+color split§force scales >= 1§true
+color split§multiplier 0§2.0§1.0§0.0§0.0
+color split§multiplier 1§2.0§0.0§1.0§0.0
+color split§multiplier 2§2.0§0.0§0.0§1.0
+STATE_END
