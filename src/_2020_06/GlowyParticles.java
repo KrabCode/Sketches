@@ -80,8 +80,8 @@ public class GlowyParticles extends KrabApplet {
 
     private void pointShader(PGraphics pg) {
         pg.hint(PConstants.DISABLE_OPTIMIZED_STROKE);
-        String pointFrag = "shaders/_2020_06/NegativeSpace/PointFrag.glsl";
-        String pointVert = "shaders/_2020_06/NegativeSpace/PointVert.glsl";
+        String pointFrag = "shaders/_2020_06/GlowyParticles/PointFrag.glsl";
+        String pointVert = "shaders/_2020_06/GlowyParticles/PointVert.glsl";
         uniformRamp(pointFrag, pointVert, "point ramp", 5);
         hotShader(pointFrag, pointVert, pg);
     }

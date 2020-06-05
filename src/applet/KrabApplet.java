@@ -1074,8 +1074,8 @@ public abstract class KrabApplet extends PApplet {
      * @param pg PGraphics to draw the sphere to.
      */
     protected void spiralSphere(PGraphics pg) {
-        group("planet");
-        pg.beginShape(POINTS);
+        group("sphere");
+//        pg.beginShape(POINTS);
         pg.stroke(picker("stroke").clr());
         pg.strokeWeight(slider("weight", 5));
         pg.noFill();
@@ -1087,17 +1087,18 @@ public abstract class KrabApplet extends PApplet {
         float scl = slider("scale", 260);
         for (int k = 0; k < N; k++) {
             float r = sqrt(1 - z * z);
-            pg.vertex(cos(lon) * r * scl, sin(lon) * r * scl, z * scl);
+            pg.point(cos(lon) * r * scl, sin(lon) * r * scl, z * scl);
             z = z - dz;
             lon = lon + s / r;
         }
-        pg.endShape();
+//        pg.endShape();
         pg.noStroke();
         if (!toggle("hollow")) {
             pg.fill(0);
-            pg.sphereDetail(floor(slider("detail", 20)));
-            pg.sphere(slider("scale") - slider("core", 5));
+            pg.sphereDetail(floor(slider("core detail", 20)));
+            pg.sphere(slider("scale") - slider("core size", 5));
         }
+        resetGroup();
     }
 
     /**
