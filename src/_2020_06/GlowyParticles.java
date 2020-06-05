@@ -6,9 +6,9 @@ import processing.core.PGraphics;
 import processing.core.PVector;
 import utils.OpenSimplexNoise;
 
-public class NegativeSpace extends KrabApplet {
+public class GlowyParticles extends KrabApplet {
+    private final OpenSimplexNoise noise = new OpenSimplexNoise();
     private PGraphics pg;
-    private OpenSimplexNoise noise = new OpenSimplexNoise();
 
 
     public static void main(String[] args) {
