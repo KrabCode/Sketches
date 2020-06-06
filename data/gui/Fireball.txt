@@ -1,738 +1,13 @@
 STATE_BEGIN
 UNDO
-GROUP§Om§true
-Om§fade to black§64.77§255.0
-Om§blur§0.97000015§10.0
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§sphere§true
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§1.7099999§10.0
-sphere§count§3000.0§40.0
-sphere§scale§260.0§30.0
-sphere§hollow§true
-sphere§detail§20.0§20.0
-sphere§core§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§10.0§1.0§1.0§1.0
-color split§scale center§100.0§0.0§0.0
-color split§scale RGB§0.1§1.0§1.0§1.0
-color split§common scale§1.0§0.1
-color split§move all scales§false
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§true
-Om§fade to black§64.77§255.0
-Om§blur§0.97000015§10.0
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§1.0§0.03399991§0.21080011§0.20260006
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§sphere§true
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§1.7099999§10.0
-sphere§count§3360.8792§400.0
-sphere§scale§263.38986§30.0
-sphere§hollow§true
-sphere§detail§-15.359989§20.0
-sphere§core§6.660002§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§10.0§1.0§1.0§1.0
-color split§scale center§100.0§0.0§0.0
-color split§scale RGB§0.1§1.0§1.0§1.0
-color split§common scale§1.0§0.1
-color split§move all scales§false
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§true
-Om§fade to black§60.434998§255.0
-Om§blur§0.97000015§10.0
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§1.0§0.03399991§0.21080011§0.20260006
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§true
-depth ramp§count§4.0§100.0
-depth ramp§1§0.9665§0.0§0.0§1.0§1.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§0.0§0.0§1.0§1.0§1.0
-depth ramp§3 §0.5066664§10.0
-depth ramp§3§5.0E-4§0.0§0.0§1.0§1.0
-depth ramp§4§0.0§1.0§0.0§1.0§1.0
-GROUP§sphere§true
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§1.7099999§10.0
-sphere§count§3360.8792§400.0
-sphere§scale§263.38986§30.0
-sphere§hollow§true
-sphere§core detail§20.0§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§10.0§1.0§1.0§1.0
-color split§scale center§100.0§0.0§0.0
-color split§scale RGB§0.1§1.0§1.0§1.0
-color split§common scale§1.0§0.1
-color split§move all scales§false
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§fade to black§1.9201508§2.55
-Om§blur§2.0200016§10.0
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.06
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§0.105499975§0.0§1.0§1.0§10.0
-depth ramp§2 §0.30333328§10.0
-depth ramp§2§0.0§0.0§1.0§1.0§1.0
-depth ramp§3 §0.22666658§10.0
-depth ramp§3§0.9559999§0.0§1.0§0.0§10.0
-depth ramp§4§0.9559999§0.0§1.0§0.0§10.0
-GROUP§sphere§false
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§2.7399998§10.0
-sphere§count§3640.0§40000.0
-sphere§scale§243.88982§300.0
-sphere§hollow§true
-sphere§core detail§20.0§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§true
-color split§skip§false
-color split§multiplier§0.1§0.99919915§0.9939991§0.9916001
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0038004§1.0038004§1.0038004
-color split§common scale§1.0038004§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§fade to black§2.04§255.0
-Om§blur§5.0261817§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.06
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§true
-depth ramp§count§4.0§100.0
-depth ramp§1§0.9949998§0.0§1.0§0.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§0.9974999§0.0§1.0§0.43§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§4.640003§100.0
-sphere§count§1800.0§40000.0
-sphere§scale§243.88982§300.0
-sphere§hollow§true
-sphere§core detail§20.0§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§true
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9589998
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0045005§1.0045005§1.0045005
-color split§common scale§1.0045005§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§fade to black§2.04§255.0
-Om§blur§2.0561788§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.06
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§true
-depth ramp§count§4.0§100.0
-depth ramp§1§0.052999794§0.0§1.0§0.0§10.0
-depth ramp§2 §0.46333337§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§4.640003§100.0
-sphere§count§1800.0§40000.0
-sphere§scale§243.88982§300.0
-sphere§hollow§true
-sphere§core detail§20.0§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9589998
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.015401§1.015401§1.015401
-color split§common scale§1.015401§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§true
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§2.0561788§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.06
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§0.052999794§0.0§1.0§0.0§10.0
-depth ramp§2 §0.46333337§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§4.640003§100.0
-sphere§count§1800.0§40000.0
-sphere§scale§243.88982§300.0
-sphere§hollow§true
-sphere§core detail§20.0§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9589998
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.015401§1.015401§1.015401
-color split§common scale§1.015401§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§2.0561788§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.06
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.46333337§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§true
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§4.640003§100.0
-sphere§count§1800.0§40000.0
-sphere§scale§243.88982§300.0
-sphere§noise speed§0.0§10.0
-sphere§mag§0.6699999§10.0
-sphere§freq§0.0§10.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9589998
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§2.0561788§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.087965235§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.06
-Om§speed§0.030000504§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.46333337§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§true
-sphere§stroke§0.0§0.0§1.0§1.0§1.0
-sphere§weight§4.640003§100.0
-sphere§count§1800.0§40000.0
-sphere§scale§243.88982§300.0
-sphere§noise speed§0.0§10.0
-sphere§mag§0.6699999§10.0
-sphere§freq§0.0§10.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9589998
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§2.0561788§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.9927442§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.0
-Om§speed§0.4100005§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§true
-sphere§n speed§10.0§0.0§0.0§0.0
-sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.3400028§100.0
-sphere§count§2200.0§40000.0
-sphere§scale§251.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.05999995§10.0
-sphere§freq§0.18189493§0.1
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9519996
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§2.0561788§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.9927442§-1.1938039§-0.5969027
-Om§axis§10.0§0.0§0.0§0.0
-Om§speed§0.4100005§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§true
-sphere§n speed§10.0§0.0§0.0§0.0
-sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.3400028§100.0
-sphere§count§2200.0§40000.0
-sphere§scale§251.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.080000244§10.0
-sphere§freq§5.3154955§10.0
-sphere§noise offset§47.73§100.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9519996
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§1.2261789§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.031417027§-1.7718576§-0.88592905
-Om§axis§10.0§0.0§0.0§0.02
-Om§speed§0.4100005§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§n speed§10.0§0.0§0.0§0.0
-sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.1400018§100.0
-sphere§count§1600.0§40000.0
-sphere§scale§206.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.25000075§10.0
-sphere§freq§0.9635974§10.0
-sphere§noise offset§2996.73§10000.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9519996
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§1.2261789§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.031417027§-1.7718576§-0.88592905
-Om§axis§10.0§0.0§0.0§0.02
-Om§speed§0.4100005§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§n speed§10.0§0.0§0.0§0.0
-sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.1400018§100.0
-sphere§count§1600.0§40000.0
-sphere§scale§206.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.25000075§10.0
-sphere§freq§0.9635974§10.0
-sphere§noise offset§2996.73§10000.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9519996
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§1.2261789§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.031417027§-1.7718576§-0.88592905
-Om§axis§10.0§0.0§0.0§0.02
-Om§speed§0.4100005§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§n speed§10.0§0.0§0.0§0.0
-sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.1400018§100.0
-sphere§count§1600.0§40000.0
-sphere§scale§206.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.25000075§10.0
-sphere§freq§0.9635974§10.0
-sphere§noise offset§2996.73§10000.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§text§true
-text§text§bepis
-text§font size§64.0§20.0
-text§text pos§100.0§0.0§0.0
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9519996
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§true
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§1.2261789§10.000001
-Om§translate§100.0§0.0§-88.979965§0.0
-Om§rotate§3.1415927§-0.031417027§-1.7718576§-0.88592905
-Om§axis§10.0§0.0§0.0§0.02
-Om§speed§0.4100005§10.0
-GROUP§ramp§false
-ramp§vertical§1
-ramp§count§4.0§100.0
-ramp§1§0.014500001§0.0§1.0§0.0§10.0
-ramp§2 §0.33333334§10.0
-ramp§2§0.014500001§0.0§1.0§0.0§10.0
-ramp§3 §0.6666667§10.0
-ramp§3§0.014500001§0.0§1.0§0.0§10.0
-ramp§4§0.014500001§0.0§1.0§0.0§10.0
-GROUP§depth ramp§false
-depth ramp§count§4.0§100.0
-depth ramp§1§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§2 §0.33333334§10.0
-depth ramp§2§5.0E-4§0.0§1.0§1.0§10.0
-depth ramp§3 §0.6666667§10.0
-depth ramp§3§0.0§0.0§1.0§1.0§10.0
-depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
-GROUP§sphere§false
-sphere§n speed§10.0§0.0§0.0§0.0
-sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.1400018§100.0
-sphere§count§1600.0§40000.0
-sphere§scale§206.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.25000075§10.0
-sphere§freq§0.9635974§10.0
-sphere§noise offset§2996.73§10000.0
-sphere§hollow§true
-sphere§core detail§19.939999§20.0
-sphere§core size§5.0§10.0
-GROUP§text§true
-text§value§bepis
-text§font size§64.0§20.0
-text§fill§0.0§0.0§1.0§1.0§1.0
-text§pos§10000.0§-500.0§-380.0§321.59998
-GROUP§color split§false
-color split§skip§false
-color split§multiplier§1.0§0.9987993§0.9877988§0.9519996
-color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0101018§1.0101018§1.0101018
-color split§common scale§1.0101018§0.1
-color split§move all scales§true
-color split§force scales >= 1§false
-color split§move R§100.0§0.0§0.0
-color split§move G§100.0§0.0§0.0
-color split§move B§100.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Om§false
-Om§record frames§1200.0§10000.0
-Om§fade to black§2.04§255.0
-Om§blur§1.2261789§10.000001
-Om§translate§10.0§0.0§0.0§0.0
-Om§rotate§3.1415927§-0.031417027§-1.7718576§-0.88592905
-Om§axis§10.0§0.0§0.0§0.01
-Om§speed§0.2800005§10.0
+GROUP§Fireball§true
+Fireball§record frames§0.0§100.0
+Fireball§fade to black§1.3770002§25.5
+Fireball§blur§1.1499996§10.0
+Fireball§translate§100.0§0.0§0.0§0.0
+Fireball§rotate§3.1415927§0.0§1.7592926§0.0
+Fireball§axis§0.10000001§0.0§0.0§0.026970005
+Fireball§speed§0.38999966§10.0
 GROUP§ramp§false
 ramp§vertical§1
 ramp§count§4.0§100.0
@@ -753,13 +28,13 @@ depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
 GROUP§sphere§false
 sphere§n speed§10.0§0.0§0.0§0.0
 sphere§stroke§0.0§0.0§0.0§1.0§1.0
-sphere§weight§3.1400018§100.0
+sphere§weight§3.5400014§100.0
 sphere§count§1600.0§40000.0
-sphere§scale§206.38983§3000.0
-sphere§time§0.60000026§0.001
-sphere§mag§0.25000075§10.0
-sphere§freq§1.0235977§10.0
-sphere§noise offset§2296.73§10000.0
+sphere§scale§179.38983§3000.0
+sphere§time§0.60248935§0.010000001
+sphere§mag§0.22000067§10.0
+sphere§freq§0.513598§100.0
+sphere§noise offset§245.72998§1000.0
 sphere§hollow§true
 sphere§core detail§19.939999§20.0
 sphere§core size§5.0§10.0
@@ -768,12 +43,69 @@ text§value§
 text§font size§64.0§20.0
 text§fill§0.0§0.0§1.0§1.0§1.0
 text§pos§10000.0§-500.0§-380.0§321.59998
-GROUP§color split§true
+GROUP§color split§false
 color split§skip§false
 color split§multiplier§0.1§0.9997997§0.98579884§0.94299954
 color split§scale center§100.0§-0.50000054§-0.40000063
-color split§scale RGB§0.1§1.0116§1.0116§1.0116
-color split§common scale§1.0116§0.1
+color split§scale RGB§0.1§1.0038991§1.0038991§1.0038991
+color split§common scale§1.0038991§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Fireball§true
+Fireball§record frames§0.0§100.0
+Fireball§fade to black§1.3770002§25.5
+Fireball§blur§1.1499996§10.0
+Fireball§translate§100.0§0.0§0.0§0.0
+Fireball§rotate§3.1415927§0.0§1.7592926§0.0
+Fireball§axis§0.10000001§0.0§0.0§0.026970005
+Fireball§speed§0.38999966§10.0
+GROUP§ramp§false
+ramp§vertical§1
+ramp§count§4.0§100.0
+ramp§1§0.014500001§0.0§1.0§0.0§10.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.014500001§0.0§1.0§0.0§10.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.014500001§0.0§1.0§0.0§10.0
+ramp§4§0.014500001§0.0§1.0§0.0§10.0
+GROUP§depth ramp§false
+depth ramp§count§4.0§100.0
+depth ramp§1§0.0§0.0§1.0§1.0§10.0
+depth ramp§2 §0.22333342§10.0
+depth ramp§2§0.0§0.0§1.0§1.0§10.0
+depth ramp§3 §0.46666688§10.0
+depth ramp§3§0.0§0.0§1.0§1.0§10.0
+depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
+GROUP§sphere§false
+sphere§n speed§10.0§0.0§0.0§0.0
+sphere§stroke§0.0§0.0§0.0§1.0§1.0
+sphere§weight§3.5400014§100.0
+sphere§count§1600.0§40000.0
+sphere§scale§179.38983§3000.0
+sphere§time§0.60248935§0.010000001
+sphere§mag§0.22000067§10.0
+sphere§freq§0.513598§100.0
+sphere§noise offset§245.72998§1000.0
+sphere§hollow§true
+sphere§core detail§19.939999§20.0
+sphere§core size§5.0§10.0
+GROUP§text§false
+text§value§
+text§font size§64.0§20.0
+text§fill§0.0§0.0§1.0§1.0§1.0
+text§pos§10000.0§-500.0§-380.0§321.59998
+GROUP§color split§false
+color split§skip§false
+color split§multiplier§0.1§0.9997997§0.98579884§0.94299954
+color split§scale center§100.0§-0.50000054§-0.40000063
+color split§scale RGB§0.1§1.0038991§1.0038991§1.0038991
+color split§common scale§1.0038991§0.1
 color split§move all scales§true
 color split§force scales >= 1§false
 color split§move R§100.0§0.0§0.0
