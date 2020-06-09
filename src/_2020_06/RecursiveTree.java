@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class RecursiveTree extends KrabApplet {
     private PGraphics pg;
     private ArrayList<Branch> branches = new ArrayList<Branch>();
+    private float recordTime;
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -24,12 +25,11 @@ public class RecursiveTree extends KrabApplet {
             surface.setAlwaysOnTop(true);
         }
         pg = createGraphics(width, height, P2D);
+        frameRecordingDuration = 10000;
     }
 
     public void draw() {
         pg.beginDraw();
-        frameRecordingDuration = sliderInt("frames");
-//        ramp(pg);
         fadeToBlack(pg);
         blurPass(pg);
         translateToCenter(pg);
@@ -68,6 +68,8 @@ public class RecursiveTree extends KrabApplet {
     private void buildTree() {
         float size = slider("size", 100);
         float weight = slider("weight", 1);
+        recordTime = t/sliderInt("time",30);
+        println(recordTime);
         branches.clear();
         PVector dir = new PVector(0, -size);
         Branch branch = new Branch(new PVector(), dir, weight, 0);
@@ -77,11 +79,11 @@ public class RecursiveTree extends KrabApplet {
 
     private void addBranchesRecursively(Branch parent, float size) {
         int generationCount = sliderInt("generations", 3);
-        int splitCount = sliderInt("split count", 3);
-        float angleRange = slider("angle range", 0.2f)+slider("angle range t")*t;
         if (parent.generation >= generationCount || size < 0) {
             return;
         }
+        int splitCount = sliderInt("split count", 3);
+        float angleRange = slider("angle range", 0.2f)+TAU*recordTime;
         float newWeight = parent.weight+slider("weight change");
         float newSize = size + slider("size change");
         for (int splitIndex = 0; splitIndex < splitCount; splitIndex++) {
@@ -99,8 +101,7 @@ public class RecursiveTree extends KrabApplet {
     }
 
     private class Branch {
-        PVector origin;
-        PVector target;
+        PVector origin, target;
         float weight;
         int generation;
 
