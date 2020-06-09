@@ -470,7 +470,7 @@ public abstract class KrabApplet extends PApplet {
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
         pg.noStroke();
-        pg.fill(255, slider("fade to black", 0, 255, 50));
+        pg.fill(255, slider("fade to black", 0, 255, 10));
         pg.rectMode(CENTER);
         pg.rect(0, 0, width * 2, height * 2);
         pg.hint(ENABLE_DEPTH_TEST);
@@ -488,7 +488,7 @@ public abstract class KrabApplet extends PApplet {
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(ADD);
         pg.noStroke();
-        pg.fill(255, slider("fade to white", 0, 255, 50));
+        pg.fill(255, slider("fade to white", 0, 255, 10));
         pg.rectMode(CENTER);
         pg.rect(0, 0, width * 2, height * 2);
         pg.hint(ENABLE_DEPTH_TEST);
@@ -2932,7 +2932,7 @@ public abstract class KrabApplet extends PApplet {
                 minValue = min;
                 maxValue = max;
             } else {
-                autoDetectConstraints(name);
+//                autoDetectConstraints(name);
             }
         }
 
@@ -2952,8 +2952,7 @@ public abstract class KrabApplet extends PApplet {
                 this.constrained = true;
                 minValue = 0;
                 maxValue = 255;
-            } else if (name.contains("count") || name.contains("size") ||
-                    (name.contains("step") && !name.contains("smoothstep"))) {
+            } else if (name.contains("count") || (name.contains("step") && !name.contains("smoothstep"))) {
                 constrained = true;
                 if (name.contains("count") && defaultValue == 0) {
                     defaultValue = 1;
