@@ -10,7 +10,7 @@ public class GuiExample extends KrabApplet {
 
     private PImage cursorImage;
 
-    public static void main(String[] passedArgs) {
+    public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
