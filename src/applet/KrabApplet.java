@@ -1222,12 +1222,11 @@ public abstract class KrabApplet extends PApplet {
                 sketchFile(videoOutputDir).mkdir();
             }
             String imageSequenceFormat = "%01d.jpg";
-            String ffmpegCommand = String.format("ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
-                            "%s/%s%s %s/%s.mp4", sketchPath, captureDir, imageSequenceFormat,
-                    sketchPath + videoOutputDir, id);
+            String command = String.format("ffmpeg -framerate 60 -an -start_number_range 100 -i %s/%s%s %s/%s.mp4",
+                    sketchPath, captureDir, imageSequenceFormat, sketchPath + videoOutputDir, id);
             println();
-            println("running ffmpeg: " + ffmpegCommand);
-            Process proc = Runtime.getRuntime().exec(ffmpegCommand);
+            println("running ffmpeg: " + command);
+            Process proc = Runtime.getRuntime().exec(command);
             new Thread(() -> {
                 Scanner sc = new Scanner(proc.getErrorStream());
                 while (sc.hasNextLine()) {

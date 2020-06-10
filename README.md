@@ -42,9 +42,11 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
    Pressing 'K' 
    - Saves 360 frames to out/capture/\<timestamp\>_SketchName
         - The number of frames to save can be changed by adjusting the value of `frameRecordingDuration` before starting the recording.
-   - Calls ffmpeg when done to save a video to out/video.
-        - You'll need to download ffmpeg and modify the `ffmpegCommand` in KrabApplet to match your needs.
-        - If you don't want to use ffmpeg and just want the images, set `ffmpegEnabled` in KrabApplet to false.
+   - Runs ffmpeg when done to save a video to out/video.
+        - You'll need to download ffmpeg and put it in your classpath.
+        - If you don't want to use ffmpeg and just want the images, set `FFMPEG_ENABLED` at the top of KrabApplet to false.
+   Pressing 'L'
+   - Stops recording manually and runs ffmpeg.
 ### Animations and perfect loops
    KrabApplet contains a 't' variable which increments by `TWO_PI / 360` every frame, making a complete 'rotation' in 360 frames.
    - The `frameRecordingDuration` value does not affect this.
