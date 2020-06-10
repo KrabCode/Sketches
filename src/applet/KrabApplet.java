@@ -19,7 +19,7 @@ import static java.lang.System.currentTimeMillis;
  * See the GuiManual in readme for documentation.
  */
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue", /*"unused",*/ "ConstantConditions", "FieldCanBeLocal"})
+@SuppressWarnings({"FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
     private static final Boolean FFMPEG_ENABLED = true;
 
@@ -589,7 +589,7 @@ public abstract class KrabApplet extends PApplet {
                 finalMultiplier.x *= multiplier.x;
             } else if (i == 1) {
                 finalMultiplier.y *= multiplier.y;
-            } else if (i == 2) {
+            } else {
                 finalMultiplier.z *= multiplier.z;
             }
             colorFilter(primaryColorCanvas, finalMultiplier);
@@ -739,9 +739,6 @@ public abstract class KrabApplet extends PApplet {
         return changeInValue / 2 * (-pow(2, -10 * currentTime) + 2) + startValue;
     }
 
-    private float easedAnimation(float startFrame, float duration, float easingFactor) {
-        return easedAnimation(startFrame, duration, easingFactor, 0, 1);
-    }
 
     /**
      * This function helps animating anything that has a known start frame and duration. Just multiply the
@@ -753,10 +750,9 @@ public abstract class KrabApplet extends PApplet {
      * @param easingFactor easing to apply
      * @return normalized value representing the current state of the animation in the range [0, 1]
      */
-    private float easedAnimation(float startFrame, float duration, float easingFactor, float constrainMin,
-                                 float constrainMax) {
+    private float easedAnimation(float startFrame, float duration, float easingFactor) {
         float animationNormalized = constrain(norm(frameCount, startFrame,
-                startFrame + duration), constrainMin, constrainMax);
+                startFrame + duration), 0f, 1f);
         return ease(animationNormalized, easingFactor);
     }
 
@@ -962,6 +958,7 @@ public abstract class KrabApplet extends PApplet {
      * @param shapeType type of shapes to create
      * @return array of shapes of the type shapeType
      */
+    @SuppressWarnings("SameParameterValue")
     protected ArrayList<PShape> shapes(int count, int shapeType) {
         ArrayList<PShape> pointArrays = new ArrayList<>();
         int maxPshapePop = 100000;
@@ -1456,6 +1453,7 @@ public abstract class KrabApplet extends PApplet {
         return !trayVisible || !isPointInRect(mouseX, mouseY, 0, 0, trayWidth, height);
     }
 
+    @SuppressWarnings("SameParameterValue")
     private boolean isMouseOverScrollAware(float x, float y, float w, float h) {
         return isMouseOver(x, y + trayScrollOffset, w, h);
     }
@@ -1668,7 +1666,7 @@ public abstract class KrabApplet extends PApplet {
                 }
             }
         }
-        return null;
+        throw new IllegalArgumentException("Element " + elementName + " was not found in group " + groupName);
     }
 
     private void pushCurrentStateToRedo() {
@@ -2104,6 +2102,7 @@ public abstract class KrabApplet extends PApplet {
 
         }
 
+        @SuppressWarnings("SameParameterValue")
         void onActivationWithoutOverlay(int x, float y, float w, float h) {
 
         }
@@ -2116,7 +2115,7 @@ public abstract class KrabApplet extends PApplet {
             textAlign(LEFT, BOTTOM);
             textSize(textSize);
             if (overlayVisible && this.equals(overlayOwner)) {
-                underlineAnimation(underlineTrayAnimationStarted, UNDERLINE_TRAY_ANIMATION_DURATION, x, y, true);
+                underlineAnimation(underlineTrayAnimationStarted, x, y);
             }
             text(text, x, y);
         }
@@ -2125,12 +2124,9 @@ public abstract class KrabApplet extends PApplet {
             return textWidth(name);
         }
 
-        void underlineAnimation(float startFrame, float duration, float x, float y, boolean stayExtended) {
+        void underlineAnimation(float startFrame, float x, float y) {
             float fullWidth = textWidth(name);
-            float animation = easedAnimation(startFrame, duration, UNDERLINE_TRAY_ANIMATION_EASING);
-            if (!stayExtended && animation == 1) {
-                animation = 0;
-            }
+            float animation = easedAnimation(startFrame, KrabApplet.UNDERLINE_TRAY_ANIMATION_DURATION, UNDERLINE_TRAY_ANIMATION_EASING);
             float w = fullWidth * animation;
             float centerX = x + fullWidth * .5f;
             strokeWeight(2);
@@ -2339,25 +2335,25 @@ public abstract class KrabApplet extends PApplet {
         void updateOverlay() {
         }
 
+        @SuppressWarnings("SameParameterValue")
         protected float updateFullHorizontalSlider(float x, float y, float w, float h, float value, float precision,
-                                                   float horizontalRevealAnimationStarted,
-                                                   float minValue, float maxValue) {
+                                                   float horizontalRevealAnimationStarted) {
             float deltaX = updateInfiniteSlider(precision, true, true);
             float horizontalAnimation = easedAnimation(horizontalRevealAnimationStarted - SLIDER_REVEAL_START_SKIP,
                     SLIDER_REVEAL_DURATION, SLIDER_REVEAL_EASING);
             displayInfiniteSliderCenterMode(x + width * .5f, y, w, h,
-                    precision, value, horizontalAnimation, true, true, false, minValue, maxValue);
+                    precision, value, horizontalAnimation, true, true, false, -Float.MAX_VALUE, Float.MAX_VALUE);
             return deltaX;
         }
 
+        @SuppressWarnings("SameParameterValue")
         protected float updateFullHeightVerticalSlider(float x, float y, float w, float h, float value, float precision,
-                                                       float verticalRevealAnimationStarted,
-                                                       float minValue, float maxValue) {
+                                                       float verticalRevealAnimationStarted) {
             float deltaY = updateInfiniteSlider(precision, false, true);
             float verticalAnimation = easedAnimation(verticalRevealAnimationStarted - SLIDER_REVEAL_START_SKIP,
                     SLIDER_REVEAL_DURATION, SLIDER_REVEAL_EASING);
             displayInfiniteSliderCenterMode(x + height * .5f, y, w, h,
-                    precision, value, verticalAnimation, false, true, false, minValue, maxValue);
+                    precision, value, verticalAnimation, false, true, false, -Float.MAX_VALUE, Float.MAX_VALUE);
             return deltaY;
         }
 
@@ -2663,7 +2659,7 @@ public abstract class KrabApplet extends PApplet {
             recordStateForUndo();
             value += valueDelta;
             lastValueDelta = valueDelta;
-            if (floored && valueDelta == 0 && lastValueDelta == 0) {
+            if (floored && valueDelta == 0) {
                 value = lerp(value, round(value), INTEGER_SLIDER_ROUNDING_LERP_AMT);
             }
             if (constrained) {
@@ -2757,9 +2753,9 @@ public abstract class KrabApplet extends PApplet {
 
         void updateXYSliders() {
             deltaX = updateFullHorizontalSlider(0, height - cell, width, sliderHeight, value.x, precision,
-                    horizontalRevealAnimationStarted, -Float.MAX_VALUE, Float.MAX_VALUE);
+                    horizontalRevealAnimationStarted);
             deltaY = updateFullHeightVerticalSlider(0, width - cell, height, sliderHeight, value.y, precision,
-                    verticalRevealAnimationStarted, -Float.MAX_VALUE, Float.MAX_VALUE);
+                    verticalRevealAnimationStarted);
         }
 
         void handleActions() {
