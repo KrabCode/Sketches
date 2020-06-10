@@ -19,7 +19,7 @@ import static java.lang.System.currentTimeMillis;
  * See the GuiManual in readme for documentation.
  */
 
-@SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions", "FieldCanBeLocal"})
+@SuppressWarnings({"WeakerAccess", "SameParameterValue", /*"unused",*/ "ConstantConditions", "FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
     private static final Boolean FFMPEG_ENABLED = true;
 
@@ -40,15 +40,10 @@ public abstract class KrabApplet extends PApplet {
     private static final String ACTION_COPY = "COPY";
     private static final String ACTION_PASTE = "PASTE";
     private static final int MENU_BUTTON_COUNT = 4;
-    private static final String MENU_BUTTON_HIDE = "hide";
-    private static final String MENU_BUTTON_UNDO = "undo";
-    private static final String MENU_BUTTON_REDO = "redo";
-    private static final String MENU_BUTTON_SAVE = "save";
     private static final String SATURATION = "saturation";
     private static final String BRIGHTNESS = "brightness";
     private static final String HUE = "hue";
     private static final float BACKGROUND_ALPHA = .9f;
-    private static final float GRAYSCALE_GRID = .3f;
     private static final float GRAYSCALE_TEXT_DARK = .5f;
     private static final float GRAYSCALE_TEXT_SELECTED = 1;
     private static final float INT_PRECISION_MAXIMUM = 100000;
@@ -67,8 +62,6 @@ public abstract class KrabApplet extends PApplet {
     private static final float PICKER_REVEAL_DURATION = 15;
     private static final float PICKER_REVEAL_EASING = 1;
     private static final float PICKER_REVEAL_START_SKIP = PICKER_REVEAL_DURATION * .25f;
-    private static final int KEY_REPEAT_DELAY_FIRST = 300;
-    private static final int KEY_REPEAT_DELAY = 30;
     private static final float MENU_ROTATION_DURATION = 20;
     private static final float MENU_ROTATION_EASING = 2;
     private static final float DESELECTION_FADEOUT_DURATION = 10;
@@ -200,9 +193,8 @@ public abstract class KrabApplet extends PApplet {
         return slider(name, defaultValue, max - min, true, min, max, false);
     }
 
-    protected float slider(String name, float defaultValue, float precision, boolean constrained, float min,
-                           float max) {
-        return slider(name, defaultValue, precision, constrained, min, max, false);
+    protected float slider(String name,  float min, float max, float defaultValue, float precision) {
+        return slider(name, defaultValue, precision, true, min, max, false);
     }
 
     protected float slider(String name, float defaultValue, float precision, boolean constrained, float min,
@@ -245,10 +237,6 @@ public abstract class KrabApplet extends PApplet {
 
     protected PVector sliderXYZ(String name, float value, float precision) {
         return sliderXYZ(name, value, value, value, precision);
-    }
-
-    protected PVector sliderXYZ() {
-        return sliderXYZ("xyz", 0, 0, 0, 100);
     }
 
     protected PVector sliderXYZ(String name) {
@@ -311,10 +299,6 @@ public abstract class KrabApplet extends PApplet {
         return new HSBA();
     }
 
-    protected String optionsABC() {
-        return options("A", "B", "C");
-    }
-
     // the first parameter becomes the name of the element and must be unique within the current group
     protected String options(String defaultValue, String... otherValues) {
         Group currentGroup = getCurrentGroup();
@@ -324,10 +308,6 @@ public abstract class KrabApplet extends PApplet {
         }
         Radio radio = (Radio) findElement(defaultValue, currentGroup.name);
         return radio.options.get(radio.valueIndex);
-    }
-
-    protected boolean button() {
-        return button("button");
     }
 
     protected boolean button(String name) {
@@ -440,23 +420,6 @@ public abstract class KrabApplet extends PApplet {
         resetGroup();
     }
 
-    protected void style(PGraphics pg) {
-        style(pg, "");
-    }
-
-    /**
-     * Applies stroke weight, stroke and fill using the GUI.
-     *
-     * @param pg     PGraphics to apply to
-     * @param prefix optional GUI element prefix
-     */
-    protected void style(PGraphics pg, String prefix) {
-        prefix += " ";
-        pg.strokeWeight(slider(prefix + "weight"));
-        pg.stroke(picker(prefix + "stroke").clr());
-        pg.fill(picker(prefix + "fill").clr());
-    }
-
     protected void fadeToBlack() {
         fadeToBlack(g);
     }
@@ -478,28 +441,6 @@ public abstract class KrabApplet extends PApplet {
         pg.rect(0, 0, width * 2, height * 2);
         pg.hint(ENABLE_DEPTH_TEST);
         pg.popStyle();
-    }
-
-    /**
-     * Adds white to an image. See the fadeToBlack method.
-     *
-     * @param pg PGraphics to brighten
-     */
-    protected void fadeToWhite(PGraphics pg) {
-        pg.pushStyle();
-        pg.colorMode(HSB, 255, 255, 255, 255);
-        pg.hint(DISABLE_DEPTH_TEST);
-        pg.blendMode(ADD);
-        pg.noStroke();
-        pg.fill(255, slider("fade to white", 0, 255, 10));
-        pg.rectMode(CENTER);
-        pg.rect(0, 0, width * 2, height * 2);
-        pg.hint(ENABLE_DEPTH_TEST);
-        pg.popStyle();
-    }
-
-    protected void mouseRotation() {
-        mouseRotation(g);
     }
 
     /**
@@ -753,6 +694,18 @@ public abstract class KrabApplet extends PApplet {
         return abs(sin(seed * 323.121f) * 454.123f) % 1;
     }
 
+
+
+    /**
+     * Constructs a random square image url with the specified size.
+     *
+     * @param size image width to request
+     * @return random square image
+     */
+    public String randomImageUrl(float size) {
+        return randomImageUrl(size, size);
+    }
+
     /**
      * Constructs a random image url with the specified size.
      *
@@ -762,16 +715,6 @@ public abstract class KrabApplet extends PApplet {
      */
     public String randomImageUrl(float width, float height) {
         return "https://picsum.photos/" + floor(width) + "/" + floor(height) + ".jpg";
-    }
-
-    /**
-     * Constructs a random square image url with the specified size.
-     *
-     * @param size image width to request
-     * @return random square image
-     */
-    public String randomImageUrl(float size) {
-        return "https://picsum.photos/" + floor(size) + ".jpg";
     }
 
     /**
@@ -842,10 +785,6 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    protected float easeNorm(float x, float a, float b, float ease) {
-        return ease(constrain(norm(x, a, b), 0, 1), ease);
-    }
-
     protected float clampNorm(float x, float min, float max) {
         return constrain(norm(x, min, max), 0, 1);
     }
@@ -869,6 +808,7 @@ public abstract class KrabApplet extends PApplet {
      * @param values values to lerp between
      * @return value at position norm between the values
      */
+    @SuppressWarnings("unused")
     protected float lerpMany(float norm, float... values) {
         norm = constrain(norm, 0, 1);
         if (norm == 1) {
@@ -911,6 +851,7 @@ public abstract class KrabApplet extends PApplet {
         uniformRamp(fragPath, null, "ramp", 4);
     }
 
+    @SuppressWarnings("unused")
     protected void uniformRamp(String fragPath, String vertPath) {
         uniformRamp(fragPath, vertPath, "ramp", 4);
     }
@@ -1015,32 +956,6 @@ public abstract class KrabApplet extends PApplet {
     }
 
     /**
-     * Creates an array of vectors that when connected draw an n-sided polygon.
-     *
-     * @param radius radius of the polygon
-     * @param detail number of vectors to use
-     * @param sides  number of sides of the polygon
-     * @return array of vectors that form an n-sided polygon
-     */
-    protected ArrayList<PVector> ngon(float radius, int detail, int sides) {
-        sides = max(1, sides);
-        ArrayList<PVector> corners = new ArrayList<>();
-        for (int i = 0; i <= sides; i++) {
-            float theta = map(i, 0, sides, 0, TAU);
-            corners.add(PVector.fromAngle(theta).mult(radius));
-        }
-        ArrayList<PVector> shape = new ArrayList<>();
-        for (int i = 0; i < detail; i++) {
-            float inorm = clampNorm(i, 0, detail);
-            float side = map(inorm, 0, 1, 0, sides);
-            int lastCorner = floor(side);
-            int nextCorner = ceil(side);
-            shape.add(PVector.lerp(corners.get(lastCorner), corners.get(nextCorner), side % 1));
-        }
-        return shape;
-    }
-
-    /**
      * Creates an array of PShapes each holding up to 100000 shapes at position 0 and of the given shapeType.
      *
      * @param count     total number of PShapes across all lists
@@ -1069,6 +984,7 @@ public abstract class KrabApplet extends PApplet {
      *
      * @param pg PGraphics to draw the sphere to.
      */
+    @SuppressWarnings("unused")
     protected void spiralSphere(PGraphics pg) {
         group("sphere");
 //        pg.beginShape(POINTS);
@@ -1103,6 +1019,7 @@ public abstract class KrabApplet extends PApplet {
      * @param count number of vertices to use
      * @return array of points that together form a spiral sphere
      */
+    @SuppressWarnings("unused")
     protected ArrayList<PVector> spiralSpherePoints(int count) {
         ArrayList<PVector> points = new ArrayList<>();
         float s = 3.6f / sqrt(count);
@@ -1133,14 +1050,6 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    protected void resetGui() {
-        for (Group group : groups) {
-            for (Element el : group.elements) {
-                el.reset();
-            }
-        }
-    }
-
     protected void resetGroup() {
         currentGroup = null;
     }
@@ -1159,7 +1068,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private boolean trayHasntMovedInAWhile() {
+    private boolean trayNotMovedInAWhile() {
         for (Float historicalTrayOffset : scrollOffsetHistory) {
             if (historicalTrayOffset != trayScrollOffset) {
                 return false;
@@ -1169,19 +1078,6 @@ public abstract class KrabApplet extends PApplet {
     }
 
     // RECORDING
-
-    protected void cam() {
-        cam(g);
-    }
-
-    protected void cam(PGraphics pg) {
-        PVector t = sliderXYZ("translate");
-        pg.translate(pg.width / 2f + t.x, pg.height / 2f + t.y, t.z);
-        PVector r = sliderXYZ("rotate");
-        pg.rotateX(r.x);
-        pg.rotateY(r.y);
-        pg.rotateZ(r.z);
-    }
 
     public void rec() {
         rec(g);
@@ -1203,7 +1099,6 @@ public abstract class KrabApplet extends PApplet {
         if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
             int frameNumber = frameCount - frameRecordingStarted + 1;
             println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted, "saved");
-            PImage currentSketch = pg.get();
             pg.save(captureDir + frameNumber + ".jpg");
             if (frameCount == frameRecordingEnd - 1) {
                 runFfmpeg();
@@ -1309,7 +1204,7 @@ public abstract class KrabApplet extends PApplet {
         }
         float rotation = easedAnimation(undoRotationStarted, MENU_ROTATION_DURATION, MENU_ROTATION_EASING);
         rotation -= constrain(norm(undoHoldDuration, 0, menuButtonHoldThreshold), 0, 1);
-        displayStateButton(x, y, w, h, rotation * TWO_PI, false, MENU_BUTTON_UNDO, undoStack.size());
+        displayStateButton(x, y, w, h, rotation * TWO_PI, false, undoStack.size());
     }
 
     private void updateMenuButtonRedo(boolean hide, float x, float y, float w, float h) {
@@ -1339,7 +1234,7 @@ public abstract class KrabApplet extends PApplet {
         }
         float rotation = easedAnimation(redoRotationStarted, MENU_ROTATION_DURATION, MENU_ROTATION_EASING);
         rotation -= constrain(norm(redoHoldDuration, 0, menuButtonHoldThreshold), 0, 1);
-        displayStateButton(x, y, w, h, rotation * TWO_PI, true, MENU_BUTTON_REDO, redoStack.size());
+        displayStateButton(x, y, w, h, rotation * TWO_PI, true, redoStack.size());
     }
 
     private void displayMenuButtonHideShow(float x, float y, float w, float h, float rotation) {
@@ -1360,7 +1255,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateMenuButtonSave(boolean hide, float x, float y, float w, float h) {
-        if (activated(MENU_BUTTON_SAVE, x, y, w, h) || actionsContainsLockAware(ACTION_SAVE)) {
+        if (activated("", x, y, w, h) || actionsContainsLockAware(ACTION_SAVE)) {
             saveAnimationStarted = frameCount;
             saveStateToFile();
             println("settings saved");
@@ -1386,7 +1281,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void displayStateButton(float x, float y, float w, float h, float rotation,
-                                    boolean direction, String menuButtonType, int stackSize) {
+                                    boolean direction, int stackSize) {
         textSize(textSize);
         textAlign(CENTER, CENTER);
         float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
@@ -1512,16 +1407,6 @@ public abstract class KrabApplet extends PApplet {
         rect(0, 0, trayWidth, height);
     }
 
-    private void displayTrayGrid() {
-        stroke(GRAYSCALE_GRID);
-        for (float x = cell; x < trayWidth; x += cell) {
-            line(x, 0, x, height);
-        }
-        for (float y = cell; y < height; y += cell) {
-            line(0, y, trayWidth, y);
-        }
-    }
-
     private void resetMatrixInAnyRenderer() {
         if (sketchRenderer().equals(P3D)) {
             camera();
@@ -1548,7 +1433,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean mouseJustReleasedHereScrollAware(float x, float y, float w, float h) {
-        return mouseJustReleasedHere(x, y + trayScrollOffset, w, h) && trayHasntMovedInAWhile();
+        return mouseJustReleasedHere(x, y + trayScrollOffset, w, h) && trayNotMovedInAWhile();
     }
 
     private boolean mouseJustReleasedHere(float x, float y, float w, float h) {
@@ -1561,10 +1446,6 @@ public abstract class KrabApplet extends PApplet {
 
     private boolean isMousePressedHere(float x, float y, float w, float h) {
         return mousePressed && isPointInRect(mouseX, mouseY, x, y, w, h);
-    }
-
-    private boolean mouseJustPressed() {
-        return !pMousePressed && mousePressed;
     }
 
     protected boolean mouseJustPressedOutsideGui() {
@@ -1760,13 +1641,6 @@ public abstract class KrabApplet extends PApplet {
         Group defaultGroup = new Group(this.getClass().getSimpleName());
         groups.add(defaultGroup);
         currentGroup = defaultGroup;
-    }
-
-    private Group getLastGroup() {
-        if (groups.isEmpty()) {
-            return null;
-        }
-        return groups.get(groups.size() - 1);
     }
 
     private Group findGroup(String name) {
@@ -2027,197 +1901,6 @@ public abstract class KrabApplet extends PApplet {
         return null;
     }
 
-//  PARAMETRIC EQUATIONS
-
-    protected void drawParametric(PGraphics pg) {
-        pg.pushMatrix();
-        PVector translate = sliderXYZ("translate");
-        pg.translate(translate.x + width * .5f, translate.y + height * .5f, translate.z);
-        PVector rot = sliderXYZ("rotation");
-        pg.rotateX(rot.x);
-        pg.rotateY(rot.y);
-        pg.rotateZ(rot.z + (toggle("z rotation") ? t : 0));
-        int uMax = sliderInt("u", 1, 1000, 10);
-        int vMax = sliderInt("v", 1, 1000, 10);
-        float r = slider("radius", 10);
-        float h = r * (1 + slider("height", 0));
-        pg.strokeWeight(slider("weight", 1));
-        pg.stroke(picker("stroke", 1).clr());
-        if (toggle("no stroke")) {
-            pg.noStroke();
-        }
-        pg.fill(picker("fill", 0).clr());
-        for (int uIndex = 0; uIndex < uMax; uIndex++) {
-            if (toggle("points")) {
-                pg.beginShape(POINTS);
-            } else {
-                pg.beginShape(TRIANGLE_STRIP);
-            }
-            for (int vIndex = 0; vIndex <= vMax; vIndex++) {
-                float u0 = norm(uIndex, 0, uMax);
-                float u1 = norm(uIndex + 1, 0, uMax);
-                float v = norm(vIndex, 0, vMax);
-                PVector a = getVector(u0, v, r, h);
-                pg.vertex(a.x, a.y, a.z);
-                if (!toggle("points")) {
-                    PVector b = getVector(u1, v, r, h);
-                    pg.vertex(b.x, b.y, b.z);
-                }
-            }
-            pg.endShape();
-        }
-        pg.popMatrix();
-    }
-
-    private PVector getVector(float u, float v, float r, float h) {
-        String option = options("russian", "catenoid", "screw", "hexaedron", "moebius",
-                "torus", "multitorus", "helicoidal", "ufo", "sphere");
-        switch (option) {
-            case "russian":
-                return russianRoof(u, v, r, h);
-            case "catenoid":
-                return catenoid(u, v, r, h);
-            case "screw":
-                return screw(u, v, r, h);
-            case "hexaedron":
-                return hexaedron(u, v, r, h);
-            case "moebius":
-                return moebius(u, v, r, h);
-            case "torus":
-                return torus(u, v, r, h);
-            case "multitorus":
-                return multitorus(u, v, r, h);
-            case "helicoidal":
-                return helicoidal(u, v, r, h);
-            case "ufo":
-                return ufo(u, v, r, h);
-            case "sphere":
-                return sphere(u, v, r, h);
-        }
-        return new PVector();
-    }
-
-    private PVector sphere(float u, float v, float r, float h) {
-        u = -HALF_PI + u * PI;
-        v = v * TWO_PI;
-        return new PVector(
-                r * cos(u) * cos(v),
-                r * cos(u) * sin(v),
-                h * sin(u)
-        );
-    }
-
-    private PVector ufo(float u, float v, float r, float h) {
-        u = -PI + u * TWO_PI;
-        v = -PI + v * TWO_PI;
-        return new PVector(
-                r * (cos(u) / (sqrt(2) + sin(v))),
-                r * (sin(u) / (sqrt(2) + sin(v))),
-                h * (1 / (sqrt(2) + cos(v)))
-        );
-    }
-
-    private PVector helicoidal(float u, float v, float r, float h) {
-        u = -PI + u * TWO_PI;
-        v = -PI + v * TWO_PI;
-        return new PVector(
-                r * (sinh(v) * sin(u)),
-                r * (-sinh(v) * cos(u)),
-                h * (3 * u)
-        );
-    }
-
-    private PVector multitorus(float u, float v, float r, float h) {
-        u = -PI + u * TWO_PI;
-        v = -PI + v * TWO_PI;
-        float mtTime = t * slider("time");
-        float R3 = sliderInt("R3", 3);
-        float R = sliderInt("R", 5);
-        float N = sliderInt("N", 10);
-        float N2 = sliderInt("N2", 4);
-        return new PVector(
-                r * (-sin(u) * multitorusF1(u - mtTime, v, N, R3, R, N2)),
-                r * (cos(u) * multitorusF1(u - mtTime, v, N, R3, R, N2)),
-                h * (multitorusF2(u - mtTime, v, N, R3, R, N2))
-        );
-    }
-
-    private float multitorusF1(float u, float v, float N, float R3, float R, float N2) {
-        return (R3 + (R / (10 * N)) * cos(N2 * u / N + ((R / (10 * N)) - R / 10) / (R / (10 * N)) * v) + (R / 10 - (R / (10 * N))) * cos(N2 * u / N + v));
-    }
-
-    private float multitorusF2(float u, float v, float N, float R3, float R, float N2) {
-        return ((R / (10 * N)) * sin(N2 * u / N + ((R / (10 * N)) - R / 10) / (R / (10 * N)) * v) + (R / 10 - (R / (10 * N))) * sin(N2 * u / N + v));
-    }
-
-    private PVector torus(float u, float v, float r, float h) {
-        u = u * TWO_PI;
-        v = v * TWO_PI;
-        return new PVector(
-                r * ((1 + 0.5f * cos(u)) * cos(v)),
-                r * ((1 + 0.5f * cos(u)) * sin(v)),
-                h * (0.5f * sin(u))
-        );
-    }
-
-    private PVector moebius(float u, float v, float r, float h) {
-        u = -.4f + u * .8f;
-        v = v * TWO_PI;
-        return new PVector(
-                r * (cos(v) + u * cos(v / 2) * cos(v)),
-                r * (sin(v) + u * cos(v / 2) * sin(v)),
-                h * (u * sin(v / 2))
-        );
-    }
-
-    private PVector hexaedron(float u, float v, float r, float h) {
-        u = -1.3f + u * 2.6f;
-        v = v * TWO_PI;
-        return new PVector(
-                r * pow(cos(v), 3) * pow(cos(u), 3),
-                r * pow(sin(v), 3) * pow(cos(u), 3),
-                h * pow(sin(u), 3)
-        );
-    }
-
-    private PVector screw(float u, float v, float r, float h) {
-        u = u * 12.4f;
-        v = v * 2;
-        return new PVector(
-                r * cos(u) * sin(v),
-                r * sin(u) * sin(v),
-                h * ((cos(v) + log(tan(v / 2f))) + 0.2f * u)
-        );
-    }
-
-    private PVector catenoid(float u, float v, float r, float h) {
-        u = PI - u * TWO_PI;
-        v = PI - v * TWO_PI;
-        return new PVector(
-                r * 2 * cosh(v / 2) * cos(u),
-                r * 2 * cosh(v / 2) * sin(u),
-                h * v
-        );
-    }
-
-    private PVector russianRoof(float u, float v, float r, float h) {
-        u = u * TWO_PI;
-        float easing = slider("easing", 1);
-        return new PVector(
-                (r - r * ease(v, easing)) * cos(u),
-                (r - r * ease(v, easing)) * sin(u),
-                (-1 + 2 * v) * h
-        );
-    }
-
-    private float cosh(float n) {
-        return (float) Math.cosh(n);
-    }
-
-    private float sinh(float n) {
-        return (float) Math.sinh(n);
-    }
-
     // CLASSES
 
     private class ShaderSnapshot {
@@ -2315,31 +1998,15 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private class Key {
+    private static class Key {
         boolean justPressed;
-        boolean repeatedAlready = false;
         boolean coded;
         int character;
-        int lastRegistered = -1;
 
         Key(Integer character, boolean coded) {
             this.character = character;
             this.coded = coded;
             this.justPressed = true;
-        }
-
-        boolean repeatCheck() {
-            boolean shouldApply = justPressed ||
-                    (!repeatedAlready && millis() > lastRegistered + KEY_REPEAT_DELAY_FIRST) ||
-                    (repeatedAlready && millis() > lastRegistered + KEY_REPEAT_DELAY);
-            if (shouldApply) {
-                lastRegistered = millis();
-                if (!justPressed) {
-                    repeatedAlready = true;
-                }
-            }
-            justPressed = false;
-            return shouldApply;
         }
     }
 
@@ -2405,10 +2072,6 @@ public abstract class KrabApplet extends PApplet {
         Element(Group group, String name) {
             this.group = group;
             this.name = name;
-        }
-
-        void reset() {
-
         }
 
         void keyPressed() {
@@ -2539,10 +2202,6 @@ public abstract class KrabApplet extends PApplet {
 
         void setState(String newState) {
             valueIndex = Integer.parseInt(newState.split(SEPARATOR)[2]);
-        }
-
-        protected void reset() {
-            valueIndex = 0;
         }
 
         boolean canHaveOverlay() {
@@ -2790,7 +2449,6 @@ public abstract class KrabApplet extends PApplet {
                 if (skipEveryNth != 0 && i++ % skipEveryNth == 0) {
                     continue;
                 }
-                float markerNorm = norm(markerValue, -precision - value, precision - value);
                 displayMarkerLine(markerValue, precision, w, h, markerHeight, horizontalLineHeight, value,
                         shouldDisplayValue, flipTextHorizontally,
                         revealAnimationEased, minValue, maxValue);
@@ -2940,41 +2598,6 @@ public abstract class KrabApplet extends PApplet {
                 this.constrained = true;
                 minValue = min;
                 maxValue = max;
-            } else {
-//                autoDetectConstraints(name);
-            }
-        }
-
-        private void autoDetectConstraints(String name) {
-            if (name.contains("ease") || name.contains("easing")) {
-                this.defaultValue = 1;
-                value = defaultValue;
-            }
-            if (name.contains("weight")) {
-                this.constrained = true;
-                minValue = 0;
-                maxValue = Float.MAX_VALUE;
-                defaultValue = 1;
-                value = defaultValue;
-            }
-            if (name.equals("fill") || name.equals("stroke")) {
-                this.constrained = true;
-                minValue = 0;
-                maxValue = 255;
-            } else if (name.contains("count") || (name.contains("step") && !name.contains("smoothstep"))) {
-                constrained = true;
-                if (name.contains("count") && defaultValue == 0) {
-                    defaultValue = 1;
-                }
-                minValue = 0;
-                maxValue = Float.MAX_VALUE;
-                if (value == 0) {
-                    this.value = 1;
-                }
-            } else if (name.equals("drag")) {
-                this.constrained = true;
-                minValue = 0;
-                maxValue = 1;
             }
         }
 
@@ -3408,11 +3031,11 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void displayHueSlider(float h, float revealAnimation) {
-            displayHueStripCornerMode(height + cell - h * revealAnimation, h * .5f, true, revealAnimation);
-            displayHueStripCornerMode(height + cell - h * .5f * revealAnimation, h * .5f, false, revealAnimation);
+            displayHueStripCornerMode(height + cell - h * revealAnimation, h * .5f, revealAnimation);
+            displayHueStripCornerMode(height + cell - h * .5f * revealAnimation, h * .5f, revealAnimation);
         }
 
-        private void displayHueStripCornerMode(float y, float h, boolean top, float revealAnimation) {
+        private void displayHueStripCornerMode(float y, float h, float revealAnimation) {
             beginShape(TRIANGLE_STRIP);
             noStroke();
             int detail = floor(width * .3f);
@@ -3585,13 +3208,11 @@ public abstract class KrabApplet extends PApplet {
 
     private class TextInput extends Element {
         private final float overlayTextSize = 24;
-        private final String defaultValue;
         private String value;
 
         TextInput(Group currentGroup, String name, String defaultValue) {
             super(currentGroup, name);
             this.name = name;
-            this.defaultValue = defaultValue;
             this.value = defaultValue;
         }
 
@@ -3637,10 +3258,6 @@ public abstract class KrabApplet extends PApplet {
                 }
             } catch (Exception ignored) {
             }
-        }
-
-        void reset() {
-            value = defaultValue;
         }
 
         void keyPressed() {

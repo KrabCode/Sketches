@@ -37,7 +37,7 @@ See [GUI Manual](https://github.com/KrabCode/Sketches/blob/master/readme/GUIManu
 In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphics)` in your sketch near the end of `draw()`.
 
 ### Screenshots
-   Pressing 'I' saves an image of the current sketch or PGraphics to out/capture/\<timestamp\>_SketchName
+   Pressing 'I' saves an image of the current sketch or PGraphics to out/capture/\<timestamp\>_SketchName   
 ### Video
    Pressing 'K' 
    - Saves 360 frames to out/capture/\<timestamp\>_SketchName
@@ -57,8 +57,7 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
     float timeX = timeRadius*cos(t);
     float timeY = timeRadius*sin(t);
     float loopedNoise = noise.eval(someX,someY,timeX,timeY);
-   ```
-   
+   ```   
 ## Shader reloading
    KrabApplet allows you to modify your shaders and see the results in real-time without having to close and re-run the sketch.
    - The [shader\(\)](https://processing.org/reference/shader_.html) and [filter\(\)](https://processing.org/reference/filter_.html) Processing functions have their counterparts in `hotShader()` and `hotFilter()`.
