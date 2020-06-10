@@ -1655,7 +1655,14 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean elementDoesntExist(String elementName, String groupName) {
-        return findElement(elementName, groupName) == null;
+        for (Group g : groups) {
+            for (Element el : g.elements) {
+                if (g.name.equals(groupName) && el.name.equals(elementName)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     private Element findElement(String elementName, String groupName) {
@@ -1728,11 +1735,10 @@ public abstract class KrabApplet extends PApplet {
                 }
                 group.setState(state);
             } else {
-                Element el = findElement(splitState[1], splitState[0]);
-                if (el == null) {
-//                    println("element does not exist", splitState[0], splitState[1]);
+                if(elementDoesntExist(splitState[1], splitState[0])){
                     continue;
                 }
+                Element el = findElement(splitState[1], splitState[0]);
                 try {
                     el.setState(state);
                 } catch (Exception ex) {
@@ -2824,7 +2830,9 @@ public abstract class KrabApplet extends PApplet {
             lockOtherSlidersOnMouseOver();
             value.x += deltaX;
             value.y += deltaY;
-            value.z += deltaZ;
+            if(isMouseOverZSlider()){
+                value.z += deltaZ;
+            }
             float zAnimation = easedAnimation(zRevealAnimationStarted, SLIDER_REVEAL_DURATION, SLIDER_REVEAL_EASING);
             displayInfiniteSliderCenterMode(height - height * .2f, width - sliderHeight * 2, height / 3f,
                     sliderHeight * .8f, precision, value.z, zAnimation, false, false,
@@ -2834,7 +2842,6 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private boolean isMouseOverZSlider() {
-            stroke(1);
             return isMouseOver(width - sliderHeight * 4, 0, sliderHeight * 3, height * .4f);
         }
 
