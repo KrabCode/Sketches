@@ -8,6 +8,7 @@ import processing.core.PVector;
 
 public class GuiExample extends KrabApplet {
 
+    boolean recordableCursorMode = false;
     private PImage cursorImage;
 
     public static void main(String[] args) {
@@ -21,13 +22,15 @@ public class GuiExample extends KrabApplet {
     public void setup() {
         rectMode(CENTER);
         frameRecordingDuration = 100000;
-        cursorImage = loadImage("images/cursor/cursor.png");
+        if (recordableCursorMode) {
+            cursorImage = loadImage("images/cursor/cursor.png");
+        }
     }
 
     public void draw() {
         hint(ENABLE_DEPTH_TEST);
 
-        ramp(g,"gradient", 4);
+        ramp(g, "gradient", 4);
 
         group("transform");
         pushMatrix();
@@ -67,9 +70,11 @@ public class GuiExample extends KrabApplet {
 
         gui();
 
-        noCursor();
-        imageMode(CORNER);
-        image(cursorImage, mouseX, mouseY, 15.16f*2, 24*2);
+        if (recordableCursorMode) {
+            noCursor();
+            imageMode(CORNER);
+            image(cursorImage, mouseX, mouseY, 15.16f * 2, 24 * 2);
+        }
 
         rec();
     }

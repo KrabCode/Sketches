@@ -1003,3 +1003,49 @@ recording§start§
 recording§stop§
 recording§screenshot§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Recursive3D§false
+Recursive3D§translate§10000.0§0.0§0.0§284.6
+Recursive3D§rotate§10.0§0.0§0.0§0.0
+GROUP§ramp§true
+ramp§vertical§1
+ramp§count§5.032003§100.0
+ramp§1§0.90750015§0.48125§0.625§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.90750015§0.48125§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.90750015§0.69375§0.0§1.0§1.0
+ramp§4§0.90750015§0.48125§0.0§1.0§1.0
+ramp§4 §0.75§10.0
+ramp§5§0.0§0.0§0.0§1.0§1.0
+GROUP§lights§false
+lights§ambient§0.7010001§1.0§0.375§1.0§1.0
+lights§dir light color§0.0§0.0§0.5§1.0§1.0
+lights§spec light color§0.0§0.0§0.5§1.0§1.0
+lights§shine§1.4399978§10.0
+lights§light count§1.0§100.0
+lights§light 1§10.0§0.0§0.0§0.0
+GROUP§recursive§true
+recursive§skip§false
+recursive§orig translate§1000.0§0.0§0.0§272.59998
+recursive§orig rotate§10.0§0.0§0.0§0.0
+recursive§orig size§500.0§50.00009§50.0§50.0
+recursive§min size§0.9899945§2.0
+recursive§3D shrink Δ§3000.0§-1.0161769§-1.0161769§-1.0161769
+recursive§same shrink§false
+recursive§1D shrink Δ§-1.0161769§3.0
+recursive§translate Δ§10.0§8.020052§4.580004§8.999348
+recursive§rotate Δ§10.0§1.6309915§-0.27177352§-2.9898071
+recursive§skip iters§17.00002§100.0
+recursive§fill§0.79399997§1.0§0.55625§1.0§10.0
+recursive§d hue§0.008999577§1.0
+recursive§d sat§0.0§10.0
+recursive§d br§0.0§10.0
+recursive§hueOffset§0.0§100.0
+recursive§satOffset§-24.987438§100.0
+recursive§brOffset§-28.99998§100.0
+recursive§shape count§32.00004§100.0
+recursive§rotate ΔΔ§0.010000001§1.200001E-4§-1.9999967E-5§-2.1999996E-4
+recursive§rotation between§3.1415927§0.0§0.0§0.0
+STATE_END
