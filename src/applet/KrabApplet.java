@@ -21,6 +21,8 @@ import static java.lang.System.currentTimeMillis;
 
 @SuppressWarnings({"WeakerAccess", "SameParameterValue", "unused", "ConstantConditions", "FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
+    private static final Boolean FFMPEG_ENABLED = true;
+
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
@@ -45,9 +47,6 @@ public abstract class KrabApplet extends PApplet {
     private static final String SATURATION = "saturation";
     private static final String BRIGHTNESS = "brightness";
     private static final String HUE = "hue";
-    private final int KEY_CTRL_C = 3;
-    private final int KEY_CTRL_V = 22;
-    private final int KEY_CTRL_S = 19;
     private static final float BACKGROUND_ALPHA = .9f;
     private static final float GRAYSCALE_GRID = .3f;
     private static final float GRAYSCALE_TEXT_DARK = .5f;
@@ -81,6 +80,9 @@ public abstract class KrabApplet extends PApplet {
     private static String clipboardSliderFloat = "";
     private static String clipboardSliderXYZ = "";
     private static String clipboardPicker = "";
+    private final int KEY_CTRL_C = 3;
+    private final int KEY_CTRL_V = 22;
+    private final int KEY_CTRL_S = 19;
     private final boolean onWindows = System.getProperty("os.name").toLowerCase().startsWith("windows");
     private final float textSize = onWindows ? 24 : 48;
     private final float cell = onWindows ? 40 : 80;
@@ -110,6 +112,7 @@ public abstract class KrabApplet extends PApplet {
             new PVector(1, 0, 0),
             new PVector(0, 1, 0),
             new PVector(0, 0, 1)};
+    private final String videoOutputDir = "/out/video";
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
     protected float t;
@@ -603,7 +606,6 @@ public abstract class KrabApplet extends PApplet {
      * @return color split image
      */
     protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
-        group("color split");
 
         if (colorSplitResult == null || colorSplitResult.width != pg.width || colorSplitResult.height != pg.height) {
             colorSplitResult = createGraphics(pg.width, pg.height, P2D);
@@ -613,14 +615,28 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
-        if (toggle("skip")) {
-            if (drawResultOverInput) {
-                return pg;
-            } else {
-                return colorSplitResult;
+        colorSplitResult.beginDraw();
+        colorSplitResult.clear();
+        colorSplitResult.translate(colorSplitResult.width / 2f, colorSplitResult.height / 2f);
+        group("scale");
+        translate2D(colorSplitResult, "center");
+        PVector scale = sliderXYZ("offset", 1, 0.1f);
+        float commonScale = slider("common scale", 1, 0.1f);
+        if (toggle("set common scale", false)) {
+            scale.x = commonScale;
+            scale.y = commonScale;
+            scale.z = commonScale;
+        }
+        float[] scales = new float[]{scale.x, scale.y, scale.z};
+        if (toggle("force scales >= 1")) { //scales smaller than 1 can result in ugly edges
+            while (scales[0] < 1 || scales[1] < 1 || scales[2] < 1) {
+                scales[0] += .001;
+                scales[1] += .001;
+                scales[2] += .001;
             }
         }
 
+        group("colors");
         PVector multiplier = sliderXYZ("multiplier", 1);
         for (int i = 0; i < 3; i++) {
             PGraphics primaryColorCanvas = primaryColorCanvases[i];
@@ -628,35 +644,15 @@ public abstract class KrabApplet extends PApplet {
             primaryColorCanvas.clear();
             primaryColorCanvas.image(pg, 0, 0, width, height);
             PVector finalMultiplier = primaryColorMultipliers[i].copy();
-            if(i == 0) {
+            if (i == 0) {
                 finalMultiplier.x *= multiplier.x;
-            }else if(i == 1){
+            } else if (i == 1) {
                 finalMultiplier.y *= multiplier.y;
-            }else if(i == 2){
+            } else if (i == 2) {
                 finalMultiplier.z *= multiplier.z;
             }
             colorFilter(primaryColorCanvas, finalMultiplier);
             primaryColorCanvas.endDraw();
-        }
-        colorSplitResult.beginDraw();
-        colorSplitResult.clear();
-        colorSplitResult.translate(colorSplitResult.width / 2f, colorSplitResult.height / 2f);
-        translate2D(colorSplitResult, "scale center");
-        PVector scale = sliderXYZ("scale RGB", 1, 0.1f);
-        float commonScale = slider("common scale", 1, 0.1f);
-        if (toggle("move all scales", false)) {
-            scale.x = commonScale;
-            scale.y = commonScale;
-            scale.z = commonScale;
-        }
-        float[] scales = new float[]{scale.x, scale.y, scale.z};
-        if (toggle("force scales >= 1")) {
-            while (scales[0] < 1 || scales[1] < 1 || scales[2] < 1) {
-                //scales smaller than 1 result in ugly edges, we're more interested in the relative color scales anyway
-                scales[0] += .001;
-                scales[1] += .001;
-                scales[2] += .001;
-            }
         }
         for (int i = 0; i < 3; i++) {
             colorSplitResult.pushMatrix();
@@ -1206,29 +1202,39 @@ public abstract class KrabApplet extends PApplet {
         int frameRecordingEnd = frameRecordingStarted + frameRecordingDuration + 1;
         if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
             int frameNumber = frameCount - frameRecordingStarted + 1;
-            println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted - 1, "saved");
+            println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted, "saved");
             PImage currentSketch = pg.get();
             pg.save(captureDir + frameNumber + ".jpg");
-            boolean ffmpegEnabled = true;
-            if (frameCount == frameRecordingEnd - 1 && ffmpegEnabled) {
+            if (frameCount == frameRecordingEnd - 1) {
                 runFfmpeg();
             }
         }
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void runFfmpeg() {
+        if(!FFMPEG_ENABLED){
+            return;
+        }
         try {
-            String ffmpegCommand = "ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
-                    "E:/Sketches/" + captureDir + "%01d.jpg " +
-                    "E:/Sketches/out/video/" + id + ".mp4";
+            String sketchPath = sketchPath().replaceAll("\\\\", "/");
+            if (!sketchFile(videoOutputDir).exists()) {
+                sketchFile(videoOutputDir).mkdir();
+            }
+            String imageSequenceFormat = "%01d.jpg";
+            String ffmpegCommand = String.format("ffmpeg -framerate 60 -an -start_number_range 1000000 -i " +
+                            "%s/%s%s %s/%s.mp4", sketchPath, captureDir, imageSequenceFormat,
+                    sketchPath + videoOutputDir, id);
+            println();
+            println("running ffmpeg: " + ffmpegCommand);
             Process proc = Runtime.getRuntime().exec(ffmpegCommand);
             new Thread(() -> {
                 Scanner sc = new Scanner(proc.getErrorStream());
                 while (sc.hasNextLine()) {
                     println(sc.nextLine());
                 }
+                //TODO delete image sequence directory to save disk space
             }).start();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -1605,6 +1611,10 @@ public abstract class KrabApplet extends PApplet {
             if (key == 'k') {
                 frameRecordingStarted = frameCount + 1;
                 id = regenIdAndCaptureDir();
+            }
+            if(key == 'l'){
+                frameRecordingStarted = frameCount - frameRecordingDuration * 2;
+                runFfmpeg();
             }
             if (key == 'i') {
                 captureScreenshot = true;

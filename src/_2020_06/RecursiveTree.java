@@ -25,7 +25,7 @@ public class RecursiveTree extends KrabApplet {
             surface.setAlwaysOnTop(true);
         }
         pg = createGraphics(width, height, P2D);
-        frameRecordingDuration = 10000;
+        frameRecordingDuration = 1000;
     }
 
     public void draw() {
@@ -69,7 +69,6 @@ public class RecursiveTree extends KrabApplet {
         float size = slider("size", 100);
         float weight = slider("weight", 1);
         recordTime = t/sliderInt("time",30);
-        println(recordTime);
         branches.clear();
         PVector dir = new PVector(0, -size);
         Branch branch = new Branch(new PVector(), dir, weight, 0);
@@ -93,7 +92,7 @@ public class RecursiveTree extends KrabApplet {
                 float angleOffset = map(splitNorm, 0, 1, -angleRange, angleRange);
                 theta += angleOffset;
             }
-            PVector newTarget = new PVector(newSize*cos(theta), newSize*sin(theta)).add(parent.target.copy());
+            PVector newTarget = new PVector(newSize*cos(theta), newSize*sin(theta)).add(parent.target);
             Branch branch = new Branch(parent.target.copy(), newTarget, newWeight,parent.generation+1);
             addBranchesRecursively(branch, newSize);
             branches.add(branch);
