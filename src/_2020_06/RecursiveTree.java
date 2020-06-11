@@ -1,7 +1,6 @@
 package _2020_06;
 
 import applet.KrabApplet;
-import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
@@ -9,7 +8,7 @@ import java.util.ArrayList;
 
 public class RecursiveTree extends KrabApplet {
     private PGraphics pg;
-    private ArrayList<Branch> branches = new ArrayList<Branch>();
+    private final ArrayList<Branch> branches = new ArrayList<Branch>();
     private float recordTime;
 
     public static void main(String[] args) {
