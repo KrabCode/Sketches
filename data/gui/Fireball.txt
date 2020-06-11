@@ -112,3 +112,60 @@ color split§move R§100.0§0.0§0.0
 color split§move G§100.0§0.0§0.0
 color split§move B§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Fireball§false
+Fireball§record frames§0.0§100.0
+Fireball§fade to black§1.3770002§25.5
+Fireball§blur§1.1499996§10.0
+Fireball§translate§100.0§0.0§0.0§0.0
+Fireball§rotate§3.1415927§0.0§1.7592926§0.0
+Fireball§axis§0.10000001§0.0§0.0§0.026970005
+Fireball§speed§0.38999966§10.0
+GROUP§ramp§false
+ramp§vertical§1
+ramp§count§4.0§100.0
+ramp§1§0.014500001§0.0§1.0§0.0§10.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.014500001§0.0§1.0§0.0§10.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.014500001§0.0§1.0§0.0§10.0
+ramp§4§0.014500001§0.0§1.0§0.0§10.0
+GROUP§depth ramp§false
+depth ramp§count§4.0§100.0
+depth ramp§1§0.0§0.0§1.0§1.0§10.0
+depth ramp§2 §0.22333342§10.0
+depth ramp§2§0.0§0.0§1.0§1.0§10.0
+depth ramp§3 §0.46666688§10.0
+depth ramp§3§0.0§0.0§1.0§1.0§10.0
+depth ramp§4§1.1920929E-7§0.0§1.0§1.0§10.0
+GROUP§sphere§false
+sphere§n speed§10.0§0.0§0.0§0.0
+sphere§stroke§0.0§0.0§0.0§1.0§1.0
+sphere§weight§3.5400014§100.0
+sphere§count§1600.0§40000.0
+sphere§scale§179.38983§3000.0
+sphere§time§0.60248935§0.010000001
+sphere§mag§0.22000067§10.0
+sphere§freq§0.513598§100.0
+sphere§noise offset§245.72998§1000.0
+sphere§hollow§true
+sphere§core detail§19.939999§20.0
+sphere§core size§5.0§10.0
+GROUP§text§false
+text§value§
+text§font size§64.0§20.0
+text§fill§0.0§0.0§1.0§1.0§1.0
+text§pos§10000.0§-400.0§-880.0§71.599976
+GROUP§color split§false
+color split§skip§false
+color split§multiplier§0.1§0.9997997§0.98579884§0.94299954
+color split§scale center§100.0§-0.50000054§-0.40000063
+color split§scale RGB§0.1§1.0038991§1.0038991§1.0038991
+color split§common scale§1.0038991§0.1
+color split§move all scales§true
+color split§force scales >= 1§false
+color split§move R§100.0§0.0§0.0
+color split§move G§100.0§0.0§0.0
+color split§move B§100.0§0.0§0.0
+STATE_END

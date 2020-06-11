@@ -639,11 +639,6 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    protected void colorFilter(PGraphics toFilter, PVector multiplier) {
-        String filterShader = "shaders/filters/colorFilter.glsl";
-        uniform(filterShader).set("multiplier", multiplier);
-        hotFilter(filterShader, toFilter);
-    }
 
     /**
      * Takes any float and returns the positive fractional part of it, so the result is always between 0 and 1.
@@ -1108,16 +1103,16 @@ public abstract class KrabApplet extends PApplet {
         if(!FFMPEG_ENABLED){
             return;
         }
+        String sketchPath = sketchPath().replaceAll("\\\\", "/");
+        if (!sketchFile(videoOutputDir).exists()) {
+            sketchFile(videoOutputDir).mkdir();
+        }
+        String imageSequenceFormat = "%01d.jpg";
+        String command = String.format("ffmpeg -framerate 60 -an -start_number_range 100 -i %s/%s%s %s/%s.mp4",
+                sketchPath, captureDir, imageSequenceFormat, sketchPath + videoOutputDir, id);
+        println();
+        println("running ffmpeg: " + command);
         try {
-            String sketchPath = sketchPath().replaceAll("\\\\", "/");
-            if (!sketchFile(videoOutputDir).exists()) {
-                sketchFile(videoOutputDir).mkdir();
-            }
-            String imageSequenceFormat = "%01d.jpg";
-            String command = String.format("ffmpeg -framerate 60 -an -start_number_range 100 -i %s/%s%s %s/%s.mp4",
-                    sketchPath, captureDir, imageSequenceFormat, sketchPath + videoOutputDir, id);
-            println();
-            println("running ffmpeg: " + command);
             Process proc = Runtime.getRuntime().exec(command);
             new Thread(() -> {
                 Scanner sc = new Scanner(proc.getErrorStream());
@@ -1842,6 +1837,21 @@ public abstract class KrabApplet extends PApplet {
         uniform(split).set("sigma", slider("sigma", 0));
         uniform(split).set("blurSize", slider("blur size", 0));
         hotFilter(split, pg);
+    }
+
+    protected void chromaticAberrationPass(PGraphics pg) {
+        group("chromatic");
+        String shaderPath = "shaders/filters/chromaticAberration.glsl";
+        uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
+        uniform(shaderPath).set("outerEdge", slider("outer edge", 1));
+        uniform(shaderPath).set("intensity", slider("intensity", 0));
+        hotFilter(shaderPath, pg);
+    }
+
+    protected void colorFilter(PGraphics toFilter, PVector multiplier) {
+        String filterShader = "shaders/filters/colorFilter.glsl";
+        uniform(filterShader).set("multiplier", multiplier);
+        hotFilter(filterShader, toFilter);
     }
 
     // SHADER RELOADING

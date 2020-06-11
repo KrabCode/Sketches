@@ -44,6 +44,7 @@ public class RecursiveTree extends KrabApplet {
         displayTree();
         pg.endDraw();
         colorSplit(pg, true);
+        chromaticAberrationPass(pg);
         image(pg, 0, 0, width, height);
         rec(pg);
         gui();
