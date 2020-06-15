@@ -1,0 +1,41 @@
+STATE_BEGIN
+UNDO
+GROUP§Spring§true
+Spring§count§100.00008§1000.0
+Spring§step§100.0§0.5999955§-1.5999858
+Spring§weight§2.0600019§10.0
+Spring§stroke§0.0§0.0§1.0§1.0§1.0
+Spring§lerp§0.52§10.0
+GROUP§ramp§true
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Spring§true
+Spring§count§107.00003§1000.0
+Spring§step§100.0§0.0§-1.4000006
+Spring§weight§2.0600019§10.0
+Spring§stroke§0.0§0.0§1.0§1.0§1.0
+Spring§freq§1.0§0.010000039§0.057999976
+Spring§angle var§100.0§7.7999983§6.599998
+Spring§mag§10.0§0.4§0.2100013
+Spring§time radius§0.0§10.0
+Spring§lerp§0.21§10.0
+Spring§force§100.0§0.0§-1.4000025
+GROUP§ramp§true
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END

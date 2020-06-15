@@ -161,7 +161,7 @@ public abstract class KrabApplet extends PApplet {
         return floor(slider(name, defaultValue, precision, false, -Float.MAX_VALUE, Float.MAX_VALUE, true));
     }
 
-    protected int sliderInt(String name, int min, int max, int defaultValue) {
+    protected int sliderInt(String name, int defaultValue, int min, int max) {
         return floor(slider(name, defaultValue, numberOfDigitsInFlooredNumber(max) * 100, true, min, max, true));
     }
 
@@ -369,6 +369,7 @@ public abstract class KrabApplet extends PApplet {
         updateMouseState();
         pushStyle();
         pushMatrix();
+        blendMode(BLEND);
         strokeCap(SQUARE);
         colorMode(HSB, 1, 1, 1, 1);
         resetMatrixInAnyRenderer();
@@ -424,21 +425,32 @@ public abstract class KrabApplet extends PApplet {
         fadeToBlack(g);
     }
 
+    protected void fadeToBlack(PGraphics pg) {
+        fadeToBlack(pg, null);
+    }
+
+
+
     /**
      * Subtracts all colors from the image, resulting in a slow darkening of any image.
      * Leaves no gray traces as opposed to drawing a transparent black rectangle over the sketch.
      *
      * @param pg PGraphics to darken
      */
-    protected void fadeToBlack(PGraphics pg) {
+    protected void fadeToBlack(PGraphics pg, PGraphics ramp) {
         pg.pushStyle();
         pg.colorMode(HSB, 255, 255, 255, 255);
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
-        pg.noStroke();
-        pg.fill(255, slider("fade to black", 0, 255, 10));
-        pg.rectMode(CENTER);
-        pg.rect(0, 0, width * 2, height * 2);
+        if(ramp == null) {
+            pg.noStroke();
+            pg.fill(255, slider("fade to black", 0, 255, 10));
+            pg.rectMode(CENTER);
+            pg.rect(0, 0, width * 2, height * 2);
+        }else {
+            pg.imageMode(CORNER);
+            pg.image(ramp, 0, 0, pg.width, pg.height);
+        }
         pg.hint(ENABLE_DEPTH_TEST);
         pg.popStyle();
     }
@@ -1827,9 +1839,14 @@ public abstract class KrabApplet extends PApplet {
     // SHADERS
 
     protected void blurPass(PGraphics pg) {
-        String split = "shaders/filters/blur.glsl";
-        uniform(split).set("delta", slider("blur"));
-        hotFilter(split, pg);
+
+        group("blur");
+        String blur = "shaders/filters/blur.glsl";
+        uniform(blur).set("innerEdge", slider("inner edge", 0));
+        uniform(blur).set("outerEdge", slider("outer edge", 1));
+        uniform(blur).set("intensity", slider("intensity", 0));
+        hotFilter(blur, pg);
+        resetGroup();
     }
 
     protected void gaussBlurPass(PGraphics pg) {
@@ -1839,13 +1856,19 @@ public abstract class KrabApplet extends PApplet {
         hotFilter(split, pg);
     }
 
-    protected void chromaticAberrationPass(PGraphics pg) {
-        group("chromatic");
+    protected void chromaticAberrationPass(PGraphics pg){
+        chromaticAberrationPass(pg, 0);
+    }
+
+    protected void chromaticAberrationPass(PGraphics pg, float rotationOffset) {
+        group("chrom ab");
         String shaderPath = "shaders/filters/chromaticAberration.glsl";
+        uniform(shaderPath).set("rotation", slider("rotation", 0) + rotationOffset);
         uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
         uniform(shaderPath).set("outerEdge", slider("outer edge", 1));
         uniform(shaderPath).set("intensity", slider("intensity", 0));
         hotFilter(shaderPath, pg);
+        resetGroup();
     }
 
     protected void colorFilter(PGraphics toFilter, PVector multiplier) {
@@ -2994,30 +3017,30 @@ public abstract class KrabApplet extends PApplet {
             float tinySliderWidth = cell * 1.5f * (1 + tinySliderMarginCellFraction);
             float x = width - tinySliderWidth * tinySliderCount * (1 + tinySliderMarginCellFraction)
                     + tinySliderMarginCellFraction * tinySliderCount;
-            float h = cell * 4;
+            float tinySliderHeight = cell * 8;
             float tinySliderTopY =
-                    height - sliderHeight * .5f - cell * tinySliderMarginCellFraction - h * revealAnimation;
+                    height - sliderHeight * .5f - cell * tinySliderMarginCellFraction - tinySliderHeight * revealAnimation;
             float lastSat = hsba.sat;
-            hsba.sat = updateTinySlider(x, tinySliderTopY, tinySliderWidth, h, brightnessLocked, SATURATION);
+            hsba.sat = updateTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, brightnessLocked, SATURATION);
             if (hsba.sat != lastSat && !saturationLocked) {
                 brightnessLocked = true;
             }
             if (saturationLocked) {
                 hsba.sat = lastSat;
             }
-            displayTinySlider(x, tinySliderTopY, tinySliderWidth, cell * 4, hsba.sat, SATURATION,
+            displayTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, hsba.sat, SATURATION,
                     brightnessLocked);
 
             x += tinySliderWidth * 1.2f;
             float lastBr = hsba.br;
-            hsba.br = updateTinySlider(x, tinySliderTopY, tinySliderWidth, h, saturationLocked, BRIGHTNESS);
+            hsba.br = updateTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, saturationLocked, BRIGHTNESS);
             if (hsba.br != lastBr && !brightnessLocked) {
                 saturationLocked = true;
             }
             if (brightnessLocked) {
                 hsba.br = lastBr;
             }
-            displayTinySlider(x, tinySliderTopY, tinySliderWidth, cell * 4, hsba.br, BRIGHTNESS, saturationLocked);
+            displayTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, hsba.br, BRIGHTNESS, saturationLocked);
 
             displayInfiniteSliderCenterMode(height - height / 4f, width - sliderHeight * .5f, height / 2f, sliderHeight,
                     alphaPrecision, hsba.alpha, revealAnimation, false, false, false, 0, 1);

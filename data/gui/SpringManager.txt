@@ -1,0 +1,306 @@
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§10.0§200.0
+SpringManager§gauss§2.4899998§10.0
+SpringManager§count§94.97362§300.0
+SpringManager§step§100.0§2.9000008§12.499999
+SpringManager§weight§4.0§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§100.0§4.0§2.8999999
+SpringManager§angle var§100.0§0.0§0.0
+SpringManager§mag§100.0§0.0§0.0
+SpringManager§time radius§0.0§10.0
+SpringManager§force§100.0§0.0§0.0
+GROUP§ramp§true
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§10.0§200.0
+SpringManager§gauss§3.219999§10.0
+SpringManager§count§117.9767§300.0
+SpringManager§step§100.0§0.0§0.0
+SpringManager§weight§4.0§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§100.0§4.0§2.8999999
+SpringManager§angle var§100.0§0.0§0.0
+SpringManager§mag§100.0§0.0§0.0
+SpringManager§time radius§0.0§10.0
+SpringManager§force§100.0§0.0§0.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§66.017006§200.0
+SpringManager§gauss§4.3499985§10.0
+SpringManager§count§213.95721§300.0
+SpringManager§step§100.0§2.9000025§2.100005
+SpringManager§weight§5.2900004§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§100.0§4.0§2.8999999
+SpringManager§angle var§100.0§3.5§4.4
+SpringManager§mag§100.0§0.0§0.0
+SpringManager§time radius§0.0§10.0
+SpringManager§force§100.0§0.90000004§0.3
+SpringManager§lerp§0.0§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§21.000376§300.0
+SpringManager§gauss§256.66998§1000.0
+SpringManager§count§23.86599§300.0
+SpringManager§step§100.0§0.0§0.0
+SpringManager§weight§5.2900004§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§10.0§0.03999999§0.030000014
+SpringManager§angle var§100.0§1.000003§4.0
+SpringManager§mag§100.0§3.7999997§6.2999997
+SpringManager§time radius§0.0§10.0
+SpringManager§force§100.0§-7.7999997§2.5
+SpringManager§lerp§0.28999996§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§40.99978§300.0
+SpringManager§gauss§115.979996§100.0
+SpringManager§count§100.999565§200.0
+SpringManager§step§100.0§1.0§-0.20000204
+SpringManager§weight§3.7600002§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§10.0§0.31000027§0.05000002
+SpringManager§angle var§100.0§8.0§7.9999976
+SpringManager§mag§100.0§0.49999884§0.29999992
+SpringManager§time radius§0.8199999§10.0
+SpringManager§force§100.0§0.29999992§0.4
+SpringManager§lerp§0.39000002§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§100.0§300.0
+SpringManager§gauss§967.88§10000.0
+SpringManager§count§10.0§200.0
+SpringManager§step§100.0§0.49999973§0.59999996
+SpringManager§weight§3.7600002§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§10.0§0.020000266§0.09000002
+SpringManager§angle var§100.0§8.0§7.9999976
+SpringManager§mag§100.0§0.49999884§0.29999992
+SpringManager§time radius§0.8199999§10.0
+SpringManager§force§100.0§3.5999997§-2.1000006
+SpringManager§lerp§0.5100001§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§100.0§300.0
+SpringManager§gauss§967.88§10000.0
+SpringManager§count§10.0§200.0
+SpringManager§step§100.0§0.49999973§0.59999996
+SpringManager§weight§3.7600002§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§10.0§0.020000266§0.09000002
+SpringManager§angle var§100.0§8.0§7.9999976
+SpringManager§mag§100.0§0.49999884§0.29999992
+SpringManager§time radius§0.8199999§10.0
+SpringManager§force§100.0§3.5999997§-2.1000006
+SpringManager§lerp§0.5100001§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§100.0§0.0§0.0
+SpringManager§spring count§149.00327§300.0
+SpringManager§gauss§57.880005§10000.0
+SpringManager§count§30.769075§200.0
+SpringManager§step§10.0§1.0499995§1.0499995
+SpringManager§weight§3.7600002§10.0
+SpringManager§stroke§0.0§0.0§1.0§1.0§1.0
+SpringManager§freq§10.0§0.030000266§0.39999998
+SpringManager§angle var§100.0§3.4000084§3.0000038
+SpringManager§mag§100.0§0.49999884§0.29999992
+SpringManager§time radius§1.4199994§10.0
+SpringManager§force§100.0§-0.6§-1.6000001
+SpringManager§lerp§0.5099999§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§translate§1000.0§-714.8§-668.3
+SpringManager§spring count§301.0§1000.0
+SpringManager§gauss§147.65§1000.0
+SpringManager§count§27.974983§200.0
+SpringManager§step§100.0§12.520029§7.190047
+SpringManager§weight§1.4500017§10.0
+SpringManager§stroke§0.99850005§0.0§1.0§0.26200017§1.0
+SpringManager§freq§0.1§0.0072003617§0.25540707
+SpringManager§angle var§100.0§2.8000054§3.799998
+SpringManager§mag§10.0§1.5599978§0.55999875
+SpringManager§time radius§0.12599947§1.0
+SpringManager§force§100.0§4.2000003§6.4000015
+SpringManager§lerp§0.21000037§10.0
+GROUP§ramp§false
+ramp§vertical§0
+ramp§count§4.0§100.0
+ramp§1§0.0§0.0§0.0§1.0§1.0
+ramp§2 §0.33333334§10.0
+ramp§2§0.0§0.0§0.0§1.0§1.0
+ramp§3 §0.6666667§10.0
+ramp§3§0.0§0.0§0.0§1.0§1.0
+ramp§4§0.0§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§fade to black§5.8395023§25.5
+SpringManager§translate§1000.0§-793.9§-359.59998
+SpringManager§spring count§112.0§1000.0
+SpringManager§gauss§81.649994§1000.0
+SpringManager§count§38.00609§200.0
+SpringManager§step§100.0§1.3200334§1.590046
+SpringManager§weight§0.9600013§10.0
+SpringManager§stroke§0.99850005§0.0§1.0§0.26200017§1.0
+SpringManager§freq§10.0§0.0112004075§0.102207914
+SpringManager§angle var§100.0§2.1000068§14.299996
+SpringManager§mag§100.0§3.779997§0.75999826
+SpringManager§time radius§0.030457275§0.10000001
+SpringManager§force§100.0§29.600004§14.199982
+SpringManager§lerp§0.5499999§10.0
+GROUP§blur§true
+blur§inner edge§0.010000031§10.0
+blur§outer edge§0.43000013§10.0
+blur§intensity§6.5700035§100.0
+GROUP§chrom ab§true
+chrom ab§inner edge§-0.3200001§10.0
+chrom ab§outer edge§-0.08000097§10.0
+chrom ab§intensity§0.15999931§100.0
+GROUP§scale§true
+scale§center§100.0§-1.5000001§0.9999994
+scale§offset§0.1§1.0038§1.0038§1.0038
+scale§common scale§1.0038§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§SpringManager§true
+SpringManager§fade to black§45.51751§255.0
+SpringManager§translate§1000.0§-544.9§-223.59998
+SpringManager§spring count§85.0§1000.0
+SpringManager§gauss§91.649994§1000.0
+SpringManager§count§24.999954§200.0
+SpringManager§step§100.0§0.9200334§0.5900459
+SpringManager§weight§1.1300013§10.0
+SpringManager§stroke§0.005500166§0.0§1.0§1.0§1.0
+SpringManager§freq§10.0§0.18120041§0.48220786
+SpringManager§angle var§100.0§2.1000068§14.299996
+SpringManager§mag§100.0§3.779997§0.75999826
+SpringManager§time radius§0.030457275§0.10000001
+SpringManager§force§100.0§29.600004§14.199982
+SpringManager§lerp§1.0099996§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.0§10.0
+GROUP§chrom ab§true
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§1.4900001§100.0
+GROUP§scale§true
+scale§center§100.0§-1.5000001§0.9999994
+scale§offset§0.1§1.0038§1.0038§1.0038
+scale§common scale§1.0038§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END

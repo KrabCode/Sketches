@@ -429,3 +429,188 @@ chromatic§inner edge§8.940697E-8§10.0
 chromatic§outer edge§0.33000022§10.0
 chromatic§intensity§0.1840084§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§RecursiveTree§false
+RecursiveTree§fade to black§6.302507§25.5
+RecursiveTree§blur§0.17999955§10.0
+RecursiveTree§translate§100.0§0.0§0.0
+RecursiveTree§add§0
+RecursiveTree§stroke§0.95949835§0.0§0.35625§0.4500004§10.0
+RecursiveTree§size§153.31§300.0
+RecursiveTree§weight§0.8799998§10.0
+RecursiveTree§time§135.99974§200.0
+RecursiveTree§generations§3.9979062§100.0
+RecursiveTree§split count§5.999823§100.0
+RecursiveTree§angle range§0.2§10.0
+RecursiveTree§weight change§0.0§10.0
+RecursiveTree§size change§0.0§10.0
+RecursiveTree§copies§8.999771§100.0
+RecursiveTree§hidden generations§2.9999976§100.0
+RecursiveTree§print branch count§
+GROUP§scale§false
+scale§center§1.0§-0.49000022§-0.49999994
+scale§offset§0.1§1.0016274§1.0016274§1.0016274
+scale§common scale§1.0016274§0.10000001
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§1.0§0.99600005§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+GROUP§chromatic§false
+chromatic§inner edge§0.2099998§10.0
+chromatic§outer edge§0.6000002§10.0
+chromatic§intensity§1.288009§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§RecursiveTree§true
+RecursiveTree§fade to black§27.300163§255.0
+RecursiveTree§translate§100.0§0.0§0.0
+RecursiveTree§add§1
+RecursiveTree§stroke§0.95910776§0.0§1.0§1.0§10.0
+RecursiveTree§size§153.31§300.0
+RecursiveTree§weight§1.9503124§10.0
+RecursiveTree§time§135.99985§200.0
+RecursiveTree§generations§3.9979062§100.0
+RecursiveTree§split count§5.999823§100.0
+RecursiveTree§angle range§0.2§10.0
+RecursiveTree§weight change§0.0§10.0
+RecursiveTree§size change§0.0§10.0
+RecursiveTree§copies§8.999771§100.0
+RecursiveTree§hidden generations§2.9999976§100.0
+RecursiveTree§print branch count§
+GROUP§scale§false
+scale§center§1.0§-0.49000022§-0.49999994
+scale§offset§0.1§1.0016274§1.0016274§1.0016274
+scale§common scale§1.0016274§0.10000001
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+GROUP§chromatic§true
+chromatic§inner edge§-0.00390625§10.0
+chromatic§outer edge§0.70703125§10.0
+chromatic§intensity§1.1289062§100.0
+chromatic§blur§0.484375§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§RecursiveTree§true
+RecursiveTree§fade to black§22.910156§2550.0
+RecursiveTree§translate§100.0§0.0§0.0
+RecursiveTree§add§0
+RecursiveTree§stroke§0.9577407§0.0§0.15625§1.0§10.0
+RecursiveTree§size§125.185§300.0
+RecursiveTree§weight§3.41125§10.0
+RecursiveTree§time§102.005806§200.0
+RecursiveTree§generations§2.0142057§100.0
+RecursiveTree§split count§8.00001§100.0
+RecursiveTree§angle range§8.610157§10.0
+RecursiveTree§weight change§0.04296875§10.0
+RecursiveTree§size change§-12.1171875§100.0
+RecursiveTree§copies§6.9997344§100.0
+RecursiveTree§hidden generations§4.5594592E-5§100.0
+RecursiveTree§print branch count§
+GROUP§scale§false
+scale§center§1.0§-0.49000022§-0.49999994
+scale§offset§0.1§0.99799275§0.99799275§0.99799275
+scale§common scale§0.99799275§1.0000001
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+GROUP§chrom ab§true
+chrom ab§inner edge§0.04296875§10.0
+chrom ab§outer edge§0.55859375§10.0
+chrom ab§intensity§2.078125§100.0
+GROUP§blur§true
+blur§inner edge§0.09375§10.0
+blur§outer edge§0.4765625§10.0
+blur§intensity§13.8046875§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§RecursiveTree§true
+RecursiveTree§fade to black§17.55517§255.0
+RecursiveTree§translate§100.0§0.0§0.0
+RecursiveTree§add§0
+RecursiveTree§stroke§0.95624065§0.0§0.15625§1.0§10.0
+RecursiveTree§size§172.88509§300.0
+RecursiveTree§weight§3.41125§10.0
+RecursiveTree§time§50.99344§200.0
+RecursiveTree§generations§2.0171347§100.0
+RecursiveTree§split count§8.036193§100.0
+RecursiveTree§angle range§5.1901503§10.0
+RecursiveTree§weight change§0.04296875§10.0
+RecursiveTree§size change§-12.1171875§100.0
+RecursiveTree§copies§6.9997344§100.0
+RecursiveTree§hidden generations§2.0001094§100.0
+RecursiveTree§print branch count§
+GROUP§scale§false
+scale§center§1.0§-0.49000022§-0.49999994
+scale§offset§0.1§1.0014923§1.0014923§1.0014923
+scale§common scale§1.0014923§0.10000002
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§1.0§1.0§0.9879997§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+GROUP§chrom ab§false
+chrom ab§inner edge§0.04296875§10.0
+chrom ab§outer edge§0.55859375§10.0
+chrom ab§intensity§2.078125§100.0
+GROUP§blur§false
+blur§inner edge§0.063750006§10.0
+blur§outer edge§0.996562§10.0
+blur§intensity§10.004691§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§RecursiveTree§false
+RecursiveTree§fade to black§8.12017§255.0
+RecursiveTree§translate§100.0§0.0§0.0
+RecursiveTree§add§0
+RecursiveTree§stroke§0.95624065§0.0§0.146875§1.0§10.0
+RecursiveTree§size§172.88509§300.0
+RecursiveTree§weight§3.41125§10.0
+RecursiveTree§time§50.99344§200.0
+RecursiveTree§generations§2.0171347§100.0
+RecursiveTree§split count§6.000005§100.0
+RecursiveTree§angle range§5.1901503§10.0
+RecursiveTree§weight change§0.04296875§10.0
+RecursiveTree§size change§-12.1171875§100.0
+RecursiveTree§copies§6.9997344§100.0
+RecursiveTree§hidden generations§2.0001094§100.0
+RecursiveTree§print branch count§
+GROUP§scale§false
+scale§center§1.0§-0.49000022§-0.49999994
+scale§offset§0.1§1.0018913§1.0018913§1.0018913
+scale§common scale§1.0018913§0.10000002
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§1.0§1.0§0.9940002§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+GROUP§chrom ab§false
+chrom ab§rotation§-41.916§1.0
+chrom ab§inner edge§0.13296852§10.0
+chrom ab§outer edge§0.6585922§10.0
+chrom ab§intensity§1.7781334§100.0
+GROUP§blur§false
+blur§inner edge§0.18375017§10.0
+blur§outer edge§0.3765624§10.0
+blur§intensity§7.8047066§100.0
+STATE_END

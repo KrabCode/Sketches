@@ -1,0 +1,615 @@
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.605§255.0
+GROUP§points§false
+points§count§7000.0§100000.0
+points§r§299.9999§300.0
+points§stroke§0.0§0.0§1.0§1.0§1.0
+points§weight§1.5500004§10.0
+points§weight random§2.5699995§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§2.1100006§10.0
+GROUP§chrom ab§true
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§1.0700009§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.605§255.0
+GROUP§points§false
+points§count§7000.0§100000.0
+points§r§299.9999§300.0
+points§stroke§0.0§0.0§1.0§1.0§1.0
+points§weight§1.5500004§10.0
+points§weight random§2.5699995§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§2.1100006§10.0
+GROUP§chrom ab§true
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§1.0700009§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§3.57§255.0
+GROUP§points§false
+points§count§7000.0§100000.0
+points§r§299.9999§300.0
+points§stroke§0.0§0.0§1.0§1.0§1.0
+points§weight§1.5500004§10.0
+points§weight random§2.5699995§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8900001§10.0
+blur§intensity§1.6500022§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§1.31E-4§0.001
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§2.2299802§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§3.57§255.0
+GROUP§points§true
+points§count§4300.0§100000.0
+points§r§299.9999§300.0
+points§stroke§0.0§0.0§1.0§1.0§1.0
+points§weight§1.5500004§10.0
+points§weight random§2.5699995§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8900001§10.0
+blur§intensity§1.6500022§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§1.31E-4§0.001
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§2.2299802§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§3.8250008§255.0
+GROUP§points§true
+points§count§4300.0§100000.0
+points§r§299.9999§300.0
+points§stroke§0.0§0.0§1.0§1.0§1.0
+points§weight§1.5500004§10.0
+points§weight random§2.5699995§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8900001§10.0
+blur§intensity§1.6500022§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§1.31E-4§0.001
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§2.2299802§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§3.8250008§255.0
+GROUP§points§true
+points§count§1600.0§100000.0
+points§r§299.9999§300.0
+points§center force§-0.008999998§1.0
+points§freq§0.1§10.0
+points§angle var§1.0§10.0
+points§noise mag§0.0§10.0
+points§copies§8.025046§100.0
+points§stroke§0.0§0.0§1.0§1.0§1.0
+points§weight§1.5500004§10.0
+points§weight random§2.5699995§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8900001§10.0
+blur§intensity§1.6500022§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§1.31E-4§0.001
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§2.2299802§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§1.5299995§25.5
+Chromab§add§0
+GROUP§points§true
+points§count§670.0§10000.0
+points§r§130.79993§3000.0
+points§center force§-0.005109998§0.10000001
+points§freq§1.7862483E-5§0.010000001
+points§angle var§5.240008§100.0
+points§noise mag§0.54000026§10.0
+points§copies§8.000119§100.0
+points§stroke§0.9845§0.0§0.21875§1.0§1.0
+points§weight§1.010001§10.0
+points§weight random§1.6699992§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8900001§10.0
+blur§intensity§1.0099999§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§-0.060000032§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§1.3299799§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.4735005§25.5
+Chromab§add§0
+GROUP§points§true
+points§count§670.0§10000.0
+points§r§130.79993§3000.0
+points§center force§-0.0013099976§0.10000001
+points§freq§1.7862483E-5§0.010000001
+points§angle var§5.240008§100.0
+points§noise mag§0.54000026§10.0
+points§copies§12.007064§100.0
+points§stroke§0.9845§0.0§0.275§1.0§1.0
+points§weight§1.010001§10.0
+points§weight random§1.6699992§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8900001§10.0
+blur§intensity§0.4700002§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§-0.060000032§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§1.2299786§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.4989965§25.5
+Chromab§add§0
+GROUP§points§false
+points§count§370.0§10000.0
+points§r§138.32997§300.0
+points§center force§-0.0063099973§1.0000001
+points§freq§0.5498489§10.000001
+points§angle var§9.640009§1000.0
+points§noise mag§0.40000027§1.0
+points§copies§12.00001§100.0
+points§stroke§0.059499998§0.0§0.20625§1.0§10.0
+points§weight§1.800001§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§true
+blur§inner edge§0.4§10.0
+blur§outer edge§1.0100003§10.0
+blur§intensity§3.609996§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§-6.7700005§10.0
+chrom ab§inner edge§-0.09999988§10.0
+chrom ab§outer edge§0.96000004§10.0
+chrom ab§intensity§3.12998§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.4989965§25.5
+Chromab§add§0
+GROUP§points§false
+points§count§370.0§10000.0
+points§r§138.32997§300.0
+points§center force§-0.0063099973§1.0000001
+points§freq§0.5498489§10.000001
+points§angle var§9.640009§1000.0
+points§noise mag§0.40000027§1.0
+points§copies§12.00001§100.0
+points§stroke§0.059499998§0.0§0.20625§1.0§10.0
+points§weight§1.800001§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§true
+blur§inner edge§0.4§10.0
+blur§outer edge§1.0100003§10.0
+blur§intensity§3.609996§10.0
+GROUP§chrom ab§true
+chrom ab§rotation§-6.7700005§10.0
+chrom ab§inner edge§-0.09999988§10.0
+chrom ab§outer edge§0.96000004§10.0
+chrom ab§intensity§3.12998§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.0909956§25.5
+Chromab§add§0
+GROUP§points§true
+points§count§600.0§10000.0
+points§r§68.130005§300.0
+points§center force§-0.0013099961§0.10000002
+points§freq§0.007872964§0.10000002
+points§angle var§0.32001156§10.0
+points§noise mag§0.5950014§10.0
+points§copies§8.99999§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§weight§0.9600022§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8400005§10.0
+blur§intensity§1.2199997§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§1.0000012§100.0
+chrom ab§rotation§-8.890008§10.0
+chrom ab§inner edge§-0.09999988§10.0
+chrom ab§outer edge§0.96000004§10.0
+chrom ab§intensity§0.5299809§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§fade to black§2.0909956§25.5
+Chromab§add§0
+GROUP§points§true
+points§count§600.0§10000.0
+points§r§68.130005§300.0
+points§center force§-0.0013099961§0.10000002
+points§freq§0.007872964§0.10000002
+points§angle var§0.32001156§10.0
+points§noise mag§0.5950014§10.0
+points§copies§8.99999§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§weight§0.9600022§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§0.8400005§10.0
+blur§intensity§1.2199997§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§1.0000012§100.0
+chrom ab§rotation§-8.890008§10.0
+chrom ab§inner edge§-0.09999988§10.0
+chrom ab§outer edge§0.96000004§10.0
+chrom ab§intensity§0.5299809§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§true
+fade ramp§vertical§1
+fade ramp§count§4.0§100.0
+fade ramp§1§0.9909999§0.0§0.021875§1.0§1.0
+fade ramp§2 §0.4833331§10.0
+fade ramp§2§0.9909999§0.0§0.0§1.0§1.0
+fade ramp§3 §0.4866668§10.0
+fade ramp§3§0.9909999§0.0§0.00625§1.0§1.0
+fade ramp§4§0.9909999§0.0§0.084375§1.0§1.0
+GROUP§fade§false
+fade§add§0
+GROUP§points§false
+points§count§600.0§10000.0
+points§r§68.130005§300.0
+points§center force§-0.0013099961§0.10000002
+points§freq§0.007872964§0.10000002
+points§angle var§0.32001156§10.0
+points§noise mag§0.5950014§10.0
+points§copies§8.99999§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§weight§0.9600022§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.0§10.0
+GROUP§chrom ab§true
+chrom ab§chromab time§1.0000012§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§-0.2399999§10.0
+chrom ab§outer edge§0.48000038§10.0
+chrom ab§intensity§0.22998068§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§true
+fade ramp§vertical§1
+fade ramp§count§10.934306§100.0
+fade ramp§1§0.0§0.0§0.05§1.0§1.0
+fade ramp§2 §0.07333338§10.0
+fade ramp§2§0.17950006§0.0§0.00625§1.0§1.0
+fade ramp§3 §0.42666638§10.0
+fade ramp§3§0.5730001§0.359375§0.065625§0.51900005§1.0
+fade ramp§4§0.8409999§0.0§0.0§1.0§1.0
+fade ramp§4 §0.31000075§10.0
+fade ramp§5§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§5 §0.73§10.0
+fade ramp§6§0.0§0.0§0.0§1.0§1.0
+fade ramp§6 §0.72333354§10.0
+fade ramp§7§0.0§0.0§0.05§1.0§1.0
+fade ramp§7 §0.5371433§10.0
+fade ramp§8§0.0§0.0§0.0§1.0§1.0
+fade ramp§8 §0.5150013§10.0
+fade ramp§9§0.85999984§0.0§0.1375§1.0§1.0
+fade ramp§9 §3.128888§10.0
+fade ramp§10§0.0§0.0§1.0§1.0§1.0
+GROUP§fade§true
+fade§add§0
+GROUP§points§true
+points§count§1000.0§10000.0
+points§r§68.130005§300.0
+points§center force§-0.0041099973§0.10000002
+points§freq§0.007872964§0.10000002
+points§angle var§0.2200116§10.0
+points§noise mag§0.13500145§10.0
+points§copies§8.99999§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§weight§0.9600022§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.87000144§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§0.0§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§true
+fade ramp§vertical§1
+fade ramp§count§10.934306§100.0
+fade ramp§1§0.0§0.0§0.05§1.0§1.0
+fade ramp§2 §0.07333338§10.0
+fade ramp§2§0.17950006§0.0§0.00625§1.0§1.0
+fade ramp§3 §0.42666638§10.0
+fade ramp§3§0.5730001§0.359375§0.065625§0.51900005§1.0
+fade ramp§4§0.8409999§0.0§0.0§1.0§1.0
+fade ramp§4 §0.31000075§10.0
+fade ramp§5§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§5 §0.73§10.0
+fade ramp§6§0.0§0.0§0.0§1.0§1.0
+fade ramp§6 §0.72333354§10.0
+fade ramp§7§0.0§0.0§0.05§1.0§1.0
+fade ramp§7 §0.5371433§10.0
+fade ramp§8§0.0§0.0§0.0§1.0§1.0
+fade ramp§8 §0.5150013§10.0
+fade ramp§9§0.85999984§0.0§0.1375§1.0§1.0
+fade ramp§9 §3.128888§10.0
+fade ramp§10§0.0§0.0§1.0§1.0§1.0
+GROUP§fade§true
+fade§add§0
+GROUP§points§true
+points§count§1000.0§10000.0
+points§r§68.130005§300.0
+points§center force§-0.0041099973§0.10000002
+points§freq§0.007872964§0.10000002
+points§angle var§0.2200116§10.0
+points§noise mag§0.13500145§10.0
+points§copies§8.99999§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§weight§0.9600022§10.0
+points§weight random§1.999999§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.87000144§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§0.0§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§true
+fade ramp§vertical§1
+fade ramp§count§10.934306§100.0
+fade ramp§1§0.0§0.0§0.05§1.0§1.0
+fade ramp§2 §0.07333338§10.0
+fade ramp§2§0.17950006§0.0§0.00625§1.0§1.0
+fade ramp§3 §0.42666638§10.0
+fade ramp§3§0.5730001§0.359375§0.065625§0.51900005§1.0
+fade ramp§4 §0.31000075§10.0
+fade ramp§4§0.8409999§0.0§0.0§1.0§1.0
+fade ramp§5 §0.73§10.0
+fade ramp§5§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§6 §0.72333354§10.0
+fade ramp§6§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§7 §0.36714312§10.0
+fade ramp§7§0.1985001§0.359375§0.0§1.0§10.0
+fade ramp§8 §0.58500147§10.0
+fade ramp§8§0.22900009§0.33125§0.059375§1.0§10.0
+fade ramp§9 §0.6788902§10.0
+fade ramp§9§0.22900009§0.753125§0.0375§1.0§10.0
+fade ramp§10§0.22900009§0.0§1.0§1.0§10.0
+GROUP§fade§false
+fade§add§0
+GROUP§points§false
+points§count§760.0§10000.0
+points§r§26.639988§300.0
+points§center force§-0.006409997§0.10000002
+points§freq§0.03827297§0.10000002
+points§angle var§0.2200116§10.0
+points§noise mag§0.13500145§10.0
+points§copies§8.001304§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§fade in frames§100.01806§200.0
+points§weight§0.5200026§10.0
+points§weight random§2.6799984§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.87000144§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§0.0§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§true
+fade ramp§vertical§1
+fade ramp§count§10.934306§100.0
+fade ramp§1§0.0§0.0§0.05§1.0§1.0
+fade ramp§2 §0.07333338§10.0
+fade ramp§2§0.17950006§0.0§0.00625§1.0§1.0
+fade ramp§3 §0.42666638§10.0
+fade ramp§3§0.5730001§0.359375§0.065625§0.51900005§1.0
+fade ramp§4 §0.31000075§10.0
+fade ramp§4§0.8409999§0.0§0.0§1.0§1.0
+fade ramp§5 §0.73§10.0
+fade ramp§5§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§6 §0.72333354§10.0
+fade ramp§6§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§7 §0.36714312§10.0
+fade ramp§7§0.1985001§0.359375§0.0§1.0§10.0
+fade ramp§8 §0.58500147§10.0
+fade ramp§8§0.22900009§0.33125§0.059375§1.0§10.0
+fade ramp§9 §0.6788902§10.0
+fade ramp§9§0.22900009§0.753125§0.0375§1.0§10.0
+fade ramp§10§0.22900009§0.0§1.0§1.0§10.0
+GROUP§fade§false
+fade§add§0
+GROUP§points§false
+points§count§760.0§10000.0
+points§r§26.639988§300.0
+points§center force§-0.006409997§0.10000002
+points§freq§0.03827297§0.10000002
+points§angle var§0.2200116§10.0
+points§noise mag§0.13500145§10.0
+points§copies§8.001304§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§fade in frames§100.01806§200.0
+points§weight§0.5200026§10.0
+points§weight random§2.6799984§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.87000144§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§0.0§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§true
+fade ramp§vertical§1
+fade ramp§count§10.934306§100.0
+fade ramp§1§0.0§0.0§0.05§1.0§1.0
+fade ramp§2 §0.07333338§10.0
+fade ramp§2§0.17950006§0.0§0.00625§1.0§1.0
+fade ramp§3 §0.42666638§10.0
+fade ramp§3§0.5730001§0.359375§0.065625§0.51900005§1.0
+fade ramp§4 §0.31000075§10.0
+fade ramp§4§0.8409999§0.0§0.0§1.0§1.0
+fade ramp§5 §0.73§10.0
+fade ramp§5§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§6 §0.72333354§10.0
+fade ramp§6§0.21600012§0.359375§0.065625§0.1700001§1.0
+fade ramp§7 §0.36714312§10.0
+fade ramp§7§0.1985001§0.359375§0.0§1.0§10.0
+fade ramp§8 §0.58500147§10.0
+fade ramp§8§0.22900009§0.33125§0.059375§1.0§10.0
+fade ramp§9 §0.6788902§10.0
+fade ramp§9§0.22900009§0.753125§0.0375§1.0§10.0
+fade ramp§10§0.22900009§0.0§1.0§1.0§10.0
+GROUP§fade§false
+fade§add§0
+GROUP§points§false
+points§count§760.0§10000.0
+points§r§26.639988§300.0
+points§center force§-0.006409997§0.10000002
+points§freq§0.03827297§0.10000002
+points§angle var§0.2200116§10.0
+points§noise mag§0.13500145§10.0
+points§copies§8.001304§100.0
+points§stroke§0.059499998§0.0§0.475§1.0§10.0
+points§fade in frames§100.01806§200.0
+points§weight§0.5200026§10.0
+points§weight random§2.6799984§10.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.87000144§10.0
+GROUP§chrom ab§false
+chrom ab§chromab time§0.0§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+GROUP§fade ramp§false
+fade ramp§vertical§1
+fade ramp§count§5.9999523§100.0
+fade ramp§1§0.99980456§0.0§0.00625§1.0§1.0
+fade ramp§2 §0.1814236§10.0
+fade ramp§2§0.99980456§0.0§0.00625§1.0§1.0
+fade ramp§3 §0.6675347§10.0
+fade ramp§3§0.99980456§0.0§0.00625§1.0§1.0
+fade ramp§4 §0.7083334§10.0
+fade ramp§4§0.99980456§0.0§0.00625§1.0§1.0
+fade ramp§5 §0.44444445§10.0
+fade ramp§5§0.99980456§0.0§0.00625§1.0§1.0
+fade ramp§6 §1.0358336§10.0
+fade ramp§6§0.99980456§0.0§0.00625§1.0§1.0
+fade ramp§7 §0.9101119§10.0
+fade ramp§7§0.19986728§0.0§1.0§1.0§10.0
+fade ramp§8 §1.452189§10.0
+fade ramp§8§0.22900009§0.265625§1.0§1.0§10.0
+fade ramp§9 §0.6788902§10.0
+fade ramp§9§0.22900009§0.753125§0.0375§1.0§10.0
+fade ramp§10§0.22900009§0.0§1.0§1.0§10.0
+fade ramp§10 §0.9§10.0
+fade ramp§11§0.0§0.0§0.0§1.0§1.0
+fade ramp§11 §0.90909094§10.0
+fade ramp§12§0.0§0.0§0.0§1.0§1.0
+fade ramp§12 §0.9166667§10.0
+fade ramp§13§0.0§0.0§0.0§1.0§1.0
+GROUP§fade§false
+fade§add§0
+GROUP§points§false
+points§count§558.0006§1000.0
+points§r§413.35873§3000.0
+points§center force§-0.004105309§0.10000002
+points§freq§0.0156252§1.0
+points§angle var§3.8411102§100.0
+points§noise mag§1.0261343§10.0
+points§copies§8.995403§1000.0
+points§stroke§0.631961§0.54375§0.4375§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§0.96922135§10.0
+points§weight random§3.8557796§100.0
+GROUP§blur§false
+blur§inner edge§0.10546875§10.0
+blur§outer edge§0.48828125§10.0
+blur§intensity§2.4726562§10.0
+GROUP§chrom ab§true
+chrom ab§chromab time§0.99057734§100.0
+chrom ab§rotation§0.0§10.0
+chrom ab§inner edge§0.0§10.0
+chrom ab§outer edge§1.0§10.0
+chrom ab§intensity§4.7734375§100.0
+STATE_END

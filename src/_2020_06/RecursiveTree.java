@@ -16,6 +16,7 @@ public class RecursiveTree extends KrabApplet {
     }
 
     public void settings() {
+//        fullScreen(P2D, 1);
         size(1000, 1000, P2D);
     }
 
@@ -30,7 +31,6 @@ public class RecursiveTree extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         fadeToBlack(pg);
-        blurPass(pg);
         translateToCenter(pg);
         translate2D(pg);
         if(options("add", "replace").equals("add")){
@@ -44,6 +44,7 @@ public class RecursiveTree extends KrabApplet {
         pg.endDraw();
         colorSplit(pg, true);
         chromaticAberrationPass(pg);
+        blurPass(pg);
         image(pg, 0, 0, width, height);
         rec(pg);
         gui();

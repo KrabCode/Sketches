@@ -6,12 +6,16 @@ precision mediump int;
 #define PROCESSING_TEXTURE_SHADER
 
 uniform sampler2D texture;
-uniform float delta;
 uniform vec2 resolution;
+uniform float innerEdge;
+uniform float outerEdge;
+uniform float intensity;
 
 void main(void) {
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-    float offset = delta / resolution.x;
+    vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
+    float offset = 1. / resolution.x;
+    offset  *= 1. + intensity*smoothstep(innerEdge, outerEdge, length(cv));
     // Grouping texcoord variables in order to make it work in the GMA 950. See post #13
     // in this thread:
     // http://www.idevgames.com/forums/thread-3467.html
