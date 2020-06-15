@@ -11,8 +11,8 @@ public class GradientTest extends KrabApplet {
     }
 
     public void settings() {
-//        size(1000, 1000, P2D);
-        fullScreen(P2D);
+        size(1000, 1000, P2D);
+//        fullScreen(P2D);
     }
 
     public void setup() {
@@ -24,10 +24,7 @@ public class GradientTest extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        pg.background(slider("background"));
-        for (int i = 0; i < slider("count"); i++) {
-            float x = sqrt(200*200);
-        }
+        pg.image(gradient("grad",4, GradientType.HORIZONTAL), 0, 0);
         pg.endDraw();
         image(pg, 0, 0, width, height);
         rec(pg);

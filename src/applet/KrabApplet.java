@@ -193,7 +193,7 @@ public abstract class KrabApplet extends PApplet {
         return slider(name, defaultValue, max - min, true, min, max, false);
     }
 
-    protected float slider(String name,  float min, float max, float defaultValue, float precision) {
+    protected float slider(String name, float min, float max, float defaultValue, float precision) {
         return slider(name, defaultValue, precision, true, min, max, false);
     }
 
@@ -299,6 +299,28 @@ public abstract class KrabApplet extends PApplet {
         return new HSBA();
     }
 
+    protected PGraphics gradient(String name, int defaultColorCount) {
+        return gradient(name, defaultColorCount, width, height, GradientType.VERTICAL);
+    }
+
+    protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
+        return gradient(name, defaultColorCount, width, height, defaultType);
+    }
+
+    protected PGraphics gradient(String name, int defaultColorCount, int w, int h, GradientType defaultType) {
+        Group currentGroup = getCurrentGroup();
+        if (elementDoesntExist(name, currentGroup.name)) {
+            GradientPicker newElement = new GradientPicker(currentGroup, name, defaultColorCount, w, h, defaultType);
+            currentGroup.elements.add(newElement);
+        }
+        GradientPicker gradientPicker = (GradientPicker) findElement(name, currentGroup.name);
+        if (gradientPicker != null) {
+            return gradientPicker.getTexture();
+        }
+        println("gradient picker was not found");
+        return null;
+    }
+
     // the first parameter becomes the name of the element and must be unique within the current group
     protected String options(String defaultValue, String... otherValues) {
         Group currentGroup = getCurrentGroup();
@@ -373,14 +395,14 @@ public abstract class KrabApplet extends PApplet {
         colorMode(HSB, 1, 1, 1, 1);
         updateFps();
         resetMatrixInAnyRenderer();
+        resetKeyboardLock();
         hint(DISABLE_DEPTH_TEST);
         updateTrayBackground();
-        resetKeyboardLock();
+        updateMenuButtons();
         updateGroupsAndTheirElements();
         if (overlayVisible && trayVisible) {
             overlayOwner.updateOverlay();
         }
-        updateMenuButtons();
         updateScrolling();
         hint(ENABLE_DEPTH_TEST);
         popStyle();
@@ -430,7 +452,6 @@ public abstract class KrabApplet extends PApplet {
     }
 
 
-
     /**
      * Subtracts all colors from the image, resulting in a slow darkening of any image.
      * Leaves no gray traces as opposed to drawing a transparent black rectangle over the sketch.
@@ -442,12 +463,12 @@ public abstract class KrabApplet extends PApplet {
         pg.colorMode(HSB, 255, 255, 255, 255);
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
-        if(ramp == null) {
+        if (ramp == null) {
             pg.noStroke();
             pg.fill(255, slider("fade to black", 0, 255, 10));
             pg.rectMode(CENTER);
             pg.rect(0, 0, width * 2, height * 2);
-        }else {
+        } else {
             pg.imageMode(CORNER);
             pg.image(ramp, 0, 0, pg.width, pg.height);
         }
@@ -700,7 +721,6 @@ public abstract class KrabApplet extends PApplet {
     protected float hash(float seed) {
         return abs(sin(seed * 323.121f) * 454.123f) % 1;
     }
-
 
 
     /**
@@ -1112,7 +1132,7 @@ public abstract class KrabApplet extends PApplet {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     private void runFfmpeg() {
-        if(!FFMPEG_ENABLED){
+        if (!FFMPEG_ENABLED) {
             return;
         }
         String sketchPath = sketchPath().replaceAll("\\\\", "/");
@@ -1144,20 +1164,20 @@ public abstract class KrabApplet extends PApplet {
         int nonFlickeringFrameRate = floor(frameRate > 55 ? 60 : frameRate);
         String fps = nonFlickeringFrameRate + " fps";
         surface.setTitle(this.getClass().getSimpleName() + " " + fps);
-        if(isFullscreen()) {
+        if (isFullscreen()) {
             pushStyle();
-            colorMode(HSB,1,1,1,1);
+            colorMode(HSB, 1, 1, 1, 1);
             textSize(textSize);
             textAlign(LEFT, CENTER);
             fill(0);
-            text(fps, trayWidth+cell*.5f,cell*.5f);
+            text(fps, trayWidth + cell * .5f, cell * .5f);
             fill(GRAYSCALE_TEXT_SELECTED);
-            text(fps, trayWidth+cell*.45f,cell*.45f);
+            text(fps, trayWidth + cell * .45f, cell * .45f);
             popStyle();
         }
     }
 
-    private boolean isFullscreen(){
+    private boolean isFullscreen() {
         return width == displayWidth;
     }
 
@@ -1512,7 +1532,7 @@ public abstract class KrabApplet extends PApplet {
                 frameRecordingStarted = frameCount + 1;
                 id = regenIdAndCaptureDir();
             }
-            if(key == 'l'){
+            if (key == 'l') {
                 frameRecordingStarted = frameCount - frameRecordingDuration * 2;
                 runFfmpeg();
             }
@@ -1757,7 +1777,7 @@ public abstract class KrabApplet extends PApplet {
                 }
                 group.setState(state);
             } else {
-                if(elementDoesntExist(splitState[1], splitState[0])){
+                if (elementDoesntExist(splitState[1], splitState[0])) {
                     continue;
                 }
                 Element el = findElement(splitState[1], splitState[0]);
@@ -1871,7 +1891,7 @@ public abstract class KrabApplet extends PApplet {
         hotFilter(split, pg);
     }
 
-    protected void chromaticAberrationPass(PGraphics pg){
+    protected void chromaticAberrationPass(PGraphics pg) {
         chromaticAberrationPass(pg, 0);
     }
 
@@ -1954,6 +1974,24 @@ public abstract class KrabApplet extends PApplet {
     }
 
     // CLASSES
+
+    protected enum GradientType {
+        VERTICAL,
+        HORIZONTAL,
+        CIRCULAR
+    }
+
+    private static class Key {
+        boolean justPressed;
+        boolean coded;
+        int character;
+
+        Key(Integer character, boolean coded) {
+            this.character = character;
+            this.coded = coded;
+            this.justPressed = true;
+        }
+    }
 
     private class ShaderSnapshot {
         String fragPath;
@@ -2050,18 +2088,6 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private static class Key {
-        boolean justPressed;
-        boolean coded;
-        int character;
-
-        Key(Integer character, boolean coded) {
-            this.character = character;
-            this.coded = coded;
-            this.justPressed = true;
-        }
-    }
-
     private class Group {
         String name;
         int animationStarted = -GROUP_TOGGLE_ANIMATION_DURATION;
@@ -2126,6 +2152,9 @@ public abstract class KrabApplet extends PApplet {
             this.name = name;
         }
 
+        protected Element() {
+        }
+
         void keyPressed() {
 
         }
@@ -2180,7 +2209,8 @@ public abstract class KrabApplet extends PApplet {
 
         void underlineAnimation(float startFrame, float x, float y) {
             float fullWidth = textWidth(name);
-            float animation = easedAnimation(startFrame, KrabApplet.UNDERLINE_TRAY_ANIMATION_DURATION, UNDERLINE_TRAY_ANIMATION_EASING);
+            float animation = easedAnimation(startFrame, KrabApplet.UNDERLINE_TRAY_ANIMATION_DURATION,
+                    UNDERLINE_TRAY_ANIMATION_EASING);
             float w = fullWidth * animation;
             float centerX = x + fullWidth * .5f;
             strokeWeight(2);
@@ -2381,9 +2411,127 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
+    private class TextInput extends Element {
+        private final float overlayTextSize = 24;
+        private String value;
+
+        TextInput(Group currentGroup, String name, String defaultValue) {
+            super(currentGroup, name);
+            this.name = name;
+            this.value = defaultValue;
+        }
+
+        @Override
+        boolean canHaveOverlay() {
+            return true;
+        }
+
+        void updateOverlay() {
+            super.updateOverlay();
+            displayOverlay();
+        }
+
+        void handleActions() {
+            if (previousActionsContainsLockAware(ACTION_PASTE)) {
+                pasteFromClipboardToValue();
+            } else if (previousActionsContainsLockAware(ACTION_COPY)) {
+                copyFromValueToClipboard();
+            }
+        }
+
+        private void copyFromValueToClipboard() {
+            try {
+                Toolkit.getDefaultToolkit()
+                        .getSystemClipboard()
+                        .setContents(
+                                new StringSelection(value),
+                                null
+                        );
+            } catch (Exception ignored) {
+            }
+        }
+
+        private void pasteFromClipboardToValue() {
+            Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard();
+            Transferable t = c.getContents(this);
+            if (t == null)
+                return;
+            try {
+                ArrayList<DataFlavor> availableDataFlavors = new ArrayList<>(Arrays.asList(t.getTransferDataFlavors()));
+                if (availableDataFlavors.contains(DataFlavor.stringFlavor)) {
+                    value += (String) t.getTransferData(DataFlavor.stringFlavor);
+                }
+            } catch (Exception ignored) {
+            }
+        }
+
+        void keyPressed() {
+            // println("coded: " + (key == CODED), (int) key, keyCode);
+            if (!overlayVisible || !trayVisible || key == KEY_CTRL_C || key == KEY_CTRL_V) {
+                return;
+            }
+            if (key == BACKSPACE) {
+                if (value.length() > 0) {
+                    value = value.substring(0, value.length() - 1);
+                }
+            } else if (key == DELETE) {
+                value = "";
+            } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT) {
+                value = value + key;
+            }
+        }
+
+        private void displayOverlay() {
+            keyboardLockedByTextEditor = true;
+            float overlayHeight = textHeightPlusPadding();
+            pushStyle();
+            noStroke();
+            fill(0, BACKGROUND_ALPHA);
+            rectMode(CORNER);
+            rect(trayWidth, height - overlayHeight, width - trayWidth, overlayHeight);
+            float x = width / 2f;
+            float y = height - overlayHeight / 2;
+            fill(GRAYSCALE_TEXT_SELECTED);
+            textAlign(CENTER, CENTER);
+            textSize(overlayTextSize);
+            String displayValue = value;
+            displayValue = displayValue.replaceAll(" ", "·");
+            text(displayValue, x, y);
+            popStyle();
+        }
+
+        private float textHeightPlusPadding() {
+            int newLineCount = 0;
+            for (char c : value.toCharArray()) {
+                if (c == '\n') {
+                    newLineCount++;
+                }
+            }
+            return overlayTextSize + newLineCount * overlayTextSize + cell * 2;
+        }
+
+        String getState() {
+            return super.getState() + value.replace("\n", NEWLINE_PLACEHOLDER);
+        }
+
+        void setState(String state) {
+            String[] split = state.split(SEPARATOR);
+            if (split.length >= 3) {
+                String valueToSet = split[2];
+                value = valueToSet.replaceAll(NEWLINE_PLACEHOLDER, "\n");
+            } else {
+                value = "";
+            }
+        }
+    }
+
     private abstract class Slider extends Element {
         Slider(Group parent, String name) {
             super(parent, name);
+        }
+
+        protected Slider() {
+
         }
 
         void updateOverlay() {
@@ -2878,7 +3026,7 @@ public abstract class KrabApplet extends PApplet {
             lockOtherSlidersOnMouseOver();
             value.x += deltaX;
             value.y += deltaY;
-            if(isMouseOverZSlider()){
+            if (isMouseOverZSlider()) {
                 value.z += deltaZ;
             }
             float zAnimation = easedAnimation(zRevealAnimationStarted, SLIDER_REVEAL_DURATION, SLIDER_REVEAL_EASING);
@@ -2928,14 +3076,19 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private class ColorPicker extends Slider {
-        HSBA hsba;
-        float defaultHue, defaultSat, defaultBr, defaultAlpha;
-        float pickerRevealStarted = -PICKER_REVEAL_DURATION;
-        float huePrecision = .5f;
-        float alphaPrecision = 1;
+        public float gradientPosition;
+        public boolean gradientPositionLocked;
+        private HSBA hsba;
+        private float defaultHue, defaultSat, defaultBr, defaultAlpha;
+        private float pickerRevealStarted = -PICKER_REVEAL_DURATION;
+        private float huePrecision = .5f;
+        private float alphaPrecision = 1;
         private boolean brightnessLocked, saturationLocked;
         private boolean satChanged, brChanged;
 
+        /**
+         * Standard constructor for a standalone color picker.
+         */
         ColorPicker(Group currentGroup, String name, float hue, float sat, float br, float alpha) {
             super(currentGroup, name);
             this.hsba = new HSBA(hue, sat, br, alpha);
@@ -2944,6 +3097,23 @@ public abstract class KrabApplet extends PApplet {
             this.defaultBr = br;
             this.defaultAlpha = alpha;
         }
+
+        /**
+         * Used with GradientPicker, these pickers are not a standalone element and will never be searched using
+         * the group and name combination.
+         *
+         * @param gradientPosition position of this color in the gradient in the range [0,1]
+         */
+        public ColorPicker(float gradientPosition, boolean locked, float hue, float sat, float br, float alpha) {
+            this.gradientPosition = gradientPosition;
+            this.gradientPositionLocked = locked;
+            this.hsba = new HSBA(hue, sat, br, alpha);
+            this.defaultHue = hue;
+            this.defaultSat = sat;
+            this.defaultBr = br;
+            this.defaultAlpha = alpha;
+        }
+
 
         void handleActions() {
             if (previousActionsContainsLockAware(ACTION_COPY)) {
@@ -3036,7 +3206,8 @@ public abstract class KrabApplet extends PApplet {
             float tinySliderTopY =
                     height - sliderHeight * .5f - cell * tinySliderMarginCellFraction - tinySliderHeight * revealAnimation;
             float lastSat = hsba.sat;
-            hsba.sat = updateTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, brightnessLocked, SATURATION);
+            hsba.sat = updateTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, brightnessLocked,
+                    SATURATION);
             if (hsba.sat != lastSat && !saturationLocked) {
                 brightnessLocked = true;
             }
@@ -3048,14 +3219,16 @@ public abstract class KrabApplet extends PApplet {
 
             x += tinySliderWidth * 1.2f;
             float lastBr = hsba.br;
-            hsba.br = updateTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, saturationLocked, BRIGHTNESS);
+            hsba.br = updateTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, saturationLocked,
+                    BRIGHTNESS);
             if (hsba.br != lastBr && !brightnessLocked) {
                 saturationLocked = true;
             }
             if (brightnessLocked) {
                 hsba.br = lastBr;
             }
-            displayTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, hsba.br, BRIGHTNESS, saturationLocked);
+            displayTinySlider(x, tinySliderTopY, tinySliderWidth, tinySliderHeight, hsba.br, BRIGHTNESS,
+                    saturationLocked);
 
             displayInfiniteSliderCenterMode(height - height / 4f, width - sliderHeight * .5f, height / 2f, sliderHeight,
                     alphaPrecision, hsba.alpha, revealAnimation, false, false, false, 0, 1);
@@ -3257,117 +3430,143 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private class TextInput extends Element {
-        private final float overlayTextSize = 24;
-        private String value;
+    class GradientPicker extends Element {
+        int defaultColorCount, colorCount;
+        int w, h;
+        GradientType defaultType, type;
+        PGraphics pg;
+        ArrayList<ColorPicker> pickers = new ArrayList<ColorPicker>();
 
-        TextInput(Group currentGroup, String name, String defaultValue) {
-            super(currentGroup, name);
-            this.name = name;
-            this.value = defaultValue;
+        GradientPicker(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultType) {
+            super(group, name);
+            this.defaultColorCount = defaultColorCount;
+            this.colorCount = defaultColorCount;
+            this.defaultType = defaultType;
+            this.type = defaultType;
+            this.w = w;
+            this.h = h;
+            initializePickers();
+            drawTexture();
         }
 
-        @Override
+        private void initializePickers() {
+            for (int i = 0; i < defaultColorCount; i++) {
+                float iNorm = norm(i, 0, defaultColorCount - 1);
+                boolean locked = i == 0 || i == defaultColorCount - 1;
+                pickers.add(new ColorPicker(iNorm, locked, 0, 0, iNorm, 1));
+            }
+        }
+
         boolean canHaveOverlay() {
             return true;
         }
 
         void updateOverlay() {
             super.updateOverlay();
-            displayOverlay();
+            updatePickers();
+            drawTexture();
+            updatePreview();
         }
 
-        void handleActions() {
-            if (previousActionsContainsLockAware(ACTION_PASTE)) {
-                pasteFromClipboardToValue();
-            } else if (previousActionsContainsLockAware(ACTION_COPY)) {
-                copyFromValueToClipboard();
-            }
-        }
-
-        private void copyFromValueToClipboard() {
-            try {
-                Toolkit.getDefaultToolkit()
-                        .getSystemClipboard()
-                        .setContents(
-                                new StringSelection(value),
-                                null
-                        );
-            } catch (Exception ignored) {
-            }
-        }
-
-        private void pasteFromClipboardToValue() {
-            Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard();
-            Transferable t = c.getContents(this);
-            if (t == null)
-                return;
-            try {
-                ArrayList<DataFlavor> availableDataFlavors = new ArrayList<>(Arrays.asList(t.getTransferDataFlavors()));
-                if (availableDataFlavors.contains(DataFlavor.stringFlavor)) {
-                    value += (String) t.getTransferData(DataFlavor.stringFlavor);
+        private void updatePickers() {
+            while (colorCount > pickers.size()) {
+                HSBA hsba = new HSBA();
+                if (pickers.size() > 0) {
+                    hsba = pickers.get(pickers.size() - 1).getHSBA();
                 }
-            } catch (Exception ignored) {
+                pickers.add(new ColorPicker(0.5f, false, hsba.hue(), hsba.sat(), hsba.br(), hsba.alpha()));
             }
+            while (colorCount < pickers.size()) {
+                pickers.remove(pickers.size() - 1);
+            }
+            updateSelectedPicker();
         }
 
-        void keyPressed() {
-            // println("coded: " + (key == CODED), (int) key, keyCode);
-            if (!overlayVisible || !trayVisible || key == KEY_CTRL_C || key == KEY_CTRL_V) {
-                return;
+        private void updateSelectedPicker() {
+            //TODO move the position, change the color
+        }
+
+        private void updatePreview() {
+            // TODO tiny gradient preview
+//            drawHorizontalGradient(g, 100, 100, 200, 100);
+        }
+
+        private void drawTexture() {
+            if (pg == null) {
+                pg = createGraphics(w, h, P2D);
+                pg.beginDraw();
+                pg.background(0);
+                pg.endDraw();
             }
-            if (key == BACKSPACE) {
-                if (value.length() > 0) {
-                    value = value.substring(0, value.length() - 1);
+            sortPickersByGradientPosition();
+            pg.beginDraw();
+            if (type.equals(GradientType.VERTICAL)) {
+                drawVerticalGradient(pg, 0, 0, w, h);
+            } else if (type.equals(GradientType.HORIZONTAL)) {
+                drawHorizontalGradient(pg, 0, 0, w, h);
+            } else if (type.equals(GradientType.CIRCULAR)) {
+                drawCircularGradient(pg, 0, 0, w, h);
+            }
+            pg.endDraw();
+        }
+
+        private void drawVerticalGradient(PGraphics pg, float x, float y, float w, float h) {
+            int xDetail = 10;
+            float previousY = 0;
+            for (int i = 1; i < pickers.size(); i++) {
+                ColorPicker previous = pickers.get(i - 1);
+                ColorPicker current = pickers.get(i);
+                float currentY = map(current.gradientPosition, 0, 1, y, y + h);
+                pg.beginShape(TRIANGLE_STRIP);
+                pg.noStroke();
+                for (int xi = 0; xi < xDetail; xi++) {
+                    float myX = map(xi, 0, xDetail - 1, x, x + w);
+                    pg.fill(previous.getHSBA().clr());
+                    pg.vertex(myX, previousY);
+                    pg.fill(current.getHSBA().clr());
+                    pg.vertex(myX, currentY);
                 }
-            } else if (key == DELETE) {
-                value = "";
-            } else if (keyCode != SHIFT && keyCode != CONTROL && keyCode != ALT) {
-                value = value + key;
+                pg.endShape();
+                previousY = currentY;
             }
         }
 
-        private void displayOverlay() {
-            keyboardLockedByTextEditor = true;
-            float overlayHeight = textHeightPlusPadding();
-            pushStyle();
-            noStroke();
-            fill(0, BACKGROUND_ALPHA);
-            rectMode(CORNER);
-            rect(trayWidth, height - overlayHeight, width - trayWidth, overlayHeight);
-            float x = width / 2f;
-            float y = height - overlayHeight / 2;
-            fill(GRAYSCALE_TEXT_SELECTED);
-            textAlign(CENTER, CENTER);
-            textSize(overlayTextSize);
-            String displayValue = value;
-            displayValue = displayValue.replaceAll(" ", "·");
-            text(displayValue, x, y);
-            popStyle();
-        }
-
-        private float textHeightPlusPadding() {
-            int newLineCount = 0;
-            for (char c : value.toCharArray()) {
-                if (c == '\n') {
-                    newLineCount++;
+        private void drawHorizontalGradient(PGraphics pg, float x, float y, float w, float h) {
+            float yDetail = 10;
+            float previousX = 0;
+            for (int i = 1; i < pickers.size(); i++) {
+                ColorPicker previous = pickers.get(i - 1);
+                ColorPicker current = pickers.get(i);
+                float currentX = map(current.gradientPosition, 0, 1, x, x + w);
+                pg.beginShape(TRIANGLE_STRIP);
+                pg.noStroke();
+                for (int yi = 0; yi < yDetail; yi++) {
+                    float myY = map(yi, 0, yDetail - 1, y, y + h);
+                    pg.fill(previous.getHSBA().clr());
+                    pg.vertex(previousX, myY);
+                    pg.fill(current.getHSBA().clr());
+                    pg.vertex(currentX, myY);
                 }
+                pg.endShape();
+                previousX = currentX;
             }
-            return overlayTextSize + newLineCount * overlayTextSize + cell * 2;
         }
 
-        String getState() {
-            return super.getState() + value.replace("\n", NEWLINE_PLACEHOLDER);
+        private void drawCircularGradient(PGraphics pg, float x, float y, float w, float h) {
+
         }
 
-        void setState(String state) {
-            String[] split = state.split(SEPARATOR);
-            if (split.length >= 3) {
-                String valueToSet = split[2];
-                value = valueToSet.replaceAll(NEWLINE_PLACEHOLDER, "\n");
-            } else {
-                value = "";
-            }
+        void sortPickersByGradientPosition() {
+            pickers.sort((picker2, picker1) -> {
+                if (picker1.gradientPosition == picker2.gradientPosition) {
+                    return 0;
+                }
+                return picker1.gradientPosition > picker2.gradientPosition ? -1 : 1;
+            });
+        }
+
+        PGraphics getTexture() {
+            return pg;
         }
     }
 }
