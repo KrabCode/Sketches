@@ -364,7 +364,6 @@ public abstract class KrabApplet extends PApplet {
     protected void gui(boolean defaultVisibility) {
         t += radians(timeSpeed);
         guiSetup(defaultVisibility);
-        updateFps();
         updateKeyboardInput();
         updateMouseState();
         pushStyle();
@@ -372,6 +371,7 @@ public abstract class KrabApplet extends PApplet {
         blendMode(BLEND);
         strokeCap(SQUARE);
         colorMode(HSB, 1, 1, 1, 1);
+        updateFps();
         resetMatrixInAnyRenderer();
         hint(DISABLE_DEPTH_TEST);
         updateTrayBackground();
@@ -1144,6 +1144,21 @@ public abstract class KrabApplet extends PApplet {
         int nonFlickeringFrameRate = floor(frameRate > 55 ? 60 : frameRate);
         String fps = nonFlickeringFrameRate + " fps";
         surface.setTitle(this.getClass().getSimpleName() + " " + fps);
+        if(isFullscreen()) {
+            pushStyle();
+            colorMode(HSB,1,1,1,1);
+            textSize(textSize);
+            textAlign(LEFT, CENTER);
+            fill(0);
+            text(fps, trayWidth+cell*.5f,cell*.5f);
+            fill(GRAYSCALE_TEXT_SELECTED);
+            text(fps, trayWidth+cell*.45f,cell*.45f);
+            popStyle();
+        }
+    }
+
+    private boolean isFullscreen(){
+        return width == displayWidth;
     }
 
     private void updateMenuButtons() {
