@@ -1,0 +1,27 @@
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§grad§
+GradientTest§grad horizontal§0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§grad§
+GradientTest§grad horizontal§0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§grad§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§grad§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§grad§
+STATE_END

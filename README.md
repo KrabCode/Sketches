@@ -7,7 +7,8 @@ The finished animations can be found on my [Instagram](https://www.instagram.com
 ## How to run it
 - Clone the project
 - Open it in your favorite Java IDE, I recommend IntelliJ IDEA
-- Download and set up Java 1.8
+- Download and set up Java 1.8 as the SDK
+- Set the project language level to 8
 - Download and include the [Processing](https://processing.org/download/) library version 3.5.3
 - Mark the src folder as source root
 - Open any Java class from the src folder that contains a main method and run it as a standalone Java program (CTRL+SHIFT+F10 in IDEA)

@@ -39,11 +39,10 @@ public class NoiseSplit extends KrabApplet {
         translate2D(pg);
         pg.text(textInput("main text"), 0, 0);
         pg.endDraw();
-        PGraphics split = colorSplit(pg, true);
-        clear();
-        image(split, 0, 0, width, height);
+        rgbSplitScaleAndOffset(pg);
+        image(pg, 0, 0, width, height);
         frameRecordingDuration = sliderInt("video frames", frameRecordingDuration);
-        rec(split);
+        rec(pg);
         gui();
     }
 

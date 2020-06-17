@@ -1,7 +1,6 @@
 package _2020_05;
 
 import applet.KrabApplet;
-import processing.core.PConstants;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
@@ -37,7 +36,7 @@ public class Trip extends KrabApplet {
         pg.translate(width / 2f, height / 2f);
         updateParticles();
         pg.endDraw();
-        colorSplit(pg, true);
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0);
         rec(pg);
         gui();

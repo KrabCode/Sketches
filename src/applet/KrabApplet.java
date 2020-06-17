@@ -51,7 +51,7 @@ public abstract class KrabApplet extends PApplet {
     private static final float FLOAT_PRECISION_MAXIMUM = 10000;
     private static final float FLOAT_PRECISION_MINIMUM = .01f;
     private static final float ALPHA_PRECISION_MINIMUM = .005f;
-    private static final float ALPHA_PRECISION_MAXIMUM = 10;
+    private static final float ALPHA_PRECISION_MAXIMUM = 100;
     private static final float INTEGER_SLIDER_ROUNDING_LERP_AMT = .05f;
     private static final float UNDERLINE_TRAY_ANIMATION_DURATION = 10;
     private static final float UNDERLINE_TRAY_ANIMATION_EASING = 3;
@@ -573,14 +573,11 @@ public abstract class KrabApplet extends PApplet {
      * Takes a PGraphics, splits it up into primary color images and re-assembles them at different scales growing
      * from the center.
      * This method expects the PGraphics to be already closed with endDraw() in order to read from it and write to it.
+     * When finished it draws the result over the input PGraphics
      *
-     * @param pg                  input image
-     * @param drawResultOverInput when true this draws the result over the input pg and returns that
-     *                            when false it returns the result as a reference to colorSplitResult PGraphics
-     * @return color split image
+     * @param pg input image
      */
-    protected PGraphics colorSplit(PGraphics pg, boolean drawResultOverInput) {
-
+    protected void rgbSplitScaleAndOffset(PGraphics pg) {
         if (colorSplitResult == null || colorSplitResult.width != pg.width || colorSplitResult.height != pg.height) {
             colorSplitResult = createGraphics(pg.width, pg.height, P2D);
             primaryColorCanvases = new PGraphics[3];
@@ -594,9 +591,9 @@ public abstract class KrabApplet extends PApplet {
         colorSplitResult.translate(colorSplitResult.width / 2f, colorSplitResult.height / 2f);
         group("scale");
         translate2D(colorSplitResult, "center");
-        PVector scale = sliderXYZ("offset", 1, 0.1f);
+        PVector scale = sliderXYZ("RGB scales", 1, 0.1f);
         float commonScale = slider("common scale", 1, 0.1f);
-        if (toggle("set common scale", false)) {
+        if (toggle("set common scale", true)) {
             scale.x = commonScale;
             scale.y = commonScale;
             scale.z = commonScale;
@@ -640,19 +637,17 @@ public abstract class KrabApplet extends PApplet {
         }
         colorSplitResult.endDraw();
 
-        if (drawResultOverInput) {
-            pg.beginDraw();
-            pg.pushStyle();
-            pg.clear();
-            pg.hint(PConstants.DISABLE_DEPTH_TEST);
-            pg.imageMode(CORNER);
-            pg.image(colorSplitResult, 0, 0, pg.width, pg.height);
-            pg.hint(PConstants.ENABLE_DEPTH_TEST);
-            pg.popStyle();
-            pg.endDraw();
-        }
+        pg.beginDraw();
+        pg.pushStyle();
+        pg.clear();
+        pg.hint(PConstants.DISABLE_DEPTH_TEST);
+        pg.imageMode(CORNER);
+        pg.image(colorSplitResult, 0, 0, pg.width, pg.height);
+        pg.hint(PConstants.ENABLE_DEPTH_TEST);
+        pg.popStyle();
+        pg.endDraw();
+
         resetGroup();
-        return colorSplitResult;
     }
 
     String indexToPrimaryColorShorthand(int index) {
@@ -757,6 +752,10 @@ public abstract class KrabApplet extends PApplet {
      */
     protected boolean isPointInRect(float px, float py, float rx, float ry, float rw, float rh) {
         return px >= rx && px <= rx + rw && py >= ry && py <= ry + rh;
+    }
+
+    protected boolean isPointInCircle(float px, float py, float cx, float cy, float cr) {
+        return dist(px, py, cx, cy) < cr;
     }
 
     protected float easeInOutExpo(float currentTime, float startValue, float changeInValue, float duration) {
@@ -1079,7 +1078,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateScrolling() {
-        if (!(trayVisible && isMousePressedHere(0, 0, trayWidth, height))) {
+        if (!(trayVisible && isMousePressedInsideRect(0, 0, trayWidth, height))) {
             return;
         }
         scrollOffsetHistory.add(trayScrollOffset);
@@ -1219,7 +1218,7 @@ public abstract class KrabApplet extends PApplet {
     private void updateMenuButtonUndo(boolean hide, float x, float y, float w, float h) {
         boolean canUndo = undoStack.size() > 0;
         if (canUndo && trayVisible) {
-            if (actionsContainsLockAware(ACTION_UNDO) || isMousePressedHere(x, y, w, h)) {
+            if (actionsContainsLockAware(ACTION_UNDO) || isMousePressedInsideRect(x, y, w, h)) {
                 undoHoldDuration++;
             } else if (!isMouseOver(x, y, w, h)) {
                 undoHoldDuration = 0;
@@ -1249,7 +1248,7 @@ public abstract class KrabApplet extends PApplet {
     private void updateMenuButtonRedo(boolean hide, float x, float y, float w, float h) {
         boolean canRedo = redoStack.size() > 0;
         if (canRedo && trayVisible) {
-            if (actionsContainsLockAware(ACTION_REDO) || isMousePressedHere(x, y, w, h)) {
+            if (actionsContainsLockAware(ACTION_REDO) || isMousePressedInsideRect(x, y, w, h)) {
                 redoHoldDuration++;
             } else if (!isMouseOver(x, y, w, h)) {
                 redoHoldDuration = 0;
@@ -1483,7 +1482,7 @@ public abstract class KrabApplet extends PApplet {
         return pMousePressed && !mousePressed;
     }
 
-    private boolean isMousePressedHere(float x, float y, float w, float h) {
+    private boolean isMousePressedInsideRect(float x, float y, float w, float h) {
         return mousePressed && isPointInRect(mouseX, mouseY, x, y, w, h);
     }
 
@@ -2264,6 +2263,11 @@ public abstract class KrabApplet extends PApplet {
 
         void handleActions() {
         }
+
+        float screenDistanceToValueDistance(float screenSpaceDelta, float precision) {
+            float valueToScreenRatio = precision / width;
+            return screenSpaceDelta * valueToScreenRatio;
+        }
     }
 
     private class Radio extends Element {
@@ -2568,12 +2572,6 @@ public abstract class KrabApplet extends PApplet {
                 return screenDistanceToValueDistance(screenSpaceDelta, precision);
             }
             return 0;
-        }
-
-
-        float screenDistanceToValueDistance(float screenSpaceDelta, float precision) {
-            float valueToScreenRatio = precision / width;
-            return screenSpaceDelta * valueToScreenRatio;
         }
 
         void displayInfiniteSliderCenterMode(float x, float y, float w, float h, float precision, float value,
@@ -3078,11 +3076,15 @@ public abstract class KrabApplet extends PApplet {
     private class ColorPicker extends Slider {
         public float gradientPosition;
         public boolean gradientPositionLocked;
-        private HSBA hsba;
-        private float defaultHue, defaultSat, defaultBr, defaultAlpha;
-        private float pickerRevealStarted = -PICKER_REVEAL_DURATION;
-        private float huePrecision = .5f;
+        private final HSBA hsba;
+        private final float defaultHue;
+        private final float defaultSat;
+        private final float defaultBr;
+        private final float defaultAlpha;
+        private final float huePrecision = .5f;
         private float alphaPrecision = 1;
+        private float pickerRevealStarted = -PICKER_REVEAL_DURATION;
+        public boolean hueLocked = false;
         private boolean brightnessLocked, saturationLocked;
         private boolean satChanged, brChanged;
 
@@ -3099,12 +3101,14 @@ public abstract class KrabApplet extends PApplet {
         }
 
         /**
-         * Used with GradientPicker, these pickers are not a standalone element and will never be searched using
-         * the group and name combination.
+         * Used as a part of GradientPicker
+         * pickers created with this constructor are not members of a group as a standalone element
+         * and will never be searched for using the group and name combination.
          *
          * @param gradientPosition position of this color in the gradient in the range [0,1]
          */
         public ColorPicker(float gradientPosition, boolean locked, float hue, float sat, float br, float alpha) {
+            super(getCurrentGroup(), "groupless gradient picker");
             this.gradientPosition = gradientPosition;
             this.gradientPositionLocked = locked;
             this.hsba = new HSBA(hue, sat, br, alpha);
@@ -3113,7 +3117,6 @@ public abstract class KrabApplet extends PApplet {
             this.defaultBr = br;
             this.defaultAlpha = alpha;
         }
-
 
         void handleActions() {
             if (previousActionsContainsLockAware(ACTION_COPY)) {
@@ -3244,7 +3247,7 @@ public abstract class KrabApplet extends PApplet {
 
             displayHueSlider(sliderHeight, revealAnimation);
             float hueDelta = updateInfiniteSlider(huePrecision, true, false);
-            if (!satChanged && !brChanged) {
+            if (!satChanged && !brChanged && !hueLocked) {
                 hsba.hue += hueDelta;
             }
             satChanged = false;
@@ -3280,7 +3283,7 @@ public abstract class KrabApplet extends PApplet {
 
         private void displayValueRectangle(float hueSliderHeight) {
             float x = width * .5f;
-            float y = height - hueSliderHeight - cell * 3f;
+            float y = height - hueSliderHeight - cell;
             noStroke();
             fill(hsba.clr());
             rectMode(CENTER);
@@ -3431,25 +3434,38 @@ public abstract class KrabApplet extends PApplet {
     }
 
     class GradientPicker extends Element {
-        int defaultColorCount, colorCount;
-        int w, h;
-        GradientType defaultType, type;
-        PGraphics pg;
-        ArrayList<ColorPicker> pickers = new ArrayList<ColorPicker>();
+        private final int w;
+        private final int h;
+        private final GradientType defaultType;
+        private GradientType type;
+        private final int defaultColorCount;
+        private final PGraphics pg;
+        private final PGraphics preview;
+        private final ArrayList<ColorPicker> pickers = new ArrayList<>();
+        private ColorPicker currentlySelectedPicker = null;
+        private final float pickerHandleRadius = 15;
+
+        float previewCenterX = width / 2f;
+        float previewCenterY = height - sliderHeight - cell * 4.5f;
+        float previewWidth = cell * 8;
+        float previewHeight = cell * 3;
 
         GradientPicker(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultType) {
             super(group, name);
             this.defaultColorCount = defaultColorCount;
-            this.colorCount = defaultColorCount;
             this.defaultType = defaultType;
             this.type = defaultType;
             this.w = w;
             this.h = h;
-            initializePickers();
-            drawTexture();
+            initPickers();
+            pg = createGraphics(w, h, P2D);
+            preview = createGraphics(floor(previewWidth), floor(previewHeight), P2D);
+            drawGradientToTexture(pg, type);
         }
 
-        private void initializePickers() {
+
+        private void initPickers() {
+            pickers.clear();
             for (int i = 0; i < defaultColorCount; i++) {
                 float iNorm = norm(i, 0, defaultColorCount - 1);
                 boolean locked = i == 0 || i == defaultColorCount - 1;
@@ -3461,51 +3477,111 @@ public abstract class KrabApplet extends PApplet {
             return true;
         }
 
+        void reset() {
+            type = defaultType;
+            initPickers();
+        }
+
+        void update() {
+            println(type);
+        }
+
+        void handleActions() {
+            if (actionsContainsLockAware(ACTION_RESET)) {
+                pushCurrentStateToUndo();
+                reset();
+            }
+            //TODO allow copy and paste of the whole gradient
+        }
+
+        String getState() {
+            return super.getState();
+        }
+
+        void setState(String newState) {
+
+        }
+
         void updateOverlay() {
             super.updateOverlay();
             updatePickers();
-            drawTexture();
-            updatePreview();
+            drawGradientToTexture(pg, type);
+            drawPreview();
+        }
+
+        private void drawPreview() {
+            preview.beginDraw();
+            drawGradientToTexture(preview, GradientType.HORIZONTAL);
+            preview.endDraw();
+            pushStyle();
+            imageMode(CENTER);
+            image(preview, previewCenterX, previewCenterY, previewWidth, previewHeight);
+            popStyle();
         }
 
         private void updatePickers() {
-            while (colorCount > pickers.size()) {
-                HSBA hsba = new HSBA();
-                if (pickers.size() > 0) {
-                    hsba = pickers.get(pickers.size() - 1).getHSBA();
+            pushStyle();
+            colorMode(HSB, 1, 1, 1, 1);
+            boolean sliderMoved = false;
+            for (ColorPicker picker : pickers) {
+                float x = map(picker.gradientPosition, 0, 1,
+                        previewCenterX - previewWidth * .5f + 1.5f,
+                        previewCenterX + previewWidth * .5f - 1.5f);
+                float y = previewCenterY;
+                float h = previewHeight * 1.5f;
+                float lineTopY = y - h / 2;
+                HSBA pickerColor = picker.getHSBA();
+                int clr = pickerColor.clr();
+                stroke(GRAYSCALE_TEXT_DARK);
+                strokeWeight(3);
+                line(x, lineTopY, x, y);
+                fill(clr);
+                noStroke();
+                strokeWeight(2);
+                if (isPickerSelected(picker)) {
+                    stroke(GRAYSCALE_TEXT_DARK);
                 }
-                pickers.add(new ColorPicker(0.5f, false, hsba.hue(), hsba.sat(), hsba.br(), hsba.alpha()));
+                if (isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius*3)) {
+                    if(mousePressed && !picker.gradientPositionLocked && !sliderMoved && isPickerSelected(picker)) {
+                        sliderMoved = true;
+                        picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2, 0, 1), 0, 1);
+                    }
+                    stroke(GRAYSCALE_TEXT_DARK);
+
+                    if(isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius) && mouseJustPressedOutsideGui()) {
+                        stroke(GRAYSCALE_TEXT_SELECTED);
+                        if(!isPickerSelected(picker)){
+                            currentlySelectedPicker = picker;
+                        }
+                    }
+                }
+                ellipse(x, lineTopY, pickerHandleRadius, pickerHandleRadius);
+                // allow selection
+                // allow deletion
+                // TODO newlyActivePicker.onOverlayShown()
             }
-            while (colorCount < pickers.size()) {
-                pickers.remove(pickers.size() - 1);
+            popStyle();
+            if (currentlySelectedPicker != null) {
+                currentlySelectedPicker.hueLocked = sliderMoved;
+                currentlySelectedPicker.update();
+                currentlySelectedPicker.handleActions();
+                currentlySelectedPicker.updateOverlay();
             }
-            updateSelectedPicker();
         }
 
-        private void updateSelectedPicker() {
-            //TODO move the position, change the color
+        private boolean isPickerSelected(ColorPicker picker) {
+            return currentlySelectedPicker != null && currentlySelectedPicker.equals(picker);
         }
 
-        private void updatePreview() {
-            // TODO tiny gradient preview
-//            drawHorizontalGradient(g, 100, 100, 200, 100);
-        }
-
-        private void drawTexture() {
-            if (pg == null) {
-                pg = createGraphics(w, h, P2D);
-                pg.beginDraw();
-                pg.background(0);
-                pg.endDraw();
-            }
+        private void drawGradientToTexture(PGraphics pg, GradientType type) {
             sortPickersByGradientPosition();
             pg.beginDraw();
             if (type.equals(GradientType.VERTICAL)) {
-                drawVerticalGradient(pg, 0, 0, w, h);
+                drawVerticalGradient(pg, 0, 0, pg.width, pg.height);
             } else if (type.equals(GradientType.HORIZONTAL)) {
-                drawHorizontalGradient(pg, 0, 0, w, h);
+                drawHorizontalGradient(pg, 0, 0, pg.width, pg.height);
             } else if (type.equals(GradientType.CIRCULAR)) {
-                drawCircularGradient(pg, 0, 0, w, h);
+                drawCircularGradient(pg, 0, 0, pg.width, pg.height);
             }
             pg.endDraw();
         }

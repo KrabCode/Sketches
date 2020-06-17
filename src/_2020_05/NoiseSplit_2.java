@@ -29,7 +29,7 @@ public class NoiseSplit_2 extends KrabApplet {
         updateNoise();
         drawText();
         pg.endDraw();
-        colorSplit(pg, true);
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0, width, height);
         rec(pg);
         gui();

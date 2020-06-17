@@ -42,7 +42,7 @@ public class Fireball extends KrabApplet {
         pg.popMatrix();
         bepis();
         pg.endDraw();
-        colorSplit(pg, true);
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0);
         rec(pg);
         gui();

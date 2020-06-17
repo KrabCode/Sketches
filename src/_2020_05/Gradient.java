@@ -29,7 +29,7 @@ public class Gradient extends KrabApplet {
         fadeToBlack(pg);
         drawText();
         pg.endDraw();
-        colorSplit(pg, true);
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0);
         rec(pg);
         gui();

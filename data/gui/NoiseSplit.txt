@@ -7427,3 +7427,75 @@ color split§move all scales§false
 color split§common scale§1.0§0.1
 color split§force scales >= 1§false
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§false
+NoiseSplit§fade to black§0.9168852§25.500004
+NoiseSplit§color strength§0.057969354§10.0
+NoiseSplit§angle center§100.0§0.0§0.0
+NoiseSplit§fill§0.86503893§0.5875§1.0§1.0§1.0
+NoiseSplit§text size§70.171875§200.0
+NoiseSplit§spacing§70.0§10.0
+NoiseSplit§translate§1000.0§-351.21094§-493.39844
+NoiseSplit§main text§            __#NEWLINE#           /(`o#NEWLINE#     ,-,  //  \\#NEWLINE#    (,,,) ||   V#NEWLINE#   (,,,,)\//#NEWLINE#   (,,,/w)-'#NEWLINE#   \,,/w)#NEWLINE#   `V/uu#NEWLINE#     / |#NEWLINE#     | |#NEWLINE#     o o#NEWLINE#     \ |#NEWLINE#\,/  ,\|,.  \,/
+NoiseSplit§video frames§1440.0012§300.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.0§10.0
+GROUP§ramp§false
+ramp§count§4.9987473§100.0
+ramp§1§0.44849968§0.0§1.0§1.0§10.0
+ramp§2 §0.7302083§10.0
+ramp§2§0.44849968§0.0§1.0§1.0§10.0
+ramp§3 §0.78807306§10.0
+ramp§3§0.44088244§0.0§1.0§0.0§10.0
+ramp§4§0.44088244§0.0§1.0§0.0§10.0
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§offset§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§false
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseSplit§false
+NoiseSplit§fade to black§0.9168852§25.500004
+NoiseSplit§color strength§0.057969354§10.0
+NoiseSplit§angle center§100.0§0.0§0.0
+NoiseSplit§fill§0.86503893§0.5875§1.0§1.0§1.0
+NoiseSplit§text size§70.171875§200.0
+NoiseSplit§spacing§70.0§10.0
+NoiseSplit§translate§1000.0§-351.21094§-493.39844
+NoiseSplit§main text§            __#NEWLINE#           /(`o#NEWLINE#     ,-,  //  \\#NEWLINE#    (,,,) ||   V#NEWLINE#   (,,,,)\//#NEWLINE#   (,,,/w)-'#NEWLINE#   \,,/w)#NEWLINE#   `V/uu#NEWLINE#     / |#NEWLINE#     | |#NEWLINE#     o o#NEWLINE#     \ |#NEWLINE#\,/  ,\|,.  \,/
+NoiseSplit§video frames§1440.0012§300.0
+GROUP§blur§false
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.0§10.0
+GROUP§ramp§false
+ramp§count§4.9987473§100.0
+ramp§1§0.44849968§0.0§1.0§1.0§10.0
+ramp§2 §0.7302083§10.0
+ramp§2§0.44849968§0.0§1.0§1.0§10.0
+ramp§3 §0.78807306§10.0
+ramp§3§0.44088244§0.0§1.0§0.0§10.0
+ramp§4§0.44088244§0.0§1.0§0.0§10.0
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§offset§0.1§1.0219994§1.0219994§1.0219994
+scale§common scale§1.0219994§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END

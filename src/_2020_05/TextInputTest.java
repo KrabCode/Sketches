@@ -36,7 +36,7 @@ public class TextInputTest extends KrabApplet {
         pg.fill(255);
         pg.text(text, 0, 0);
         pg.endDraw();
-        colorSplit(pg, true);
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0);
         rec(pg);
         gui();

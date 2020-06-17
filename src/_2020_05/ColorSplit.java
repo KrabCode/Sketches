@@ -2,7 +2,6 @@ package _2020_05;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
-import processing.core.PVector;
 
 public class ColorSplit extends KrabApplet {
     private PGraphics pg;
@@ -25,7 +24,7 @@ public class ColorSplit extends KrabApplet {
         fadeToBlack(pg);
         ramp(pg);
         pg.endDraw();
-        colorSplit(pg, true);
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0);
         rec(pg);
         gui();
