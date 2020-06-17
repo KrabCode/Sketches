@@ -3552,13 +3552,12 @@ public abstract class KrabApplet extends PApplet {
                         stroke(GRAYSCALE_TEXT_SELECTED);
                         if(!isPickerSelected(picker)){
                             currentlySelectedPicker = picker;
+                            currentlySelectedPicker.onOverlayShown();
                         }
                     }
                 }
                 ellipse(x, lineTopY, pickerHandleRadius, pickerHandleRadius);
-                // allow selection
-                // allow deletion
-                // TODO newlyActivePicker.onOverlayShown()
+                // TODO allow deletion
             }
             popStyle();
             if (currentlySelectedPicker != null) {
