@@ -300,17 +300,21 @@ public abstract class KrabApplet extends PApplet {
         return new HSBA();
     }
 
+    protected PGraphics gradient(String name) {
+        return gradient(name, 4, GradientType.VERTICAL, width, height);
+    }
+
     @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount) {
-        return gradient(name, defaultColorCount, width, height, GradientType.VERTICAL);
+        return gradient(name, defaultColorCount, GradientType.VERTICAL, width, height);
     }
 
     @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
-        return gradient(name, defaultColorCount, width, height, defaultType);
+        return gradient(name, defaultColorCount, defaultType, width, height);
     }
 
-    protected PGraphics gradient(String name, int defaultColorCount, int w, int h, GradientType defaultType) {
+    protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType, int w, int h) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
             GradientEditor newElement = new GradientEditor(currentGroup, name, defaultColorCount, w, h, defaultType);
@@ -324,7 +328,7 @@ public abstract class KrabApplet extends PApplet {
         return null;
     }
 
-    // the first parameter becomes the name of the element and must be unique within the current group
+    // the defaultValue parameter becomes the name of the element and must be unique within the current group
     protected String options(String defaultValue, String... otherValues) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(defaultValue, currentGroup.name)) {
