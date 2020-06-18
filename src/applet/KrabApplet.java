@@ -1899,7 +1899,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void chromaticAberrationPass(PGraphics pg, float rotationOffset) {
-        group("chrom ab");
+        group("chromatic ab.");
         String shaderPath = "shaders/filters/chromaticAberration.glsl";
         uniform(shaderPath).set("rotation", slider("rotation", 0) + rotationOffset);
         uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
@@ -3154,7 +3154,7 @@ public abstract class KrabApplet extends PApplet {
          * @param gradientPosition position of this color in the gradient in the range [0,1]
          */
         public ColorPicker(float gradientPosition, boolean locked, float hue, float sat, float br, float alpha) {
-            super(getCurrentGroup(), "groupless gradient picker");
+            super(getCurrentGroup(), "anonymous gradient picker");
             this.gradientPosition = gradientPosition;
             this.gradientPositionLocked = locked;
             this.hsba = new HSBA(hue, sat, br, alpha);
