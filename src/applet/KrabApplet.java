@@ -311,12 +311,12 @@ public abstract class KrabApplet extends PApplet {
     protected PGraphics gradient(String name, int defaultColorCount, int w, int h, GradientType defaultType) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
-            GradientPicker newElement = new GradientPicker(currentGroup, name, defaultColorCount, w, h, defaultType);
+            GradientEditor newElement = new GradientEditor(currentGroup, name, defaultColorCount, w, h, defaultType);
             currentGroup.elements.add(newElement);
         }
-        GradientPicker gradientPicker = (GradientPicker) findElement(name, currentGroup.name);
-        if (gradientPicker != null) {
-            return gradientPicker.getTexture();
+        GradientEditor gradientEditor = (GradientEditor) findElement(name, currentGroup.name);
+        if (gradientEditor != null) {
+            return gradientEditor.getTexture();
         }
         println("gradient picker was not found");
         return null;
@@ -2152,9 +2152,6 @@ public abstract class KrabApplet extends PApplet {
             this.name = name;
         }
 
-        protected Element() {
-        }
-
         void keyPressed() {
 
         }
@@ -2533,10 +2530,6 @@ public abstract class KrabApplet extends PApplet {
     private abstract class Slider extends Element {
         Slider(Group parent, String name) {
             super(parent, name);
-        }
-
-        protected Slider() {
-
         }
 
         void updateOverlay() {
@@ -3102,7 +3095,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         /**
-         * Used as a part of GradientPicker
+         * Used as a part of GradientEditor
          * pickers created with this constructor are not members of a group as a standalone element
          * and will never be searched for using the group and name combination.
          *
@@ -3434,7 +3427,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    class GradientPicker extends Element {
+    class GradientEditor extends Element {
         private final GradientType defaultType;
         private GradientType type;
         private final int defaultColorCount;
@@ -3450,7 +3443,7 @@ public abstract class KrabApplet extends PApplet {
         float previewWidth = cell * 8;
         float previewHeight = cell * 3;
 
-        GradientPicker(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultType) {
+        GradientEditor(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultType) {
             super(group, name);
             this.defaultColorCount = defaultColorCount;
             this.defaultType = defaultType;
@@ -3499,7 +3492,7 @@ public abstract class KrabApplet extends PApplet {
 
         void updateOverlay() {
             super.updateOverlay();
-            updatePickers();
+            updateColorPickers();
             drawGradientToTexture(pg, type);
             drawPreview();
         }
@@ -3514,7 +3507,7 @@ public abstract class KrabApplet extends PApplet {
             popStyle();
         }
 
-        private void updatePickers() {
+        private void updateColorPickers() {
             pushStyle();
             colorMode(HSB, 1, 1, 1, 1);
             boolean pickerMoved = false;
@@ -3534,14 +3527,14 @@ public abstract class KrabApplet extends PApplet {
                 fill(clr);
                 noStroke();
                 strokeWeight(2);
-                boolean isMouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
-                if (isMouseAroundHandle) {
+                boolean mouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
+                if (mouseAroundHandle) {
                     if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
                         pickerMoved = true;
                         picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2, 0, 1), 0, 1);
                     }
-                    boolean isMouseDirectlyOverHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius);
-                    if (isMouseDirectlyOverHandle) {
+                    boolean mouseDirectlyOverHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius);
+                    if (mouseDirectlyOverHandle) {
                         stroke(GRAYSCALE_TEXT_DARK);
                         if (!isPickerSelected(picker) && mouseJustPressedOutsideGui()) {
                             currentlySelectedPicker = picker;
@@ -3569,7 +3562,8 @@ public abstract class KrabApplet extends PApplet {
                 currentlySelectedPicker.updateOverlay();
             }
             pickers.removeAll(pickersToRemove);
-            if (mouseJustReleasedHere(previewCenterX - previewWidth / 2, previewCenterY - previewHeight, previewWidth, previewHeight*2)) {
+            boolean mouseJustReleasedInsideGradientEditor = mouseJustReleasedHere(previewCenterX - previewWidth / 2, previewCenterY - previewHeight, previewWidth, previewHeight*2);
+            if (mouseJustReleasedInsideGradientEditor) {
                 if(mouseButton == RIGHT && !pickerDeleted){
                     float pickerPosition = clampNorm(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
                     HSBA lerpedColor = lerpColorBetweenNeighbouringPickers(pickerPosition);
@@ -3665,11 +3659,11 @@ public abstract class KrabApplet extends PApplet {
                 pg.beginShape(TRIANGLE_STRIP);
                 pg.noStroke();
                 for (int yi = 0; yi < yDetail; yi++) {
-                    float myY = map(yi, 0, yDetail - 1, 0, pg.height);
+                    float y = map(yi, 0, yDetail - 1, 0, pg.height);
                     pg.fill(previous.getHSBA().clr());
-                    pg.vertex(previousX, myY);
+                    pg.vertex(previousX, y);
                     pg.fill(current.getHSBA().clr());
-                    pg.vertex(currentX, myY);
+                    pg.vertex(currentX, y);
                 }
                 pg.endShape();
                 previousX = currentX;
