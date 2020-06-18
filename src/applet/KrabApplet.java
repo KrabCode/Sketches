@@ -3442,6 +3442,7 @@ public abstract class KrabApplet extends PApplet {
         private final PGraphics pg;
         private final PGraphics preview;
         private final ArrayList<ColorPicker> pickers = new ArrayList<>();
+        private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
         private ColorPicker currentlySelectedPicker = null;
         private final float pickerHandleRadius = 15;
 
@@ -3483,7 +3484,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void update() {
-            println(type);
+//            println(type);
         }
 
         void handleActions() {
@@ -3522,7 +3523,8 @@ public abstract class KrabApplet extends PApplet {
         private void updatePickers() {
             pushStyle();
             colorMode(HSB, 1, 1, 1, 1);
-            boolean sliderMoved = false;
+            boolean pickerMoved = false;
+            boolean pickerDeleted = false;
             for (ColorPicker picker : pickers) {
                 float x = map(picker.gradientPosition, 0, 1,
                         previewCenterX - previewWidth * .5f + 1.5f,
@@ -3538,35 +3540,86 @@ public abstract class KrabApplet extends PApplet {
                 fill(clr);
                 noStroke();
                 strokeWeight(2);
-                if (isPickerSelected(picker)) {
-                    stroke(GRAYSCALE_TEXT_DARK);
-                }
-                if (isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius*3)) {
-                    if(mousePressed && !picker.gradientPositionLocked && !sliderMoved && isPickerSelected(picker)) {
-                        sliderMoved = true;
+                boolean isMouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
+                if (isMouseAroundHandle) {
+                    if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
+                        pickerMoved = true;
                         picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2, 0, 1), 0, 1);
                     }
-                    stroke(GRAYSCALE_TEXT_DARK);
-
-                    if(isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius) && mouseJustPressedOutsideGui()) {
-                        stroke(GRAYSCALE_TEXT_SELECTED);
-                        if(!isPickerSelected(picker)){
+                    boolean isMouseDirectlyOverHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius);
+                    if (isMouseDirectlyOverHandle) {
+                        stroke(GRAYSCALE_TEXT_DARK);
+                        if (!isPickerSelected(picker) && mouseJustPressedOutsideGui()) {
                             currentlySelectedPicker = picker;
                             currentlySelectedPicker.onOverlayShown();
                         }
+                        if(mouseJustReleased() && mouseButton == RIGHT && !pickerDeleted && !picker.gradientPositionLocked) {
+                            pickersToRemove.add(picker);
+                            if(isPickerSelected(picker)) {
+                                currentlySelectedPicker = null;
+                            }
+                            pickerDeleted = true;
+                        }
                     }
                 }
+                if (isPickerSelected(picker)) {
+                    stroke(GRAYSCALE_TEXT_SELECTED);
+                }
                 ellipse(x, lineTopY, pickerHandleRadius, pickerHandleRadius);
-                // TODO allow deletion
             }
             popStyle();
             if (currentlySelectedPicker != null) {
-                currentlySelectedPicker.hueLocked = sliderMoved;
+                currentlySelectedPicker.hueLocked = pickerMoved;
                 currentlySelectedPicker.update();
                 currentlySelectedPicker.handleActions();
                 currentlySelectedPicker.updateOverlay();
             }
+            pickers.removeAll(pickersToRemove);
+            if (mouseJustReleasedHere(previewCenterX - previewWidth / 2, previewCenterY - previewHeight, previewWidth, previewHeight*2) && mouseButton == RIGHT && !pickerDeleted) {
+                float pickerPosition = clampNorm(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
+                HSBA lerpedColor = lerpColorBetweenNeighbouringPickers(pickerPosition);
+                ColorPicker newPicker = new ColorPicker(pickerPosition, false, lerpedColor.hue(), lerpedColor.sat(), lerpedColor.br(), lerpedColor.alpha());
+                pickers.add(newPicker);
+                currentlySelectedPicker = newPicker;
+            }
         }
+
+        private HSBA lerpColorBetweenNeighbouringPickers(float queryPosition) {
+            float closestDistanceToTheLeft = 10;
+            ColorPicker closestPickerToTheLeft = pickers.get(0);
+            for (ColorPicker picker : pickers) {
+                if (picker.gradientPosition > queryPosition) {
+                    continue;
+                }
+                float dist = abs(picker.gradientPosition - queryPosition);
+                if (dist < closestDistanceToTheLeft) {
+                    closestDistanceToTheLeft = dist;
+                    closestPickerToTheLeft = picker;
+                }
+            }
+
+            float closestDistanceToTheRight = 10;
+            ColorPicker closestPickerToTheRight = pickers.get(0);
+            for (ColorPicker picker : pickers) {
+                if (picker.gradientPosition < queryPosition) {
+                    continue;
+                }
+                float dist = abs(picker.gradientPosition - queryPosition);
+                if (dist < closestDistanceToTheRight) {
+                    closestDistanceToTheRight = dist;
+                    closestPickerToTheRight = picker;
+                }
+            }
+            HSBA leftColor = closestPickerToTheLeft.getHSBA();
+            HSBA rightColor = closestPickerToTheRight.getHSBA();
+            float normalizedPositionBetweenNeighbours = clampNorm(queryPosition, closestPickerToTheLeft.gradientPosition, closestPickerToTheRight.gradientPosition);
+            return new HSBA(
+                    lerp(leftColor.hue(), rightColor.hue(), normalizedPositionBetweenNeighbours),
+                    lerp(leftColor.sat(), rightColor.sat(), normalizedPositionBetweenNeighbours),
+                    lerp(leftColor.br(), rightColor.br(), normalizedPositionBetweenNeighbours),
+                    lerp(leftColor.alpha(), rightColor.alpha(), normalizedPositionBetweenNeighbours));
+        }
+
 
         private boolean isPickerSelected(ColorPicker picker) {
             return currentlySelectedPicker != null && currentlySelectedPicker.equals(picker);
