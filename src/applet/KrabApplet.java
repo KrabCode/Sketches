@@ -73,7 +73,7 @@ public abstract class KrabApplet extends PApplet {
     private static String clipboardSliderFloat = "";
     private static String clipboardSliderXYZ = "";
     private static String clipboardPicker = "";
-    private static String clipboardGradient = ""; // TODO use
+    private static String clipboardGradient = "";
     private final int KEY_CTRL_C = 3;
     private final int KEY_CTRL_V = 22;
     private final int KEY_CTRL_S = 19;
@@ -300,10 +300,12 @@ public abstract class KrabApplet extends PApplet {
         return new HSBA();
     }
 
+    @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount) {
         return gradient(name, defaultColorCount, width, height, GradientType.VERTICAL);
     }
 
+    @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
         return gradient(name, defaultColorCount, width, height, defaultType);
     }
@@ -882,8 +884,7 @@ public abstract class KrabApplet extends PApplet {
     /**
      * Creates a gradient with adjustable colors and color positions using the GUI
      * and passes it to a shader as a texture.
-     * // TODO implement various color blending methods
-     * https://www.shadertoy.com/view/lsdGzN
+     *
      *
      * @param fragPath          path to the fragment shader
      * @param vertPath          path to the vertex shader, can be null
@@ -3478,8 +3479,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    // TODO allow to change type
-    // TODO more color blend modes with shaders
+    // TODO more color blend modes with shaders (https://www.shadertoy.com/view/lsdGzN)
     class GradientEditor extends Element {
         private final GradientType defaultType;
         private final PGraphics pg;
