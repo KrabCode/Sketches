@@ -76,6 +76,7 @@ public abstract class KrabApplet extends PApplet {
     private static String clipboardGradient = "";
     private final int KEY_CTRL_C = 3;
     private final int KEY_CTRL_V = 22;
+    @SuppressWarnings("FieldCanBeLocal")
     private final int KEY_CTRL_S = 19;
     private final boolean onWindows = System.getProperty("os.name").toLowerCase().startsWith("windows");
     private final float textSize = onWindows ? 24 : 48;
@@ -106,6 +107,7 @@ public abstract class KrabApplet extends PApplet {
             new PVector(1, 0, 0),
             new PVector(0, 1, 0),
             new PVector(0, 0, 1)};
+    @SuppressWarnings("FieldCanBeLocal")
     private final String videoOutputDir = "/out/video";
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
@@ -300,6 +302,7 @@ public abstract class KrabApplet extends PApplet {
         return new HSBA();
     }
 
+    @SuppressWarnings("unused")
     protected PGraphics gradient(String name) {
         return gradient(name, 4, GradientType.VERTICAL, width, height);
     }
@@ -3529,7 +3532,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void handleActions() {
-            if (actionsContainsLockAware(ACTION_RESET)) {
+            if (actionsContainsLockAware(ACTION_RESET)  && currentlySelectedPicker == null) {
                 pushCurrentStateToUndo();
                 reset();
             }
@@ -3637,6 +3640,9 @@ public abstract class KrabApplet extends PApplet {
                 boolean mouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
                 if (mouseAroundHandle) {
                     if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
+                        if(mouseJustPressedOutsideGui()){
+                            pushCurrentStateToUndo();
+                        }
                         pickerMoved = true;
                         blockDeselectionUntilMouseRelease = true;
                         picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2,

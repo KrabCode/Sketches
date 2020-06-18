@@ -17,7 +17,7 @@ public class GradientTest extends KrabApplet {
 
     public void setup() {
         if (width < displayWidth) {
-            surface.setLocation(displayWidth-1020, 20);
+            surface.setLocation(displayWidth - 1020, 20);
             surface.setAlwaysOnTop(true);
         }
         pg = createGraphics(width, height, P2D);
@@ -25,8 +25,8 @@ public class GradientTest extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        pg.image(gradient("left",4,width/2, height, GradientType.VERTICAL), 0, 0, width/2f, height);
-        pg.image(gradient("right",4,width/2, height, GradientType.VERTICAL), width/2f, 0, width/2f, height);
+        pg.image(gradient("left", 4, GradientType.VERTICAL, width / 2, height), 0, 0, width / 2f, height);
+        pg.image(gradient("right", 4, GradientType.VERTICAL, width / 2, height), width / 2f, 0, width / 2f, height);
         pg.endDraw();
         image(pg, 0, 0, width, height);
         rec(pg);
