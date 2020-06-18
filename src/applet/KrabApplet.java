@@ -1170,7 +1170,7 @@ public abstract class KrabApplet extends PApplet {
         int nonFlickeringFrameRate = floor(frameRate > 55 ? 60 : frameRate);
         String fps = nonFlickeringFrameRate + " fps";
         surface.setTitle(this.getClass().getSimpleName() + " " + fps);
-        if (isFullscreen()) {
+        if (isFullscreen() && trayVisible) {
             pushStyle();
             colorMode(HSB, 1, 1, 1, 1);
             textSize(textSize);

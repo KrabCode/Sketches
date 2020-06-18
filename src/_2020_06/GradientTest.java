@@ -11,8 +11,8 @@ public class GradientTest extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P2D);
-//        fullScreen(P2D);
+//        size(1000, 1000, P2D);
+        fullScreen(P2D);
     }
 
     public void setup() {
