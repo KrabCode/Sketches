@@ -3680,38 +3680,12 @@ public abstract class KrabApplet extends PApplet {
                 float pickerPosition = clampNorm(mouseX,
                         previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
                 // TODO just get the color from the texture instead of this color lerping
-                int lerpedColor = lerpColorBetweenNeighbouringPickers(pickerPosition);
-                ColorPicker newPicker = new ColorPicker(pickerPosition, false, hue(lerpedColor),
-                        saturation(lerpedColor), brightness(lerpedColor), alpha(lerpedColor));
+                int colorAtPos = preview.get(floor(pickerPosition*preview.width), floor(previewHeight/2));
+                ColorPicker newPicker = new ColorPicker(pickerPosition, false,
+                        hue(colorAtPos), saturation(colorAtPos), brightness(colorAtPos), alpha(colorAtPos));
                 pickers.add(newPicker);
                 currentlySelectedPicker = newPicker;
             }
-        }
-
-        private int lerpColorBetweenNeighbouringPickers(float queryPosition) {
-            ColorPicker closestPickerToTheLeft = findClosestPicker(false, queryPosition);
-            ColorPicker closestPickerToTheRight = findClosestPicker(true, queryPosition);
-            HSBA leftColor = closestPickerToTheLeft.getHSBA();
-            HSBA rightColor = closestPickerToTheRight.getHSBA();
-            float normalizedPositionBetweenNeighbours = clampNorm(queryPosition,
-                    closestPickerToTheLeft.gradientPosition, closestPickerToTheRight.gradientPosition);
-            return lerpColor(leftColor.clr(), rightColor.clr(), normalizedPositionBetweenNeighbours);
-        }
-
-        private ColorPicker findClosestPicker(boolean greaterThan, float queryPosition) {
-            float closestDistance = 10;
-            ColorPicker closestPicker = pickers.get(0);
-            for (ColorPicker picker : pickers) {
-                if ((picker.gradientPosition < queryPosition && !greaterThan) || (picker.gradientPosition > queryPosition && greaterThan)) {
-                    continue;
-                }
-                float dist = abs(picker.gradientPosition - queryPosition);
-                if (dist < closestDistance) {
-                    closestDistance = dist;
-                    closestPicker = picker;
-                }
-            }
-            return closestPicker;
         }
 
         private boolean isPickerSelected(ColorPicker picker) {

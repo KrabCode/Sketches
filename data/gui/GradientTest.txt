@@ -1,0 +1,6 @@
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§left§vertical§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.9969999§0.25625§0.471875§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GradientTest§right§vertical§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.9969999§0.25625§0.471875§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+STATE_END
