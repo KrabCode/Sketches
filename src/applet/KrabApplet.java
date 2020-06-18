@@ -1151,7 +1151,6 @@ public abstract class KrabApplet extends PApplet {
                 while (sc.hasNextLine()) {
                     println(sc.nextLine());
                 }
-                //TODO delete image sequence directory to save disk space
             }).start();
         } catch (IOException e) {
             e.printStackTrace();
@@ -3481,14 +3480,18 @@ public abstract class KrabApplet extends PApplet {
                 pushCurrentStateToUndo();
                 reset();
             }
-            //TODO allow copy and paste of the whole gradient
+            // TODO allow copy and paste of the whole gradient
+            // TODO more color blend modes with shaders
         }
 
         String getState() {
+            //TODO implement
             return super.getState();
         }
 
-        void setState(String newState) {}
+        void setState(String newState) {
+            // TODO me
+        }
 
         void updateOverlay() {
             super.updateOverlay();
@@ -3520,11 +3523,10 @@ public abstract class KrabApplet extends PApplet {
                 float h = previewHeight * 1.5f;
                 float lineTopY = y - h / 2;
                 HSBA pickerColor = picker.getHSBA();
-                int clr = pickerColor.clr();
                 stroke(GRAYSCALE_TEXT_DARK);
                 strokeWeight(3);
                 line(x, lineTopY, x, y);
-                fill(clr);
+                fill(pickerColor.clr());
                 noStroke();
                 strokeWeight(2);
                 boolean mouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
@@ -3540,9 +3542,9 @@ public abstract class KrabApplet extends PApplet {
                             currentlySelectedPicker = picker;
                             currentlySelectedPicker.onOverlayShown();
                         }
-                        if(mouseJustReleased() && mouseButton == RIGHT && !pickerDeleted && !picker.gradientPositionLocked) {
+                        if (mouseButton == RIGHT && mouseJustReleased() && !pickerDeleted && !picker.gradientPositionLocked) {
                             pickersToRemove.add(picker);
-                            if(isPickerSelected(picker)) {
+                            if (isPickerSelected(picker)) {
                                 currentlySelectedPicker = null;
                             }
                             pickerDeleted = true;
@@ -3562,52 +3564,40 @@ public abstract class KrabApplet extends PApplet {
                 currentlySelectedPicker.updateOverlay();
             }
             pickers.removeAll(pickersToRemove);
-            boolean mouseJustReleasedInsideGradientEditor = mouseJustReleasedHere(previewCenterX - previewWidth / 2, previewCenterY - previewHeight, previewWidth, previewHeight*2);
-            if (mouseJustReleasedInsideGradientEditor) {
-                if(mouseButton == RIGHT && !pickerDeleted){
-                    float pickerPosition = clampNorm(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
-                    HSBA lerpedColor = lerpColorBetweenNeighbouringPickers(pickerPosition);
-                    ColorPicker newPicker = new ColorPicker(pickerPosition, false, lerpedColor.hue(), lerpedColor.sat(), lerpedColor.br(), lerpedColor.alpha());
-                    pickers.add(newPicker);
-                    currentlySelectedPicker = newPicker;
-                }
+            boolean mouseJustReleasedInsideGradientEditor = mouseJustReleasedHere(previewCenterX - previewWidth / 2, previewCenterY - previewHeight, previewWidth, previewHeight * 2);
+            if (mouseJustReleasedInsideGradientEditor && mouseButton == RIGHT && !pickerDeleted) {
+                float pickerPosition = clampNorm(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
+                // TODO just get the color from the texture, the shader blend modes will make this more difficult otherwise
+                int lerpedColor = lerpColorBetweenNeighbouringPickers(pickerPosition);
+                ColorPicker newPicker = new ColorPicker(pickerPosition, false, hue(lerpedColor), saturation(lerpedColor), brightness(lerpedColor), alpha(lerpedColor));
+                pickers.add(newPicker);
+                currentlySelectedPicker = newPicker;
             }
         }
 
-        private HSBA lerpColorBetweenNeighbouringPickers(float queryPosition) {
-            float closestDistanceToTheLeft = 10;
-            ColorPicker closestPickerToTheLeft = pickers.get(0);
-            for (ColorPicker picker : pickers) {
-                if (picker.gradientPosition > queryPosition) {
-                    continue;
-                }
-                float dist = abs(picker.gradientPosition - queryPosition);
-                if (dist < closestDistanceToTheLeft) {
-                    closestDistanceToTheLeft = dist;
-                    closestPickerToTheLeft = picker;
-                }
-            }
-
-            float closestDistanceToTheRight = 10;
-            ColorPicker closestPickerToTheRight = pickers.get(0);
-            for (ColorPicker picker : pickers) {
-                if (picker.gradientPosition < queryPosition) {
-                    continue;
-                }
-                float dist = abs(picker.gradientPosition - queryPosition);
-                if (dist < closestDistanceToTheRight) {
-                    closestDistanceToTheRight = dist;
-                    closestPickerToTheRight = picker;
-                }
-            }
+        private int lerpColorBetweenNeighbouringPickers(float queryPosition) {
+            ColorPicker closestPickerToTheLeft = findClosestPicker(false, queryPosition);
+            ColorPicker closestPickerToTheRight = findClosestPicker(true, queryPosition);
             HSBA leftColor = closestPickerToTheLeft.getHSBA();
             HSBA rightColor = closestPickerToTheRight.getHSBA();
             float normalizedPositionBetweenNeighbours = clampNorm(queryPosition, closestPickerToTheLeft.gradientPosition, closestPickerToTheRight.gradientPosition);
-            return new HSBA(
-                    lerp(leftColor.hue(), rightColor.hue(), normalizedPositionBetweenNeighbours),
-                    lerp(leftColor.sat(), rightColor.sat(), normalizedPositionBetweenNeighbours),
-                    lerp(leftColor.br(), rightColor.br(), normalizedPositionBetweenNeighbours),
-                    lerp(leftColor.alpha(), rightColor.alpha(), normalizedPositionBetweenNeighbours));
+            return lerpColor(leftColor.clr(), rightColor.clr(), normalizedPositionBetweenNeighbours);
+        }
+
+        private ColorPicker findClosestPicker(boolean greaterThan, float queryPosition) {
+            float closestDistance = 10;
+            ColorPicker closestPicker = pickers.get(0);
+            for (ColorPicker picker : pickers) {
+                if ((picker.gradientPosition < queryPosition && !greaterThan) || (picker.gradientPosition > queryPosition && greaterThan)) {
+                    continue;
+                }
+                float dist = abs(picker.gradientPosition - queryPosition);
+                if (dist < closestDistance) {
+                    closestDistance = dist;
+                    closestPicker = picker;
+                }
+            }
+            return closestPicker;
         }
 
 
