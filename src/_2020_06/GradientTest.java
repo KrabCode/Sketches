@@ -25,7 +25,8 @@ public class GradientTest extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        pg.image(gradient("grad",4, GradientType.VERTICAL), 0, 0);
+        pg.image(gradient("left",4,width/2, height, GradientType.VERTICAL), 0, 0, width/2f, height);
+        pg.image(gradient("right",4,width/2, height, GradientType.VERTICAL), width/2f, 0, width/2f, height);
         pg.endDraw();
         image(pg, 0, 0, width, height);
         rec(pg);

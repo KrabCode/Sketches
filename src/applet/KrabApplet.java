@@ -22,7 +22,6 @@ import static java.lang.System.currentTimeMillis;
 @SuppressWarnings({"FieldCanBeLocal"})
 public abstract class KrabApplet extends PApplet {
     private static final Boolean FFMPEG_ENABLED = true;
-
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
@@ -39,13 +38,14 @@ public abstract class KrabApplet extends PApplet {
     private static final String ACTION_SAVE = "SAVE";
     private static final String ACTION_COPY = "COPY";
     private static final String ACTION_PASTE = "PASTE";
+    private static final String ACTION_CHANGE_TYPE = "CHANGE_TYPE";
     private static final int MENU_BUTTON_COUNT = 4;
     private static final String SATURATION = "saturation";
     private static final String BRIGHTNESS = "brightness";
     private static final String HUE = "hue";
     private static final float BACKGROUND_ALPHA = .9f;
-    private static final float GRAYSCALE_TEXT_DARK = .5f;
-    private static final float GRAYSCALE_TEXT_SELECTED = 1;
+    private static final float GRAYSCALE_DARK = .5f;
+    private static final float GRAYSCALE_SELECTED = 1;
     private static final float INT_PRECISION_MAXIMUM = 100000;
     private static final float INT_PRECISION_MINIMUM = 10f;
     private static final float FLOAT_PRECISION_MAXIMUM = 10000;
@@ -1170,7 +1170,7 @@ public abstract class KrabApplet extends PApplet {
             textAlign(LEFT, CENTER);
             fill(0);
             text(fps, trayWidth + cell * .5f, cell * .5f);
-            fill(GRAYSCALE_TEXT_SELECTED);
+            fill(GRAYSCALE_SELECTED);
             text(fps, trayWidth + cell * .45f, cell * .45f);
             popStyle();
         }
@@ -1203,7 +1203,7 @@ public abstract class KrabApplet extends PApplet {
             trayWidth = trayVisible ? trayWidthWhenExtended : 0;
             hideRotationStarted = frameCount;
         }
-        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_SELECTED : GRAYSCALE_DARK;
         fill(grayscale);
         stroke(grayscale);
         float rotation = easedAnimation(hideRotationStarted, MENU_ROTATION_DURATION, MENU_ROTATION_EASING);
@@ -1310,7 +1310,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void displayMenuButtonSave(float x, float y, float w, float h, float animation) {
-        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_SELECTED : GRAYSCALE_DARK;
         stroke(grayscale);
         strokeWeight(2);
         noFill();
@@ -1322,7 +1322,7 @@ public abstract class KrabApplet extends PApplet {
                                     boolean direction, int stackSize) {
         textSize(textSize);
         textAlign(CENTER, CENTER);
-        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+        float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_SELECTED : GRAYSCALE_DARK;
         fill(grayscale);
         pushMatrix();
         translate(x + w * .5f, y + h * .5f);
@@ -1419,11 +1419,11 @@ public abstract class KrabApplet extends PApplet {
         float grayScale;
         if (isSelected) {
             el.lastSelected = frameCount;
-            grayScale = GRAYSCALE_TEXT_SELECTED;
+            grayScale = GRAYSCALE_SELECTED;
         } else {
             float deselectionFadeout = easedAnimation(el.lastSelected, DESELECTION_FADEOUT_DURATION,
                     DESELECTION_FADEOUT_EASING);
-            grayScale = lerp(GRAYSCALE_TEXT_DARK, GRAYSCALE_TEXT_SELECTED, 1 - deselectionFadeout);
+            grayScale = lerp(GRAYSCALE_DARK, GRAYSCALE_SELECTED, 1 - deselectionFadeout);
         }
         pushStyle();
         fill(grayScale, alpha);
@@ -1623,6 +1623,9 @@ public abstract class KrabApplet extends PApplet {
         }
         if (kk.character == 'h') {
             actions.add(ACTION_HIDE);
+        }
+        if (kk.character == 't') {
+            actions.add(ACTION_CHANGE_TYPE);
         }
         if (kk.character == KEY_CTRL_S) {
             actions.add(ACTION_SAVE);
@@ -1975,9 +1978,58 @@ public abstract class KrabApplet extends PApplet {
     // CLASSES
 
     protected enum GradientType {
-        VERTICAL,
-        HORIZONTAL,
-        CIRCULAR
+        VERTICAL(0, "vertical", '↑'),
+        HORIZONTAL(1, "horizontal", '→'),
+        CIRCULAR(2, "circular", '♂');
+
+        public int index;
+        public char symbol;
+        public String value;
+
+        GradientType(int index, String value, char symbol) {
+            this.value = value;
+            this.index = index;
+            this.symbol = symbol;
+        }
+
+        static int typeCount() {
+            return 3;
+        }
+
+        public static GradientType parseIndex(int query) {
+            if (query == 0) {
+                return VERTICAL;
+            } else if (query == 1) {
+                return HORIZONTAL;
+            } else if (query == 2) {
+                return CIRCULAR;
+            }
+            throw new IllegalArgumentException("index query " + query + " was not found in the GradientType enum");
+        }
+
+        public static GradientType parseType(String typeString) {
+            if (typeString.equals(VERTICAL.toString())) {
+                return VERTICAL;
+            } else if (typeString.equals(HORIZONTAL.toString())) {
+                return HORIZONTAL;
+            } else if (typeString.equals(CIRCULAR.toString())) {
+                return CIRCULAR;
+            }
+            throw new IllegalArgumentException("gradient type " + typeString + " was not found in the GradientType " +
+                    "enum");
+        }
+
+        public int getIndex() {
+            return index;
+        }
+
+        public String toString() {
+            return value;
+        }
+
+        char getSymbol() {
+            return symbol;
+        }
     }
 
     private static class Key {
@@ -2108,7 +2160,7 @@ public abstract class KrabApplet extends PApplet {
         public void displayInTray(float x, float y) {
             pushStyle();
             boolean isSelected = (isMouseOverScrollAware(0, y - cell, trayWidth, cell));
-            float clr = isSelected ? GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK;
+            float clr = isSelected ? GRAYSCALE_SELECTED : GRAYSCALE_DARK;
             fill(clr);
             stroke(clr);
             strokeWeight(2);
@@ -2223,7 +2275,7 @@ public abstract class KrabApplet extends PApplet {
                 rectMode(CENTER);
                 pushStyle();
                 strokeWeight(1);
-                stroke(GRAYSCALE_TEXT_DARK);
+                stroke(GRAYSCALE_DARK);
                 rect(-w, y - textSize * .5f, w, w);
                 popStyle();
             }
@@ -2492,7 +2544,7 @@ public abstract class KrabApplet extends PApplet {
             rect(trayWidth, height - overlayHeight, width - trayWidth, overlayHeight);
             float x = width / 2f;
             float y = height - overlayHeight / 2;
-            fill(GRAYSCALE_TEXT_SELECTED);
+            fill(GRAYSCALE_SELECTED);
             textAlign(CENTER, CENTER);
             textSize(overlayTextSize);
             String displayValue = value;
@@ -2615,13 +2667,13 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void displayHorizontalLine(float w, float revealAnimation) {
-            stroke(GRAYSCALE_TEXT_DARK);
+            stroke(GRAYSCALE_DARK);
             beginShape();
             w *= revealAnimation;
             for (int i = 0; i < w; i++) {
                 float iNorm = norm(i, 0, w);
                 float screenX = lerp(-w, w, iNorm);
-                stroke(GRAYSCALE_TEXT_SELECTED, darkenEdges(screenX, w));
+                stroke(GRAYSCALE_SELECTED, darkenEdges(screenX, w));
                 vertex(screenX, 0);
             }
             endShape();
@@ -2664,8 +2716,8 @@ public abstract class KrabApplet extends PApplet {
                 return;
             }
             float grayscale = darkenEdges(screenX, w);
-            fill(GRAYSCALE_TEXT_SELECTED, grayscale * revealAnimationEased);
-            stroke(GRAYSCALE_TEXT_SELECTED, grayscale * revealAnimationEased);
+            fill(GRAYSCALE_SELECTED, grayscale * revealAnimationEased);
+            stroke(GRAYSCALE_SELECTED, grayscale * revealAnimationEased);
             line(screenX, -markerHeight * .5f, screenX, -horizontalLineHeight * .5f);
             if (shouldDisplayValue) {
                 if (flipTextHorizontally) {
@@ -2689,7 +2741,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void displayValue(float precision, float value, float animationEased, boolean floored) {
-            fill(GRAYSCALE_TEXT_DARK);
+            fill(GRAYSCALE_DARK);
             textAlign(CENTER, CENTER);
             textSize(textSize * 1.2f);
             float textY = -cell * 2.5f;
@@ -2716,9 +2768,9 @@ public abstract class KrabApplet extends PApplet {
             fill(0, BACKGROUND_ALPHA);
             rectMode(CENTER);
             rect(textX, textY + textSize * .2f, textWidth(text) + 20, textSize * 1.2f + 20);
-            fill(GRAYSCALE_TEXT_SELECTED * animationEased);
+            fill(GRAYSCALE_SELECTED * animationEased);
             text(text, textX, textY);
-            stroke(GRAYSCALE_TEXT_SELECTED);
+            stroke(GRAYSCALE_SELECTED);
             line(0, -5, 0, 5);
         }
 
@@ -2742,7 +2794,7 @@ public abstract class KrabApplet extends PApplet {
             float x = width - cell * 3.1f;
             float y = height - cell * 2.6f;
             rect(x, y, cell * 2, cell, cell * .8f);
-            fill(GRAYSCALE_TEXT_DARK);
+            fill(GRAYSCALE_DARK);
             textAlign(CENTER, CENTER);
             textSize(textSize * .75f);
             text(prettyPrecisionFormat(precision), x, y - 2);
@@ -3067,17 +3119,17 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private class ColorPicker extends Slider {
-        public float gradientPosition;
-        public boolean gradientPositionLocked;
         private final HSBA hsba;
         private final float defaultHue;
         private final float defaultSat;
         private final float defaultBr;
         private final float defaultAlpha;
         private final float huePrecision = .5f;
+        public float gradientPosition;
+        public boolean gradientPositionLocked;
+        public boolean hueLocked = false;
         private float alphaPrecision = 1;
         private float pickerRevealStarted = -PICKER_REVEAL_DURATION;
-        public boolean hueLocked = false;
         private boolean brightnessLocked, saturationLocked;
         private boolean satChanged, brChanged;
 
@@ -3158,7 +3210,7 @@ public abstract class KrabApplet extends PApplet {
 
         void displayOnTray(float x, float y) {
             pushStyle();
-            stroke(GRAYSCALE_TEXT_DARK);
+            stroke(GRAYSCALE_DARK);
             strokeWeight(1);
             fill(hsba.clr());
             rectMode(CENTER);
@@ -3228,7 +3280,7 @@ public abstract class KrabApplet extends PApplet {
 
             displayInfiniteSliderCenterMode(height - height / 4f, width - sliderHeight * .5f, height / 2f, sliderHeight,
                     alphaPrecision, hsba.alpha, revealAnimation, false, false, false, 0, 1);
-            fill(GRAYSCALE_TEXT_DARK);
+            fill(GRAYSCALE_DARK);
             textAlign(CENTER, CENTER);
             textSize(textSize);
             text("alpha", width - sliderHeight * .5f, 15);
@@ -3310,7 +3362,7 @@ public abstract class KrabApplet extends PApplet {
             strokeWeight(2);
             stroke((type.equals(SATURATION) && satChanged) ||
                     (type.equals(BRIGHTNESS) && brChanged) || mouseOver ?
-                    GRAYSCALE_TEXT_SELECTED : GRAYSCALE_TEXT_DARK);
+                    GRAYSCALE_SELECTED : GRAYSCALE_DARK);
             line(x - 2, valueY, x + w + 2, valueY);
         }
 
@@ -3426,21 +3478,25 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
+    // TODO allow to change type
+    // TODO more color blend modes with shaders
     class GradientEditor extends Element {
         private final GradientType defaultType;
-        private GradientType type;
-        private final int defaultColorCount;
         private final PGraphics pg;
         private final PGraphics preview;
         private final ArrayList<ColorPicker> pickers = new ArrayList<>();
         private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
-        private ColorPicker currentlySelectedPicker = null;
         private final float pickerHandleRadius = 15;
-
         float previewCenterX = width / 2f;
         float previewCenterY = height - sliderHeight - cell * 4.5f;
         float previewWidth = cell * 8;
         float previewHeight = cell * 3;
+        private GradientType type;
+        private int defaultColorCount;
+        private ColorPicker currentlySelectedPicker = null;
+        private boolean blockDeselectionUntilMouseRelease = false;
+        private int typeChangedFrame;
+        private int typeChangeFadeoutDuration = 60;
 
         GradientEditor(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultType) {
             super(group, name);
@@ -3471,26 +3527,57 @@ public abstract class KrabApplet extends PApplet {
             initPickers();
         }
 
-        void update() {
-
-        }
-
         void handleActions() {
             if (actionsContainsLockAware(ACTION_RESET)) {
                 pushCurrentStateToUndo();
                 reset();
             }
-            // TODO allow copy and paste of the whole gradient
-            // TODO more color blend modes with shaders
+            if (previousActionsContainsLockAware(ACTION_COPY)) {
+                clipboardGradient = getState();
+            }
+            if (previousActionsContainsLockAware(ACTION_PASTE) && currentlySelectedPicker == null && !clipboardGradient.isEmpty()) {
+                pushCurrentStateToUndo();
+                setState(clipboardGradient);
+            }
+            if (previousActions.contains(ACTION_CHANGE_TYPE)) {
+                typeChangedFrame = frameCount;
+                int typeIndex = type.getIndex();
+                int nextIndex = (typeIndex + 1) % GradientType.typeCount();
+                type = GradientType.parseIndex(nextIndex);
+            }
         }
 
         String getState() {
-            //TODO implement
-            return super.getState();
+            StringBuilder state = new StringBuilder(super.getState());
+            state.append(type.toString()).append(SEPARATOR);
+            for (ColorPicker p : pickers) {
+                HSBA hsba = p.getHSBA();
+                state.append(p.gradientPosition).append(SEPARATOR)
+                        .append(p.gradientPositionLocked).append(SEPARATOR)
+                        .append(hsba.hue).append(SEPARATOR)
+                        .append(hsba.sat).append(SEPARATOR)
+                        .append(hsba.br).append(SEPARATOR)
+                        .append(hsba.alpha).append(SEPARATOR);
+            }
+            return state.toString();
         }
 
         void setState(String newState) {
-            // TODO me
+            String[] split = newState.split(SEPARATOR);
+            String typeString = split[2];
+            type = GradientType.parseType(typeString);
+            pickers.clear();
+            int i = 3;
+            while (i < split.length) {
+                float gradientPosition = Float.parseFloat(split[i++]);
+                boolean locked = Boolean.parseBoolean(split[i++]);
+                float hue = Float.parseFloat(split[i++]);
+                float sat = Float.parseFloat(split[i++]);
+                float br = Float.parseFloat(split[i++]);
+                float alpha = Float.parseFloat(split[i++]);
+                pickers.add(new ColorPicker(gradientPosition, locked, hue, sat, br, alpha));
+            }
+            drawGradientToTexture(pg, type);
         }
 
         void updateOverlay() {
@@ -3498,6 +3585,21 @@ public abstract class KrabApplet extends PApplet {
             updateColorPickers();
             drawGradientToTexture(pg, type);
             drawPreview();
+            drawTypeIndicator();
+        }
+
+        private void drawTypeIndicator() {
+            pushStyle();
+            float alpha = 1 - easedAnimation(typeChangedFrame, typeChangeFadeoutDuration, 1);
+            textSize(32);
+            textAlign(CENTER, CENTER);
+            fill(0, alpha);
+            float indicatorX = previewCenterX;
+            float indicatorY = previewCenterY - previewHeight;
+            text(String.valueOf(type.getSymbol()), indicatorX + cell * 0.05f, indicatorY + cell * 0.05f);
+            fill(GRAYSCALE_SELECTED, alpha);
+            text(String.valueOf(type.getSymbol()), indicatorX, indicatorY);
+            popStyle();
         }
 
         private void drawPreview() {
@@ -3523,7 +3625,7 @@ public abstract class KrabApplet extends PApplet {
                 float h = previewHeight * 1.5f;
                 float lineTopY = y - h / 2;
                 HSBA pickerColor = picker.getHSBA();
-                stroke(GRAYSCALE_TEXT_DARK);
+                stroke(GRAYSCALE_DARK);
                 strokeWeight(3);
                 line(x, lineTopY, x, y);
                 fill(pickerColor.clr());
@@ -3533,14 +3635,19 @@ public abstract class KrabApplet extends PApplet {
                 if (mouseAroundHandle) {
                     if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
                         pickerMoved = true;
-                        picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2, 0, 1), 0, 1);
+                        blockDeselectionUntilMouseRelease = true;
+                        picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2,
+                                previewCenterX + previewWidth / 2, 0, 1), 0, 1);
                     }
                     boolean mouseDirectlyOverHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius);
                     if (mouseDirectlyOverHandle) {
-                        stroke(GRAYSCALE_TEXT_DARK);
-                        if (!isPickerSelected(picker) && mouseJustPressedOutsideGui()) {
+                        stroke(GRAYSCALE_DARK);
+                        if (mouseJustPressedOutsideGui() && !isPickerSelected(picker)) {
                             currentlySelectedPicker = picker;
                             currentlySelectedPicker.onOverlayShown();
+                            blockDeselectionUntilMouseRelease = true;
+                        } else if (mouseJustReleased() && isPickerSelected(picker) && !blockDeselectionUntilMouseRelease) {
+                            currentlySelectedPicker = null;
                         }
                         if (mouseButton == RIGHT && mouseJustReleased() && !pickerDeleted && !picker.gradientPositionLocked) {
                             pickersToRemove.add(picker);
@@ -3552,9 +3659,12 @@ public abstract class KrabApplet extends PApplet {
                     }
                 }
                 if (isPickerSelected(picker)) {
-                    stroke(GRAYSCALE_TEXT_SELECTED);
+                    stroke(GRAYSCALE_SELECTED);
                 }
                 ellipse(x, lineTopY, pickerHandleRadius, pickerHandleRadius);
+            }
+            if (mouseJustReleased()) {
+                blockDeselectionUntilMouseRelease = false;
             }
             popStyle();
             if (currentlySelectedPicker != null) {
@@ -3564,12 +3674,15 @@ public abstract class KrabApplet extends PApplet {
                 currentlySelectedPicker.updateOverlay();
             }
             pickers.removeAll(pickersToRemove);
-            boolean mouseJustReleasedInsideGradientEditor = mouseJustReleasedHere(previewCenterX - previewWidth / 2, previewCenterY - previewHeight, previewWidth, previewHeight * 2);
+            boolean mouseJustReleasedInsideGradientEditor = mouseJustReleasedHere(previewCenterX - previewWidth / 2,
+                    previewCenterY - previewHeight, previewWidth, previewHeight * 2);
             if (mouseJustReleasedInsideGradientEditor && mouseButton == RIGHT && !pickerDeleted) {
-                float pickerPosition = clampNorm(mouseX, previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
-                // TODO just get the color from the texture, the shader blend modes will make this more difficult otherwise
+                float pickerPosition = clampNorm(mouseX,
+                        previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
+                // TODO just get the color from the texture instead of this color lerping
                 int lerpedColor = lerpColorBetweenNeighbouringPickers(pickerPosition);
-                ColorPicker newPicker = new ColorPicker(pickerPosition, false, hue(lerpedColor), saturation(lerpedColor), brightness(lerpedColor), alpha(lerpedColor));
+                ColorPicker newPicker = new ColorPicker(pickerPosition, false, hue(lerpedColor),
+                        saturation(lerpedColor), brightness(lerpedColor), alpha(lerpedColor));
                 pickers.add(newPicker);
                 currentlySelectedPicker = newPicker;
             }
@@ -3580,7 +3693,8 @@ public abstract class KrabApplet extends PApplet {
             ColorPicker closestPickerToTheRight = findClosestPicker(true, queryPosition);
             HSBA leftColor = closestPickerToTheLeft.getHSBA();
             HSBA rightColor = closestPickerToTheRight.getHSBA();
-            float normalizedPositionBetweenNeighbours = clampNorm(queryPosition, closestPickerToTheLeft.gradientPosition, closestPickerToTheRight.gradientPosition);
+            float normalizedPositionBetweenNeighbours = clampNorm(queryPosition,
+                    closestPickerToTheLeft.gradientPosition, closestPickerToTheRight.gradientPosition);
             return lerpColor(leftColor.clr(), rightColor.clr(), normalizedPositionBetweenNeighbours);
         }
 
@@ -3599,7 +3713,6 @@ public abstract class KrabApplet extends PApplet {
             }
             return closestPicker;
         }
-
 
         private boolean isPickerSelected(ColorPicker picker) {
             return currentlySelectedPicker != null && currentlySelectedPicker.equals(picker);
@@ -3673,7 +3786,8 @@ public abstract class KrabApplet extends PApplet {
                 for (int j = 0; j < circularDetail; j++) {
                     float theta = map(j, 0, circularDetail - 1, 0, TAU);
                     pg.fill(previous.getHSBA().clr());
-                    pg.vertex(pg.width / 2f + previousRadius * cos(theta), pg.height / 2f + previousRadius * sin(theta));
+                    pg.vertex(pg.width / 2f + previousRadius * cos(theta),
+                            pg.height / 2f + previousRadius * sin(theta));
                     pg.fill(current.getHSBA().clr());
                     pg.vertex(pg.width / 2f + r * cos(theta), pg.height / 2f + r * sin(theta));
                 }
