@@ -19,7 +19,7 @@ import static java.lang.System.currentTimeMillis;
  * See the GuiManual in readme for documentation.
  */
 
-@SuppressWarnings({"FieldCanBeLocal"})
+
 public abstract class KrabApplet extends PApplet {
     private static final Boolean FFMPEG_ENABLED = true;
     private static final String STATE_BEGIN = "STATE_BEGIN";
@@ -872,18 +872,15 @@ public abstract class KrabApplet extends PApplet {
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
+    @SuppressWarnings("DeprecatedIsStillUsed")
+    @Deprecated
     protected void uniformRamp(String fragPath) {
         uniformRamp(fragPath, null, "ramp", 4);
     }
 
-    @SuppressWarnings("unused")
-    protected void uniformRamp(String fragPath, String vertPath) {
-        uniformRamp(fragPath, vertPath, "ramp", 4);
-    }
-
     /**
      * Creates a gradient with adjustable colors and color positions using the GUI
-     * and passes it to a shader as a texture.
+     * and passes it to a shader as a texture. Deprecated in favor of GradientEditor.
      *
      *
      * @param fragPath          path to the fragment shader
@@ -892,6 +889,8 @@ public abstract class KrabApplet extends PApplet {
      * @param defaultColorCount default number of colors
      *                          any saved settings for things higher than this number won't be loaded on startup
      */
+    @SuppressWarnings("DeprecatedIsStillUsed")
+    @Deprecated
     protected void uniformRamp(String fragPath, String vertPath, String rampName, int defaultColorCount) {
         if (shaderRamp == null) {
             shaderRamp = createGraphics(5, 1000, P2D);
@@ -3125,7 +3124,6 @@ public abstract class KrabApplet extends PApplet {
         private final float defaultSat;
         private final float defaultBr;
         private final float defaultAlpha;
-        private final float huePrecision = .5f;
         public float gradientPosition;
         public boolean gradientPositionLocked;
         public boolean hueLocked = false;
@@ -3292,6 +3290,7 @@ public abstract class KrabApplet extends PApplet {
             }
 
             displayHueSlider(sliderHeight, revealAnimation);
+            float huePrecision = .5f;
             float hueDelta = updateInfiniteSlider(huePrecision, true, false);
             if (!satChanged && !brChanged && !hueLocked) {
                 hsba.hue += hueDelta;
@@ -3486,7 +3485,6 @@ public abstract class KrabApplet extends PApplet {
         private final PGraphics preview;
         private final ArrayList<ColorPicker> pickers = new ArrayList<>();
         private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
-        private final float pickerHandleRadius = 15;
         float previewCenterX = width / 2f;
         float previewCenterY = height - sliderHeight - cell * 4.5f;
         float previewWidth = cell * 8;
@@ -3496,7 +3494,6 @@ public abstract class KrabApplet extends PApplet {
         private ColorPicker currentlySelectedPicker = null;
         private boolean blockDeselectionUntilMouseRelease = false;
         private int typeChangedFrame;
-        private int typeChangeFadeoutDuration = 60;
 
         GradientEditor(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultType) {
             super(group, name);
@@ -3590,6 +3587,7 @@ public abstract class KrabApplet extends PApplet {
 
         private void drawTypeIndicator() {
             pushStyle();
+            int typeChangeFadeoutDuration = 60;
             float alpha = 1 - easedAnimation(typeChangedFrame, typeChangeFadeoutDuration, 1);
             textSize(32);
             textAlign(CENTER, CENTER);
@@ -3631,6 +3629,7 @@ public abstract class KrabApplet extends PApplet {
                 fill(pickerColor.clr());
                 noStroke();
                 strokeWeight(2);
+                float pickerHandleRadius = 15;
                 boolean mouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
                 if (mouseAroundHandle) {
                     if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
