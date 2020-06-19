@@ -20,6 +20,8 @@ public class GradientShader extends KrabApplet {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);
         }
+        frameRecordingDuration = 360;
+        FFMPEG_ENABLED = false;
     }
 
     public void draw() {

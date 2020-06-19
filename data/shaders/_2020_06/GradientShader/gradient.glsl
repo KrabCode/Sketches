@@ -12,12 +12,12 @@ vec4 rampColor(float pct){
 }
 
 void main() {
-    float t = time*.2;
+    float t = time*0.25;
     vec2 uv = gl_FragCoord.xy / resolution.xy;
     vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
     cv *= 5;
     float distanceFromCenter = length(cv);
     float a = atan(cv.y, cv.x)/PI;
-    float p = mod(distanceFromCenter-t+a*0.5, 1.);
+    float p = mod(distanceFromCenter-t+a, 1.);
     gl_FragColor = rampColor(p);
 }

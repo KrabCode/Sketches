@@ -21,7 +21,7 @@ import static java.lang.System.currentTimeMillis;
 
 
 public abstract class KrabApplet extends PApplet {
-    private static final Boolean FFMPEG_ENABLED = true;
+    protected static Boolean FFMPEG_ENABLED = true;
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
