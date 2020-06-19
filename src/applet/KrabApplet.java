@@ -2051,7 +2051,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private class ShaderSnapshot {
+    public class ShaderSnapshot {
         String fragPath;
         String vertPath;
         File fragFile;
@@ -3492,12 +3492,12 @@ public abstract class KrabApplet extends PApplet {
         private final PGraphics preview;
         private final ArrayList<ColorPicker> pickers = new ArrayList<>();
         private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
+        private final int defaultColorCount;
         float previewCenterX = width / 2f;
         float previewCenterY = height - sliderHeight - cell * 4.5f;
         float previewWidth = cell * 8;
         float previewHeight = cell * 3;
         private GradientType type;
-        private int defaultColorCount;
         private ColorPicker currentlySelectedPicker = null;
         private boolean blockDeselectionUntilMouseRelease = false;
         private int typeChangedFrame;
@@ -3632,10 +3632,7 @@ public abstract class KrabApplet extends PApplet {
                 HSBA pickerColor = picker.getHSBA();
                 stroke(GRAYSCALE_DARK);
                 strokeWeight(3);
-                line(x, lineTopY, x, y);
-                fill(pickerColor.clr());
-                noStroke();
-                strokeWeight(2);
+                line(x, lineTopY, x, y-previewHeight/2f);
                 float pickerHandleRadius = 15;
                 boolean mouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius * 3);
                 if (mouseAroundHandle) {
@@ -3667,10 +3664,13 @@ public abstract class KrabApplet extends PApplet {
                         }
                     }
                 }
+                noStroke();
                 if (isPickerSelected(picker)) {
                     stroke(GRAYSCALE_SELECTED);
                 }
-                ellipse(x, lineTopY, pickerHandleRadius, pickerHandleRadius);
+                fill(pickerColor.clr());
+                strokeWeight(2);
+                ellipse(x, lineTopY-pickerHandleRadius/2, pickerHandleRadius, pickerHandleRadius);
             }
             if (mouseJustReleased()) {
                 blockDeselectionUntilMouseRelease = false;
@@ -3688,7 +3688,6 @@ public abstract class KrabApplet extends PApplet {
             if (mouseJustReleasedInsideGradientEditor && mouseButton == RIGHT && !pickerDeleted) {
                 float pickerPosition = clampNorm(mouseX,
                         previewCenterX - previewWidth / 2, previewCenterX + previewWidth / 2);
-                // TODO just get the color from the texture instead of this color lerping
                 int colorAtPos = preview.get(floor(pickerPosition*preview.width), floor(previewHeight/2));
                 ColorPicker newPicker = new ColorPicker(pickerPosition, false,
                         hue(colorAtPos), saturation(colorAtPos), brightness(colorAtPos), alpha(colorAtPos));
@@ -3704,6 +3703,7 @@ public abstract class KrabApplet extends PApplet {
         private void drawGradientToTexture(PGraphics pg, GradientType type) {
             sortPickersByGradientPosition();
             pg.beginDraw();
+            pg.clear();
             if (type.equals(GradientType.VERTICAL)) {
                 drawVerticalGradient(pg);
             } else if (type.equals(GradientType.HORIZONTAL)) {
