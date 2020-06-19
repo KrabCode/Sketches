@@ -19,5 +19,5 @@ void main() {
     float distanceFromCenter = length(cv);
     float a = atan(cv.y, cv.x)/PI;
     float p = mod(distanceFromCenter-t+a, 1.);
-    gl_FragColor = rampColor(p);
+    gl_FragColor = rampColor(uv.y);
 }
