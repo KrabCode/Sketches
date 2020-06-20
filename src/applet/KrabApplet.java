@@ -3637,14 +3637,14 @@ public abstract class KrabApplet extends PApplet {
                     strokeWeight(6);
                     line(x, lineTopY, x, y - previewHeight / 2f);
                     stroke(1);
-                    strokeWeight(3);
                 }else {
-                    noStroke();
+                    stroke(GRAYSCALE_DARK);
                 }
+                strokeWeight(3);
                 fill(pickerColor.clr());
                 if (picker.gradientPositionLocked) {
                     rectMode(CENTER);
-                    rect(x, pickerHandleY, pickerHandleRadius, pickerHandleRadius, pickerHandleRadius*.75f);
+                    rect(x, pickerHandleY, pickerHandleRadius, pickerHandleRadius);
                 } else {
                     ellipse(x, pickerHandleY, pickerHandleRadius, pickerHandleRadius);
                 }
