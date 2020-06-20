@@ -111,3 +111,15 @@ GROUP§GradientShader§true
 GradientShader§gradient§vertical§0.0§true§0.6529998§0.434375§1.0§1.0§0.3§false§0.72§0.66875§1.0§1.0§0.63125§false§0.79926187§0.378125§1.0§1.0§1.0§true§0.07950003§0.3125§1.0§1.0§
 GradientShader§post§circular§0.0§true§0.0039999997§0.0§1.0§0.0§0.65§false§0.013500002§0.0§1.0§0.0§1.0§true§0.045000006§0.0§1.0§0.0§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientShader§true
+GradientShader§gradient§vertical§0.0§true§0.6329999§0.43125§1.0§1.0§0.428125§false§0.7914999§0.9125§0.5375§1.0§0.465625§false§0.13580446§1.0§1.0§1.0§0.771875§false§0.97476184§1.0§1.0§1.0§1.0§true§0.9893617§1.0§0.36862746§1.0§
+GradientShader§post§circular§0.0§true§0.006999964§0.0§1.0§0.0§0.39375§false§0.7675§1.0§0.628125§0.4862745§0.459375§false§0.050999995§1.0§0.0§1.0§1.0§true§0.054000013§0.375§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientShader§true
+GradientShader§gradient§vertical§0.0§true§0.6329999§0.43125§1.0§1.0§0.428125§false§0.7914999§0.9125§0.5375§1.0§0.465625§false§0.13580446§1.0§1.0§1.0§0.771875§false§0.97476184§1.0§1.0§1.0§1.0§true§0.9893617§1.0§0.36862746§1.0§
+GradientShader§post§circular§0.0§true§0.014999964§0.0§0.0§1.0§0.43125§false§0.6370003§0.665625§1.0§1.0§0.46875§false§0.027055634§1.0§1.0§1.0§0.509375§false§0.60155684§1.0§0.6784314§1.0§1.0§true§0.053000014§0.375§0.0§1.0§
+STATE_END

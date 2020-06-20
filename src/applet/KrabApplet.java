@@ -3652,8 +3652,8 @@ public abstract class KrabApplet extends PApplet {
                 strokeWeight(3);
                 line(x, lineTopY, x, y-previewHeight/2f);
                 float pickerHandleRadius = 25;
-                boolean mouseAroundHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius);
-                if (mouseAroundHandle) {
+                boolean isMouseInsideHandle = isPointInCircle(mouseX, mouseY, x, lineTopY-pickerHandleRadius/2, pickerHandleRadius/2);
+                if (isMouseInsideHandle) {
                     if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
                         if(mouseJustPressedOutsideGui()){
                             pushCurrentStateToUndo();
@@ -3663,23 +3663,20 @@ public abstract class KrabApplet extends PApplet {
                         picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2,
                                 previewCenterX + previewWidth / 2, 0, 1), 0, 1);
                     }
-                    boolean mouseDirectlyOverHandle = isPointInCircle(mouseX, mouseY, x, lineTopY, pickerHandleRadius);
-                    if (mouseDirectlyOverHandle) {
-                        stroke(GRAYSCALE_DARK);
-                        if (mouseJustPressedOutsideGui() && !isPickerSelected(picker)) {
-                            currentlySelectedPicker = picker;
-                            currentlySelectedPicker.onOverlayShown();
-                            blockDeselectionUntilMouseRelease = true;
-                        } else if (mouseJustReleased() && isPickerSelected(picker) && !blockDeselectionUntilMouseRelease) {
+                    stroke(GRAYSCALE_DARK);
+                    if (mouseJustPressedOutsideGui() && !isPickerSelected(picker)) {
+                        currentlySelectedPicker = picker;
+                        currentlySelectedPicker.onOverlayShown();
+                        blockDeselectionUntilMouseRelease = true;
+                    } else if (mouseJustReleased() && isPickerSelected(picker) && !blockDeselectionUntilMouseRelease) {
+                        currentlySelectedPicker = null;
+                    }
+                    if (mouseButton == RIGHT && mouseJustReleased() && !pickerDeleted && !picker.gradientPositionLocked) {
+                        pickersToRemove.add(picker);
+                        if (isPickerSelected(picker)) {
                             currentlySelectedPicker = null;
                         }
-                        if (mouseButton == RIGHT && mouseJustReleased() && !pickerDeleted && !picker.gradientPositionLocked) {
-                            pickersToRemove.add(picker);
-                            if (isPickerSelected(picker)) {
-                                currentlySelectedPicker = null;
-                            }
-                            pickerDeleted = true;
-                        }
+                        pickerDeleted = true;
                     }
                 }
                 noStroke();
@@ -3727,79 +3724,35 @@ public abstract class KrabApplet extends PApplet {
             sortPickersByGradientPosition();
             pg.beginDraw();
             pg.clear();
-            if (type.equals(GradientType.VERTICAL)) {
-                drawVerticalGradient(pg);
-            } else if (type.equals(GradientType.HORIZONTAL)) {
-                drawHorizontalGradient(pg);
-            } else if (type.equals(GradientType.CIRCULAR)) {
-                drawCircularGradient(pg);
-            }
+            String gradientFragShader = "shaders/gradient/gradient.glsl";
+            uniform(gradientFragShader).set("gradientType", type.getIndex());
+            uniform(gradientFragShader).set("colorCount", pickers.size());
+            uniform(gradientFragShader).set("colorPositions", getColorPositions(), 1);
+            uniform(gradientFragShader).set("colorValues",  getColorValues(), 4);
+            hotFilter(gradientFragShader, pg);
             pg.endDraw();
         }
 
-        private void drawVerticalGradient(PGraphics pg) {
-            int xDetail = 10;
-            float previousY = 0;
-            for (int i = 1; i < pickers.size(); i++) {
-                ColorPicker previous = pickers.get(i - 1);
-                ColorPicker current = pickers.get(i);
-                float currentY = map(current.gradientPosition, 0, 1, 0, pg.height);
-                pg.beginShape(TRIANGLE_STRIP);
-                pg.noStroke();
-                for (int xi = 0; xi < xDetail; xi++) {
-                    float myX = map(xi, 0, xDetail - 1, 0, pg.width);
-                    pg.fill(previous.getHSBA().clr());
-                    pg.vertex(myX, previousY);
-                    pg.fill(current.getHSBA().clr());
-                    pg.vertex(myX, currentY);
-                }
-                pg.endShape();
-                previousY = currentY;
+        private float[] getColorPositions() {
+            float[] colorPositions = new float[pickers.size()];
+            int i = 0;
+            for(ColorPicker p : pickers) {
+                colorPositions[i++] = p.gradientPosition;
             }
+            return colorPositions;
         }
 
-        private void drawHorizontalGradient(PGraphics pg) {
-            float yDetail = 10;
-            float previousX = 0;
-            for (int i = 1; i < pickers.size(); i++) {
-                ColorPicker previous = pickers.get(i - 1);
-                ColorPicker current = pickers.get(i);
-                float currentX = map(current.gradientPosition, 0, 1, 0, pg.width);
-                pg.beginShape(TRIANGLE_STRIP);
-                pg.noStroke();
-                for (int yi = 0; yi < yDetail; yi++) {
-                    float y = map(yi, 0, yDetail - 1, 0, pg.height);
-                    pg.fill(previous.getHSBA().clr());
-                    pg.vertex(previousX, y);
-                    pg.fill(current.getHSBA().clr());
-                    pg.vertex(currentX, y);
-                }
-                pg.endShape();
-                previousX = currentX;
+        private float[] getColorValues() {
+            float[] colorValues = new float[pickers.size()*4];
+            int i = 0;
+            for(ColorPicker p : pickers) {
+                HSBA clr = p.getHSBA();
+                colorValues[i++] = clr.hue();
+                colorValues[i++] = clr.sat();
+                colorValues[i++] = clr.br();
+                colorValues[i++] = clr.alpha();
             }
-        }
-
-        private void drawCircularGradient(PGraphics pg) {
-            float previousRadius = 0;
-            for (int i = 1; i < pickers.size(); i++) {
-                pg.beginShape(TRIANGLE_STRIP);
-                ColorPicker previous = pickers.get(i - 1);
-                ColorPicker current = pickers.get(i);
-                pg.noStroke();
-                int circularDetail = 100;
-                float diagonalLength = dist(0, 0, pg.width / 2f, pg.height / 2f);
-                float r = current.gradientPosition * diagonalLength;
-                for (int j = 0; j < circularDetail; j++) {
-                    float theta = map(j, 0, circularDetail - 1, 0, TAU);
-                    pg.fill(previous.getHSBA().clr());
-                    pg.vertex(pg.width / 2f + previousRadius * cos(theta),
-                            pg.height / 2f + previousRadius * sin(theta));
-                    pg.fill(current.getHSBA().clr());
-                    pg.vertex(pg.width / 2f + r * cos(theta), pg.height / 2f + r * sin(theta));
-                }
-                previousRadius = r;
-                pg.endShape();
-            }
+            return colorValues;
         }
 
         void sortPickersByGradientPosition() {
