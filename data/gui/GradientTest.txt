@@ -1,6 +1,12 @@
 STATE_BEGIN
 UNDO
 GROUP§GradientTest§true
-GradientTest§left§vertical§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.9969999§0.25625§0.471875§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
-GradientTest§right§vertical§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.9969999§0.25625§0.471875§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GradientTest§gradient§vertical§rgb§0.0§true§0.0§0.0§0.0§1.0§0.3625§false§0.0§0.621875§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GradientTest§over§circular§rgb§0.0§true§0.017968751§0.0§0.0§0.0§0.35892856§false§0.99394524§0.0§0.33333334§0.0§0.6666667§false§0.9966797§0.0§0.6666667§0.0§1.0§true§0.99433595§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§gradient§horizontal§hsv§0.0§true§0.5826174§0.484375§1.0§1.0§0.46071428§false§0.026562499§0.79375§0.728125§1.0§0.7482143§false§0.22675776§0.61875§1.0§1.0§1.0§true§0.13105468§0.721875§1.0§1.0§
+GradientTest§over§circular§rgb§0.0§true§0.017968751§0.0§0.0§0.0§0.35892856§false§0.99394524§0.0§0.33333334§0.0§0.6666667§false§0.9966797§0.0§0.6666667§0.0§1.0§true§0.99433595§0.0§1.0§0.0§
 STATE_END

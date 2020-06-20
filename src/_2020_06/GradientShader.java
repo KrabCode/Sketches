@@ -30,7 +30,7 @@ public class GradientShader extends KrabApplet {
         uniform(shader).set("time", t);
         uniform(shader).set("gradient", gradient("gradient"));
         hotFilter(shader, pg);
-        pg.image(gradient("post"), 0, 0);
+        pg.image(gradient("over"), 0, 0);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
