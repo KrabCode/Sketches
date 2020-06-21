@@ -3,7 +3,7 @@ package _2020_06;
 import applet.KrabApplet;
 import processing.core.PGraphics;
 
-public class GradientTest extends KrabApplet {
+public class GradientSea extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
