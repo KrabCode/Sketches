@@ -202,6 +202,9 @@ vec4 lerpByBlendType(vec4 colorA, vec4 colorB, float amt){
     if(blendType == 1){
         return vec4(iLerp(colorA.rgb, colorB.rgb, amt), mix(colorA.a, colorB.a, amt));
     }
+    if(blendType == 2){
+        return mix(colorA, colorB, smoothstep(0.0, 1.0, amt));
+    }
     return vec4(0,0,0,1);
 }
 

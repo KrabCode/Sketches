@@ -3451,7 +3451,7 @@ public abstract class KrabApplet extends PApplet {
         private final int defaultColorCount;
         float previewCenterX = width / 2f;
         float previewCenterY = height - sliderHeight - cell*2;
-        float previewWidth = cell * 14;
+        float previewWidth = cell * 8;
         float previewHeight = cell * 4;
         private GradientType gradientType;
         private ColorPicker currentlySelectedPicker = null;
@@ -3732,8 +3732,9 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected enum BlendType {
-        RGB_LERP("rgb", 0),
-        IMPROVED_LERP("ilerp", 1);
+        RGB_LERP("rgb interpolation", 0),
+        IMPROVED_LERP("improved rgb interpolation", 1),
+        SMOOTHSTEP("smoothstep", 2);
 
         String type;
         int index;
@@ -3755,6 +3756,9 @@ public abstract class KrabApplet extends PApplet {
                 case 1: {
                     return IMPROVED_LERP;
                 }
+                case 2: {
+                    return SMOOTHSTEP;
+                }
             }
             return RGB_LERP;
         }
@@ -3769,6 +3773,9 @@ public abstract class KrabApplet extends PApplet {
             }
             if (type.equals(IMPROVED_LERP.toString())) {
                 return IMPROVED_LERP;
+            }
+            if (type.equals(SMOOTHSTEP.toString())) {
+                return SMOOTHSTEP;
             }
             return RGB_LERP;
         }

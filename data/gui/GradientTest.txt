@@ -16,3 +16,95 @@ GROUP§GradientTest§true
 GradientTest§gradient§vertical§ilerp§0.0§true§0.5814455§0.0§0.0§1.0§0.23035714§false§0.052734368§0.61875§0.81875§1.0§0.3892857§false§0.44890708§1.0§0.56875§1.0§0.57857144§false§0.688086§0.96183205§1.0§1.0§0.8142857§false§0.097916536§1.0§0.890625§1.0§1.0§true§0.13027343§0.721875§0.0§1.0§
 GradientTest§over§circular§rgb§0.0§true§0.017968751§0.0§0.0§0.0§0.35892856§false§0.99394524§0.0§0.33333334§0.0§0.6666667§false§0.9966797§0.0§0.6666667§0.0§1.0§true§0.99433595§0.0§1.0§0.0§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§gradient§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.39821428§false§0.046875034§1.0§1.0§1.0§0.48392856§false§0.12617183§0.55625§1.0§1.0§0.49821427§false§0.07474959§0.0§1.0§1.0§0.5339286§false§0.06343392§1.0§1.0§1.0§1.0§true§1.953125E-4§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.017968751§0.0§0.0§0.0§0.625§false§0.0§0.0§0.0§0.7921569§0.69464284§false§0.9730469§0.0§0.0§1.0§1.0§true§0.9779298§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.39821428§false§0.046875034§1.0§1.0§1.0§0.48392856§false§0.12617183§0.55625§1.0§1.0§0.49821427§false§0.07474959§0.0§1.0§1.0§0.5339286§false§0.06343392§1.0§1.0§1.0§1.0§true§1.953125E-4§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.017968751§0.0§0.0§0.0§0.62142855§false§0.0§0.0§0.0§0.7921569§0.6589286§false§0.9767578§0.0§0.0§1.0§1.0§true§0.9779298§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§smoothstep§0.0§true§0.0§0.0§0.0§1.0§0.40535715§false§0.667721§0.334375§1.0§1.0§0.4482143§false§0.6670188§0.0§1.0§1.0§0.70178574§false§0.6666667§0.4375§0.78125§1.0§1.0§true§1.953125E-4§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.020433478§0.0§0.0§0.026760556§0.5946429§false§0.9771127§0.0§0.0§0.0§0.60714287§false§0.030631406§1.0§0.259375§1.0§1.0§true§0.97828186§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§smoothstep§0.0§true§0.0§0.0§0.0§1.0§0.40535715§false§0.667721§0.334375§1.0§1.0§0.4482143§false§0.6670188§0.0§1.0§1.0§0.70178574§false§0.6666667§0.4375§0.78125§1.0§1.0§true§1.953125E-4§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.020433478§0.0§0.0§0.026760556§0.5946429§false§0.9771127§0.0§0.0§0.0§0.60714287§false§0.030631406§1.0§0.259375§1.0§1.0§true§0.97828186§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§smoothstep§0.0§true§0.0§0.0§0.0§1.0§0.40535715§false§0.667721§0.334375§1.0§1.0§0.4482143§false§0.6670188§0.0§1.0§1.0§0.70178574§false§0.6666667§0.4375§0.78125§1.0§1.0§true§1.953125E-4§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.020433478§0.0§0.0§0.026760556§0.5946429§false§0.9771127§0.0§0.0§0.0§0.60714287§false§0.030631406§1.0§0.259375§1.0§1.0§true§0.97828186§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§smoothstep§0.0§true§0.974648§0.0§0.478125§1.0§0.41785714§false§0.13982795§0.56875§0.0§0.0§0.46607143§false§0.87732756§0.0§1.0§1.0§0.5214286§false§0.0052816896§0.0§1.0§0.0§1.0§true§0.012167143§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.027123619§0.0§1.0§1.0§0.83928573§false§0.03028174§0.0§0.77254903§1.0§1.0§true§0.9867325§0.93125§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§rgb interpolation§0.0§true§0.01971831§0.0§0.0§0.0§0.45535713§false§0.9457747§0.0§0.0§0.0§0.50535715§false§0.9316903§0.0§1.0§1.0§0.55714285§false§0.001056338§0.0§0.0§0.0§1.0§true§0.9961266§0.0§1.0§0.17605641§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.01725352§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.278125§false§0.58100003§1.0§1.0§1.0§0.503125§false§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.01725352§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§improved rgb interpolation§0.0§true§0.6325002§1.0§0.315625§1.0§0.278125§false§0.8920001§1.0§0.746875§1.0§0.49375§false§0.05099998§0.33125§1.0§1.0§0.703125§false§0.053712476§1.0§0.75625§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.01725352§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§improved rgb interpolation§0.0§true§0.6325002§1.0§0.315625§1.0§0.278125§false§0.8920001§1.0§0.746875§1.0§0.49375§false§0.05099998§0.33125§1.0§1.0§0.703125§false§0.053712476§1.0§0.75625§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.01725352§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§improved rgb interpolation§0.0§true§0.6325002§1.0§0.315625§1.0§0.278125§false§0.8920001§1.0§0.746875§1.0§0.49375§false§0.05099998§0.33125§1.0§1.0§0.703125§false§0.053712476§1.0§0.75625§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.01725352§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§360.0§300.0
+GradientTest§gradient§vertical§improved rgb interpolation§0.0§true§0.6325002§1.0§0.315625§1.0§0.278125§false§0.8920001§1.0§0.746875§1.0§0.49375§false§0.05099998§0.33125§1.0§1.0§0.703125§false§0.053712476§1.0§0.75625§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GradientTest§noise§vertical§improved rgb interpolation§0.0§true§0.63200015§0.0§0.0§1.0§0.559375§false§0.9935§0.0§1.0§1.0§1.0§true§0.67066675§0.0§1.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.01725352§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GradientTest§true
+GradientTest§record frames§1001.0006§300.0
+GradientTest§gradient§vertical§improved rgb interpolation§0.0§true§0.6971027§0.565625§0.31875§1.0§0.475§false§0.67950135§0.503125§0.675§1.0§0.5125§false§0.05099998§0.29375§1.0§1.0§0.740625§false§0.6668008§0.45§0.9875§1.0§1.0§true§0.7975005§0.5375§0.225§1.0§
+GradientTest§noise§vertical§improved rgb interpolation§0.0§true§0.63200015§0.0§0.0§1.0§0.54375§false§0.9589996§0.0§0.365625§1.0§0.578125§false§0.7026666§0.0§1.0§1.0§1.0§false§0.096499994§0.0§1.0§1.0§1.0§true§0.7026666§0.0§1.0§1.0§
+GradientTest§over§circular§rgb interpolation§0.0§true§0.04075351§0.0§1.0§0.0§0.33333334§false§0.01725352§0.0§1.0§0.0§0.6666667§false§0.01725352§0.0§1.0§0.0§1.0§true§0.01725352§0.0§1.0§0.0§
+STATE_END
