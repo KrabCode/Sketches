@@ -1,0 +1,121 @@
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§0.0§255.0
+Cats§background§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.2875§false§0.0§0.0§0.0§1.0§0.6666667§false§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§19.89§255.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§19.89§255.0
+Cats§random§0.5500002§10.0
+Cats§frame freq§13.290003§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§19.89§255.0
+Cats§random§0.06000007§10.0
+Cats§drag§0.95§10.0
+Cats§frame freq§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§19.89§255.0
+Cats§random§0.023000348§1.0
+Cats§drag§0.95§10.0
+Cats§frame freq§8.610002§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§19.89§255.0
+Cats§random§0.08000002§10.0
+Cats§drag§0.95§10.0
+Cats§frame freq§18.0§1000.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§14.279999§255.0
+Cats§random§0.16000004§10.0
+Cats§drag§0.88999987§10.0
+Cats§frame freq§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§14.279999§255.0
+Cats§random§0.16000004§10.0
+Cats§drag§0.88999987§10.0
+Cats§frame freq§13.14§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§70.89001§255.0
+Cats§random§0.089999996§10.0
+Cats§drag§0.95§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§70.89001§255.0
+Cats§random§0.5§10.0
+Cats§drag§0.9200015§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§82.620026§255.0
+Cats§turn chance§0.91000056§10.0
+Cats§speed§1.0§10.0
+Cats§animation speed§10.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§82.620026§255.0
+Cats§turn chance§0.95000064§1.0
+Cats§speed§1.0§10.0
+Cats§animation speed§10.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§82.620026§255.0
+Cats§turn chance§0.05§10.0
+Cats§speed§0.5100004§10.0
+Cats§animation speed§10.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§255.0§2550.0
+Cats§turn chance§0.028999997§1.0
+Cats§speed§0.46999997§10.0
+Cats§animation speed§8.000007§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§255.0§2550.0
+Cats§turn chance§0.05§10.0
+Cats§speed§0.5§10.0
+Cats§animation speed§10.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§background§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.2875§false§0.0§0.0§0.0§1.0§0.6666667§false§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Cats§turn chance§0.05§10.0
+Cats§speed§0.5§10.0
+Cats§animation speed§10.0§20.0
+Cats§gradient radius§404.59§1000.0
+STATE_END
