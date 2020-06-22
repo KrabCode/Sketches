@@ -135,3 +135,8 @@ Cats§fade to black§255.0§2550.0
 Cats§x§0.37000012§10.0
 Cats§y§-0.36999997§10.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§255.0§2550.0
+STATE_END

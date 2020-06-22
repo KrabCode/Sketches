@@ -8,15 +8,13 @@ import processing.core.PVector;
 import java.util.ArrayList;
 
 public class Cats extends KrabApplet {
-    float diagonalHalf;
-    float gameBorder;
-    boolean newGame = true;
-    boolean gameOver = true;
-    int catCount = 10;
-    ArrayList<Cat> cats = new ArrayList<>();
-    Cat held = null;
-    PImage sticksIdle, sticksHeld, catHeld;
-    PImage[] catDown, catRight, catUp;
+    private float time;
+    private int catCount = 12;
+    float imageScale = 1.5f;
+    private ArrayList<Cat> cats = new ArrayList<>();
+    private Cat held = null;
+    private PImage sticksIdle, sticksHeld, catHeld;
+    private PImage[] catDown, catRight, catUp;
     private PGraphics pg;
 
     public static void main(String[] args) {
@@ -24,7 +22,8 @@ public class Cats extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P3D);
+//        size(1000, 1000, P3D);
+        fullScreen(P2D);
         smooth(16);
     }
 
@@ -35,9 +34,7 @@ public class Cats extends KrabApplet {
             surface.setLocation(displayWidth - 1020, 20);
         }
         loadImages();
-        pg = createGraphics(width, height, P3D);
-        diagonalHalf = dist(0, 0, pg.width / 2f, pg.height / 2f);
-        gameBorder = diagonalHalf / 2;
+        pg = createGraphics(width, height, P2D);
         generateCats();
         pg.beginDraw();
         pg.colorMode(HSB, 1, 1, 1, 1);
@@ -59,24 +56,17 @@ public class Cats extends KrabApplet {
     }
 
     public void draw() {
+        time = radians(frameCount);
         noCursor();
         pg.beginDraw();
-        if (frameCount < 5) {
-            pg.background(0);
-        }
-        fadeToBlack(pg);
         pg.imageMode(CENTER);
-        if (gameOver) {
-            drawGameOver();
-        } else {
-            updateWalkingCats(false);
-        }
+        pg.background(0);
+        updateWalkingCats();
         drawCursor();
         updateHeldCat();
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
-        gui();
     }
 
     private void updateHeldCat() {
@@ -88,13 +78,15 @@ public class Cats extends KrabApplet {
     }
 
     private void drawCursor() {
+        float w = sticksHeld.width*imageScale;
+        float h = sticksHeld.height*imageScale;
         pg.imageMode(CENTER);
-        float x = mouseX + sticksHeld.width * 0.37f;
-        float y = mouseY + sticksHeld.height * -0.37f;
+        float x = mouseX + w * 0.37f;
+        float y = mouseY + h * -0.37f;
         if (mousePressed) {
-            pg.image(sticksHeld, x, y);
+            pg.image(sticksHeld, x, y, w, h);
         } else {
-            pg.image(sticksIdle, x, y);
+            pg.image(sticksIdle, x, y, w, h);
         }
         /*
         pg.strokeWeight(5);
@@ -110,77 +102,38 @@ public class Cats extends KrabApplet {
         }
     }
 
-    void updateWalkingCats(boolean drawBorder) {
+    void updateWalkingCats() {
         for (Cat c : cats) {
             if (held == null || !held.equals(c)) {
                 c.update();
                 c.draw();
             }
         }
-        if (drawBorder) {
-            pg.noStroke();
-            pg.beginShape(TRIANGLE_STRIP);
-            float innerRadius = gameBorder;
-            float outerRadius = gameBorder + 50;
-            int detail = 100;
-            for (int i = 0; i <= detail; i++) {
-                float theta = map(i, 0, detail, 0, TAU);
-                pg.fill(1);
-                pg.vertex(pg.width / 2f + innerRadius * cos(theta), pg.height / 2f + innerRadius * sin(theta));
-                pg.fill(0);
-                pg.vertex(pg.width / 2f + outerRadius * cos(theta), pg.height / 2f + outerRadius * sin(theta));
-            }
-            pg.endShape();
-        }
-    }
-
-    void drawGameOver() {
-        if (newGame) {
-            pg.textSize(50);
-            pg.textAlign(CENTER, CENTER);
-            pg.fill(1);
-            pg.text("clicc", width / 2f, height / 2f);
-        } else {
-            pg.textSize(50);
-            pg.textAlign(CENTER, CENTER);
-            pg.fill(1);
-            pg.text("oh no", width / 2f, height / 2f);
-        }
-    }
-
-    public void mousePressed() {
-        if (gameOver) {
-            generateCats();
-            newGame = false;
-            gameOver = false;
-        }
     }
 
     class Cat {
-        PVector pos = new PVector(width / 2f + random(-10, 10), height / 2f + random(-10, 10));
-        int direction = 0;
-        float size = 50;
-        float hue = (.8f + random(.4f)) % 1;
-        float sat = random(.5f);
-        float br = 1;
+        private PVector pos = new PVector(width / 2f + random(-10, 10), height / 2f + random(-10, 10));
+        private int direction = floor(random(4));
+        private float size = 62*imageScale;
+        private float hue = (.7f + random(.4f)) % 1;
+        private float sat = random(.15f, .4f);
+        private float br = random(.8f, 1);
+        private float timeOffset = random(TAU);
 
         void update() {
-            updateDirection();
-            move();
-            float distanceFromCenter = dist(pos.x, pos.y, width / 2f, height / 2f);
-            if (distanceFromCenter > gameBorder) {
-//                gameOver = true;
+            mouseInteract();
+            if(!thisHeld()){
+                updateDirection();
+                move();
+                checkCollisions();
             }
-            checkCollisions();
         }
 
         void draw() {
             pg.noStroke();
             pg.fill(hue, sat, br);
             pg.imageMode(CENTER);
-            pg.pushMatrix();
             drawImage();
-            pg.popMatrix();
         }
 
         private void move() {
@@ -196,15 +149,31 @@ public class Cats extends KrabApplet {
             }
             speed.mult(0.5f);
             pos.add(speed);
+            if (pos.x < size / 2f) {
+                pos.x += width + size;
+            }
+            if (pos.x > width + size / 2f) {
+                pos.x -= width + size;
+            }
+            if (pos.y < size / 2f) {
+                pos.y += height + size;
+            }
+            if (pos.y > height + size / 2f) {
+                pos.y -= height + size;
+            }
         }
 
         private void updateDirection() {
             if (random(1) < 0.01f) {
-                if (random(1) > 0.5f) {
-                    direction++;
-                } else {
-                    direction--;
-                }
+                changeDirection();
+            }
+        }
+
+        private void changeDirection() {
+            if (random(1) > 0.5f) {
+                direction++;
+            } else {
+                direction--;
             }
             while (direction < 0) {
                 direction += 4;
@@ -213,7 +182,7 @@ public class Cats extends KrabApplet {
         }
 
         private void drawImage() {
-            int frame = sin(t * 8) > 0 ? 0 : 1;
+            int frame = sin(time * 8 + timeOffset) > 0 ? 0 : 1;
             PImage img = null;
             if (direction == 0 || direction == 2) {
                 img = catRight[frame];
@@ -222,39 +191,80 @@ public class Cats extends KrabApplet {
             } else if (direction == 3) {
                 img = catUp[frame];
             }
-            if (held != null && held.equals(this)) {
+            if (img == null) {
+                pg.fill(1, 1, 1);
+                pg.rectMode(CENTER);
+                pg.rect(pos.x, pos.y, size, size);
+                return;
+            }
+            boolean flipX = direction == 2 && !thisHeld();
+            pg.tint(hue, sat, br);
+            pg.pushMatrix();
+            pg.translate(pos.x, pos.y);
+            if (thisHeld()) {
                 img = catHeld;
             }
+            flipIfNeeded(flipX);
+            pg.image(img, 0, 0, size, size);
+            pg.popMatrix();
+
+            pg.pushMatrix();
+            // draw wrap around copy when on edge of screen
             pg.translate(pos.x, pos.y);
-            if (direction == 2) {
+            if (pos.x < size / 2f) {
+                pg.translate(width, 0);
+            }
+            if (pos.x > width - size / 2f) {
+                pg.translate( -width, 0);
+            }
+            if (pos.y < size / 2f) {
+                pg.translate( 0, height);
+            }
+            if (pos.y > height - size / 2f) {
+                pg.translate( 0, -height);
+            }
+            flipIfNeeded(flipX);
+            pg.image(img, 0, 0, size, size);
+            pg.popMatrix();
+        }
+
+        private void flipIfNeeded(boolean flipX) {
+            if (flipX) {
                 pg.scale(-1, 1);
             } else {
                 pg.scale(1, 1);
             }
-            if (img != null) {
-                pg.image(img, 0, 0);
-            }
         }
 
-        void checkCollisions() {
+        private boolean thisHeld() {
+            if (held == null) {
+                return false;
+            }
+            return held.equals(this);
+        }
+
+        void mouseInteract(){
             if (held == null && mousePressed && dist(mouseX, mouseY, pos.x, pos.y) < size / 2) {
                 held = this;
             }
             if (held != null && held.equals(this)) {
-                pos.x = mouseX;
-                pos.y = mouseY;
+                pos.x = lerp(pos.x, mouseX, .5f);
+                pos.y = lerp(pos.y, mouseY, .5f);
             }
+        }
+
+        void checkCollisions() {
             for (Cat otherCard : cats) {
                 if (otherCard.equals(this)) {
                     continue;
                 }
                 float distanceToOther = dist(pos.x, pos.y, otherCard.pos.x, otherCard.pos.y);
-                if (distanceToOther < size / 2 + otherCard.size / 2) {
+                if (distanceToOther < size) {
                     PVector fromOtherToThis = PVector.sub(pos, otherCard.pos);
-                    pos.add(fromOtherToThis.normalize());
+                    float repulsion = (1 / norm(distanceToOther, 0, size))*.5f;
+                    pos.add(fromOtherToThis.normalize().mult(repulsion));
                 }
             }
         }
     }
-
 }
