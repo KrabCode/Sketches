@@ -14,13 +14,13 @@ public class Cats extends KrabApplet {
 
     float imageScale = 1;
     private float time;
-    private int catCount = 12;
     private ArrayList<Cat> cats = new ArrayList<Cat>();
     private Cat held = null;
     private PImage sticksIdle, sticksHeld, catHeld;
     private PImage[] catDown, catRight, catUp;
     int sticksFadeoutDelay = 60;
     int sticksFadeoutDuration = 60;
+    boolean fadeSticks = false;
     int sticksLastReleasedFrame = - sticksFadeoutDuration*3;
 
     private PGraphics pg;
@@ -90,9 +90,11 @@ public class Cats extends KrabApplet {
         float x = mouseX + w * 0.37f;
         float y = mouseY + h * -0.37f;
         if (held == null) {
-            float sticksFadeout = constrain(norm(frameCount-sticksFadeoutDelay, sticksLastReleasedFrame,
-                sticksLastReleasedFrame+sticksFadeoutDelay),0, 1);
-            pg.tint(1, 1-sticksFadeout);
+            if(fadeSticks){
+                float sticksFadeout = constrain(norm(frameCount-sticksFadeoutDelay, sticksLastReleasedFrame,
+                        sticksLastReleasedFrame+sticksFadeoutDelay),0, 1);
+                pg.tint(1, 1-sticksFadeout);
+            }
             pg.image(sticksIdle, x, y, w, h);
         } else {
             pg.image(sticksHeld, x, y, w, h);
@@ -102,6 +104,7 @@ public class Cats extends KrabApplet {
 
     void generateCats() {
         cats.clear();
+        int catCount = 12;
         for (int i = 0; i < catCount; i++) {
             cats.add(new Cat());
         }
