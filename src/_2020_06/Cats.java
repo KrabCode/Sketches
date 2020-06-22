@@ -7,6 +7,7 @@ import processing.core.PVector;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("Convert2Diamond")
 public class Cats extends KrabApplet {
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
