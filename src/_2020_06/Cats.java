@@ -8,31 +8,30 @@ import processing.core.PVector;
 import java.util.ArrayList;
 
 public class Cats extends KrabApplet {
-    private float time;
-    private int catCount = 12;
-    float imageScale = 1.5f;
-    private ArrayList<Cat> cats = new ArrayList<>();
-    private Cat held = null;
-    private PImage sticksIdle, sticksHeld, catHeld;
-    private PImage[] catDown, catRight, catUp;
-    private PGraphics pg;
-
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
+    float imageScale = 1;
+    private float time;
+    private int catCount = 12;
+    private ArrayList<Cat> cats = new ArrayList<Cat>();
+    private Cat held = null;
+    private PImage sticksIdle, sticksHeld, catHeld;
+    private PImage[] catDown, catRight, catUp;
+    int sticksFadeoutDelay = 60;
+    int sticksFadeoutDuration = 60;
+    int sticksLastReleasedFrame = - sticksFadeoutDuration*3;
+
+    private PGraphics pg;
+
     public void settings() {
-//        size(1000, 1000, P3D);
-        fullScreen(P2D);
+//        fullScreen(P2D);
+        size(floor(1080*.5f),floor(1920*.5f), P2D);
         smooth(16);
     }
 
     public void setup() {
-        frameRecordingDuration = 1000;
-        if (width < displayWidth) {
-            surface.setAlwaysOnTop(true);
-            surface.setLocation(displayWidth - 1020, 20);
-        }
         loadImages();
         pg = createGraphics(width, height, P2D);
         generateCats();
@@ -40,6 +39,30 @@ public class Cats extends KrabApplet {
         pg.colorMode(HSB, 1, 1, 1, 1);
         pg.background(0);
         pg.endDraw();
+    }
+
+    public void draw() {
+        if(held != null && !mousePressed){
+            drop();
+        }
+        time = radians(frameCount);
+        pg.beginDraw();
+        pg.background(0);
+        pg.imageMode(CENTER);
+        updateWalkingCats();
+        drawCursor();
+        updateHeldCat();
+        pg.endDraw();
+        image(pg, 0, 0);
+    }
+
+    public void mouseReleased() {
+        drop();
+    }
+
+    private void drop() {
+        held = null;
+        sticksLastReleasedFrame = frameCount;
     }
 
     private void loadImages() {
@@ -51,48 +74,30 @@ public class Cats extends KrabApplet {
         catUp = new PImage[]{loadImage("images/cats/kitt-up-1.png"), loadImage("images/cats/kitt-up-2.png")};
     }
 
-    public void mouseReleased() {
-        held = null;
-    }
-
-    public void draw() {
-        time = radians(frameCount);
-        noCursor();
-        pg.beginDraw();
-        pg.imageMode(CENTER);
-        pg.background(0);
-        updateWalkingCats();
-        drawCursor();
-        updateHeldCat();
-        pg.endDraw();
-        image(pg, 0, 0);
-        rec(pg);
-    }
-
     private void updateHeldCat() {
         if (held == null) {
             return;
         }
         held.update();
-        held.draw();
     }
 
     private void drawCursor() {
-        float w = sticksHeld.width*imageScale;
-        float h = sticksHeld.height*imageScale;
+        // noCursor();
+        pg.pushStyle();
+        float w = sticksHeld.width * imageScale;
+        float h = sticksHeld.height * imageScale;
         pg.imageMode(CENTER);
         float x = mouseX + w * 0.37f;
         float y = mouseY + h * -0.37f;
-        if (mousePressed) {
-            pg.image(sticksHeld, x, y, w, h);
-        } else {
+        if (held == null) {
+            float sticksFadeout = constrain(norm(frameCount-sticksFadeoutDelay, sticksLastReleasedFrame,
+                sticksLastReleasedFrame+sticksFadeoutDelay),0, 1);
+            pg.tint(1, 1-sticksFadeout);
             pg.image(sticksIdle, x, y, w, h);
+        } else {
+            pg.image(sticksHeld, x, y, w, h);
         }
-        /*
-        pg.strokeWeight(5);
-        pg.stroke(1);
-        pg.point(mouseX, mouseY);
-        */
+        pg.popStyle();
     }
 
     void generateCats() {
@@ -106,7 +111,6 @@ public class Cats extends KrabApplet {
         for (Cat c : cats) {
             if (held == null || !held.equals(c)) {
                 c.update();
-                c.draw();
             }
         }
     }
@@ -114,26 +118,21 @@ public class Cats extends KrabApplet {
     class Cat {
         private PVector pos = new PVector(width / 2f + random(-10, 10), height / 2f + random(-10, 10));
         private int direction = floor(random(4));
-        private float size = 62*imageScale;
+        private float size = 62 * imageScale;
         private float hue = (.7f + random(.4f)) % 1;
         private float sat = random(.15f, .4f);
         private float br = random(.8f, 1);
         private float timeOffset = random(TAU);
+        float speedMagnitude = random(.25f, .75f);
 
         void update() {
             mouseInteract();
-            if(!thisHeld()){
+            if (!thisHeld()) {
                 updateDirection();
                 move();
                 checkCollisions();
             }
-        }
-
-        void draw() {
-            pg.noStroke();
-            pg.fill(hue, sat, br);
-            pg.imageMode(CENTER);
-            drawImage();
+            draw();
         }
 
         private void move() {
@@ -147,19 +146,19 @@ public class Cats extends KrabApplet {
             } else if (direction == 3) {
                 speed.y = -1;
             }
-            speed.mult(0.5f);
+            speed.mult(speedMagnitude);
             pos.add(speed);
             if (pos.x < size / 2f) {
-                pos.x += width + size;
+                pos.x += width;
             }
             if (pos.x > width + size / 2f) {
-                pos.x -= width + size;
+                pos.x -= width;
             }
             if (pos.y < size / 2f) {
-                pos.y += height + size;
+                pos.y += height;
             }
             if (pos.y > height + size / 2f) {
-                pos.y -= height + size;
+                pos.y -= height;
             }
         }
 
@@ -181,51 +180,57 @@ public class Cats extends KrabApplet {
             direction %= 4;
         }
 
-        private void drawImage() {
+        private void draw() {
+            pg.pushStyle();
             int frame = sin(time * 8 + timeOffset) > 0 ? 0 : 1;
-            PImage img = null;
-            if (direction == 0 || direction == 2) {
-                img = catRight[frame];
-            } else if (direction == 1) {
-                img = catDown[frame];
-            } else if (direction == 3) {
-                img = catUp[frame];
-            }
-            if (img == null) {
-                pg.fill(1, 1, 1);
-                pg.rectMode(CENTER);
-                pg.rect(pos.x, pos.y, size, size);
-                return;
-            }
-            boolean flipX = direction == 2 && !thisHeld();
+            boolean flipHorizontally = direction == 2 && !thisHeld();
+            PImage img = getImageByState(frame);
             pg.tint(hue, sat, br);
+            drawCatAtPos(img, flipHorizontally);
+            drawCatWrapAround(img, flipHorizontally);
+            pg.popStyle();
+        }
+
+        private void drawCatAtPos(PImage img, boolean flipHorizontally) {
             pg.pushMatrix();
             pg.translate(pos.x, pos.y);
-            if (thisHeld()) {
-                img = catHeld;
-            }
-            flipIfNeeded(flipX);
+            flipIfNeeded(flipHorizontally);
             pg.image(img, 0, 0, size, size);
             pg.popMatrix();
+        }
 
+        private void drawCatWrapAround(PImage img, boolean flipHorizontally) {
             pg.pushMatrix();
-            // draw wrap around copy when on edge of screen
             pg.translate(pos.x, pos.y);
             if (pos.x < size / 2f) {
                 pg.translate(width, 0);
             }
             if (pos.x > width - size / 2f) {
-                pg.translate( -width, 0);
+                pg.translate(-width, 0);
             }
             if (pos.y < size / 2f) {
-                pg.translate( 0, height);
+                pg.translate(0, height);
             }
             if (pos.y > height - size / 2f) {
-                pg.translate( 0, -height);
+                pg.translate(0, -height);
             }
-            flipIfNeeded(flipX);
+            flipIfNeeded(flipHorizontally);
             pg.image(img, 0, 0, size, size);
             pg.popMatrix();
+        }
+
+        private PImage getImageByState(int frame) {
+            if (thisHeld()) {
+                return catHeld;
+            }
+            if (direction == 0 || direction == 2) {
+                return catRight[frame];
+            } else if (direction == 1) {
+                return catDown[frame];
+            } else if (direction == 3) {
+                return catUp[frame];
+            }
+            return catHeld;
         }
 
         private void flipIfNeeded(boolean flipX) {
@@ -243,7 +248,7 @@ public class Cats extends KrabApplet {
             return held.equals(this);
         }
 
-        void mouseInteract(){
+        void mouseInteract() {
             if (held == null && mousePressed && dist(mouseX, mouseY, pos.x, pos.y) < size / 2) {
                 held = this;
             }
@@ -261,7 +266,7 @@ public class Cats extends KrabApplet {
                 float distanceToOther = dist(pos.x, pos.y, otherCard.pos.x, otherCard.pos.y);
                 if (distanceToOther < size) {
                     PVector fromOtherToThis = PVector.sub(pos, otherCard.pos);
-                    float repulsion = (1 / norm(distanceToOther, 0, size))*.5f;
+                    float repulsion = (1 / norm(distanceToOther, 0, size)) * .5f;
                     pos.add(fromOtherToThis.normalize().mult(repulsion));
                 }
             }
