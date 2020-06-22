@@ -8,15 +8,16 @@ import processing.core.PVector;
 import java.util.ArrayList;
 
 public class Cats extends KrabApplet {
-    private PGraphics pg;
     float diagonalHalf;
     float gameBorder;
     boolean newGame = true;
     boolean gameOver = true;
-    ArrayList<Cat> deck = new ArrayList<>();
+    int catCount = 10;
+    ArrayList<Cat> cats = new ArrayList<>();
     Cat held = null;
     PImage sticksIdle, sticksHeld, catHeld;
     PImage[] catDown, catRight, catUp;
+    private PGraphics pg;
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -31,13 +32,13 @@ public class Cats extends KrabApplet {
         frameRecordingDuration = 1000;
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
-            surface.setLocation(2560 - 1020, 20);
+            surface.setLocation(displayWidth - 1020, 20);
         }
         loadImages();
         pg = createGraphics(width, height, P3D);
         diagonalHalf = dist(0, 0, pg.width / 2f, pg.height / 2f);
         gameBorder = diagonalHalf / 2;
-        buildDeck();
+        generateCats();
         pg.beginDraw();
         pg.colorMode(HSB, 1, 1, 1, 1);
         pg.background(0);
@@ -48,9 +49,9 @@ public class Cats extends KrabApplet {
         sticksIdle = loadImage("images/cats/hulky-idle.png");
         sticksHeld = loadImage("images/cats/hulky-hold.png");
         catHeld = loadImage("images/cats/kitt-held.png");
-        catDown = new PImage[]{loadImage("images/cats/kitt-down-1.png"),loadImage("images/cats/kitt-down-2.png")};
-        catRight = new PImage[]{loadImage("images/cats/kitt-side-1.png"),loadImage("images/cats/kitt-side-2.png")};
-        catUp = new PImage[]{loadImage("images/cats/kitt-up-1.png"),loadImage("images/cats/kitt-up-2.png")};
+        catDown = new PImage[]{loadImage("images/cats/kitt-down-1.png"), loadImage("images/cats/kitt-down-2.png")};
+        catRight = new PImage[]{loadImage("images/cats/kitt-side-1.png"), loadImage("images/cats/kitt-side-2.png")};
+        catUp = new PImage[]{loadImage("images/cats/kitt-up-1.png"), loadImage("images/cats/kitt-up-2.png")};
     }
 
     public void mouseReleased() {
@@ -60,12 +61,15 @@ public class Cats extends KrabApplet {
     public void draw() {
         noCursor();
         pg.beginDraw();
+        if (frameCount < 5) {
+            pg.background(0);
+        }
+        fadeToBlack(pg);
         pg.imageMode(CENTER);
-        pg.image(gradient("background"), width/2f, height/2f);
         if (gameOver) {
             drawGameOver();
         } else {
-            updateWalkingCats();
+            updateWalkingCats(false);
         }
         drawCursor();
         updateHeldCat();
@@ -76,7 +80,7 @@ public class Cats extends KrabApplet {
     }
 
     private void updateHeldCat() {
-        if(held == null) {
+        if (held == null) {
             return;
         }
         held.update();
@@ -85,40 +89,49 @@ public class Cats extends KrabApplet {
 
     private void drawCursor() {
         pg.imageMode(CENTER);
-        if(mousePressed) {
-            pg.image(sticksHeld, mouseX+sticksHeld.width/2f, mouseY-sticksHeld.width/2f);
-        }else {
-            pg.image(sticksIdle, mouseX+sticksIdle.width/2f, mouseY-sticksIdle.width/2f);
+        float x = mouseX + sticksHeld.width * 0.37f;
+        float y = mouseY + sticksHeld.height * -0.37f;
+        if (mousePressed) {
+            pg.image(sticksHeld, x, y);
+        } else {
+            pg.image(sticksIdle, x, y);
+        }
+        /*
+        pg.strokeWeight(5);
+        pg.stroke(1);
+        pg.point(mouseX, mouseY);
+        */
+    }
+
+    void generateCats() {
+        cats.clear();
+        for (int i = 0; i < catCount; i++) {
+            cats.add(new Cat());
         }
     }
 
-    void buildDeck() {
-        deck.clear();
-        for (int i = 0; i < 20; i++) {
-            deck.add(new Cat());
-        }
-    }
-
-    void updateWalkingCats() {
-        for (Cat c : deck) {
-            if(held == null || !held.equals(c)) {
+    void updateWalkingCats(boolean drawBorder) {
+        for (Cat c : cats) {
+            if (held == null || !held.equals(c)) {
                 c.update();
                 c.draw();
             }
         }
-        pg.noStroke();
-        pg.beginShape(TRIANGLE_STRIP);
-        float innerRadius = gameBorder;
-        float outerRadius = slider("gradient radius", gameBorder+50);
-        int detail = 100;
-        for (int i = 0; i <= detail; i++) {
-            float theta = map(i, 0, detail, 0, TAU);
-            pg.fill(1);
-            pg.vertex(pg.width/2f+innerRadius*cos(theta), pg.height/2f+innerRadius*sin(theta));
-            pg.fill(0);
-            pg.vertex(pg.width/2f+outerRadius*cos(theta), pg.height/2f+outerRadius*sin(theta));
+        if (drawBorder) {
+            pg.noStroke();
+            pg.beginShape(TRIANGLE_STRIP);
+            float innerRadius = gameBorder;
+            float outerRadius = gameBorder + 50;
+            int detail = 100;
+            for (int i = 0; i <= detail; i++) {
+                float theta = map(i, 0, detail, 0, TAU);
+                pg.fill(1);
+                pg.vertex(pg.width / 2f + innerRadius * cos(theta), pg.height / 2f + innerRadius * sin(theta));
+                pg.fill(0);
+                pg.vertex(pg.width / 2f + outerRadius * cos(theta), pg.height / 2f + outerRadius * sin(theta));
+            }
+            pg.endShape();
         }
-        pg.endShape();
     }
 
     void drawGameOver() {
@@ -137,7 +150,7 @@ public class Cats extends KrabApplet {
 
     public void mousePressed() {
         if (gameOver) {
-            buildDeck();
+            generateCats();
             newGame = false;
             gameOver = false;
         }
@@ -155,9 +168,8 @@ public class Cats extends KrabApplet {
             updateDirection();
             move();
             float distanceFromCenter = dist(pos.x, pos.y, width / 2f, height / 2f);
-
             if (distanceFromCenter > gameBorder) {
-                gameOver = true;
+//                gameOver = true;
             }
             checkCollisions();
         }
@@ -173,67 +185,66 @@ public class Cats extends KrabApplet {
 
         private void move() {
             PVector speed = new PVector();
-            if(direction == 0) {
+            if (direction == 0) {
                 speed.x = 1;
-            }else if(direction == 1) {
+            } else if (direction == 1) {
                 speed.y = 1;
-            }else if(direction == 2) {
+            } else if (direction == 2) {
                 speed.x = -1;
-            }else if(direction == 3) {
+            } else if (direction == 3) {
                 speed.y = -1;
             }
-            speed.mult(slider("speed", 0.5f));
+            speed.mult(0.5f);
             pos.add(speed);
         }
 
         private void updateDirection() {
-            if(random(1) < slider("turn chance", 0.05f)) {
-                if(random(1) > 0.5f) {
+            if (random(1) < 0.01f) {
+                if (random(1) > 0.5f) {
                     direction++;
-                }else {
+                } else {
                     direction--;
                 }
             }
-            while(direction < 0) {
+            while (direction < 0) {
                 direction += 4;
             }
             direction %= 4;
         }
 
         private void drawImage() {
-            int frame = sin(t*slider("animation speed", 10)) > 0 ? 0 : 1;
+            int frame = sin(t * 8) > 0 ? 0 : 1;
             PImage img = null;
-
-            if(direction == 0 || direction == 2) {
+            if (direction == 0 || direction == 2) {
                 img = catRight[frame];
-            }else if(direction == 1) {
+            } else if (direction == 1) {
                 img = catDown[frame];
-            }else if(direction == 3) {
+            } else if (direction == 3) {
                 img = catUp[frame];
             }
-            if(held != null && held.equals(this)) {
+            if (held != null && held.equals(this)) {
                 img = catHeld;
             }
-            pg.translate(pos.x+img.width/4f, pos.y-img.height/4f);
-            if(direction == 2) {
-                pg.scale(-1,1);
-            }else {
-                pg.scale(1,1);
+            pg.translate(pos.x, pos.y);
+            if (direction == 2) {
+                pg.scale(-1, 1);
+            } else {
+                pg.scale(1, 1);
             }
-            pg.image(img,0, 0);
-
+            if (img != null) {
+                pg.image(img, 0, 0);
+            }
         }
 
-
         void checkCollisions() {
-            if(held == null && mousePressed && dist(mouseX, mouseY, pos.x, pos.y) < size / 2) {
+            if (held == null && mousePressed && dist(mouseX, mouseY, pos.x, pos.y) < size / 2) {
                 held = this;
             }
             if (held != null && held.equals(this)) {
                 pos.x = mouseX;
                 pos.y = mouseY;
             }
-            for (Cat otherCard : deck) {
+            for (Cat otherCard : cats) {
                 if (otherCard.equals(this)) {
                     continue;
                 }

@@ -119,3 +119,19 @@ Cats§speed§0.5§10.0
 Cats§animation speed§10.0§20.0
 Cats§gradient radius§404.59§1000.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§background§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.2875§false§0.0§0.0§0.0§1.0§0.6666667§false§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Cats§turn chance§0.01§10.0
+Cats§speed§0.5§10.0
+Cats§animation speed§7.9999824§20.0
+Cats§gradient radius§400.01355§30.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§fade to black§255.0§2550.0
+Cats§x§0.37000012§10.0
+Cats§y§-0.36999997§10.0
+STATE_END
