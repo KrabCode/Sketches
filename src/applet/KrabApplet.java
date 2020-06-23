@@ -3450,11 +3450,12 @@ public abstract class KrabApplet extends PApplet {
         private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
         private final int defaultColorCount;
         float previewCenterX = width / 2f;
-        float previewCenterY = height - sliderHeight - cell*2;
+        float previewCenterY = height - sliderHeight - cell * 2;
         float previewWidth = cell * 8;
         float previewHeight = cell * 4;
         private GradientType gradientType;
-        private ColorPicker currentlySelectedPicker = null;
+        private ColorPicker selected = null;
+        private ColorPicker held = null;
         private boolean blockDeselectionUntilMouseRelease = false;
         private int gradientTypeChangedFrame;
         private int blendTypeChangedFrame;
@@ -3485,6 +3486,21 @@ public abstract class KrabApplet extends PApplet {
             return true;
         }
 
+        void update() {
+            /* in the first few frames anything drawn to PGraphics somehow don't really persist,
+            / so we need to continually update the texture even when the overlay is hidden
+            / the fps costs of this are tiny, the shader that draws it is really fast  */
+            drawGradientToTexture(pg, gradientType, blendType);
+        }
+
+        void updateOverlay() {
+            super.updateOverlay();
+            updateColorPickers();
+            drawPreview();
+            drawTextIndicator(String.valueOf(gradientType.getSymbol()), gradientTypeChangedFrame);
+            drawTextIndicator(blendType.toString(), blendTypeChangedFrame);
+        }
+
         void reset() {
             gradientType = defaultGradientType;
             blendType = defaultBlendType;
@@ -3499,7 +3515,7 @@ public abstract class KrabApplet extends PApplet {
             if (previousActionsContainsLockAware(ACTION_COPY)) {
                 clipboardGradient = getState();
             }
-            if (previousActionsContainsLockAware(ACTION_PASTE) && currentlySelectedPicker == null && !clipboardGradient.isEmpty()) {
+            if (previousActionsContainsLockAware(ACTION_PASTE) && selected == null && !clipboardGradient.isEmpty()) {
                 pushCurrentStateToUndo();
                 setState(clipboardGradient);
             }
@@ -3551,15 +3567,6 @@ public abstract class KrabApplet extends PApplet {
             drawGradientToTexture(pg, gradientType, blendType);
         }
 
-        void updateOverlay() {
-            super.updateOverlay();
-            updateColorPickers();
-            drawGradientToTexture(pg, gradientType, blendType);
-            drawPreview();
-            drawTextIndicator(String.valueOf(gradientType.getSymbol()), gradientTypeChangedFrame);
-            drawTextIndicator(blendType.toString(), blendTypeChangedFrame);
-        }
-
         private void drawTextIndicator(String text, int frameRevealed) {
             pushStyle();
             int typeChangeFadeoutDuration = 60;
@@ -3568,7 +3575,7 @@ public abstract class KrabApplet extends PApplet {
             textAlign(CENTER, CENTER);
             fill(0, alpha);
             float indicatorX = previewCenterX;
-            float indicatorY = previewCenterY - previewHeight*2;
+            float indicatorY = previewCenterY - previewHeight * 2;
             text(text, indicatorX + shadowOffset, indicatorY + shadowOffset);
             fill(GRAYSCALE_SELECTED, alpha);
             text(text, indicatorX, indicatorY);
@@ -3593,7 +3600,6 @@ public abstract class KrabApplet extends PApplet {
         private void updateColorPickers() {
             pushStyle();
             colorMode(HSB, 1, 1, 1, 1);
-            boolean pickerMoved = false;
             boolean pickerDeleted = false;
             float pickerHandleRadius = 40;
             sortPickersByGradientPosition();
@@ -3608,36 +3614,44 @@ public abstract class KrabApplet extends PApplet {
                 HSBA pickerColor = picker.getHSBA();
                 boolean isMouseInsideHandle = isPointInCircle(mouseX, mouseY, x, lineTopY - pickerHandleRadius / 2, pickerHandleRadius / 2);
                 if (isMouseInsideHandle) {
-                    if (mousePressed && mouseX != pmouseX && !picker.gradientPositionLocked && !pickerMoved && isPickerSelected(picker)) {
-                        if (mouseJustPressedOutsideGui()) {
+                    if (mousePressed && !picker.gradientPositionLocked) {
+                        if (mouseJustPressedOutsideGui() && isPickerSelected(picker)) {
                             pushCurrentStateToUndo();
                         }
-                        pickerMoved = true;
+                        if (held == null) {
+                            held = picker;
+                        }
                         blockDeselectionUntilMouseRelease = true;
-                        picker.gradientPosition = constrain(map(mouseX, previewCenterX - previewWidth / 2,
-                                previewCenterX + previewWidth / 2, 0, 1), 0, 1);
                     }
                     if (mouseJustPressedOutsideGui() && !isPickerSelected(picker)) {
-                        currentlySelectedPicker = picker;
-                        currentlySelectedPicker.onOverlayShown();
+                        selected = picker;
+                        selected.onOverlayShown();
                         blockDeselectionUntilMouseRelease = true;
                     } else if (mouseJustReleased() && isPickerSelected(picker) && !blockDeselectionUntilMouseRelease) {
-                        currentlySelectedPicker = null;
+                        selected = null;
                     }
                     if (mouseButton == RIGHT && mouseJustReleased() && !pickerDeleted && !picker.gradientPositionLocked) {
                         pickersToRemove.add(picker);
                         if (isPickerSelected(picker)) {
-                            currentlySelectedPicker = null;
+                            selected = null;
+                        }
+                        if(pickerHeld(picker)) {
+                            held = null;
                         }
                         pickerDeleted = true;
                     }
+                }
+                if (picker.equals(held) && isMousePressedInsideRect(width / 2f - previewWidth / 2, 0, previewWidth, height)) {
+                    float delta = map(mouseX - pmouseX, 0, previewWidth, 0, 1);
+                    picker.gradientPosition += delta;
+                    picker.gradientPosition = constrain(picker.gradientPosition, 0, 1);
                 }
                 if (isPickerSelected(picker)) {
                     stroke(picker.getHSBA().clr());
                     strokeWeight(6);
                     line(x, lineTopY, x, y - previewHeight / 2f);
                     stroke(1);
-                }else {
+                } else {
                     stroke(GRAYSCALE_DARK);
                 }
                 strokeWeight(3);
@@ -3649,15 +3663,19 @@ public abstract class KrabApplet extends PApplet {
                     ellipse(x, pickerHandleY, pickerHandleRadius, pickerHandleRadius);
                 }
             }
+
+            if (!mousePressed) {
+                held = null;
+            }
             if (mouseJustReleased()) {
                 blockDeselectionUntilMouseRelease = false;
             }
             popStyle();
-            if (currentlySelectedPicker != null) {
-                currentlySelectedPicker.hueLocked = pickerMoved;
-                currentlySelectedPicker.update();
-                currentlySelectedPicker.handleActions();
-                currentlySelectedPicker.updateOverlay(true);
+            if (selected != null) {
+                selected.hueLocked = held != null;
+                selected.update();
+                selected.handleActions();
+                selected.updateOverlay(true);
             }
             pickers.removeAll(pickersToRemove);
             boolean mouseJustReleasedInsideGradientEditor = mouseJustReleasedHere(previewCenterX - previewWidth / 2,
@@ -3674,11 +3692,15 @@ public abstract class KrabApplet extends PApplet {
             ColorPicker newPicker = new ColorPicker(pickerPosition, false,
                     hue(colorAtPos), saturation(colorAtPos), brightness(colorAtPos), alpha(colorAtPos));
             pickers.add(newPicker);
-            currentlySelectedPicker = newPicker;
+            selected = newPicker;
+        }
+
+        private boolean pickerHeld(ColorPicker picker) {
+            return held != null && held.equals(picker);
         }
 
         private boolean isPickerSelected(ColorPicker picker) {
-            return currentlySelectedPicker != null && currentlySelectedPicker.equals(picker);
+            return selected != null && selected.equals(picker);
         }
 
         private void drawGradientToTexture(PGraphics pg, GradientType gradType, BlendType blendType) {
