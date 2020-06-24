@@ -1,6 +1,12 @@
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float time;
+uniform float angleOffset;
+uniform float angleRange;
+uniform float timeSpeed;
+uniform vec3 freqs;
+uniform vec3 amps;
+
 
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
@@ -110,26 +116,18 @@ float noise(vec2 p, vec2 t, float amp, float freq){
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
     vec2 cv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
-
-    float tr = 0.2;
-    vec2 t = vec2(cos(time), sin(time))*tr;
+    vec2 t = vec2(cos(time), sin(time))*timeSpeed;
     float texel = 1/resolution.x;
-    float offset = 1.0;
-    float angleRange = 2.0;
-
-    float angle0 = angleRange*noise(uv, t, 3.14, 0.5) + offset;
-    float angle1 = angleRange*noise(uv, t, 3.14, 3.0) + offset;
-    float angle2 = angleRange*noise(uv, t, 3.14, 20.0) + offset;
-    float texel0 = texel * 1.0;
-    float texel1 = texel0 * .8 ;
-    float texel2 = texel1 * .8;
+    float angle0 = angleRange*noise(uv, t, 3.14, freqs.x) + angleOffset;
+    float angle1 = angleRange*noise(uv, t, 3.14, freqs.y) + angleOffset;
+    float angle2 = angleRange*noise(uv, t, 3.14, freqs.z) + angleOffset;
+    float texel0 = texel * amps.x;
+    float texel1 = texel * amps.y;
+    float texel2 = texel * amps.z;
     vec2 noiseOffset =
         vec2(cos(angle0), sin(angle0)) * texel0 +
         vec2(cos(angle1), sin(angle1)) * texel1 +
-        vec2(cos(angle2), sin(angle2)) * texel2
-    ;
-
-
+        vec2(cos(angle2), sin(angle2)) * texel2;
     vec4 color = texture(texture, uv+noiseOffset);
     gl_FragColor = color;
 }

@@ -2,6 +2,7 @@ package _2020_06;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
+import processing.core.PVector;
 
 public class Unrelated extends KrabApplet {
     private PGraphics pg;
@@ -29,21 +30,17 @@ public class Unrelated extends KrabApplet {
             pg.clear();
         }
         fadeToBlack(pg);
-
         multiplyPass(pg);
-
         pg.pushStyle();
-        pg.blendMode(ADD);
         translateToCenter(pg);
         translate2D(pg);
         pg.imageMode(CENTER);
-        pg.image(gradient("ADD", width*2, height*2), 0, 0);
-//        pg.pushMatrix();
-//        translateToCenter(pg);
-//        drawMandala();
-//        pg.popMatrix();
+        pg.blendMode(ADD);
+        pg.image(gradient("ADD 1", width*2, height*2), 0, 0);
+        pg.image(gradient("ADD 2", width*2, height*2), 0, 0);
         pg.blendMode(SUBTRACT);
-        pg.image(gradient("SUBTRACT", width*2, height*2), 0, 0);
+        pg.image(gradient("SUBTRACT 1", width*2, height*2), 0, 0);
+        pg.image(gradient("SUBTRACT 2", width*2, height*2), 0, 0);
         pg.popStyle();
         flowShader();
         pg.endDraw();
@@ -61,30 +58,15 @@ public class Unrelated extends KrabApplet {
     }
 
     void flowShader() {
-        String shaderPath = "shaders/_2020_06/Unrelated/unrelated" + (options("1", "2").equals("2") ? "_2" : "") + ".glsl";
-        uniform(shaderPath).set("time", t);
+        group("displace");
+        String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";
+        uniform(shaderPath).set("time", t*slider("time", 1));
+        uniform(shaderPath).set("timeSpeed", slider("time radius", 0.2f));
+        uniform(shaderPath).set("angleOffset", slider("angle offset", 1));
+        uniform(shaderPath).set("angleRange", slider("angle range", 2));
+        uniform(shaderPath).set("freqs",sliderXYZ("noise details", 0.5f,3,20));
+        uniform(shaderPath).set("amps",sliderXYZ("noise speeds", 1, .8f, .6f));
         hotFilter(shaderPath, pg);
-    }
-
-    private void drawMandala() {
-        group("mandala");
-        translate2D(pg);
-        preRotate(pg, "rotate", t);
-        pg.blendMode(options("add", "sub").equals("add") ? ADD : SUBTRACT);
-        int count = sliderInt("count");
-        float baseRadius = slider("base radius");
-        float freq = slider("freq");
-        float amp = slider("amp");
-        float size = slider("size");
-        for (int i = 0; i < count; i++) {
-            float iNorm = norm(i, 0, count);
-            float r = baseRadius + amp * sin(freq * t + iNorm * TAU * slider("angle offset"));
-            float theta = map(i, 0, count, 0, TAU);
-            pg.strokeWeight(slider("weight"));
-            pg.stroke(picker("stroke").clr());
-            pg.fill(picker("fill").clr());
-            pg.ellipse(r * cos(theta), r * sin(theta), size, size);
-        }
         resetGroup();
     }
 }

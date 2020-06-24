@@ -304,21 +304,18 @@ public abstract class KrabApplet extends PApplet {
         return new HSBA();
     }
 
-    @SuppressWarnings("unused")
     protected PGraphics gradient(String name) {
-        return gradient(name, 4, GradientType.VERTICAL, width, height);
+        return gradient(name, 2, GradientType.VERTICAL, width, height);
     }
 
-    @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount) {
         return gradient(name, defaultColorCount, GradientType.VERTICAL, width, height);
     }
 
     protected PGraphics gradient(String name, int w, int h) {
-        return gradient(name, 4, GradientType.VERTICAL, w, h);
+        return gradient(name, 2, GradientType.VERTICAL, w, h);
     }
 
-    @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
         return gradient(name, defaultColorCount, defaultType, width, height);
     }
@@ -333,8 +330,7 @@ public abstract class KrabApplet extends PApplet {
         if (gradientEditor != null) {
             return gradientEditor.getTexture();
         }
-        println("gradient picker was not found");
-        return null;
+        throw new IllegalStateException("gradient picker was not found");
     }
 
     // the defaultValue parameter becomes the name of the element and must be unique within the current group
