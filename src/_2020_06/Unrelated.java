@@ -28,6 +28,7 @@ public class Unrelated extends KrabApplet {
         if(button("clear")){
             pg.clear();
         }
+        fadeToBlack(pg);
         translate2D(pg);
         pg.pushStyle();
         pg.blendMode(ADD);

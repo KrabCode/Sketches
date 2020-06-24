@@ -113,11 +113,12 @@ void main(){
     float tr = 0.1;
     vec2 t = vec2(cos(time), sin(time))*tr;
     float angle = noise(uv, t, 0.5, 6.0) + noise(uv, t, 0.75, 10.0) + noise(uv, t, 0.3, 20);
-    angle *= 2;
-    vec2 off = vec2(cos(angle), sin(angle))*.01;
+    angle *= 6;
     float angleFromCenter = atan(cv.y, cv.x);
-    vec2 constantOffset = vec2(cos(angleFromCenter), sin(angleFromCenter))*.00;
-    vec4 color = texture(texture, uv+off+constantOffset);
+    float texel = 1/resolution.x;
+    vec2 noiseOffset = vec2(cos(angle), sin(angle))*texel;
+    vec2 constantOffset = vec2(cos(angleFromCenter), sin(angleFromCenter))*texel;
+    vec4 color = texture(texture, uv+noiseOffset+constantOffset);
     vec4 orig = texture(texture, uv);
     gl_FragColor = orig*.5+color*.5;
 }

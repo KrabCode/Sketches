@@ -206,3 +206,23 @@ colors§move R§100.0§0.0§0.0
 colors§move G§100.0§0.0§0.0
 colors§move B§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§16.630001§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.064998575§0.0§0.0§1.0§0.271875§false§0.0§0.0§0.3875§0.654902§0.6187503§false§0.008222336§0.0§0.396875§1.0§1.0§true§0.9995§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.99649996§0.0§0.0§1.0§0.5156248§false§0.0§0.0§0.34117648§1.0§0.8343749§false§0.14250006§0.0§0.715625§1.0§1.0§true§0.0374997§0.0§1.0§1.0§
+GROUP§scale§true
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9964004§0.9964004§0.9964004
+scale§common scale§0.9964004§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§0.99§0.9900001§0.998
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
