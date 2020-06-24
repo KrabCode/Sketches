@@ -226,3 +226,518 @@ colors§move R§100.0§0.0§0.0
 colors§move G§100.0§0.0§0.0
 colors§move B§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§16.630001§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.064998575§0.0§0.0§1.0§0.271875§false§0.0§0.0§0.3875§0.654902§0.6187503§false§0.008222336§0.0§0.396875§1.0§1.0§true§0.9995§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.99649996§0.0§0.0§1.0§0.5156248§false§0.0§0.0§0.34117648§1.0§0.8343749§false§0.14250006§0.0§0.715625§1.0§1.0§true§0.0374997§0.0§1.0§1.0§
+Unrelated§1§1
+GROUP§scale§false
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9964004§0.9964004§0.9964004
+scale§common scale§0.9964004§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§0.99§0.9900001§0.998
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§2.295§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.068998575§0.0§0.0§1.0§0.0§false§0.69649994§0.140625§0.171875§1.0§0.15000074§false§0.02772234§0.0§0.0§1.0§0.4187499§false§0.9995§0.0§0.0§1.0§0.46874967§false§0.066499725§1.0§1.0§0.6§0.5062498§false§0.9995§0.0§0.0§1.0§1.0§true§0.9995§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.99799997§0.378125§0.0875§1.0§0.40312466§false§0.0§0.0§0.0§1.0§1.0§true§0.0374997§0.2625§0.465625§1.0§
+Unrelated§1§1
+GROUP§scale§true
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9688003§0.9688003§0.9688003
+scale§common scale§0.9688003§0.10000001
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§0.9992§0.99919987§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§7.3950014§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.068998575§0.0§0.15§1.0§0.44062582§false§0.02772234§0.0§0.0§1.0§1.0§true§0.9995§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.5464997§0.0§0.03125§0.99300003§1.0§true§0.0374997§0.0§0.0§1.0§
+Unrelated§1§1
+GROUP§scale§false
+scale§center§100.0§-0.5§-0.49999973
+scale§RGB scales§0.1§0.9990305§0.9990305§0.9990305
+scale§common scale§0.9990305§0.010000001
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§10.0§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§130.05§2550.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.0§0.0§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Unrelated§SUBTRACT§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.0§0.0§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Unrelated§1§1
+GROUP§scale§true
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9964004§0.9964004§0.9964004
+scale§common scale§0.9964004§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§0.99§0.9900001§0.998
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§130.05§2550.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.0§0.0§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Unrelated§SUBTRACT§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.0§0.0§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§count§8.99999§100.0
+mandala§base radius§0.0§10.0
+mandala§freq§0.0§10.0
+mandala§amp§0.0§10.0
+mandala§size§0.0§10.0
+GROUP§scale§true
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9964004§0.9964004§0.9964004
+scale§common scale§0.9964004§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§0.99§0.9900001§0.998
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§0.0§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.0§0.0§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Unrelated§SUBTRACT§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.33333334§false§0.0§0.0§0.33333334§1.0§0.6666667§false§0.0§0.0§0.6666667§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§count§14.993732§100.0
+mandala§base radius§316.1§1000.0
+mandala§freq§0.099951975§10.0
+mandala§amp§10.27§100.0
+mandala§size§74.600006§1000.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.5§1.0§1.0
+mandala§fill§0.0§0.0§0.5§1.0§1.0
+GROUP§scale§true
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9964004§0.9964004§0.9964004
+scale§common scale§0.9964004§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§0.99§0.9900001§0.998
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§2.04§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.999§0.0§0.0§1.0§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§count§14.993732§100.0
+mandala§base radius§316.1§1000.0
+mandala§freq§0.099951975§10.0
+mandala§amp§10.27§100.0
+mandala§size§74.600006§1000.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.5§1.0§1.0
+mandala§fill§0.0§0.0§0.5§1.0§1.0
+GROUP§scale§true
+scale§center§10.0§-0.42999965§-0.5
+scale§RGB scales§0.1§0.9964004§0.9964004§0.9964004
+scale§common scale§0.9964004§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§0.99§0.9900001§0.998
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§false
+Unrelated§clear§
+Unrelated§fade to black§1.5000007§0.00255
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.999§0.0§0.0§1.0§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§31.415928§0.0§0.0§0.2733186
+mandala§count§246.99997§1000.0
+mandala§base radius§154.1§1000.0
+mandala§freq§5.199952§100.0
+mandala§amp§29.270004§1000.0
+mandala§size§10.600006§1000.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.5§1.0§1.0
+mandala§fill§0.0§0.0§0.5§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§false
+Unrelated§clear§
+Unrelated§fade to black§1.5000007§0.00255
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.999§0.0§0.0§1.0§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§31.415928§0.0§0.0§0.2733186
+mandala§count§246.99997§1000.0
+mandala§base radius§154.1§1000.0
+mandala§freq§1.4999522§100.0
+mandala§amp§29.270004§1000.0
+mandala§size§10.600006§1000.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.5§1.0§1.0
+mandala§fill§0.0§0.0§0.5§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§false
+Unrelated§clear§
+Unrelated§fade to black§0.6323997§25.500002
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.68750054§false§0.0§0.0§0.0§1.0§0.7531254§false§0.97900015§0.0§0.0125§0.33199984§1.0§true§0.97900015§0.0§0.0§0.33199984§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.35937527§false§0.0§0.0§0.0§1.0§1.0§true§0.05549994§0.0§0.0§1.0§
+Unrelated§1§1
+GROUP§mandala§false
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§3.1415927§0.0§0.0§0.020420395
+mandala§count§67.0§1000.0
+mandala§base radius§384.09998§10000.0
+mandala§freq§0.8999522§100.0
+mandala§amp§29.270004§1000.0
+mandala§size§3.640005§10.0
+mandala§angle offset§10.001004§10.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.029999996§0.0§0.0§1.0§1.0
+mandala§fill§0.0§0.0§0.0§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§0.0§255.0
+Unrelated§translate§1000.0§56.800003§146.3
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.30937466§false§0.97900015§0.0§0.0125§0.33199984§0.37812474§false§0.9954998§0.0§0.0§1.0§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§0.540625§false§0.0§0.0§0.0§1.0§1.0§true§0.05599994§0.0§0.03125§0.6100003§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§3.1415927§0.0§0.0§0.0
+mandala§add§1
+mandala§count§191.0§10000.0
+mandala§base radius§0.0§10.0
+mandala§freq§0.009070946§1.0000001
+mandala§amp§1003.27§10000.0
+mandala§size§18.840002§100.0
+mandala§angle offset§29.000002§100.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.0§1.0§1.0
+mandala§fill§0.5669996§0.528125§0.0125§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§0.0§255.0
+Unrelated§translate§1000.0§56.800003§146.3
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.30937466§false§0.97900015§0.0§0.0125§0.33199984§0.37812474§false§0.9954998§0.0§0.0§1.0§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§0.540625§false§0.0§0.0§0.0§1.0§1.0§true§0.05599994§0.0§0.03125§0.6100003§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§3.1415927§0.0§0.0§0.0
+mandala§add§1
+mandala§count§191.0§10000.0
+mandala§base radius§0.0§10.0
+mandala§freq§0.009070946§1.0000001
+mandala§amp§1003.27§10000.0
+mandala§size§18.840002§100.0
+mandala§angle offset§29.000002§100.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.0§1.0§1.0
+mandala§fill§0.5669996§0.528125§0.0125§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§0.0§255.0
+Unrelated§translate§1000.0§56.800003§146.3
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.30937466§false§0.97900015§0.0§0.0125§0.33199984§0.37812474§false§0.9954998§0.0§0.0§1.0§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§0.540625§false§0.0§0.0§0.0§1.0§1.0§true§0.05599994§0.0§0.03125§0.6100003§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§3.1415927§0.0§0.0§0.0
+mandala§add§1
+mandala§count§201.0§10000.0
+mandala§base radius§0.0§10.0
+mandala§freq§0.009070946§1.0000001
+mandala§amp§1003.27§10000.0
+mandala§size§18.840002§100.0
+mandala§angle offset§29.000002§100.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.0§1.0§1.0
+mandala§fill§0.5669996§0.528125§0.0125§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§0.0§255.0
+Unrelated§translate§1000.0§56.800003§146.3
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.30937466§false§0.97900015§0.0§0.0125§0.33199984§0.37812474§false§0.9954998§0.0§0.0§1.0§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§0.540625§false§0.0§0.0§0.0§1.0§1.0§true§0.05599994§0.0§0.03125§0.6100003§
+Unrelated§1§1
+GROUP§mandala§true
+mandala§translate§100.0§0.0§0.0
+mandala§rotate§3.1415927§0.0§0.0§0.0
+mandala§add§1
+mandala§count§100.0§100.0
+mandala§base radius§0.0§10.0
+mandala§freq§0.0070709456§1.0000001
+mandala§amp§2283.27§10000.0
+mandala§size§18.840002§100.0
+mandala§angle offset§29.000002§100.0
+mandala§weight§0.0§10.0
+mandala§stroke§0.0§0.0§0.0§1.0§1.0
+mandala§fill§0.5669996§0.5125§0.021875§1.0§1.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§1.0199995§25.5
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.3124999§false§0.0§0.0§0.0§0.4862745§0.46250075§false§0.96999985§0.0§0.103125§0.2709998§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§0.16875003§false§0.0§0.0§0.0§1.0§1.0§true§0.05599994§0.0§0.03125§0.6100003§
+Unrelated§1§1
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§2.5499992§255.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.15625001§false§0.0§0.0§0.0§0.4862745§0.85000205§false§0.96999985§0.0§0.103125§0.2709998§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§1.0§true§0.049499933§0.0§0.0§1.0§
+Unrelated§1§1
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§3.060001§255.0
+Unrelated§multiply on§true
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.15625001§false§0.99000007§0.0§1.0§1.0§0.85000205§false§0.95199996§0.0§1.0§1.0§1.0§true§0.9615§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§5.0E-4§0.0§0.0§1.0§1.0§true§0.049499933§0.0§0.0§1.0§
+Unrelated§1§1
+Unrelated§multiply§246.33008§10000.0
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§4.7940006§25.5
+Unrelated§multiply§0.96600115§1.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.20550014§0.290625§0.1625§0.37500015§0.09375006§false§0.0040556043§0.42857143§0.05490196§1.0§0.18437497§false§0.8875§0.4§0.039215688§1.0§0.2687499§false§0.7313334§1.0§0.023529412§1.0§0.5406252§false§0.7343334§0.7§0.0875§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.2031245§false§0.0§0.0§0.0§1.0§1.0§true§0.99349993§0.0§0.065625§1.0§
+Unrelated§1§1
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§clear§
+Unrelated§fade to black§4.7940006§25.5
+Unrelated§multiply§0.96600115§1.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb interpolation§0.0§true§0.20550014§0.290625§0.1625§0.37500015§0.09375006§false§0.0040556043§0.42857143§0.05490196§1.0§0.18437497§false§0.8875§0.4§0.039215688§1.0§0.2687499§false§0.7313334§1.0§0.023529412§1.0§0.5406252§false§0.7343334§0.7§0.0875§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§0.2031245§false§0.0§0.0§0.0§1.0§1.0§true§0.99349993§0.0§0.065625§1.0§
+Unrelated§1§1
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END

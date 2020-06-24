@@ -314,6 +314,10 @@ public abstract class KrabApplet extends PApplet {
         return gradient(name, defaultColorCount, GradientType.VERTICAL, width, height);
     }
 
+    protected PGraphics gradient(String name, int w, int h) {
+        return gradient(name, 4, GradientType.VERTICAL, w, h);
+    }
+
     @SuppressWarnings("unused")
     protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
         return gradient(name, defaultColorCount, defaultType, width, height);
@@ -479,7 +483,7 @@ public abstract class KrabApplet extends PApplet {
             pg.noStroke();
             pg.fill(255, slider("fade to black", 0, 255, 10));
             pg.rectMode(CENTER);
-            pg.rect(0, 0, width * 2, height * 2);
+            pg.rect(0, 0, width * 3, height * 3);
         } else {
             pg.imageMode(CORNER);
             pg.image(ramp, 0, 0, pg.width, pg.height);
@@ -543,7 +547,11 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void preRotate(PGraphics pg) {
-        preRotate(pg, "rotate");
+        preRotate(pg, "rotate", 1);
+    }
+
+    protected void preRotate(PGraphics pg, String sliderName) {
+        preRotate(pg, sliderName, 1);
     }
 
     /**
@@ -555,7 +563,7 @@ public abstract class KrabApplet extends PApplet {
      * @param pg         PGraphics to rotate
      * @param sliderName name of the slider and the key of the PMatrix in the sliderRotationMatrixMap
      */
-    protected void preRotate(PGraphics pg, String sliderName) {
+    protected void preRotate(PGraphics pg, String sliderName, float multiplier) {
         PMatrix3D rotationMatrix;
         PVector previousSliderRotation = new PVector();
         if (sliderRotationMatrixMap.containsKey(sliderName)) {
@@ -565,7 +573,7 @@ public abstract class KrabApplet extends PApplet {
             rotationMatrix = new PMatrix3D();
             sliderRotationMatrixMap.put(sliderName, rotationMatrix);
         }
-        PVector rotation = sliderXYZ(sliderName, 0, PI);
+        PVector rotation = sliderXYZ(sliderName, 0, PI).copy().mult(multiplier);
         PVector delta = PVector.sub(previousSliderRotation, rotation);
         if (previousSliderRotation.mag() != 0 && rotation.mag() == 0) {
             delta.mult(0);
@@ -620,7 +628,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         group("colors");
-        PVector multiplier = sliderXYZ("multiplier", 1);
+        PVector multiplier = sliderXYZ("multiplier", 1, 0.1f);
         for (int i = 0; i < 3; i++) {
             PGraphics primaryColorCanvas = primaryColorCanvases[i];
             primaryColorCanvas.beginDraw();
@@ -2082,12 +2090,11 @@ public abstract class KrabApplet extends PApplet {
                 } else {
                     candidate = loadShader(fragPath, vertPath);
                 }
-                // we need to call filter() or shader() here in order to catch any compilation errors and not halt
-                // the sketch
-                applyShader(candidate, filter, pg);
+                candidate.init();
                 compiledShader = candidate;
                 compiledAtLeastOnce = true;
                 fragLastKnownModified = lastModified;
+                println("compiled", fragPath != null ? fragPath : "", vertPath != null ? vertPath : "");
             } catch (Exception ex) {
                 lastKnownUncompilable = lastModified;
                 println("\n" + fragFile.getName() + ": " + ex.getMessage());
@@ -3635,7 +3642,7 @@ public abstract class KrabApplet extends PApplet {
                         if (isPickerSelected(picker)) {
                             selected = null;
                         }
-                        if(pickerHeld(picker)) {
+                        if (pickerHeld(picker)) {
                             held = null;
                         }
                         pickerDeleted = true;
