@@ -1308,7 +1308,7 @@ public abstract class KrabApplet extends PApplet {
         if (activated("", x, y, w, h) || actionsContainsLockAware(ACTION_SAVE)) {
             saveAnimationStarted = frameCount;
             saveStateToFile();
-            println("settings saved");
+            println("✔ settings saved");
         }
         if (hide) {
             return;
@@ -2011,7 +2011,7 @@ public abstract class KrabApplet extends PApplet {
         File vertFile;
         PShader compiledShader;
         long fragLastKnownModified, vertLastKnownModified, lastChecked;
-        boolean compiledAtLeastOnce = false;
+        boolean compiledOk = false;
         long lastKnownUncompilable = -shaderRefreshRateInMillis;
 
 
@@ -2050,21 +2050,21 @@ public abstract class KrabApplet extends PApplet {
             if (vertFile != null) {
                 lastModified = max(lastModified, vertFile.lastModified());
             }
-            if (compiledAtLeastOnce && currentTimeMillis < lastChecked + shaderRefreshRateInMillis) {
-//                println("compiled at least once, not checking, standard apply");
+            if (compiledOk && currentTimeMillis < lastChecked + shaderRefreshRateInMillis) {
+//                println("working shader did not change, not checking, standard apply");
                 applyShader(compiledShader, filter, pg);
                 return;
             }
-            if (!compiledAtLeastOnce && lastModified > lastKnownUncompilable) {
-//                println("first try");
-                tryCompileNewVersion(filter, pg, lastModified);
+            if (!compiledOk && lastModified > lastKnownUncompilable) {
+//                println("file changed, trying to compile");
+                tryCompileNewVersion(lastModified);
                 return;
             }
             lastChecked = currentTimeMillis;
             if (lastModified > fragLastKnownModified && lastModified > lastKnownUncompilable) {
 //                println("file changed, repeat try");
-                tryCompileNewVersion(filter, pg, lastModified);
-            } else if (compiledAtLeastOnce) {
+                tryCompileNewVersion(lastModified);
+            } else if (compiledOk) {
 //                println("file didn't change, standard apply");
                 applyShader(compiledShader, filter, pg);
             }
@@ -2078,7 +2078,7 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
-        private void tryCompileNewVersion(boolean filter, PGraphics pg, long lastModified) {
+        private void tryCompileNewVersion(long lastModified) {
             try {
                 PShader candidate;
                 if (vertFile == null) {
@@ -2088,12 +2088,15 @@ public abstract class KrabApplet extends PApplet {
                 }
                 candidate.init();
                 compiledShader = candidate;
-                compiledAtLeastOnce = true;
+                compiledOk = true;
                 fragLastKnownModified = lastModified;
-                println("compiled", fragPath != null ? fragPath : "", vertPath != null ? vertPath : "");
+                println("✔ compiled", fragPath != null ? fragFile.getName() : "",
+                        vertPath != null ? vertFile.getName() :  "");
             } catch (Exception ex) {
                 lastKnownUncompilable = lastModified;
-                println("\n" + fragFile.getName() + ": " + ex.getMessage());
+                println("❌" + (fragPath != null ? " " + fragFile.getName() : "") ,
+                                (vertPath != null ? " " + vertFile.getName() :  ""),
+                                ex.getMessage());
             }
         }
     }

@@ -12,11 +12,12 @@ public class Unrelated extends KrabApplet {
     }
 
     public void settings() {
+//        fullScreen(P2D);
         size(1000, 1000, P3D);
     }
 
     public void setup() {
-        pg = createGraphics(width, height, P3D);
+        pg = createGraphics(width, height, P2D);
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);

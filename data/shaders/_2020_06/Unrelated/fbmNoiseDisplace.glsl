@@ -96,6 +96,7 @@ float snoise(vec4 v){
     return 49.0 * (dot(m0*m0, vec3(dot(p0, x0), dot(p1, x1), dot(p2, x2)))
     + dot(m1*m1, vec2(dot(p3, x3), dot(p4, x4))));
 }
+
 float fbm (vec4 p) {
     float sum = 0.;
     float amp = 1;
@@ -109,6 +110,7 @@ float fbm (vec4 p) {
     }
     return sum;
 }
+
 float noise(vec2 p, vec2 t, float amp, float freq){
     return amp*snoise(vec4(p*freq, t));
 }
@@ -124,10 +126,9 @@ void main(){
     float texel0 = texel * amps.x;
     float texel1 = texel * amps.y;
     float texel2 = texel * amps.z;
-    vec2 noiseOffset =
-        vec2(cos(angle0), sin(angle0)) * texel0 +
-        vec2(cos(angle1), sin(angle1)) * texel1 +
-        vec2(cos(angle2), sin(angle2)) * texel2;
+    vec2 noiseOffset =  vec2(cos(angle0), sin(angle0)) * texel0 +
+                        vec2(cos(angle1), sin(angle1)) * texel1 +
+                        vec2(cos(angle2), sin(angle2)) * texel2;
     vec4 color = texture(texture, uv+noiseOffset);
     gl_FragColor = color;
 }
