@@ -406,7 +406,6 @@ public abstract class KrabApplet extends PApplet {
         strokeCap(SQUARE);
         colorMode(HSB, 1, 1, 1, 1);
         resetMatrixInAnyRenderer();
-        resetKeyboardLock();
         hint(DISABLE_DEPTH_TEST);
         updateTray();
         if (overlayVisible && trayVisible) {
@@ -425,7 +424,7 @@ public abstract class KrabApplet extends PApplet {
 
     private void updateTray() {
         pushMatrix();
-        updateTrayHide();
+//        updateTrayHide();
         updateTrayBackground();
         updateMenuButtons();
         updateGroupsAndTheirElements();
@@ -433,10 +432,16 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
+    //TODO pretty hide animation
+    float hideTrayOffset = 0;
     private void updateTrayHide() {
         if(trayVisible && isMouseOutsideTray()) {
-            translate(-trayWidth, 0);
+            hideTrayOffset -= 3;
+        }else {
+            hideTrayOffset = 0;
         }
+        hideTrayOffset = max(hideTrayOffset, -trayWidth);
+        translate(hideTrayOffset, 0);
     }
 
     // GENERAL UTILS
@@ -486,31 +491,21 @@ public abstract class KrabApplet extends PApplet {
         fadeToBlack(g);
     }
 
-    protected void fadeToBlack(PGraphics pg) {
-        fadeToBlack(pg, null);
-    }
-
-
     /**
      * Subtracts all colors from the image, resulting in a slow darkening of any image.
      * Leaves no gray traces as opposed to drawing a transparent black rectangle over the sketch.
      *
      * @param pg PGraphics to darken
      */
-    protected void fadeToBlack(PGraphics pg, PGraphics ramp) {
+    protected void fadeToBlack(PGraphics pg) {
         pg.pushStyle();
         pg.colorMode(HSB, 255, 255, 255, 255);
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
-        if (ramp == null) {
             pg.noStroke();
             pg.fill(255, slider("fade to black", 0, 255, 10));
             pg.rectMode(CENTER);
             pg.rect(0, 0, width * 3, height * 3);
-        } else {
-            pg.imageMode(CORNER);
-            pg.image(ramp, 0, 0, pg.width, pg.height);
-        }
         pg.hint(ENABLE_DEPTH_TEST);
         pg.popStyle();
     }
@@ -1432,10 +1427,6 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
-    private void resetKeyboardLock() {
-        keyboardLockedByTextEditor = false;
-    }
-
     private void updateElement(Group group, Element el, float y) {
         el.update();
         if (activated(group.name + el.name, 0, y - cell, trayWidth, cell)) {
@@ -1500,7 +1491,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean hideActivated(float x, float y, float w, float h) {
-        return previousActionsContainsLockAware(ACTION_HIDE) || mouseJustReleasedHere(x, y, w, h);
+        return (previousActionsContainsLockAware(ACTION_HIDE) || mouseJustReleasedHere(x, y, w, h));
     }
 
     // INPUT
@@ -1917,6 +1908,25 @@ public abstract class KrabApplet extends PApplet {
 
     // SHADERS
 
+    protected void multiplyPass(PGraphics pg) {
+        String multiplyFrag = "shaders/filters/multiply.glsl";
+        uniform(multiplyFrag).set("amt", slider("multiply", 1));
+        hotFilter(multiplyFrag, pg);
+    }
+
+    protected void fbmDisplacePass(PGraphics pg) {
+        group("displace");
+        String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";
+        uniform(shaderPath).set("time", t*slider("time", 1));
+        uniform(shaderPath).set("timeSpeed", slider("time radius", 0.2f));
+        uniform(shaderPath).set("angleOffset", slider("angle offset", 1));
+        uniform(shaderPath).set("angleRange", slider("angle range", 2));
+        uniform(shaderPath).set("freqs",sliderXYZ("noise details", 0.5f,3,20));
+        uniform(shaderPath).set("amps",sliderXYZ("noise speeds", 1, .8f, .6f));
+        hotFilter(shaderPath, pg);
+        resetGroup();
+    }
+
     protected void blurPass(PGraphics pg) {
 
         group("blur");
@@ -1936,13 +1946,9 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void chromaticAberrationPass(PGraphics pg) {
-        chromaticAberrationPass(pg, 0);
-    }
-
-    protected void chromaticAberrationPass(PGraphics pg, float rotationOffset) {
         group("chromatic ab.");
         String shaderPath = "shaders/filters/chromaticAberration.glsl";
-        uniform(shaderPath).set("rotation", slider("rotation", 0) + rotationOffset);
+        uniform(shaderPath).set("rotation", slider("rotation", 0) + t * sliderInt("rotation speed"));
         uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
         uniform(shaderPath).set("outerEdge", slider("outer edge", 1));
         uniform(shaderPath).set("intensity", slider("intensity", 0));
@@ -2468,8 +2474,12 @@ public abstract class KrabApplet extends PApplet {
             return true;
         }
 
+        void update() {
+            keyboardLockedByTextEditor = false;
+        }
+
         void updateOverlay() {
-            super.updateOverlay();
+            keyboardLockedByTextEditor = true;
             displayOverlay();
         }
 
@@ -2524,7 +2534,6 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void displayOverlay() {
-            keyboardLockedByTextEditor = true;
             float overlayHeight = textHeightPlusPadding();
             pushStyle();
             noStroke();
@@ -3785,7 +3794,7 @@ public abstract class KrabApplet extends PApplet {
 
     protected enum BlendType {
         RGB_LERP("rgb lerp", 0),
-        SAT_SAFE_LERP("sat safe lerp", 1),
+        SAT_LERP("sat lerp", 1),
         HSV_LERP("hsv lerp", 2),
         SMOOTHSTEP("smoothstep", 3);
 

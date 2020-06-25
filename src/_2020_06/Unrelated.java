@@ -2,7 +2,6 @@ package _2020_06;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
-import processing.core.PVector;
 
 public class Unrelated extends KrabApplet {
     private PGraphics pg;
@@ -43,7 +42,7 @@ public class Unrelated extends KrabApplet {
         pg.image(gradient("SUBTRACT 1", width*2, height*2), 0, 0);
         pg.image(gradient("SUBTRACT 2", width*2, height*2), 0, 0);
         pg.popStyle();
-        flowShader();
+        fbmDisplacePass(pg);
         pg.endDraw();
         resetShader();
         rgbSplitScaleAndOffset(pg);
@@ -52,22 +51,4 @@ public class Unrelated extends KrabApplet {
         gui();
     }
 
-    private void multiplyPass(PGraphics pg) {
-        String multiplyFrag = "shaders/filters/multiply.glsl";
-        uniform(multiplyFrag).set("amt", slider("multiply", 1));
-        hotFilter(multiplyFrag, pg);
-    }
-
-    void flowShader() {
-        group("displace");
-        String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";
-        uniform(shaderPath).set("time", t*slider("time", 1));
-        uniform(shaderPath).set("timeSpeed", slider("time radius", 0.2f));
-        uniform(shaderPath).set("angleOffset", slider("angle offset", 1));
-        uniform(shaderPath).set("angleRange", slider("angle range", 2));
-        uniform(shaderPath).set("freqs",sliderXYZ("noise details", 0.5f,3,20));
-        uniform(shaderPath).set("amps",sliderXYZ("noise speeds", 1, .8f, .6f));
-        hotFilter(shaderPath, pg);
-        resetGroup();
-    }
 }

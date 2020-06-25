@@ -15,24 +15,25 @@ public class Cats extends KrabApplet {
 
     float imageScale = 1;
     private float time;
-    private ArrayList<Cat> cats = new ArrayList<Cat>();
+    private final ArrayList<Cat> cats = new ArrayList<Cat>();
     private Cat held = null;
     private PImage sticksIdle, sticksHeld, catHeld;
     private PImage[] catDown, catRight, catUp;
     int sticksFadeoutDelay = 60;
     int sticksFadeoutDuration = 60;
     boolean fadeSticks = false;
-    int sticksLastReleasedFrame = - sticksFadeoutDuration*3;
+    int sticksLastReleasedFrame = -sticksFadeoutDuration * 3;
 
     private PGraphics pg;
 
     public void settings() {
 //        fullScreen(P2D);
-        size(floor(1080*.5f),floor(1920*.5f), P2D);
+        size(floor(1080 * .7f), floor(1920 * .7f), P2D);
         smooth(16);
     }
 
     public void setup() {
+        surface.setLocation(displayWidth - floor(1080 * .7f) - 20, 20);
         loadImages();
         pg = createGraphics(width, height, P2D);
         generateCats();
@@ -43,7 +44,7 @@ public class Cats extends KrabApplet {
     }
 
     public void draw() {
-        if(held != null && !mousePressed){
+        if (held != null && !mousePressed) {
             drop();
         }
         time = radians(frameCount);
@@ -83,18 +84,18 @@ public class Cats extends KrabApplet {
     }
 
     private void drawCursor() {
-        // noCursor();
+        noCursor();
         pg.pushStyle();
         float w = sticksHeld.width * imageScale;
         float h = sticksHeld.height * imageScale;
         pg.imageMode(CENTER);
         float x = mouseX + w * 0.37f;
         float y = mouseY + h * -0.37f;
-        if (held == null) {
-            if(fadeSticks){
-                float sticksFadeout = constrain(norm(frameCount-sticksFadeoutDelay, sticksLastReleasedFrame,
-                        sticksLastReleasedFrame+sticksFadeoutDelay),0, 1);
-                pg.tint(1, 1-sticksFadeout);
+        if (held == null && !mousePressed) {
+            if (fadeSticks) {
+                float sticksFadeout = constrain(norm(frameCount - sticksFadeoutDelay, sticksLastReleasedFrame,
+                        sticksLastReleasedFrame + sticksFadeoutDelay), 0, 1);
+                pg.tint(1, 1 - sticksFadeout);
             }
             pg.image(sticksIdle, x, y, w, h);
         } else {
@@ -253,10 +254,29 @@ public class Cats extends KrabApplet {
         }
 
         void mouseInteract() {
-            if (held == null && mousePressed && dist(mouseX, mouseY, pos.x, pos.y) < size / 2) {
+            float interactionDist = size / 2;
+            boolean d = dist(mouseX, mouseY, pos.x, pos.y) < interactionDist;
+            boolean d0 = dist(mouseX + width, mouseY, pos.x, pos.y) < interactionDist;
+            boolean d1 = dist(mouseX, mouseY + height, pos.x, pos.y) < interactionDist;
+            boolean d2 = dist(mouseX - width, mouseY, pos.x, pos.y) < interactionDist;
+            boolean d3 = dist(mouseX, mouseY - height, pos.x, pos.y) < interactionDist;
+            boolean mouseInInteractionDist = d || d0 || d1 || d2 || d3;
+            if (held == null && mousePressed && mouseInInteractionDist) {
                 held = this;
             }
             if (held != null && held.equals(this)) {
+                if (d0) {
+                    pos.x -= width;
+                }
+                if (d1) {
+                    pos.y -= height;
+                }
+                if (d2) {
+                    pos.x += width;
+                }
+                if (d3) {
+                    pos.y += height;
+                }
                 pos.x = lerp(pos.x, mouseX, .5f);
                 pos.y = lerp(pos.y, mouseY, .5f);
             }

@@ -8,7 +8,7 @@ import utils.OpenSimplexNoise;
 import java.util.ArrayList;
 
 public class Chromab extends KrabApplet {
-    private PGraphics pg, fadeRamp;
+    private PGraphics pg;
 
     private OpenSimplexNoise noise = new OpenSimplexNoise();
     private ArrayList<Point> points = new ArrayList<>();
@@ -19,38 +19,40 @@ public class Chromab extends KrabApplet {
     }
 
     public void settings() {
-        fullScreen(P3D);
-//        size(1000, 1000, P3D);
+//        fullScreen(P3D);
+        size(1000, 1000, P3D);
     }
 
     public void setup() {
         pg = createGraphics(width, height, P3D);
-        fadeRamp = createGraphics(width, height, P3D);
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);
         }
-        frameRecordingDuration = 360*2;
+        frameRecordingDuration = 360 * 2;
     }
 
     public void draw() {
         pg.beginDraw();
-        fadeRamp.beginDraw();
-        ramp(fadeRamp, "fade ramp", 10);
-        fadeRamp.endDraw();
-        group("fade");
-        fadeToBlack(pg, fadeRamp);
-        if(options("add", "replace").equals("add")) {
-            pg.blendMode(ADD);
-        }else {
-            pg.blendMode(REPLACE);
+        if (button("clear")) {
+            pg.clear();
         }
+        pg.pushMatrix();
         translateToCenter(pg);
         updatePoints();
         displayPoints();
+        pg.popMatrix();
         blurPass(pg);
-        group("chrom ab");
-        chromaticAberrationPass(pg, t*sliderInt("chromab time"));
+        chromaticAberrationPass(pg);
+        fbmDisplacePass(pg);
+
+        group("color filters");
+        fadeToBlack(pg);
+        multiplyPass(pg);
+        pg.blendMode(ADD);
+        pg.image(gradient("add"), 0, 0);
+        pg.blendMode(SUBTRACT);
+        pg.image(gradient("sub"), 0, 0);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
@@ -59,10 +61,12 @@ public class Chromab extends KrabApplet {
 
     private void updatePoints() {
         group("points");
+        pg.blendMode(options("blend", "add").equals("blend") ? BLEND : ADD);
         int count = sliderInt("count", 100, 0, Integer.MAX_VALUE);
-        float r = slider("r", 150);
+        float baseRadius = slider("base radius");
+        float r = slider("gauss radius", 150);
         while (points.size() < count) {
-            points.add(new Point(randomGaussian() * r, randomGaussian() * r));
+            points.add(new Point(baseRadius+randomGaussian() * r,baseRadius+ randomGaussian() * r));
         }
         while (points.size() > count) {
             points.remove(points.size() - 1);
@@ -90,24 +94,29 @@ public class Chromab extends KrabApplet {
 
     class Point {
         private final int frameCreated;
-        private final PVector pos;
+        private final PVector pos, spd = new PVector();
         private final float randomWeight;
 
         Point(float x, float y) {
-            frameCreated =  frameCount;
+            frameCreated = frameCount;
             this.pos = new PVector(x, y);
             randomWeight = hash(x * y * x * y);
         }
 
         void update() {
             PVector toCenter = pos.copy().rotate(PI);
-            pos.add(toCenter.mult(slider("center force")));
+            spd.add(toCenter.copy().normalize().rotate(HALF_PI).mult(slider("side force")));
+            spd.add(toCenter.copy().normalize().mult(slider("center force")));
+            float gaussForce = slider("gauss force");
+            spd.add(randomGaussian()*gaussForce, randomGaussian()*gaussForce);
+            spd.mult(slider("drag", .95f));
+            pos.add(spd);
             float freq = slider("freq", 0.1f);
             float angleVar = slider("angle var", 1);
             float noiseAngle = noise(pos.x, pos.y, freq, angleVar, t);
             PVector noise = PVector.fromAngle(noiseAngle).mult(slider("noise mag"));
             pos.add(noise);
-            if(PVector.dist(pos, new PVector()) > max(width, height)*1.5f) {
+            if (PVector.dist(pos, new PVector()) > max(width, height) * 1.5f) {
                 pointsToRemove.add(this);
             }
         }
@@ -119,9 +128,9 @@ public class Chromab extends KrabApplet {
         public void display() {
             HSBA stroke = picker("stroke");
             pg.pushStyle();
-            pg.colorMode(HSB,1,1,1,1);
-            float fadeIn = clampNorm(frameCount, frameCreated, frameCreated+slider("fade in frames", 60));
-            pg.stroke(stroke.hue(), stroke.sat(), stroke.br(), stroke.alpha()*fadeIn);
+            pg.colorMode(HSB, 1, 1, 1, 1);
+            float fadeIn = clampNorm(frameCount, frameCreated, frameCreated + slider("fade in frames", 60));
+            pg.stroke(stroke.hue(), stroke.sat(), stroke.br(), stroke.alpha() * fadeIn);
             pg.strokeWeight(slider("weight", 1) + randomWeight * slider("weight random"));
             pg.point(pos.x, pos.y);
             pg.popStyle();

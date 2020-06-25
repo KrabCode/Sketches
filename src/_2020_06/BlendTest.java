@@ -25,6 +25,7 @@ public class BlendTest extends KrabApplet {
     public void draw() {
         pg.beginDraw();
         pg.image(gradient("background"), 0, 0);
+        pg.text(textInput("text"), width / 2f, height / 2f);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg);
