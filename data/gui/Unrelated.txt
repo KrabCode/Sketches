@@ -915,3 +915,34 @@ colors§move R§100.0§0.0§0.0
 colors§move G§100.0§0.0§0.0
 colors§move B§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§frames§759.1467§400.0
+Unrelated§clear§
+Unrelated§fade to black§6.374995§255.0
+Unrelated§multiply§0.99649894§1.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD 1§vertical§improved rgb interpolation§0.0§true§0.88499963§0.365625§0.0§1.0§0.20000023§false§0.9444444§0.375§0.0§1.0§0.50625014§false§0.6276675§0.19375§0.0§1.0§0.8375004§false§0.8333333§0.375§0.0§1.0§1.0§true§0.6709997§0.0§0.0§1.0§
+Unrelated§ADD 2§circular§rgb interpolation§0.0§true§0.5899999§0.475§0.0§1.0§0.25312448§false§5.0E-4§0.0§0.0375§1.0§1.0§true§0.99299985§0.0§0.015625§1.0§
+Unrelated§SUBTRACT 1§circular§rgb interpolation§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT 2§circular§smoothstep§0.0§true§0.99899995§0.0§0.0§1.0§1.0§true§0.99849993§0.0§0.0§1.0§
+GROUP§displace§true
+displace§time§0.50000083§0.001
+displace§time radius§0.31000105§10.0
+displace§angle offset§6.45§10.0
+displace§angle range§2.290004§100.0
+displace§noise details§300.0§1.4899439§7.908002§25.283068
+displace§noise speeds§2.0§1.0§0.5600005§0.5660002
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§false
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
