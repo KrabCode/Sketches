@@ -24,7 +24,7 @@ public class Pyramid extends KrabApplet {
         pg.background(0);
         translateToCenter(pg);
         preRotate(pg);
-        pg.strokeWeight(slider("weight"));
+        pg.strokeWeight(slider("weight", 1));
         pg.stroke(picker("stroke").clr());
         pg.fill(picker("fill").clr());
         pg.beginShape(TRIANGLE_FAN);

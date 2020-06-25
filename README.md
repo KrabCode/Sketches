@@ -46,8 +46,9 @@ In order to use the 'I' and 'K' hotkeys you must include `rec()` or `rec(pGraphi
    - Runs ffmpeg when done to save a video to out/video.
         - You'll need to download ffmpeg and put it in your classpath.
         - If you don't want to use ffmpeg and just want the images, set `FFMPEG_ENABLED` at the top of KrabApplet to false.
+   
    Pressing 'L'
-   - Stops recording manually and runs ffmpeg.
+   - Stops recording manually and runs ffmpeg if enabled.
 ### Animations and perfect loops
    KrabApplet contains a 't' variable which increments by `TWO_PI / 360` every frame, making a complete 'rotation' in 360 frames.
    - The `frameRecordingDuration` value does not affect this.

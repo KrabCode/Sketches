@@ -122,7 +122,7 @@ public class Chromab extends KrabApplet {
             pg.colorMode(HSB,1,1,1,1);
             float fadeIn = clampNorm(frameCount, frameCreated, frameCreated+slider("fade in frames", 60));
             pg.stroke(stroke.hue(), stroke.sat(), stroke.br(), stroke.alpha()*fadeIn);
-            pg.strokeWeight(slider("weight") + randomWeight * slider("weight random"));
+            pg.strokeWeight(slider("weight", 1) + randomWeight * slider("weight random"));
             pg.point(pos.x, pos.y);
             pg.popStyle();
         }

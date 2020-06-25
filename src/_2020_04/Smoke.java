@@ -73,7 +73,7 @@ public class Smoke extends KrabApplet {
             float y = lerp(slider("top Y", -buffer), slider("bottom Y", height + buffer), inorm);
             pg.stroke(lerpColor(color0.clr(), color1.clr(), inorm));
             pg.noFill();
-            pg.strokeWeight(slider("weight"));
+            pg.strokeWeight(slider("weight", 1));
             pg.beginShape();
             for (int vertexIndex = 0; vertexIndex < vertexCount; vertexIndex++) {
                 float vertexNorm = clampNorm(vertexIndex, 0, vertexCount);

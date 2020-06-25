@@ -196,14 +196,18 @@ float norm(float value, float start, float stop){
 }
 
 vec4 lerpByBlendType(vec4 colorA, vec4 colorB, float amt){
+    float mixedAlpha = mix(colorA.a, colorB.a, amt);
     if(blendType == 0){
        return mix(colorA, colorB, amt);
     }
     if(blendType == 1){
-        return vec4(iLerp(colorA.rgb, colorB.rgb, amt), mix(colorA.a, colorB.a, amt));
+        return vec4(iLerp(colorA.rgb, colorB.rgb, amt), mixedAlpha);
     }
     if(blendType == 2){
         return mix(colorA, colorB, smoothstep(0.0, 1.0, amt));
+    }
+    if(blendType == 3){
+        return vec4(hsv2rgb(lerpHSV(rgb2hsv(colorA.rgb), rgb2hsv(colorB.rgb), smoothstep(0.0, 1.0, amt))), mixedAlpha);
     }
     return vec4(0,0,0,1);
 }

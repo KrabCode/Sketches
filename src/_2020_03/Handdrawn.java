@@ -73,7 +73,7 @@ public class Handdrawn extends KrabApplet {
                     rNoiseInput + timeSpeed*sin(t)));
             float noiseOffset = (1 - 2 * noiseValue) * slider("max offset", 1);
             String type = types[floor(random * types.length)];
-            pg.strokeWeight(slider("weight"));
+            pg.strokeWeight(slider("weight", 1));
             int clr = lerpColor(picker("r0 stroke").clr(), picker("r1 stroke").clr(), rNorm);
             pg.stroke(clr);
             pg.fill(clr);
@@ -271,7 +271,7 @@ public class Handdrawn extends KrabApplet {
         pg.noFill();
         pg.colorMode(HSB, 1, 1, 1, 1);
         HSBA hsba = picker("stroke");
-        pg.strokeWeight(slider("weight"));
+        pg.strokeWeight(slider("weight", 1));
         pg.beginShape();
         for (int i = 0; i < detail; i++) {
             float in = clampNorm(i, 0, detail - 1);

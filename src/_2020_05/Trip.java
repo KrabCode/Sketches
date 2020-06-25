@@ -142,7 +142,7 @@ public class Trip extends KrabApplet {
                 alpha *= fadeOutNorm;
             }
             pg.stroke(hue, sat, br, alpha);
-            pg.strokeWeight(slider("weight") + weightOffset * slider("weight variance"));
+            pg.strokeWeight(slider("weight", 1) + weightOffset * slider("weight variance"));
         }
     }
 

@@ -44,7 +44,7 @@ public class GlowyParticles extends KrabApplet {
     private void drawPoints() {
         float count = slider("count", 60);
         float size = slider("size", 1000);
-        float baseWeight = slider("weight");
+        float baseWeight = slider("weight", 1);
         PVector time = new PVector(cos(t), sin(t));
         fadeToBlack(pg);
         blurPass(pg);

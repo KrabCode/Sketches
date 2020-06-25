@@ -48,7 +48,7 @@ public class FractalLines extends KrabApplet {
         float stepSize = slider("size", 1);
         String path = pathIterations.get(pathIterations.size()-1);
         pg.stroke(picker("stroke").clr());
-        pg.strokeWeight(slider("weight"));
+        pg.strokeWeight(slider("weight", 1));
         for (char c : path.toCharArray()) {
             if (c == 'F') {
                 pg.line(0,0,stepSize,0);
