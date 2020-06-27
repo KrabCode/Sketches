@@ -27,7 +27,6 @@ public class Cats extends KrabApplet {
     private PGraphics pg;
 
     public void settings() {
-//        fullScreen(P2D);
         size(floor(1080 * .7f), floor(1920 * .7f), P2D);
         smooth(16);
     }

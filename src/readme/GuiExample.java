@@ -28,10 +28,6 @@ public class GuiExample extends KrabApplet {
     }
 
     public void draw() {
-        hint(ENABLE_DEPTH_TEST);
-
-        ramp(g, "gradient", 4);
-
         group("transform");
         pushMatrix();
         String projection = options("perspective", "orthographic");
@@ -40,13 +36,14 @@ public class GuiExample extends KrabApplet {
         } else if (projection.equals("orthographic")) {
             ortho();
         }
+        image(gradient("background"), 0, 0);
+        hint(DISABLE_DEPTH_TEST);
         PVector translate = sliderXYZ("translate");
         PVector rotate = sliderXYZ("rotate");
         translate(width / 2f + translate.x, height / 2f + translate.y, translate.z);
         rotateX(rotate.x);
         rotateY(rotate.y);
         rotateZ(rotate.z);
-
         group("style");
         fill(picker("fill").clr());
         stroke(picker("stroke").clr());
@@ -62,7 +59,6 @@ public class GuiExample extends KrabApplet {
         popMatrix();
 
         group("text");
-        hint(DISABLE_DEPTH_TEST);
         PVector textPos = sliderXY("translate");
         fill(picker("fill").clr());
         textSize(slider("size", 64));

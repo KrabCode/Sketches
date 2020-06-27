@@ -377,3 +377,24 @@ text§fill§0.8369996§0.0§1.0§0.0§10.0
 text§size§60.14§20.0
 text§main text§Hello, world!
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§transform§true
+transform§perspective§0
+transform§background§vertical§rgb lerp§0.0§true§0.0§0.290625§0.0§1.0§1.0§true§0.6404999§1.0§0.8875§1.0§
+transform§translate§1000.0§0.0§0.0§-631.51196
+transform§rotate§10.0§4.0199995§-3.7199667§-1.9699993
+GROUP§style§true
+style§fill§0.674§0.0§0.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§13.080033§100.0
+style§no fill§true
+style§no stroke§false
+style§size§300.0§563.7798§466.88013§200.0
+GROUP§text§true
+text§translate§1000.0§-3.0§363.0
+text§fill§0.8369996§0.0§1.0§0.0§10.0
+text§size§60.14§20.0
+text§main text§Hello, world!
+STATE_END
