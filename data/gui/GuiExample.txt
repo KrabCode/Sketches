@@ -348,3 +348,32 @@ text§fill§0.8369996§0.0§1.0§0.0§10.0
 text§size§64.0§20.0
 text§main text§Hello, world!
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GuiExample§true
+GROUP§gradient§false
+gradient§vertical§0
+gradient§count§4.000005§100.0
+gradient§1§0.659§0.6§1.0§1.0§1.0
+gradient§2 §0.50333333§10.0
+gradient§2§0.0§0.0§0.8375§1.0§1.0
+gradient§3 §0.5466668§10.0
+gradient§3§0.6625001§0.26875§0.48125§1.0§1.0
+gradient§4§0.0§0.0§0.0§1.0§1.0
+GROUP§transform§true
+transform§perspective§0
+transform§translate§1000.0§0.0§0.0§-631.51196
+transform§rotate§10.0§-0.32000017§-10.58§0.0
+GROUP§style§true
+style§fill§0.674§0.0§0.0§1.0§1.0
+style§stroke§0.9760003§0.0§1.0§1.0§1.0
+style§stroke weight§13.080033§100.0
+style§no fill§true
+style§no stroke§false
+style§size§30.0§200.0§200.0§200.0
+GROUP§text§true
+text§translate§1000.0§-3.0§363.0
+text§fill§0.8369996§0.0§1.0§0.0§10.0
+text§size§60.14§20.0
+text§main text§Hello, world!
+STATE_END

@@ -33,3 +33,9 @@ UNDO
 GROUP§BlendTest§true
 BlendTest§background§vertical§rgb lerp§0.0§true§0.6045§1.0§1.0§1.0§1.0§true§0.6245001§0.0§0.0§1.0§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§BlendTest§true
+BlendTest§background§vertical§rgb lerp§0.0§true§0.6045§0.375§1.0§1.0§1.0§true§0.6245001§0.0§0.0§1.0§
+BlendTest§text§
+STATE_END

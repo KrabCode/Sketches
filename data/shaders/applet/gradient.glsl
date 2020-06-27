@@ -204,10 +204,10 @@ vec4 lerpByBlendType(vec4 colorA, vec4 colorB, float amt){
         return vec4(iLerp(colorA.rgb, colorB.rgb, amt), mixedAlpha);
     }
     if(blendType == 2){
-        return mix(colorA, colorB, smoothstep(0.0, 1.0, amt));
+        return vec4(hsv2rgb(lerpHSV(rgb2hsv(colorA.rgb), rgb2hsv(colorB.rgb), smoothstep(0.0, 1.0, amt))), mixedAlpha);
     }
     if(blendType == 3){
-        return vec4(hsv2rgb(lerpHSV(rgb2hsv(colorA.rgb), rgb2hsv(colorB.rgb), smoothstep(0.0, 1.0, amt))), mixedAlpha);
+        return mix(colorA, colorB, smoothstep(0.0, 1.0, amt));
     }
     return vec4(0,0,0,1);
 }

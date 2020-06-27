@@ -130,7 +130,7 @@ public abstract class KrabApplet extends PApplet {
     private boolean verticalOverlayVisible;
     private boolean pickerOverlayVisible;
     private boolean zOverlayVisible;
-    private Element overlayOwner = null; // do not assign directly!
+    private Element overlayOwner = null;
     private float underlineTrayAnimationStarted = -UNDERLINE_TRAY_ANIMATION_DURATION;
     private float undoRotationStarted = -MENU_ROTATION_DURATION;
     private float redoRotationStarted = -MENU_ROTATION_DURATION;
@@ -143,6 +143,10 @@ public abstract class KrabApplet extends PApplet {
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
     private boolean keyboardLockedByTextEditor = false;
+    private final int trayHideDuration = 120;
+    private final int trayHideDelay = 180;
+    private int trayHideStarted = -trayHideDuration;
+    boolean mouseWasOutsideTray = false;
 
     // GUI INTERFACE
 
@@ -424,7 +428,7 @@ public abstract class KrabApplet extends PApplet {
 
     private void updateTray() {
         pushMatrix();
-//        updateTrayHide();
+        updateTrayHide();
         updateTrayBackground();
         updateMenuButtons();
         updateGroupsAndTheirElements();
@@ -432,16 +436,17 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
-    //TODO pretty hide animation
-    float hideTrayOffset = 0;
     private void updateTrayHide() {
-        if(trayVisible && isMouseOutsideTray()) {
-            hideTrayOffset -= 3;
-        }else {
-            hideTrayOffset = 0;
+        if (trayVisible && isMouseOutsideVisibleTray() && !mouseWasOutsideTray) {
+            trayHideStarted = frameCount;
         }
-        hideTrayOffset = max(hideTrayOffset, -trayWidth);
-        translate(hideTrayOffset, 0);
+        if (isMouseOutsideVisibleTray()) {
+            float hideAnimation = easedAnimation(trayHideStarted + trayHideDelay, trayHideDuration, 3f);
+            translate(-trayWidth * hideAnimation, 0);
+        } else {
+            trayHideStarted = frameCount + trayHideDuration + trayHideDelay;
+        }
+        mouseWasOutsideTray = isMouseOutsideVisibleTray();
     }
 
     // GENERAL UTILS
@@ -452,12 +457,12 @@ public abstract class KrabApplet extends PApplet {
     public static void println(String... args) {
         Object[] line = new Object[args.length];
         line[0] = getTime();
-        System.arraycopy(args, 0, line, 1, args.length-1);
+        System.arraycopy(args, 0, line, 1, args.length - 1);
         PApplet.println(line);
     }
 
     private static String getTime() {
-        return nf(hour(),2,0) + ":" + nf(minute(),2,0) + ":" + nf(second(), 2, 0)+ "\t";
+        return nf(hour(), 2, 0) + ":" + nf(minute(), 2, 0) + ":" + nf(second(), 2, 0) + "\t";
     }
 
     protected void lights(PGraphics pg) {
@@ -502,10 +507,10 @@ public abstract class KrabApplet extends PApplet {
         pg.colorMode(HSB, 255, 255, 255, 255);
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
-            pg.noStroke();
-            pg.fill(255, slider("fade to black", 0, 255, 10));
-            pg.rectMode(CENTER);
-            pg.rect(0, 0, width * 3, height * 3);
+        pg.noStroke();
+        pg.fill(255, slider("fade to black", 0, 255, 10));
+        pg.rectMode(CENTER);
+        pg.rect(0, 0, width * 3, height * 3);
         pg.hint(ENABLE_DEPTH_TEST);
         pg.popStyle();
     }
@@ -849,6 +854,11 @@ public abstract class KrabApplet extends PApplet {
         return constrain(norm(x, min, max), 0, 1);
     }
 
+    @SuppressWarnings("unused")
+    protected float clampMap(float x, float xMin, float xMax, float min, float max) {
+        return constrain(map(x, xMin, xMax, min, max), min, max);
+    }
+
     /**
      * Returns the angular diameter of a circle with radius 'r' on the edge of a circle with radius 'size'.
      *
@@ -1096,7 +1106,7 @@ public abstract class KrabApplet extends PApplet {
     // GUI UTILS
 
     private void updateMouseState() {
-        mousePressedOutsideGui = mousePressed && isMouseOutsideTray() && (!trayVisible || !overlayVisible);
+        mousePressedOutsideGui = mousePressed && isMouseOutsideVisibleTray() && (!trayVisible || !overlayVisible);
     }
 
     private void guiSetup(boolean defaultVisibility) {
@@ -1113,15 +1123,12 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateScrolling() {
-        if (!(trayVisible && isMousePressedInsideRect(0, 0, trayWidth, height))) {
-            return;
-        }
         scrollOffsetHistory.add(trayScrollOffset);
         int scrollOffsetHistorySize = 3;
         while (scrollOffsetHistory.size() > scrollOffsetHistorySize) {
             scrollOffsetHistory.remove(0);
         }
-        if (abs(pmouseY - mouseY) > 2) {
+        if (trayVisible && isMousePressedInsideRect(0, 0, trayWidth, height) && abs(pmouseY - mouseY) > 2) {
             trayScrollOffset += mouseY - pmouseY;
         }
     }
@@ -1517,11 +1524,15 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected boolean mouseJustPressedOutsideTray() {
-        return !pMousePressed && mousePressed && isMouseOutsideTray();
+        return !pMousePressed && mousePressed && isMouseOutsideVisibleTray();
+    }
+
+    private boolean isMouseOutsideVisibleTray() {
+        return !trayVisible || !isPointInRect(mouseX, mouseY, 0, 0, trayWidth, height);
     }
 
     private boolean isMouseOutsideTray() {
-        return !trayVisible || !isPointInRect(mouseX, mouseY, 0, 0, trayWidth, height);
+        return !isPointInRect(mouseX, mouseY, 0, 0, trayWidth, height);
     }
 
     @SuppressWarnings("SameParameterValue")
@@ -1535,10 +1546,18 @@ public abstract class KrabApplet extends PApplet {
 
     public void mouseWheel(MouseEvent event) {
         float direction = event.getCount();
-        if (direction < 0) {
-            actions.add(ACTION_PRECISION_ZOOM_IN);
-        } else if (direction > 0) {
-            actions.add(ACTION_PRECISION_ZOOM_OUT);
+        if (isMouseOutsideTray()) {
+            if (direction < 0) {
+                actions.add(ACTION_PRECISION_ZOOM_IN);
+            } else if (direction > 0) {
+                actions.add(ACTION_PRECISION_ZOOM_OUT);
+            }
+        } else {
+            if (direction < 0) {
+                trayScrollOffset -= 100;
+            } else if (direction > 0) {
+                trayScrollOffset += 100;
+            }
         }
     }
 
@@ -1917,12 +1936,12 @@ public abstract class KrabApplet extends PApplet {
     protected void fbmDisplacePass(PGraphics pg) {
         group("displace");
         String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";
-        uniform(shaderPath).set("time", t*slider("time", 1));
+        uniform(shaderPath).set("time", t * slider("time", 1));
         uniform(shaderPath).set("timeSpeed", slider("time radius", 0.2f));
         uniform(shaderPath).set("angleOffset", slider("angle offset", 1));
         uniform(shaderPath).set("angleRange", slider("angle range", 2));
-        uniform(shaderPath).set("freqs",sliderXYZ("noise details", 0.5f,3,20));
-        uniform(shaderPath).set("amps",sliderXYZ("noise speeds", 1, .8f, .6f));
+        uniform(shaderPath).set("freqs", sliderXYZ("noise details", 0.5f, 3, 20));
+        uniform(shaderPath).set("amps", sliderXYZ("noise speeds", 1, .8f, .6f));
         hotFilter(shaderPath, pg);
         resetGroup();
     }
@@ -2539,7 +2558,7 @@ public abstract class KrabApplet extends PApplet {
             noStroke();
             fill(0, BACKGROUND_ALPHA);
             rectMode(CORNER);
-            rect(trayWidth, height - overlayHeight, width - trayWidth, overlayHeight);
+            rect(0, height - overlayHeight, width, overlayHeight);
             float x = width / 2f;
             float y = height - overlayHeight / 2;
             fill(GRAYSCALE_SELECTED);
@@ -2607,7 +2626,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         protected float updateInfiniteSlider(float precision, boolean horizontal, boolean reversed) {
-            if (mousePressed && isMouseOutsideTray()) {
+            if (mousePressed && isMouseOutsideVisibleTray()) {
                 float screenSpaceDelta = horizontal ? (pmouseX - mouseX) : (pmouseY - mouseY);
                 if (reversed) {
                     screenSpaceDelta *= -1;
@@ -2655,9 +2674,7 @@ public abstract class KrabApplet extends PApplet {
             rectMode(CENTER);
             float xOffset = 0;
             if (cutout) {
-                if (horizontal && trayVisible) {
-                    xOffset = trayWidth;
-                } else if (!horizontal) {
+                if (!horizontal) {
                     xOffset = h;
                 }
             }
@@ -3549,8 +3566,8 @@ public abstract class KrabApplet extends PApplet {
             pushStyle();
             fill(0, 1);
             text(text, x + shadowOffset, y + shadowOffset);
-            float changeAnimation = clampNorm(frameCount, lastChanged,lastChanged+60);
-            fill(lerp(GRAYSCALE_DARK, GRAYSCALE_SELECTED, 1-changeAnimation), 1);
+            float changeAnimation = clampNorm(frameCount, lastChanged, lastChanged + 60);
+            fill(lerp(GRAYSCALE_DARK, GRAYSCALE_SELECTED, 1 - changeAnimation), 1);
             text(text, x, y);
             popStyle();
         }
