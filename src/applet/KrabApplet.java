@@ -19,6 +19,7 @@ import static java.lang.System.currentTimeMillis;
  * See the GuiManual in readme for documentation.
  */
 
+//TODO make rec() take intended frame count as param
 //TODO migrate saving gui data from custom silly format to json
 public abstract class KrabApplet extends PApplet {
     protected static Boolean FFMPEG_ENABLED = true;
@@ -1935,6 +1936,9 @@ public abstract class KrabApplet extends PApplet {
 
     protected void fbmDisplacePass(PGraphics pg) {
         group("displace");
+        if(toggle("skip")) {
+            return;
+        }
         String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";
         uniform(shaderPath).set("time", t * slider("time", 1));
         uniform(shaderPath).set("timeSpeed", slider("time radius", 0.2f));
@@ -2147,8 +2151,8 @@ public abstract class KrabApplet extends PApplet {
             } catch (Exception ex) {
                 lastKnownUncompilable = lastModified;
                 println("❌" + (fragPath != null ? " " + fragFile.getName() : ""),
-                        (vertPath != null ? " " + vertFile.getName() : ""),
-                        ex.getMessage());
+                        (vertPath != null ? " " + vertFile.getName() : ""));
+                println(ex.getMessage());
             }
         }
     }

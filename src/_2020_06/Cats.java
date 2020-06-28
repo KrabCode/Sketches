@@ -13,9 +13,14 @@ public class Cats extends KrabApplet {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 
-    float imageScale = 1;
+    private float imageScale = 1;
+    private final int maxCatCount = 12;
+    private final int maxChunkCount = 1000;
     private float time;
     private final ArrayList<Cat> cats = new ArrayList<Cat>();
+    private final ArrayList<Cat> catsToRemove = new ArrayList<Cat>();
+    private final ArrayList<Chunk> chunks = new ArrayList<Chunk>();
+    private final ArrayList<Chunk> chunksToRemove = new ArrayList<Chunk>();
     private Cat held = null;
     private PImage sticksIdle, sticksHeld, catHeld;
     private PImage[] catDown, catRight, catUp;
@@ -35,7 +40,7 @@ public class Cats extends KrabApplet {
         surface.setLocation(displayWidth - floor(1080 * .7f) - 20, 20);
         loadImages();
         pg = createGraphics(width, height, P2D);
-        generateCats();
+        updateCatCount();
         pg.beginDraw();
         pg.colorMode(HSB, 1, 1, 1, 1);
         pg.background(0);
@@ -50,11 +55,27 @@ public class Cats extends KrabApplet {
         pg.beginDraw();
         pg.background(0);
         pg.imageMode(CENTER);
+        updateChunkCount();
+        updateChunks();
+        updateCatCount();
         updateWalkingCats();
         drawCursor();
         updateHeldCat();
         pg.endDraw();
         image(pg, 0, 0);
+        rec(pg);
+        gui();
+    }
+
+
+    private void updateChunks() {
+        group("chunk");
+        for(Chunk c : chunks) {
+            c.update();
+        }
+        chunks.removeAll(chunksToRemove);
+        chunksToRemove.clear();
+        resetGroup();
     }
 
     public void mouseReleased() {
@@ -103,11 +124,19 @@ public class Cats extends KrabApplet {
         pg.popStyle();
     }
 
-    void generateCats() {
-        cats.clear();
-        int catCount = 12;
-        for (int i = 0; i < catCount; i++) {
+    void updateCatCount() {
+        while (maxCatCount > cats.size()) {
             cats.add(new Cat());
+        }
+    }
+
+    void updateChunkCount() {
+        if(chunks.size() > maxChunkCount) {
+            for (int i = 0; i < chunks.size()-maxChunkCount; i++) {
+                if(chunks.get(i).fadeOutStarted == -1) {
+                    chunks.get(i).fadeOutStarted = frameCount;
+                }
+            }
         }
     }
 
@@ -117,9 +146,13 @@ public class Cats extends KrabApplet {
                 c.update();
             }
         }
+        cats.removeAll(catsToRemove);
+        catsToRemove.clear();
     }
 
     class Cat {
+        private int frameBorn = frameCount;
+        private int fadeInDuration = 60;
         private PVector pos = new PVector(width / 2f + random(-10, 10), height / 2f + random(-10, 10));
         private int direction = floor(random(4));
         private float size = 62 * imageScale;
@@ -188,8 +221,9 @@ public class Cats extends KrabApplet {
             pg.pushStyle();
             int frame = sin(time * 8 + timeOffset) > 0 ? 0 : 1;
             boolean flipHorizontally = direction == 2 && !thisHeld();
+            float alpha = constrain(map(frameCount, frameBorn, frameBorn+fadeInDuration, 0, 1), 0, 1);
             PImage img = getImageByState(frame);
-            pg.tint(hue, sat, br);
+            pg.tint(hue, sat, br, alpha);
             drawCatAtPos(img, flipHorizontally);
             drawCatWrapAround(img, flipHorizontally);
             pg.popStyle();
@@ -197,9 +231,11 @@ public class Cats extends KrabApplet {
 
         private void drawCatAtPos(PImage img, boolean flipHorizontally) {
             pg.pushMatrix();
+            pg.pushStyle();
             pg.translate(pos.x, pos.y);
             flipIfNeeded(flipHorizontally);
             pg.image(img, 0, 0, size, size);
+            pg.popStyle();
             pg.popMatrix();
         }
 
@@ -260,24 +296,38 @@ public class Cats extends KrabApplet {
             boolean d2 = dist(mouseX - width, mouseY, pos.x, pos.y) < interactionDist;
             boolean d3 = dist(mouseX, mouseY - height, pos.x, pos.y) < interactionDist;
             boolean mouseInInteractionDist = d || d0 || d1 || d2 || d3;
-            if (held == null && mousePressed && mouseInInteractionDist) {
-                held = this;
+            if (mouseButton == LEFT) {
+                if (held == null && mousePressed && mouseInInteractionDist) {
+                    held = this;
+                }
+                if (held != null && held.equals(this)) {
+                    if (d0) {
+                        pos.x -= width;
+                    }
+                    if (d1) {
+                        pos.y -= height;
+                    }
+                    if (d2) {
+                        pos.x += width;
+                    }
+                    if (d3) {
+                        pos.y += height;
+                    }
+                    pos.x = lerp(pos.x, mouseX, .5f);
+                    pos.y = lerp(pos.y, mouseY, .5f);
+                }
             }
-            if (held != null && held.equals(this)) {
-                if (d0) {
-                    pos.x -= width;
-                }
-                if (d1) {
-                    pos.y -= height;
-                }
-                if (d2) {
-                    pos.x += width;
-                }
-                if (d3) {
-                    pos.y += height;
-                }
-                pos.x = lerp(pos.x, mouseX, .5f);
-                pos.y = lerp(pos.y, mouseY, .5f);
+
+            if (mouseButton == RIGHT && mouseInInteractionDist) {
+                explode();
+                catsToRemove.add(this);
+            }
+        }
+
+        private void explode() {
+            int chunkCount = 30;
+            for(int i = 0; i < chunkCount; i++) {
+                chunks.add(new Chunk(pos));
             }
         }
 
@@ -293,6 +343,44 @@ public class Cats extends KrabApplet {
                     pos.add(fromOtherToThis.normalize().mult(repulsion));
                 }
             }
+        }
+    }
+
+    class Chunk {
+        PVector pos, spd;
+        float size = random(2, 20);
+        int shape = floor(random(2));
+        float sat = random(-.2f,.2f);
+        int fadeOutStarted = -1;
+        int fadeOutDuration = 60;
+
+        public Chunk(PVector pos) {
+            this.pos = pos.copy();
+            spd = PVector.fromAngle(random(TAU*2)).mult(randomGaussian()*2);
+        }
+
+        public void update() {
+            float fadeOut = constrain(norm(frameCount, fadeOutStarted, fadeOutStarted + fadeOutDuration), 0, 1);
+            if(fadeOutStarted == -1) {
+                fadeOut = 0;
+            }else if(fadeOut == 1) {
+                chunksToRemove.add(this);
+            }
+            float drag = slider("drag", .95f);
+            pg.pushMatrix();
+            pos.add(spd);
+            spd.mult(drag);
+            pg.noStroke();
+            pg.fill(0, .8f+sat, .6f, 1 - fadeOut);
+            if(shape == 0) {
+                pg.ellipse(pos.x, pos.y, size, size);
+            }
+            if(shape == 1) {
+                pg.translate(pos.x, pos.y);
+                pg.rotate(spd.heading());
+                pg.rect(0,0, size, size);
+            }
+            pg.popMatrix();
         }
     }
 }

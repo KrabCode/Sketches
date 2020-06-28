@@ -140,3 +140,38 @@ UNDO
 GROUP§Cats§true
 Cats§fade to black§255.0§2550.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§start mag§1.309521§10.0
+GROUP§chunk§true
+chunk§drag§0.95§10.0
+chunk§size§19.920631§20.0
+chunk§fill§0.0§0.0§0.5§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§start mag§1.3227484§10.0
+GROUP§chunk§true
+chunk§drag§0.95§10.0
+chunk§size§19.920631§20.0
+chunk§fill§0.0§1.0§0.875§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+Cats§start mag§5.5555525§100.0
+GROUP§chunk§true
+chunk§drag§0.95§10.0
+chunk§size§19.920631§20.0
+chunk§fill§0.0§1.0§0.875§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cats§true
+GROUP§chunk§true
+chunk§drag§0.95§10.0
+chunk§size§15.0§20.0
+chunk§fill§0.0§0.0§0.5§1.0§1.0
+STATE_END

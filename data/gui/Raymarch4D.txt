@@ -1,0 +1,187 @@
+STATE_BEGIN
+UNDO
+STATE_END
+STATE_BEGIN
+UNDO
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch4D§true
+Raymarch4D§fade to black§3.369995§255.0
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§0.09499881§1.0
+GROUP§displace§false
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§2.0§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§2.0§1.0§0.8§0.6
+GROUP§scale§false
+scale§center§100.0§-0.2999965§-0.9000036
+scale§RGB scales§0.1§1.0006994§1.0006994§1.0006994
+scale§common scale§1.0006994§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.10000001§1.0§0.99367917§0.9813498
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch4D§true
+Raymarch4D§frames§1800.9988§100.0
+Raymarch4D§fade to black§32.44§255.0
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.07999992§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§9.989754E-4§1.0
+GROUP§displace§true
+displace§time§0.090000086§10.0
+displace§time radius§0.27000028§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§3.9899879§10.0
+displace§noise details§300.0§0.5§2.7779984§17.05103
+displace§noise speeds§2.0§0.004003532§1.8300489E-7§-0.0019998562
+GROUP§scale§true
+scale§center§100.0§-0.2999965§-0.9000036
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§0.1§0.9756005§0.9918015§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch4D§true
+Raymarch4D§frames§950.9994§1000.0
+Raymarch4D§fade to black§1.5849941§255.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.07999992§10.0
+chromatic ab.§outer edge§1.9099994§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§displace§false
+displace§time§0.35000035§10.0
+displace§time radius§0.27000028§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§3.9899879§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§2.0§0.48400077§0.3320014§0.36000007
+GROUP§scale§true
+scale§center§100.0§-0.2999965§-0.9000036
+scale§RGB scales§0.1§1.0000004§1.0000004§1.0000004
+scale§common scale§1.0000004§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§0.9174001§0.96480024§0.98450005
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch4D§true
+Raymarch4D§frames§950.9994§1000.0
+Raymarch4D§fade to black§1.5849941§255.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.07999992§10.0
+chromatic ab.§outer edge§1.9099994§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§displace§false
+displace§time§0.35000035§10.0
+displace§time radius§0.27000028§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§3.9899879§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§2.0§0.48400077§0.3320014§0.36000007
+GROUP§scale§true
+scale§center§100.0§-0.2999965§-0.9000036
+scale§RGB scales§0.1§1.0000004§1.0000004§1.0000004
+scale§common scale§1.0000004§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§0.9174001§0.96480024§0.98450005
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch4D§true
+Raymarch4D§frames§950.9994§1000.0
+Raymarch4D§fade to black§10.710001§255.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§-0.12000007§10.0
+chromatic ab.§outer edge§0.47000057§10.0
+chromatic ab.§intensity§0.070000045§10.0
+GROUP§displace§true
+displace§skip§false
+displace§time§0.35000035§10.0
+displace§time radius§0.16000026§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§4.319989§10.0
+displace§noise details§3.0§0.5120001§3.006§20.0
+displace§noise speeds§2.0§0.7280006§0.69600177§0.39400014
+GROUP§scale§false
+scale§center§100.0§-0.2999965§-0.9000036
+scale§RGB scales§0.1§1.0000004§1.0000004§1.0000004
+scale§common scale§1.0000004§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch4D§true
+Raymarch4D§frames§950.9994§1000.0
+Raymarch4D§fade to black§18.615004§255.0
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§-0.12000007§10.0
+chromatic ab.§outer edge§0.47000057§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.35000035§10.0
+displace§time radius§0.16000026§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§4.319989§10.0
+displace§noise details§3.0§0.5120001§3.006§20.0
+displace§noise speeds§2.0§0.7280006§0.69600177§0.39400014
+GROUP§scale§false
+scale§center§100.0§-0.2999965§-0.9000036
+scale§RGB scales§0.1§0.9983§0.9983§0.9983
+scale§common scale§0.9983§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
