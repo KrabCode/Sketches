@@ -3501,6 +3501,10 @@ public abstract class KrabApplet extends PApplet {
             alpha = val;
             enforceConstraints();
         }
+
+        public HSBA copy() {
+            return new HSBA(hue, sat, br, alpha);
+        }
     }
 
     class GradientEditor extends Element {
