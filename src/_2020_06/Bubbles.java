@@ -11,7 +11,10 @@ public class Bubbles extends KrabApplet {
     private PGraphics pg;
     private ArrayList<Bubble> bubbles = new ArrayList<>();
     private ArrayList<Bubble> bubbleToRemove = new ArrayList<>();
+    PVector center;
     String bubbleShader = "shaders/_2020_06/Bubbles/bubbles.glsl";;
+
+
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -27,6 +30,7 @@ public class Bubbles extends KrabApplet {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);
         }
+        center = new PVector(width, height).mult(.5f);
     }
 
     public void draw() {
@@ -76,6 +80,13 @@ public class Bubbles extends KrabApplet {
             float fadeInDuration = slider("fade in", 0.2f);
             float fadeOutDuration = slider("fade out", 0.2f);
 
+            PVector toCenter = PVector.sub(center, pos).normalize();
+            spd.add(toCenter.copy().mult(slider("force to center")));
+            spd.add(toCenter.copy().rotate(HALF_PI).mult(slider("force sideways")));
+            spd.add(sliderXY("force constant"));
+            spd.mult(slider("drag", .95f));
+            pos.add(spd);
+
             float alpha = 1;
             if (lifeNorm < fadeInDuration) {
                 alpha = clampNorm(lifeNorm, 0, fadeInDuration);
@@ -83,7 +94,6 @@ public class Bubbles extends KrabApplet {
             if (lifeNorm > 1 - fadeOutDuration) {
                 alpha = 1 - clampNorm(lifeNorm, 1 - fadeOutDuration, 1);
             }
-
             float size = slider("size", 2) + randomSize * slider("random size");
 
             pg.pushStyle();

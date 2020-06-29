@@ -19,8 +19,9 @@ import static java.lang.System.currentTimeMillis;
  * See the GuiManual in readme for documentation.
  */
 
-//TODO make rec() take intended frame count as param
-//TODO migrate saving gui data from custom silly format to json
+// TODO fade to black graph, fade slower when bright, fade faster near black
+// TODO make rec() take intended frame count as param
+// TODO migrate saving gui data from custom silly format to json
 public abstract class KrabApplet extends PApplet {
     protected static Boolean FFMPEG_ENABLED = true;
     private static final String STATE_BEGIN = "STATE_BEGIN";
