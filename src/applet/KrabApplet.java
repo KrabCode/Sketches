@@ -1946,7 +1946,7 @@ public abstract class KrabApplet extends PApplet {
         uniform(shaderPath).set("angleOffset", slider("angle offset", 1));
         uniform(shaderPath).set("angleRange", slider("angle range", 2));
         uniform(shaderPath).set("freqs", sliderXYZ("noise details", 0.5f, 3, 20));
-        uniform(shaderPath).set("amps", sliderXYZ("noise speeds", 1, .8f, .6f));
+        uniform(shaderPath).set("amps", sliderXYZ("noise speeds", 0));
         hotFilter(shaderPath, pg);
         resetGroup();
     }

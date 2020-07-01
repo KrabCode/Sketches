@@ -946,3 +946,120 @@ colors§move R§100.0§0.0§0.0
 colors§move G§100.0§0.0§0.0
 colors§move B§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§frames§759.1467§400.0
+Unrelated§clear§
+Unrelated§fade to black§6.374995§255.0
+Unrelated§multiply§0.99649894§1.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb lerp§0.0§true§0.20550014§0.290625§0.1625§0.37500015§0.09375006§false§0.0040556043§0.42857143§0.05490196§1.0§0.18437497§false§0.8875§0.4§0.039215688§1.0§0.2687499§false§0.7313334§1.0§0.023529412§1.0§0.5406252§false§0.7343334§0.7§0.0875§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Unrelated§SUBTRACT§circular§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.2031245§false§0.0§0.0§0.0§1.0§1.0§true§0.99349993§0.0§0.065625§1.0§
+GROUP§displace§true
+displace§skip§false
+displace§time§0.50000083§0.001
+displace§time radius§0.31000105§10.0
+displace§angle offset§6.45§10.0
+displace§angle range§2.290004§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.8799999§0.45999992§0.29000002
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§false
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§frames§759.1467§400.0
+Unrelated§clear§
+Unrelated§fade to black§6.374995§255.0
+Unrelated§multiply§0.99649894§1.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§circular§rgb lerp§0.0§true§0.20550014§0.290625§0.1625§0.37500015§0.09375006§false§0.0040556043§0.42857143§0.05490196§1.0§0.18437497§false§0.8875§0.4§0.039215688§1.0§0.2687499§false§0.7313334§1.0§0.023529412§1.0§0.5406252§false§0.7343334§0.7§0.0875§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GROUP§displace§true
+displace§skip§false
+displace§time§0.50000083§0.001
+displace§time radius§0.31000105§10.0
+displace§angle offset§6.45§10.0
+displace§angle range§2.9900045§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.8799999§0.89999974§0.38
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§false
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§frames§759.1467§400.0
+Unrelated§clear§
+Unrelated§fade to black§5.864992§255.0
+Unrelated§multiply§1.0§10.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§hsv lerp§0.0§true§0.64550024§0.403125§0.021875§1.0§1.0§true§0.8315002§0.378125§0.040625§1.0§
+GROUP§displace§false
+displace§skip§false
+displace§time§0.4999997§0.001
+displace§time radius§0.1600008§10.0
+displace§angle offset§4.0900025§100.0
+displace§angle range§2.6900058§100.0
+displace§noise details§30.0§0.07399988§1.2060032§8.048003
+displace§noise speeds§10.0§0.37999997§0.21999937§0.15999995
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§false
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Unrelated§true
+Unrelated§frames§759.02704§400.0
+Unrelated§clear§
+Unrelated§fade to black§2.294991§255.0
+Unrelated§multiply§0.99§10.0
+Unrelated§translate§100.0§0.0§0.0
+Unrelated§ADD§vertical§hsv lerp§0.0§true§0.64550024§0.0§0.24375§1.0§1.0§true§0.8315002§1.0§0.0§1.0§
+GROUP§displace§false
+displace§skip§false
+displace§time§0.4999997§0.001
+displace§time radius§0.1600008§10.0
+displace§angle offset§18.190002§100.0
+displace§angle range§3.6900067§100.0
+displace§noise details§30.0§0.07399988§1.2060032§8.048003
+displace§noise speeds§10.0§0.37999997§0.21999937§0.15999995
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§false
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
