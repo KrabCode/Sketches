@@ -145,9 +145,8 @@ public abstract class KrabApplet extends PApplet {
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
     private boolean keyboardLockedByTextEditor = false;
-    private final int trayHideDuration = 120;
-    private final int trayHideDelay = 180;
-    private int trayHideStarted = -trayHideDuration;
+    private final int autoTrayHideDuration = 120;
+    private int autoTrayHideStarted = -autoTrayHideDuration;
     boolean mouseWasOutsideTray = false;
 
     // GUI INTERFACE
@@ -430,7 +429,7 @@ public abstract class KrabApplet extends PApplet {
 
     private void updateTray() {
         pushMatrix();
-        updateTrayHide();
+        updateAutomaticTrayHide();
         updateTrayBackground();
         updateMenuButtons();
         updateGroupsAndTheirElements();
@@ -438,15 +437,16 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
-    private void updateTrayHide() {
+    private void updateAutomaticTrayHide() {
         if (trayVisible && isMouseOutsideVisibleTray() && !mouseWasOutsideTray) {
-            trayHideStarted = frameCount;
+            autoTrayHideStarted = frameCount;
         }
+        int autoTrayHideDelay = 180;
         if (isMouseOutsideVisibleTray()) {
-            float hideAnimation = easedAnimation(trayHideStarted + trayHideDelay, trayHideDuration, 3f);
+            float hideAnimation = easedAnimation(autoTrayHideStarted + autoTrayHideDelay, autoTrayHideDuration, 3f);
             translate(-trayWidth * hideAnimation, 0);
         } else {
-            trayHideStarted = frameCount + trayHideDuration + trayHideDelay;
+            autoTrayHideStarted = frameCount + autoTrayHideDuration + autoTrayHideDelay;
         }
         mouseWasOutsideTray = isMouseOutsideVisibleTray();
     }
@@ -1937,7 +1937,7 @@ public abstract class KrabApplet extends PApplet {
 
     protected void fbmDisplacePass(PGraphics pg) {
         group("displace");
-        if(toggle("skip")) {
+        if (toggle("skip")) {
             return;
         }
         String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";

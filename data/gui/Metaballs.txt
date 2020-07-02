@@ -1,0 +1,340 @@
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Metaballs§ball count§1150.9988§3000.0
+Metaballs§freq§100.0§2.6839995§1.2915909
+Metaballs§amp§30.0§300.0§300.0
+Metaballs§max angle§27.403194§100.0
+Metaballs§time§0.13999972§10.0
+Metaballs§stroke§0.0035§0.0§1.0§0.79999995§1.0
+Metaballs§weight§3.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Metaballs§ball count§1150.9988§3000.0
+Metaballs§freq§100.0§0.9839996§0.6915909
+Metaballs§amp§30.0§300.0§300.0
+Metaballs§max angle§117.9032§1000.0
+Metaballs§time§0.13999972§10.0
+Metaballs§stroke§0.0035§0.0§1.0§0.79999995§1.0
+Metaballs§weight§3.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Metaballs§ball count§1150.9988§3000.0
+Metaballs§freq§100.0§0.9839996§0.6915909
+Metaballs§amp§30.0§300.0§300.0
+Metaballs§max angle§117.9032§1000.0
+Metaballs§time§0.13999972§10.0
+Metaballs§stroke§0.0035§0.0§1.0§0.79999995§1.0
+Metaballs§weight§3.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GROUP§lissajous§true
+lissajous§ball count§11.002912§400.0
+lissajous§freq§0.1§0.14789985§0.169592
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§-0.37685966§1000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.184375§false§0.9975§0.0§1.0§1.0§0.24062502§false§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GROUP§lissajous§true
+lissajous§ball count§11.002912§400.0
+lissajous§freq§0.1§0.14789985§0.1768921
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§-0.37685966§1000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.184375§false§0.9975§0.0§1.0§1.0§0.24062502§false§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GROUP§lissajous§true
+lissajous§ball count§682.0006§400.0
+lissajous§freq§0.1§0.14789985§0.1768921
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§-0.37685966§1000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.184375§false§0.9975§0.0§1.0§1.0§0.24062502§false§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GROUP§lissajous§true
+lissajous§ball count§682.0006§400.0
+lissajous§freq§0.1§0.14789985§0.1768921
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§319.62317§10000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.184375§false§0.9975§0.0§1.0§1.0§0.24062502§false§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+GROUP§lissajous§true
+lissajous§ball count§250.00882§40.0
+lissajous§freq§1.0§0.05689973§0.039992053
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§319.62317§10000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.06250003§false§0.9975§0.0§1.0§1.0§0.075000055§false§0.0§0.0§0.0§1.0§0.13437504§false§0.0§0.0§0.609375§1.0§0.28750014§false§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§0.0§25.5
+GROUP§lissajous§true
+lissajous§ball count§200.00537§400.0
+lissajous§freq§10.0§0.04389903§0.1629916
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§1189.6232§10000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.0§0.26875§1.0§1.0§0.050000384§false§0.019499818§0.55625§1.0§1.0§0.1375§false§0.97389525§1.0§0.525§1.0§0.19999984§false§0.57850015§1.0§0.653125§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+GROUP§lissajous§true
+lissajous§ball count§112.0§4000.0
+lissajous§freq§10.0§0.08389879§0.02299208
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§244.62317§1000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§1.0§1.0§0.031250007§false§0.07049983§0.55625§1.0§1.0§0.07499997§false§0.013395061§1.0§0.525§1.0§0.51562494§false§0.019623185§1.0§0.0§0.0§0.77500015§false§0.7365§0.515625§0.0§0.0§1.0§true§0.7310001§1.0§0.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§1.1729984§25.5
+GROUP§lissajous§false
+lissajous§ball count§112.0§4000.0
+lissajous§freq§10.0§0.08389879§0.02299208
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§244.62317§1000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§1.0§1.0§0.031250007§false§0.07049983§0.55625§1.0§1.0§0.14999995§false§0.013395061§1.0§0.51875§1.0§1.0§true§0.7310001§1.0§0.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§6.6809983§25.5
+GROUP§lissajous§false
+lissajous§ball count§112.0§4000.0
+lissajous§freq§10.0§0.08389879§0.02299208
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§244.62317§1000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§1.0§1.0§0.031250007§false§0.07049983§0.55625§1.0§1.0§0.22500005§false§0.013395061§1.0§0.51875§1.0§1.0§true§0.7310001§1.0§0.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§3.8249984§25.5
+GROUP§lissajous§true
+lissajous§ball count§112.0§4000.0
+lissajous§freq§1.0§0.123898804§0.10299214
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§5121.623§10000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§1.0§1.0§0.031250007§false§0.07049983§0.55625§1.0§1.0§0.22500005§false§0.013395061§1.0§0.51875§1.0§1.0§true§0.7310001§1.0§0.0§0.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§14.407508§255.0
+GROUP§lissajous§false
+lissajous§ball count§112.0§4000.0
+lissajous§freq§1.0§0.123898804§0.10299214
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§5121.623§10000.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§0.0§1.0§0.365625§false§0.002136757§1.0§0.0§1.0§0.49374977§false§0.013895061§0.0§1.0§1.0§0.7031249§false§0.0§0.0§0.0§0.75686276§1.0§true§0.7310001§1.0§0.0§0.0§
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0103996§1.0103996§1.0103996
+scale§common scale§1.0103996§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§21.547493§255.0
+GROUP§lissajous§false
+lissajous§ball count§88.0§4000.0
+lissajous§freq§1.0§0.35189873§0.3109921
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§3751.623§10000.0
+GROUP§metaballs§false
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§0.0§1.0§0.365625§false§0.002136757§1.0§0.0§1.0§0.49374977§false§0.013895061§0.0§1.0§1.0§0.7031249§false§0.0§0.0§0.0§0.75686276§1.0§true§0.7310001§1.0§0.0§0.0§
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0048987§1.0048987§1.0048987
+scale§common scale§1.0048987§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§21.547493§255.0
+GROUP§lissajous§false
+lissajous§ball count§88.0§4000.0
+lissajous§freq§1.0§0.35189873§0.3109921
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§3751.623§10000.0
+GROUP§metaballs§false
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§0.0§1.0§0.365625§false§0.002136757§1.0§0.0§1.0§0.49374977§false§0.013895061§0.0§1.0§1.0§0.7031249§false§0.0§0.0§0.0§0.75686276§1.0§true§0.7310001§1.0§0.0§0.0§
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0048987§1.0048987§1.0048987
+scale§common scale§1.0048987§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§false
+Metaballs§fade to black§14.9991045§2.55
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§19.340006§100.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§0.37000027§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§lissajous§true
+lissajous§ball count§88.00197§400.0
+lissajous§freq§1.0§0.35189873§0.3109921
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§3751.623§10000.0
+GROUP§metaballs§false
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.07049983§0.0§1.0§1.0§0.13437466§false§0.98849994§0.0§0.0§1.0§0.2812501§false§0.6145§1.0§0.253125§1.0§1.0§true§0.74750024§1.0§0.0§0.0§
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0078967§1.0078967§1.0078967
+scale§common scale§1.0078967§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§1.0§1.0516025§1.0299996§0.988999
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§false
+Metaballs§fade to black§14.9991045§2.55
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§19.340006§100.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§0.37000027§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§lissajous§true
+lissajous§ball count§200.00053§400.0
+lissajous§freq§100.0§3.0228982§2.466993
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§3.2230477§100.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.08349991§0.9875§1.0§1.0§0.14687467§false§0.98849994§0.0§0.0§1.0§0.34062514§false§0.6145§1.0§0.253125§1.0§1.0§true§0.74750024§1.0§0.0§0.0§
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0062004§1.0062004§1.0062004
+scale§common scale§1.0062004§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§1.0516025§0.99999875§0.988999
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§false
+Metaballs§fade to black§14.9991045§2.55
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§19.340006§100.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§0.37000027§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§lissajous§false
+lissajous§ball count§200.00053§400.0
+lissajous§freq§100.0§2.2228992§2.1669931
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§3.62305§100.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.08349991§0.0§0.0§1.0§0.20312497§false§0.0§0.0§0.0§1.0§0.26874983§false§0.0§0.0§1.0§1.0§0.36874968§false§0.99§0.0§0.0§1.0§1.0§true§0.74750024§1.0§0.0§0.0§
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Metaballs§true
+Metaballs§fade to black§255.0§255.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§19.340006§100.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§0.37000027§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§lissajous§true
+lissajous§ball count§400.00745§400.0
+lissajous§freq§10.0§0.45289916§0.26699296
+lissajous§amp§30.0§300.0§300.0
+lissajous§max angle§20.623053§100.0
+GROUP§metaballs§true
+metaballs§gradient§vertical§rgb lerp§0.0§true§0.6569999§0.165625§1.0§1.0§1.0§true§0.74750024§1.0§0.0§0.0§
+GROUP§scale§true
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END

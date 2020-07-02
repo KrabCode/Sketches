@@ -14,8 +14,6 @@ public class Bubbles extends KrabApplet {
     PVector center;
     String bubbleShader = "shaders/_2020_06/Bubbles/bubbles.glsl";;
 
-
-
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }

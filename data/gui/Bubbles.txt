@@ -447,3 +447,138 @@ colors§move R§100.0§0.0§0.0
 colors§move G§100.0§0.0§0.0
 colors§move B§100.0§0.0§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Bubbles§false
+Bubbles§rec frames§1000.9994§300.0
+Bubbles§fade to black§5.3804975§25.5
+GROUP§bubbles§false
+bubbles§spawn %§1.0§400.0
+bubbles§spawn gradient§circular§rgb lerp§0.0§true§0.9810001§1.0§1.0§1.0§0.27187496§false§0.7941176§0.653125§1.0§1.0§0.5124997§false§0.5836601§0.60625§1.0§1.0§1.0§true§0.5254999§0.0§1.0§1.0§
+bubbles§spawn count§2.9999976§100.0
+bubbles§lifespan§148.29782§300.0
+bubbles§fade in§0.63§1.0
+bubbles§fade out§0.3290001§1.0
+bubbles§force to center§0.13000014§10.0
+bubbles§force sideways§0.07000016§10.0
+bubbles§force constant§100.0§0.0§0.0
+bubbles§drag§0.98§10.0
+bubbles§size§21.090012§100.0
+bubbles§random size§10.370003§100.0
+bubbles§ADD§false
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§-8.195639E-8§10.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.09000103§10.0
+displace§angle offset§2.2399998§10.0
+displace§angle range§2.8000007§10.0
+displace§noise details§300.0§2.9599957§7.158004§26.924004
+displace§noise speeds§2.0§0.3280002§0.18399984§0.13800016
+GROUP§scale§false
+scale§center§100.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Bubbles§false
+Bubbles§rec frames§1000.9994§300.0
+Bubbles§fade to black§5.3804975§25.5
+GROUP§bubbles§false
+bubbles§spawn %§1.0§400.0
+bubbles§spawn gradient§circular§rgb lerp§0.0§true§0.9810001§1.0§1.0§1.0§0.27187496§false§0.7941176§0.653125§1.0§1.0§0.5124997§false§0.5836601§0.60625§1.0§1.0§1.0§true§0.5254999§0.0§1.0§1.0§
+bubbles§spawn count§2.9999976§100.0
+bubbles§lifespan§148.29782§300.0
+bubbles§fade in§0.63§1.0
+bubbles§fade out§0.3290001§1.0
+bubbles§force to center§0.13000014§10.0
+bubbles§force sideways§0.07000016§10.0
+bubbles§force constant§100.0§0.0§0.0
+bubbles§drag§0.98§10.0
+bubbles§size§21.090012§100.0
+bubbles§random size§10.370003§100.0
+bubbles§ADD§false
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§-8.195639E-8§10.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.09000103§10.0
+displace§angle offset§2.2399998§10.0
+displace§angle range§2.8000007§10.0
+displace§noise details§300.0§2.9599957§7.158004§26.924004
+displace§noise speeds§2.0§0.3280002§0.18399984§0.13800016
+GROUP§scale§true
+scale§center§100.0§-0.4§-0.59999996
+scale§RGB scales§0.1§0.99860126§0.99860126§0.99860126
+scale§common scale§0.99860126§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Bubbles§false
+Bubbles§rec frames§1000.9994§300.0
+Bubbles§fade to black§6.553498§25.5
+GROUP§bubbles§false
+bubbles§spawn %§1.0§400.0
+bubbles§spawn gradient§circular§sat lerp§0.0§true§5.005598E-4§1.0§0.7875§1.0§0.19062486§false§0.049515255§0.76875§1.0§1.0§0.39687508§false§0.10716691§0.559375§1.0§1.0§0.478125§false§0.0§0.0§1.0§1.0§0.54375§false§0.6394999§0.33125§1.0§1.0§1.0§true§0.6974999§0.709375§1.0§1.0§
+bubbles§spawn count§2.9999976§100.0
+bubbles§lifespan§138.09776§300.0
+bubbles§fade in§0.49700063§1.0
+bubbles§fade out§0.49999964§1.0
+bubbles§force to center§0.13000014§10.0
+bubbles§force sideways§0.07000016§10.0
+bubbles§force constant§100.0§0.0§0.0
+bubbles§drag§0.9801996§0.1
+bubbles§size§21.090012§100.0
+bubbles§random size§10.370003§100.0
+bubbles§ADD§false
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§0.9699998§10.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.09000103§10.0
+displace§angle offset§2.2399998§10.0
+displace§angle range§2.8000007§10.0
+displace§noise details§300.0§2.9599957§7.158004§26.924004
+displace§noise speeds§2.0§0.3280002§0.18399984§0.13800016
+GROUP§scale§false
+scale§center§100.0§-0.4§-0.59999996
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§100.0§0.0§0.0
+colors§move G§100.0§0.0§0.0
+colors§move B§100.0§0.0§0.0
+STATE_END
