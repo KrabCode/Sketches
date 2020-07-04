@@ -469,6 +469,14 @@ public abstract class KrabApplet extends PApplet {
     }
 
     // GENERAL UTILS
+
+    protected PGraphics matchPGraphicsToSketchSize(PGraphics pg) {
+        if (pg == null || pg.width != width || pg.height != height) {
+            pg = createGraphics(width, height, P3D);
+        }
+        return pg;
+    }
+
     public static void println(String str) {
         PApplet.println(getTime(), str);
     }

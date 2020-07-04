@@ -1,0 +1,24 @@
+STATE_BEGIN
+UNDO
+GROUP§AIWS§true
+AIWS§frames§1000.0§400.0
+AIWS§fade to black§10.0§255.0
+AIWS§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.3125§1.0§1.0§true§5.0E-4§1.0§0.0§1.0§
+AIWS§size§1.0§10.0
+AIWS§copies§18.998032§100.0
+AIWS§minimum scale§0.020000014§10.0
+AIWS§boy§vertical§rgb lerp§0.0§true§0.62149984§1.0§1.0§1.0§0.4§false§0.62149984§1.0§1.0§1.0§0.5718753§false§0.7717265§1.0§0.654902§1.0§1.0§true§0.9995§0.540625§1.0§1.0§
+AIWS§translate§1000.0§512.0§564.0
+GROUP§blur§true
+blur§inner edge§0.0§10.0
+blur§outer edge§1.0§10.0
+blur§intensity§0.0§10.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§2.0§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+STATE_END
