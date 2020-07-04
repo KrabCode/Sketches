@@ -14,18 +14,25 @@ public class Metaballs extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P3D);
+        fullScreen(P3D);
     }
 
     public void setup() {
-        pg = createGraphics(width, height, P3D);
+        updatePGraphics();
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);
         }
     }
 
+    private void updatePGraphics() {
+        if(pg == null || pg.width != width || pg.height != height) {
+            pg = createGraphics(width, height, P3D);
+        }
+    }
+
     public void draw() {
+        updatePGraphics();
         pg.beginDraw();
         fadeToBlack(pg);
         chromaticAberrationPass(pg);

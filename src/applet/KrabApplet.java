@@ -33,6 +33,7 @@ public abstract class KrabApplet extends PApplet {
     private static final String GROUP_PREFIX = "GROUP";
     private static final String ACTION_PRECISION_ZOOM_IN = "PRECISION_ZOOM_IN";
     private static final String ACTION_PRECISION_ZOOM_OUT = "PRECISION_ZOOM_OUT";
+    private static final String ACTION_FULLSCREEN_TOGGLE = "FULLSCREEN_TOGGLE";
     private static final String ACTION_RESET = "RESET";
     private static final String ACTION_HIDE = "HIDE";
     private static final String ACTION_UNDO = "UNDO";
@@ -333,7 +334,7 @@ public abstract class KrabApplet extends PApplet {
         }
         GradientEditor gradientEditor = (GradientEditor) findElement(name, currentGroup.name);
         if (gradientEditor != null) {
-            return gradientEditor.getTexture();
+            return gradientEditor.getTexture(w, h);
         }
         throw new IllegalStateException("gradient picker was not found");
     }
@@ -403,6 +404,7 @@ public abstract class KrabApplet extends PApplet {
     protected void gui(boolean defaultVisibility) {
         t += radians(timeSpeed);
         guiSetup(defaultVisibility);
+        updateFullscreenToggle();
         updateKeyboardInput();
         updateMouseState();
         pushStyle();
@@ -425,6 +427,21 @@ public abstract class KrabApplet extends PApplet {
             trayVisible = elementCount() != 0;
         }
         resetGroup();
+    }
+
+    private void updateFullscreenToggle() {
+        if(previousActionsContainsLockAware(ACTION_FULLSCREEN_TOGGLE)) {
+            toggleFullscreen();
+        }
+    }
+
+    private void toggleFullscreen() {
+        boolean windowed = width == displayWidth;
+        if(windowed) {
+            surface.setSize(1000,1000);
+        }else {
+            surface.setSize(displayWidth, displayHeight);
+        }
     }
 
     private void updateTray() {
@@ -1146,6 +1163,16 @@ public abstract class KrabApplet extends PApplet {
 
     // RECORDING
 
+    public void rec(int frames) {
+        frameRecordingDuration = frames;
+        rec(g);
+    }
+
+    public void rec(PGraphics pg, int frames) {
+        frameRecordingDuration = frames;
+        savePGraphics(pg);
+    }
+
     public void rec() {
         rec(g);
     }
@@ -1206,15 +1233,15 @@ public abstract class KrabApplet extends PApplet {
         int nonFlickeringFrameRate = floor(frameRate > 55 ? 60 : frameRate);
         String fps = nonFlickeringFrameRate + " fps";
         surface.setTitle(this.getClass().getSimpleName() + " " + fps);
-        if (isFullscreen() && trayVisible) {
+        if (trayVisible) {
             pushStyle();
             colorMode(HSB, 1, 1, 1, 1);
             textSize(textSize);
-            textAlign(LEFT, CENTER);
+            textAlign(LEFT, TOP);
             fill(0);
             text(fps, trayWidth + cell * .5f, cell * .5f);
             fill(GRAYSCALE_DARK);
-            text(fps, trayWidth + cell * .45f, cell * .45f);
+            text(fps, trayWidth + cell * .475f, cell * .475f);
             popStyle();
         }
     }
@@ -1681,6 +1708,9 @@ public abstract class KrabApplet extends PApplet {
         if (kk.character == 'b' || kk.character == 'B') {
             actions.add(ACTION_CHANGE_BLEND);
         }
+        if (kk.character == 'f' || kk.character == 'F') {
+            actions.add(ACTION_FULLSCREEN_TOGGLE);
+        }
         if (kk.character == KEY_CTRL_S) {
             actions.add(ACTION_SAVE);
         }
@@ -1690,6 +1720,7 @@ public abstract class KrabApplet extends PApplet {
         if (kk.character == KEY_CTRL_V) {
             actions.add(ACTION_PASTE);
         }
+
     }
 
     private boolean actionJustReleased(String action) {
@@ -3512,13 +3543,12 @@ public abstract class KrabApplet extends PApplet {
         private final GradientType defaultGradientType;
         private final BlendType defaultBlendType;
         private BlendType blendType;
-        private final PGraphics pg;
+        private PGraphics pg;
         private final PGraphics preview;
         private final ArrayList<ColorPicker> pickers = new ArrayList<>();
         private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
         private final int defaultColorCount;
-        float previewCenterX = width / 2f;
-        float previewCenterY = height - sliderHeight - cell * 2;
+        float previewCenterX, previewCenterY;
         float previewWidth = cell * 8;
         float previewHeight = cell * 4;
         private GradientType gradientType;
@@ -3534,10 +3564,22 @@ public abstract class KrabApplet extends PApplet {
             this.defaultBlendType = BlendType.RGB_LERP;
             this.blendType = defaultBlendType;
             this.gradientType = defaultGradientType;
+            updatePGraphics(w, h);
+            updatePreviewPos();
             initPickers();
-            pg = createGraphics(w, h, P2D);
             preview = createGraphics(floor(previewWidth), floor(previewHeight), P2D);
             drawGradientToTexture(pg, gradientType, blendType);
+        }
+
+        private void updatePGraphics(int w, int h) {
+            if(pg == null || pg.width != w || pg.height != h) {
+                pg = createGraphics(w, h, P2D);
+            }
+        }
+
+        private void updatePreviewPos() {
+            previewCenterX = width / 2f;
+            previewCenterY = height - cell * 4;
         }
 
         private void initPickers() {
@@ -3562,6 +3604,7 @@ public abstract class KrabApplet extends PApplet {
 
         void updateOverlay() {
             super.updateOverlay();
+            updatePreviewPos();
             updateColorPickers();
             drawPreview();
             float y = previewCenterY + previewHeight / 2f + 15;
@@ -3813,7 +3856,8 @@ public abstract class KrabApplet extends PApplet {
             });
         }
 
-        PGraphics getTexture() {
+        PGraphics getTexture(int w, int h) {
+            updatePGraphics(w, h);
             return pg;
         }
     }
