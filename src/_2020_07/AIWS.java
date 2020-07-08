@@ -26,7 +26,7 @@ public class AIWS extends KrabApplet {
         }
         pg = createGraphics(width, height, P2D);
         bg = createGraphics(width, height, P2D);
-        boyImage = loadImage("images/people/boy_smoke_crop.png");
+        boyImage = loadImage("images/people/boy_crop.png");
         boy = createGraphics(boyImage.width, boyImage.height, P2D);
     }
 
@@ -51,31 +51,14 @@ public class AIWS extends KrabApplet {
     }
 
     private void updatePGraphics() {
-        bg.beginDraw();
-        fadeToBlack(bg);
-        blurPass(pg);
-        bg.image(gradient("gradient"), 0, 0);
-        float size = slider("size", 1);
-        fbmDisplacePass(bg);
-        bg.endDraw();
-        resetGroup();
-
         pg.beginDraw();
-        pg.imageMode(CENTER);
-        pg.pushMatrix();
-        translateToCenter(pg);
-        pg.image(bg, 0, 0);
-        int copies = sliderInt("copies", 5);
-        float minScale = slider("minimum scale", .5f);
-        for (int i = 0; i < copies; i++) {
-            pg.pushMatrix();
-            pg.scale(1-map(i, 0, copies-1, 0, 1-minScale));
-            pg.image(bg, 0, 0);
-            pg.popMatrix();
+        int count = sliderInt("count", 4);
+        for (int i = 0; i < count; i++) {
+            pg.image(gradient("gradient " + i, 0), 0, 0);
         }
-        pg.popMatrix();
         updateBoy();
         translate2D(pg);
+        float size = slider("size");
         pg.image(boy, 0, 0, boy.width*size, boy.height*size);
         pg.endDraw();
     }

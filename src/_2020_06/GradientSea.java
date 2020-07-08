@@ -28,10 +28,10 @@ public class GradientSea extends KrabApplet {
         frameRecordingDuration = sliderInt("record frames", 360);
         String shader = "shaders/_2020_06/GradientShader/gradient.glsl";
         uniform(shader).set("time", t);
-        uniform(shader).set("background", gradient("gradient", 4, GradientType.VERTICAL));
-        uniform(shader).set("noiseTex", gradient("noise", 4, GradientType.VERTICAL));
+        uniform(shader).set("background", gradient("gradient"));
+        uniform(shader).set("noiseTex", gradient("noise"));
         hotFilter(shader, pg);
-        pg.image(gradient("over", 4, GradientType.CIRCULAR), 0, 0);
+        pg.image(gradient("over"), 0, 0);
         pg.endDraw();
         clear();
         image(pg, 0, 0, width, height);

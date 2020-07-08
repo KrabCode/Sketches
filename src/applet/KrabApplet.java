@@ -23,7 +23,6 @@ import static java.lang.System.currentTimeMillis;
 // TODO make rec() take intended frame count as param
 // TODO migrate saving gui data from custom silly format to json
 public abstract class KrabApplet extends PApplet {
-    protected static Boolean FFMPEG_ENABLED = true;
     private static final String STATE_BEGIN = "STATE_BEGIN";
     private static final String STATE_END = "STATE_END";
     private static final String SEPARATOR = "§";
@@ -73,6 +72,7 @@ public abstract class KrabApplet extends PApplet {
     private static final float CHECK_ANIMATION_EASING = 1;
     private static final float GROUP_TOGGLE_ANIMATION_EASING = 1;
     private static final int GROUP_TOGGLE_ANIMATION_DURATION = 10;
+    protected static Boolean FFMPEG_ENABLED = true;
     private static String clipboardSliderFloat = "";
     private static String clipboardSliderXYZ = "";
     private static String clipboardPicker = "";
@@ -113,6 +113,7 @@ public abstract class KrabApplet extends PApplet {
             new PVector(0, 0, 1)};
     @SuppressWarnings("FieldCanBeLocal")
     private final String videoOutputDir = "/out/video";
+    private final int autoTrayHideDuration = 120;
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
     protected float t;
@@ -120,6 +121,7 @@ public abstract class KrabApplet extends PApplet {
     protected int frameRecordingStarted = 0;
     protected int frameRecordingDuration = 360; // assuming t += radians(1) per frame for a perfect loop
     protected float timeSpeed = 1;
+    boolean mouseWasOutsideTray = false;
     private float trayWidthWhenExtended = minimumTrayWidth;
     private float trayWidth = minimumTrayWidth;
     private boolean captureScreenshot = false;
@@ -145,11 +147,25 @@ public abstract class KrabApplet extends PApplet {
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
     private boolean keyboardLockedByTextEditor = false;
-    private final int autoTrayHideDuration = 120;
     private int autoTrayHideStarted = -autoTrayHideDuration;
-    boolean mouseWasOutsideTray = false;
 
     // GUI INTERFACE
+
+    // GENERAL UTILS
+    public static void println(String str) {
+        PApplet.println(getTime(), str);
+    }
+
+    public static void println(String... args) {
+        Object[] line = new Object[args.length];
+        line[0] = getTime();
+        System.arraycopy(args, 0, line, 1, args.length - 1);
+        PApplet.println(line);
+    }
+
+    private static String getTime() {
+        return nf(hour(), 2, 0) + ":" + nf(minute(), 2, 0) + ":" + nf(second(), 2, 0) + "\t";
+    }
 
     protected int sliderInt() {
         return floor(sliderInt("x"));
@@ -310,25 +326,21 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected PGraphics gradient(String name) {
-        return gradient(name, 2, GradientType.VERTICAL, width, height);
+        return gradient(name, width, height, 1);
     }
 
-    protected PGraphics gradient(String name, int defaultColorCount) {
-        return gradient(name, defaultColorCount, GradientType.VERTICAL, width, height);
+    protected PGraphics gradient(String name, float defaultAlpha) {
+        return gradient(name, width, height, defaultAlpha);
     }
 
     protected PGraphics gradient(String name, int w, int h) {
-        return gradient(name, 2, GradientType.VERTICAL, w, h);
+        return gradient(name, 1, w, h);
     }
 
-    protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
-        return gradient(name, defaultColorCount, defaultType, width, height);
-    }
-
-    protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType, int w, int h) {
+    protected PGraphics gradient(String name, int w, int h, float defaultAlpha) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
-            GradientEditor newElement = new GradientEditor(currentGroup, name, defaultColorCount, w, h, defaultType);
+            GradientEditor newElement = new GradientEditor(currentGroup, name, w, h, defaultAlpha);
             currentGroup.elements.add(newElement);
         }
         GradientEditor gradientEditor = (GradientEditor) findElement(name, currentGroup.name);
@@ -449,22 +461,6 @@ public abstract class KrabApplet extends PApplet {
             autoTrayHideStarted = frameCount + autoTrayHideDuration + autoTrayHideDelay;
         }
         mouseWasOutsideTray = isMouseOutsideVisibleTray();
-    }
-
-    // GENERAL UTILS
-    public static void println(String str) {
-        PApplet.println(getTime(), str);
-    }
-
-    public static void println(String... args) {
-        Object[] line = new Object[args.length];
-        line[0] = getTime();
-        System.arraycopy(args, 0, line, 1, args.length - 1);
-        PApplet.println(line);
-    }
-
-    private static String getTime() {
-        return nf(hour(), 2, 0) + ":" + nf(minute(), 2, 0) + ":" + nf(second(), 2, 0) + "\t";
     }
 
     protected void lights(PGraphics pg) {
@@ -2049,6 +2045,93 @@ public abstract class KrabApplet extends PApplet {
 
     // CLASSES
 
+    protected enum BlendType {
+        RGB_LERP("rgb lerp", 0),
+        SAT_LERP("sat lerp", 1),
+        HSV_LERP("hsv lerp", 2),
+        SMOOTHSTEP("smoothstep", 3);
+
+        String name;
+        int index;
+
+        BlendType(String name, int index) {
+            this.name = name;
+            this.index = index;
+        }
+
+        public static BlendType parseIndex(int query) {
+            for (BlendType type : BlendType.values()) {
+                if (type.index == query) {
+                    return type;
+                }
+            }
+            return RGB_LERP;
+        }
+
+        public static BlendType parseType(String query) {
+            for (BlendType type : BlendType.values()) {
+                if (type.name.equals(query)) {
+                    return type;
+                }
+            }
+            return RGB_LERP;
+        }
+
+        public int getIndex() {
+            return index;
+        }
+
+        public String toString() {
+            return name;
+        }
+    }
+
+    protected enum GradientType {
+        VERTICAL(0, "vertical", '↑'),
+        HORIZONTAL(1, "horizontal", '→'),
+        CIRCULAR(2, "circular", '♂');
+
+        public int index;
+        public char symbol;
+        public String value;
+
+        GradientType(int index, String value, char symbol) {
+            this.value = value;
+            this.index = index;
+            this.symbol = symbol;
+        }
+
+        public static GradientType parseIndex(int query) {
+            for (GradientType type : GradientType.values()) {
+                if (type.index == query) {
+                    return type;
+                }
+            }
+            return GradientType.values()[0];
+        }
+
+        public static GradientType parseType(String query) {
+            for (GradientType type : GradientType.values()) {
+                if (type.toString().equals(query)) {
+                    return type;
+                }
+            }
+            return GradientType.values()[0];
+        }
+
+        public int getIndex() {
+            return index;
+        }
+
+        public String toString() {
+            return value;
+        }
+
+        char getSymbol() {
+            return symbol;
+        }
+    }
+
     private static class Key {
         boolean justPressed;
         boolean coded;
@@ -3511,41 +3594,43 @@ public abstract class KrabApplet extends PApplet {
     class GradientEditor extends Element {
         private final GradientType defaultGradientType;
         private final BlendType defaultBlendType;
-        private BlendType blendType;
         private final PGraphics pg;
         private final PGraphics preview;
         private final ArrayList<ColorPicker> pickers = new ArrayList<>();
         private final ArrayList<ColorPicker> pickersToRemove = new ArrayList<>();
         private final int defaultColorCount;
+        private final float defaultAlpha;
         float previewCenterX = width / 2f;
         float previewCenterY = height - sliderHeight - cell * 2;
         float previewWidth = cell * 8;
         float previewHeight = cell * 4;
+        private BlendType blendType;
         private GradientType gradientType;
         private ColorPicker selected = null;
         private ColorPicker held = null;
         private boolean blockDeselectionUntilMouseRelease = false;
         private int blendTypeChangedFrame, gradientTypeChangedFrame;
 
-        GradientEditor(Group group, String name, int defaultColorCount, int w, int h, GradientType defaultGradientType) {
+        GradientEditor(Group group, String name, int w, int h, float defaultAlpha) {
             super(group, name);
-            this.defaultColorCount = defaultColorCount;
-            this.defaultGradientType = defaultGradientType;
+            this.defaultColorCount = 4;
+            this.defaultGradientType = GradientType.VERTICAL;
+            this.gradientType = defaultGradientType;
             this.defaultBlendType = BlendType.RGB_LERP;
             this.blendType = defaultBlendType;
-            this.gradientType = defaultGradientType;
-            initPickers();
+            this.defaultAlpha = defaultAlpha;
+            initPickers(defaultAlpha);
             pg = createGraphics(w, h, P2D);
             preview = createGraphics(floor(previewWidth), floor(previewHeight), P2D);
             drawGradientToTexture(pg, gradientType, blendType);
         }
 
-        private void initPickers() {
+        private void initPickers(float defaultAlpha) {
             pickers.clear();
             for (int i = 0; i < defaultColorCount; i++) {
                 float iNorm = norm(i, 0, defaultColorCount - 1);
                 boolean locked = i == 0 || i == defaultColorCount - 1;
-                pickers.add(new ColorPicker(iNorm, locked, 0, 0, iNorm, 1));
+                pickers.add(new ColorPicker(iNorm, locked, 0, 0, iNorm, defaultAlpha));
             }
         }
 
@@ -3567,7 +3652,8 @@ public abstract class KrabApplet extends PApplet {
             float y = previewCenterY + previewHeight / 2f + 15;
             textSize(20);
             textAlign(LEFT, CENTER);
-            drawTextIndicator("T: " + gradientType.getSymbol(), previewCenterX - previewWidth * .25f, y, gradientTypeChangedFrame);
+            drawTextIndicator("T: " + gradientType.getSymbol(), previewCenterX - previewWidth * .25f, y,
+        gradientTypeChangedFrame);
             drawTextIndicator("B: " + blendType.toString(), previewCenterX, y, blendTypeChangedFrame);
         }
 
@@ -3584,7 +3670,7 @@ public abstract class KrabApplet extends PApplet {
         void reset() {
             gradientType = defaultGradientType;
             blendType = defaultBlendType;
-            initPickers();
+            initPickers(defaultAlpha);
         }
 
         void handleActions() {
@@ -3677,7 +3763,8 @@ public abstract class KrabApplet extends PApplet {
                 float lineTopY = y - h / 2;
                 float pickerHandleY = lineTopY - pickerHandleRadius / 2;
                 HSBA pickerColor = picker.getHSBA();
-                boolean isMouseInsideHandle = isPointInCircle(mouseX, mouseY, x, lineTopY - pickerHandleRadius / 2, pickerHandleRadius / 2);
+                boolean isMouseInsideHandle = isPointInCircle(mouseX, mouseY, x, lineTopY - pickerHandleRadius / 2,
+                 pickerHandleRadius / 2);
                 if (isMouseInsideHandle) {
                     if (mousePressed && !picker.gradientPositionLocked) {
                         if (mouseJustPressedOutsideTray() && isPickerSelected(picker)) {
@@ -3706,7 +3793,8 @@ public abstract class KrabApplet extends PApplet {
                         pickerDeleted = true;
                     }
                 }
-                if (picker.equals(held) && isMousePressedInsideRect(width / 2f - previewWidth / 2, 0, previewWidth, height)) {
+                if (picker.equals(held) && isMousePressedInsideRect(width / 2f - previewWidth / 2, 0, previewWidth,
+            height)) {
                     float delta = map(mouseX - pmouseX, 0, previewWidth, 0, 1);
                     picker.gradientPosition += delta;
                     picker.gradientPosition = constrain(picker.gradientPosition, 0, 1);
@@ -3815,93 +3903,6 @@ public abstract class KrabApplet extends PApplet {
 
         PGraphics getTexture() {
             return pg;
-        }
-    }
-
-    protected enum BlendType {
-        RGB_LERP("rgb lerp", 0),
-        SAT_LERP("sat lerp", 1),
-        HSV_LERP("hsv lerp", 2),
-        SMOOTHSTEP("smoothstep", 3);
-
-        String name;
-        int index;
-
-        BlendType(String name, int index) {
-            this.name = name;
-            this.index = index;
-        }
-
-        public int getIndex() {
-            return index;
-        }
-
-        public String toString() {
-            return name;
-        }
-
-        public static BlendType parseIndex(int query) {
-            for (BlendType type : BlendType.values()) {
-                if (type.index == query) {
-                    return type;
-                }
-            }
-            return RGB_LERP;
-        }
-
-        public static BlendType parseType(String query) {
-            for (BlendType type : BlendType.values()) {
-                if (type.name.equals(query)) {
-                    return type;
-                }
-            }
-            return RGB_LERP;
-        }
-    }
-
-    protected enum GradientType {
-        VERTICAL(0, "vertical", '↑'),
-        HORIZONTAL(1, "horizontal", '→'),
-        CIRCULAR(2, "circular", '♂');
-
-        public int index;
-        public char symbol;
-        public String value;
-
-        GradientType(int index, String value, char symbol) {
-            this.value = value;
-            this.index = index;
-            this.symbol = symbol;
-        }
-
-        public static GradientType parseIndex(int query) {
-            for (GradientType type : GradientType.values()) {
-                if (type.index == query) {
-                    return type;
-                }
-            }
-            return GradientType.values()[0];
-        }
-
-        public static GradientType parseType(String query) {
-            for (GradientType type : GradientType.values()) {
-                if (type.toString().equals(query)) {
-                    return type;
-                }
-            }
-            return GradientType.values()[0];
-        }
-
-        public int getIndex() {
-            return index;
-        }
-
-        public String toString() {
-            return value;
-        }
-
-        char getSymbol() {
-            return symbol;
         }
     }
 
