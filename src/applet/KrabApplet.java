@@ -315,16 +315,8 @@ public abstract class KrabApplet extends PApplet {
         return gradient(name, 2, GradientType.VERTICAL, width, height);
     }
 
-    protected PGraphics gradient(String name, int defaultColorCount) {
-        return gradient(name, defaultColorCount, GradientType.VERTICAL, width, height);
-    }
-
     protected PGraphics gradient(String name, int w, int h) {
         return gradient(name, 2, GradientType.VERTICAL, w, h);
-    }
-
-    protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType) {
-        return gradient(name, defaultColorCount, defaultType, width, height);
     }
 
     protected PGraphics gradient(String name, int defaultColorCount, GradientType defaultType, int w, int h) {
@@ -471,8 +463,12 @@ public abstract class KrabApplet extends PApplet {
 
     // GENERAL UTILS
 
-    protected PGraphics matchPGraphicsToSketchSize(PGraphics pg) {
-        if (pg == null || pg.width != width || pg.height != height) {
+    protected PGraphics preparePGraphics(PGraphics pg) {
+        return preparePGraphics(pg, width, height);
+    }
+
+    protected PGraphics preparePGraphics(PGraphics pg, int w, int h) {
+        if (pg == null || pg.width != w || pg.height != h) {
             pg = createGraphics(width, height, P3D);
         }
         return pg;
@@ -1253,10 +1249,6 @@ public abstract class KrabApplet extends PApplet {
             text(fps, trayWidth + cell * .475f, cell * .475f);
             popStyle();
         }
-    }
-
-    private boolean isFullscreen() {
-        return width == displayWidth;
     }
 
     private void updateMenuButtons() {

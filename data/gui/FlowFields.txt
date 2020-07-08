@@ -1,0 +1,247 @@
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§redraw bg§true
+FlowFields§bg§0.0§0.0§0.5125§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.33125§1.0§1.0
+FlowFields§redraw bg§true
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.33125§1.0§1.0
+FlowFields§redraw bg§false
+GROUP§particles§true
+particles§count§710.0006§1000.0
+particles§reset§
+particles§spawn§100.0§20.46875§14.765625
+particles§gauss§1000.0§144.53125§161.32812
+particles§freq§0.47265625§10.0
+particles§range§1.7617188§10.0
+particles§amp§0.3125§100.0
+particles§weight§5.5546875§100.0
+particles§stroke§0.9994141§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.33125§1.0§1.0
+FlowFields§redraw bg§false
+GROUP§particles§true
+particles§count§710.0006§1000.0
+particles§reset§
+particles§spawn§4000.0§-691.09375§720.0
+particles§gauss§30.0§100.0§100.0
+particles§freq§0.47265625§10.0
+particles§range§1.7617188§10.0
+particles§amp§0.3515625§100.0
+particles§weight§2.0§100.0
+particles§stroke§0.9994141§0.0§0.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.459375§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§710.0006§1000.0
+particles§reset§
+particles§spawn§40.0§1280.0§720.0
+particles§gauss§30.0§100.0§100.0
+particles§freq§0.13671875§10.0
+particles§range§10.2578125§100.0
+particles§amp§0.078125§10.0
+particles§weight§2.0§10.0
+particles§stroke§0.9986328§0.0§0.0§0.44140625§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.459375§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§2038.0012§10000.0
+particles§reset§
+particles§spawn§40.0§1280.0§720.0
+particles§gauss§31.171875§100.0
+particles§freq§0.73046875§10.0
+particles§range§6.7421875§100.0
+particles§amp§0.078125§10.0
+particles§drag§0.99336§1.0
+particles§weight§2.0§10.0
+particles§stroke§0.99902344§0.0§1.0§0.1171875§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.278125§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§2038.0012§10000.0
+particles§reset§
+particles§spawn§4000.0§1280.0§1809.375
+particles§gauss§31.171875§100.0
+particles§freq§0.73046875§10.0
+particles§range§6.7421875§100.0
+particles§angle offset§1.5625§100.0
+particles§amp§0.078125§10.0
+particles§drag§0.99336§1.0
+particles§weight§2.0§10.0
+particles§stroke§0.99902344§0.0§1.0§0.1171875§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§9.999275E-4§0.0§0.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§5141.995§100000.0
+particles§reset§
+particles§spawn§4000.0§3126.3594§723.7969
+particles§gauss§462.68585§30000.0
+particles§freq§0.04816377§10.0
+particles§range§7.982815§100.0
+particles§angle offset§0.12890625§10.0
+particles§amp§0.17078137§10.0
+particles§drag§0.9946576§1.0
+particles§weight§1.4942101§1.0
+particles§stroke§0.5855609§0.690625§1.0§0.125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.00197649§0.0§0.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§4296.005§30000.0
+particles§reset§
+particles§spawn§4000.0§-265.73438§703.9844
+particles§gauss§872.8418§30000.0
+particles§freq§6.2858145E-4§0.10000001
+particles§range§4.62344§100.0
+particles§angle offset§0.16015625§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9595014§1.0
+particles§weight§2.16335§10.0
+particles§stroke§0.6011855§0.0§1.0§1.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.00197649§0.0§0.378125§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§4296.005§30000.0
+particles§reset§
+particles§spawn§40000.0§1280.0§-978.4375
+particles§gauss§816.60156§3000.0
+particles§freq§4.72336E-4§0.10000001
+particles§range§4.9750023§100.0
+particles§angle offset§-1.1132812§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9595014§1.0
+particles§weight§3.7922564§10.0
+particles§stroke§0.6136858§0.0§0.0§0.19921875§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.00197649§0.0§0.378125§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§2573.0024§30000.0
+particles§reset§
+particles§spawn§40.0§1280.0§720.0
+particles§gauss§40.820312§3000.0
+particles§freq§4.72336E-4§0.10000001
+particles§range§4.9750023§100.0
+particles§angle offset§-1.1132812§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9595014§1.0
+particles§weight§3.7922564§10.0
+particles§stroke§0.61759216§0.0§0.0§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.99514055§0.0§0.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§405.01904§30000.0
+particles§reset§
+particles§freq§4.72336E-4§0.10000001
+particles§range§4.9750023§100.0
+particles§angle offset§-1.1132812§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9595014§1.0
+particles§weight§3.7922564§10.0
+particles§stroke§0.6074359§0.0§1.0§1.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.99514055§0.0§0.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§7458.995§30000.0
+particles§reset§
+particles§freq§0.0010582736§0.10000001
+particles§range§0.24843979§100.0
+particles§angle offset§1.5§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9595014§1.0
+particles§weight§1.9914751§10.0
+particles§stroke§0.6019665§0.0§1.0§0.21875§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.99514055§0.0§0.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§111.99986§30000.0
+particles§reset§
+particles§freq§0.092187524§10.0
+particles§range§1.8968773§10.0
+particles§angle offset§1.5§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9501266§1.0
+particles§weight§1.1757812§10.0
+particles§stroke§0.975794§0.90625§0.771875§0.55078125§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.99514055§0.0§0.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§16401.02§300000.0
+particles§reset§
+particles§freq§0.010156274§10.0
+particles§range§1.8968773§10.0
+particles§angle offset§1.5§10.0
+particles§amp§0.32703137§10.0
+particles§drag§0.9501266§1.0
+particles§weight§2.21875§10.0
+particles§stroke§0.97774726§0.0§0.771875§0.0859375§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.98714036§0.0§0.134375§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§561.0003§30000.0
+particles§reset§
+particles§freq§0.03015746§10.0
+particles§range§3.1368773§10.0
+particles§angle offset§1.649998§10.0
+particles§amp§0.07703165§10.0
+particles§drag§0.9761255§1.0
+particles§weight§2.7487485§10.0
+particles§stroke§0.722747§0.0§1.0§0.50000185§0.1
+STATE_END

@@ -4,8 +4,6 @@ import applet.KrabApplet;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
-import java.util.ArrayList;
-
 public class Metaballs extends KrabApplet {
     private PGraphics pg;
 
@@ -18,14 +16,11 @@ public class Metaballs extends KrabApplet {
     }
 
     public void setup() {
-        if (width < displayWidth) {
-            surface.setAlwaysOnTop(true);
-            surface.setLocation(2560 - 1020, 20);
-        }
+
     }
 
     public void draw() {
-        pg = matchPGraphicsToSketchSize(pg);
+        pg = preparePGraphics(pg);
         pg.beginDraw();
         fadeToBlack(pg);
         chromaticAberrationPass(pg);

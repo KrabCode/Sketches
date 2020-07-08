@@ -29,8 +29,8 @@ public class AIWS extends KrabApplet {
     }
 
     public void draw() {
-        pg = matchPGraphicsToSketchSize(pg);
-        bg = matchPGraphicsToSketchSize(bg);
+        pg = preparePGraphics(pg);
+        bg = preparePGraphics(bg);
         frameRecordingDuration = sliderInt("frames", 1000);
         updateBackground();
         image(pg, 0, 0, width, height);
@@ -42,7 +42,9 @@ public class AIWS extends KrabApplet {
         bg.beginDraw();
         fadeToBlack(bg);
         blurPass(pg);
-        bg.image(gradient("gradient"), 0, 0);
+        bg.image(gradient("0"), 0, 0);
+        bg.image(gradient("1"), 0, 0);
+        bg.image(gradient("2"), 0, 0);
         float size = slider("size", 1);
         fbmDisplacePass(bg);
         bg.endDraw();
