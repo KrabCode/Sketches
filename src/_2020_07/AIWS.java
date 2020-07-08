@@ -17,26 +17,55 @@ public class AIWS extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P2D);
+        fullScreen(P3D);
     }
 
     public void setup() {
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
         }
-        pg = createGraphics(width, height, P2D);
-        bg = createGraphics(width, height, P2D);
         boyImage = loadImage("images/people/boy_crop.png");
         boy = createGraphics(boyImage.width, boyImage.height, P2D);
     }
 
     public void draw() {
+        pg = matchPGraphicsToSketchSize(pg);
+        bg = matchPGraphicsToSketchSize(bg);
         frameRecordingDuration = sliderInt("frames", 1000);
-        updatePGraphics();
-        image(pg, 0, 0, width, height);
+        updateBackground();
         image(pg, 0, 0, width, height);
         rec(pg);
         gui();
+    }
+
+    private void updateBackground() {
+        bg.beginDraw();
+        fadeToBlack(bg);
+        blurPass(pg);
+        bg.image(gradient("gradient"), 0, 0);
+        float size = slider("size", 1);
+        fbmDisplacePass(bg);
+        bg.endDraw();
+        resetGroup();
+
+        pg.beginDraw();
+        pg.imageMode(CENTER);
+        pg.pushMatrix();
+        translateToCenter(pg);
+        pg.image(bg, 0, 0);
+        int copies = sliderInt("copies", 5);
+        float minScale = slider("minimum scale", .5f);
+        for (int i = 0; i < copies; i++) {
+            pg.pushMatrix();
+            pg.scale(1-map(i, 0, copies-1, 0, 1-minScale));
+            pg.image(bg, 0, 0);
+            pg.popMatrix();
+        }
+        pg.popMatrix();
+        updateBoy();
+        translate2D(pg);
+        pg.image(boy, 0, 0, boy.width*size, boy.height*size);
+        pg.endDraw();
     }
 
     private void updateBoy() {
@@ -48,18 +77,5 @@ public class AIWS extends KrabApplet {
         hotFilter(whiteToTransparent, boy);
         boy.endDraw();
         resetGroup();
-    }
-
-    private void updatePGraphics() {
-        pg.beginDraw();
-        int count = sliderInt("count", 4);
-        for (int i = 0; i < count; i++) {
-            pg.image(gradient("gradient " + i, 0), 0, 0);
-        }
-        updateBoy();
-        translate2D(pg);
-        float size = slider("size");
-        pg.image(boy, 0, 0, boy.width*size, boy.height*size);
-        pg.endDraw();
     }
 }
