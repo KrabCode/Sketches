@@ -22,6 +22,7 @@ import static java.lang.System.currentTimeMillis;
 // TODO default alpha
 // TODO make rec() take intended frame count as param
 // TODO migrate saving gui data from custom silly format to json
+// TODO make getColorAt() for gradient editors and make it more efficient than get()
 
 public abstract class KrabApplet extends PApplet {
     protected static Boolean FFMPEG_ENABLED = true;
@@ -3540,7 +3541,6 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    // TODO make getColorAt() and make it more efficient than get()
     class GradientEditor extends Element {
         private final GradientType defaultGradientType;
         private final BlendType defaultBlendType;
