@@ -245,3 +245,72 @@ particles§drag§0.9761255§1.0
 particles§weight§2.7487485§10.0
 particles§stroke§0.722747§0.0§1.0§0.50000185§0.1
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.98714036§0.0§0.134375§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§561.0003§30000.0
+particles§reset§
+particles§freq§0.03015746§10.0
+particles§range§3.1368773§10.0
+particles§angle offset§1.649998§10.0
+particles§amp§0.07703165§10.0
+particles§drag§0.9761255§1.0
+particles§weight§2.7487485§10.0
+particles§stroke§0.6944267§0.0§1.0§1.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.98714036§0.0§0.415625§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§9701.988§300000.0
+particles§reset§
+particles§spawn buffer§100.40234§30.0
+particles§freq§0.002149629§0.1
+particles§range§3.1368773§10.0
+particles§angle offset§1.649998§10.0
+particles§amp§0.07703165§10.0
+particles§drag§0.9761255§1.0
+particles§weight§1.4999999§0.001
+particles§stroke§0.6944267§0.0§0.0§1.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.98714036§0.0§1.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§3608.0024§300000.0
+particles§reset§
+particles§spawn buffer§100.40234§30.0
+particles§freq§7.932675E-5§0.1
+particles§range§3.1368773§10.0
+particles§angle offset§1.649998§10.0
+particles§amp§0.07703165§10.0
+particles§to center§0.015625§10.0
+particles§drag§0.9761255§1.0
+particles§weight§9.988602§10.000001
+particles§stroke§0.04403572§0.0§0.0§0.10273441§1.0000001
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowFields§true
+FlowFields§bg§0.98714036§0.0§1.0§1.0§1.0
+FlowFields§redraw bg§
+GROUP§particles§true
+particles§count§3608.0024§300000.0
+particles§reset§
+particles§spawn buffer§100.40234§30.0
+particles§freq§7.932675E-5§0.1
+particles§range§3.1368773§10.0
+particles§angle offset§1.649998§10.0
+particles§amp§0.07703165§10.0
+particles§to center§0.015625§10.0
+particles§drag§0.9761255§1.0
+particles§weight§9.988602§10.000001
+particles§stroke§0.04403572§0.0§0.0§0.10273441§1.0000001
+STATE_END

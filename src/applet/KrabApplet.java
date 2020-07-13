@@ -463,11 +463,11 @@ public abstract class KrabApplet extends PApplet {
 
     // GENERAL UTILS
 
-    protected PGraphics preparePGraphics(PGraphics pg) {
-        return preparePGraphics(pg, width, height);
+    protected PGraphics updateGraphics(PGraphics pg) {
+        return updateGraphics(pg, width, height);
     }
 
-    protected PGraphics preparePGraphics(PGraphics pg, int w, int h) {
+    protected PGraphics updateGraphics(PGraphics pg, int w, int h) {
         if (pg == null || pg.width != w || pg.height != h) {
             pg = createGraphics(width, height, P3D);
         }
@@ -3540,6 +3540,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
+    // TODO make getColorAt() and make it more efficient than get()
     class GradientEditor extends Element {
         private final GradientType defaultGradientType;
         private final BlendType defaultBlendType;

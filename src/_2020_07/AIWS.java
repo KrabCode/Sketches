@@ -29,8 +29,8 @@ public class AIWS extends KrabApplet {
     }
 
     public void draw() {
-        pg = preparePGraphics(pg);
-        bg = preparePGraphics(bg);
+        pg = updateGraphics(pg);
+        bg = updateGraphics(bg);
         frameRecordingDuration = sliderInt("frames", 1000);
         updateBackground();
         image(pg, 0, 0, width, height);

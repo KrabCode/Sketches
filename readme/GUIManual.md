@@ -127,6 +127,20 @@ stroke(hue, sat, br, a);
 ```
 <img src="https://github.com/KrabCode/Sketches/blob/master/readme/06_picker.jpg?raw=true" width="600" alt="Color picker">
 
+## Gradient picker
+
+Blend between multiple color pickers to create gradients.
+- returns a PGraphics with the gradient drawn to it
+- left click pickers to select them and drag them around
+- right click to delete pickers or create new ones
+- press 'B' to change the blend mode
+- press 'T' to change the direction of the gradient
+
+```java
+image(gradient("background"), 0, 0);
+```
+<img src="https://github.com/KrabCode/Sketches/blob/master/readme/10_gradient.jpg?raw=true" width="600" alt="Color picker">
+
 ## Text input
 
 A simple text editor.

@@ -2,7 +2,7 @@
 # Sketches
 This project contains my newest Processing sketches.
 
-The finished animations can be found on my [Instagram](https://www.instagram.com/krabcode/) and [Reddit](https://www.reddit.com/user/Simplyfire).
+The finished animations can be found on my [Instagram](https://www.instagram.com/krabcode/) and [Reddit](https://www.reddit.com/user/Simplyfire/posts).
 
 ## How to run it
 - Clone the project

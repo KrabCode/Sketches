@@ -17,7 +17,7 @@ public class FullscreenToggle extends KrabApplet {
 
 
     public void draw() {
-        pg = preparePGraphics(pg);
+        pg = updateGraphics(pg);
         pg.beginDraw();
         pg.image(gradient("background"), 0, 0);
         pg.endDraw();

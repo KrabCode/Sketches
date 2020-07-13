@@ -20,7 +20,7 @@ public class Metaballs extends KrabApplet {
     }
 
     public void draw() {
-        pg = preparePGraphics(pg);
+        pg = updateGraphics(pg);
         pg.beginDraw();
         fadeToBlack(pg);
         chromaticAberrationPass(pg);
@@ -52,6 +52,7 @@ public class Metaballs extends KrabApplet {
         uniform(metaballShader).set("gradient", gradient("gradient"));
         uniform(metaballShader).set("positions", positions, 2);
         uniform(metaballShader).set("posCount", ballCount);
+        uniform(metaballShader).set("time", t);
         hotFilter(metaballShader, pg);
         resetShader();
         resetGroup();
