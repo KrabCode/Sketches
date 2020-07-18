@@ -31,7 +31,7 @@ public class GrainyGradient extends KrabApplet {
         hotFilter(grainy, pg);
         pg.endDraw();
         image(pg, 0, 0);
-        rec(pg);
+        rec(pg, sliderInt("frames", 360));
         gui();
     }
 }
