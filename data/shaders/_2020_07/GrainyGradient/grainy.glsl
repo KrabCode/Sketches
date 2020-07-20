@@ -256,19 +256,28 @@ float noise(vec2 p, vec2 t, float amp, float freq){
     return (amp*snoise(vec4(p*freq, t)));
 }
 
+float map(float value, float start1, float stop1, float start2, float stop2){
+    return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+}
+
 void main(){
     vec2 uv = gl_FragCoord.xy /  resolution.xy;
     vec2 uvStatic = uv;
     vec2 t = vec2(cos(time), sin(time));
     uv += 70.121;
-    uvStatic += 82.121;
+    uv *= 2.;
+    uvStatic += 0.121;
     // displace the uv coordinate using fbm
     uv.x += 0.5*fbm(vec4(uvStatic.y*0.5, uvStatic.x*.5, t*.5));
     uv.y += 0.5*fbm(vec4(sin(uvStatic.y*5.7+uv.x*2.5-time*.01), 0., t*.5));
+
     // get a static graininess, because if you used uv as the input it would change constantly and any mp4 recording would be 8x bigger
-    float graininess = .035*(1.-2.*hash12(uvStatic*900.));
+    float graininess = .2*(1.-2.*hash12(uvStatic*10000+uv*0.01));
     // these chained noise calls are a manual way to do the fbm effect with much more control over the frequencies and amplitudes of each layer
     float finalNoise = .5 + noise(uv+80, t, 0.2, 1.5) + noise(uv, t*2, 0.2, 1.0) + graininess;
     vec4 col = texture(gradient, vec2(.5, finalNoise));
     gl_FragColor = col;
 }
+
+
+

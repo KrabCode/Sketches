@@ -11,16 +11,11 @@ public class GrainyGradient extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P3D);
+//        size(1000, 1000, P3D);
+        fullScreen(P3D);
     }
 
-    public void setup() {
-        pg = createGraphics(width, height, P3D);
-        if (width < displayWidth) {
-            surface.setAlwaysOnTop(true);
-            surface.setLocation(0,0);
-        }
-    }
+    public void setup() {}
 
     public void draw() {
         pg = updateGraphics(pg);
