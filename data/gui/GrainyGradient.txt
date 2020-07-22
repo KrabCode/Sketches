@@ -159,3 +159,39 @@ GrainyGradient§2§vertical§rgb lerp§0.0§true§0.5745002§0.2875§0.875§1.0�
 GrainyGradient§3§vertical§hsv lerp§0.0§true§0.8044992§1.0§1.0§1.0§1.0§true§0.54399925§1.0§1.0§1.0§
 GrainyGradient§frames§1000.0062§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GrainyGradient§true
+GrainyGradient§time speed§0.20404659§10.000001
+GrainyGradient§1§vertical§rgb lerp§0.0§true§0.7595003§0.0§1.0§1.0§0.24062456§false§0.0§0.0§1.0§1.0§1.0§true§0.57149994§0.76875§0.784375§1.0§
+GrainyGradient§2§vertical§rgb lerp§0.0§true§0.5745002§0.2875§0.875§1.0§1.0§true§0.58750015§1.0§0.85§1.0§
+GrainyGradient§3§vertical§hsv lerp§0.0§true§0.80899924§0.0§0.0§1.0§1.0§true§0.54399925§1.0§1.0§1.0§
+GrainyGradient§frames§2000.8553§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GrainyGradient§true
+GrainyGradient§time speed§0.13904625§1.0000001
+GrainyGradient§1§vertical§sat lerp§0.0§true§0.94849914§0.0§0.0§1.0§1.0§true§0.733499§0.0§0.0§1.0§
+GrainyGradient§2§vertical§sat lerp§0.0§true§0.73799884§1.0§1.0§1.0§1.0§true§0.13199903§1.0§1.0§1.0§
+GrainyGradient§3§vertical§hsv lerp§0.0§true§0.80899924§0.0§0.0§1.0§1.0§true§0.54399925§1.0§0.0§1.0§
+GrainyGradient§frames§2000.8553§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GrainyGradient§true
+GrainyGradient§time speed§0.13904625§1.0000001
+GrainyGradient§1§vertical§sat lerp§0.0§true§0.94849914§0.0§0.0§1.0§1.0§true§0.733499§0.0§0.0§1.0§
+GrainyGradient§2§vertical§sat lerp§0.0§true§0.73799884§1.0§1.0§1.0§1.0§true§0.13199903§1.0§1.0§1.0§
+GrainyGradient§3§vertical§hsv lerp§0.0§true§0.80899924§0.0§0.0§1.0§1.0§true§0.54399925§1.0§0.0§1.0§
+GrainyGradient§frames§2000.8553§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GrainyGradient§true
+GrainyGradient§time speed§0.23435882§1.0000001
+GrainyGradient§1§vertical§sat lerp§0.0§true§0.13356152§0.0§0.0§1.0§1.0§true§0.73799884§1.0§0.0§1.0§
+GrainyGradient§2§vertical§sat lerp§0.0§true§0.7524514§0.0§1.0§1.0§0.184375§false§0.22333331§0.877193§0.328125§1.0§0.30937532§false§0.25625002§0.725§0.840625§1.0§0.3625§false§0.1184228§0.34375§0.8784314§1.0§0.4125006§false§0.6275885§0.271875§1.0§1.0§0.48437545§false§0.6430693§0.49375§1.0§1.0§1.0§true§0.74660283§0.140625§0.0§1.0§
+GrainyGradient§3§vertical§hsv lerp§0.0§true§0.80899924§0.0§0.0§1.0§1.0§true§0.54399925§1.0§0.0§1.0§
+GrainyGradient§frames§2000.8553§300.0
+STATE_END

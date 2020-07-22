@@ -20,7 +20,6 @@ import static java.lang.System.currentTimeMillis;
  */
 
 // TODO default alpha
-// TODO make rec() take intended frame count as param
 // TODO migrate saving gui data from custom silly format to json
 // TODO make getColorAt() for gradient editors and make it more efficient than get()
 
@@ -116,6 +115,7 @@ public abstract class KrabApplet extends PApplet {
             new PVector(0, 0, 1)};
     @SuppressWarnings("FieldCanBeLocal")
     private final String videoOutputDir = "/out/video";
+    private final String imageOutputDir = "/out/image";
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
     protected float t;
@@ -1204,16 +1204,15 @@ public abstract class KrabApplet extends PApplet {
         if (captureScreenshot) {
             captureScreenshot = false;
             screenshotsAlreadyCaptured++;
-            // TODO unify screenshot directory like the out/video one
-            String filename = captureDir + "screenshot_" + screenshotsAlreadyCaptured + ".jpg";
-            println(filename + " saved");
+            String filename = imageOutputDir + "/" + id + "_" +screenshotsAlreadyCaptured + ".jpg";
             pg.save(filename);
+            println(filename + " saved");
         }
         int frameRecordingEnd = frameRecordingStarted + frameRecordingDuration + 1;
         if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
             int frameNumber = frameCount - frameRecordingStarted + 1;
-            println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted, "saved");
             pg.save(captureDir + frameNumber + ".jpg");
+            println(frameNumber, "/", frameRecordingEnd - frameRecordingStarted, "saved");
             if (frameCount == frameRecordingEnd - 1) {
                 runFfmpeg();
             }
