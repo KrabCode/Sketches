@@ -22,7 +22,9 @@ public class GrainyGradient extends KrabApplet {
         pg.beginDraw();
         String grainy = "shaders/_2020_07/GrainyGradient/grainy.glsl";
         uniform(grainy).set("time", t*slider("time speed"));
-        uniform(grainy).set("gradient", gradient("gradient"));
+        uniform(grainy).set("gradient1", gradient("1"));
+        uniform(grainy).set("gradient2", gradient("2"));
+        uniform(grainy).set("gradient3", gradient("3"));
         hotFilter(grainy, pg);
         pg.endDraw();
         image(pg, 0, 0);
