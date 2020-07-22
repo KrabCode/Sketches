@@ -260,21 +260,73 @@ float map(float value, float start1, float stop1, float start2, float stop2){
     return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
 }
 
+
+// IQ noise
+float hash(float n)
+{
+    return fract(sin(n)*43758.5453);
+}
+
+float iqNoise(vec3 x){
+    // The noise function returns a value in the range -1.0f -> 1.0f
+    vec3 p = floor(x);
+    vec3 f = fract(x);
+    f  = f*f*(3.0-2.0*f);
+    float n = p.x + p.y*57.0 + 113.0*p.z;
+    return mix(mix(mix(hash(n+0.0), hash(n+1.0), f.x),
+    mix(hash(n+57.0), hash(n+58.0), f.x), f.y),
+    mix(mix(hash(n+113.0), hash(n+114.0), f.x),
+    mix(hash(n+170.0), hash(n+171.0), f.x), f.y), f.z);
+}
+
+
+float fbm(vec3 p){
+    float sum = 0.;
+    float freq = 1.;
+    float amp = 0.5;
+    for (int i = 0; i < 6; i++){
+        sum += amp*(1-2*iqNoise(p*freq));
+        freq *= 2.0;
+        amp *= .5;
+    }
+    return sum;
+}
+
+float fbm(vec2 p){
+    float sum = 0.;
+    float freq = 1.;
+    float amp = 0.5;
+    for (int i = 0; i < 6; i++){
+        sum += amp*(1-2*iqNoise(vec3(p*freq, 0.)));
+        freq *= 2.0;
+        amp *= .5;
+    }
+    return sum;
+}
+
+float pattern(in vec2 p, out vec2 q, out vec2 r)
+{
+    q.x = fbm( p + vec2(0.0,0.0) );
+    q.y = fbm( p + vec2(5.2,1.3) );
+
+    r.x = fbm( p + 2.0*q + vec2(1.7,9.2+time*.5) );
+    r.y = fbm( p + 2.0*q + vec2(8.3+time*.2,2.8-time*.5) );
+
+    return fbm( p + 4.0*r );
+}
+
 void main(){
     vec2 uv = gl_FragCoord.xy /  resolution.xy;
+    vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
     vec2 uvStatic = uv;
     vec2 t = vec2(cos(time), sin(time));
     uv += 70.121;
     uv *= 2.;
-    uvStatic += 0.121;
-    // displace the uv coordinate using fbm
-    uv.x += 0.5*fbm(vec4(uvStatic.y*0.5, uvStatic.x*.5, t*.5));
-    uv.y += 0.5*fbm(vec4(sin(uvStatic.y*5.7+uv.x*2.5-time*.01), 0., t*.5));
-
-    // get a static graininess, because if you used uv as the input it would change constantly and any mp4 recording would be 8x bigger
-    float graininess = .2*(1.-2.*hash12(uvStatic*10000+uv*0.01));
-    // these chained noise calls are a manual way to do the fbm effect with much more control over the frequencies and amplitudes of each layer
-    float finalNoise = .5 + noise(uv+80, t, 0.2, 1.5) + noise(uv, t*2, 0.2, 1.0) + graininess;
+//    uvStatic += 0.121;
+    vec2 q, r;
+    float fbm = .5+.5*pattern(uv*0.8+8., q, r);
+    float graininess = .06*(1.-2.*hash12(uvStatic*10000));
+    float finalNoise =  fbm + graininess;
     vec4 col = texture(gradient, vec2(.5, finalNoise));
     gl_FragColor = col;
 }

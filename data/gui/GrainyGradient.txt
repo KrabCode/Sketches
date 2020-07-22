@@ -136,3 +136,10 @@ GrainyGradient§time speed§0.17404664§10.000001
 GrainyGradient§gradient§vertical§hsv lerp§0.0§true§0.103833236§0.565625§1.0§1.0§0.5437495§false§0.054367203§0.73333335§1.0§1.0§1.0§true§0.6060844§0.4§0.596875§1.0§
 GrainyGradient§frames§1000.9994§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§GrainyGradient§true
+GrainyGradient§time speed§0.20404659§10.000001
+GrainyGradient§gradient§vertical§sat lerp§0.0§true§0.60908455§0.0§0.0§1.0§0.3687503§false§0.6331019§1.0§0.5647059§1.0§0.52187526§false§0.54785484§0.75625§0.8125§1.0§0.56562483§false§0.28776494§0.321875§1.0§1.0§0.66562515§false§0.30041882§0.70625§0.29375§1.0§0.88125014§false§0.96739393§0.696875§0.0§1.0§1.0§true§0.98108405§0.85§1.0§1.0§
+GrainyGradient§frames§1000.14386§300.0
+STATE_END

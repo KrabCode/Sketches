@@ -424,16 +424,16 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateFullscreenToggle() {
-        if(previousActionsContainsLockAware(ACTION_FULLSCREEN_TOGGLE)) {
+        if (previousActionsContainsLockAware(ACTION_FULLSCREEN_TOGGLE)) {
             toggleFullscreen();
         }
     }
 
     private void toggleFullscreen() {
         boolean windowed = width == displayWidth;
-        if(windowed) {
-            surface.setSize(1000,1000);
-        }else {
+        if (windowed) {
+            surface.setSize(1000, 1000);
+        } else {
             surface.setSize(displayWidth, displayHeight);
         }
     }
@@ -471,6 +471,19 @@ public abstract class KrabApplet extends PApplet {
     protected PGraphics updateGraphics(PGraphics pg, int w, int h) {
         if (pg == null || pg.width != w || pg.height != h) {
             pg = createGraphics(width, height, P3D);
+            pg.beginDraw();
+            pg.background(0);
+            pg.endDraw();
+            pg.beginDraw();
+            pg.background(0);
+            pg.endDraw();
+            pg.beginDraw();
+            pg.background(0);
+            pg.endDraw();
+            pg.beginDraw();
+            pg.background(0);
+            pg.clear();
+            pg.endDraw();
         }
         return pg;
     }
@@ -1191,6 +1204,7 @@ public abstract class KrabApplet extends PApplet {
         if (captureScreenshot) {
             captureScreenshot = false;
             screenshotsAlreadyCaptured++;
+            // TODO unify screenshot directory like the out/video one
             String filename = captureDir + "screenshot_" + screenshotsAlreadyCaptured + ".jpg";
             println(filename + " saved");
             pg.save(filename);
@@ -3574,7 +3588,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void updatePGraphics(int w, int h) {
-            if(pg == null || pg.width != w || pg.height != h) {
+            if (pg == null || pg.width != w || pg.height != h) {
                 pg = createGraphics(w, h, P2D);
             }
         }
