@@ -1,8 +1,17 @@
 uniform sampler2D texture;
 uniform sampler2D gradient1;
-uniform sampler2D gradient2;
+uniform sampler2D image;
 uniform vec2 resolution;
 uniform float time;
+uniform float imageStrength;
+uniform vec3 imagePos;
+uniform vec3 imageScale;
+uniform float fbmStrength;
+uniform float qStrength;
+uniform float rStrength;
+uniform float fbmScale;
+uniform float constant;
+
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
 float permute(float x){ return floor(mod(((x*34.0)+1.0)*x, 289.0)); }
@@ -308,14 +317,12 @@ float fbm(vec2 p){
 float pattern( in vec2 p, out vec2 q, out vec2 r ){
 
     q.x = fbm( p + vec2(05.0,0.0) );
-    q.y = fbm( p + vec2(5.2,1.3+time));
+    q.y = fbm( p + vec2(5.2,1.3));
 
 
 
-    r.x = fbm( p + 1.0*q + vec2(2.7,9.2) );
-    r.y = fbm( p + 1.0*q + vec2(8.3,2.8) );
-
-
+    r.x = fbm( p + 4.0*q + vec2(2.7-time,9.2) );
+    r.y = fbm( p + 4.0*q + vec2(8.3,2.8+time) );
 
     return fbm( p + 0.5*r + q*2.5 );
 }
@@ -328,12 +335,13 @@ void main(){
     vec2 uvStatic = uv;
     vec2 t = vec2(cos(time), sin(time));
     vec2 q, r;
-    float fbm = 0.5+0.5*pattern(uv*3.2, q, r);
+    float fbm = 0.5+0.5*pattern(uv*fbmScale, q, r);
 //    float graininess = 0.*.15*(1.-2.*hash12(uvStatic*10000));
     float fNoise = fbm; // + graininess;
     float qNoise = length(q);
     float rNoise = length(r);
-    vec4 c1 = texture(gradient1, vec2(.5, fbm));
+    float imageIntensity = length(texture(image, imagePos.xy+uvStatic*imageScale.xy).rgb);
+    vec4 c1 = texture(gradient1, vec2(.5, constant+fbmStrength*fbm+q*qStrength+r*rStrength+imageStrength*imageIntensity));
     gl_FragColor = c1;
 }
 

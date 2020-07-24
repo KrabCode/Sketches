@@ -16,3 +16,18 @@ TShirt§time speed§1.1750001§10.0
 TShirt§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.15937503§false§0.7187499§1.0§0.38039216§1.0§0.48125005§false§0.99875§0.0§1.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
 TShirt§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§next image§
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.09296882§10.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.15937503§false§0.7187499§1.0§0.38039216§1.0§0.48125005§false§0.99875§0.0§1.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+TShirt§image strength§0.109375§10.0
+TShirt§constant§0.5§10.0
+TShirt§fbm strength§1.15625§10.0
+TShirt§fbm scale§1.796875§10.0
+TShirt§q strength§0.0234375§10.0
+TShirt§r strength§0.8359375§10.0
+TShirt§frames§360.0§300.0
+STATE_END
