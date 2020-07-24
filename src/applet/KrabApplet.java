@@ -3601,7 +3601,21 @@ public abstract class KrabApplet extends PApplet {
             /* in the first few frames anything drawn to PGraphics somehow don't really persist,
             / so we need to continually update the texture even when the overlay is hidden
             / the fps costs of this are tiny, the shader that draws it is really fast  */
+            preview.beginDraw();
+            drawGradientToTexture(preview, GradientType.HORIZONTAL, blendType);
+            preview.endDraw();
             drawGradientToTexture(pg, gradientType, blendType);
+        }
+
+        void displayOnTray(float x, float y) {
+            pushStyle();
+            stroke(GRAYSCALE_DARK);
+            strokeWeight(1);
+            imageMode(CENTER);
+            image(preview, x - previewTrayBoxMargin - previewTrayBoxWidth,
+                    y - textSize * .5f, previewTrayBoxWidth, previewTrayBoxWidth);
+            popStyle();
+            super.displayOnTray(x, y);
         }
 
         void updateOverlay() {
@@ -3693,18 +3707,10 @@ public abstract class KrabApplet extends PApplet {
         }
 
         private void drawPreview() {
-            preview.beginDraw();
-            drawGradientToTexture(preview, GradientType.HORIZONTAL, blendType);
-            preview.endDraw();
             pushStyle();
             imageMode(CENTER);
             image(preview, previewCenterX, previewCenterY, previewWidth, previewHeight);
-            blendTypePreview();
             popStyle();
-        }
-
-        private void blendTypePreview() {
-
         }
 
         private void updateColorPickers() {

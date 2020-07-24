@@ -307,17 +307,21 @@ float fbm(vec2 p){
 
 float pattern( in vec2 p, out vec2 q, out vec2 r ){
 
-    q.x = fbm( p + vec2(05.0,0.0) );
-    q.y = fbm( p + vec2(5.2,1.3+time));
+    q.x = fbm( p + vec2(15.0,0.0) );
+    q.y = fbm( p + vec2(50.2,10.3));
 
+    r.x = fbm( p + 2.0*q + vec2(2.7+time*.5,9.2) );
+    r.y = fbm( p + 2.0*q + vec2(8.3,2.8-time*.2) );
 
+    return fbm( p + 0.5*r );
+}
 
-    r.x = fbm( p + 1.0*q + vec2(2.7,9.2) );
-    r.y = fbm( p + 1.0*q + vec2(8.3,2.8) );
-
-
-
-    return fbm( p + 0.5*r + q*2.5 );
+float cubicPulse( float c, float w, float x )
+{
+    x = abs(x - c);
+    if( x>w ) return 0.0;
+    x /= w;
+    return 1.0 - x*x*(3.0-2.0*x);
 }
 
 // https://www.iquilezles.org/www/articles/warp/warp.htm
@@ -328,12 +332,13 @@ void main(){
     vec2 uvStatic = uv;
     vec2 t = vec2(cos(time), sin(time));
     vec2 q, r;
-    float fbm = 0.5+0.5*pattern(uv*3.2, q, r);
-//    float graininess = 0.*.15*(1.-2.*hash12(uvStatic*10000));
-    float fNoise = fbm; // + graininess;
+    float mandala = .25*cubicPulse(.25, 0.02, length(cv));
+    float fbm = .5+.5*(pattern(uv*1.5+mandala, q, r));
+//    float graininess = 0.01*(1.-2.*hash12(uvStatic*10000));
+    float fNoise = fbm ; //+ graininess;
     float qNoise = length(q);
     float rNoise = length(r);
-    vec4 c1 = texture(gradient1, vec2(.5, fbm));
+    vec4 c1 = texture(gradient1, vec2(.5, fNoise));
     gl_FragColor = c1;
 }
 
