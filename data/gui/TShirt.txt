@@ -1,0 +1,18 @@
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0000235§10.0
+TShirt§time speed§0.0§10.0
+TShirt§1§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+TShirt§2§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.42187485§false§0.6987497§0.409375§0.878125§0.99215686§1.0§true§0.015624985§0.0§1.0§0.98125§
+TShirt§3§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+TShirt§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§1.1750001§10.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.15937503§false§0.7187499§1.0§0.38039216§1.0§0.48125005§false§0.99875§0.0§1.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+TShirt§frames§360.0§300.0
+STATE_END

@@ -470,20 +470,7 @@ public abstract class KrabApplet extends PApplet {
 
     protected PGraphics updateGraphics(PGraphics pg, int w, int h) {
         if (pg == null || pg.width != w || pg.height != h) {
-            pg = createGraphics(width, height, P3D);
-            pg.beginDraw();
-            pg.background(0);
-            pg.endDraw();
-            pg.beginDraw();
-            pg.background(0);
-            pg.endDraw();
-            pg.beginDraw();
-            pg.background(0);
-            pg.endDraw();
-            pg.beginDraw();
-            pg.background(0);
-            pg.clear();
-            pg.endDraw();
+            pg = createGraphics(w, h, P3D);
         }
         return pg;
     }
