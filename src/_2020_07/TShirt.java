@@ -10,7 +10,7 @@ public class TShirt extends KrabApplet {
     private PGraphics pg;
     private int currentIndex;
     private ArrayList<PImage> images = new ArrayList<>();
-
+    float time = 0;
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
@@ -35,9 +35,13 @@ public class TShirt extends KrabApplet {
         pg = updateGraphics(pg, width*resMultiplier, height*resMultiplier);
         pg.beginDraw();
         String grainy = "shaders/_2020_07/TShirt/grainy.glsl";
-        uniform(grainy).set("time", t*slider("time speed"));
+        time += radians(1)*slider("time speed");
+        uniform(grainy).set("time", time);
         uniform(grainy).set("gradient1", gradient("gradient"));
         uniform(grainy).set("image", images.get(currentIndex));
+
+        // moms spaghetti
+
         group("image");
         if(button("next image")) {
             currentIndex++;
@@ -46,7 +50,16 @@ public class TShirt extends KrabApplet {
         uniform(grainy).set("imageStrength", slider("strength", .2f));
         uniform(grainy).set("imagePos", sliderXY("position"));
         uniform(grainy).set("imageScale", sliderXY("scale", 1f));
+        uniform(grainy).set("imageIntensityBounds", sliderXY("bounds", 0.8f, 3));
         resetGroup();
+
+        group("blur");
+        uniform(grainy).set("innerEdge", slider("inner bound"));
+        uniform(grainy).set("outerEdge", slider("outer bound"));
+        uniform(grainy).set("intensity", slider("intensity"));
+        resetGroup();
+
+
         uniform(grainy).set("constant", slider("constant", 0.5f));
         uniform(grainy).set("fbmStrength", slider("fbm strength", 0.5f));
         uniform(grainy).set("fbmScale", slider("fbm scale", 1.f));

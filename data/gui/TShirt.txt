@@ -31,3 +31,117 @@ TShirt§q strength§0.0234375§10.0
 TShirt§r strength§0.8359375§10.0
 TShirt§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.016015697§1.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.0039062505§0.0§0.0§1.0§0.19374985§false§0.0§1.0§0.0§1.0§0.66250056§false§0.99960935§0.0§1.0§1.0§0.7250005§false§0.99875§0.0§0.0§1.0§1.0§true§0.65664047§0.55625§0.0§1.0§
+TShirt§constant§-0.7560943§10.0
+TShirt§fbm strength§2.3099997§10.0
+TShirt§fbm scale§-0.6023309§100.0
+TShirt§q strength§0.453125§10.0
+TShirt§r strength§0.04296875§10.0
+TShirt§frames§360.0§300.0
+GROUP§image§true
+image§next image§
+image§strength§0.46093756§10.0
+image§position§10.0§-0.11953118§-0.15749998
+image§scale§10.0§1.2718754§1.3203125
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.2453126§1.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.0054687504§0.0§1.0§1.0§0.19374985§false§0.0§1.0§0.0§1.0§0.66250056§false§0.99960935§0.0§1.0§1.0§0.7250005§false§0.99875§0.0§0.0§1.0§1.0§true§0.65664047§0.55625§0.0§1.0§
+TShirt§constant§0.00390625§10.0
+TShirt§fbm strength§-0.68609405§10.0
+TShirt§fbm scale§4.8273563§100.0
+TShirt§q strength§0.19921875§10.0
+TShirt§r strength§0.33203125§10.0
+TShirt§frames§360.0§300.0
+GROUP§image§true
+image§next image§
+image§strength§0.46093756§10.0
+image§position§10.0§-0.11953118§-0.15749998
+image§scale§10.0§1.2718754§1.3203125
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.2453126§1.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.0054687504§0.0§1.0§1.0§0.19374985§false§0.0§1.0§0.0§1.0§0.66250056§false§0.99960935§0.0§1.0§1.0§0.7250005§false§0.99875§0.0§0.0§1.0§1.0§true§0.65664047§0.55625§0.0§1.0§
+TShirt§constant§0.00390625§10.0
+TShirt§fbm strength§-0.68609405§10.0
+TShirt§fbm scale§4.8273563§100.0
+TShirt§q strength§0.19921875§10.0
+TShirt§r strength§0.33203125§10.0
+TShirt§frames§360.0§300.0
+GROUP§image§true
+image§next image§
+image§strength§0.46093756§10.0
+image§position§10.0§-0.11953118§-0.15749998
+image§scale§10.0§1.2718754§1.3203125
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.2453126§1.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.0054687504§0.0§1.0§1.0§0.19374985§false§0.0§1.0§0.0§1.0§0.66250056§false§0.99960935§0.0§1.0§1.0§0.7250005§false§0.99875§0.0§0.0§1.0§1.0§true§0.65664047§0.55625§0.0§1.0§
+TShirt§constant§0.00390625§10.0
+TShirt§fbm strength§-0.68609405§10.0
+TShirt§fbm scale§4.8273563§100.0
+TShirt§q strength§0.19921875§10.0
+TShirt§r strength§0.33203125§10.0
+TShirt§frames§360.0§300.0
+GROUP§image§true
+image§next image§
+image§strength§0.46093756§10.0
+image§position§10.0§-0.11953118§-0.15749998
+image§scale§10.0§1.2718754§1.3203125
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.2453126§1.0
+TShirt§gradient§vertical§rgb lerp§0.0§true§0.62070316§0.575§0.26875§1.0§0.26250067§false§0.14328115§0.0§1.0§1.0§1.0§true§0.65664047§0.55625§0.0§1.0§
+TShirt§constant§0.01953125§10.0
+TShirt§fbm strength§0.040468454§10.0
+TShirt§fbm scale§25.569336§10000.0
+TShirt§q strength§0.0625§10.0
+TShirt§r strength§0.0625§10.0
+TShirt§frames§360.0§300.0
+GROUP§image§true
+image§next image§
+image§strength§0.08203131§10.0
+image§position§10.0§-0.11953118§-0.15749998
+image§scale§10.0§1.2718754§1.3203125
+image§bounds§100.0§0.95624995§1.0703125
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§TShirt§true
+TShirt§res mult§1.0054741§10.0
+TShirt§time speed§0.9875012§100.0
+TShirt§gradient§vertical§hsv lerp§0.0§true§0.97667193§0.0§0.0§1.0§0.9156251§false§0.57387155§0.48125§1.0§1.0§1.0§true§0.7911403§0.0§1.0§1.0§
+TShirt§constant§0.59000194§10.0
+TShirt§fbm strength§0.3700056§10.0
+TShirt§fbm scale§16.82§100.0
+TShirt§q strength§0.43999845§10.0
+TShirt§r strength§0.41000006§10.0
+TShirt§frames§360.0§300.0
+GROUP§image§true
+image§next image§
+image§strength§-15.04999§10.0
+image§position§10.0§-0.32281289§-0.18390614
+image§scale§10.0§1.6428137§1.4414062
+image§bounds§100.0§0.37968773§5.8109407
+GROUP§blur§true
+blur§inner bound§0.0§10.0
+blur§outer bound§0.026093911§10.0
+blur§intensity§5.0968947§100.0
+STATE_END

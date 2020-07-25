@@ -6,12 +6,16 @@ uniform float time;
 uniform float imageStrength;
 uniform vec3 imagePos;
 uniform vec3 imageScale;
+uniform vec3 imageIntensityBounds;
 uniform float fbmStrength;
 uniform float qStrength;
 uniform float rStrength;
 uniform float fbmScale;
 uniform float constant;
 
+uniform float innerEdge;
+uniform float outerEdge;
+uniform float intensity;
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
 float permute(float x){ return floor(mod(((x*34.0)+1.0)*x, 289.0)); }
@@ -319,12 +323,43 @@ float pattern( in vec2 p, out vec2 q, out vec2 r ){
     q.x = fbm( p + vec2(05.0,0.0) );
     q.y = fbm( p + vec2(5.2,1.3));
 
-
-
-    r.x = fbm( p + 4.0*q + vec2(2.7-time,9.2) );
-    r.y = fbm( p + 4.0*q + vec2(8.3,2.8+time) );
+    r.x = fbm( p + 2.0*q + vec2(2.7-time,9.2) );
+    r.y = fbm( p + 1.0*q + vec2(8.3,2.8+time) );
 
     return fbm( p + 0.5*r + q*2.5 );
+}
+
+vec3 blur(sampler2D tex, vec2 uv){
+    vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
+    float offset = 1. / resolution.x;
+    offset  *= 1. + intensity*smoothstep(innerEdge, outerEdge, length(cv));
+    // Grouping texcoord variables in order to make it work in the GMA 950. See post #13
+    // in this thread:
+    // http://www.idevgames.com/forums/thread-3467.html
+    vec2 tc0 = uv + vec2(-offset, -offset);
+    vec2 tc1 = uv + vec2(0.0, -offset);
+    vec2 tc2 = uv + vec2(+offset, -offset);
+    vec2 tc3 = uv + vec2(-offset, 0.0);
+    vec2 tc4 = uv + vec2(0.0, 0.0);
+    vec2 tc5 = uv + vec2(+offset, 0.0);
+    vec2 tc6 = uv + vec2(-offset, +offset);
+    vec2 tc7 = uv + vec2(0.0, +offset);
+    vec2 tc8 = uv + vec2(+offset, +offset);
+
+    vec4 col0 = texture2D(tex, tc0);
+    vec4 col1 = texture2D(tex, tc1);
+    vec4 col2 = texture2D(tex, tc2);
+    vec4 col3 = texture2D(tex, tc3);
+    vec4 col4 = texture2D(tex, tc4);
+    vec4 col5 = texture2D(tex, tc5);
+    vec4 col6 = texture2D(tex, tc6);
+    vec4 col7 = texture2D(tex, tc7);
+    vec4 col8 = texture2D(tex, tc8);
+
+    vec4 sum = (1.0 * col0 + 2.0 * col1 + 1.0 * col2 +
+    2.0 * col3 + 4.0 * col4 + 2.0 * col5 +
+    1.0 * col6 + 2.0 * col7 + 1.0 * col8) / 16.0;
+    return sum.rgb;
 }
 
 // https://www.iquilezles.org/www/articles/warp/warp.htm
@@ -336,11 +371,12 @@ void main(){
     vec2 t = vec2(cos(time), sin(time));
     vec2 q, r;
     float fbm = 0.5+0.5*pattern(uv*fbmScale, q, r);
-//    float graininess = 0.*.15*(1.-2.*hash12(uvStatic*10000));
-    float fNoise = fbm; // + graininess;
+    float graininess = .15*(1.-2.*hash12(uvStatic*10000));
+    float fNoise = fbm + graininess;
     float qNoise = length(q);
     float rNoise = length(r);
-    float imageIntensity = length(texture(image, imagePos.xy+uvStatic*imageScale.xy).rgb);
+    float imageIntensity = length(blur(image, imagePos.xy+uvStatic*imageScale.xy).rgb);
+    imageIntensity = smoothstep(imageIntensityBounds.x, imageIntensityBounds.y, imageIntensity);
     vec4 c1 = texture(gradient1, vec2(.5, constant+fbmStrength*fbm+q*qStrength+r*rStrength+imageStrength*imageIntensity));
     gl_FragColor = c1;
 }
