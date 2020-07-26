@@ -1,9 +1,10 @@
 uniform sampler2D texture;
 uniform sampler2D gradient1;
+uniform sampler2D gradient2;
+uniform sampler2D gradient3;
 uniform sampler2D image;
 uniform vec2 resolution;
 uniform float time;
-uniform float imageStrength;
 uniform vec3 imagePos;
 uniform vec3 imageScale;
 uniform vec3 imageIntensityBounds;
@@ -12,7 +13,9 @@ uniform float qStrength;
 uniform float rStrength;
 uniform float fbmScale;
 uniform float constant;
-
+uniform int borderShape;
+uniform float borderSize;
+uniform float borderTransition;
 uniform float innerEdge;
 uniform float outerEdge;
 uniform float intensity;
@@ -320,13 +323,13 @@ float fbm(vec2 p){
 
 float pattern( in vec2 p, out vec2 q, out vec2 r ){
 
-    q.x = fbm( p + vec2(05.0,0.0) );
-    q.y = fbm( p + vec2(5.2,1.3));
+    q.x = fbm( p + vec2(5.0,0.0) );
+    q.y = fbm( p + vec2(2,1.3));
 
-    r.x = fbm( p + 2.0*q + vec2(2.7-time,9.2) );
-    r.y = fbm( p + 1.0*q + vec2(8.3,2.8+time) );
+    r.x = fbm( p + 40.0*q + vec2(1.7-time,9.2) );
+    r.y = fbm( p + 10.0*q + vec2(1.3,2.8+time) );
 
-    return fbm( p + 0.5*r + q*2.5 );
+    return fbm( p + 2.*r);
 }
 
 vec3 blur(sampler2D tex, vec2 uv){
@@ -371,14 +374,23 @@ void main(){
     vec2 t = vec2(cos(time), sin(time));
     vec2 q, r;
     float fbm = 0.5+0.5*pattern(uv*fbmScale, q, r);
-    float graininess = .15*(1.-2.*hash12(uvStatic*10000));
-    float fNoise = fbm + graininess;
+    float fNoise = fbm;
     float qNoise = length(q);
     float rNoise = length(r);
     float imageIntensity = length(blur(image, imagePos.xy+uvStatic*imageScale.xy).rgb);
-    imageIntensity = smoothstep(imageIntensityBounds.x, imageIntensityBounds.y, imageIntensity);
-    vec4 c1 = texture(gradient1, vec2(.5, constant+fbmStrength*fbm+q*qStrength+r*rStrength+imageStrength*imageIntensity));
-    gl_FragColor = c1;
+//    imageIntensity = smoothstep(imageIntensityBounds.x, imageIntensityBounds.y, imageIntensity);
+    vec4 clr = texture(gradient1, vec2(.5, constant+fbmStrength*fbm+q*qStrength+r*rStrength));
+    clr = mix(clr, texture(gradient2, vec2(.5, constant+fbmStrength*fbm+q*qStrength+r*rStrength)), pow(1.-imageIntensity/3., 2.));
+    float d;
+    if(borderShape == 0){
+         d= max(abs(cv.y), abs(cv.x));
+    }else if(borderShape == 1){
+        d = length(cv);
+    }
+    float border = smoothstep(borderSize-borderTransition, borderSize+borderTransition, d);
+    vec4 borderTex = texture(gradient3, vec2(.5, constant+fbmStrength*fbm+q*qStrength+r*rStrength));
+    clr = mix(clr, borderTex, border);
+    gl_FragColor = clr;
 }
 
 
