@@ -3610,10 +3610,14 @@ public abstract class KrabApplet extends PApplet {
         void displayOnTray(float x, float y) {
             pushStyle();
             stroke(GRAYSCALE_DARK);
-            strokeWeight(1);
             imageMode(CENTER);
-            image(preview, x - previewTrayBoxMargin - previewTrayBoxWidth,
-                    y - textSize * .5f, previewTrayBoxWidth, previewTrayBoxWidth);
+            float previewX = x - previewTrayBoxMargin - previewTrayBoxWidth;
+            float previewY = y - textSize * .5f;
+            image(preview, previewX, previewY, previewTrayBoxWidth, previewTrayBoxWidth);
+            rectMode(CENTER);
+            strokeWeight(1);
+            noFill();
+            rect(previewX, previewY, previewTrayBoxWidth, previewTrayBoxWidth);
             popStyle();
             super.displayOnTray(x, y);
         }

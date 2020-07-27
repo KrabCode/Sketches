@@ -443,7 +443,7 @@ STATE_END
 STATE_BEGIN
 UNDO
 GROUP§TShirt§true
-TShirt§res mult§5.000005§100.0
+TShirt§res mult§1.00000§100.0
 TShirt§time speed§0.21750122§10.0
 TShirt§1§vertical§rgb lerp§0.0§true§0.032000083§1.0§0.0§1.0§1.0§true§0.6446252§0.0§0.0§1.0§
 TShirt§2§vertical§sat lerp§0.0§true§0.031500082§0.0§0.0§1.0§0.24687539§false§0.70849997§1.0§1.0§1.0§0.8249991§false§0.09299986§0.6§1.0§1.0§1.0§true§0.6496252§0.0§1.0§1.0§
