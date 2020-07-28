@@ -59,17 +59,20 @@ public class ChaosField extends KrabApplet {
                 float w = width / (float) count;
                 pg.noStroke();
                 pg.beginShape();
-                vertexFilled(pg, x, y);
-                vertexFilled(pg, x + w, y);
-                vertexFilled(pg, x + w, y + h);
-                vertexFilled(pg, x, y + h);
+                pg.fill(gradientColorAt("foreground", norm(baseX + baseY, -width, width)));
+                pg.vertex(x,y);
+                pg.fill(gradientColorAt("foreground", norm(baseX + w + baseY, -width, width)));
+                pg.vertex( x + w, y);
+                pg.fill(gradientColorAt("foreground", norm(baseX + w + baseY + h, -width, width)));
+                pg.vertex(x + w, y + h);
+                pg.fill(gradientColorAt("foreground", norm(baseX + baseY + h, -width, width)));
+                pg.vertex(x, y + h);
                 pg.endShape(CLOSE);
             }
         }
     }
 
     void vertexFilled(PGraphics pg, float x, float y) {
-        pg.fill(gradientColorAt("foreground", norm(x + y, -width, width)));
-        pg.vertex(x, y);
+
     }
 }
