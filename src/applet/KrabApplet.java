@@ -21,7 +21,6 @@ import static java.lang.System.currentTimeMillis;
 
 // TODO default alpha
 // TODO migrate saving gui data from custom silly format to json
-// TODO make getColorAt() for gradient editors and make it more efficient than get()
 
 public abstract class KrabApplet extends PApplet {
     protected static Boolean FFMPEG_ENABLED = true;
@@ -329,6 +328,28 @@ public abstract class KrabApplet extends PApplet {
         GradientEditor gradientEditor = (GradientEditor) findElement(name, currentGroup.name);
         if (gradientEditor != null) {
             return gradientEditor.getTexture(w, h);
+        }
+        throw new IllegalStateException("gradient picker was not found");
+    }
+
+    protected int gradientColorAt(String name, float x) {
+        return gradientColorAt(name, 2, GradientType.VERTICAL, width, height, x);
+    }
+
+    protected int gradientColorAt(String name, int w, int h, float x) {
+        return gradientColorAt(name, 2, GradientType.VERTICAL, w, h, x);
+    }
+
+    protected int gradientColorAt(String name,  int defaultColorCount, GradientType defaultType, int w, int h,
+                                   float x){
+        Group currentGroup = getCurrentGroup();
+        if (elementDoesntExist(name, currentGroup.name)) {
+            GradientEditor newElement = new GradientEditor(currentGroup, name, defaultColorCount, w, h, defaultType);
+            currentGroup.elements.add(newElement);
+        }
+        GradientEditor gradientEditor = (GradientEditor) findElement(name, currentGroup.name);
+        if (gradientEditor != null) {
+            return gradientEditor.getColorAt(x);
         }
         throw new IllegalStateException("gradient picker was not found");
     }
@@ -3593,6 +3614,25 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
+        private int getColorAt(float x){
+            x = constrain(x, 0, 1);
+            int prevPosIndex = 0;
+            int nextPosIndex = 1;
+            for (int i = 0; i < pickers.size()-1; i++) {
+                ColorPicker picker = pickers.get(i);
+                if (x >= picker.gradientPosition) {
+                    prevPosIndex = i;
+                    nextPosIndex = i + 1;
+                }
+            }
+            float lerpAmtBetweenPrevAndNextPos = norm(x,
+                    pickers.get(prevPosIndex).gradientPosition,
+                    pickers.get(nextPosIndex).gradientPosition);
+            HSBA prevColor = pickers.get(prevPosIndex).getHSBA();
+            HSBA nextColor = pickers.get(nextPosIndex).getHSBA();
+            return lerpColor(prevColor.clr(), nextColor.clr(), lerpAmtBetweenPrevAndNextPos);
+        }
+
         boolean canHaveOverlay() {
             return true;
         }
@@ -3741,7 +3781,10 @@ public abstract class KrabApplet extends PApplet {
                         if (held == null) {
                             held = picker;
                         }
-                        blockDeselectionUntilMouseRelease = true;
+                        boolean mouseMoved = mouseX != pmouseX || mouseY != pmouseY;
+                        if(mouseMoved){
+                            blockDeselectionUntilMouseRelease = true;
+                        }
                     }
                     if (mouseJustPressedOutsideTray() && !isPickerSelected(picker)) {
                         selected = picker;
