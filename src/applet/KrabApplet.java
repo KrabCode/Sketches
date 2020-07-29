@@ -489,12 +489,21 @@ public abstract class KrabApplet extends PApplet {
         return updateGraphics(pg, width, height);
     }
 
+    protected PGraphics updateGraphics(PGraphics pg, String renderer) {
+        return updateGraphics(pg, width, height, renderer);
+    }
+
     protected PGraphics updateGraphics(PGraphics pg, int w, int h) {
+        return updateGraphics(pg, w, h, P3D);
+    }
+
+    protected PGraphics updateGraphics(PGraphics pg, int w, int h, String renderer) {
         if (pg == null || pg.width != w || pg.height != h) {
-            pg = createGraphics(w, h, P3D);
+            pg = createGraphics(w, h, renderer);
         }
         return pg;
     }
+
 
     public static void println(String str) {
         PApplet.println(getTime(), str);

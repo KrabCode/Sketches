@@ -1,0 +1,71 @@
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.0§10.0
+ChaosField§grid count§31.073997§200.0
+ChaosField§scale const§0.1§1.0
+ChaosField§scale gauss§0.46000022§10.0
+ChaosField§tile count§10.097068§200.0
+ChaosField§explode from center§-0.010000685§10.0
+ChaosField§angle freq§6.396147E-5§0.010000001
+ChaosField§angle range§3.5699997§10.0
+ChaosField§offset freq§7.0013234E-4§0.1
+ChaosField§offset mag§415.01§10000.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.64199996§1.0§0.0§1.0§0.53125006§false§0.6495002§0.746875§1.0§1.0§0.6125§false§0.9692565§0.640625§0.59375§1.0§1.0§true§0.008256357§0.296875§1.0§1.0§
+ChaosField§stroke§0.0§0.0§0.5§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.0§10.0
+ChaosField§grid count§30.932384§200.0
+ChaosField§scale const§-0.25400016§1.0
+ChaosField§scale gauss§0.48000032§10.0
+ChaosField§tile count§8.071828§20.0
+ChaosField§explode from center§-0.010000685§10.0
+ChaosField§angle freq§2.2396147E-4§0.010000001
+ChaosField§angle range§3.7699995§10.0
+ChaosField§offset freq§2.0013005E-4§0.1
+ChaosField§offset noise strength§296.13§1000.0
+ChaosField§offset const§360.19§1000.0
+ChaosField§offset gauss§-320.1§1000.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.641§0.0§1.0§1.0§0.25624993§false§0.6495002§0.665625§1.0§1.0§0.5624998§false§0.9692565§0.50625§0.725§1.0§1.0§true§0.008256357§0.296875§1.0§1.0§
+ChaosField§stroke§0.0§0.0§0.5§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.0§10.0
+ChaosField§grid count§82.07098§200.0
+ChaosField§scale const§-0.25400016§1.0
+ChaosField§scale gauss§0.48000032§10.0
+ChaosField§tile count§8.071828§20.0
+ChaosField§explode from center§-0.010000685§10.0
+ChaosField§angle freq§2.2396147E-4§0.010000001
+ChaosField§angle range§3.7699995§10.0
+ChaosField§offset freq§2.0013005E-4§0.1
+ChaosField§offset noise strength§296.13§1000.0
+ChaosField§offset const§360.19§1000.0
+ChaosField§offset gauss§-320.1§1000.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.641§0.0§1.0§1.0§0.25624993§false§0.6495002§0.665625§1.0§1.0§0.5624998§false§0.9692565§0.50625§0.725§1.0§1.0§true§0.008256357§0.296875§1.0§1.0§
+ChaosField§stroke§0.0§0.0§0.5§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.0§10.0
+ChaosField§grid count§14.99999§200.0
+ChaosField§global rotate§0.08999996§10.0
+ChaosField§scale const§9.995495E-4§1.0
+ChaosField§scale gauss§0.13000031§10.0
+ChaosField§tile count§8.011333§20.0
+ChaosField§explode from center§-0.010000685§10.0
+ChaosField§angle freq§2.2396147E-4§0.010000001
+ChaosField§angle range§3.7699995§10.0
+ChaosField§offset freq§2.0013005E-4§0.1
+ChaosField§offset noise strength§296.13§1000.0
+ChaosField§offset const§360.19§1000.0
+ChaosField§offset gauss§-320.1§1000.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.641§0.0§1.0§1.0§0.25624993§false§0.6495002§0.665625§1.0§1.0§0.5624998§false§0.9692565§0.50625§0.725§1.0§1.0§true§0.008256357§0.296875§1.0§1.0§
+ChaosField§stroke§0.0§0.0§0.5§1.0§1.0
+STATE_END
