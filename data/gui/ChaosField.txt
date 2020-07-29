@@ -176,3 +176,92 @@ tiles§noise amp§532.62§2000.0
 tiles§from center§0.0§10.0
 tiles§noise rotation mult§0.015999986§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.52000004§1.0§0.0§1.0§1.0
+ChaosField§grid count§14.992659§200.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.063411735§0.415625§1.0§1.0§0.47187492§false§0.063411735§0.5125§1.0§1.0§0.5624995§false§0.59133714§0.540625§0.69411767§1.0§1.0§true§0.6607563§1.0§1.0§1.0§
+ChaosField§stroke§0.9729999§0.0§1.0§1.0§10.0
+ChaosField§weight§7.640001§10.0
+ChaosField§no stroke§false
+GROUP§grids§true
+grids§noise time§0.45000014§100.0
+grids§global rotate§2.0§10.0
+grids§scale const§-0.29§10.0
+grids§scale gauss§0.83000016§10.0
+grids§tile count§5.0008254§200.0
+GROUP§tiles§true
+tiles§noise freq§7.6997775E-4§0.010000001
+tiles§scale amp mult§-1017.17§300.0
+tiles§noise amp§10.0§20.0
+tiles§from center§-32.650005§100.0
+tiles§noise rotation mult§0.015999986§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.52000004§1.0§0.0§1.0§1.0
+ChaosField§grid count§13.00001§200.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.8394117§1.0§0.596875§1.0§0.21249998§false§0.9721566§1.0§1.0§1.0§0.42500007§false§0.16223982§0.79375§1.0§1.0§0.634375§false§0.2541666§0.821875§0.6375§1.0§0.75937504§false§0.6053333§0.784375§1.0§1.0§1.0§true§0.8394117§1.0§0.596875§1.0§
+ChaosField§stroke§0.630953§0.0§0.0§1.0§10.0
+ChaosField§weight§8.969686§100.0
+ChaosField§no stroke§false
+GROUP§grids§true
+grids§noise time§0.4789066§10.0
+grids§global rotate§6.8164062§10.0
+grids§scale const§-5.469164E-4§1.0
+grids§scale gauss§0.1460939§1.0
+grids§tile count§8.999487§200.0
+GROUP§tiles§true
+tiles§noise freq§8.285729E-4§0.10000002
+tiles§scale amp mult§166.89258§3000.0
+tiles§noise amp§372.39062§20000.0
+tiles§from center§35.04541§10000.0
+tiles§noise rotation mult§0.0077966857§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.52000004§1.0§0.0§1.0§1.0
+ChaosField§grid count§22.93834§200.0
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.8394117§1.0§0.596875§1.0§0.21249998§false§0.9721566§1.0§1.0§1.0§0.42500007§false§0.16223982§0.79375§1.0§1.0§0.634375§false§0.2541666§0.821875§0.6375§1.0§0.75937504§false§0.6053333§0.784375§1.0§1.0§1.0§true§0.8394117§1.0§0.596875§1.0§
+ChaosField§stroke§0.630953§0.0§0.0§1.0§10.0
+ChaosField§weight§8.969686§100.0
+ChaosField§no stroke§false
+GROUP§grids§true
+grids§noise time§0.4789066§10.0
+grids§global rotate§0.89640194§10.0
+grids§scale const§0.0044530416§1.0
+grids§scale gauss§0.14509387§1.0
+grids§tile count§8.999487§200.0
+GROUP§tiles§true
+tiles§noise freq§0.0023285733§0.10000002
+tiles§scale amp mult§166.89258§3000.0
+tiles§noise amp§232.39062§20000.0
+tiles§from center§15.04541§10000.0
+tiles§noise rotation mult§0.01579669§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChaosField§true
+ChaosField§bg§0.6053333§0.690625§1.0§1.0§1.0
+ChaosField§grid count§35.00004§200.0
+ChaosField§reset gaussians§
+ChaosField§fill§vertical§rgb lerp§0.0§true§0.8394117§1.0§0.596875§1.0§0.21249998§false§0.9721566§1.0§1.0§1.0§0.42500007§false§0.16223982§0.79375§1.0§1.0§0.634375§false§0.2541666§0.821875§0.6375§1.0§0.79687506§false§0.6053333§0.690625§1.0§1.0§1.0§true§0.8394117§1.0§0.596875§1.0§
+ChaosField§stroke§0.630953§0.0§0.0§1.0§10.0
+ChaosField§weight§7.6696854§100.0
+ChaosField§no stroke§false
+GROUP§grids§true
+grids§noise time§0.4789066§10.0
+grids§global rotate§8.186405§10.0
+grids§scale const§0.2844531§1.0
+grids§scale gauss§-0.35290596§1.0
+grids§tile count§8.999487§200.0
+GROUP§tiles§true
+tiles§noise freq§0.001538573§0.010000002
+tiles§scale amp mult§166.89258§3000.0
+tiles§noise amp§232.39062§20000.0
+tiles§from center§15.04541§10000.0
+tiles§noise rotation mult§0.01579669§1.0
+STATE_END

@@ -60,7 +60,8 @@ public class ChaosField extends KrabApplet {
     }
 
     public void settings() {
-        size(1000, 1000, P2D);
+//        size(1000, 1000, P2D);
+        fullScreen(P2D);
     }
 
     public void setup() {
@@ -84,6 +85,9 @@ public class ChaosField extends KrabApplet {
 
     void updateGrids(PGraphics pg) {
         int gridCount = sliderInt("grid count", 10);
+        if(button("reset gaussians")) {
+            absGaussians.clear();
+        }
         for (int i = 0; i < gridCount; i++) {
             group("grids");
             PVector pos = new PVector(-width / 2f + width * hash(7.214f + i * 310.124f),
@@ -98,11 +102,11 @@ public class ChaosField extends KrabApplet {
             int tileCount = sliderInt("tile count", 10);
             for (int yi = 0; yi < tileCount; yi++) {
                 float yNorm = norm(yi, 0, tileCount-1);
-                float baseY = (-height / 2f) + yNorm * height;
-                float h = height / (float) tileCount;
+                float baseY = (-min(height, width) / 2f) + yNorm * min(height, width);
+                float h = min(width, height) / (float) tileCount;
                 for (int xi = 0; xi < tileCount; xi++) {
                     float xNorm = norm(xi, 0, tileCount-1);
-                    float baseX = (-width / 2f) + xNorm * width;
+                    float baseX = (-width / 2f) + xNorm * min(height, width);
 
                     group("tiles");
 
@@ -117,10 +121,10 @@ public class ChaosField extends KrabApplet {
                     float localRotation = radians(noiseX+noiseY)*slider("noise rotation mult");
                     pg.pushMatrix();
                     resetGroup();
-                    float w = width / (float) tileCount;
+                    float w = min(width,height) / (float) tileCount;
                     float x = baseX + fromCenter.x + noiseX;
                     float y = baseY + fromCenter.y + noiseY;
-                    pg.fill(gradientColorAt("fill", norm(baseX + baseY, -width, width)));
+                    pg.fill(gradientColorAt("fill", norm(baseX + baseY, -min(height, width), min(height, width))));
                     pg.stroke(picker("stroke").clr());
                     pg.strokeWeight(slider("weight", 1));
                     if(toggle("no stroke")){
