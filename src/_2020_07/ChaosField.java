@@ -1,6 +1,7 @@
 package _2020_07;
 
 import applet.KrabApplet;
+import processing.core.PApplet;
 import processing.core.PGraphics;
 import processing.core.PVector;
 import utils.OpenSimplexNoise;
@@ -56,6 +57,7 @@ public class ChaosField extends KrabApplet {
     private PVector zero = new PVector();
 
     public static void main(String[] args) {
+//        KrabApplet.main("_2020_07.ChaosField");
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
 

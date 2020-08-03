@@ -114,6 +114,7 @@ public abstract class KrabApplet extends PApplet {
             new PVector(0, 0, 1)};
     @SuppressWarnings("FieldCanBeLocal")
     private final String videoOutputDir = "/out/video";
+    @SuppressWarnings("FieldCanBeLocal")
     private final String imageOutputDir = "/out/image";
     protected String captureDir;
     protected String id = regenIdAndCaptureDir();
@@ -332,16 +333,19 @@ public abstract class KrabApplet extends PApplet {
         throw new IllegalStateException("gradient picker was not found");
     }
 
+    @SuppressWarnings("SameParameterValue")
     protected int gradientColorAt(String name, float x) {
         return gradientColorAt(name, 2, GradientType.VERTICAL, width, height, x);
     }
 
+    @SuppressWarnings("unused")
     protected int gradientColorAt(String name, int w, int h, float x) {
         return gradientColorAt(name, 2, GradientType.VERTICAL, w, h, x);
     }
 
-    protected int gradientColorAt(String name,  int defaultColorCount, GradientType defaultType, int w, int h,
-                                   float x){
+    @SuppressWarnings("SameParameterValue")
+    protected int gradientColorAt(String name, int defaultColorCount, GradientType defaultType, int w, int h,
+                                  float x){
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
             GradientEditor newElement = new GradientEditor(currentGroup, name, defaultColorCount, w, h, defaultType);
@@ -2210,12 +2214,12 @@ public abstract class KrabApplet extends PApplet {
                 compiledShader = candidate;
                 compiledOk = true;
                 fragLastKnownModified = lastModified;
-                println("✔ compiled", fragPath != null ? fragFile.getName() : "",
+                println("OK compiled", fragPath != null ? fragFile.getName() : "",
                         vertPath != null ? vertFile.getName() : "");
             } catch (Exception ex) {
                 lastKnownUncompilable = lastModified;
-                println("❌" + (fragPath != null ? " " + fragFile.getName() : ""),
-                        (vertPath != null ? " " + vertFile.getName() : ""));
+                println("ERROR in" + (fragPath != null ? " " + fragFile.getName() : ""),
+                                     (vertPath != null ? " or " + vertFile.getName() : ""));
                 println(ex.getMessage());
             }
         }
