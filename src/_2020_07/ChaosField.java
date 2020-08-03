@@ -9,7 +9,7 @@ import utils.OpenSimplexNoise;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-// Made in collaboration between Krabcode and Kggsa
+// Made in collaboration between Krabcode, Kggsa, Jauska and Jett
 // inspired by Allyson Grey, see https://www.allysongrey.com/art/watercolors/chaos-field
 
 /*
@@ -41,13 +41,7 @@ import java.util.Comparator;
  *  as the tile shape themselves and I think circles on a square layout would look as cool as circles on a triangle
  * layout and on a hexagon layout.
  * ---------
- *
- * Krab's notes:
- *
- * Independent layout and tile logic & sliders
- *
- * draw n overlapping grids of 'hand drawn' squares at random positions and scales
- * gradient spans each grid diagonally, coloring each square in the appropriate sub-gradient
+ * Overhauled and continued in _2020_08.ChaosField_2
  *
  * */
 public class ChaosField extends KrabApplet {

@@ -223,6 +223,17 @@ public abstract class KrabApplet extends PApplet {
         return slider.value;
     }
 
+    protected void sliderSet(String name, float valueToSet){
+        Group currentGroup = getCurrentGroup();
+        if (elementDoesntExist(name, currentGroup.name)) {
+            SliderFloat newElement = new SliderFloat(currentGroup, name, 0, 0,
+                    false, -Float.MAX_VALUE, Float.MAX_VALUE, false);
+            currentGroup.elements.add(newElement);
+        }
+        SliderFloat slider = (SliderFloat) findElement(name, currentGroup.name);
+        slider.value = valueToSet;
+    }
+
     protected PVector sliderXY() {
         return sliderXY("xy");
     }
@@ -397,6 +408,18 @@ public abstract class KrabApplet extends PApplet {
         Toggle toggle = (Toggle) findElement(name, currentGroup.name);
         return toggle.checked;
     }
+
+
+    protected void toggleSet(String name, boolean stateToSet) {
+        Group currentGroup = getCurrentGroup();
+        if (elementDoesntExist(name, currentGroup.name)) {
+            return;
+        }
+        Toggle toggle = (Toggle) findElement(name, currentGroup.name);
+        toggle.checked = stateToSet;
+    }
+
+
 
     protected String textInput(String name) {
         return textInput(name, "");
@@ -1403,7 +1426,7 @@ public abstract class KrabApplet extends PApplet {
         if (activated("", x, y, w, h) || actionsContainsLockAware(ACTION_SAVE)) {
             saveAnimationStarted = frameCount;
             saveStateToFile();
-            println("✔ settings saved");
+            println("settings saved");
         }
         if (hide) {
             return;
@@ -1452,7 +1475,6 @@ public abstract class KrabApplet extends PApplet {
         vertex((direction ? -1 : 1) * w * radiusMultiplier * .5f, 0);
         vertex((direction ? -1 : 1) * w * radiusMultiplier * .55f, h * .1f);
         endShape();
-
         popMatrix();
     }
 
@@ -2215,12 +2237,12 @@ public abstract class KrabApplet extends PApplet {
                 compiledShader = candidate;
                 compiledOk = true;
                 fragLastKnownModified = lastModified;
-                println("OK compiled", fragPath != null ? fragFile.getName() : "",
+                println("compiled", fragPath != null ? fragFile.getName() : "",
                         vertPath != null ? vertFile.getName() : "");
             } catch (Exception ex) {
                 lastKnownUncompilable = lastModified;
-                println("ERROR in" + (fragPath != null ? " " + fragFile.getName() : ""),
-                                     (vertPath != null ? " or " + vertFile.getName() : ""));
+                println((fragPath != null ? " " + fragFile.getName() : ""),
+                         (vertPath != null ? " or " + vertFile.getName() : "") + ":");
                 println(ex.getMessage());
             }
         }
