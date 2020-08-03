@@ -19,7 +19,8 @@ import static java.lang.System.currentTimeMillis;
  * See the GuiManual in readme for documentation.
  */
 
-// TODO default alpha
+// TODO tray scroll limit
+// TODO fix tray width hitting the gradient picker at certain resolutions
 // TODO migrate saving gui data from custom silly format to json
 
 public abstract class KrabApplet extends PApplet {
