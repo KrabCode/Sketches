@@ -1,0 +1,132 @@
+STATE_BEGIN
+UNDO
+GROUP§ChaosField_2§true
+GROUP§global§true
+global§noise speed§0.7265625§10.0
+global§background§vertical§rgb lerp§0.0§true§0.8394117§1.0§0.596875§1.0§1.0§true§0.8394117§1.0§0.596875§1.0§
+global§stroke§0.0§0.0§0.0§1.0§1.0
+global§weight (< 2)§2.9039063§10.0
+global§grid count§10.000319§100.0
+global§color speed§1.0000012§100.0
+global§gradient§vertical§rgb lerp§0.0§true§0.8394117§1.0§0.596875§1.0§0.21249998§false§0.9721566§1.0§1.0§1.0§0.5218754§false§0.16223982§0.79375§1.0§1.0§0.5906248§false§0.2541666§0.821875§0.6375§1.0§0.6562497§false§0.6053333§0.690625§1.0§1.0§1.0§true§0.8394117§1.0§0.596875§1.0§
+GROUP§grid 1§false
+grid 1§position§1000.0§428.04688§-49.179688
+grid 1§rotation§0.1484375§10.0
+grid 1§size§2893.125§40000.0
+grid 1§padding§-0.0039100647§10.0
+grid 1§noise pos§100.0§1.3000001§2.6000001
+grid 1§noise freq§0.09765625§10.0
+grid 1§noise amp§4.4453125§1000.0
+grid 1§threshold (0-1)§0.0§1.0
+grid 1§noise rotation§0.0703125§10.0
+grid 1§mouse edit§false
+grid 1§reset edits§
+GROUP§grid 2§false
+grid 2§position§30000.0§-542.875§-229.28516
+grid 2§rotation§-0.25390625§10.0
+grid 2§size§1445.4375§400.0
+grid 2§padding§-0.0039100647§20.0
+grid 2§noise pos§10.0§7.9023438§4.2226562
+grid 2§noise freq§-0.3359375§10.0
+grid 2§noise amp§25.175781§100.0
+grid 2§threshold (0-1)§0.61562496§1.0
+grid 2§noise rotation§0.03515625§10.0
+grid 2§mouse edit§false
+grid 2§reset edits§
+GROUP§grid 3§false
+grid 3§position§10000.0§296.875§-11.71875
+grid 3§rotation§0.18359375§10.0
+grid 3§size§967.5§4000.0
+grid 3§padding§0.0§10.0
+grid 3§noise pos§10000.0§1399.6094§114.84375
+grid 3§noise freq§2.6171875§10.0
+grid 3§noise amp§13.421875§100.0
+grid 3§threshold (0-1)§0.0§1.0
+grid 3§noise rotation§0.0§10.0
+grid 3§mouse edit§false
+grid 3§reset edits§
+GROUP§grid 4§false
+grid 4§position§10000.0§-523.4375§48.046875
+grid 4§rotation§-0.22265625§10.0
+grid 4§size§1280.0§40.0
+grid 4§padding§0.0§10.0
+grid 4§noise pos§1000.0§0.0§0.0
+grid 4§noise freq§0.4375§10.0
+grid 4§noise amp§32.523438§100.0
+grid 4§threshold (0-1)§0.0§1.0
+grid 4§noise rotation§0.0§10.0
+grid 4§mouse edit§false
+grid 4§reset edits§
+GROUP§grid 5§false
+grid 5§position§1000.0§-160.0§38.0
+grid 5§rotation§0.2000001§10.0
+grid 5§size§497.35977§400.0
+grid 5§padding§7.2300014§10.0
+grid 5§noise pos§1.0§72.88994§35.021984
+grid 5§noise freq§0.32999712§10.0
+grid 5§noise amp§88.04999§1000.0
+grid 5§threshold (0-1)§0.51599985§1.0
+grid 5§noise rotation§0.07§10.0
+grid 5§mouse edit§false
+grid 5§reset edits§
+GROUP§grid 6§false
+grid 6§position§1000.0§189.0§-233.0
+grid 6§rotation§-0.07999982§10.0
+grid 6§size§364.9599§400.0
+grid 6§padding§7.2300014§10.0
+grid 6§noise pos§1.0§72.88994§35.021984
+grid 6§noise freq§0.32999712§10.0
+grid 6§noise amp§88.04999§1000.0
+grid 6§threshold (0-1)§0.51599985§1.0
+grid 6§noise rotation§0.07§10.0
+grid 6§mouse edit§false
+grid 6§reset edits§
+GROUP§grid 7§false
+grid 7§position§1000.0§180.0§138.0
+grid 7§rotation§-0.53§10.0
+grid 7§size§297.36005§400.0
+grid 7§padding§5.79§100.0
+grid 7§noise pos§1000.0§0.0§0.0
+grid 7§noise freq§33.099995§100.0
+grid 7§noise amp§84.76§1000.0
+grid 7§threshold (0-1)§0.44700003§1.0
+grid 7§noise rotation§0.0§10.0
+grid 7§mouse edit§false
+grid 7§reset edits§
+GROUP§grid 8§true
+grid 8§position§10000.0§-295.0§204.0
+grid 8§rotation§0.13999994§10.0
+grid 8§size§110.92994§300.0
+grid 8§padding§9.61§100.0
+grid 8§noise pos§1000.0§0.0§0.0
+grid 8§noise freq§1.84§10.0
+grid 8§noise amp§43.399998§100.0
+grid 8§threshold (0-1)§0.0§1.0
+grid 8§noise rotation§-0.019999992§10.0
+grid 8§mouse edit§false
+grid 8§reset edits§
+GROUP§grid 9§false
+grid 9§position§10000.0§-255.0§-296.0
+grid 9§rotation§-0.3500001§10.0
+grid 9§size§228.2001§300.0
+grid 9§padding§0.0§10.0
+grid 9§noise pos§1000.0§0.0§0.0
+grid 9§noise freq§0.93000007§10.0
+grid 9§noise amp§11.799996§100.0
+grid 9§threshold (0-1)§0.0§1.0
+grid 9§noise rotation§0.0§10.0
+grid 9§mouse edit§false
+grid 9§reset edits§
+GROUP§grid 10§true
+grid 10§position§1000.0§51.0§-29.0
+grid 10§rotation§0.39§10.0
+grid 10§size§188.23999§3000.0
+grid 10§padding§5.71§10.0
+grid 10§noise pos§1000.0§0.0§0.0
+grid 10§noise freq§1.3499999§10.0
+grid 10§noise amp§19.77§100.0
+grid 10§threshold (0-1)§0.0§1.0
+grid 10§noise rotation§0.0§10.0
+grid 10§mouse edit§false
+grid 10§reset edits§
+STATE_END

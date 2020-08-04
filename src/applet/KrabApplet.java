@@ -204,7 +204,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected float slider(String name, float min, float max, float defaultValue) {
-        return slider(name, defaultValue, max - min, true, min, max, false);
+        return slider(name, defaultValue, numberOfDigitsInFlooredNumber(max(min, max)), true, min, max, false);
     }
 
     protected float slider(String name, float min, float max, float defaultValue, float precision) {
@@ -247,7 +247,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected PVector sliderXY(String name) {
-        return sliderXY(name, 0, 0, 100);
+        return sliderXY(name, 0, 0, 1000);
     }
 
     protected PVector sliderXY(String name, float defaultX, float defaultY, float precision) {
