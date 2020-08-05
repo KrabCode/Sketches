@@ -977,7 +977,6 @@ public abstract class KrabApplet extends PApplet {
         return PVector.lerp(values[index0], values[index1], lerpAmt);
     }
 
-    @SuppressWarnings("DeprecatedIsStillUsed")
     @Deprecated
     protected void uniformRamp(String fragPath) {
         uniformRamp(fragPath, null, "ramp", 4);
@@ -993,7 +992,6 @@ public abstract class KrabApplet extends PApplet {
      * @param defaultColorCount default number of colors
      *                          any saved settings for things higher than this number won't be loaded on startup
      */
-    @SuppressWarnings("DeprecatedIsStillUsed")
     @Deprecated
     protected void uniformRamp(String fragPath, String vertPath, String rampName, int defaultColorCount) {
         if (shaderRamp == null) {
@@ -2019,7 +2017,6 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void blurPass(PGraphics pg) {
-
         group("blur");
         String blur = "shaders/filters/blur.glsl";
         uniform(blur).set("innerEdge", slider("inner edge", 0));
