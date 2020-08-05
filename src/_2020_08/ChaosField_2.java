@@ -23,7 +23,7 @@ public class ChaosField_2 extends KrabApplet {
     private float strokeWeight;
 
     public static void main(String[] args) {
-        KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
+        KrabApplet.main("_2020_08.ChaosField_2");
     }
 
     public void settings() {
