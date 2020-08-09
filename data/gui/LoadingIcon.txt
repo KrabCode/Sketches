@@ -1,0 +1,116 @@
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+LoadingIcon§grain strength§0.1§10.0
+LoadingIcon§grain size§200.0§30.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§rgb lerp§0.0§true§0.99799997§0.0§1.0§1.0§1.0§true§0.002§0.0§0.0§1.0§
+LoadingIcon§grain strength§0.5216§1.0
+LoadingIcon§grain size§13.160052§300.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.12796079§0.0§1.0§1.0§0.27812502§false§0.9945§0.0§0.0§1.0§1.0§true§0.6586558§0.096875§0.0§1.0§
+LoadingIcon§grain strength§5.19§10.0
+LoadingIcon§grain size§10538.454§30000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.14260913§0.0§0.0§0.0§0.16562515§false§0.9748046§0.0§0.0§0.90625§1.0§true§0.6461559§1.0§1.0§0.11328125§
+LoadingIcon§grain strength§0.21304694§1.0
+LoadingIcon§grain size§9589.235§30000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.14460912§0.0§0.0§0.0§0.57812506§false§0.9394444§0.0§1.0§0.7529412§1.0§true§0.62815577§0.0§0.6625§0.0§
+LoadingIcon§grain strength§0.1060499§10.0
+LoadingIcon§grain size§139.23535§30000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.13760914§1.0§0.0§1.0§0.3125§false§0.0§0.0§0.0§1.0§0.5281252§false§0.99049985§0.0§1.0§1.0§1.0§true§0.6206559§0.0§1.0§1.0§
+LoadingIcon§grain strength§0.10784994§0.1
+LoadingIcon§grain size§379.23535§3000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.13760914§1.0§0.0§1.0§0.3125§false§0.0§0.0§0.0§1.0§0.5281252§false§0.99049985§0.0§1.0§1.0§1.0§true§0.6206559§0.0§1.0§1.0§
+LoadingIcon§grain strength§0.09844985§0.1
+LoadingIcon§grain size§379.23535§3000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§count§50.00089§100.0
+LoadingIcon§time§10.0§200.0
+LoadingIcon§triangle detail§94.99992§2000.0
+LoadingIcon§slope§2.5941703§1.0
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.11060914§0.0§0.0§0.010000007§0.60937536§false§0.98899996§0.0§1.0§0.49411765§1.0§true§0.11060914§0.0§0.0§0.010000007§
+LoadingIcon§grain strength§0.03239983§0.10000001
+LoadingIcon§grain size§436.5625§3000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§count§50.00089§100.0
+LoadingIcon§time§10.0§200.0
+LoadingIcon§triangle detail§94.99992§2000.0
+LoadingIcon§slope§2.5941703§1.0
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.11060914§0.0§0.0§0.010000007§0.60937536§false§0.98899996§0.0§1.0§0.49411765§1.0§true§0.11060914§0.0§0.0§0.010000007§
+LoadingIcon§grain strength§0.03239983§0.10000001
+LoadingIcon§grain size§199.5625§3000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§count§50.00089§100.0
+LoadingIcon§time§10.0§200.0
+LoadingIcon§triangle detail§94.99992§2000.0
+LoadingIcon§slope§2.5941703§1.0
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.11060914§0.0§0.0§0.010000007§0.60937536§false§0.98899996§0.0§1.0§0.49411765§1.0§true§0.11060914§0.0§0.0§0.010000007§
+LoadingIcon§grain strength§0.03239983§0.10000001
+LoadingIcon§grain size§58.5625§3000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§count§50.00089§100.0
+LoadingIcon§time§10.0§200.0
+LoadingIcon§triangle detail§94.99992§2000.0
+LoadingIcon§slope§2.5941703§1.0
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.11060914§0.0§0.0§0.010000007§0.60937536§false§0.98899996§0.0§1.0§0.49411765§1.0§true§0.11060914§0.0§0.0§0.010000007§
+LoadingIcon§grain strength§0.03239983§0.10000001
+LoadingIcon§grain size§295.5625§3000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§LoadingIcon§true
+LoadingIcon§count§20.994537§100.0
+LoadingIcon§time§8.99999§200.0
+LoadingIcon§triangle detail§-5.0§2000.0
+LoadingIcon§slope§1.3099916§100.0
+LoadingIcon§gradient§vertical§hsv lerp§0.0§true§0.10360914§0.0§0.0§1.0§0.12500001§false§0.0§0.0§0.0§1.0§0.2593749§false§0.9795§0.0§1.0§1.0§0.3218752§false§0.98499984§0.0§0.0§1.0§1.0§true§0.11310914§0.0§0.0§1.0§
+LoadingIcon§grain strength§0.028999934§1.0
+LoadingIcon§grain size§7006.5625§30000.0
+LoadingIcon§frames§360.0§300.0
+STATE_END

@@ -26,6 +26,7 @@ float map(float value, float start1, float stop1, float start2, float stop2){
     return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
 }
 
+// use ramp.glsl instead
 vec4 getColor(float pct){
     pct = clamp(pct, 0, 1);
     float colorPct = clamp(map(pct, 0, 1, 0, colorCount-1), 0, colorCount-1);

@@ -417,7 +417,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     /**
-     * Must be called every frame for the GUI to update and display.
+     * Must be called every frame to update and display the GUI.
      *
      * @param defaultVisibility should the GUI tray start in the shown state?
      */
@@ -2157,12 +2157,8 @@ public abstract class KrabApplet extends PApplet {
             this.vertPath = vertPath;
         }
 
-        @SuppressWarnings("ManualMinMaxCalculation")
         long max(long a, long b) {
-            if (a > b) {
-                return a;
-            }
-            return b;
+            return Math.max(a, b);
         }
 
         void update(boolean filter, PGraphics pg) {

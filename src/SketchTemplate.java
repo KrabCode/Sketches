@@ -9,20 +9,19 @@ public class SketchTemplate extends KrabApplet {
     }
 
     public void settings() {
-        size(1000,1000, P3D);
+        fullScreen(P3D);
     }
 
     public void setup() {
-        pg = createGraphics(width, height, P3D);
-        surface.setAlwaysOnTop(true);
     }
 
     public void draw() {
+        pg = updateGraphics(pg);
         pg.beginDraw();
-        ramp(pg, "background", 4);
+        pg.image(gradient("background"), 0, 0);
         pg.endDraw();
         image(pg, 0, 0);
-        rec(pg);
+        rec(pg, sliderInt("frames", 360));
         gui();
     }
 }

@@ -1,0 +1,160 @@
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§8.0§100.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.00234375§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§20.99998§1000.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§1.0§0.0§1.0§0.49062505§false§0.99843746§0.0§1.0§1.0§1.0§true§0.83027345§1.0§0.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§20.99998§1000.0
+Landscape§t§0.04765623§0.1
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.14687519§false§0.97288215§0.534375§0.0§1.0§0.85625§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.00004§1000.0
+Landscape§t§0.0011952987§0.010000001
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.50000006§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.00004§1000.0
+Landscape§t§0.0012532952§0.1
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.50000006§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.00004§1000.0
+Landscape§t§0.008726286§0.001
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.50000006§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.005§100.0
+Landscape§time§3.0000024§20.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.005§100.0
+Landscape§time§3.0000024§20.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.24375024§false§0.5435548§0.490625§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.005§100.0
+Landscape§time§3.0000024§20.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.24375024§false§0.5435548§0.490625§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§50.005§100.0
+Landscape§time§3.0000024§20.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.24375024§false§0.5435548§0.71875§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§100.00008§100.0
+Landscape§time§3.9998574§200.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§160.9975§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§100.00008§100.0
+Landscape§time§3.9998574§200.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§160.9975§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§100.00008§100.0
+Landscape§time§3.9998574§200.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§160.9975§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§100.00008§100.0
+Landscape§time§3.9999561§200.0
+Landscape§triangle detail§102.00103§20000.0
+Landscape§x strength§0.117968746§0.1
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§frames§126.997795§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§100.00008§100.0
+Landscape§time§3.9999561§200.0
+Landscape§triangle detail§102.00103§20000.0
+Landscape§x strength§0.09986868§0.1
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.30000004§false§0.5284238§1.0§0.0§1.0§0.35625017§false§0.5440548§1.0§1.0§1.0§0.43750018§false§0.52679735§0.384375§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§grain§0.23000008§10.0
+Landscape§grain size§46.070045§300.0
+Landscape§frames§126.99944§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§100.00008§100.0
+Landscape§time§3.9999561§200.0
+Landscape§triangle detail§102.00029§20000.0
+Landscape§x strength§3.6138682§10.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.30000004§false§0.5284238§1.0§0.0§1.0§0.35625017§false§0.5440548§1.0§1.0§1.0§0.43750018§false§0.52679735§0.384375§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§grain§0.050899927§0.1
+Landscape§grain size§127.07031§3000.0
+Landscape§frames§126.99944§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§25.99998§100.0
+Landscape§time§8.00001§200.0
+Landscape§triangle detail§50.997963§200.0
+Landscape§x strength§6.012696§100.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.52499986§false§0.5242973§0.0§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§grain strength§0.009100139§0.1
+Landscape§grain size§1671.6016§3000.0
+Landscape§frames§360.9993§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§count§25.99998§100.0
+Landscape§time§8.00001§200.0
+Landscape§triangle detail§50.997963§200.0
+Landscape§x strength§-0.45730168§10.0
+Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.52499986§false§0.5242973§0.0§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§grain strength§0.009100139§0.1
+Landscape§grain size§1671.6016§3000.0
+Landscape§frames§360.9993§300.0
+STATE_END

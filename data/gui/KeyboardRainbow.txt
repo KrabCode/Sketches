@@ -1,0 +1,19 @@
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§count§21.028809§100.0
+KeyboardRainbow§time§1.0§200.0
+KeyboardRainbow§triangle detail§30.0§200.0
+KeyboardRainbow§slope§0.0§10.0
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§4.7619047E-4§0.0§1.0§1.0§0.48437512§false§0.9997619§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§count§21.028809§100.0
+KeyboardRainbow§time§1.0§200.0
+KeyboardRainbow§triangle detail§3.000061§200.0
+KeyboardRainbow§slope§0.0§10.0
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§4.7619047E-4§0.0§1.0§1.0§0.48437512§false§0.9997619§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+KeyboardRainbow§global§0.18976192§1.0§1.0§1.0§1.0
+STATE_END
