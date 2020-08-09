@@ -163,13 +163,10 @@ vec4 gradientColor(float pct){
 
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-//    vec2 t = vec2(cos(time), sin(time))*.01;
     float t = time;
     vec4 h = hash43(vec3(floor(uv*grainSize),t));
-//    vec3 clr = texClr.rgb + h.x*grain;
-    float angle = length(h)*pi*4;
-    vec2 off = vec2(cos(angle), sin(angle))*graininess;
-    vec4 texClr = texture2D(texture, uv+off);
-    vec4 gradClr = gradientColor(length(texClr.xyz) / 3.0);
-    gl_FragColor = gradClr;
+    vec4 texClr = texture2D(texture, uv+vec2(0, 0));
+    vec4 prevClr = texture2D(texture, uv);
+    vec3 clr = vec3((length(prevClr.rgb)*.3 - .01) + (h.x*graininess));
+    gl_FragColor = vec4(length(clr));
 }

@@ -27,9 +27,10 @@ public class HashHazing extends KrabApplet {
     public void draw() {
         pg = updateGraphics(pg);
         pg.beginDraw();
-        updateTerrain();
+//        updateTerrain();
         updateHash();
         pg.endDraw();
+        rgbSplitScaleAndOffset(pg);
         image(pg, 0, 0);
         rec(pg, sliderInt("frames", 360));
         gui();

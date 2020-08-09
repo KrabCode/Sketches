@@ -1,0 +1,81 @@
+STATE_BEGIN
+UNDO
+GROUP§HashHazing§true
+HashHazing§count§35.024§100.0
+HashHazing§time§1.0§2000.0
+HashHazing§triangle detail§60.999912§2000.0
+HashHazing§slope§47.195312§10000.0
+HashHazing§gradient§vertical§rgb lerp§0.0§true§0.9974766§0.221875§0.0§1.0§0.084375024§false§0.013671875§0.0§0.0§1.0§1.0§true§0.9988282§0.0§1.0§1.0§
+HashHazing§grain strength§0.016142292§0.1
+HashHazing§grain size§32644.344§30000.0
+HashHazing§frames§360.01334§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§HashHazing§true
+HashHazing§count§41.00002§100.0
+HashHazing§time§10.0§200.0
+HashHazing§triangle detail§-8.002812§200.0
+HashHazing§slope§42.55999§100.0
+HashHazing§gradient§vertical§rgb lerp§0.0§true§0.9974766§0.221875§0.0§1.0§0.35312504§false§0.9875§0.0§0.0§1.0§0.48124984§false§0.0§0.0§1.0§1.0§0.6156252§false§0.0§0.0§0.0§1.0§1.0§true§0.9988282§0.0§0.0§1.0§
+HashHazing§grain strength§0.27000043§10.0
+HashHazing§grain size§133.18994§3000.0
+HashHazing§frames§360.00388§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§HashHazing§true
+HashHazing§gradient§vertical§rgb lerp§0.0§true§0.9974766§0.221875§0.0§1.0§0.35312504§false§0.9875§0.0§0.0§1.0§0.48124984§false§0.0§0.0§1.0§1.0§0.6156252§false§0.0§0.0§0.0§1.0§1.0§true§0.9988282§0.0§0.0§1.0§
+HashHazing§grain strength§0.8100006§10.0
+HashHazing§grain size§193.18994§3000.0
+HashHazing§frames§360.00388§300.0
+GROUP§scale§true
+scale§center§1000.0§0.0§0.0
+scale§RGB scales§0.1§1.0§1.0§1.0
+scale§common scale§1.0§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§HashHazing§true
+HashHazing§gradient§vertical§rgb lerp§0.0§true§0.9966953§0.0§0.0§1.0§1.0§true§0.9988282§0.0§0.0§1.0§
+HashHazing§grain strength§0.3685946§1.0
+HashHazing§grain size§8719.752§30000.0
+HashHazing§frames§360.00388§300.0
+GROUP§scale§true
+scale§center§1000.0§0.0§0.0
+scale§RGB scales§0.1§1.0027307§1.0027307§1.0027307
+scale§common scale§1.0027307§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§1.3514832§1.2710944§0.6110935
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§HashHazing§true
+HashHazing§gradient§vertical§rgb lerp§0.0§true§0.9966953§0.0§0.0§1.0§1.0§true§0.9988282§0.0§0.0§1.0§
+HashHazing§grain strength§0.3685946§1.0
+HashHazing§grain size§8719.752§30000.0
+HashHazing§frames§360.00388§300.0
+GROUP§scale§true
+scale§center§1000.0§0.0§0.0
+scale§RGB scales§0.1§1.0027307§1.0027307§1.0027307
+scale§common scale§1.0027307§1.0
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§1.0§1.3514832§1.2710944§0.6110935
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
