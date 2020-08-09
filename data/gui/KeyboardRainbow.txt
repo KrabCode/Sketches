@@ -17,3 +17,113 @@ KeyboardRainbow§slope§0.0§10.0
 KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§4.7619047E-4§0.0§1.0§1.0§0.48437512§false§0.9997619§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
 KeyboardRainbow§global§0.18976192§1.0§1.0§1.0§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§color§0.99357146§0.65625§1.0§1.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§color§0.99357146§0.65625§1.0§1.0§10.0
+KeyboardRainbow§R§3.9761949§100.0
+KeyboardRainbow§ellipse§0.8769047§0.0§0.0§1.0§1.0
+KeyboardRainbow§one color§false
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§4.7619047E-4§0.0§1.0§1.0§0.5000002§false§0.9997619§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.95714295§1.0§1.0§1.0§1.0§true§0.18738094§1.0§0.0§0.9995238§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.95714295§1.0§1.0§1.0§1.0§true§0.18738094§1.0§0.775§0.9995238§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.06309538§1.0§1.0§1.0§0.5343755§false§0.54981637§0.5§1.0§0.9947619§1.0§true§0.06309538§1.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.06309538§1.0§1.0§1.0§0.45312557§false§0.54981637§1.0§1.0§0.9947619§1.0§true§0.06309538§1.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§dir§10.0§1.0§1.0
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.06309538§1.0§1.0§1.0§0.45312557§false§0.54981637§1.0§1.0§0.9947619§1.0§true§0.06309538§1.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§3.2857108§200.0
+KeyboardRainbow§dir§10.0§1.0§1.0
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.06309538§1.0§1.0§1.0§0.45312557§false§0.54981637§1.0§1.0§0.9947619§1.0§true§0.06309538§1.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§3.2857108§200.0
+KeyboardRainbow§dir§10.0§-0.5333336§0.72857124
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.61881§1.0§1.0§0.9333333§0.70624995§false§0.005706826§1.0§1.0§0.99607843§0.82812595§false§0.54957825§0.0§0.0§0.9919048§1.0§true§0.61881§1.0§1.0§0.9333333§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§3.2857108§200.0
+KeyboardRainbow§dir§10.0§-3.6190495§1.6809529
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.61881§1.0§1.0§0.9333333§0.5031249§false§0.004040159§1.0§1.0§0.99047613§1.0§true§0.61881§1.0§1.0§0.9333333§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§3.2857108§200.0
+KeyboardRainbow§dir§10.0§-3.6190495§1.6809529
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.61881§1.0§1.0§0.9333333§0.5031249§false§0.004040159§1.0§1.0§0.99047613§1.0§true§0.61881§1.0§1.0§0.9333333§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§3.2857108§200.0
+KeyboardRainbow§dir§10.0§-3.6190495§1.6809529
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.61881§1.0§1.0§0.9333333§0.5031249§false§0.004040159§1.0§1.0§0.99047613§1.0§true§0.61881§1.0§1.0§0.9333333§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§0.7142973§200.0
+KeyboardRainbow§dir§100.0§33.228565§1.8285741
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.61881§1.0§1.0§0.9333333§0.5031249§false§0.004040159§1.0§1.0§0.99047613§1.0§true§0.61881§1.0§1.0§0.9333333§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§0.23810518§200.0
+KeyboardRainbow§dir§100.0§0.51427466§-2.0285702
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.61881§1.0§1.0§0.9333333§0.49374998§false§0.07284969§0.715625§1.0§0.99047613§1.0§true§0.61881§1.0§1.0§0.9333333§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§0.52381945§200.0
+KeyboardRainbow§dir§100.0§0.51427466§-2.0285702
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.6019048§1.0§1.0§1.0§0.496875§false§0.8261504§0.0§1.0§1.0§1.0§true§0.6178576§1.0§1.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§7.1904883§200.0
+KeyboardRainbow§dir§100.0§8.18093§4.495237
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.6026192§1.0§0.0§1.0§0.13125001§false§0.34996003§1.0§1.0§1.0§0.79062533§false§0.33811805§1.0§0.0§1.0§1.0§true§0.6178576§1.0§0.0§0.9980953§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§KeyboardRainbow§true
+KeyboardRainbow§time§0.46190286§10.0
+KeyboardRainbow§dir§10.0§1.0952408§3.2476206
+KeyboardRainbow§gradient§vertical§rgb lerp§0.0§true§0.8506036§1.0§1.0§0.99904764§0.14687529§false§0.5090701§1.0§1.0§0.9980953§0.6687495§false§0.6654363§1.0§1.0§1.0§1.0§true§0.8506036§1.0§1.0§0.99904764§
+STATE_END
