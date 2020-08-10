@@ -360,3 +360,662 @@ displace§angle range§0.3200004§10.0
 displace§noise details§3.0§0.41599995§3.0§20.0
 displace§noise speeds§10.0§0.12000001§1.1999991§0.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.8599999§10.0
+displace§angle range§1.4700011§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§1.0§0.48000008§0.20000009§0.1
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.8599999§10.0
+displace§angle range§1.4700011§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§1.0§0.48000008§0.20000009§0.1
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.8599999§10.0
+displace§angle range§1.4700011§10.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§1.0§0.48000008§0.20000009§0.1
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.8599999§10.0
+displace§angle range§0.70000166§10.0
+displace§noise details§3.0§0.5§3.618002§20.447
+displace§noise speeds§1.0§0.7000002§0.2560001§0.12
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§0.43000168§10.0
+displace§noise details§3.0§0.5§3.618002§20.447
+displace§noise speeds§1.0§0.7000002§0.2560001§0.12
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§0.43000168§10.0
+displace§noise details§3.0§0.5§3.618002§20.447
+displace§noise speeds§1.0§0.7000002§0.2560001§0.12
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.8500002§10.0
+displace§time radius§0.5100005§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§0.43000168§10.0
+displace§noise details§3.0§0.5§3.618002§20.447
+displace§noise speeds§1.0§0.7000002§0.2560001§0.12
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§360.0§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§pre rotate§1000.0§-12.5§-10.546875
+ChickenGrain§base rot§0.09671867§10.0
+ChickenGrain§peck rot§1.9726562§10.0
+ChickenGrain§peck speed§2.9849138§100.0
+ChickenGrain§post rotate§1000.0§-14.84375§6.640625
+ChickenGrain§head scale§0.88§10.0
+ChickenGrain§debug§false
+ChickenGrain§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+ChickenGrain§pos§1000.0§676.21875§678.71875
+ChickenGrain§scale§2.2374973§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§false
+ChickenGrain§chicken count§3.9999976§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§true
+chicken 0§pre rotate§1000.0§-12.5§-10.546875
+chicken 0§base rot§0.09671867§10.0
+chicken 0§peck rot§1.9726562§10.0
+chicken 0§peck speed§2.9849138§100.0
+chicken 0§post rotate§1000.0§-14.84375§6.640625
+chicken 0§head scale§0.88§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+chicken 0§pos§1000.0§676.21875§678.71875
+chicken 0§scale§2.2374973§100.0
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§-12.5§-10.546875
+chicken 1§base rot§0.09671867§10.0
+chicken 1§peck rot§1.9726562§10.0
+chicken 1§peck speed§2.9849138§100.0
+chicken 1§post rotate§1000.0§-14.84375§6.640625
+chicken 1§head scale§0.88§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+chicken 1§pos§1000.0§676.21875§678.71875
+chicken 1§scale§2.2374973§100.0
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§-12.5§-10.546875
+chicken 2§base rot§0.09671867§10.0
+chicken 2§peck rot§1.9726562§10.0
+chicken 2§peck speed§2.9849138§100.0
+chicken 2§post rotate§1000.0§-14.84375§6.640625
+chicken 2§head scale§0.88§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§hsv lerp§0.0§true§0.64349985§0.4625§1.0§1.0§0.30937523§false§0.9715§0.478125§1.0§1.0§0.64999974§false§0.2963725§0.49375§1.0§1.0§1.0§true§0.64649993§0.4625§1.0§1.0§
+chicken 2§pos§1000.0§676.21875§678.71875
+chicken 2§scale§2.2374973§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§false
+ChickenGrain§chicken count§3.9999976§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.0§3.0
+chicken 0§base rot§-0.29999986§10.0
+chicken 0§peck rot§1.4999989§10.0
+chicken 0§peck speed§3.5700002§10.0
+chicken 0§post rotate§1000.0§-25.0§0.0
+chicken 0§head scale§0.7700001§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§sat lerp§0.0§true§0.0730002§0.546875§1.0§1.0§0.55312526§false§0.63786924§0.45§1.0§1.0§1.0§true§0.071000196§0.546875§1.0§1.0§
+chicken 0§pos§1000.0§650.0§441.0
+chicken 0§scale§1.5200001§10.0
+GROUP§chicken 1§true
+chicken 1§pre rotate§1000.0§0.0§0.0
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§0.0§10.0
+chicken 1§peck speed§1.0§10.0
+chicken 1§post rotate§1000.0§0.0§0.0
+chicken 1§head scale§0.88§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 1§pos§1000.0§0.0§0.0
+chicken 1§scale§1.1899996§10.0
+GROUP§chicken 2§true
+chicken 2§pre rotate§1000.0§0.0§0.0
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§0.0§10.0
+chicken 2§peck speed§1.0§10.0
+chicken 2§post rotate§1000.0§0.0§0.0
+chicken 2§head scale§0.88§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 2§pos§1000.0§0.0§0.0
+chicken 2§scale§0.0§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§false
+ChickenGrain§chicken count§1.0000094§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§170.07812§-93.015625
+chicken 0§scale§1.0§2.0000007§2.000002
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§0.0§0.0
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§0.0§10.0
+chicken 1§peck speed§1.0§10.0
+chicken 1§post rotate§1000.0§0.0§0.0
+chicken 1§head scale§0.88§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 1§pos§1000.0§-449.21875§-190.625
+chicken 1§scale§10.0§-0.97390574§2.5626168
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§0.0§0.0
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§0.0§10.0
+chicken 2§peck speed§1.0§10.0
+chicken 2§post rotate§1000.0§0.0§0.0
+chicken 2§head scale§0.88§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 2§pos§1000.0§0.0§0.0
+chicken 2§scale§10.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.23299994§0.028125§1.0§0.99300003§
+ChickenGrain§chicken count§1.000002§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§209.07812§-5.015625
+chicken 0§scale§1.0§2.0000007§2.000002
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.23299994§0.028125§1.0§0.99300003§
+ChickenGrain§chicken count§1.000002§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§209.07812§-5.015625
+chicken 0§scale§1.0§2.0000007§2.000002
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.23299994§0.028125§1.0§0.99300003§
+ChickenGrain§chicken count§4.000005§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§true
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§190.07812§174.98438
+chicken 0§scale§1.0000001§1.2001116§1.2010511
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§-18.359375§-7.8125
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§1.0854697§10.0
+chicken 1§peck speed§4.575468§10.0
+chicken 1§post rotate§1000.0§-16.796875§6.25
+chicken 1§head scale§0.72000015§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 1§pos§1000.0§-130.0§-3.0
+chicken 1§scale§1.0000001§-1.2018895§1.2010511
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§-18.359375§-7.8125
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§1.0854697§10.0
+chicken 2§peck speed§2.6754682§10.0
+chicken 2§post rotate§1000.0§-16.796875§6.25
+chicken 2§head scale§0.72000015§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 2§pos§1000.0§-155.0§30.0
+chicken 2§scale§0.001§-1.0000005§1.0
+GROUP§chicken 3§true
+chicken 3§pre rotate§1000.0§0.0§0.0
+chicken 3§base rot§0.0§10.0
+chicken 3§peck rot§0.0§10.0
+chicken 3§peck speed§1.0§10.0
+chicken 3§post rotate§1000.0§0.0§0.0
+chicken 3§head scale§0.88§10.0
+chicken 3§debug§false
+chicken 3§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 3§pos§1000.0§909.0§-805.0
+chicken 3§scale§1.0000001§-1.2018895§1.2010511
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§rgb lerp§0.0§true§0.9945§0.046875§1.0§1.0§0.51874983§false§0.0§0.0§0.0375§0.99607843§1.0§true§0.23749995§0.0625§1.0§0.99300003§
+ChickenGrain§chicken count§4.000005§100.0
+ChickenGrain§frames§600.9994§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§1.17§10.0
+displace§angle range§1.3400016§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§190.07812§174.98438
+chicken 0§scale§1.0000001§1.2001116§1.2010511
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§-18.359375§-7.8125
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§1.0854697§10.0
+chicken 1§peck speed§4.575468§10.0
+chicken 1§post rotate§1000.0§-16.796875§6.25
+chicken 1§head scale§0.72000015§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 1§pos§1000.0§-130.0§-3.0
+chicken 1§scale§1.0000001§-1.2018895§1.2010511
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§-18.359375§-7.8125
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§1.0854697§10.0
+chicken 2§peck speed§2.6754682§10.0
+chicken 2§post rotate§1000.0§-16.796875§6.25
+chicken 2§head scale§0.72000015§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 2§pos§1000.0§-155.0§30.0
+chicken 2§scale§0.001§-1.0000005§1.0
+GROUP§chicken 3§false
+chicken 3§pre rotate§1000.0§0.0§0.0
+chicken 3§base rot§0.0§10.0
+chicken 3§peck rot§0.0§10.0
+chicken 3§peck speed§1.0§10.0
+chicken 3§post rotate§1000.0§0.0§0.0
+chicken 3§head scale§0.88§10.0
+chicken 3§debug§false
+chicken 3§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 3§pos§1000.0§909.0§-805.0
+chicken 3§scale§1.0000001§-1.2018895§1.2010511
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§hsv lerp§0.0§true§0.4120001§0.06875§1.0§1.0§1.0§true§0.038500033§0.0§0.0§1.0§
+ChickenGrain§chicken count§4.000005§100.0
+ChickenGrain§frames§1000.9963§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§0.6200005§10.0
+displace§angle range§0.95000196§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§190.07812§174.98438
+chicken 0§scale§1.0000001§1.2001116§1.2010511
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§-18.359375§-7.8125
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§1.0854697§10.0
+chicken 1§peck speed§4.575468§10.0
+chicken 1§post rotate§1000.0§-16.796875§6.25
+chicken 1§head scale§0.72000015§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 1§pos§1000.0§-130.0§-3.0
+chicken 1§scale§1.0000001§-1.2018895§1.2010511
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§-18.359375§-7.8125
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§1.0854697§10.0
+chicken 2§peck speed§2.6754682§10.0
+chicken 2§post rotate§1000.0§-16.796875§6.25
+chicken 2§head scale§0.72000015§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 2§pos§1000.0§-155.0§30.0
+chicken 2§scale§0.001§-1.0000005§1.0
+GROUP§chicken 3§false
+chicken 3§pre rotate§1000.0§0.0§0.0
+chicken 3§base rot§0.0§10.0
+chicken 3§peck rot§0.0§10.0
+chicken 3§peck speed§1.0§10.0
+chicken 3§post rotate§1000.0§0.0§0.0
+chicken 3§head scale§0.88§10.0
+chicken 3§debug§false
+chicken 3§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 3§pos§1000.0§909.0§-805.0
+chicken 3§scale§1.0000001§-1.2018895§1.2010511
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§hsv lerp§0.0§true§0.4120001§0.06875§1.0§1.0§1.0§true§0.038500033§0.0§0.0§1.0§
+ChickenGrain§chicken count§4.000005§100.0
+ChickenGrain§frames§1000.9963§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§0.6200005§10.0
+displace§angle range§0.95000196§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§2.6054688§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§190.07812§174.98438
+chicken 0§scale§1.0000001§1.2001116§1.2010511
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§-18.359375§-7.8125
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§1.0854697§10.0
+chicken 1§peck speed§4.575468§10.0
+chicken 1§post rotate§1000.0§-16.796875§6.25
+chicken 1§head scale§0.72000015§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 1§pos§1000.0§-130.0§-3.0
+chicken 1§scale§1.0000001§-1.2018895§1.2010511
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§-18.359375§-7.8125
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§1.0854697§10.0
+chicken 2§peck speed§2.6754682§10.0
+chicken 2§post rotate§1000.0§-16.796875§6.25
+chicken 2§head scale§0.72000015§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.010546875§0.621875§1.0§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 2§pos§1000.0§-155.0§30.0
+chicken 2§scale§0.001§-1.0000005§1.0
+GROUP§chicken 3§false
+chicken 3§pre rotate§1000.0§0.0§0.0
+chicken 3§base rot§0.0§10.0
+chicken 3§peck rot§0.0§10.0
+chicken 3§peck speed§1.0§10.0
+chicken 3§post rotate§1000.0§0.0§0.0
+chicken 3§head scale§0.88§10.0
+chicken 3§debug§false
+chicken 3§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+chicken 3§pos§1000.0§909.0§-805.0
+chicken 3§scale§1.0000001§-1.2018895§1.2010511
+STATE_END

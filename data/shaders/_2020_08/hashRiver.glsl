@@ -152,14 +152,19 @@ float hash12atagen(vec2 co){
     return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
 }
 
+uniform sampler2D gradient;
+vec4 rampColor(float pct){
+    return texture2D(gradient, vec2(0.5, clamp(pct, 0., 1.)));
+}
+
 
 void main(){
-
+//    vec2 cv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
     vec2 uv = gl_FragCoord.xy / resolution.xy;
-    vec3 h = hash33(vec3(floor(uv * 300.), time*1.));
-    vec2 cv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
+    vec2 hashCoord = floor(uv * 800. + vec2(0, time * 65000.));
+    vec3 hash = rampColor(hash12atagen(hashCoord)).rgb;
+    vec3 last = texture(texture, uv).rgb;
+    vec3 finalColor = last - .03 + hash * .06;
 
-    vec3 tex = texture(texture, uv).rgb;
-    vec3 col = mix(tex, h, .3);
-    gl_FragColor = vec4(col, 1.);
+    gl_FragColor = vec4(finalColor, 1.);
 }

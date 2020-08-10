@@ -1,9 +1,9 @@
 uniform sampler2D texture;
-uniform sampler2D gradient;
 uniform vec2 resolution;
 uniform float time;
 
 
+uniform sampler2D gradient;
 vec4 rampColor(float pct){
     return texture2D(gradient, vec2(0.5, clamp(pct, 0., 1.)));
 }

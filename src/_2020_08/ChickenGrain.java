@@ -5,10 +5,12 @@ import processing.core.PGraphics;
 import processing.core.PImage;
 import processing.core.PVector;
 
+import java.util.ArrayList;
+
 public class ChickenGrain extends KrabApplet {
     private PGraphics pg;
     private PGraphics bg;
-    private Chicken chicken;
+    private ArrayList<Chicken> chickens = new ArrayList<>();
     private PImage chickenBody;
     private PImage chickenHead;
 
@@ -23,7 +25,6 @@ public class ChickenGrain extends KrabApplet {
     public void setup() {
         chickenBody = loadImage("images\\chickens\\chicken_body_gray.png");
         chickenHead = loadImage("images\\chickens\\chicken_head_gray.png");
-        chicken = new Chicken();
     }
 
     public void draw() {
@@ -50,12 +51,27 @@ public class ChickenGrain extends KrabApplet {
     private void hashPass(PGraphics pg) {
         String hash = "shaders\\_2020_08\\hashRiver.glsl";
         uniform(hash).set("time", t);
+        uniform(hash).set("gradient", gradient("hash"));
+
         hotFilter(hash, pg);
     }
 
     private void updateChickens() {
-        chicken.update();
-        chicken.draw(pg);
+        int count = sliderInt("chicken count", 3);
+        while(chickens.size() < count) {
+          chickens.add(new Chicken());
+        }
+        while(chickens.size() > count) {
+            chickens.remove(chickens.size()-1);
+        }
+        for (int i = 0, chickensSize = chickens.size(); i < chickensSize; i++) {
+            group("chicken " + i);
+            Chicken c = chickens.get(i);
+            c.update();
+            c.draw(pg);
+            resetGroup();
+        }
+
     }
 
     class Chicken {
@@ -98,11 +114,15 @@ public class ChickenGrain extends KrabApplet {
 
         void draw(PGraphics pg) {
             pg.pushStyle();
+            pg.pushMatrix();
             pg.imageMode(CENTER);
+            translateToCenter(pg);
             translate2D(pg, "pos");
-            pg.scale(slider("scale"));
+            PVector scl = sliderXY("scale", 1).copy();
+            pg.scale(scl.x, scl.y);
             pg.image(cg, 0, 0);
             pg.popStyle();
+            pg.popMatrix();
         }
     }
 }
