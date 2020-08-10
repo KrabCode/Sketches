@@ -1,13 +1,13 @@
 package _2020_08;
 
 import applet.KrabApplet;
-import com.logitech.gaming.LogiLED;
+//import com.logitech.gaming.LogiLED;
 import processing.core.PGraphics;
 import processing.core.PVector;
 
 public class KeyboardRainbow extends KrabApplet {
     private PGraphics pg;
-    byte[] bitmap = new byte[LogiLED.LOGI_LED_BITMAP_SIZE];
+    byte[] bitmap = new byte[1024]; // new byte[LogiLED.LOGI_LED_BITMAP_SIZE];
     int cols = 21;
     int rows = 6;
     float time;
@@ -22,8 +22,8 @@ public class KeyboardRainbow extends KrabApplet {
     }
 
     public void setup() {
-        LogiLED.LogiLedInit();
-        LogiLED.LogiLedSetTargetDevice(4);
+//        LogiLED.LogiLedInit();
+//        LogiLED.LogiLedSetTargetDevice(4);
         colorMode(RGB, 255, 255, 255, 255);
     }
 
@@ -51,7 +51,7 @@ public class KeyboardRainbow extends KrabApplet {
             }
         }
 
-        LogiLED.LogiLedSetLightingFromBitmap(bitmap);
+//        LogiLED.LogiLedSetLightingFromBitmap(bitmap);
         pg.endDraw();
         image(pg, 0, 0, width, height);
         gui();
