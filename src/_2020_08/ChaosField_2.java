@@ -21,6 +21,8 @@ public class ChaosField_2 extends KrabApplet {
     private final OpenSimplexNoise noise = new OpenSimplexNoise();
     private int strokeColor;
     private float strokeWeight;
+    int gridCount = 1;
+    int tileMode = 0;
 
     public static void main(String[] args) {
         KrabApplet.main("_2020_08.ChaosField_2");
@@ -64,14 +66,29 @@ public class ChaosField_2 extends KrabApplet {
     }
 
     private void updateGrids() {
-        int gridCount = sliderInt("grid count", 20);
+        tileMode = 0;
+        String tileModeString = options("squares", "triangles", "circles", "hexagons");
+        if(tileModeString.equals("triangles")) {
+            tileMode = 1;
+        }
+        if(tileModeString.equals("circles")) {
+            tileMode = 2;
+        }
+        if(tileModeString.equals("hexagons")) {
+            tileMode = 3;
+        }
+        int toAnimate = sliderInt("show grids", 1, 0, 1000);
+        if(button("add grid")) {
+            gridCount++;
+        }
         if (grids.size() > gridCount) {
             grids.remove(grids.size() - 1);
         }
         if (grids.size() < gridCount) {
             grids.add(new Grid(grids.size() + 1));
         }
-        for (Grid g : grids) {
+        for (int i = gridCount-1; i >= max(0, gridCount-toAnimate); i--) {
+            Grid g = grids.get(i);
             g.update();
             g.display();
         }
@@ -108,6 +125,7 @@ public class ChaosField_2 extends KrabApplet {
             if (button("reset edits")) {
                 resetEdits();
             }
+            resetGroup();
         }
 
         private void resetEdits() {
@@ -224,8 +242,23 @@ public class ChaosField_2 extends KrabApplet {
                     pg.stroke(strokeColor);
                     pg.strokeWeight(strokeWeight);
                     pg.fill(getColor(xi, yi));
-                    pg.rectMode(CENTER);
-                    pg.rect(0, 0, tileSize, tileSize);
+                    if(tileMode == 0) {
+                        pg.rectMode(CENTER);
+                        pg.rect(0, 0, tileSize, tileSize);
+                    }else if(tileMode == 1) {
+                        pg.triangle(tileSize*.5f, tileSize*.5f, -tileSize*.5f, -tileSize*.5f, tileSize*.5f, -tileSize*.5f);
+                    }else if(tileMode == 2) {
+                        pg.ellipse(0, 0, tileSize, tileSize);
+                    }else if(tileMode == 3) {
+                        pg.beginShape();
+                        for (int i = 0; i < 6; i++) {
+                            float angle = map(i, 0, 6, 0, TAU);
+                            float x = tileSize * cos(angle);
+                            float y = tileSize * sin(angle);
+                            pg.vertex(x,y);
+                        }
+                        pg.endShape();
+                    }
                     pg.popMatrix();
                 }
             }
