@@ -144,9 +144,11 @@ vec4 hash44(vec4 p4)
     return fract((p4.xxyz+p4.yzzw)*p4.zywx);
 }
 
+/*
 float hash12atagen(vec2 co){
     return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
 }
+*/
 
 uniform float time;
 
