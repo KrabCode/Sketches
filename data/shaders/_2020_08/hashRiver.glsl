@@ -159,12 +159,13 @@ vec4 rampColor(float pct){
 
 
 void main(){
-//    vec2 cv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
-    vec2 uv = gl_FragCoord.xy / resolution.xy;
-    vec2 hashCoord = floor(uv * 800. + vec2(0, time * 65000.));
-    vec3 hash = rampColor(hash12atagen(hashCoord)).rgb;
-    vec3 last = texture(texture, uv).rgb;
-    vec3 finalColor = last - .03 + hash * .06;
+    vec2 uv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
+    float grainSize = 150.0;
+    float t = time*.01;
+    vec2 hashCoord = floor(vec2(uv.x*grainSize, uv.y*grainSize-uv.x));
+    vec3 hash = rampColor(hash13(vec3(hashCoord, t))).rgb;
 
+//    vec3 last = texture(texture, uv).rgb;
+    vec3 finalColor = hash ;
     gl_FragColor = vec4(finalColor, 1.);
 }

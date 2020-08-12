@@ -1,0 +1,6 @@
+STATE_BEGIN
+UNDO
+GROUP§Raymarch§true
+Raymarch§gradient§vertical§rgb lerp§0.0§true§0.61380494§1.0§0.0§1.0§0.57499987§false§0.91849995§1.0§1.0§1.0§1.0§true§0.5922966§0.0§0.0§1.0§
+Raymarch§frames§360.0§300.0
+STATE_END
