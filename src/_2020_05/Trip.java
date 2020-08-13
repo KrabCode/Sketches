@@ -24,7 +24,7 @@ public class Trip extends KrabApplet {
         pg = createGraphics(width, height, P3D);
 //        surface.setAlwaysOnTop(true);
 //        surface.setLocation(2560 - 820, 20);
-        frameRecordingDuration *= 4;
+        framesToRecord *= 4;
     }
 
     public void draw() {

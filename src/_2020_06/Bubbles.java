@@ -5,7 +5,6 @@ import processing.core.PGraphics;
 import processing.core.PVector;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Bubbles extends KrabApplet {
     private PGraphics pg;
@@ -32,7 +31,7 @@ public class Bubbles extends KrabApplet {
     }
 
     public void draw() {
-        frameRecordingDuration = sliderInt("rec frames", 360);
+        framesToRecord = sliderInt("rec frames", 360);
         pg.beginDraw();
         fadeToBlack(pg);
         updateBubbles();

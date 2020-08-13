@@ -30,7 +30,7 @@ public class Smoke extends KrabApplet {
         wheel = loadImage("data/images/smoke/kolo.png");
         pg = createGraphics(width, height, P3D);
         pg.colorMode(HSB, 1, 1, 1, 1);
-        frameRecordingDuration *= 2;
+        framesToRecord *= 2;
         surface.setAlwaysOnTop(true);
     }
 

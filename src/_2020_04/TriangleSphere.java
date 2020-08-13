@@ -28,7 +28,7 @@ public class TriangleSphere extends KrabApplet {
         surface.setAlwaysOnTop(true);
         group("planet");
         updatePlanet();
-        frameRecordingDuration *= 2;
+        framesToRecord *= 2;
     }
 
     public void draw() {

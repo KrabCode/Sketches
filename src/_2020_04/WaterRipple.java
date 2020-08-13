@@ -21,7 +21,7 @@ public class WaterRipple extends KrabApplet {
     }
 
     public void setup() {
-        frameRecordingDuration *= 2;
+        framesToRecord *= 2;
 //        surface.setAlwaysOnTop(true);
 //        surface.setLocation(1920 - 820, 20);
         pg = createGraphics(width, height, P2D);

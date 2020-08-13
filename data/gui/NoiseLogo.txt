@@ -1,0 +1,151 @@
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§170.0§300.0
+NoiseLogo§colors§5.9763203§200.0
+NoiseLogo§freq§0.0023000105§0.1
+NoiseLogo§amp§1.0§10.0
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.53125§false§0.57246375§0.625§0.72156864§1.0§1.0§true§0.5760001§0.0§1.0§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.99985§300.0
+NoiseLogo§colors§10.00001§200.0
+NoiseLogo§time radius§0.42909747§10.000001
+NoiseLogo§freq§0.0032000043§0.1
+NoiseLogo§amp§1.4989971§1.0
+NoiseLogo§abs§true
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.32500002§false§5.0E-4§0.0§0.13125§1.0§0.4624996§false§0.6324637§0.6§1.0§1.0§1.0§true§0.91849995§0.0§1.0§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.99985§300.0
+NoiseLogo§colors§10.00001§200.0
+NoiseLogo§time radius§0.19909593§10.000001
+NoiseLogo§freq§0.003300004§0.1
+NoiseLogo§amp§1.4989971§1.0
+NoiseLogo§abs§true
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.12500004§false§5.0E-4§0.0§0.13125§1.0§0.27812478§false§0.6545846§0.5§1.0§1.0§0.44999966§false§0.094963804§0.2§1.0§1.0§0.5781247§false§0.25803918§0.45§0.4125§1.0§1.0§true§0.91849995§0.0§0.0§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§6.9989166§200.0
+NoiseLogo§time radius§0.19909593§10.000001
+NoiseLogo§freq§0.0014999888§0.1
+NoiseLogo§amp§3.6099958§10.0
+NoiseLogo§abs§true
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§0.0919638§0.0§1.0§1.0§0.27812552§false§0.0919638§0.0§1.0§1.0§0.703125§false§5.0E-4§0.0§0.13125§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§12.00001§200.0
+NoiseLogo§time radius§0.4998953§0.10000002
+NoiseLogo§freq§9.0998877E-4§0.010000001
+NoiseLogo§amp§3.6099958§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.47500038§false§0.6614637§0.603125§1.0§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§12.00001§200.0
+NoiseLogo§time radius§0.4998953§0.10000002
+NoiseLogo§freq§9.0998877E-4§0.010000001
+NoiseLogo§amp§3.6099958§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.47500038§false§0.6614637§0.603125§1.0§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§12.00001§200.0
+NoiseLogo§time radius§0.4998953§0.10000002
+NoiseLogo§freq§9.0998877E-4§0.010000001
+NoiseLogo§amp§3.6099958§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.47500038§false§0.6614637§0.603125§1.0§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
+NoiseLogo§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§10.995971§200.0
+NoiseLogo§time radius§2.0099955§1.0000001
+NoiseLogo§time speed§0.5000003§0.001
+NoiseLogo§freq§0.0060000066§1.0
+NoiseLogo§dist freq§-3.070099E-4§0.001
+NoiseLogo§amp§3.4299946§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.48125085§false§0.65646374§0.709375§1.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+NoiseLogo§frames§720.9988§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§10.995971§200.0
+NoiseLogo§time radius§2.0099955§1.0000001
+NoiseLogo§time speed§0.5000003§0.001
+NoiseLogo§freq§0.0060000066§1.0
+NoiseLogo§dist freq§-3.070099E-4§0.001
+NoiseLogo§amp§3.4299946§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.48125085§false§0.65646374§0.709375§1.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+NoiseLogo§frames§720.9988§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§10.995971§200.0
+NoiseLogo§time radius§2.0099955§1.0000001
+NoiseLogo§time speed§0.5000003§0.001
+NoiseLogo§freq§0.0060000066§1.0
+NoiseLogo§dist freq§-3.070099E-4§0.001
+NoiseLogo§amp§3.4299946§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.48125085§false§0.65646374§0.709375§1.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+NoiseLogo§frames§720.9988§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§10.995971§200.0
+NoiseLogo§time radius§2.0099955§1.0000001
+NoiseLogo§time speed§0.5000003§0.001
+NoiseLogo§freq§0.0060000066§1.0
+NoiseLogo§dist freq§-3.070099E-4§0.001
+NoiseLogo§amp§3.4299946§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.48125085§false§0.65646374§0.709375§1.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+NoiseLogo§frames§720.9988§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§60.00004§300.0
+NoiseLogo§colors§10.995971§200.0
+NoiseLogo§time radius§0.7889955§10.000001
+NoiseLogo§freq§0.0022000065§0.1
+NoiseLogo§dist freq§0.0§10.0
+NoiseLogo§amp§3.0799954§10.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.38125065§false§0.65646374§0.709375§1.0§1.0§0.49999964§false§0.6639344§0.28125§1.0§1.0§0.625§false§0.65646374§0.709375§1.0§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
+NoiseLogo§frames§1000.9902§300.0
+STATE_END

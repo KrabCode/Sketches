@@ -24,7 +24,7 @@ public class Points extends KrabApplet {
     public void setup() {
         pg = createGraphics(width, height, P3D);
 //        surface.setAlwaysOnTop(true);
-        frameRecordingDuration *= 2;
+        framesToRecord *= 2;
     }
 
     public void draw() {

@@ -22,7 +22,7 @@ public class NoiseSplit_2 extends KrabApplet {
     }
 
     public void draw() {
-        frameRecordingDuration = 360*sliderInt("video length");
+        framesToRecord = 360*sliderInt("video length");
         pg.beginDraw();
         fadeToBlack(pg);
         blurPass(pg);

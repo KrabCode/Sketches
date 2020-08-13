@@ -25,7 +25,7 @@ public class GradientSea extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        frameRecordingDuration = sliderInt("record frames", 360);
+        framesToRecord = sliderInt("record frames", 360);
         String shader = "shaders/_2020_06/GradientShader/gradient.glsl";
         uniform(shader).set("time", t);
         uniform(shader).set("background", gradient("gradient"));

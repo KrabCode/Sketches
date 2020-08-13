@@ -29,7 +29,7 @@ public class Chromab extends KrabApplet {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);
         }
-        frameRecordingDuration = 360 * 2;
+        framesToRecord = 360 * 2;
     }
 
     public void draw() {

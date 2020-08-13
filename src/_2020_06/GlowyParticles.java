@@ -27,7 +27,7 @@ public class GlowyParticles extends KrabApplet {
     }
 
     public void draw() {
-        frameRecordingDuration = 360*sliderInt("record frames");
+        framesToRecord = 360*sliderInt("record frames");
         pg.beginDraw();
         drawPoints();
         pg.endDraw();

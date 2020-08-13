@@ -26,7 +26,7 @@ public class Fireball extends KrabApplet {
     }
 
     public void draw() {
-        frameRecordingDuration = sliderInt("record frames");
+        framesToRecord = sliderInt("record frames");
         pg.beginDraw();
         ramp(pg);
         fadeToBlack(pg);

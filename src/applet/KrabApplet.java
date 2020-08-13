@@ -122,8 +122,8 @@ public abstract class KrabApplet extends PApplet {
     protected float t;
     protected boolean mousePressedOutsideGui = false;
     protected int frameRecordingStarted = 0;
-    protected int frameRecordingDuration = 360; // assuming t += radians(1) per frame for a perfect loop
-    protected float timeSpeed = 1;
+    protected int framesToRecord = 360;
+    protected float tChangePerFrame = 1;
     private float trayWidthWhenExtended = minimumTrayWidth;
     private float trayWidth = minimumTrayWidth;
     private boolean captureScreenshot = false;
@@ -422,7 +422,7 @@ public abstract class KrabApplet extends PApplet {
      * @param defaultVisibility should the GUI tray start in the shown state?
      */
     protected void gui(boolean defaultVisibility) {
-        t += radians(timeSpeed);
+        t += tChangePerFrame;
         guiSetup(defaultVisibility);
         updateFullscreenToggle();
         updateKeyboardInput();
@@ -455,13 +455,14 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
-    private void toggleFullscreen() {
+    protected void toggleFullscreen() {
         boolean windowed = width == displayWidth;
         if (windowed) {
             surface.setSize(1000, 1000);
         } else {
             surface.setSize(displayWidth, displayHeight);
         }
+        surface.setLocation(0,0);
     }
 
     private void updateTray() {
@@ -1203,12 +1204,13 @@ public abstract class KrabApplet extends PApplet {
     // RECORDING
 
     public void rec(int frames) {
-        frameRecordingDuration = frames;
+        framesToRecord = frames;
         rec(g);
     }
 
     public void rec(PGraphics pg, int frames) {
-        frameRecordingDuration = frames;
+        framesToRecord = frames;
+        tChangePerFrame = TAU / frames;
         savePGraphics(pg);
     }
 
@@ -1228,7 +1230,7 @@ public abstract class KrabApplet extends PApplet {
             pg.save(filename);
             println(filename + " saved");
         }
-        int frameRecordingEnd = frameRecordingStarted + frameRecordingDuration + 1;
+        int frameRecordingEnd = frameRecordingStarted + framesToRecord + 1;
         if (frameRecordingStarted > 0 && frameCount < frameRecordingEnd) {
             int frameNumber = frameCount - frameRecordingStarted + 1;
             pg.save(captureDir + frameNumber + ".jpg");
@@ -1644,7 +1646,7 @@ public abstract class KrabApplet extends PApplet {
                 id = regenIdAndCaptureDir();
             }
             if (key == 'l') {
-                frameRecordingStarted = frameCount - frameRecordingDuration * 2;
+                frameRecordingStarted = frameCount - framesToRecord * 2;
                 runFfmpeg();
             }
             if (key == 'i') {

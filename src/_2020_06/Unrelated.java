@@ -24,7 +24,7 @@ public class Unrelated extends KrabApplet {
     }
 
     public void draw() {
-        frameRecordingDuration = sliderInt("frames", 1000);
+        framesToRecord = sliderInt("frames", 1000);
         pg.beginDraw();
         if (button("clear")) {
             pg.clear();

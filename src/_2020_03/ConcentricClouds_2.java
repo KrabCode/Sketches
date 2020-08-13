@@ -38,7 +38,7 @@ public class ConcentricClouds_2 extends KrabApplet {
 
         colorMode(HSB, 1, 1, 1);
         pg = createGraphics(width, height, P2D);
-        frameRecordingDuration *= 2;
+        framesToRecord *= 2;
     }
 
 

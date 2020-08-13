@@ -25,7 +25,7 @@ public class RecursiveTree extends KrabApplet {
             surface.setAlwaysOnTop(true);
         }
         pg = createGraphics(width, height, P2D);
-        frameRecordingDuration = 1000;
+        framesToRecord = 1000;
     }
 
     public void draw() {

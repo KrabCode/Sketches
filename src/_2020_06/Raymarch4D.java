@@ -24,7 +24,7 @@ public class Raymarch4D extends KrabApplet {
 
     public void draw() {
         pg.beginDraw();
-        frameRecordingDuration = sliderInt("frames");
+        framesToRecord = sliderInt("frames");
         fadeToBlack(pg);
         String shader = "shaders/_2020_06/Raymarch4D/raymarch4D.glsl";
         uniform(shader).set("time", t);

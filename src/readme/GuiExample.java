@@ -21,7 +21,7 @@ public class GuiExample extends KrabApplet {
 
     public void setup() {
         rectMode(CENTER);
-        frameRecordingDuration = 100000;
+        framesToRecord = 100000;
         if (recordableCursorMode) {
             cursorImage = loadImage("images/cursor/cursor.png");
         }
