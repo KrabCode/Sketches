@@ -1376,3 +1376,52 @@ chicken 3§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§tru
 chicken 3§pos§1000.0§204.6875§-892.0156
 chicken 3§scale§10.0§1.0§1.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ChickenGrain§true
+ChickenGrain§hash§vertical§sat lerp§0.0§true§0.4120001§0.0§0.0§1.0§1.0§true§0.038500033§0.0§1.0§1.0§
+ChickenGrain§chicken count§4.000005§100.0
+ChickenGrain§frames§360.0009§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§0.13000044§10.0
+displace§time radius§0.7500003§10.0
+displace§angle offset§0.6200005§10.0
+displace§angle range§0.95000196§10.0
+displace§noise details§3.0§0.32600027§1.8480011§20.068996
+displace§noise speeds§1.0§0.7000002§0.302§0.077
+displace§chicken count§3.0§100.0
+GROUP§chicken 0§false
+chicken 0§pre rotate§1000.0§-18.359375§-7.8125
+chicken 0§base rot§0.0§10.0
+chicken 0§peck rot§1.235469§10.0
+chicken 0§peck speed§2.8554688§10.0
+chicken 0§post rotate§1000.0§-16.796875§6.25
+chicken 0§head scale§0.76671875§10.0
+chicken 0§debug§false
+chicken 0§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.059046887§0.903125§0.85§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 0§pos§1000.0§157.07812§207.98438
+chicken 0§scale§1.0§2.9990053§3.0000002
+GROUP§chicken 1§false
+chicken 1§pre rotate§1000.0§-18.359375§-7.8125
+chicken 1§base rot§0.0§10.0
+chicken 1§peck rot§1.0854697§10.0
+chicken 1§peck speed§4.575468§10.0
+chicken 1§post rotate§1000.0§-16.796875§6.25
+chicken 1§head scale§0.72000015§10.0
+chicken 1§debug§false
+chicken 1§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.059046887§0.903125§0.85§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 1§pos§1000.0§159.0§-175.0
+chicken 1§scale§1.0§2.502§2.5019987
+GROUP§chicken 2§false
+chicken 2§pre rotate§1000.0§-18.359375§-7.8125
+chicken 2§base rot§0.0§10.0
+chicken 2§peck rot§1.0854697§10.0
+chicken 2§peck speed§2.6754682§10.0
+chicken 2§post rotate§1000.0§-16.796875§6.25
+chicken 2§head scale§0.72000015§10.0
+chicken 2§debug§false
+chicken 2§gradient§vertical§rgb lerp§0.0§true§0.60058606§0.6875§1.0§1.0§0.49687463§false§0.059046887§0.903125§0.85§1.0§1.0§true§0.6001954§0.6875§1.0§1.0§
+chicken 2§pos§1000.0§-172.0§-4.0
+chicken 2§scale§10.0§-1.7929995§1.7919987
+STATE_END

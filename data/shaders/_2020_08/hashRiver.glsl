@@ -160,8 +160,8 @@ vec4 rampColor(float pct){
 
 void main(){
     vec2 uv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
-    float grainSize = 150.0;
-    float t = time*.01;
+    float grainSize = 1500.0;
+    float t = time*.00;
     vec2 hashCoord = floor(vec2(uv.x*grainSize, uv.y*grainSize-uv.x));
     vec3 hash = rampColor(hash13(vec3(hashCoord, t))).rgb;
 
