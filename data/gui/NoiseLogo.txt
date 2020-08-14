@@ -149,3 +149,16 @@ NoiseLogo§abs§false
 NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.38125065§false§0.65646374§0.709375§1.0§1.0§0.49999964§false§0.6639344§0.28125§1.0§1.0§0.625§false§0.65646374§0.709375§1.0§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
 NoiseLogo§frames§1000.9902§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§NoiseLogo§true
+NoiseLogo§count§30.000143§300.0
+NoiseLogo§colors§15.0§200.0
+NoiseLogo§time radius§1.1389954§10.000001
+NoiseLogo§freq§1.0006439E-5§0.010000001
+NoiseLogo§dist freq§3.00381E-5§0.010000001
+NoiseLogo§amp§9.119994§100.0
+NoiseLogo§abs§false
+NoiseLogo§gradient§vertical§rgb lerp§0.0§true§5.0E-4§0.0§0.13125§1.0§0.38125065§false§0.65646374§0.709375§1.0§1.0§0.49999964§false§0.6639344§0.28125§1.0§1.0§0.625§false§0.65646374§0.709375§1.0§1.0§1.0§true§5.0E-4§0.0§0.13125§1.0§
+NoiseLogo§frames§1000.9902§300.0
+STATE_END

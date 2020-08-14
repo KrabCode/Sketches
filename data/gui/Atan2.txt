@@ -1,0 +1,6 @@
+STATE_BEGIN
+UNDO
+GROUP§Atan2§true
+Atan2§grad§vertical§rgb lerp§0.0§true§0.60049987§1.0§0.203125§1.0§1.0§true§0.57349974§0.0§1.0§1.0§
+Atan2§frames§360.0§300.0
+STATE_END
