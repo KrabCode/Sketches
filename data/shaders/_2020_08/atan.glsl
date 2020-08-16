@@ -11,6 +11,9 @@ vec4 gradientColor(float pct){
 
 void main(){
     vec2 cv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
-    float atan = .5+.5*(atan(cv.y, cv.x) / pi);
-    gl_FragColor = gradientColor(atan);
+
+    float a1 = .5+.5*(atan(cv.y, cv.x) / pi);
+    float a2 = (atan(cv.y, cv.x));
+    float d = length(cv)*1.15;
+    gl_FragColor = gradientColor(cos(a2*4.)+d);
 }
