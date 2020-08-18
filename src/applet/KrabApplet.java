@@ -203,11 +203,11 @@ public abstract class KrabApplet extends PApplet {
         return slider(name, defaultValue, precision, false, -Float.MAX_VALUE, Float.MAX_VALUE, false);
     }
 
-    protected float slider(String name, float min, float max, float defaultValue) {
+    protected float slider(String name, float defaultValue, float min, float max) {
         return slider(name, defaultValue, numberOfDigitsInFlooredNumber(max(min, max)), true, min, max, false);
     }
 
-    protected float slider(String name, float min, float max, float defaultValue, float precision) {
+    protected float slider(String name, float defaultValue, float min, float max, float precision) {
         return slider(name, defaultValue, precision, true, min, max, false);
     }
 
@@ -569,7 +569,7 @@ public abstract class KrabApplet extends PApplet {
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
         pg.noStroke();
-        pg.fill(255, slider("fade to black", 0, 255, 10));
+        pg.fill(255, slider("fade to black", 10,0,255));
         pg.rectMode(CENTER);
         pg.rect(0, 0, width * 3, height * 3);
         pg.hint(ENABLE_DEPTH_TEST);
@@ -2016,6 +2016,14 @@ public abstract class KrabApplet extends PApplet {
         uniform(shaderPath).set("amps", sliderXYZ("noise speeds", 0));
         hotFilter(shaderPath, pg);
         resetGroup();
+    }
+
+    protected void noiseDisplacePixelatedPass(PGraphics pg){
+        String hashShader = "shaders/filters/noiseDisplacePixelated.glsl";
+        uniform(hashShader).set("time", t);
+        uniform(hashShader).set("pixelate", sliderInt("pixelate", 100, 1, 10000));
+        uniform(hashShader).set("delta", slider("delta", .1f,0, 1));
+        hotFilter(hashShader, pg);
     }
 
     protected void blurPass(PGraphics pg) {

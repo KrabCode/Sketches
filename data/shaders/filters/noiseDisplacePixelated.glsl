@@ -1,6 +1,7 @@
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float time;
+uniform float delta;
 uniform int pixelate;
 
 vec4 permute(vec4 x){ return mod(((x*34.0)+1.0)*x, 289.0); }
@@ -93,10 +94,11 @@ float snoise(vec4 v){
 
 
 void main() {
-    vec2 uv = gl_FragCoord.xy / resolution.xy;
-    vec2 fv = floor(uv*pixelate)+50.;
-    vec2 t = vec2(cos(time), sin(time))+10.;
-    float hash = snoise(vec4(fv*0.5,t)) + .5*snoise(vec4(fv*20.2,t)) + .25*snoise(vec4(fv*100.,t));
-    vec3 col = texture(texture, uv+vec2(hash*0.02)).rgb;
+    vec2 uv =  gl_FragCoord.xy / resolution.xy;
+    vec2 cv = (gl_FragCoord.xy-.5*resolution) / resolution.y;
+    vec2 fv = floor(uv.xy*pixelate)+532.121;
+    vec2 t = vec2(cos(time), sin(time))*.2;
+    float hash = snoise(vec4(fv*0.01,t)) + .75*snoise(vec4(fv*1.2,t)) + .25*snoise(vec4(fv*50.,t));
+    vec3 col = texture(texture, clamp(uv+vec2(hash*delta), 0, 1)).rgb;
     gl_FragColor = vec4(col, 1);
 }

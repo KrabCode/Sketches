@@ -25,6 +25,7 @@ public class Atan2 extends KrabApplet {
         uniform(atanShader).set("time", t);
         uniform(atanShader).set("grad", gradient("grad"));
         hotFilter(atanShader, pg);
+        noiseDisplacePixelatedPass(pg);
         pg.endDraw();
         image(pg, 0, 0);
         rec(pg, sliderInt("frames", 360));

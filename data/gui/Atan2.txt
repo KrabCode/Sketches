@@ -10,3 +10,43 @@ GROUP§Atan2§true
 Atan2§grad§vertical§rgb lerp§0.0§true§0.6009999§1.0§0.271875§1.0§1.0§true§0.57349974§1.0§1.0§1.0§
 Atan2§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Atan2§true
+Atan2§grad§vertical§hsv lerp§0.0§true§0.108499855§0.74375§1.0§1.0§1.0§true§0.7379997§1.0§1.0§0.98500013§
+Atan2§pixelate§500.00787§50.0
+Atan2§delta§0.017§1.0
+Atan2§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Atan2§true
+Atan2§grad§vertical§hsv lerp§0.0§true§0.108499855§0.74375§1.0§1.0§1.0§true§0.7379997§1.0§1.0§0.98500013§
+Atan2§pixelate§500.0003§50.0
+Atan2§delta§0.017§1.0
+Atan2§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Atan2§true
+Atan2§grad§vertical§sat lerp§0.0§true§0.9524999§0.0§1.0§1.0§0.50625056§false§0.60049945§0.715625§1.0§0.98500013§1.0§true§0.67849976§1.0§0.0§0.98500013§
+Atan2§pixelate§500.0003§500.0
+Atan2§delta§0.017§1.0
+Atan2§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Atan2§true
+Atan2§grad§vertical§sat lerp§0.0§true§0.9524999§0.0§1.0§1.0§0.50625056§false§0.60049945§0.715625§1.0§0.98500013§1.0§true§0.67849976§1.0§0.0§0.98500013§
+Atan2§pixelate§500.0003§500.0
+Atan2§delta§0.04400002§1.0
+Atan2§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Atan2§true
+Atan2§grad§vertical§sat lerp§0.0§true§0.9524999§0.0§1.0§1.0§0.50625056§false§0.60049945§0.715625§1.0§0.98500013§1.0§true§0.67849976§1.0§0.0§0.98500013§
+Atan2§pixelate§500.0003§500.0
+Atan2§delta§0.021000002§1.0
+Atan2§frames§360.0§300.0
+STATE_END

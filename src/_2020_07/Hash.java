@@ -21,7 +21,7 @@ public class Hash extends KrabApplet {
         pg = updateGraphics(pg);
         pg.beginDraw();
         pg.image(gradient("background"), 0, 0);
-        String hash = "shaders/noise/hash.glsl";
+        String hash = "shaders/noise/noiseDisplacePixelated.glsl";
         uniform(hash).set("time", t);
         hotFilter(hash, pg);
         pg.endDraw();

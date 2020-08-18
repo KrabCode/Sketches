@@ -113,3 +113,10 @@ Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375�
 Wallpaper§pixelate§50.002525§300.0
 Wallpaper§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§0.0§1.0§1.0§0.3375002§false§0.09746154§0.628125§1.0§1.0§0.5812493§false§0.07430489§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§pixelate§10.999892§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END

@@ -41,14 +41,14 @@ public class ChickenGrain extends KrabApplet {
     private void updateBackground() {
         bg = updateGraphics(bg, P2D);
         bg.beginDraw();
-        hashPass(bg);
+        chickenHash(bg);
         fbmDisplacePass(bg);
         bg.endDraw();
         pg.imageMode(CORNER);
         pg.image(bg, 0, 0);
     }
 
-    private void hashPass(PGraphics pg) {
+    private void chickenHash(PGraphics pg) {
         String hash = "shaders\\_2020_08\\hashRiver.glsl";
         uniform(hash).set("time", t);
         uniform(hash).set("gradient", gradient("hash"));
