@@ -4,3 +4,112 @@ GROUP§Wallpaper§true
 Wallpaper§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.46249986§false§1.953125E-4§0.0§0.684375§1.0§1.0§true§0.9998047§0.0§0.25625§1.0§
 Wallpaper§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.99930465§0.0§0.0§1.0§
+Wallpaper§time speed§1.33§100.0
+Wallpaper§pixelate§597.99994§3000.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.6465§1.0§1.0§1.0§1.0§true§0.99930465§1.0§1.0§1.0§
+Wallpaper§time speed§1.33§100.0
+Wallpaper§pixelate§50.003456§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.6485001§1.0§0.28125§1.0§0.16249996§false§0.733871§0.96875§0.2509804§1.0§1.0§true§0.99930465§1.0§1.0§1.0§
+Wallpaper§time speed§0.17999907§10.0
+Wallpaper§pixelate§50.000706§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.6485001§1.0§0.28125§1.0§0.16249996§false§0.733871§0.96875§0.2509804§1.0§1.0§true§0.99930465§1.0§1.0§1.0§
+Wallpaper§time speed§0.17999907§10.0
+Wallpaper§pixelate§50.000706§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.6485001§1.0§0.28125§1.0§0.16249996§false§0.733871§0.96875§0.2509804§1.0§1.0§true§0.99930465§1.0§1.0§1.0§
+Wallpaper§time speed§0.17999907§10.0
+Wallpaper§pixelate§50.000706§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.57850003§0.0§0.0§1.0§0.4468752§false§0.6183711§1.0§1.0§1.0§0.5124996§false§0.99730474§1.0§1.0§1.0§0.84375024§false§0.6178711§1.0§1.0§1.0§1.0§true§0.9778044§1.0§0.0§1.0§
+Wallpaper§time speed§0.17999907§10.0
+Wallpaper§pixelate§50.000706§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§rgb lerp§0.0§true§0.57850003§0.0§0.0§1.0§0.4468752§false§0.6183711§1.0§1.0§1.0§0.5124996§false§0.99730474§1.0§1.0§1.0§0.84375024§false§0.6178711§1.0§1.0§1.0§1.0§true§0.9778044§1.0§0.0§1.0§
+Wallpaper§time speed§0.17999907§10.0
+Wallpaper§pixelate§50.000706§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.178125§1.0§0.459375§false§0.075848304§0.99404764§0.0§1.0§0.59999937§false§0.0783049§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§time speed§0.13999984§10.0
+Wallpaper§pixelate§50.00004§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375§1.0§0.42812514§false§0.075329565§0.0§0.0§1.0§0.57812434§false§0.0783049§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§time speed§0.3599998§10.0
+Wallpaper§pixelate§50.05773§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375§1.0§0.42812514§false§0.075329565§0.0§0.0§1.0§0.57812434§false§0.0783049§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§time speed§0.3599998§10.0
+Wallpaper§pixelate§50.05773§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375§1.0§0.42812514§false§0.075329565§0.0§0.0§1.0§0.57812434§false§0.0783049§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§time speed§0.3599998§10.0
+Wallpaper§pixelate§50.05773§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375§1.0§0.42812514§false§0.075329565§0.0§0.0§1.0§0.57812434§false§0.0783049§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§pixelate§50.05773§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375§1.0§0.4093753§false§0.075329565§0.0§0.0§1.0§0.52187425§false§0.07430489§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§pixelate§50.002525§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Wallpaper§true
+Wallpaper§background§vertical§sat lerp§0.0§true§0.57850003§1.0§0.334375§1.0§0.4093753§false§0.075329565§0.0§0.0§1.0§0.52187425§false§0.07430489§1.0§1.0§1.0§1.0§true§0.57850003§0.471875§0.0§1.0§
+Wallpaper§pixelate§50.002525§300.0
+Wallpaper§frames§360.0§300.0
+STATE_END
