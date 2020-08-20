@@ -158,3 +158,67 @@ Landscape§grain strength§0.009100139§0.1
 Landscape§grain size§1671.6016§3000.0
 Landscape§frames§360.9993§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§translate§1000.0§43.0§174.0
+Landscape§rows§20.0§200.0
+Landscape§cols§20.0§200.0
+Landscape§size§1000.0§646.0§669.0
+Landscape§stroke§0.0§0.0§1.0§1.0§1.0
+Landscape§weight§3.0699992§10.0
+Landscape§fill§0.0§0.0§0.5§1.0§1.0
+Landscape§frames§360.9993§300.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.5§1.0§1.0
+lights§dir light color§0.0§0.0§0.5§1.0§1.0
+lights§spec light color§0.0§0.0§0.5§1.0§1.0
+lights§shine§0.0§10.0
+lights§light count§1.0§100.0
+lights§light 1§10.0§0.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§translate§1000.0§43.0§174.0
+Landscape§rows§20.0§200.0
+Landscape§cols§20.0§200.0
+Landscape§size§1000.0§646.0§669.0
+Landscape§stroke§0.0§0.0§1.0§1.0§1.0
+Landscape§weight§2.3199992§10.0
+Landscape§fill§0.0§0.0§0.5§1.0§1.0
+Landscape§frames§360.9993§300.0
+GROUP§lights§true
+lights§ambient§0.0§0.0§0.5§1.0§1.0
+lights§dir light color§0.0§0.0§0.5§1.0§1.0
+lights§spec light color§0.0§0.0§0.5§1.0§1.0
+lights§shine§0.0§10.0
+lights§light count§1.0§100.0
+lights§light 1§10.0§0.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§translate§1000.0§43.0§174.0
+Landscape§rotate§3.1415927§0.0§0.0§0.0
+Landscape§rows§20.0§200.0
+Landscape§cols§20.0§200.0
+Landscape§size§1000.0§646.0§669.0
+Landscape§stroke§0.0§0.0§0.0§1.0§1.0
+Landscape§weight§4.9999967§10.0
+Landscape§fill§0.08300002§1.0§1.0§1.0§1.0
+Landscape§frames§360.9993§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§true
+Landscape§translate§1000.0§0.0§0.0
+Landscape§rotate§3.1415927§3.3991985§4.8694773§0.075398214
+Landscape§rows§20.0§200.0
+Landscape§cols§20.0§200.0
+Landscape§size§1000.0§646.0§669.0
+Landscape§stroke§0.0§0.0§0.0§1.0§1.0
+Landscape§weight§-3.5092235E-6§1.0
+Landscape§grad§horizontal§rgb lerp§0.0§true§0.6575§0.809375§0.746875§1.0§0.48125§false§0.8680001§0.984375§1.0§1.0§0.57187486§false§0.8923395§0.9877301§0.0§1.0§1.0§true§0.9614998§0.0§0.64375§1.0§
+Landscape§frames§360.9993§300.0
+STATE_END
