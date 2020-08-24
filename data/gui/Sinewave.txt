@@ -1,0 +1,205 @@
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§bg§0.9968749§0.0§0.0§1.0§1.0
+Sinewave§weight§1.9875002§10.0
+Sinewave§stroke§0.991875§0.0§0.021875§1.0§1.0
+Sinewave§sine count§155.08713§300.0
+Sinewave§freq§16.4375§100.0
+Sinewave§x detail§100.0§300.0
+Sinewave§base amp§0.0§10.0
+Sinewave§x amp§0.0§10.0
+Sinewave§random norm§0.0§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§bg§0.9968749§0.0§0.0§1.0§1.0
+Sinewave§weight§1.9875002§10.0
+Sinewave§stroke§0.991875§0.0§0.021875§1.0§1.0
+Sinewave§sine count§155.08713§300.0
+Sinewave§freq§7.9375§100.0
+Sinewave§x detail§89.00431§3000.0
+Sinewave§base amp§0.0§10.0
+Sinewave§x amp§-4.3375006§10.0
+Sinewave§random norm§-111.05§1000.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§bg§0.9968749§0.0§0.0§1.0§1.0
+Sinewave§weight§1.9875002§10.0
+Sinewave§stroke§0.991875§0.0§0.021875§1.0§1.0
+Sinewave§sine count§325.7922§300.0
+Sinewave§freq§16.6875§100.0
+Sinewave§x detail§89.00431§3000.0
+Sinewave§base amp§-59.475§100.0
+Sinewave§x amp§-4.3375006§10.0
+Sinewave§random norm§-111.05§1000.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§bg§0.9968749§0.0§0.0§1.0§1.0
+Sinewave§weight§3.3375013§10.0
+Sinewave§stroke§0.991875§0.0§0.165625§1.0§1.0
+Sinewave§sine count§200.99985§300.0
+Sinewave§freq§12.1875§100.0
+Sinewave§x detail§160.10303§3000.0
+Sinewave§base amp§76.149994§1000.0
+Sinewave§x amp§-4.3375006§10.0
+Sinewave§random norm§262.7§1000.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§bg§0.9968749§0.0§0.0§1.0§1.0
+Sinewave§weight§0.7750012§10.0
+Sinewave§stroke§0.991875§0.0§0.165625§1.0§1.0
+Sinewave§sine count§715.00366§3000.0
+Sinewave§freq§10.4375§100.0
+Sinewave§x detail§50.03583§300.0
+Sinewave§base amp§-89.875§100.0
+Sinewave§x amp§0.0§10.0
+Sinewave§random§79.274994§100.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875002§30.0
+Sinewave§weight§7.2250013§100.0
+Sinewave§stroke§0.991875§0.0§0.165625§1.0§1.0
+Sinewave§count§100.0§300.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§10.0§0.1125§0.0
+Sinewave§amp§0.099999815§10.0
+Sinewave§freq§0.9375§100.0
+Sinewave§dampen§0.9§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875§30.0
+Sinewave§weight§1.7250013§100.0
+Sinewave§stroke§0.991875§0.0§1.0§1.0§1.0
+Sinewave§count§459.9997§300.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§10.0§0.1125§0.0
+Sinewave§angle range§0.19925001§1.0
+Sinewave§freq§0.001973741§0.001
+Sinewave§amp§0.4999969§10.0
+Sinewave§dampen§0.9§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875§30.0
+Sinewave§weight§1.9000002§10.0
+Sinewave§stroke§0.991875§0.0§0.659375§1.0§1.0
+Sinewave§count§3011.9963§3000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§10.0§0.1125§0.0
+Sinewave§angle range§0.3654999§1.0
+Sinewave§freq§0.16338125§0.10000001
+Sinewave§amp§1.5249968§10.0
+Sinewave§dampen§0.9§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875§30.0
+Sinewave§weight§2.5625012§10.0
+Sinewave§stroke§0.991875§0.0§0.659375§1.0§1.0
+Sinewave§count§3011.9963§3000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§1000.0§0.0§0.0
+Sinewave§freq§0.0026311832§0.10000001
+Sinewave§angle range§0.52299994§1.0
+Sinewave§amp§0.062496882§10.0
+Sinewave§dampen§0.9§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875§30.0
+Sinewave§weight§2.5625012§10.0
+Sinewave§stroke§0.991875§0.0§0.659375§1.0§1.0
+Sinewave§count§3011.9963§3000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§1000.0§0.0§0.0
+Sinewave§noise pos§1000.0§0.0§0.0
+Sinewave§freq§0.0026311832§0.10000001
+Sinewave§base angle§0.0§10.0
+Sinewave§angle range§0.52299994§1.0
+Sinewave§amp§0.062496882§10.0
+Sinewave§dampen§0.95§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875§30.0
+Sinewave§weight§1.7749999§10.0
+Sinewave§stroke§0.991875§0.0§0.659375§1.0§1.0
+Sinewave§count§4496.995§3000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§1000.0§0.0§0.0
+Sinewave§noise pos§1000.0§0.0§0.0
+Sinewave§freq§0.050381176§0.10000001
+Sinewave§base angle§0.0§10.0
+Sinewave§angle range§6.2979984§10.0
+Sinewave§amp§0.23749694§10.0
+Sinewave§dampen§0.95§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.0875§30.0
+Sinewave§weight§1.7749999§10.0
+Sinewave§stroke§0.991875§0.0§0.628125§1.0§1.0
+Sinewave§count§4361.005§9000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§1000.0§0.0§0.0
+Sinewave§noise pos§10.0§-42.612507§36.362507
+Sinewave§freq§0.0045074336§0.10000002
+Sinewave§base angle§0.0§10.0
+Sinewave§angle range§7.322998§100.0
+Sinewave§amp§0.087497145§10.0
+Sinewave§dampen§0.9825006§1.0
+Sinewave§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§1.4624991§3.0
+Sinewave§weight§1.8749981§10.0
+Sinewave§stroke§0.991875§0.0§0.509375§1.0§1.0
+Sinewave§count§5058.0107§9000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§1000.0§0.0§0.0
+Sinewave§noise pos§10.0§-78.766235§41.387512
+Sinewave§freq§0.012507439§0.10000002
+Sinewave§base angle§0.0§10.0
+Sinewave§angle range§7.322998§100.0
+Sinewave§amp§0.087497145§10.0
+Sinewave§dampen§0.9825006§1.0
+Sinewave§frames§360.0§300.0
+STATE_END
