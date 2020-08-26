@@ -1,224 +1,557 @@
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§8.0§100.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.00234375§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.484375§1.0§
+Landscape§translate§1000.0§0.0§0.0§-574.6
+Landscape§rotate§3.1415927§0.6785845§0.4084066§0.0
+Landscape§rows§10.99999§200.0
+Landscape§cols§10.995051§200.0
+Landscape§freq§0.10000002§0.0019000142§0.47461984
+Landscape§amp§200.0§99.999985§53.399998
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5399998§10.0
+Landscape§weight§5.3399997§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.659375§1.0§1.0§1.0§true§0.9509999§0.446875§1.0§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§true
+scale§center§1000.0§0.0§0.0
+scale§RGB scales§0.1§1.0020999§1.0020999§1.0020999
+scale§common scale§1.0020999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§true
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§20.99998§1000.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§1.0§0.0§1.0§0.49062505§false§0.99843746§0.0§1.0§1.0§1.0§true§0.83027345§1.0§0.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§10.99999§200.0
+Landscape§cols§10.995051§200.0
+Landscape§freq§1.0000001§0.0017000141§0.05491963
+Landscape§amp§200.0§99.999985§53.399998
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§5.3399997§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§20.99998§1000.0
-Landscape§t§0.04765623§0.1
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.14687519§false§0.97288215§0.534375§0.0§1.0§0.85625§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§10.99999§200.0
+Landscape§cols§10.995051§200.0
+Landscape§freq§1.0000001§0.0017000141§0.05491963
+Landscape§amp§200.0§99.999985§53.399998
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§5.3399997§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.00004§1000.0
-Landscape§t§0.0011952987§0.010000001
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.50000006§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§10.99999§200.0
+Landscape§cols§10.995051§200.0
+Landscape§freq§1.0000001§0.0017000141§0.05491963
+Landscape§amp§200.0§99.999985§53.399998
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§5.3399997§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.00004§1000.0
-Landscape§t§0.0012532952§0.1
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.50000006§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§15.000969§200.0
+Landscape§cols§15.999736§200.0
+Landscape§freq§0.10000002§0.0020000136§0.010419625
+Landscape§amp§200.0§200.39996§44.00003
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§1.134998§1.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.00004§1000.0
-Landscape§t§0.008726286§0.001
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§0.50000006§false§0.0§0.0§0.0§1.0§1.0§true§0.83027345§0.0§1.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§15.000969§200.0
+Landscape§cols§15.999736§200.0
+Landscape§freq§0.10000002§0.0021000137§0.010419625
+Landscape§amp§200.0§200.39996§44.00003
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§1.134998§1.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.005§100.0
-Landscape§time§3.0000024§20.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.83027345§0.0§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§15.000969§200.0
+Landscape§cols§15.999736§200.0
+Landscape§freq§0.1§9.999891E-4§0.0022000019
+Landscape§amp§200.0§200.1999§99.599976
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§1.134998§1.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
 Landscape§frames§360.0§300.0
+GROUP§displace§false
+displace§skip§true
+displace§time§1.0§10.0
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.5§3.0§20.0
+displace§noise speeds§10.0§0.0§0.0§0.0
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§false
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§15.000969§200.0
+Landscape§cols§15.999736§200.0
+Landscape§freq§0.1§9.999891E-4§0.0022000019
+Landscape§amp§200.0§200.1999§99.599976
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§5.0619917§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.11999991§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.72200024§3.0§20.0
+displace§noise speeds§1.0§0.16060111§0.0044000503§0.018500097
+GROUP§scale§true
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§false
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§15.000969§200.0
+Landscape§cols§15.999736§200.0
+Landscape§freq§0.1§9.999891E-4§0.0022000019
+Landscape§amp§200.0§200.1999§99.599976
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§5.0619917§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§1.0§10.0
+displace§time radius§0.11999991§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.72200024§3.0§20.0
+displace§noise speeds§1.0§0.16060111§0.0044000503§0.018500097
+GROUP§scale§true
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§false
+Landscape§fade to black§6.6599984§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.6375§1.0§
+Landscape§translate§10000.0§0.0§0.0§-665.2
+Landscape§rotate§3.1415927§0.0§0.38955745§0.0
+Landscape§rows§15.000969§200.0
+Landscape§cols§15.999736§200.0
+Landscape§freq§0.1§9.999891E-4§0.0022000019
+Landscape§amp§200.0§200.1999§99.599976
+Landscape§size§100.0§500.00006§500.00012
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§5.0619917§10.0
+Landscape§stroke§vertical§hsv lerp§0.0§true§0.6499999§0.540625§0.921875§1.0§1.0§true§0.97999954§0.546875§0.871875§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§true
+displace§skip§false
+displace§time§-8.544339E-8§0.010000001
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.32599998§3.420003§20.0
+displace§noise speeds§1.0§0.534601§0.02439996§0.018500097
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Landscape§false
+Landscape§fade to black§6.660002§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.001§0.0§0.590625§1.0§
+Landscape§translate§10000.0§-80.0§-180.0§-3145.2
+Landscape§rotate§3.1415927§0.0§0.50893784§0.0
+Landscape§rows§20.99644§200.0
+Landscape§cols§20.027998§200.0
+Landscape§freq§10.000001§9.999891E-4§0.03859396
+Landscape§amp§2000.0§200.1999§63.0
+Landscape§size§10000.0§1579.3§1585.0
+Landscape§time radius§0.5000004§10.0
+Landscape§weight§3.1519852§10.0
+Landscape§stroke§vertical§sat lerp§0.0§true§0.94049984§0.540625§1.0§1.0§0.5156251§false§0.765873§0.509375§0.8784314§1.0§1.0§true§0.6289996§0.5625§1.0§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§-8.544339E-8§0.010000001
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.35600016§0.41996798§20.0
+displace§noise speeds§10.0§0.3386001§0.20440151§0.018500097
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.005§100.0
-Landscape§time§3.0000024§20.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.24375024§false§0.5435548§0.490625§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§360.0§300.0
+Landscape§fade to black§6.660002§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.001§0.0§0.590625§1.0§
+Landscape§translate§10000.0§-80.0§-80.0§-4285.2
+Landscape§rotate§3.1415927§0.42097357§0.5152212§0.0
+Landscape§rows§10.013053§200.0
+Landscape§cols§10.989472§200.0
+Landscape§freq§0.010000001§3.4000355E-4§0.0024700142
+Landscape§amp§20000.0§680.1999§843.0
+Landscape§size§10000.0§1579.3§1585.0
+Landscape§time radius§-0.98000175§1.0
+Landscape§weight§3.1519852§10.0
+Landscape§stroke§vertical§sat lerp§0.0§true§0.94049984§0.540625§1.0§1.0§0.5156251§false§0.765873§0.509375§0.8784314§1.0§1.0§true§0.6289996§0.5625§1.0§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§-8.544339E-8§0.010000001
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.35600016§0.41996798§20.0
+displace§noise speeds§10.0§0.3386001§0.20440151§0.018500097
+GROUP§scale§true
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.005§100.0
-Landscape§time§3.0000024§20.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.24375024§false§0.5435548§0.490625§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§360.0§300.0
+Landscape§fade to black§6.660002§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.001§0.0§0.590625§1.0§
+Landscape§translate§10000.0§-80.0§-80.0§-4285.2
+Landscape§rotate§3.1415927§0.42097357§0.5152212§0.0
+Landscape§rows§10.013053§200.0
+Landscape§cols§10.989472§200.0
+Landscape§freq§0.010000001§3.4000355E-4§0.0024700142
+Landscape§amp§20000.0§680.1999§843.0
+Landscape§size§10000.0§1579.3§1585.0
+Landscape§time radius§-0.98000175§1.0
+Landscape§weight§3.1519852§10.0
+Landscape§stroke§vertical§sat lerp§0.0§true§0.94049984§0.540625§1.0§1.0§0.5156251§false§0.765873§0.509375§0.8784314§1.0§1.0§true§0.6289996§0.5625§1.0§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§-8.544339E-8§0.010000001
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.35600016§0.41996798§20.0
+displace§noise speeds§10.0§0.3386001§0.20440151§0.018500097
+GROUP§scale§true
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§50.005§100.0
-Landscape§time§3.0000024§20.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.24375024§false§0.5435548§0.71875§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§360.0§300.0
+Landscape§fade to black§4.199996§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.001§0.0§0.4125§1.0§
+Landscape§translate§10000.0§-60.0§-140.0§-4285.2
+Landscape§rotate§3.1415927§0.703717§0.4586725§0.0
+Landscape§rows§10.013053§200.0
+Landscape§cols§10.989472§200.0
+Landscape§freq§0.010000001§5.600028E-4§0.0017400137
+Landscape§amp§20000.0§640.1999§243.0
+Landscape§size§10000.0§1579.3§1585.0
+Landscape§time radius§0.23800015§1.0
+Landscape§move radius§0.90200126§10.0
+Landscape§weight§3.1519852§10.0
+Landscape§stroke§vertical§sat lerp§0.0§true§0.94049984§0.540625§1.0§1.0§0.5156251§false§0.765873§0.509375§0.8784314§1.0§1.0§true§0.6289996§0.5625§1.0§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§-8.544339E-8§0.010000001
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.35600016§0.41996798§20.0
+displace§noise speeds§10.0§0.3386001§0.20440151§0.018500097
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END
 STATE_BEGIN
 UNDO
 GROUP§Landscape§true
-Landscape§count§100.00008§100.0
-Landscape§time§3.9998574§200.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§160.9975§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§100.00008§100.0
-Landscape§time§3.9998574§200.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§160.9975§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§100.00008§100.0
-Landscape§time§3.9998574§200.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§160.9975§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§100.00008§100.0
-Landscape§time§3.9999561§200.0
-Landscape§triangle detail§102.00103§20000.0
-Landscape§x strength§0.117968746§0.1
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.29999998§false§0.5284238§1.0§0.0§1.0§0.37187523§false§0.5440548§1.0§1.0§1.0§0.47812518§false§0.52679735§0.478125§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§frames§126.997795§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§100.00008§100.0
-Landscape§time§3.9999561§200.0
-Landscape§triangle detail§102.00103§20000.0
-Landscape§x strength§0.09986868§0.1
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.30000004§false§0.5284238§1.0§0.0§1.0§0.35625017§false§0.5440548§1.0§1.0§1.0§0.43750018§false§0.52679735§0.384375§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§grain§0.23000008§10.0
-Landscape§grain size§46.070045§300.0
-Landscape§frames§126.99944§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§100.00008§100.0
-Landscape§time§3.9999561§200.0
-Landscape§triangle detail§102.00029§20000.0
-Landscape§x strength§3.6138682§10.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.30000004§false§0.5284238§1.0§0.0§1.0§0.35625017§false§0.5440548§1.0§1.0§1.0§0.43750018§false§0.52679735§0.384375§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§grain§0.050899927§0.1
-Landscape§grain size§127.07031§3000.0
-Landscape§frames§126.99944§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§25.99998§100.0
-Landscape§time§8.00001§200.0
-Landscape§triangle detail§50.997963§200.0
-Landscape§x strength§6.012696§100.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.52499986§false§0.5242973§0.0§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§grain strength§0.009100139§0.1
-Landscape§grain size§1671.6016§3000.0
-Landscape§frames§360.9993§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§count§25.99998§100.0
-Landscape§time§8.00001§200.0
-Landscape§triangle detail§50.997963§200.0
-Landscape§x strength§-0.45730168§10.0
-Landscape§gradient§vertical§rgb lerp§0.0§true§0.8322266§0.0§0.0§1.0§0.52499986§false§0.5242973§0.0§1.0§1.0§1.0§true§0.8308594§0.0§0.0§1.0§
-Landscape§grain strength§0.009100139§0.1
-Landscape§grain size§1671.6016§3000.0
-Landscape§frames§360.9993§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§translate§1000.0§43.0§174.0
-Landscape§rows§20.0§200.0
-Landscape§cols§20.0§200.0
-Landscape§size§1000.0§646.0§669.0
-Landscape§stroke§0.0§0.0§1.0§1.0§1.0
-Landscape§weight§3.0699992§10.0
-Landscape§fill§0.0§0.0§0.5§1.0§1.0
-Landscape§frames§360.9993§300.0
-GROUP§lights§true
-lights§ambient§0.0§0.0§0.5§1.0§1.0
-lights§dir light color§0.0§0.0§0.5§1.0§1.0
-lights§spec light color§0.0§0.0§0.5§1.0§1.0
-lights§shine§0.0§10.0
-lights§light count§1.0§100.0
-lights§light 1§10.0§0.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§translate§1000.0§43.0§174.0
-Landscape§rows§20.0§200.0
-Landscape§cols§20.0§200.0
-Landscape§size§1000.0§646.0§669.0
-Landscape§stroke§0.0§0.0§1.0§1.0§1.0
-Landscape§weight§2.3199992§10.0
-Landscape§fill§0.0§0.0§0.5§1.0§1.0
-Landscape§frames§360.9993§300.0
-GROUP§lights§true
-lights§ambient§0.0§0.0§0.5§1.0§1.0
-lights§dir light color§0.0§0.0§0.5§1.0§1.0
-lights§spec light color§0.0§0.0§0.5§1.0§1.0
-lights§shine§0.0§10.0
-lights§light count§1.0§100.0
-lights§light 1§10.0§0.0§0.0§0.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§translate§1000.0§43.0§174.0
-Landscape§rotate§3.1415927§0.0§0.0§0.0
-Landscape§rows§20.0§200.0
-Landscape§cols§20.0§200.0
-Landscape§size§1000.0§646.0§669.0
-Landscape§stroke§0.0§0.0§0.0§1.0§1.0
-Landscape§weight§4.9999967§10.0
-Landscape§fill§0.08300002§1.0§1.0§1.0§1.0
-Landscape§frames§360.9993§300.0
-STATE_END
-STATE_BEGIN
-UNDO
-GROUP§Landscape§true
-Landscape§translate§1000.0§0.0§0.0
-Landscape§rotate§3.1415927§3.3991985§4.8694773§0.075398214
-Landscape§rows§20.0§200.0
-Landscape§cols§20.0§200.0
-Landscape§size§1000.0§646.0§669.0
-Landscape§stroke§0.0§0.0§0.0§1.0§1.0
-Landscape§weight§-3.5092235E-6§1.0
-Landscape§grad§horizontal§rgb lerp§0.0§true§0.6575§0.809375§0.746875§1.0§0.48125§false§0.8680001§0.984375§1.0§1.0§0.57187486§false§0.8923395§0.9877301§0.0§1.0§1.0§true§0.9614998§0.0§0.64375§1.0§
-Landscape§frames§360.9993§300.0
+Landscape§fade to black§4.199996§30.0
+Landscape§hash§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.001§0.0§0.4125§1.0§
+Landscape§translate§10000.0§-60.0§-140.0§-4285.2
+Landscape§rotate§3.1415927§0.703717§0.4586725§0.0
+Landscape§rows§10.013053§200.0
+Landscape§cols§10.989472§200.0
+Landscape§freq§0.010000001§5.600028E-4§0.0017400137
+Landscape§amp§20000.0§640.1999§243.0
+Landscape§size§10000.0§1579.3§1585.0
+Landscape§time radius§0.23800015§1.0
+Landscape§move radius§0.90200126§10.0
+Landscape§weight§3.1519852§10.0
+Landscape§stroke§vertical§sat lerp§0.0§true§0.94049984§0.540625§1.0§1.0§0.5156251§false§0.765873§0.509375§0.8784314§1.0§1.0§true§0.6289996§0.5625§1.0§1.0§
+Landscape§fill§vertical§rgb lerp§0.0§true§0.004999938§0.0§0.99375§0.0§1.0§true§0.991§0.571875§1.0§0.0§
+Landscape§frames§600.0006§300.0
+GROUP§displace§false
+displace§skip§false
+displace§time§-8.544339E-8§0.010000001
+displace§time radius§0.2§10.0
+displace§angle offset§1.0§10.0
+displace§angle range§103.35§100.0
+displace§noise details§3.0§0.35600016§0.41996798§20.0
+displace§noise speeds§10.0§0.3386001§0.20440151§0.018500097
+GROUP§scale§false
+scale§center§10.0§-0.5000011§-0.5000001
+scale§RGB scales§0.1§1.0069999§1.0069999§1.0069999
+scale§common scale§1.0069999§0.1
+scale§set common scale§true
+scale§force scales >= 1§false
+GROUP§colors§false
+colors§multiplier§0.1§1.0§1.0§1.0
+colors§move R§1000.0§0.0§0.0
+colors§move G§1000.0§0.0§0.0
+colors§move B§1000.0§0.0§0.0
 STATE_END

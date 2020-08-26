@@ -2005,6 +2005,7 @@ public abstract class KrabApplet extends PApplet {
     protected void fbmDisplacePass(PGraphics pg) {
         group("displace");
         if (toggle("skip")) {
+            resetGroup();
             return;
         }
         String shaderPath = "shaders/_2020_06/Unrelated/fbmNoiseDisplace.glsl";

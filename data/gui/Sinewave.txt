@@ -203,3 +203,21 @@ Sinewave§amp§0.087497145§10.0
 Sinewave§dampen§0.9825006§1.0
 Sinewave§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Sinewave§true
+Sinewave§fade to black§2.5949981§3.0
+Sinewave§weight§1.7375003§10.0
+Sinewave§stroke§0.7049998§0.346875§0.615625§1.0§1.0
+Sinewave§count§3336.9802§9000.0
+Sinewave§spawn range§2.0§10.0
+Sinewave§death delay§120.0§30.0
+Sinewave§force constant§1000.0§0.0§0.0
+Sinewave§noise pos§1000.0§-251.25§330.0
+Sinewave§frequency§0.10000001§0.0020098237§0.0012357859
+Sinewave§base angle§3.6625025§10.0
+Sinewave§angle range§6.072998§100.0
+Sinewave§amp§0.20124717§1.0
+Sinewave§dampen§0.95§10.0
+Sinewave§frames§360.0§300.0
+STATE_END
