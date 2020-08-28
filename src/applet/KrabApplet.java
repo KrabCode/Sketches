@@ -3614,6 +3614,7 @@ public abstract class KrabApplet extends PApplet {
         private void updatePGraphics(int w, int h) {
             if (pg == null || pg.width != w || pg.height != h) {
                 pg = createGraphics(w, h, P2D);
+                drawGradientToTexture(pg, gradientType, blendType);
             }
         }
 
@@ -3655,9 +3656,6 @@ public abstract class KrabApplet extends PApplet {
         }
 
         void update() {
-            /* in the first few frames anything drawn to PGraphics somehow don't really persist,
-            / so we need to continually update the texture even when the overlay is hidden
-            / the fps costs of this are tiny, the shader that draws it is really fast  */
             preview.beginDraw();
             drawGradientToTexture(preview, GradientType.HORIZONTAL, blendType);
             preview.endDraw();
