@@ -175,7 +175,7 @@ float fbm(vec2 p){
 float pattern(in vec2 p, out vec2 q, out vec2 r)
 {
     q.x = fbm(p + vec2(0.0, 0.0));
-    q.y = fbm(p + vec2(5.2, 1.3+time*0.1));
+    q.y = fbm(p + vec2(5.2, 1.3+time*0.01));
 
     r.x = fbm(p + 4.0*q + vec2(1.7, 9.2));
     r.y = fbm(p + 4.0*q + vec2(8.3, 2.8));
@@ -190,17 +190,17 @@ vec4 gradientColor(float pct){
 }
 
 vec4 render(vec2 uv){
-    float t = time;
+    float t = time*.2;
     float d = length(uv);
     vec2 q = vec2(0);
     vec2 r = vec2(0);
     float fbm = pattern(uv, q, r);
-    q += vec2(cos(t), sin(t))*1.5;
-    r += vec2(cos(t), sin(t))*1.5;
+    q += vec2(cos(t), sin(t))*0.5;
+    r += vec2(cos(t), sin(t))*0.5;
 //    r += vec2(t, 0);
-    fbm = length(r)*0.2+
-          length(q)*0.2+
-          fbm*0.05;
+    fbm = length(r)*0.8+
+          length(q)*0.32+
+          fbm*0.15;
 //    fbm = mod(fbm, 1.);
     return gradientColor(fbm);
 }
@@ -208,6 +208,14 @@ vec4 render(vec2 uv){
 void main(){
     vec2 uv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
     uv += 99.;
-    uv *= 3.;
-    gl_FragColor = render(uv);
+    uv *= 1.;
+    // anti aliasing
+    float pixelThird = (1./resolution.x)/3.0;
+    vec2 aa = vec2(-pixelThird, pixelThird);
+    vec3 c1 = render(uv+aa.xx).rgb;
+    vec3 c2 = render(uv+aa.xy).rgb;
+    vec3 c3 = render(uv+aa.yx).rgb;
+    vec3 c4 = render(uv+aa.yy).rgb;
+    vec3 c = (c1+c2+c3+c4) / 4.;
+    gl_FragColor = vec4(c, 1.);
 }
