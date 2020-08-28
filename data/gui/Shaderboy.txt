@@ -1,0 +1,48 @@
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§gradient§vertical§hsv lerp§0.0§true§0.0015§0.0§0.0§1.0§0.12499994§false§5.0E-4§0.0§0.0§1.0§0.48437494§false§0.0§0.0§1.0§1.0§0.8749999§false§0.0§0.0§0.0§1.0§1.0§true§0.0035000003§0.0§0.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§gradient§vertical§hsv lerp§0.0§true§0.0015§0.0§0.0§1.0§0.12499994§false§5.0E-4§0.0§0.0§1.0§0.4843751§false§0.0§0.0§1.0§1.0§0.8749999§false§0.0§0.0§0.0§1.0§1.0§true§0.0035000003§0.0§0.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§gradient§vertical§smoothstep§0.0§true§0.59599966§1.0§0.065625§1.0§0.38750008§false§0.6486487§0.7047619§0.171875§1.0§0.8312493§false§0.6188336§0.68125§0.675§1.0§1.0§true§0.5979997§0.221875§1.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§gradient§vertical§smoothstep§0.0§true§0.5864997§0.090625§0.0§1.0§0.20000024§false§0.08983355§0.78125§1.0§1.0§0.35937506§false§0.6350877§0.0§1.0§1.0§0.7531249§false§0.6878708§0.465625§0.709375§1.0§1.0§true§0.5979997§0.1125§0.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§gradient§vertical§sat lerp§0.0§true§0.12949944§0.44375§1.0§0.99500006§0.7062501§false§0.7507933§1.0§0.171875§0.9521571§0.7874996§false§0.7113519§0.0§1.0§0.972549§1.0§true§0.5964996§0.1125§0.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shaderboy§true
+Shaderboy§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shaderboy§gradient§vertical§sat lerp§0.0§true§0.08280453§0.60625§0.0§0.972549§0.35312492§false§0.081730776§0.8§0.0§0.972549§0.44687447§false§0.08230453§0.60625§0.6875§0.972549§0.53750014§false§0.12453561§0.378125§1.0§0.9843137§0.6375001§false§0.75229305§1.0§0.575§0.9191573§1.0§true§0.5964996§0.1125§1.0§1.0§
+Shaderboy§frames§360.0§300.0
+STATE_END
