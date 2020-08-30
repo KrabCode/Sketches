@@ -3,7 +3,7 @@ package _2020_08;
 import applet.KrabApplet;
 import processing.core.PGraphics;
 
-public class Shaderboy extends KrabApplet {
+public class Perspective extends KrabApplet {
     private PGraphics pg;
 
     public static void main(String[] args) {
@@ -12,7 +12,8 @@ public class Shaderboy extends KrabApplet {
 
     public void settings() {
 //        fullScreen(P3D);
-        size(1000, 1000, P3D);
+        size(1000, 1000, P2D);
+        noSmooth();
     }
 
     public void setup() {
@@ -20,9 +21,8 @@ public class Shaderboy extends KrabApplet {
     }
 
     public void draw() {
-        pg = updateGraphics(pg);
+        pg = updateGraphics(pg, P2D);
         pg.beginDraw();
-        pg.image(gradient("background"), 0, 0);
         updateShader(pg);
         pg.endDraw();
         image(pg, 0, 0);
@@ -31,7 +31,7 @@ public class Shaderboy extends KrabApplet {
     }
 
     private void updateShader(PGraphics pg) {
-        String lineShader = "shaders/_2020_08/lines.glsl";
+        String lineShader = "shaders/_2020_08/perspective.glsl";
         uniform(lineShader).set("time", t);
         uniform(lineShader).set("gradient", gradient("gradient"));
         hotFilter(lineShader, pg);
