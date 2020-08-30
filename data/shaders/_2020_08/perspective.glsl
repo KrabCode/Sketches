@@ -39,13 +39,13 @@ vec3 aaRender(vec2 uv, float blur){
 }
 
 vec3 perspective(vec2 uv, out float blur){
-    float distanceFromPlane = 0.25;
+    float distanceFromPlane = 0.5;
     vec3 dir = vec3(uv - 0.5, distanceFromPlane);
     if (dir.y != 0.0){
         dir /= abs(dir.y);
     }
-    dir.z += time / pi;
-    dir = mod(dir, 1.);
+    dir.z += time / (pi*.5);
+    dir = fract(dir);
     blur = abs(uv.y - 0.5);
     return dir;
 }
@@ -55,6 +55,6 @@ void main() {
     float blur;
     vec3 dir = perspective(uv, blur);
     vec3 c = aaRender(dir.xz, blur);
-    c -= pow(1.-blur, 5.);
+    c -= pow(1.-blur, 8.);
     gl_FragColor = vec4(c, 1.);
 }
