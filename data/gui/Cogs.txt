@@ -1,0 +1,24 @@
+STATE_BEGIN
+UNDO
+GROUP§Cogs§true
+Cogs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Cogs§fill§0.0§0.0§0.0§1.0§1.0
+Cogs§radius§107.50005§300.0
+Cogs§stroke§0.0§0.0§0.0§1.0§1.0
+Cogs§weight§16.420004§100.0
+Cogs§line cogs§12.999166§200.0
+Cogs§line length§14.200003§20.0
+Cogs§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Cogs§true
+Cogs§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Cogs§fill§0.0§0.0§0.0§1.0§1.0
+Cogs§radius§129.40005§300.0
+Cogs§stroke§0.0§0.0§0.0§1.0§1.0
+Cogs§weight§29.320007§100.0
+Cogs§line cogs§12.999166§200.0
+Cogs§line length§14.200003§20.0
+Cogs§frames§360.0§300.0
+STATE_END
