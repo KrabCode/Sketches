@@ -4,3 +4,33 @@ GROUP§Raymarch§true
 Raymarch§gradient§vertical§rgb lerp§0.0§true§0.61380494§1.0§0.0§1.0§0.57499987§false§0.91849995§1.0§1.0§1.0§1.0§true§0.5922966§0.0§0.0§1.0§
 Raymarch§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch§true
+Raymarch§gradient§vertical§rgb lerp§0.0§true§0.61380494§0.0§0.0§1.0§0.315625§false§0.026000006§0.24375§1.0§0.9843137§1.0§true§0.006296603§0.725§0.0§0.975§
+Raymarch§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch§true
+Raymarch§gradient§vertical§rgb lerp§0.0§true§0.61380494§0.0§1.0§1.0§0.5156249§false§0.026000006§0.228125§1.0§0.9843137§1.0§true§0.006296603§0.0§0.0§0.975§
+Raymarch§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch§true
+Raymarch§gradient§vertical§rgb lerp§0.0§true§0.39080513§0.0§1.0§1.0§0.18749991§false§0.048850577§0.0§1.0§0.9882353§0.47499943§false§0.060125474§0.365625§1.0§0.98039216§1.0§true§0.006296603§0.0§0.0§0.975§
+Raymarch§frames§500.9997§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch§true
+Raymarch§gradient§vertical§rgb lerp§0.0§true§0.39080513§0.0§1.0§1.0§0.078125§false§0.04611904§0.0§1.0§0.99607843§0.30937457§false§0.060125474§0.365625§1.0§0.98039216§1.0§true§0.006296603§0.0§0.0§0.975§
+Raymarch§frames§500.9997§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Raymarch§true
+Raymarch§gradient§vertical§rgb lerp§0.0§true§0.3923051§0.0§1.0§1.0§0.07500003§false§0.01724138§0.0§1.0§0.99215686§0.33749962§false§0.03471789§0.303125§0.84375§0.98039216§0.6875001§false§0.046500064§0.775§0.35§0.9764706§1.0§true§0.006296603§0.0§0.0§0.975§
+Raymarch§frames§300.0003§300.0
+STATE_END

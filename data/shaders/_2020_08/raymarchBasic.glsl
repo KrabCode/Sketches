@@ -28,7 +28,7 @@ vec3 repeat(vec3 p, float c){
 float GetDist(vec3 p) {
     vec4 s = vec4(1, 1, 6, 1.0);
 
-    float sphereDist =  length(repeat(p, 1.)-s.xyz)-s.w;
+        float sphereDist =  length(repeat(p, 1.)-s.xyz)-s.w;
     float planeDist = p.y;
 
     float d = min(sphereDist, planeDist);
