@@ -886,29 +886,11 @@ public abstract class KrabApplet extends PApplet {
         return ease(animationNormalized, easingFactor);
     }
 
-    /**
-     * Eases in and out. A normalized value in the range of [0-1] is taken, the values near the limits are suppressed
-     * and the transition through the middle sharpened, which makes animations feel more natural.
-     *
-     * @param p normalized value to ease
-     * @param g easing strength
-     * @return eased value
-     */
     protected float ease(float p, float g) {
         if (p < 0.5)
             return 0.5f * pow(2 * p, g);
         else
             return 1 - 0.5f * pow(2 * (1 - p), g);
-    }
-
-    protected float easeInAndOut(float x, float w, float transition, float center, float easing) {
-        if (x < center) {
-            float fadeIn = 1 - clampNorm(x, center - w, center - w + transition);
-            return 1 - ease(fadeIn, easing);
-        } else {
-            float fadeOut = clampNorm(x, center + w - transition, center + w);
-            return 1 - ease(fadeOut, easing);
-        }
     }
 
     protected float clampNorm(float x, float min, float max) {
