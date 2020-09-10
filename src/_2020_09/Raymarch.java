@@ -22,6 +22,8 @@ public class Raymarch extends KrabApplet {
         pg = updateGraphics(pg);
         pg.beginDraw();
         String raymarch = "shaders/_2020_09/raymarch.glsl";
+        int raymarchShader = sliderInt("version");
+
         uniform(raymarch).set("time", t);
         uniform(raymarch).set("gradient", gradient("gradient"));
         hotFilter(raymarch, pg);
