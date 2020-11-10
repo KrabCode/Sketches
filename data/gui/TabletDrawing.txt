@@ -1,0 +1,9 @@
+STATE_BEGIN
+UNDO
+GROUP§TabletDrawing§true
+TabletDrawing§stroke§0.87281245§0.0§1.0§1.0§1.0
+TabletDrawing§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.9568751§0.0§0.009375§0.999375§
+TabletDrawing§frames§360.0§300.0
+TabletDrawing§pressure curve§1.5443752§1.0
+TabletDrawing§pressure max§30.0§20.0
+STATE_END
