@@ -456,13 +456,14 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void toggleFullscreen() {
-        boolean windowed = width == displayWidth;
-        if (windowed) {
+        boolean isFullscreen = width == displayWidth;
+        if (isFullscreen) {
             surface.setSize(1000, 1000);
+            surface.setLocation(displayWidth-1000,0);
         } else {
             surface.setSize(displayWidth, displayHeight);
+            surface.setLocation(0,0);
         }
-        surface.setLocation(0,0);
     }
 
     private void updateTray() {
