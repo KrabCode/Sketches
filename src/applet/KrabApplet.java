@@ -1369,7 +1369,7 @@ public abstract class KrabApplet extends PApplet {
         pushMatrix();
         pushStyle();
         translate(x + w * .5f, y + h * .5f);
-        strokeWeight(2);
+        strokeWeight(1.99f);
         rotate(rotation);
         float arrowWidth = w * .22f;
         line(-arrowWidth, 0, w * .2f, 0);
@@ -1402,7 +1402,7 @@ public abstract class KrabApplet extends PApplet {
     private void displayMenuButtonSave(float x, float y, float w, float h, float animation) {
         float grayscale = isMouseOver(x, y, w, h) ? GRAYSCALE_SELECTED : GRAYSCALE_DARK;
         stroke(grayscale);
-        strokeWeight(2);
+        strokeWeight(1.99f);
         noFill();
         rect(x + w * .5f, y + h * .5f, w * .5f * animation, h * .5f * animation);
         rect(x + w * .5f, y + h * .5f - animation * h * .12f, w * .25f * animation, h * .25f * animation);
@@ -1420,7 +1420,7 @@ public abstract class KrabApplet extends PApplet {
         float margin = 0;
         noFill();
         stroke(grayscale);
-        strokeWeight(2);
+        strokeWeight(1.99f);
         if (stackSize == 0) {
             float crossSize = .08f;
             line(-w * crossSize, -h * crossSize, w * crossSize, h * crossSize);
@@ -2236,7 +2236,7 @@ public abstract class KrabApplet extends PApplet {
             float clr = isSelected ? GRAYSCALE_SELECTED : GRAYSCALE_DARK;
             fill(clr);
             stroke(clr);
-            strokeWeight(2);
+            strokeWeight(1.99f);
             textAlign(LEFT, BOTTOM);
             textSize(textSize);
             float animation = easedAnimation(animationStarted, GROUP_TOGGLE_ANIMATION_DURATION,
@@ -2334,7 +2334,7 @@ public abstract class KrabApplet extends PApplet {
                     UNDERLINE_TRAY_ANIMATION_EASING);
             float w = fullWidth * animation;
             float centerX = x + fullWidth * .5f;
-            strokeWeight(2);
+            strokeWeight(1.99f);
             line(centerX - w * .5f, y, centerX + w * .5f, y);
         }
 
@@ -2352,7 +2352,7 @@ public abstract class KrabApplet extends PApplet {
                 rect(-w, y - textSize * .5f, w, w);
                 popStyle();
             }
-            strokeWeight(2);
+            strokeWeight(1.99f);
             beginShape();
             int detail = 30;
             float checkMarkTopLeftX = -w * 1.25f;
@@ -2433,7 +2433,7 @@ public abstract class KrabApplet extends PApplet {
                     pushStyle();
                     noFill();
                 }
-                strokeWeight(2);
+                strokeWeight(1.99f);
                 rectMode(CENTER);
                 rect(rectX, y + cell * .1f, size, size);
                 if (i == valueIndex) {
@@ -3439,7 +3439,7 @@ public abstract class KrabApplet extends PApplet {
             }
             endShape();
             float valueY = topY + h * value;
-            strokeWeight(2);
+            strokeWeight(1.99f);
             stroke((type.equals(SATURATION) && satChanged) ||
                     (type.equals(BRIGHTNESS) && brChanged) || mouseOver ?
                     GRAYSCALE_SELECTED : GRAYSCALE_DARK);

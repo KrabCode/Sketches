@@ -1,0 +1,23 @@
+STATE_BEGIN
+UNDO
+GROUP§Julia§true
+Julia§detail§100.001236§300.0
+Julia§view position§0.1§-0.15530002§0.32469955
+Julia§zoom§0.005600687§0.1
+Julia§fractal position§1.0§0.36599934§0.41700006
+Julia§fractal range§0.0010999066§0.1
+Julia§palette§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.43124998§false§0.089499995§0.26875§1.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Julia§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Julia§true
+Julia§detail base§200.99985§300.0
+Julia§detail range§60.0078§200.0
+Julia§view position§1.0§0.07200001§0.3089996
+Julia§zoom§0.29999974§10.0
+Julia§fractal position§1.0§0.35999948§0.3819995
+Julia§fractal range§0.0020579095§0.001
+Julia§palette§vertical§rgb lerp§0.0§true§0.9975§0.0§0.0§1.0§0.128125§false§0.62352055§1.0§0.284375§1.0§0.31875023§false§0.5944997§1.0§0.93125§1.0§0.6624999§false§0.704381§0.0§0.9490196§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Julia§frames§360.0§300.0
+STATE_END

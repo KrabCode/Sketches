@@ -1,0 +1,40 @@
+STATE_BEGIN
+UNDO
+GROUP§Inkblob§true
+Inkblob§background§0.0§0.0§0.0§1.0§1.0
+Inkblob§stroke§0.7496095§0.0§1.0§1.0§1.0
+Inkblob§eraser§0.0§0.0§0.0§1.0§1.0
+Inkblob§weight§48.992188§20.0
+Inkblob§detail§500.0§300.0
+Inkblob§reset§
+GROUP§filter§true
+filter§time radius§20.0§20.0
+filter§time speed§0.025§10.0
+filter§noise frequency§10.0§20.0
+filter§noise amplitude§0.0025§10.0
+filter§noise angle range§6.2831855§10.0
+filter§noise freq mult§2.0§10.0
+filter§noise amp mult§0.5§10.0
+filter§noise detail§6.0§100.0
+filter§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Inkblob§true
+Inkblob§background§0.0§0.0§0.359375§1.0§1.0
+Inkblob§stroke§0.8224602§0.0§0.2§1.0§1.0
+Inkblob§eraser§0.0§0.0§0.0§1.0§1.0
+Inkblob§weight§3.40625§200.0
+Inkblob§detail§500.0§300.0
+Inkblob§reset§
+GROUP§filter§true
+filter§time radius§20.0§20.0
+filter§time speed§0.02734368§0.1
+filter§noise frequency§20.046875§200.0
+filter§noise amplitude§0.01453128§0.1
+filter§noise angle range§12.056623§10.0
+filter§noise freq mult§2.0§10.0
+filter§noise amp mult§0.5§10.0
+filter§noise detail§6.0§100.0
+filter§frames§360.0§300.0
+STATE_END
