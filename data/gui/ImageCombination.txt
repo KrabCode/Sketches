@@ -3,3 +3,13 @@ UNDO
 GROUP§ImageCombination§true
 ImageCombination§frames§360.0§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ImageCombination§true
+ImageCombination§0§1000.0§926.0§727.0
+ImageCombination§1§1000.0§1647.0§376.0
+ImageCombination§2§1000.0§1310.0§591.0
+ImageCombination§3§1000.0§106.0§148.0
+ImageCombination§4§1000.0§413.0§923.0
+ImageCombination§frames§360.0§300.0
+STATE_END
