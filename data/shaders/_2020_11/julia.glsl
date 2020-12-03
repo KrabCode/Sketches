@@ -33,7 +33,7 @@ vec3 render(vec2 uv){
         z.y = y;
     }
 
-    float pct = (i == detail ? 0.0 : float(i)) / detail;
+    float pct = (i == detail ? 1.0 : float(i)) / detail;
     //    pct = pow(pct, 1.2);
     return texture(palette, vec2(0.5, pct)).rgb;
 }

@@ -1,0 +1,5 @@
+STATE_BEGIN
+UNDO
+GROUP§ImageCombination§true
+ImageCombination§frames§360.0§300.0
+STATE_END
