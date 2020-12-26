@@ -1,12 +1,15 @@
 // wyattflanders.com/MeAndMyNeighborhood.pdf
 
+precision highp float;
+
+
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float time;
-uniform vec2 mouse;
+uniform vec3 mouse;
 
 vec4 lookup(vec2 coord){
-    return texture2D(texture,(coord)/resolution.xy);
+    return texture(texture,(coord)/resolution.xy);
 }
 
 vec4 field (vec2 position) {
@@ -18,6 +21,7 @@ vec4 field (vec2 position) {
 
 void main(){
     vec2 me = gl_FragCoord.xy;
+
     vec4 energy = field(me);
 
     // neighbours
@@ -31,7 +35,7 @@ void main(){
 
 
     // Rule 3 : Order in the disordered Energy creates Order :
-    vec2 force = vec2(0);
+    vec2 force;
     force.x = nX.b - pX.b;
     force.y = nY.b - pY.b;
     energy.xy += force/4.0;
@@ -40,8 +44,7 @@ void main(){
     energy.b += (nX.x - pX.x + nY.y - pY.y)/4.;
 
     // Gravity effect :
-    energy.x += energy.w/ 400.0;
-//    energy.y += energy.w/ 2000.0;
+    energy.x += energy.w / 400.0;
 
     // Mass concervation :
     energy.w += (nX.x*nX.w-pX.x*pX.w+nY.y*nY.w-pY.y*pY.w)/4.;
@@ -53,9 +56,9 @@ void main(){
         energy.xy *= 0.;
     }
 
-    vec2 mouseFixed = mouse;
+    vec2 mouseFixed = mouse.xy;
     mouseFixed.y = resolution.y-mouseFixed.y;
-    if(distance(me, mouseFixed) < 15.){
+    if(mouse.z > 0. && distance(me, mouseFixed) < 15.){
         energy.w = 1.0;
     }
     gl_FragColor = energy;
