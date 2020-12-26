@@ -1153,9 +1153,9 @@ public abstract class KrabApplet extends PApplet {
 
     private void guiSetup(boolean defaultVisibility) {
         if (frameCount == 1) {
-            trayVisible = defaultVisibility;
             textSize(textSize * 2);
         } else if (frameCount == 2) {
+            trayVisible = defaultVisibility;
             loadLastStateFromFile(true);
         }
     }

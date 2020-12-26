@@ -10,8 +10,10 @@ import java.util.Map;
 
 public class ImageCombination extends KrabApplet {
     private PGraphics pg;
+
     String shader = "shaders/_2020_12/imageCombination.glsl";
     Map<String, PImage> pathsWithImages = new HashMap<String, PImage>();
+    Map<String, PGraphics> pathsWithGraphics= new HashMap<String, PGraphics>();
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -53,9 +55,19 @@ public class ImageCombination extends KrabApplet {
 
     void setUniforms(String group, String path) {
         PImage img = getImage(path);
-        uniform(shader).set("img_" + group, img);
-        uniform(shader).set("pos_" + group, sliderXY("pos"));
-        uniform(shader).set("size_" + group, sliderXY("size", 1, img.width / (float) img.height));
+        if(!pathsWithGraphics.containsKey(path)) {
+            pathsWithGraphics.put(path, createGraphics(width, height, P2D));
+        }
+        PGraphics p = pathsWithGraphics.get(path);
+        p.beginDraw();
+        p.background(0);
+        translateToCenter(p);
+        translate2D(p);
+        p.scale(slider("scale", 1));
+        p.imageMode(CENTER);
+        p.image(img, 0, 0);
+        p.endDraw();
+        uniform(shader).set("img_" + group, p);
     }
 
     PImage getImage(String path) {
