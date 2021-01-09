@@ -1,6 +1,7 @@
 // wyattflanders.com/MeAndMyNeighborhood.pdf
 
 precision highp float;
+precision highp sampler2D;
 
 
 uniform sampler2D texture;
@@ -9,7 +10,8 @@ uniform float time;
 uniform vec3 mouse;
 
 vec4 lookup(vec2 coord){
-    return texture(texture,(coord)/resolution.xy);
+    return texelFetch(texture, ivec2(coord), 0);
+//    return texture(texture, vec2(coord / resolution.xy), 0);
 }
 
 vec4 field (vec2 position) {
@@ -44,17 +46,17 @@ void main(){
     energy.b += (nX.x - pX.x + nY.y - pY.y)/4.;
 
     // Gravity effect :
-    energy.x += energy.w / 400.0;
+    energy.x += energy.w / 100.0;
 
     // Mass concervation :
     energy.w += (nX.x*nX.w-pX.x*pX.w+nY.y*nY.w-pY.y*pY.w)/4.;
 
 
     //Boundary conditions :
-    if(me.x<10.||me.y<10.||resolution.x-me.x<10.||resolution.y-me.y<10.)
-    {
-        energy.xy *= 0.;
-    }
+//    if(me.x<10.||me.y<10.||resolution.x-me.x<10.||resolution.y-me.y<10.)
+//    {
+//        energy.xy *= 0.;
+//    }
 
     vec2 mouseFixed = mouse.xy;
     mouseFixed.y = resolution.y-mouseFixed.y;

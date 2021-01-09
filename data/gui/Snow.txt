@@ -1,0 +1,24 @@
+STATE_BEGIN
+UNDO
+GROUP§Snow§true
+Snow§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Snow§fg§vertical§sat lerp§0.0§true§0.9995§0.0§0.0§1.0§0.14687514§false§0.82049954§1.0§0.49375§0.99500006§0.68437564§false§0.1216403§0.784375§1.0§0.98207843§1.0§true§0.025499739§0.0§1.0§1.0§
+Snow§bg§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Snow§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Snow§true
+Snow§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Snow§fg§vertical§sat lerp§0.0§true§0.99899995§1.0§0.0§1.0§0.33437553§false§0.58714026§0.8125§0.35§0.98207843§0.58750033§false§0.58887196§0.309375§1.0§0.9882353§1.0§true§0.589372§0.309375§1.0§0.9882353§
+Snow§bg§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Snow§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Snow§true
+Snow§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Snow§fg§vertical§sat lerp§0.0§true§0.99899995§1.0§0.0§1.0§0.33437553§false§0.58714026§0.8125§0.35§0.98207843§0.58750033§false§0.58887196§0.309375§1.0§0.9882353§1.0§true§0.589372§0.309375§1.0§0.9882353§
+Snow§bg§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.0§1.0§
+Snow§frames§360.0§300.0
+STATE_END

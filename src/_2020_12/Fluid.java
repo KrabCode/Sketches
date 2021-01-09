@@ -12,12 +12,12 @@ public class Fluid extends KrabApplet {
     }
 
     public void settings() {
-        size(800,800,P3D);
-//        fullScreen(P3D);
+        size(1000,1000, P2D);
     }
 
     public void setup() {
-//        toggleFullscreen();
+        pg = createGraphics(1000,1000,P2D);
+        fluid = createGraphics(1000,1000,P2D);
     }
 
     public void draw() {
@@ -30,8 +30,6 @@ public class Fluid extends KrabApplet {
     }
 
     private void displayFluid() {
-        pg = updateGraphics(pg, P2D);
-
         pg.beginDraw();
         String displayShader = "shaders/_2020_12/fluidDisplay.glsl";
         uniform(displayShader).set("fluid", fluid);
@@ -40,13 +38,10 @@ public class Fluid extends KrabApplet {
     }
 
     private void updateFluid() {
-        fluid = updateGraphics(fluid, P2D);
-        fluid.noSmooth();
-
         fluid.beginDraw();
         String fluidShader = "shaders/_2020_12/fluid.glsl";
         uniform(fluidShader).set("time", t);
-        uniform(fluidShader).set("mouse", (float)mouseX, (float)mouseY, mousePressed?1f : 0f);
+        uniform(fluidShader).set("mouse", (float) mouseX, (float) mouseY, mousePressed ? 1f : 0f);
         hotFilter(fluidShader, fluid);
         fluid.endDraw();
     }

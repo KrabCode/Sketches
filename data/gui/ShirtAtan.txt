@@ -1,0 +1,35 @@
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GROUP§symbol§true
+symbol§size§123.14§200.0
+symbol§weight§1.99§10.0
+symbol§big spoke in§1.2800007§10.0
+symbol§big spoke out§0.20999998§10.0
+symbol§small spoke§0.2§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.64649993§0.571875§0.528125§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GROUP§symbol§true
+symbol§size§185.34001§200.0
+symbol§weight§2.2500007§10.0
+symbol§big spoke in§1.2800007§10.0
+symbol§big spoke out§0.16000001§10.0
+symbol§small spoke§0.060000002§10.0
+symbol§text offset§1.6600002§10.0
+symbol§text size§29.600021§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.635§0.45625§0.84375§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GROUP§symbol§true
+symbol§size§299.73996§200.0
+symbol§weight§2.2500007§10.0
+symbol§pos§1000.0§0.0§-8.0
+symbol§text offset§1.6600002§10.0
+symbol§text size§29.999949§20.0
+STATE_END
