@@ -6,3 +6,11 @@ Shader§fg§vertical§hsv lerp§0.0§true§0.99799997§0.0§0.0§1.0§0.321875§
 Shader§bg§vertical§rgb lerp§0.0§true§0.1375§0.0§1.0§1.0§0.30625§false§0.010999893§0.0§0.0§1.0§1.0§true§0.13849999§0.0§0.0§1.0§
 Shader§frames§620.9994§300.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Shader§true
+Shader§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+Shader§fg§vertical§hsv lerp§0.0§true§0.99799997§0.0§0.0§1.0§1.0§true§0.0030000936§0.0§0.0§1.0§
+Shader§bg§vertical§rgb lerp§0.0§true§0.66866684§1.0§0.0§0.9640001§0.35625§false§0.0§0.0§0.0§0.9647059§0.50625§false§0.6666667§0.0§1.0§0.9647059§0.65312517§false§0.0§0.0§0.0§0.9647059§1.0§true§0.10316681§0.0§0.0§0.9640001§
+Shader§frames§620.9994§300.0
+STATE_END

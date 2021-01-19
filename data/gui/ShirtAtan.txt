@@ -33,3 +33,123 @@ symbol§pos§1000.0§0.0§-8.0
 symbol§text offset§1.6600002§10.0
 symbol§text size§29.999949§20.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.635§0.45625§0.84375§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GROUP§symbol§true
+symbol§size§299.73996§200.0
+symbol§pos§1000.0§0.0§-8.0
+symbol§text offset§1.6600002§10.0
+symbol§font size§40.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+GROUP§symbol§true
+symbol§size§299.73996§200.0
+symbol§pos§1000.0§0.0§-8.0
+symbol§text offset§1.6600002§10.0
+symbol§font size§40.0§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.0§0.0§1.0§1.0§1.0
+GROUP§code§true
+code§pos§10000.0§775.00037§3919.736
+code§font size§40.0§20.0
+code§text color§0.6434209§0.69375§0.55625§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§0.509375§false§0.64285713§0.28282827§0.7764706§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.64285713§0.28282827§0.7764706§1.0§1.0
+GROUP§code§true
+code§pos§10000.0§198.96342§3896.6946
+code§font size§62.60368§20.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§10000.0§129.83879§3689.321
+code§font size§40.311054§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§10000.0§129.83879§4008.5793
+code§font size§40.311054§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§10000.0§120.111176§4125.3105
+code§font size§40.311054§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§1000.0§93.84657§4135.039
+code§font size§40.591206§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§1000.0§93.84657§4135.039
+code§font size§40.591206§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§1000.0§117.19289§4135.039
+code§font size§40.591206§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§1000.0§126.92052§4133.0938
+code§font size§40.591206§2.0
+code§text color§0.6434209§0.0§1.0§1.0§1.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§ShirtAtan§true
+ShirtAtan§gradient§vertical§rgb lerp§0.0§true§0.6249999§0.83125§0.540625§1.0§1.0§true§0.0§0.0§1.0§1.0§
+ShirtAtan§background§0.6393035§0.0§0.0§1.0§1.0
+GROUP§code§true
+code§pos§1000.0§127.89328§4133.0938
+code§font size§40.591206§2.0
+code§text color§0.6434209§0.0§0.75§1.0§1.0
+STATE_END

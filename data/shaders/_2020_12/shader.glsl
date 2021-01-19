@@ -97,39 +97,37 @@ float snoise(vec4 v){
 
 float fbm (vec4 p) {
     float sum = 0.;
-    float amp = 1;
-    float freq = 1;
+    float amp = 2.;
+    float freq = 0.025;
     // Loop of octaves
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 6; i++) {
         sum += amp*snoise(p*freq);
-        freq *= 2.;
-        amp *= .5;
+        freq *= 1.8;
+        amp *= .4;
         p += vec4(3.123, 2.456, 1.121, 2.4545);
     }
-    return sum;
+    return .5+.5*sum;
 }
 
 float noise(vec2 p, vec2 t, float amp, float freq){
     return amp*snoise(vec4(p*freq, t));
 }
 
+vec4 gradientColor(sampler2D tex, float pct){
+    return texture2D(tex, vec2(0.5, clamp(pct, 0., 1.)));
+}
+
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
     vec2 cv = (gl_FragCoord.xy - .5 * resolution.xy) / resolution.y;
-    uv *= 10.;
-    float t = time;
-    float tr = 0.02;
-    vec2 tw = vec2(tr*cos(t), tr*sin(t));
-    float angle = sin(atan(cv.y, cv.x)*7.)*0.75*length(cv);
-    vec2 ar = vec2(angle, length(cv)*.8);
-    float pct = .5+.5*fbm(vec4(ar, tr*cos(t), tr*sin(t)));
-    pct = pow(pct, 1.11);
-    vec4 fg = texture2D(paletteForeground, vec2(0.5, clamp(pct, 0., 1.)));
-    vec4 bg = texture2D(paletteBackground, vec2(0.5, clamp(length(cv), 0., 1.)));
-    float borderRadius = .1*(fbm(vec4(angle*5., (length(cv*80.5)-t)*0.1, tw)));
-    float vignette = max(
-        0.*smoothstep(0.1, 0.0, length(cv)),
-        smoothstep(0.2+borderRadius, 0.3+8.*abs(borderRadius), length(cv)));
-    vec4 color = mix(fg, bg, vignette);
-    gl_FragColor = color;
+    float tm = 2.;
+    vec2 t = 2.5*vec2(cos(tm*time), sin(tm*time));
+//    uv += vec2(28.5, -0.3);
+    cv.y -= time*0.1;
+    vec2 id = floor(cv * 20.) + .5;
+    vec4 p = vec4(id, t);
+    float n = fbm(p);
+    float line = n;
+    vec3 color = gradientColor(paletteBackground, line).rgb;
+    gl_FragColor = vec4(color, 1.);
 }

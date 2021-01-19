@@ -1209,7 +1209,7 @@ public abstract class KrabApplet extends PApplet {
         if (captureScreenshot) {
             captureScreenshot = false;
             screenshotsAlreadyCaptured++;
-            String filename = imageOutputDir + "/" + id + "_" +screenshotsAlreadyCaptured + ".jpg";
+            String filename = imageOutputDir + "/" + id + "_" +screenshotsAlreadyCaptured + ".png";
             pg.save(filename);
             println(filename + " saved");
         }
