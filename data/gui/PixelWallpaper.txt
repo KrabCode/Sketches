@@ -1,0 +1,10 @@
+STATE_BEGIN
+UNDO
+GROUP§PixelWallpaper§true
+PixelWallpaper§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§PixelWallpaper§true
+PixelWallpaper§frames§360.0§300.0
+STATE_END

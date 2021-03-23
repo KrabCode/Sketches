@@ -7,5 +7,5 @@ vec4 lookup(vec2 coord){
 }
 
 void main(){
-    gl_FragColor = lookup(gl_FragCoord.xy*.8).wwww;
+    gl_FragColor = lookup(gl_FragCoord.xy).wwww;
 }
