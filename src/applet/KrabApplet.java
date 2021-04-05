@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.datatransfer.*;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.*;
 
 import static java.lang.System.currentTimeMillis;
@@ -346,7 +347,7 @@ public abstract class KrabApplet extends PApplet {
 
     @SuppressWarnings("SameParameterValue")
     protected int gradientColorAt(String name, int defaultColorCount, GradientType defaultType, int w, int h,
-                                  float x){
+                                  float x) {
         Group currentGroup = getCurrentGroup();
         if (elementDoesntExist(name, currentGroup.name)) {
             GradientEditor newElement = new GradientEditor(currentGroup, name, defaultColorCount, w, h, defaultType);
@@ -459,10 +460,10 @@ public abstract class KrabApplet extends PApplet {
         boolean isFullscreen = width == displayWidth;
         if (isFullscreen) {
             surface.setSize(1000, 1000);
-            surface.setLocation(displayWidth-1000,0);
+            surface.setLocation(displayWidth - 1000, 0);
         } else {
             surface.setSize(displayWidth, displayHeight);
-            surface.setLocation(0,0);
+            surface.setLocation(0, 0);
         }
     }
 
@@ -570,7 +571,7 @@ public abstract class KrabApplet extends PApplet {
         pg.hint(DISABLE_DEPTH_TEST);
         pg.blendMode(SUBTRACT);
         pg.noStroke();
-        pg.fill(255, slider("fade to black", 10,0,255));
+        pg.fill(255, slider("fade to black", 10, 0, 255));
         pg.rectMode(CENTER);
         pg.rect(0, 0, width * 3, height * 3);
         pg.hint(ENABLE_DEPTH_TEST);
@@ -1209,7 +1210,7 @@ public abstract class KrabApplet extends PApplet {
         if (captureScreenshot) {
             captureScreenshot = false;
             screenshotsAlreadyCaptured++;
-            String filename = imageOutputDir + "/" + id + "_" +screenshotsAlreadyCaptured + ".png";
+            String filename = imageOutputDir + "/" + id + "_" + screenshotsAlreadyCaptured + ".png";
             pg.save(filename);
             println(filename + " saved");
         }
@@ -2002,11 +2003,11 @@ public abstract class KrabApplet extends PApplet {
         resetGroup();
     }
 
-    protected void noiseDisplacePixelatedPass(PGraphics pg){
+    protected void noiseDisplacePixelatedPass(PGraphics pg) {
         String hashShader = "shaders/filters/noiseDisplacePixelated.glsl";
         uniform(hashShader).set("time", t);
         uniform(hashShader).set("pixelate", sliderInt("pixelate", 100, 1, 10000));
-        uniform(hashShader).set("delta", slider("delta", .1f,0, 1));
+        uniform(hashShader).set("delta", slider("delta", .1f, 0, 1));
         hotFilter(hashShader, pg);
     }
 
@@ -2119,6 +2120,7 @@ public abstract class KrabApplet extends PApplet {
         }
     }
 
+
     protected class ShaderSnapshot {
         String fragPath;
         String vertPath;
@@ -2155,7 +2157,10 @@ public abstract class KrabApplet extends PApplet {
             return Math.max(a, b);
         }
 
+        Map<String, String> uniformTypes = new HashMap<String, String>();
+
         void update(boolean filter, PGraphics pg) {
+            updateAutodetectedGUI();
             long currentTimeMillis = currentTimeMillis();
             long lastModified = fragFile.lastModified();
             if (vertFile != null) {
@@ -2203,13 +2208,70 @@ public abstract class KrabApplet extends PApplet {
                 fragLastKnownModified = lastModified;
                 println("compiled", fragPath != null ? fragFile.getName() : "",
                         vertPath != null ? vertFile.getName() : "");
+                autodetectGUI();
             } catch (Exception ex) {
                 lastKnownUncompilable = lastModified;
                 println((fragPath != null ? " " + fragFile.getName() : ""),
-                         (vertPath != null ? " or " + vertFile.getName() : "") + ":");
+                        (vertPath != null ? " or " + vertFile.getName() : "") + ":");
                 println(ex.getMessage());
             }
         }
+
+        private void autodetectGUI() {
+            String[] lines = loadStrings(fragFile);
+            println("lines: " + lines.length);
+            for (int lineIndex = 0; lineIndex < lines.length - 1; lineIndex++) {
+                String line = lines[lineIndex];
+                if (line.contains("GUI")) {
+
+                    String nextLine = lines[lineIndex + 1];
+                    String sliderName = nextLine.trim().replaceAll("uniform", "").
+                            replaceAll("float", "").
+                            replaceAll("bool", "").
+                            replaceAll("vec2", "").
+                            replaceAll("sampler2D", "").
+                            replaceAll(";", "").
+                            replaceAll(" ", "");
+                    if (line.contains("GUI slider")) {
+                        uniformTypes.put(sliderName, "slider");
+                    }
+                    if (line.contains("GUI toggle")) {
+                        uniformTypes.put(sliderName, "toggle");
+                    }
+                    if (line.contains("GUI slider 2D")) {
+                        uniformTypes.put(sliderName, "slider 2D");
+                    }
+                    if (line.contains("GUI slider 2D")) {
+                        uniformTypes.put(sliderName, "slider 3D");
+                    }
+                    if (line.contains("GUI gradient")) {
+                        uniformTypes.put(sliderName, "gradient");
+                    }
+                }
+            }
+        }
+
+        private void updateAutodetectedGUI() {
+            for (String name : uniformTypes.keySet()) {
+                String type = uniformTypes.get(name);
+                if ("toggle".equals(type)) {
+                    compiledShader.set(name, toggle(name));
+                }
+                if ("slider".equals(type)) {
+                    compiledShader.set(name, slider(name));
+                }
+                if ("slider 2D".equals(type)) {
+                    compiledShader.set(name, sliderXY(name));
+                }
+                if ("slider 3D".equals(type)) {
+                    compiledShader.set(name, sliderXYZ(name));
+                }
+                if ("gradient".equals(type)) {
+                    compiledShader.set(name, gradient(name));
+                }
+            }
+        }
+
     }
 
     private class Group {
@@ -3615,11 +3677,11 @@ public abstract class KrabApplet extends PApplet {
             }
         }
 
-        private int getColorAt(float x){
+        private int getColorAt(float x) {
             x = constrain(x, 0, 1);
             int prevPosIndex = 0;
             int nextPosIndex = 1;
-            for (int i = 0; i < pickers.size()-1; i++) {
+            for (int i = 0; i < pickers.size() - 1; i++) {
                 ColorPicker picker = pickers.get(i);
                 if (x >= picker.gradientPosition) {
                     prevPosIndex = i;
@@ -3780,7 +3842,7 @@ public abstract class KrabApplet extends PApplet {
                             held = picker;
                         }
                         boolean mouseMoved = mouseX != pmouseX || mouseY != pmouseY;
-                        if(mouseMoved){
+                        if (mouseMoved) {
                             blockDeselectionUntilMouseRelease = true;
                         }
                     }
