@@ -100,8 +100,8 @@ float fbm (vec4 p) {
     // Loop of octaves
     for (int i = 0; i < 6; i++) {
         sum += amp*snoise(p*freq);
-        freq *= 1.5;
-        amp *= .3;
+        freq *= 2.0;
+        amp *= .5;
         p += vec4(3.123, 2.456, 1.121, 2.4545);
     }
     return sum;
@@ -136,24 +136,24 @@ float hash12(vec2 p)
 }
 
 // GUI slider
-uniform float frequency;
-// GUI slider
-uniform float x;
+uniform float angle;
 // GUI slider
 uniform float timeSpeed;
-
-// GUI toggle
-uniform bool warp;
+// GUI gradient
+uniform sampler2D gradient;
+// GUI slider
+uniform float distance;
+// GUI slider 2D
+uniform vec3 freq;
 
 void main(){
     vec2 uv = gl_FragCoord.xy / resolution.xy;
     vec2 cv = (gl_FragCoord.xy-.5*resolution.xy) / resolution.y;
     float a = atan(cv.y, cv.x);
-    float t = time*0.06;
-    vec3 col;
-    if(warp){
-        float pct = min(1.0* fbm(vec4(uv.x*x*frequency, uv.y - t, t*timeSpeed, 0)) + uv.y, pi*2.);
-         col = pal(pct);
-    }
+    float t = time*0.06*timeSpeed;
+    float atan = atan(cv.y, cv.x);
+
+    float pct = fbm(vec4(distance*length(cv)-t, cos(atan*angle), freq.x*cv.x, 0));
+    vec3 col = texture(gradient, vec2(0.5, fract(pct))).rgb;
     gl_FragColor = vec4(col, 1.);
 }

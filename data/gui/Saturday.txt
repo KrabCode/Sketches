@@ -1,0 +1,13 @@
+STATE_BEGIN
+UNDO
+GROUP§Saturday§true
+Saturday§frames§360.0§300.0
+Saturday§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§0.23437499§false§0.0§0.0§0.0§1.0§0.3906252§false§0.5028906§0.0§1.0§1.0§0.55§false§0.70413107§0.553125§0.0§1.0§0.8187502§false§0.85921633§0.34375§0.94375§1.0§1.0§true§1.953125E-4§0.0§0.0§1.0§
+Saturday§x§0.0§10.0
+Saturday§freq§1.0§0.0057174545§-0.0014369721§-0.7578125
+Saturday§angle§10.000714§10.0
+Saturday§timeSpeed§2.5073128§10.0
+Saturday§frequency§0.8125038§100.0
+Saturday§warp§false
+Saturday§distance§9.969391§1000.0
+STATE_END

@@ -1,0 +1,99 @@
+STATE_BEGIN
+UNDO
+GROUP§MandalaNoiseFeedback§true
+MandalaNoiseFeedback§mirrors§12.000026§200.0
+MandalaNoiseFeedback§scaled rotate§0.10390139§1.0
+MandalaNoiseFeedback§scale§1.0870003§1.0
+MandalaNoiseFeedback§tint alpha§76.54§200.0
+MandalaNoiseFeedback§darken§5.0§10.0
+MandalaNoiseFeedback§stroke§15.159995§20.0
+MandalaNoiseFeedback§weight§6.72§10.0
+MandalaNoiseFeedback§count§122.00017§300.0
+MandalaNoiseFeedback§radius§406.55017§300.0
+MandalaNoiseFeedback§noise freq§1.1800044§10.0
+MandalaNoiseFeedback§frames§808.0006§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MandalaNoiseFeedback§true
+MandalaNoiseFeedback§mirrors§12.00001§200.0
+MandalaNoiseFeedback§scaled rotate§0.10390139§1.0
+MandalaNoiseFeedback§scale§1.1080012§1.0
+MandalaNoiseFeedback§tint alpha§62.34001§200.0
+MandalaNoiseFeedback§darken§5.2700014§10.0
+MandalaNoiseFeedback§stroke§11.059939§20.0
+MandalaNoiseFeedback§weight§6.72§10.0
+MandalaNoiseFeedback§count§122.00017§300.0
+MandalaNoiseFeedback§radius§363.05054§300.0
+MandalaNoiseFeedback§noise freq§2.1900067§10.0
+MandalaNoiseFeedback§frames§1000.0006§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MandalaNoiseFeedback§true
+MandalaNoiseFeedback§mirrors§12.998844§200.0
+MandalaNoiseFeedback§scaled rotate§0.08668978§0.010000001
+MandalaNoiseFeedback§scale§1.2119981§1.0
+MandalaNoiseFeedback§tint alpha§51.74004§200.0
+MandalaNoiseFeedback§darken§4.9999723§10.0
+MandalaNoiseFeedback§stroke§16.599976§200.0
+MandalaNoiseFeedback§weight§5.1899915§10.0
+MandalaNoiseFeedback§count§103.99992§300.0
+MandalaNoiseFeedback§radius§231.35092§3000.0
+MandalaNoiseFeedback§noise freq§1.9000055§10.0
+MandalaNoiseFeedback§frames§600.0006§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MandalaNoiseFeedback§true
+MandalaNoiseFeedback§mirrors§12.998844§200.0
+MandalaNoiseFeedback§scaled rotate§-7.879978E-4§0.001
+MandalaNoiseFeedback§scale§1.0199958§1.0
+MandalaNoiseFeedback§tint alpha§184.94006§2000.0
+MandalaNoiseFeedback§darken§7.0499697§10.0
+MandalaNoiseFeedback§add§true
+MandalaNoiseFeedback§weight§3.129992§10.0
+MandalaNoiseFeedback§count§289.99957§300.0
+MandalaNoiseFeedback§radius§216.35095§3000.0
+MandalaNoiseFeedback§noise freq§26.030006§100.0
+MandalaNoiseFeedback§time radius§0.31000036§10.0
+MandalaNoiseFeedback§time speed§1.0§100.0
+MandalaNoiseFeedback§gradient§vertical§rgb lerp§0.0§true§0.09549913§0.5375§0.065625§1.0§1.0§true§0.6645§1.0§0.159375§1.0§
+MandalaNoiseFeedback§frames§600.0006§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MandalaNoiseFeedback§true
+MandalaNoiseFeedback§mirrors§12.000026§200.0
+MandalaNoiseFeedback§scaled rotate§0.10390139§1.0
+MandalaNoiseFeedback§scale§1.0870003§1.0
+MandalaNoiseFeedback§tint alpha§76.54§200.0
+MandalaNoiseFeedback§darken§5.0§10.0
+MandalaNoiseFeedback§add§false
+MandalaNoiseFeedback§weight§6.72§10.0
+MandalaNoiseFeedback§count§122.00017§300.0
+MandalaNoiseFeedback§radius§406.55017§300.0
+MandalaNoiseFeedback§noise freq§1.1800044§10.0
+MandalaNoiseFeedback§time radius§1.0§10.0
+MandalaNoiseFeedback§time speed§1.0§100.0
+MandalaNoiseFeedback§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§1.0§1.0§
+MandalaNoiseFeedback§frames§808.0006§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§MandalaNoiseFeedback§true
+MandalaNoiseFeedback§mirrors§12.000026§200.0
+MandalaNoiseFeedback§scaled rotate§0.10390139§1.0
+MandalaNoiseFeedback§scale§1.0870003§1.0
+MandalaNoiseFeedback§tint alpha§76.54§200.0
+MandalaNoiseFeedback§darken§5.0§10.0
+MandalaNoiseFeedback§add§true
+MandalaNoiseFeedback§weight§6.72§10.0
+MandalaNoiseFeedback§count§122.00008§300.0
+MandalaNoiseFeedback§radius§223.85028§300.0
+MandalaNoiseFeedback§noise freq§7.210005§10.0
+MandalaNoiseFeedback§time radius§1.0§10.0
+MandalaNoiseFeedback§time speed§1.0§100.0
+MandalaNoiseFeedback§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§0.0§0.0§0.115625§1.0§
+MandalaNoiseFeedback§frames§808.0006§300.0
+STATE_END

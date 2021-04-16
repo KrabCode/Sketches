@@ -2219,19 +2219,15 @@ public abstract class KrabApplet extends PApplet {
 
         private void autodetectGUI() {
             String[] lines = loadStrings(fragFile);
-            println("lines: " + lines.length);
             for (int lineIndex = 0; lineIndex < lines.length - 1; lineIndex++) {
                 String line = lines[lineIndex];
                 if (line.contains("GUI")) {
-
                     String nextLine = lines[lineIndex + 1];
-                    String sliderName = nextLine.trim().replaceAll("uniform", "").
-                            replaceAll("float", "").
-                            replaceAll("bool", "").
-                            replaceAll("vec2", "").
-                            replaceAll("sampler2D", "").
-                            replaceAll(";", "").
-                            replaceAll(" ", "");
+                    String[] stringsToRemove = new String[]{"uniform","float","bool","vec2","vec3","vec4","sampler2D",";"," "};
+                    String sliderName = nextLine.trim();
+                    for (String stringToRemove : stringsToRemove) {
+                        sliderName = sliderName.replaceAll(stringToRemove, "");
+                    }
                     if (line.contains("GUI slider")) {
                         uniformTypes.put(sliderName, "slider");
                     }

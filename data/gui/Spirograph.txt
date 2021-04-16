@@ -1,0 +1,28 @@
+STATE_BEGIN
+UNDO
+GROUP§Spirograph§true
+Spirograph§frames§360.0§300.0
+Spirograph§fade to black§255.0§3000.0
+Spirograph§arm length§201.07§300.0
+Spirograph§finger length§178.26012§200.0
+Spirograph§finger speed§87.00999§100.0
+Spirograph§stroke§0.0§0.0§1.0§1.0§1.0
+Spirograph§weight§1.8099992§10.0
+Spirograph§detail§447.54413§30.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Spirograph§true
+Spirograph§frames§336.0092§300.0
+Spirograph§fade to black§48.0§3000.0
+Spirograph§arm length§106.57004§300.0
+Spirograph§a length§89.359985§2000.0
+Spirograph§a speed§7.999996§1000.0
+Spirograph§b length§3.519998§20.0
+Spirograph§b speed§16.0§200.0
+Spirograph§c length§2.74§10.0
+Spirograph§c speed§-7.0033484§200.0
+Spirograph§stroke§0.0§0.0§1.0§1.0§1.0
+Spirograph§weight§3.0399997§10.0
+Spirograph§detail§11437.924§30000.0
+STATE_END

@@ -1,0 +1,18 @@
+STATE_BEGIN
+UNDO
+GROUP§MandalaFeedback§true
+MandalaFeedback§mirrors§23.00002§200.0
+MandalaFeedback§scaled rotate§3.2078133§10.0
+MandalaFeedback§scale§1.1136672§1.0
+MandalaFeedback§tint alpha§120.77344§200.0
+MandalaFeedback§darken§4.203125§100.0
+MandalaFeedback§add§true
+MandalaFeedback§weight§5.484375§10.0
+MandalaFeedback§count§303.0003§300.0
+MandalaFeedback§radius§666.0781§300.0
+MandalaFeedback§noise freq§4.671875§100.0
+MandalaFeedback§time radius§0.077734545§1.0
+MandalaFeedback§time speed§1.0013261§100.0
+MandalaFeedback§gradient§vertical§rgb lerp§0.0§true§0.0§0.0§0.125§1.0§0.3500001§false§0.5171221§0.765625§0.05§1.0§0.4875001§false§0.11922854§0.45625§0.084375§1.0§1.0§true§0.62304723§0.6625§0.090625§1.0§
+MandalaFeedback§frames§330.9997§300.0
+STATE_END
