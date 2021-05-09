@@ -1,0 +1,32 @@
+STATE_BEGIN
+UNDO
+GROUP§FlowMirror§true
+FlowMirror§freq§0.0052500023§0.010000001
+FlowMirror§amp§5.0000014§1.0
+FlowMirror§count§500.0§300.0
+FlowMirror§time speed§0.60499996§1.0
+FlowMirror§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowMirror§true
+FlowMirror§clr§vertical§rgb lerp§0.0§true§0.74349993§0.615625§1.0§0.97800004§1.0§true§0.07299993§1.0§1.0§1.0§
+FlowMirror§freq§0.0041400013§0.10000001
+FlowMirror§amp§1.636003§10.0
+FlowMirror§r§8.001015§1.0
+FlowMirror§count§501.0003§300.0
+FlowMirror§time speed§0.21897992§1.0000001
+FlowMirror§frames§360.0§300.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§FlowMirror§true
+FlowMirror§clr§vertical§rgb lerp§0.0§true§0.95349973§1.0§1.0§0.9760001§0.50000006§false§0.7469999§0.7625§1.0§0.97800004§1.0§true§0.07649999§0.8625§1.0§1.0§
+FlowMirror§freq§7.200013E-4§0.010000001
+FlowMirror§amp§2.5460026§10.0
+FlowMirror§r§14.993043§10.0
+FlowMirror§count§600.0006§300.0
+FlowMirror§time speed§0.29897988§1.0000001
+FlowMirror§frames§360.0§300.0
+FlowMirror§add skip§2.0006301§100.0
+STATE_END
