@@ -2,13 +2,13 @@ package _2020_11;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
-import codeanticode.tablet.*;
+//import codeanticode.tablet.*;
 
 import java.util.ArrayList;
 
 public class TabletDrawing extends KrabApplet {
     private PGraphics pg;
-    Tablet tablet;
+//    Tablet tablet;
     ArrayList<Movement> movements = new ArrayList<>();
     float deleteRadius = 15;
 
@@ -22,7 +22,7 @@ public class TabletDrawing extends KrabApplet {
 
 
     public void setup() {
-        tablet = new Tablet(this);
+//        tablet = new Tablet(this);
         colorMode(HSB, 1, 1, 1, 1);
         picker("stroke");
     }
@@ -97,7 +97,7 @@ public class TabletDrawing extends KrabApplet {
     }
 
     void makeLine() {
-        float pressure = tablet.getPressure();
+        float pressure = 0 ; // tablet.getPressure();
         if(!mousePressedOutsideGui) {
             return;
         }

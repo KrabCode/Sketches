@@ -457,10 +457,14 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void toggleFullscreen() {
+        toggleFullscreen(1000, 1000);
+    }
+
+    protected void toggleFullscreen(int w, int h) {
         boolean isFullscreen = width == displayWidth;
         if (isFullscreen) {
-            surface.setSize(1000, 1000);
-            surface.setLocation(displayWidth - 1000, 0);
+            surface.setSize(w, h);
+            surface.setLocation(displayWidth - w, 0);
         } else {
             surface.setSize(displayWidth, displayHeight);
             surface.setLocation(0, 0);
