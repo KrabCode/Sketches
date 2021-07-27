@@ -2138,7 +2138,7 @@ public abstract class KrabApplet extends PApplet {
         //detect and remove unused canvases
         for(String canvasKey : canvases.keySet()){
             Canvas c = canvases.get(canvasKey);
-            if(frameCount - c.lastAccessFrame > 1){
+            if(abs(frameCount - c.lastAccessFrame) > 5){
                 canvasKeysToRemove.add(canvasKey);
             }
         }
