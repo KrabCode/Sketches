@@ -5,6 +5,9 @@ import processing.core.PGraphics;
 import processing.core.PImage;
 import processing.core.PVector;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class HanddrawnTest extends KrabApplet {
     private PGraphics pg;
     private PImage bgImg;
@@ -18,78 +21,56 @@ public class HanddrawnTest extends KrabApplet {
     }
 
     public void setup() {
-        bgImg = loadImage("images/test/trees.jpg");
-        float size = 0.3f;
-        toggleFullscreen(floor(4032 * size), floor(3024 * size));
+//        bgImg = loadImage("images/test/trees.jpg");
+        bgImg = loadImage("images/handDrawnFlowField/notepad_small.jpg");
+        bgImg.resize(floor(bgImg.width * scale), floor(bgImg.height * scale));
+        toggleFullscreen(floor(1200 * scale), floor(1600 * scale));
         if (width < displayWidth) {
             surface.setAlwaysOnTop(true);
         }
     }
+    float scale = 0.8f;
 
     public void draw() {
+        background(0);
         pg = updateGraphics(pg);
 
         pg.beginDraw();
         pg.colorMode(RGB, 1, 1, 1, 1);
-        pg.image(bgImg, 0, 0, width, height);
-        PVector pos = sliderXY("pos", 0, 0);
-        PVector size = sliderXY("size", 100, 100);
-        PGraphics treeGraphics = getRectangleAsShadedCanvas(bgImg, "shaders/_2021_07/test/hand.glsl", pos, size);
-        if (toggle("debug")) {
+        pg.image(bgImg, 0, 0);
+        group("a");
+        PVector posA = sliderXY("pos", 0, 0);
+        PVector sizeA = sliderXY("size", 100, 100);;
+        PVector targetA = sliderXY("target");
+        boolean debugA = toggle("debug a");
+        group("b");
+        PVector posB = sliderXY("pos", 0, 0);
+        PVector sizeB = sliderXY("size", 100, 100);
+        PVector targetB = sliderXY("target");
+        boolean debugB = toggle("debug b");
+        String chromaKey = "shaders/filters/chromaKey.glsl";
+        resetGroup();
+        uniform(chromaKey).set("keepBlack", options("black", "white").equals("black"));
+        PGraphics treeGraphicsA = getRectangleAsShadedCanvas(bgImg, chromaKey, posA, sizeA);
+        PGraphics treeGraphicsB = getRectangleAsShadedCanvas(bgImg, chromaKey, posB, sizeB);
+        if (debugA) {
             pg.stroke(0, 0, 1);
             pg.strokeWeight(4);
-            pg.rect(pos.x, pos.y, size.x, size.y);
+            pg.noFill();
+            pg.rect(posA.x, posA.y, sizeA.x, sizeA.y);
+        }
+        if (debugB) {
+            pg.stroke(0, 1, 0);
+            pg.strokeWeight(4);
+            pg.noFill();
+            pg.rect(posB.x, posB.y, sizeB.x, sizeB.y);
         }
         pg.noStroke();
-        float rectSize = 220;
-        pg.fill(1, 0, 0);
-        pg.rect(0, 0, rectSize, rectSize);
-        pg.image(treeGraphics, 0, 0, rectSize, rectSize);
-        pg.fill(0, 1, 0);
-        pg.translate(rectSize, 0);
-        pg.rect(0, 0, rectSize, rectSize);
-        pg.image(treeGraphics, 0, 0, rectSize, rectSize);
-        pg.fill(0, 0, 1);
-        pg.translate(rectSize, 0);
-        pg.rect(0, 0, rectSize, rectSize);
-        pg.image(treeGraphics, 0, 0, rectSize, rectSize);
-        pg.fill(0);
-        pg.translate(rectSize, 0);
-        pg.rect(0, 0, rectSize, rectSize);
-        pg.image(treeGraphics, 0, 0, rectSize, rectSize);
-        pg.translate(rectSize, 0);
-        pg.fill(1);
-        pg.rect(0, 0, rectSize, rectSize);
-        pg.image(treeGraphics, 0, 0, rectSize, rectSize);
+        pg.image(treeGraphicsA, targetA.x, targetA.y);
+        pg.image(treeGraphicsB, targetB.x, targetB.y);
         pg.endDraw();
         image(pg, 0, 0, width, height);
         rec(pg);
         gui(false);
-    }
-
-    private PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, PVector pos, PVector size) {
-        return getRectangleAsShadedCanvas(src, shaderPath, floor(pos.x), floor(pos.y), floor(size.x), floor(size.y));
-    }
-
-    // image piece snapshot properties, maybe make a map with key: (src and coords) and value: (localImg and canvas)
-    private PImage localImg;
-    PGraphics canvas;
-    int prevX, prevY, prevW, prevH;
-
-    PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, int x, int y, int w, int h) {
-        canvas = updateGraphics(canvas, w, h, P3D);
-        canvas.beginDraw();
-        canvas.clear();
-        hotShader(shaderPath, canvas);
-        if(x != prevX || y != prevY || w != prevW || h != prevH){
-            localImg = src.get(x,y,w,h);
-        }
-        canvas.image(localImg, 0, 0);
-        canvas.endDraw();
-        prevX = x;
-        prevY = y;
-        prevW = w;
-        prevH = h;
-        return canvas;
     }
 }

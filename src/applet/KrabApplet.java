@@ -2110,6 +2110,57 @@ public abstract class KrabApplet extends PApplet {
         return null;
     }
 
+    // Stored snapshots of parts of a source image as a PGraphics with a shader applied
+
+    protected PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, PVector pos, PVector size) {
+        return getRectangleAsShadedCanvas(src, shaderPath, floor(pos.x), floor(pos.y), floor(size.x), floor(size.y));
+    }
+
+    private Map<String, Canvas> canvases = new HashMap<>();
+    ArrayList<String> canvasKeysToRemove = new ArrayList<>();
+
+    protected PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, int x, int y, int w, int h) {
+        String key = shaderPath + x + y + w + h;
+        Canvas canvas;
+        if(canvases.get(key) == null){
+            canvases.put(key, new Canvas(createGraphics(w, h, P3D), src.get(x, y, w, h)));
+        }
+        canvas = canvases.get(key);
+        canvas.pg.beginDraw();
+        canvas.pg.clear();
+        if(shaderPath != null){
+            hotShader(shaderPath, canvas.pg);
+        }
+        canvas.pg.image(canvas.img, 0, 0);
+        canvas.pg.endDraw();
+        canvas.lastAccessFrame = frameCount;
+
+        //detect and remove unused canvases
+        for(String canvasKey : canvases.keySet()){
+            Canvas c = canvases.get(canvasKey);
+            if(frameCount - c.lastAccessFrame > 1){
+                canvasKeysToRemove.add(canvasKey);
+            }
+        }
+        for(String toRemove : canvasKeysToRemove){
+            canvases.remove(toRemove);
+        }
+
+        return canvas.pg;
+    }
+
+    class Canvas{
+        PGraphics pg;
+        PImage img;
+        int lastAccessFrame = frameCount;
+
+        public Canvas(PGraphics graphics, PImage image) {
+            pg = graphics;
+            img = image;
+
+        }
+    }
+
     // CLASSES
 
     private static class Key {

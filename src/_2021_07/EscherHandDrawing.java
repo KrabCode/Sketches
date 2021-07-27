@@ -32,7 +32,7 @@ public class EscherHandDrawing extends KrabApplet {
         pg.beginDraw();
         pg.image(gradient("background"), 0, 0);
         hand.beginDraw();
-        String shader = "shaders/_2021_07/hand/hand.glsl";
+        String shader = "shaders/_2021_07/hand/chromaKey.glsl";
         uniform(shader).set("time", radians(frameCount));
         uniform(shader).set("img", handImg);
         hotFilter(shader, hand);
