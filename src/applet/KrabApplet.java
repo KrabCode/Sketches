@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.datatransfer.*;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.*;
 
 import static java.lang.System.currentTimeMillis;
@@ -457,14 +456,19 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void toggleFullscreen() {
-        toggleFullscreen(1000, 1000);
+        int w = 1000;
+        toggleFullscreen(displayWidth - w, 0, w, w);
     }
 
     protected void toggleFullscreen(int w, int h) {
+        toggleFullscreen(displayWidth - w, 0, w, h);
+    }
+
+    protected void toggleFullscreen(int x, int y, int w, int h) {
         boolean isFullscreen = width == displayWidth;
         if (isFullscreen) {
             surface.setSize(w, h);
-            surface.setLocation(displayWidth - w, 0);
+            surface.setLocation(x, y);
         } else {
             surface.setSize(displayWidth, displayHeight);
             surface.setLocation(0, 0);
@@ -2112,49 +2116,51 @@ public abstract class KrabApplet extends PApplet {
 
     // Stored snapshots of parts of a source image as a PGraphics with a shader applied
 
-    protected PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, PVector pos, PVector size) {
-        return getRectangleAsShadedCanvas(src, shaderPath, floor(pos.x), floor(pos.y), floor(size.x), floor(size.y));
+    protected PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, int i, PVector pos, PVector size) {
+        return getRectangleAsShadedCanvas(src, shaderPath, i, floor(pos.x), floor(pos.y), floor(size.x), floor(size.y));
     }
 
-    private Map<String, Canvas> canvases = new HashMap<>();
+    ArrayList<Canvas> canvases = new ArrayList<>();
     ArrayList<String> canvasKeysToRemove = new ArrayList<>();
 
-    protected PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, int x, int y, int w, int h) {
-        String key = shaderPath + x + y + w + h;
+    protected PGraphics getRectangleAsShadedCanvas(PImage src, String shaderPath, int i, int x, int y, int w, int h) {
         Canvas canvas;
-        if(canvases.get(key) == null){
-            canvases.put(key, new Canvas(createGraphics(w, h, P3D), src.get(x, y, w, h)));
+
+        w = max(10, w); // at least 10
+        h = max(10, h); // at least 10
+
+        if (i >= canvases.size()) {
+            canvases.add(key, new Canvas(createGraphics(w, h, P2D), src.get(x, y, w, h), x, y, w, h));
         }
-        canvas = canvases.get(key);
+        canvas = canvases.get(i);
+        if(canvas.x != x || canvas.y != y || canvas.w != w || canvas.h != h){
+//            println(canvas.pg.width + ":" + w + " " + canvas.pg.height + ":" + h);
+            canvas = new Canvas(createGraphics(w, h, P2D), src.get(x, y, w, h), x, y, w, h);
+            canvases.set(i, canvas);
+        }
         canvas.pg.beginDraw();
         canvas.pg.clear();
-        if(shaderPath != null){
+        if (shaderPath != null) {
             hotShader(shaderPath, canvas.pg);
         }
         canvas.pg.image(canvas.img, 0, 0);
         canvas.pg.endDraw();
         canvas.lastAccessFrame = frameCount;
 
-        //detect and remove unused canvases
-        for(String canvasKey : canvases.keySet()){
-            Canvas c = canvases.get(canvasKey);
-            if(abs(frameCount - c.lastAccessFrame) > 5){
-                canvasKeysToRemove.add(canvasKey);
-            }
-        }
-        for(String toRemove : canvasKeysToRemove){
-            canvases.remove(toRemove);
-        }
-
         return canvas.pg;
     }
 
-    class Canvas{
+    class Canvas {
         PGraphics pg;
         PImage img;
+        int x,y,w,h;
         int lastAccessFrame = frameCount;
 
-        public Canvas(PGraphics graphics, PImage image) {
+        public Canvas(PGraphics graphics, PImage image, int x, int y, int w, int h) {
+            this.x = x;
+            this.y = y;
+            this.w = w;
+            this.h = h;
             pg = graphics;
             img = image;
 
@@ -2278,7 +2284,7 @@ public abstract class KrabApplet extends PApplet {
                 String line = lines[lineIndex];
                 if (line.contains("GUI")) {
                     String nextLine = lines[lineIndex + 1];
-                    String[] stringsToRemove = new String[]{"uniform","float","bool","vec2","vec3","vec4","sampler2D",";"," "};
+                    String[] stringsToRemove = new String[]{"uniform", "float", "bool", "vec2", "vec3", "vec4", "sampler2D", ";", " "};
                     String sliderName = nextLine.trim();
                     for (String stringToRemove : stringsToRemove) {
                         sliderName = sliderName.replaceAll(stringToRemove, "");

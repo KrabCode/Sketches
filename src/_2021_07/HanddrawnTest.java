@@ -5,9 +5,6 @@ import processing.core.PGraphics;
 import processing.core.PImage;
 import processing.core.PVector;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class HanddrawnTest extends KrabApplet {
     private PGraphics pg;
     private PImage bgImg;
@@ -50,9 +47,9 @@ public class HanddrawnTest extends KrabApplet {
         boolean debugB = toggle("debug b");
         String chromaKey = "shaders/filters/chromaKey.glsl";
         resetGroup();
-        uniform(chromaKey).set("keepBlack", options("black", "white").equals("black"));
-        PGraphics treeGraphicsA = getRectangleAsShadedCanvas(bgImg, chromaKey, posA, sizeA);
-        PGraphics treeGraphicsB = getRectangleAsShadedCanvas(bgImg, chromaKey, posB, sizeB);
+        uniform(chromaKey).set("black", options("black", "white").equals("black"));
+        PGraphics treeGraphicsA = getRectangleAsShadedCanvas(bgImg, chromaKey, 0, posA, sizeA);
+        PGraphics treeGraphicsB = getRectangleAsShadedCanvas(bgImg, chromaKey, 0, posB, sizeB);
         if (debugA) {
             pg.stroke(0, 0, 1);
             pg.strokeWeight(4);

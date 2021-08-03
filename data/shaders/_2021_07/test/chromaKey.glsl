@@ -1,5 +1,5 @@
 
-uniform bool keepBlack;
+uniform bool black;
 uniform sampler2D texture;
 uniform vec2 resolution;
 uniform float time;

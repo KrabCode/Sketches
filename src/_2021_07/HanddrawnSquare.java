@@ -20,7 +20,7 @@ public class HanddrawnSquare extends KrabApplet {
     public void setup() {
         int originalResolutionX = 3024;
         int originalResolutionY = 4032;
-        float scale = 0.5f;
+        float scale = 0.25f;
         int w = floor(originalResolutionX * scale);
         int h = floor(originalResolutionY * scale);
         toggleFullscreen(w, h);
@@ -36,8 +36,8 @@ public class HanddrawnSquare extends KrabApplet {
         pg.imageMode(CORNER);
         pg.image(bg, 0, 0);
         String chromaKeyShader = "shaders/filters/chromaKey.glsl";
-        uniform(chromaKeyShader).set("keepBlack", false);
-        PGraphics canvas = getRectangleAsShadedCanvas(bg, chromaKeyShader, sliderXY("pos"), sliderXY("size", 10));
+        uniform(chromaKeyShader).set("black", false);
+        PGraphics canvas = getRectangleAsShadedCanvas(bg, chromaKeyShader, 0,  sliderXY("pos"), sliderXY("size", 10));
         PVector center = sliderXY("center", width/2f, height/2f);
         int copies = sliderInt("copies", 10);
         float scale = slider("scale change", 1);
