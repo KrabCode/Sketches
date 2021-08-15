@@ -29,7 +29,7 @@ public class ChaosGame extends KrabApplet {
         pg.beginDraw();
         pg.image(gradient("background"), 0, 0);
         int steps = sliderInt("steps", 1);
-        int pointCount = sliderInt("point count", 3);
+        int pointCount = sliderInt("point count", 6);
         if (frameCount < 8 || button("reset") || pointCount != pointCountTemp) {
             pg.background(0);
         }
