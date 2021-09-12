@@ -9,12 +9,12 @@ import processing.core.PGraphics;
 public class NoitaPhysics extends KrabApplet {
     private PGraphics pg;
     float scale = 0.1f;
+    float prevScale = scale;
     float rectWidth, rectHeight;
     int w, h;
-    String selectedInput = "sand";
     Particle[][] grid;
     private float inputSize = 10;
-    int sandColor, waterColor, airColor;
+    int sandColor, waterColor, airColor, rockColor;
 
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -42,17 +42,21 @@ public class NoitaPhysics extends KrabApplet {
     }
 
     public void draw() {
-        airColor = picker("air color", 0).clr();
+        scale = slider("scale", 0.1f);
+        if (prevScale != scale) {
+            populateGrid();
+        }
+        prevScale = scale;
+        airColor = picker("air color", 0.1f, 0).clr();
         sandColor = picker("sand color", 1).clr();
         waterColor = picker("water color", 0.5f).clr();
+        rockColor = picker("rock color", 0.2f).clr();
         pg = updateGraphics(pg);
-        selectedInput = options("empty", "water", "sand");
-        inputSize = slider("size", 10);
-        if (mousePressedOutsideGui) {
+        resetGroup();
+        if (mousePressedOutsideGui ) {
             inputParticles();
         }
-        int slowdown = sliderInt("slowdown");
-        slowdown = constrain(slowdown, 1, 100000);
+        int slowdown = sliderInt("slowdown", 1, 1, 100000);
         if (frameCount % slowdown == 0) {
             spawnParticles();
             updateGrid();
@@ -67,11 +71,23 @@ public class NoitaPhysics extends KrabApplet {
         gui(false);
     }
 
+    float particlesSpawned = 0;
+
     private void spawnParticles() {
-        int x = constrain(floor(w / 2f + randomGaussian() * w * .3f), 0, w - 1);
-        int y = 1;
-        String rainType = options("empty", "water", "sand");
-        grid[x][y] = new Particle(rainType);
+        group("spawn");
+        if (toggle("block")) {
+            resetGroup();
+            return;
+        }
+        String rainType = options("water", "sand");
+        float particlesToSpawn = frameCount;
+
+        while (particlesSpawned < particlesToSpawn) {
+            int x = constrain(floor(w / 2f + randomGaussian() * w * .3f), 0, w - 1);
+            grid[x][0] = new Particle(rainType);
+            particlesSpawned += slider("frequency", 1, 0.01f, 100000);
+        }
+        resetGroup();
     }
 
     private void updateGrid() {
@@ -91,7 +107,7 @@ public class NoitaPhysics extends KrabApplet {
 
     private void displayGrid() {
         rectWidth = width / (float) w;
-        rectHeight = height / (float) h;
+        rectHeight = height / (float) (h);
         pg.noStroke();
         for (int x = 0; x < w; x++) {
             for (int y = 0; y < h; y++) {
@@ -104,14 +120,27 @@ public class NoitaPhysics extends KrabApplet {
         }
     }
 
+    boolean erasing = false;
+
+    public void mousePressed(){
+        super.mousePressed();
+        erasing = false;
+        if(mouseButton == RIGHT){
+            erasing = true;
+        }
+    }
+
     void inputParticles() {
+        group("brush");
+        float inputSize = slider("size", 10);
+        String type = options("air", "water", "sand", "rock");
+        resetGroup();
         int inputX = floor(map(mouseX, 0, width, 0, w));
         int inputY = floor(map(mouseY, 0, height, 0, h));
         for (int x = 0; x < w; x++) {
             for (int y = 0; y < h; y++) {
                 if (dist(x, y, inputX, inputY) < inputSize) {
-                    String type = options("empty", "water", "sand");
-                    Particle p = new Particle(type);
+                    Particle p = new Particle(erasing ? "air" : type);
                     grid[x][y] = p;
                 }
             }
@@ -119,7 +148,7 @@ public class NoitaPhysics extends KrabApplet {
     }
 
     class Particle {
-        String type = "empty";
+        String type = "air";
         boolean hasBeenUpdated = false;
 
         Particle() {
@@ -131,7 +160,10 @@ public class NoitaPhysics extends KrabApplet {
         }
 
         void update(int x, int y) {
-            if (type.equals("empty")) {
+            if (type.equals("air")) {
+                return;
+            }
+            if (type.equals("rock")) {
                 return;
             }
             if (type.equals("sand")) {
@@ -143,7 +175,7 @@ public class NoitaPhysics extends KrabApplet {
         }
 
         int getColor() {
-            if (type.equals("empty")) {
+            if (type.equals("air")) {
                 return airColor;
             }
             if (type.equals("sand")) {
@@ -152,7 +184,14 @@ public class NoitaPhysics extends KrabApplet {
             if (type.equals("water")) {
                 return waterColor;
             }
+            if (type.equals("rock")) {
+                return rockColor;
+            }
             return 0;
+        }
+
+        boolean isAir(Particle other) {
+            return other.getDensity() == 0;
         }
 
         boolean isLessDenseThanMe(Particle other) {
@@ -160,11 +199,14 @@ public class NoitaPhysics extends KrabApplet {
         }
 
         float getDensity() {
-            if (type.equals("empty")) {
+            if (type.equals("air")) {
                 return 0;
             }
+            if (type.equals("rock")) {
+                return 100;
+            }
             if (type.equals("sand")) {
-                return 5;
+                return 10;
             }
             if (type.equals("water")) {
                 return 2;
@@ -199,9 +241,9 @@ public class NoitaPhysics extends KrabApplet {
             }
             if (bot != null && isLessDenseThanMe(bot)) {
                 swapParticles(x, y, x, y + 1);
-            } else if (botRight != null && isLessDenseThanMe(botRight)) {
+            } else if (botRight != null && isLessDenseThanMe(botRight) && random(1) > 0.5f) {
                 swapParticles(x, y, x + 1, y + 1);
-            } else if (botLeft != null && isLessDenseThanMe(botLeft)) {
+            } else if (botLeft != null && isLessDenseThanMe(botLeft) && random(1) > 0.5f) {
                 swapParticles(x, y, x - 1, y + 1);
             }
         }
@@ -218,13 +260,13 @@ public class NoitaPhysics extends KrabApplet {
             }
             if (bot != null && isLessDenseThanMe(bot)) {
                 swapParticles(x, y, x, y + 1);
-            } else if (botRight != null && isLessDenseThanMe(botRight)) {
+            } else if (botRight != null && isLessDenseThanMe(botRight) && random(1) > 0.5f) {
                 swapParticles(x, y, x + 1, y + 1);
-            } else if (botLeft != null && isLessDenseThanMe(botLeft)) {
+            } else if (botLeft != null && isLessDenseThanMe(botLeft) && random(1) > 0.5f) {
                 swapParticles(x, y, x - 1, y + 1);
-            } else if (left != null && isLessDenseThanMe(left)) {
+            } else if (left != null && isAir(left) && random(1) > 0.5f) {
                 swapParticles(x, y, x - 1, y);
-            } else if (right != null && isLessDenseThanMe(right)) {
+            } else if (right != null && isAir(right) && random(1) > 0.5f) {
                 swapParticles(x, y, x + 1, y);
             }
         }
