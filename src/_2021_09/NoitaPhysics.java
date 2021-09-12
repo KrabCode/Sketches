@@ -48,17 +48,17 @@ public class NoitaPhysics extends KrabApplet {
         pg = updateGraphics(pg);
         selectedInput = options("empty", "water", "sand");
         inputSize = slider("size", 10);
-        if(mousePressedOutsideGui){
+        if (mousePressedOutsideGui) {
             inputParticles();
         }
         int slowdown = sliderInt("slowdown");
         slowdown = constrain(slowdown, 1, 100000);
-        if(frameCount % slowdown == 0){
-            addSand();
+        if (frameCount % slowdown == 0) {
+            spawnParticles();
             updateGrid();
         }
         pg.beginDraw();
-        pg.colorMode(HSB, 1,1,1,1);
+        pg.colorMode(HSB, 1, 1, 1, 1);
         pg.image(gradient("bg"), 0, 0);
         displayGrid();
         pg.endDraw();
@@ -67,11 +67,11 @@ public class NoitaPhysics extends KrabApplet {
         gui(false);
     }
 
-    private void addSand() {
-        int x = constrain(floor(w / 2f + randomGaussian() * w * .3f), 0, w-1);
+    private void spawnParticles() {
+        int x = constrain(floor(w / 2f + randomGaussian() * w * .3f), 0, w - 1);
         int y = 1;
-        grid[x][y] = new Particle();
-        grid[x][y].type = random(1) > 0.5f ? "sand" : "water";
+        String rainType = options("empty", "water", "sand");
+        grid[x][y] = new Particle(rainType);
     }
 
     private void updateGrid() {
@@ -104,14 +104,14 @@ public class NoitaPhysics extends KrabApplet {
         }
     }
 
-    void inputParticles(){
+    void inputParticles() {
         int inputX = floor(map(mouseX, 0, width, 0, w));
         int inputY = floor(map(mouseY, 0, height, 0, h));
         for (int x = 0; x < w; x++) {
             for (int y = 0; y < h; y++) {
-                if(dist(x, y, inputX, inputY) < inputSize){
-                    Particle p = new Particle();
-                    p.type = options("empty", "water", "sand");
+                if (dist(x, y, inputX, inputY) < inputSize) {
+                    String type = options("empty", "water", "sand");
+                    Particle p = new Particle(type);
                     grid[x][y] = p;
                 }
             }
@@ -121,6 +121,14 @@ public class NoitaPhysics extends KrabApplet {
     class Particle {
         String type = "empty";
         boolean hasBeenUpdated = false;
+
+        Particle() {
+
+        }
+
+        Particle(String type) {
+            this.type = type;
+        }
 
         void update(int x, int y) {
             if (type.equals("empty")) {
@@ -134,45 +142,45 @@ public class NoitaPhysics extends KrabApplet {
             }
         }
 
-        int getColor(){
+        int getColor() {
             if (type.equals("empty")) {
                 return airColor;
             }
             if (type.equals("sand")) {
                 return sandColor;
             }
-            if(type.equals("water")){
+            if (type.equals("water")) {
                 return waterColor;
             }
             return 0;
         }
 
-        boolean isLessDenseThanMe(Particle other){
+        boolean isLessDenseThanMe(Particle other) {
             return other.getDensity() < getDensity();
         }
 
-        float getDensity(){
+        float getDensity() {
             if (type.equals("empty")) {
                 return 0;
             }
             if (type.equals("sand")) {
                 return 5;
             }
-            if(type.equals("water")){
+            if (type.equals("water")) {
                 return 2;
             }
             return 0;
         }
 
-        Particle getParticleSafely(int x, int y){
+        Particle getParticleSafely(int x, int y) {
             // avoid index out of bounds, return null instead
-            if(x < 0 || x >= w || y < 0 || y >= h){
+            if (x < 0 || x >= w || y < 0 || y >= h) {
                 return null;
             }
             return grid[x][y];
         }
 
-        void swapParticles(int x0, int y0, int x1, int y1){
+        void swapParticles(int x0, int y0, int x1, int y1) {
             Particle a = grid[x0][y0];
             Particle b = grid[x1][y1];
             a.hasBeenUpdated = true;
@@ -183,41 +191,41 @@ public class NoitaPhysics extends KrabApplet {
 
         @SuppressWarnings("DuplicatedCode")
         private void updateSand(int x, int y) {
-            Particle bot = getParticleSafely(x, y+1);
-            Particle botRight = getParticleSafely(x+1, y+1);
-            Particle botLeft = getParticleSafely(x-1, y+1);
-            if(hasBeenUpdated){
+            Particle bot = getParticleSafely(x, y + 1);
+            Particle botRight = getParticleSafely(x + 1, y + 1);
+            Particle botLeft = getParticleSafely(x - 1, y + 1);
+            if (hasBeenUpdated) {
                 return;
             }
-            if(bot != null && isLessDenseThanMe(bot)){
-                swapParticles(x, y, x, y+1);
-            } else if(botRight != null && isLessDenseThanMe(botRight)){
-                swapParticles(x, y, x+1, y+1);
-            } else if(botLeft != null && isLessDenseThanMe(botLeft)){
-                swapParticles(x, y, x-1, y+1);
+            if (bot != null && isLessDenseThanMe(bot)) {
+                swapParticles(x, y, x, y + 1);
+            } else if (botRight != null && isLessDenseThanMe(botRight)) {
+                swapParticles(x, y, x + 1, y + 1);
+            } else if (botLeft != null && isLessDenseThanMe(botLeft)) {
+                swapParticles(x, y, x - 1, y + 1);
             }
         }
 
         @SuppressWarnings("DuplicatedCode")
         private void updateWater(int x, int y) {
-            Particle bot = getParticleSafely(x, y+1);
-            Particle botRight = getParticleSafely(x+1, y+1);
-            Particle botLeft = getParticleSafely(x-1, y+1);
-            Particle left = getParticleSafely(x-1, y);
-            Particle right = getParticleSafely(x+1, y);
-            if(hasBeenUpdated){
+            Particle bot = getParticleSafely(x, y + 1);
+            Particle botRight = getParticleSafely(x + 1, y + 1);
+            Particle botLeft = getParticleSafely(x - 1, y + 1);
+            Particle left = getParticleSafely(x - 1, y);
+            Particle right = getParticleSafely(x + 1, y);
+            if (hasBeenUpdated) {
                 return;
             }
-            if(bot != null && isLessDenseThanMe(bot)){
-                swapParticles(x, y, x, y+1);
-            } else if(botRight != null && isLessDenseThanMe(botRight)){
-                swapParticles(x, y, x+1, y+1);
-            } else if(botLeft != null && isLessDenseThanMe(botLeft)){
-                swapParticles(x, y, x-1, y+1);
-            } else if(left != null && isLessDenseThanMe(left)){
-                swapParticles(x,y,x-1,y);
-            } else if(right != null && isLessDenseThanMe(right)){
-                swapParticles(x,y,x+1,y);
+            if (bot != null && isLessDenseThanMe(bot)) {
+                swapParticles(x, y, x, y + 1);
+            } else if (botRight != null && isLessDenseThanMe(botRight)) {
+                swapParticles(x, y, x + 1, y + 1);
+            } else if (botLeft != null && isLessDenseThanMe(botLeft)) {
+                swapParticles(x, y, x - 1, y + 1);
+            } else if (left != null && isLessDenseThanMe(left)) {
+                swapParticles(x, y, x - 1, y);
+            } else if (right != null && isLessDenseThanMe(right)) {
+                swapParticles(x, y, x + 1, y);
             }
         }
     }
