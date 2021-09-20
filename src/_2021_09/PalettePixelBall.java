@@ -5,7 +5,7 @@ import processing.core.PGraphics;
 import processing.core.PVector;
 import utils.OpenSimplexNoise;
 
-public class Palette extends KrabApplet {
+public class PalettePixelBall extends KrabApplet {
     // https://iquilezles.org/www/articles/palettes/palettes.htm
 
     OpenSimplexNoise noise = new OpenSimplexNoise();
@@ -43,13 +43,15 @@ public class Palette extends KrabApplet {
         float freq = slider("freq", 0.01f);
         float speed = slider("speed", 0.1f);
         float scale = slider("scale", 1);
-        float amp = slider("amp", 0.2f);
-        float yOffset = slider("y offset", 0);
+        float amp = slider("amp", 1);
         for (int xi = 0; xi < count; xi++) {
             for (int yi = 0; yi < count; yi++) {
+                int length = abs(- count / 2 + xi) +
+                        abs(- count / 2 + yi);
                 float x = map(xi, 0, count-1, 0, width);
                 float y = map(yi, 0, count-1, 0, height);
-                float pct = yOffset + norm(y, 0, height);
+                float distance = dist(x,y,width/2f, height/2f);
+                float pct = norm(length, 0, count ) / 2f + norm(distance, 0, width/2f) / 2f;
                 pct *= scale;
                 float n = amp * (float) noise.eval(x*freq,y*freq,t*speed);
                 int myColor = palette(pct + n, a, b, c, d);
