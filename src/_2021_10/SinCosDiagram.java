@@ -3,31 +3,12 @@ package _2021_10;
 import applet.KrabApplet;
 import processing.core.PFont;
 import processing.core.PGraphics;
-import processing.event.MouseEvent;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class SinCosDiagram extends KrabApplet {
 
     PGraphics pg;
-
-    int sketchWidth = 600;
-    int sketchHeight = 600;
-    int rulerWidth = 400;
-    int rulerHeightOuter = 130;
-    float rulerHeightInner = 130;
-
-    float waveHeight = 200;
-    float waveHeightHalf = waveHeight / 2;
-
-    int xLeft = sketchWidth / 2 - rulerWidth / 2;
-    int xRight = sketchWidth / 2 + rulerWidth / 2;
-
-    float xMid = sketchWidth / 2f;
-    float yMid = sketchHeight / 2f;
-    float xMidLeft = lerp(xLeft, xRight, 0.25f);
-    float xMidRight = lerp(xLeft, xRight, 0.75f);
 
     ArrayList<PFont> fonts = new ArrayList<PFont>();
     int currentFontIndex = 189;
@@ -37,6 +18,7 @@ public class SinCosDiagram extends KrabApplet {
     float yWaveTextOffset = -10;
     float yRulerTextOffset = -80;
 
+    float sketchWidth, sketchHeight, rulerWidth, rulerHeightOuter, rulerHeightInner, waveHeight, waveHeightHalf, xLeft, xRight, xMid, yMid, xMidLeft, xMidRight;
     float t;
 
     int bgColor = 12;
@@ -45,6 +27,7 @@ public class SinCosDiagram extends KrabApplet {
     int pieGraphFillColor = 120;
     int pieGraphOutlineColor = 255;
     int waveColor = 255;
+    float pieGraphDiameter = 40;
 
     public static void main(String[] args) {
         main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -58,81 +41,111 @@ public class SinCosDiagram extends KrabApplet {
     public void setup() {
         toggleFullscreen();
         loadAvailableFonts();
-        background(10);
-        pg.noFill();
-        render();
     }
 
     public void draw() {
         render();
     }
 
+    int lastFontIndex;
     void render() {
+        updateFont();
         updateSliders();
+        updateSizes();
 
         pg = updateGraphics(pg);
-        pg.colorMode(RGB,255,255,255,100);
+        pg.colorMode(RGB, 255, 255, 255, 100);
         pg.beginDraw();
         pg.strokeCap(SQUARE);
         pg.textSize(textSize);
         pg.background(bgColor);
         pg.pushMatrix();
-            translateToCenter(pg);
-            translate(pg, "pos");
+//        pg.translate(width / 2f - rulerWidth / 2, height / 2f - rulerHeightOuter);
+        translate(pg, "pos");
 
-            pg.stroke(rulerColor);
-            pg.strokeWeight(slider("ruler inner weight", 2));
-            drawRuler();
+        pg.stroke(rulerColor);
+        pg.strokeWeight(slider("ruler inner weight", 2));
+        drawRuler();
 
-            pg.strokeWeight(slider("waveWeight", 1.99f));
-            pg.noFill();
-            pg.stroke(waveColor);
-            drawWaves();
+        pg.strokeWeight(slider("waveWeight", 1.99f));
+        pg.noFill();
+        pg.stroke(waveColor);
+        drawWaves();
 
-            // hide the wave line overlap on the sides
-            pg.stroke(bgColor);
-            pg.strokeWeight(slider("overlap weight", 2.5f));
-            drawRulerVerticalOuter();
+        // hide the wave line overlap on the sides
+        pg.stroke(bgColor);
+        pg.strokeWeight(slider("overlap weight", 2.5f));
+        drawRulerVerticalOuter();
 
-            pg.stroke(rulerColor);
-            pg.strokeWeight(slider("ruler outer weight", 2));
-            drawRulerVerticalOuter();
+        pg.stroke(rulerColor);
+        pg.strokeWeight(slider("ruler outer weight", 2));
+        drawRulerVerticalOuter();
 
-            pg.noFill();
-            pg.stroke(rulerColor);
-            rulerPieGraphs();
+        pg.noFill();
+        pg.stroke(rulerColor);
+        rulerPieGraphs();
 
-            pg.fill(rulerTextColor);
-            pg.noStroke();
-            rulerText();
+        pg.fill(rulerTextColor);
+        pg.noStroke();
+        rulerText();
         pg.popMatrix();
 
-        if (toggle("cross")) {
-
-            pg.strokeWeight(3);
-            pg.stroke(255,0,0);
-            pg.line(height / 2f, 0, height / 2f, width);
-            pg.stroke(0,0,255);
-            pg.line(0, width / 2f, height, width / 2f);
-        }
 
         pg.endDraw();
+        clear();
         image(pg, 0, 0);
         gui();
         rec(pg);
+        if (toggle("cross")) {
+            strokeWeight(3);
+            stroke(255, 0, 0);
+            line(0,height / 2f,   width, height / 2f);
+            stroke(0, 0, 255);
+            line(width / 2f, 0, width / 2f, height);
+        }
+    }
+
+    private void updateFont() {
+        currentFontIndex = sliderInt("font index", 189, 0, fonts.size()-1);
+        if(currentFontIndex != lastFontIndex){
+            setCurrentFont();
+            lastFontIndex = currentFontIndex;
+        }
+    }
+
+    private void updateSizes() {
+        group("sizes");
+        sketchWidth = width;
+        sketchHeight = height;
+        rulerWidth = slider("width", 400);
+        rulerHeightOuter = 130;
+        rulerHeightInner = 130;
+        waveHeight = slider("height", 200);
+        waveHeightHalf = waveHeight / 2;
+        xLeft = sketchWidth / 2 - rulerWidth / 2;
+        xRight = sketchWidth / 2 + rulerWidth / 2;
+        xMid = sketchWidth / 2f;
+        yMid = sketchHeight / 2f;
+        xMidLeft = lerp(xLeft, xRight, 0.25f);
+        xMidRight = lerp(xLeft, xRight, 0.75f);
+        textSize = slider("text size", 32);
+        pieGraphDiameter = slider("pie graph size", 40);
+        resetGroup();
     }
 
     private void updateSliders() {
-        textSize = slider("text size", 32);
+        group("offsets");
         xWaveTextOffset = slider("xWaveTextOffset", -24);
         yWaveTextOffset = slider("yWaveTextOffset", -10);
         yRulerTextOffset = slider("yRulerTextOffset", -80);
 
+        group("colors");
         rulerColor = picker("rulerColor", 120 / 255f).clr();
         rulerTextColor = picker("rulerTextColor", 1).clr();
         pieGraphFillColor = picker("pieGraphFillColor", 120 / 255f).clr();
         pieGraphOutlineColor = picker("pieGraphOutlineColor", 1).clr();
         waveColor = picker("wave color", 1).clr();
+        resetGroup();
     }
 
     void drawRuler() {
@@ -183,14 +196,13 @@ public class SinCosDiagram extends KrabApplet {
     }
 
     void rulerPieGraphs() {
-        float diameter = 40;
         pg.pushMatrix();
         pg.translate(0, yMid); // align to the text
-        drawRulerPieGraph(0, xLeft, yRulerTextOffset - rulerHeightInner, diameter);
-        drawRulerPieGraph(0.25f, xMidLeft, yRulerTextOffset - rulerHeightInner, diameter);
-        drawRulerPieGraph(0.5f, xMid, yRulerTextOffset - rulerHeightInner, diameter);
-        drawRulerPieGraph(0.75f, xMidRight, yRulerTextOffset - rulerHeightInner, diameter);
-        drawRulerPieGraph(1, xRight, yRulerTextOffset - rulerHeightOuter, diameter);
+        drawRulerPieGraph(0, xLeft, yRulerTextOffset - rulerHeightInner, pieGraphDiameter);
+        drawRulerPieGraph(0.25f, xMidLeft, yRulerTextOffset - rulerHeightInner, pieGraphDiameter);
+        drawRulerPieGraph(0.5f, xMid, yRulerTextOffset - rulerHeightInner, pieGraphDiameter);
+        drawRulerPieGraph(0.75f, xMidRight, yRulerTextOffset - rulerHeightInner, pieGraphDiameter);
+        drawRulerPieGraph(1, xRight, yRulerTextOffset - rulerHeightOuter, pieGraphDiameter);
         pg.popMatrix();
     }
 
@@ -199,7 +211,7 @@ public class SinCosDiagram extends KrabApplet {
         pg.translate(x, y);
         pg.noStroke();
         pg.fill(pieGraphFillColor);
-        pg.arc(0, 0, size, size, 0, maxNorm * TAU);
+        pg.arc(0, 0, size, size, -maxNorm * TAU, 0);
         pg.stroke(pieGraphOutlineColor);
         pg.noFill();
         pg.ellipse(0, 0, size, size);
@@ -217,7 +229,7 @@ public class SinCosDiagram extends KrabApplet {
 
     void drawWave(boolean sineWave) {
         pg.beginShape();
-        for (int x = xLeft; x <= xRight; x++) {
+        for (float x = xLeft; x <= xRight; x++) {
             float xNorm = norm(x, xLeft, xRight) + t;
             float waveNorm = (sineWave ? sin(TAU * xNorm) : cos(TAU * xNorm));
             waveNorm *= -1; // because negative Y is up in processing
@@ -245,22 +257,6 @@ public class SinCosDiagram extends KrabApplet {
             println(fonts.size() - 1 + " " + fontName);
         }
         println("\nFonts loaded\nChange font using the mouse wheel\n");
-        setCurrentFont();
-    }
-
-
-    public void mouseWheel(MouseEvent event) {
-        super.mouseWheel(event);
-        float e = event.getCount();
-        if (e > 0) {
-            currentFontIndex -= 1;
-        } else if (e < 0) {
-            currentFontIndex += 1;
-        }
-        if (currentFontIndex < 0) {
-            currentFontIndex = fonts.size() - 1;
-        }
-        currentFontIndex %= fonts.size();
         setCurrentFont();
     }
 }
