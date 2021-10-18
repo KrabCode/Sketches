@@ -3,6 +3,7 @@ package _2021_10;
 import applet.KrabApplet;
 import processing.core.PFont;
 import processing.core.PGraphics;
+import processing.core.PVector;
 
 import java.util.ArrayList;
 
@@ -12,13 +13,17 @@ public class SinCosDiagram extends KrabApplet {
 
     ArrayList<PFont> fonts = new ArrayList<PFont>();
     int currentFontIndex = 189;
+    int lastFontIndex = currentFontIndex;
 
     float textSize = 32;
     float xWaveTextOffset = -24;
     float yWaveTextOffset = -10;
     float yRulerTextOffset = -80;
 
-    float sketchWidth, sketchHeight, rulerWidth, rulerHeightOuter, rulerHeightInner, waveHeight, waveHeightHalf, xLeft, xRight, xMid, yMid, xMidLeft, xMidRight;
+    float sketchWidth, sketchHeight,
+            rulerWidth, rulerHeightOuter, rulerHeightInner,
+            waveHeight, waveHeightHalf,
+            xLeft, xRight, xMid, yMid, xMidLeft, xMidRight;
     float t;
 
     int bgColor = 12;
@@ -28,6 +33,8 @@ public class SinCosDiagram extends KrabApplet {
     int pieGraphOutlineColor = 255;
     int waveColor = 255;
     float pieGraphDiameter = 40;
+
+    ArrayList<PVector> line = new ArrayList<PVector>();
 
     public static void main(String[] args) {
         main(java.lang.invoke.MethodHandles.lookup().lookupClass());
@@ -47,7 +54,6 @@ public class SinCosDiagram extends KrabApplet {
         render();
     }
 
-    int lastFontIndex;
     void render() {
         updateFont();
         updateSliders();
@@ -67,7 +73,8 @@ public class SinCosDiagram extends KrabApplet {
         pg.strokeWeight(slider("ruler inner weight", 2));
         drawRuler();
 
-        pg.strokeWeight(slider("waveWeight", 1.99f));
+        float waveWeight = slider("waveWeight", 1.99f);
+        pg.strokeWeight(waveWeight);
         pg.noFill();
         pg.stroke(waveColor);
         drawWaves();
@@ -90,6 +97,7 @@ public class SinCosDiagram extends KrabApplet {
         rulerText();
         pg.popMatrix();
 
+//        drawManualLine(waveWeight);
 
         pg.endDraw();
         clear();
@@ -102,6 +110,28 @@ public class SinCosDiagram extends KrabApplet {
             line(0,height / 2f,   width, height / 2f);
             stroke(0, 0, 255);
             line(width / 2f, 0, width / 2f, height);
+        }
+    }
+
+    private void drawManualLine(float waveWeight) {
+
+        if(button("line.clear()")){
+            line.clear();
+        }
+        if(mousePressedOutsideGui){
+            line.add(new PVector(mouseX, mouseY));
+        }
+        if(toggle("draw line")){
+
+            pg.beginShape();
+            pg.noFill();
+            pg.strokeWeight(waveWeight);
+            pg.stroke(waveColor);
+            for (PVector pVector : line) {
+                pg.vertex(pVector.x, pVector.y);
+            }
+            pg.endShape();
+
         }
     }
 
@@ -181,7 +211,10 @@ public class SinCosDiagram extends KrabApplet {
         pg.pushMatrix();
         pg.translate(0, yMid);
         pg.textAlign(CENTER, CENTER);
-        //pg.text("", xLeft, yRulerTextOffset - rulerHeightOuter);
+        pg.pushMatrix();
+        translate(pg, "zero text pos");
+        pg.text("0", xLeft, yRulerTextOffset - rulerHeightOuter);
+        pg.popMatrix();
         //pg.text("1/4τ", xMidLeft, yRulerTextOffset - rulerHeightInner);
         pg.pushMatrix();
         translate(pg, "pi text pos");
@@ -234,6 +267,9 @@ public class SinCosDiagram extends KrabApplet {
             float waveNorm = (sineWave ? sin(TAU * xNorm) : cos(TAU * xNorm));
             waveNorm *= -1; // because negative Y is up in processing
             float y = yMid + waveHeightHalf * waveNorm;
+            if(sineWave && xNorm > slider("x end", 1)){
+                break;
+            }
             pg.vertex(x, y);
         }
         pg.endShape();
