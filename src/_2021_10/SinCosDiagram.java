@@ -1,6 +1,7 @@
 package _2021_10;
 
 import applet.KrabApplet;
+import processing.core.PConstants;
 import processing.core.PFont;
 import processing.core.PGraphics;
 import processing.core.PVector;
@@ -107,7 +108,7 @@ public class SinCosDiagram extends KrabApplet {
         if (toggle("cross")) {
             strokeWeight(3);
             stroke(255, 0, 0);
-            line(0,height / 2f,   width, height / 2f);
+            line(0, height / 2f, width, height / 2f);
             stroke(0, 0, 255);
             line(width / 2f, 0, width / 2f, height);
         }
@@ -115,13 +116,13 @@ public class SinCosDiagram extends KrabApplet {
 
     private void drawManualLine(float waveWeight) {
 
-        if(button("line.clear()")){
+        if (button("line.clear()")) {
             line.clear();
         }
-        if(mousePressedOutsideGui){
+        if (mousePressedOutsideGui) {
             line.add(new PVector(mouseX, mouseY));
         }
-        if(toggle("draw line")){
+        if (toggle("draw line")) {
 
             pg.beginShape();
             pg.noFill();
@@ -136,8 +137,8 @@ public class SinCosDiagram extends KrabApplet {
     }
 
     private void updateFont() {
-        currentFontIndex = sliderInt("font index", 189, 0, fonts.size()-1);
-        if(currentFontIndex != lastFontIndex){
+        currentFontIndex = sliderInt("font index", 189, 0, fonts.size() - 1);
+        if (currentFontIndex != lastFontIndex) {
             setCurrentFont();
             lastFontIndex = currentFontIndex;
         }
@@ -242,9 +243,26 @@ public class SinCosDiagram extends KrabApplet {
     void drawRulerPieGraph(float maxNorm, float x, float y, float size) {
         pg.pushMatrix();
         pg.translate(x, y);
-        pg.noStroke();
         pg.fill(pieGraphFillColor);
-        pg.arc(0, 0, size, size, -maxNorm * TAU, 0);
+        pg.stroke(pieGraphOutlineColor);
+        if(maxNorm > 0 && maxNorm < 1){
+            float n = size / 2;
+            int detail = 100;
+            pg.beginShape();
+            pg.vertex(0,0);
+            for (int i = 0; i < detail; i++) {
+                float iNorm = norm(i, 0, detail-1);
+                if(iNorm >= maxNorm ){
+                    break;
+                }
+                float angle = -iNorm * TAU;
+                pg.vertex(n * cos(angle), n * sin(angle));
+            }
+            pg.endShape(CLOSE);
+        }else if(maxNorm >= 1f){
+            pg.ellipse(0,0,size,size);
+        }
+//        pg.arc(0, 0, size, size, -maxNorm * TAU, 0);
         pg.stroke(pieGraphOutlineColor);
         pg.noFill();
         pg.ellipse(0, 0, size, size);
@@ -267,7 +285,7 @@ public class SinCosDiagram extends KrabApplet {
             float waveNorm = (sineWave ? sin(TAU * xNorm) : cos(TAU * xNorm));
             waveNorm *= -1; // because negative Y is up in processing
             float y = yMid + waveHeightHalf * waveNorm;
-            if(sineWave && xNorm > slider("x end", 1)){
+            if (sineWave && xNorm > slider("x end", 1)) {
                 break;
             }
             pg.vertex(x, y);
