@@ -2047,6 +2047,17 @@ public abstract class KrabApplet extends PApplet {
         resetGroup();
     }
 
+    protected void chromaticAberrationBlurPass(PGraphics pg) {
+        group("chromatic ab.");
+        String shaderPath = "shaders/filters/chromaticAberrationBlur.glsl";
+        uniform(shaderPath).set("rotation", slider("rotation", 0) + t * sliderInt("rotation speed"));
+        uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
+        uniform(shaderPath).set("outerEdge", slider("outer edge", 1));
+        uniform(shaderPath).set("intensity", slider("intensity", 0));
+        hotFilter(shaderPath, pg);
+        resetGroup();
+    }
+
     protected void colorFilter(PGraphics toFilter, PVector multiplier) {
         String filterShader = "shaders/filters/colorFilter.glsl";
         uniform(filterShader).set("multiplier", multiplier);

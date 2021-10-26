@@ -37,23 +37,16 @@ public class Chromab extends KrabApplet {
         if (button("clear")) {
             pg.clear();
         }
+        pg.image(gradient("background"), 0,0);
         pg.pushMatrix();
         translateToCenter(pg);
         updatePoints();
         displayPoints();
         pg.popMatrix();
-        blurPass(pg);
-        chromaticAberrationPass(pg);
-        fbmDisplacePass(pg);
-
-        group("color filters");
-        fadeToBlack(pg);
-        multiplyPass(pg);
-        pg.blendMode(ADD);
-        pg.image(gradient("add"), 0, 0);
-        pg.blendMode(SUBTRACT);
-        pg.image(gradient("sub"), 0, 0);
+        chromaticAberrationBlurPass(pg);
         pg.endDraw();
+        clear();
+        resetShader();
         image(pg, 0, 0);
         rec(pg);
         gui();
@@ -61,7 +54,6 @@ public class Chromab extends KrabApplet {
 
     private void updatePoints() {
         group("points");
-        pg.blendMode(options("blend", "add").equals("blend") ? BLEND : ADD);
         int count = sliderInt("count", 100, 0, Integer.MAX_VALUE);
         float baseRadius = slider("base radius");
         float r = slider("gauss radius", 150);

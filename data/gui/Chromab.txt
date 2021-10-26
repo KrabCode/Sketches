@@ -1165,3 +1165,97 @@ color filters§multiply§0.98331255§1.0
 color filters§add§circular§hsv lerp§0.0§true§0.119718984§0.0§0.04375§1.0§0.11250002§false§0.9995§0.0§0.03125§1.0§0.68437517§false§0.9995§0.0§0.0§1.0§1.0§true§0.5764844§0.778125§0.0§1.0§
 color filters§sub§circular§rgb lerp§0.0§true§0.63205487§0.028125§0.0§1.0§0.6406248§false§5.0E-4§0.0§0.078125§1.0§1.0§true§0.0§0.0§0.0§1.0§
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§false
+Chromab§clear§
+GROUP§points§true
+points§blend§1
+points§count§46.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.3883199§100.0
+points§center force§0.015762271§1.0000001
+points§gauss force§0.037109375§10.0
+points§drag§0.89343727§10.0
+points§freq§2.4635092E-4§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.032697§10.0
+points§copies§30.00002§100.0
+points§stroke§0.6126251§0.359375§0.4125§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§1.9926589§10.0
+points§weight random§4.6792173§100.0
+GROUP§chromatic ab.§false
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§color filters§false
+color filters§fade to black§3.4727838§25.5
+color filters§multiply§0.98331255§1.0
+color filters§add§circular§hsv lerp§0.0§true§0.119718984§0.0§0.04375§1.0§0.11250002§false§0.9995§0.0§0.03125§1.0§0.68437517§false§0.9995§0.0§0.0§1.0§1.0§true§0.5764844§0.778125§0.0§1.0§
+color filters§sub§circular§rgb lerp§0.0§true§0.63205487§0.028125§0.0§1.0§0.6406248§false§5.0E-4§0.0§0.078125§1.0§1.0§true§0.0§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+GROUP§points§true
+points§blend§1
+points§count§46.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.3883199§100.0
+points§center force§0.09576228§1.0000001
+points§gauss force§0.34710938§10.0
+points§drag§0.79343736§10.0
+points§freq§2.4635092E-4§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.032697§10.0
+points§copies§30.00002§100.0
+points§stroke§0.6126251§0.359375§0.4125§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§1.9926589§10.0
+points§weight random§4.6792173§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§0.0§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§0.0§10.0
+GROUP§color filters§false
+color filters§fade to black§3.4727838§25.5
+color filters§multiply§0.98331255§1.0
+color filters§add§circular§hsv lerp§0.0§true§0.119718984§0.0§0.04375§1.0§0.11250002§false§0.9995§0.0§0.03125§1.0§0.68437517§false§0.9995§0.0§0.0§1.0§1.0§true§0.5764844§0.778125§0.0§1.0§
+color filters§sub§circular§rgb lerp§0.0§true§0.63205487§0.028125§0.0§1.0§0.6406248§false§5.0E-4§0.0§0.078125§1.0§1.0§true§0.0§0.0§0.0§1.0§
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§vertical§rgb lerp§0.0§true§0.0§0.0§0.0§1.0§1.0§true§5.0E-4§0.0§0.0§1.0§
+GROUP§points§false
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§3.5513088E-4§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§5.22§10.0
+STATE_END
