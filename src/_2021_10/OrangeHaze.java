@@ -17,10 +17,11 @@ public class OrangeHaze extends KrabApplet {
 
     public void setup() {
         toggleFullscreen();
-        pg = createGraphics(width, height, P3D);
+
     }
 
     public void draw() {
+        pg = updateGraphics(pg);
         pg.beginDraw();
         pg.image(gradient("background"), 0, 0);
         pg.endDraw();
