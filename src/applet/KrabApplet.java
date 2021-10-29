@@ -3,6 +3,7 @@ package applet;
 import processing.core.*;
 import processing.event.MouseEvent;
 import processing.opengl.PShader;
+import utils.OpenSimplexNoise;
 
 import java.awt.*;
 import java.awt.datatransfer.*;
@@ -152,6 +153,27 @@ public abstract class KrabApplet extends PApplet {
     private final int autoTrayHideDuration = 120;
     private int autoTrayHideStarted = -autoTrayHideDuration;
     boolean mouseWasOutsideTray = false;
+    private PImage cursorIcon;
+
+    protected void glowCursor(){
+        group("cursor");
+        if(cursorIcon == null){
+            cursorIcon = loadImage("images/glowing_cursor.png");
+            cursorIcon.resize(100, 100);
+        }
+        if(toggle("windows", true)){
+            cursor();
+        }else{
+            noCursor();
+        }
+        boolean glowing = toggle("glowing", false);
+        PVector mouseOffset = sliderXY("offset",-30.0f,-13.0f);
+        if(glowing){
+            image(cursorIcon, mouseX+mouseOffset.x, mouseY + mouseOffset.y);
+        }
+
+        resetGroup();
+    }
 
     // GUI INTERFACE
 
@@ -912,6 +934,30 @@ public abstract class KrabApplet extends PApplet {
         return constrain(map(x, xMin, xMax, min, max), min, max);
     }
 
+
+    OpenSimplexNoise osn;
+
+    float simplex(float a, float b, float c, float d){
+        lazyInitOpenSimplexNoiseGen();
+        return (float) osn.eval(a,b,c,d);
+    }
+
+    float simplex(float a, float b, float c){
+        lazyInitOpenSimplexNoiseGen();
+        return (float) osn.eval(a,b,c);
+    }
+
+    protected float simplex(float a, float b){
+        lazyInitOpenSimplexNoiseGen();
+        return (float) osn.eval(a,b);
+    }
+
+    void lazyInitOpenSimplexNoiseGen(){
+        if(osn == null){
+            osn = new OpenSimplexNoise();
+        }
+    }
+
     /**
      * Returns the angular diameter of a circle with radius 'r' on the edge of a circle with radius 'size'.
      *
@@ -1074,7 +1120,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     /**
-     * Creates an array of PShapes each holding up to 100000 shapes at position 0 and of the given shapeType.
+     * Creates an array of PShapes each holding up to 100000 shapes at position (i, 0, 0) and of the given shapeType.
      *
      * @param count     total number of PShapes across all lists
      * @param shapeType type of shapes to create
@@ -2037,7 +2083,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void chromaticAberrationPass(PGraphics pg) {
-        group("chromatic ab.");
+        group("chromab");
         String shaderPath = "shaders/filters/chromaticAberration.glsl";
         uniform(shaderPath).set("rotation", slider("rotation", 0) + t * sliderInt("rotation speed"));
         uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
@@ -2048,12 +2094,29 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void chromaticAberrationBlurPass(PGraphics pg) {
-        group("chromatic ab.");
+        group("chromab blur");
         String shaderPath = "shaders/filters/chromaticAberrationBlur.glsl";
-        uniform(shaderPath).set("rotation", slider("rotation", 0) + t * sliderInt("rotation speed"));
+        uniform(shaderPath).set("rotation", slider("rotation", 0) +
+                t * slider("rotation speed"));
         uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
         uniform(shaderPath).set("outerEdge", slider("outer edge", 1));
-        uniform(shaderPath).set("intensity", slider("intensity", 0));
+        uniform(shaderPath).set("intensity", slider("rgb split", 0));
+        uniform(shaderPath).set("steps", (float) sliderInt("blur", 20));
+        hotFilter(shaderPath, pg);
+        resetGroup();
+    }
+
+    protected void chromaticAberrationBlurDirPass(PGraphics pg) {
+        group("chromab blur");
+        String shaderPath = "shaders/filters/chromaticAberrationBlurDir.glsl";
+        uniform(shaderPath).set("rotation", slider("rotation", 0) +
+                t * slider("rotation speed"));
+        uniform(shaderPath).set("innerEdge", slider("inner edge", 0));
+        uniform(shaderPath).set("outerEdge", slider("outer edge", 1));
+        uniform(shaderPath).set("spread", slider("spread", 1));
+        uniform(shaderPath).set("multiplier", gradient("multiply"));
+        uniform(shaderPath).set("intensity", slider("rgb split", 0));
+        uniform(shaderPath).set("steps", (float) sliderInt("blur", 20));
         hotFilter(shaderPath, pg);
         resetGroup();
     }

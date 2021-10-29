@@ -2,6 +2,7 @@ package _2020_06;
 
 import applet.KrabApplet;
 import processing.core.PGraphics;
+import processing.core.PImage;
 import processing.core.PVector;
 import utils.OpenSimplexNoise;
 
@@ -13,7 +14,6 @@ public class Chromab extends KrabApplet {
     private OpenSimplexNoise noise = new OpenSimplexNoise();
     private ArrayList<Point> points = new ArrayList<>();
     private ArrayList<Point> pointsToRemove = new ArrayList<>();
-
     public static void main(String[] args) {
         KrabApplet.main(java.lang.invoke.MethodHandles.lookup().lookupClass());
     }
@@ -29,7 +29,6 @@ public class Chromab extends KrabApplet {
             surface.setAlwaysOnTop(true);
             surface.setLocation(2560 - 1020, 20);
         }
-        framesToRecord = 360 * 2;
     }
 
     public void draw() {
@@ -48,8 +47,11 @@ public class Chromab extends KrabApplet {
         clear();
         resetShader();
         image(pg, 0, 0);
-        rec(pg);
         gui();
+        glowCursor();
+        resetGroup();
+        framesToRecord = sliderInt("frames", 360 * 2);
+        rec(g);
     }
 
     private void updatePoints() {
@@ -65,6 +67,9 @@ public class Chromab extends KrabApplet {
         }
         for (Point p : points) {
             p.update();
+        }
+        if(button("points.clear()")){
+            points.clear();
         }
         points.removeAll(pointsToRemove);
         pointsToRemove.clear();

@@ -1259,3 +1259,217 @@ chromatic ab.§inner edge§0.0§10.0
 chromatic ab.§outer edge§1.0§10.0
 chromatic ab.§intensity§5.22§10.0
 STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.97149915§0.2375§0.815625§0.16000022§1.0§true§0.008§0.221875§0.196875§0.0§
+GROUP§points§false
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§9.2021416E-8§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§7.030001§100.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.9579993§0.0§0.0§1.0§1.0§true§0.9579993§0.0§0.0§1.0§
+GROUP§points§false
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§points.clear()§
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§9.2021416E-8§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§2.2500021§10.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.9579993§0.0§0.0§1.0§1.0§true§0.9579993§0.0§0.0§1.0§
+Chromab§copies§8.0§100.0
+Chromab§stroke§0.0§0.0§1.0§1.0§1.0
+Chromab§fade in frames§60.0§20.0
+Chromab§weight§1.9899989§10.0
+Chromab§weight random§0.0§10.0
+GROUP§points§false
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§points.clear()§
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§9.2021416E-8§100.0
+chromatic ab.§inner edge§0.0§10.0
+chromatic ab.§outer edge§1.0§10.0
+chromatic ab.§intensity§2.2500021§10.0
+chromatic ab.§steps§0.9999994§200.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.92199874§0.271875§0.28125§0.049999997§1.0§true§0.9169991§0.0§0.0§1.0§
+GROUP§points§true
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§points.clear()§
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§9.2021416E-8§100.0
+chromatic ab.§inner edge§-0.23000017§10.0
+chromatic ab.§outer edge§0.9800005§10.0
+chromatic ab.§intensity§0.012003541§1.0
+chromatic ab.§maxSteps§3.9995117§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.92199874§0.271875§0.28125§0.049999997§1.0§true§0.9169991§0.0§0.0§1.0§
+Chromab§frames§720.0§300.0
+Chromab§mouse§1000.0§-30.0§-15.0
+GROUP§points§true
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§points.clear()§
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§0.0§10.0
+chromatic ab.§rotation speed§9.2021416E-8§100.0
+chromatic ab.§inner edge§-0.23000017§10.0
+chromatic ab.§outer edge§0.9800005§10.0
+chromatic ab.§intensity§0.012003541§1.0
+chromatic ab.§maxSteps§3.9995117§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.92199874§0.271875§0.28125§0.049999997§1.0§true§0.9169991§0.0§0.0§1.0§
+Chromab§frames§720.0§300.0
+Chromab§mouse§1000.0§-30.0§-15.0
+GROUP§points§true
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§points.clear()§
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromatic ab.§true
+chromatic ab.§rotation§9.049997§10.0
+chromatic ab.§rotation speed§9.2021416E-8§100.0
+chromatic ab.§inner edge§-0.23000017§10.0
+chromatic ab.§outer edge§0.9800005§10.0
+chromatic ab.§intensity§0.012003541§1.0
+chromatic ab.§maxSteps§3.9995117§20.0
+STATE_END
+STATE_BEGIN
+UNDO
+GROUP§Chromab§true
+Chromab§clear§
+Chromab§background§circular§rgb lerp§0.0§true§0.92199874§0.271875§0.28125§0.049999997§1.0§true§0.9169991§0.0§0.0§1.0§
+Chromab§windows mouse§true
+Chromab§mouse§1000.0§-30.0§-13.0
+Chromab§frames§720.0§300.0
+GROUP§points§true
+points§count§216.0§1000.0
+points§base radius§-4.96875§1000.0
+points§gauss radius§860.1914§3000.0
+points§side force§0.88832045§100.0
+points§center force§0.11076228§1.0000001
+points§gauss force§0.0§10.0
+points§drag§0.59343755§10.0
+points§freq§5.6350862E-5§0.010000001
+points§angle var§6.3395467§100.0
+points§noise mag§0.0§10.0
+points§points.clear()§
+points§copies§40.98075§100.0
+points§stroke§0.6126251§0.0§1.0§1.0§10.0
+points§fade in frames§61.42431§200.0
+points§weight§2.392659§10.0
+points§weight random§2.4792187§100.0
+GROUP§chromab blur§true
+chromab blur§rotation§0.0§10.0
+chromab blur§rotation speed§0.0§100.0
+chromab blur§inner edge§0.0§10.0
+chromab blur§outer edge§1.0§10.0
+chromab blur§intensity§0.0§10.0
+chromab blur§maxSteps§20.0§200.0
+STATE_END

@@ -29,7 +29,7 @@ public class Crowd_2 extends KrabApplet {
     }
 
     public void setup() {
-
+        toggleFullscreen();
     }
 
     public void draw() {
@@ -122,8 +122,15 @@ public class Crowd_2 extends KrabApplet {
     }
 
     private void updateCrowd(){
-        deleteOutOfBoundsAndBehind();
-        generateOutOfBoundsAndInFront();
+//        deleteOutOfBoundsAndBehind();
+//        generateOutOfBoundsAndInFront();
+        int intendedPsCount = sliderInt("p count");
+        while(ps.size() > intendedPsCount){
+            psBin.add(ps.get(0));
+        }
+        while(ps.size() < intendedPsCount){
+            ps.add(new P());
+        }
         ps.removeAll(psBin);
         psBin.clear();
         for(P p : ps){
@@ -153,26 +160,40 @@ public class Crowd_2 extends KrabApplet {
         float size = 50;
 
         P(){
-
+            pos = new PVector(random(-width, width), random(-height, height));
         }
 
         public void update() {
-
+            PVector toPlayer = PVector.sub(playerPos, pos);
+            float d = toPlayer.mag();
+            float minDist = slider("min dist", 100);
+            float maxDist = slider("max dist", 300);
+            float pLerpAmt = slider("p lerp amt", 0.1f);
+            if(d < minDist){
+                pos.lerp(playerPos.copy().rotate(PI), pLerpAmt);
+            }else if(d > maxDist){
+                pos.lerp(playerPos, pLerpAmt);
+            }
+            for(P p : ps){
+                if(p.equals(this)){
+                    continue;
+                }
+                PVector toOther = PVector.sub(p.pos, pos);
+                if(toOther.mag() < size * 2){
+                    pos.lerp(PVector.sub(pos, p.pos), 0.01f);
+                    break;
+                }
+            }
         }
 
         public void draw() {
-
+            pg.noStroke();
+            pg.fill(picker("p fill").clr());
+            pg.ellipse(pos.x, pos.y, size,size);
         }
     }
 
     boolean isInFrontOfPlayer(PVector pos, PVector dir, PVector queryPos) {
-        float n = PVector.sub(queryPos, pos).heading() - dir.heading();
-        while (n > PI) {
-            n -= TAU;
-        }
-        while (n < -PI) {
-            n += TAU;
-        }
-        return abs(n) < HALF_PI;
+        return cos(PVector.sub(queryPos, pos).heading() - dir.heading()) > 0;
     }
 }

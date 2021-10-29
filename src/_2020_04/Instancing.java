@@ -51,7 +51,7 @@ public class Instancing extends KrabApplet {
     private void updateShader() {
         String frag = "/shaders/_2020_04/instancing/PointFrag.glsl";
         String vert = "/shaders/_2020_04/instancing/PointVert.glsl";
-        uniform(frag, vert).set("time", t);
+        uniform(frag, vert).set("time", t*slider("time"));
         uniform(frag, vert).set("count", pointCount);
         hotShader(frag, vert, pg);
     }
