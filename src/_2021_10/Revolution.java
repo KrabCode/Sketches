@@ -45,7 +45,7 @@ public class Revolution extends KrabApplet {
         time += slider("time speed") * radians(1);
         translate(pg, "translate");
         preRotate(pg, "rotate");
-
+        pg.strokeWeight(slider("weight", 1.5f));
         pg.sphereDetail(sliderInt("sphere detail", 14));
         int count = sliderInt("count", 100);
         for (int index = 0; index < count; index++) {

@@ -145,7 +145,8 @@ public abstract class KrabApplet extends PApplet {
     private float saveAnimationStarted = -MENU_ROTATION_DURATION;
     private int undoHoldDuration = 0;
     private int redoHoldDuration = 0;
-    private float trayScrollOffset = 0;
+    private float targetScrollOffset = 0;
+    private float lerpedScrollOffset = 0;
     private PGraphics colorSplitResult;
     private PGraphics[] primaryColorCanvases;
     private PGraphics shaderRamp;
@@ -1220,19 +1221,20 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private void updateScrolling() {
-        scrollOffsetHistory.add(trayScrollOffset);
+        scrollOffsetHistory.add(targetScrollOffset);
         int scrollOffsetHistorySize = 3;
         while (scrollOffsetHistory.size() > scrollOffsetHistorySize) {
             scrollOffsetHistory.remove(0);
         }
+
         if (trayVisible && isMousePressedInsideRect(0, 0, trayWidth, height) && abs(pmouseY - mouseY) > 2) {
-            trayScrollOffset += mouseY - pmouseY;
+            targetScrollOffset += mouseY - pmouseY;
         }
     }
 
     private boolean trayNotMovedInAWhile() {
         for (Float historicalTrayOffset : scrollOffsetHistory) {
-            if (historicalTrayOffset != trayScrollOffset) {
+            if (historicalTrayOffset != targetScrollOffset) {
                 return false;
             }
         }
@@ -1509,7 +1511,8 @@ public abstract class KrabApplet extends PApplet {
         float x = cell * .5f;
         float y = cell * 2.5f;
         pushMatrix();
-        translate(0, trayScrollOffset);
+        lerpedScrollOffset = lerp(lerpedScrollOffset, targetScrollOffset, 0.35f);
+        translate(0, -lerpedScrollOffset);
         for (Group group : groups) {
             if (group.elements.isEmpty()) {
                 continue;
@@ -1611,7 +1614,7 @@ public abstract class KrabApplet extends PApplet {
     }
 
     private boolean mouseJustReleasedHereScrollAware(float x, float y, float w, float h) {
-        return mouseJustReleasedHere(x, y + trayScrollOffset, w, h) && trayNotMovedInAWhile();
+        return mouseJustReleasedHere(x, y - lerpedScrollOffset, w, h) && trayNotMovedInAWhile();
     }
 
     private boolean mouseJustReleasedHere(float x, float y, float w, float h) {
@@ -1640,7 +1643,7 @@ public abstract class KrabApplet extends PApplet {
 
     @SuppressWarnings("SameParameterValue")
     private boolean isMouseOverScrollAware(float x, float y, float w, float h) {
-        return isMouseOver(x, y + trayScrollOffset, w, h);
+        return isMouseOver(x, y - lerpedScrollOffset, w, h);
     }
 
     private boolean isMouseOver(float x, float y, float w, float h) {
@@ -1657,9 +1660,9 @@ public abstract class KrabApplet extends PApplet {
             }
         } else {
             if (direction < 0) {
-                trayScrollOffset -= 100;
+                targetScrollOffset -= 100;
             } else if (direction > 0) {
-                trayScrollOffset += 100;
+                targetScrollOffset += 100;
             }
         }
     }
@@ -2058,11 +2061,13 @@ public abstract class KrabApplet extends PApplet {
     }
 
     protected void noiseDisplacePixelatedPass(PGraphics pg) {
+        group("noise displace");
         String hashShader = "shaders/filters/noiseDisplacePixelated.glsl";
         uniform(hashShader).set("time", t);
         uniform(hashShader).set("pixelate", sliderInt("pixelate", 100, 1, 10000));
         uniform(hashShader).set("delta", slider("delta", .1f, 0, 1));
         hotFilter(hashShader, pg);
+        resetGroup();
     }
 
     protected void blurPass(PGraphics pg) {
