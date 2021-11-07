@@ -157,7 +157,7 @@ public abstract class KrabApplet extends PApplet {
     private PImage cursorIcon;
 
     protected void glowCursor(){
-        group("cursor");
+        group("record", false);
         if(cursorIcon == null){
             cursorIcon = loadImage("images/glowing_cursor.png");
             cursorIcon.resize(100, 100);
@@ -1228,7 +1228,7 @@ public abstract class KrabApplet extends PApplet {
         }
 
         if (trayVisible && isMousePressedInsideRect(0, 0, trayWidth, height) && abs(pmouseY - mouseY) > 2) {
-            targetScrollOffset += mouseY - pmouseY;
+            targetScrollOffset -= mouseY - pmouseY;
         }
     }
 
@@ -1495,13 +1495,18 @@ public abstract class KrabApplet extends PApplet {
         popMatrix();
     }
 
-    protected void group(String name) {
+    protected void group(String name){
+        group(name, true);
+    }
+
+    protected void group(String name, boolean expanded) {
         if (groups.isEmpty()) {
             createDefaultGroup();
         }
         Group group = findGroup(name);
         if (!groupExists(name)) {
             group = new Group(name);
+            group.expanded = expanded;
             groups.add(group);
         }
         setCurrentGroup(group);

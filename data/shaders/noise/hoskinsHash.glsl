@@ -149,10 +149,11 @@ float hash12atagen(vec2 co){
     return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
 }
 */
-
+/*
 uniform float time;
 
 void main(){
     vec3 h = hash33(vec3(gl_FragCoord.xy, time));
    gl_FragColor = vec4(h, 1.);
 }
+*/
