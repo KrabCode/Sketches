@@ -1,6 +1,6 @@
 
 # Sketches
-This project contains my newest Processing sketches.
+This project contains some of my Processing sketches.
 
 The finished animations can be found on my [Instagram](https://www.instagram.com/krabcode/) and [Reddit](https://www.reddit.com/user/Simplyfire/posts).
 
